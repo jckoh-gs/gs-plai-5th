@@ -17,15 +17,17 @@ async function stop(signal='SIGTERM'){if(child&&child.exitCode===null){const cur
 async function api(path,method='GET',body){const r=await fetch(base+path,{method,headers:{'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});assert(r.ok,await r.clone().text());return r.json();}
 try{
  const firstPid=await start();const p=await api('/api/plants','POST',{name:'isolated process restart',type:'wind',count:2,ratedKw:1000,rampKwPerSec:1000,csv:CSV});
+ await until(async()=>{const m=(await api('/api/state')).plants.find(x=>x.id===p.id).metrics;return m.telemetryConfirmed>=1;},'telemetry PUBACK before process kill');
  const commandId=randomUUID();await api(`/api/plants/${p.id}/commands`,'POST',{schemaVersion:2,commandId,action:'set_target',targetKw:1800,timeoutSeconds:8});
  const executing=await until(()=>received.find(m=>m.body.commandId===commandId&&m.body.status==='executing')?.body,'actual executing status');
- const deadline=Date.parse(executing.deadlineAt);assert(deadline>Date.now());await stop('SIGKILL');
+ const deadline=Date.parse(executing.deadlineAt);assert(deadline>Date.now());const beforeMetrics=(await api('/api/state')).plants.find(x=>x.id===p.id).metrics;await stop('SIGKILL');
  const secondPid=await start();assert.notEqual(firstPid,secondPid);assert(Date.now()<deadline,'restart must precede original deadline');
+ const afterMetrics=(await api('/api/state')).plants.find(x=>x.id===p.id).metrics;for(const key of ['generatedSamples','telemetryAttempts','telemetryConfirmed','confirmedBytes','commandsReceived','commandsAccepted'])assert(afterMetrics[key]>=beforeMetrics[key],`Metric reset: ${key}`);
  const restored=(await api(`/api/plants/${p.id}/commands`)).find(c=>c.commandId===commandId);assert.equal(restored.status,'executing');assert.equal(restored.deadlineAt,executing.deadlineAt);
  const timedOut=await until(()=>received.find(m=>m.body.commandId===commandId&&m.body.status==='timed_out')?.body,'restarted command timed_out',12000);
  assert.equal(timedOut.deadlineAt,executing.deadlineAt);assert(Date.parse(timedOut.updatedAt)>=deadline);assert(Date.parse(timedOut.updatedAt)<deadline+2500);
  const state=(await api('/api/state')).plants.find(x=>x.id===p.id);assert(state.generators.every(g=>g.on&&g.targetLimitKw===900),'timeout must preserve dispatched target');
  const stopId=randomUUID();await api(`/api/plants/${p.id}/commands`,'POST',{commandId:stopId,action:'stop'});await until(()=>received.find(m=>m.body.commandId===stopId&&m.body.status==='completed'),'explicit stop completes');
  const stopped=(await api('/api/state')).plants.find(x=>x.id===p.id);assert(stopped.generators.every(g=>!g.on&&g.powerKw===0));
- console.log(JSON.stringify({result:'PASS',suite:'actual-process-command-restart',firstPid,secondPid,signal:'SIGKILL',commandId,originalDeadline:executing.deadlineAt,restoredStatus:restored.status,timeoutObservedAt:timedOut.updatedAt,targetPreservedAfterTimeout:true,explicitStopCompleted:true,broker,prefix},null,2));
+ console.log(JSON.stringify({result:'PASS',suite:'actual-process-command-restart',firstPid,secondPid,signal:'SIGKILL',cumulativeMetricsPreserved:true,beforeMetrics,afterMetrics,commandId,originalDeadline:executing.deadlineAt,restoredStatus:restored.status,timeoutObservedAt:timedOut.updatedAt,targetPreservedAfterTimeout:true,explicitStopCompleted:true,broker,prefix},null,2));
 }finally{await stop();await subscriber.endAsync(true);rmSync(dir,{recursive:true,force:true});}

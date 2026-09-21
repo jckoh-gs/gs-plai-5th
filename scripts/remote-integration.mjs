@@ -22,5 +22,5 @@ try {
  assert.equal(frame.body.scada.generators.length,2);assert.equal(frame.body.sampleCount,frame.body.samples.length);assert(frame.bytes<=120000);
  await c.publishAsync(`vpp/rtu/${plant.id}/setpoint`,JSON.stringify(req),{qos:1});await until(()=>messages.find(m=>m.body.commandId===req.commandId&&m.body.duplicate),'dedup');
  const result={result:'PASS',checkedAt:new Date().toISOString(),base,plantId:plant.id,commandId:req.commandId,actualKw:done.body.actualKw,errorKw:done.body.errorKw,states:['accepted','executing','completed'],actualAuthenticatedMQTT:true,duplicate:true,sampleCount:frame.body.sampleCount,telemetryBytes:frame.bytes};
- writeFileSync('deploy/verification/remote-integration.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));
+ writeFileSync(process.env.REMOTE_EVIDENCE_FILE||'deploy/verification/remote-integration.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));
 }finally{await c.endAsync(true);}
