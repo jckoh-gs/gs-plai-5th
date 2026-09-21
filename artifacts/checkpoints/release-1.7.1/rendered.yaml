@@ -29,7 +29,7 @@ spec:
       securityContext: {runAsUser: 1000, runAsGroup: 1000, fsGroup: 1000, seccompProfile: {type: RuntimeDefault}}
       initContainers:
         - name: migrate-mqtt-storage
-          image: MQTT_IMAGE
+          image: 127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c
           command: [sh, -c, 'if [ ! -e /broker/.migration-complete ]; then if [ -f /legacy/mosquitto.db ] && [ ! -e /broker/mosquitto.db ]; then cp /legacy/mosquitto.db /broker/mosquitto.db; fi; touch /broker/.migration-complete; fi']
           securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: [ALL]}}
           resources: {requests: {cpu: 10m, memory: 8Mi}, limits: {cpu: 100m, memory: 32Mi}}
@@ -53,7 +53,7 @@ spec:
           readinessProbe: {httpGet: {path: /api/health, port: 3001}, initialDelaySeconds: 5, periodSeconds: 5}
           livenessProbe: {httpGet: {path: /api/health, port: 3001}, initialDelaySeconds: 30, periodSeconds: 15}
         - name: mqtt
-          image: MQTT_IMAGE
+          image: 127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c
           command: [sh, -c, 'cp /mosquitto/secrets/passwords /run/mosquitto/passwords && cp /mosquitto/config/acl /run/mosquitto/acl && chmod 600 /run/mosquitto/passwords /run/mosquitto/acl && exec mosquitto -c /mosquitto/config/mosquitto.conf']
           securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: [ALL]}}
           resources: {requests: {cpu: 50m, memory: 32Mi}, limits: {cpu: '1', memory: 128Mi}}

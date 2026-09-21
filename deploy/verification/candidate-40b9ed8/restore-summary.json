@@ -1,0 +1,221 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T18:12:17.749737+00:00",
+  "backupMetadata": "deploy/verification/stable-backup-40b9ed8.json",
+  "sameImmutableSnapshot": {
+    "bytes": 1075081216,
+    "sha256": "5ff34f3e5dbc52f07b899f0c8013db130e5fd13c3d315e92aa512d474ea1f782",
+    "remotePath": "/data/stable-40b9ed8-20260921T180009013Z.sqlite"
+  },
+  "currentVersion": "1.7.1",
+  "backwardVersion": "1.7.0",
+  "reportProofCount": 26,
+  "actualPodIdentityProofCount": 2,
+  "totalEvidenceChecks": 28,
+  "checks": [
+    {
+      "path": "restored-current/original-init.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-current/original-canonical-data.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-current/original-data.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-current/original-served-assets.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-current/mqtt.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-current/browser-auth/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-current/browser-preview/race.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-current/preview-api.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-current/browser-form/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-current/browser-receipts/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-current/browser-event/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-current/browser-list/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-current/browser-export/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-backward/original-init.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-backward/original-canonical-data.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-backward/original-data.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-backward/original-served-assets.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-backward/mqtt.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-backward/browser-auth/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-backward/browser-preview/race.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-backward/preview-api.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-backward/browser-form/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-backward/browser-receipts/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-backward/browser-event/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-backward/browser-list/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-backward/browser-export/result.json",
+      "result": "PASS"
+    }
+  ],
+  "actualPodIdentityChecks": [
+    {
+      "path": "restored-current/original-pod.json",
+      "uid": "65d5f324-9216-4ccb-adca-a8fc3847b660",
+      "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-backward/original-pod.json",
+      "uid": "a0287545-287f-4715-9d3e-9117190e1093",
+      "imageID": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+      "result": "PASS"
+    }
+  ],
+  "originalCanonicalSettingsVerifiedBeforeMutations": true,
+  "canonicalGeneratorOnLimitPctIncluded": true,
+  "originalPlants": 5,
+  "originalScenarios": 1,
+  "formChecksPerVersion": 44,
+  "receiptChecksPerVersion": 14,
+  "eventTime": "Actual-only checked on both versions",
+  "listStatus": "Actual-only checked on both versions",
+  "scenarioScope": "Existing scenario identity preserved; no additional scenario or live KMA functional claim in this restoration round",
+  "runtimeAndOperationalHarnessSourcesSeparated": true,
+  "cleanup": {
+    "bothDeploymentReplicas": 0,
+    "remainingPods": 0,
+    "ownedForwardsTerminal": [
+      93104,
+      80939
+    ],
+    "ports3105And18885Absent": true,
+    "retainedPVCs": [
+      "grid-restore-40b9ed8-data",
+      "grid-restore-40b9ed8-mqtt-data",
+      "grid-restore-back-40b9ed8-data",
+      "grid-restore-back-40b9ed8-mqtt-data"
+    ],
+    "backupsAndOldIncompletePartialPreserved": true,
+    "liveProof": "restore-cleanup-live.json"
+  },
+  "terminals": {
+    "restored-current": {
+      "browser": {
+        "auth65551": 0,
+        "preview18268": 0,
+        "previewAPI": 0,
+        "form84295": 0,
+        "receipts72200": 0,
+        "event15044": 0,
+        "list47502": 0,
+        "export20130": 0
+      },
+      "forward": {
+        "93104": 143
+      },
+      "setup": {
+        "92931": 0
+      },
+      "capture": {
+        "24768": 0
+      },
+      "mqtt": {
+        "50578": 0
+      },
+      "cleanup": {
+        "39952": 0
+      }
+    },
+    "restored-backward": {
+      "browser": {
+        "auth87825": 0,
+        "preview6978": 0,
+        "previewAPI62654": 0,
+        "form82386": 0,
+        "receipts59494": 0,
+        "event31928": 0,
+        "list14732": 0,
+        "export5214": 0
+      },
+      "forward": {
+        "80939": 143
+      },
+      "setup": {
+        "7749": 0
+      },
+      "capture": {
+        "5107": 0,
+        "68363": 0
+      },
+      "mqtt": {
+        "54014": 0
+      },
+      "cleanup": {
+        "59610": 0
+      }
+    }
+  },
+  "mainMutationsFromRestoreTests": false,
+  "harnessFailures": []
+}

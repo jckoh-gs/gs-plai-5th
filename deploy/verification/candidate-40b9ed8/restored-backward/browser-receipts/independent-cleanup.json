@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "ownedResponseBaselinesRestored": true,
+  "preExistingUnchanged": true,
+  "http201ExplicitlyAsserted": false,
+  "scope": "Captured successfulregistrationresponse settings equal aftercleanupGET; not HTTP201assertion"
+}

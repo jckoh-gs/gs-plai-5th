@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "runtimeVersion": "1.7.0",
+  "reports": [
+    "browser-auth/result.json",
+    "browser-preview/race.json",
+    "preview-api.json",
+    "browser-form/result.json",
+    "browser-receipts/result.json",
+    "browser-event/result.json",
+    "browser-list/result.json",
+    "browser-export/result.json"
+  ],
+  "terminals": {
+    "auth87825": 0,
+    "preview6978": 0,
+    "previewAPI62654": 0,
+    "form82386": 0,
+    "receipts59494": 0,
+    "event31928": 0,
+    "list14732": 0,
+    "export5214": 0
+  },
+  "cleanup": "form actual201 baseline and preexisting unchanged; receipt responsebaseline independently compared aftercleanup; no explicit201assert in receipt",
+  "scope": "AuthSSE/browser fault fixtures localproxy only; preview purePOST; form/receipt onlyownednewRTUs; export after deploymentMQTT54014 PASS; no main writes; all browsers/proxies ended; current workspace sources are harness input, served154fe+version1.7 anchors backward runtime"
+}

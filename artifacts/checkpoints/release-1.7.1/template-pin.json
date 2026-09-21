@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "scope": "Pure localrender only; noapply/redeployment",
+  "appImageSlots": 1,
+  "brokerImageSlots": 2,
+  "templateSha256": "3ad2cd97ea546635e484520e9967889fda71994f3a598f277648301bb0b0bc39",
+  "renderedSha256": "5ae72d2d978ee50f8978735658a8f5b55136b3ce6e7fba25967bedd7a6b86166"
+}

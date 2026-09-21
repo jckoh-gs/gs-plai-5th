@@ -1,0 +1,6 @@
+{
+  "restore-40b-capture.py": "3a05ba036cb25dd8acb94e87b766b75b37ed76327786e0eb20a103058552170d",
+  "deploy-restore-rig.py": "1a6b530055f8c86f73f77c40bd6ef6f60d8bf471567aafaafcabc79240a8e8a9",
+  "remote-restore-check.mjs": "dab036666df4d2000dc6a0ed1bdc41e86a048fac61ccad1e6d543ae44841f61a",
+  "remote-integration.mjs": "ff594af40f686fb7a7258ee6c862f1faa4bc612b2b1c4682de8d721b91e8d523"
+}

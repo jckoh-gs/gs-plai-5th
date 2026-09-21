@@ -1,0 +1,31 @@
+{
+  "mode": "isolated-restore",
+  "version": "1.7.0",
+  "actualOnly": true,
+  "asset": {
+    "path": "/assets/index-qlOuxY80.js",
+    "sha256": "154fe2de1f039fe27fbcce6793e15716e843ca3814c2d361392a2207b6918dfc"
+  },
+  "checks": [
+    "Actual existing list order/source/status, browser-success time and accessible status"
+  ],
+  "apiWrites": 0,
+  "setupWrites": 0,
+  "controlledFaultScope": "Only browser responses / owned loopback HTTP server; never actual remote outage",
+  "pageErrors": [],
+  "actual": {
+    "rtuId": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+    "rows": [
+      {
+        "id": "89e8ff6f-4e22-4ae5-9330-29dfb53f4164",
+        "action": "set_target",
+        "source": "MQTT",
+        "status": "completed"
+      }
+    ],
+    "checkedAt": "2026-09-21T18:11:16.115Z",
+    "browserWindowStart": "2026-09-21T18:11:15.326Z"
+  },
+  "result": "PASS",
+  "checkedAt": "2026-09-21T18:11:16.243Z"
+}

@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-09-21T18:12:27.519660+00:00",
+  "result": "PASS",
+  "deployments": [
+    {
+      "name": "grid-restore-40b9ed8",
+      "replicas": 0,
+      "pods": 0
+    },
+    {
+      "name": "grid-restore-back-40b9ed8",
+      "replicas": 0,
+      "pods": 0
+    }
+  ],
+  "pvcs": [
+    {
+      "name": "grid-restore-40b9ed8-data",
+      "phase": "Bound"
+    },
+    {
+      "name": "grid-restore-40b9ed8-mqtt-data",
+      "phase": "Bound"
+    },
+    {
+      "name": "grid-restore-back-40b9ed8-data",
+      "phase": "Bound"
+    },
+    {
+      "name": "grid-restore-back-40b9ed8-mqtt-data",
+      "phase": "Bound"
+    }
+  ]
+}

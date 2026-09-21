@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T18:09:42.559531+00:00",
+  "updatedAt": "2026-09-21T18:13:59.154682+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -43,7 +43,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Normal1.7.1 exact5ff backup/rootreview complete. Await deployment/issues pairedcurrent1.7.1/back1.7samebackup allproofs+cleanup. Root independentlychecks, thenproductacceptance/newimmutablemanifest. No repeatedmainwrite; keep72957/8133/48590 alive.",
+    "Allsame5ffrestorationandrootcleanupPASS. Await REVIEW045; commitcompletedsource/evidence andselected1.7.1backup, generateNEWimmutablemanifest, verifylocal/remote/independent, createNEWstable+runtime tags. Preserveold1.7manifest/tags. Keep72957/8133/48590.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -541,24 +541,8 @@
     "adoptionReview": "docs/product/REVIEW-040.md",
     "implementationOwner": "/root/transport",
     "scope": "StrictbooleanRTUonline in suppliedmonitor; exampleenv/ports/unsupportedlegacy wording. No serverDBUI/wire/OSS changes. Do not rollout before captured actual1.7 firsthour at17:45:54.307Z.",
-    "phase": "Current1.7.1 same5ffrestorationallfunctionalPASS+cleanupownerconfirmed. Backward1.7 starting; no stablepromotionyet.",
-    "activeOperations": [
-      {
-        "owner": "/root/deployment",
-        "kind": "backward1.7 same5fffreshrestore setup",
-        "handle": 5107,
-        "rig": "grid-restore-back-40b9ed8",
-        "state": "backward1.7Ready; originalcanonicalidentitycapture active",
-        "forwardHandle": 80939,
-        "setupHandle": 7749,
-        "setupExitCode": 0
-      },
-      {
-        "owner": "/root/issues",
-        "kind": "backwardbrowser/form/receipt thenexport",
-        "state": "Waiting fordeploymentactualReady"
-      }
-    ],
+    "phase": "Functional1.7.1 independentlyaccepted; AT04awaitsnewimmutablemanifest. All restorationhandles ended; onlymainobservers/supervisor remain.",
+    "activeOperations": [],
     "mainWritesAllowed": true,
     "localClientStatusEvidence": "artifacts/checkpoints/candidate-1.7.1-local/client-status-integration.json",
     "mediaCompatibility": "docs/operations/MEDIA-1.7.1-COMPATIBILITY.md",
@@ -712,7 +696,29 @@
       "forwardHandle": 93104,
       "forwardExit": 143,
       "state": "Ownerverified0replicas/noPods/closedports; rootpairedactualreview later"
-    }
+    },
+    "backwardRestoreProgress": {
+      "setupHandle": 7749,
+      "setupExit": 0,
+      "baselineHandle": 5107,
+      "baselineExit": 0,
+      "backupComparisonHandle": 68363,
+      "backupComparisonExit": 0,
+      "forwardHandle": 80939,
+      "forwardPid": 59348,
+      "forwardIdentity": "Tue Sep 22 03:07:46 2026",
+      "podUID": "a0287545-287f-4715-9d3e-9117190e1093",
+      "state": "Complete; rootlivecleanupconfirmed",
+      "mqttHandle": 54014,
+      "mqttExit": 0,
+      "cleanupHandle": 59610,
+      "cleanupExit": 0,
+      "forwardExit": 143
+    },
+    "restoreSummary": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+    "rootCleanupReview": "deploy/verification/candidate-40b9ed8/root-recovery-review/summary.json",
+    "restoreState": "Allownerhandlesended; actualboth0/noPods/4BoundPVC/3105+18885free; maincanonicalpreserved",
+    "independentFunctionalReview": "docs/product/REVIEW-045.md"
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
   "previousCandidateFixture": {

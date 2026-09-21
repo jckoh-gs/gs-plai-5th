@@ -71,7 +71,7 @@ node scripts/client-security-integration.js
 
 대상은 `charles-k3s` / `gs-plai-5h`입니다. 구체적인 이미지 빌드·배포·접근 명령은 [deploy/README.md](deploy/README.md)에 있습니다. 앱은 1개 인스턴스와 Recreate 교체를 사용하며 SQLite 및 MQTT 데이터는 PVC에 저장합니다. 기본 context를 변경하지 않습니다.
 
-현재 원격에는 후보 **1.7.1 / PRD1.15**, runtime `40b9ed8`, image `234ec56`이 배포되어 UI/API/MQTT·재시작 후 미전송 메시지 복구 검증을 통과했습니다. 동일 정상 백업의 현재/하위 버전 복원 검증을 진행 중입니다. 기능상 안정 복원 기준은 아직 **1.7.0 / PRD1.14**, runtime `d98d3c4`, image `d1e4b1d8`입니다. 동일931876864바이트/`1cab74e1` 백업의 현재1.7·이전1.6 복원과 독립 기능 인수를 완료했습니다. 불변 매니페스트의1,731개 해시·실제 Ready 이미지·백업을 확인했고 `stable-v1.7.0`(운영·근거 `e5bd056`)과 `stable-runtime-v1.7.0-d98d3c4`(정확한 앱 소스)를 원격 저장소에 전달했습니다. [릴리스 증거](artifacts/checkpoints/release-1.7/tags.json)와 [복원 결과](deploy/verification/candidate-d98d3c4/restore-summary.json)를 참조하세요. 이전1.6/9bd 및1.5/ad34 체크포인트도 보존합니다. 최종 영상·PPT와 전체 인도는 아직 진행 중입니다. 최신 선택은 [실행 원장](docs/operations/run.json)과 [다음 작업](docs/operations/NEXT-ACTIONS.md)을 확인합니다.
+현재 원격에는 후보 **1.7.1 / PRD1.15**, runtime `40b9ed8`, image `234ec56`이 배포되어 UI/API/MQTT·재시작 후 미전송 메시지 복구 검증을 통과했습니다. 동일 정상 백업 1075081216바이트/SHA5ff34의 현재1.7.1/이전1.7 복원 26보고서·2Pod 식별과 root 정리 확인을 완료했습니다. 새 불변 매니페스트 검증은 진행 중입니다. 기능상 안정 복원 기준은 아직 **1.7.0 / PRD1.14**, runtime `d98d3c4`, image `d1e4b1d8`입니다. 동일931876864바이트/`1cab74e1` 백업의 현재1.7·이전1.6 복원과 독립 기능 인수를 완료했습니다. 불변 매니페스트의1,731개 해시·실제 Ready 이미지·백업을 확인했고 `stable-v1.7.0`(운영·근거 `e5bd056`)과 `stable-runtime-v1.7.0-d98d3c4`(정확한 앱 소스)를 원격 저장소에 전달했습니다. [릴리스 증거](artifacts/checkpoints/release-1.7/tags.json)와 [복원 결과](deploy/verification/candidate-d98d3c4/restore-summary.json)를 참조하세요. 이전1.6/9bd 및1.5/ad34 체크포인트도 보존합니다. 최종 영상·PPT와 전체 인도는 아직 진행 중입니다. 최신 선택은 [실행 원장](docs/operations/run.json)과 [다음 작업](docs/operations/NEXT-ACTIONS.md)을 확인합니다.
 
 독립 로컬 SQLite 백업 CLI:
 

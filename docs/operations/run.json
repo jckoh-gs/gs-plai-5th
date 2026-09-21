@@ -45,8 +45,8 @@
   "requestedModel": "Codex Astra",
   "modelVerification": "Agents inherited main session model; exact runtime model identifier not exposed by available goal tools.",
   "deployment": {
-    "observedAt": "2026-09-21T17:59:36.972Z",
-    "status": "Actual1.7.1 mainfunctional+outbox+rootnormal PASS; newobservers andnormalbackup/current+backwardrestore pending",
+    "observedAt": "2026-09-21T18:12:44.964Z",
+    "status": "Actual1.7.1 main andpairedsame5ffrestoration verified; immutablemanifest/promotion pending",
     "sourceCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
     "prdVersion": "1.15",
     "context": "charles-k3s",
@@ -68,26 +68,26 @@
   },
   "backup": {
     "result": "PASS",
-    "capturedAt": "2026-09-21T16:45:51.160Z",
-    "verifiedAt": "2026-09-21T16:46:24.978Z",
-    "sourceCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
-    "appImage": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+    "capturedAt": "2026-09-21T18:00:12.179Z",
+    "verifiedAt": "2026-09-21T18:01:12.247Z",
+    "sourceCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+    "appImage": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
     "verifiedTransferPod": {
-      "name": "grid-86dc4cf87-kq2hr",
-      "uid": "79784e51-f961-4e34-86d8-196827a8e26c",
-      "image": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
-      "imageID": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692"
+      "name": "grid-69d8766f7-zmfq8",
+      "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+      "image": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+      "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876"
     },
     "podVerificationStage": "transfer",
-    "remotePath": "/data/stable-d98d3c4-20260921T164546561Z.sqlite",
-    "localPath": "artifacts/private/backups/stable-d98d3c4-20260921T164546561Z.sqlite",
-    "bytes": 931876864,
-    "sha256": "1cab74e110d172307ffd3605543da2db4261c27f009b97871a21bd1bf665827c",
-    "compressedBytes": 32457322,
-    "verifiedChunks": 31,
+    "remotePath": "/data/stable-40b9ed8-20260921T180009013Z.sqlite",
+    "localPath": "artifacts/private/backups/stable-40b9ed8-20260921T180009013Z.sqlite",
+    "bytes": 1075081216,
+    "sha256": "5ff34f3e5dbc52f07b899f0c8013db130e5fd13c3d315e92aa512d474ea1f782",
+    "compressedBytes": 37909614,
+    "verifiedChunks": 37,
     "transferChunkBytes": 1048576,
-    "remoteCompressionPeakRssBytes": 133984256,
-    "localPeakRssBytes": 269434880,
+    "remoteCompressionPeakRssBytes": 128172032,
+    "localPeakRssBytes": 273465344,
     "integrity": "ok",
     "plants": 5,
     "pending": 0,
@@ -96,19 +96,19 @@
       "workerExitConfirmed": true,
       "integrity": "ok",
       "stage": "verified",
-      "steps": 2275,
-      "totalPages": 227509,
+      "steps": 2624,
+      "totalPages": 262471,
       "remainingPages": 0,
-      "elapsedMs": 5185,
-      "snapshotAt": 1790009148742,
+      "elapsedMs": 10719,
+      "snapshotAt": 1790013609436,
       "supervisorMaxMs": 80000,
       "hostCommandMaxMs": 90000
     },
     "snapshotCreation": "new-supervised",
     "method": "fixed WAL read snapshot; supervised node:sqlite backup; streaming gzip and disk-backed chunk+whole SHA256 verification; private0600 copy",
     "timePolicy": {
-      "startedAt": "2026-09-21T16:45:46.561Z",
-      "stopAt": "2026-09-21T16:48:46.561Z",
+      "startedAt": "2026-09-21T18:00:09.013Z",
+      "stopAt": "2026-09-21T18:03:09.013Z",
       "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
       "remoteCancellationGuaranteed": false
     }
@@ -161,24 +161,8 @@
     "localSummary": "artifacts/checkpoints/candidate-1.7.1-local/summary.json",
     "independentLocalReview": "docs/product/REVIEW-041.md",
     "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
-    "phase": "Current1.7.1 same5ffrestorationallfunctionalPASS+cleanupownerconfirmed. Backward1.7 starting; no stablepromotionyet.",
-    "activeOperations": [
-      {
-        "owner": "/root/deployment",
-        "kind": "backward1.7 same5fffreshrestore setup",
-        "handle": 5107,
-        "rig": "grid-restore-back-40b9ed8",
-        "state": "backward1.7Ready; originalcanonicalidentitycapture active",
-        "forwardHandle": 80939,
-        "setupHandle": 7749,
-        "setupExitCode": 0
-      },
-      {
-        "owner": "/root/issues",
-        "kind": "backwardbrowser/form/receipt thenexport",
-        "state": "Waiting fordeploymentactualReady"
-      }
-    ],
+    "phase": "Functional1.7.1 independentlyaccepted; AT04awaitsnewimmutablemanifest. All restorationhandles ended; onlymainobservers/supervisor remain.",
+    "activeOperations": [],
     "completedImageBuild": {
       "owner": "/root/deployment",
       "handle": 78456,
@@ -272,7 +256,29 @@
       "forwardHandle": 93104,
       "forwardExit": 143,
       "state": "Ownerverified0replicas/noPods/closedports; rootpairedactualreview later"
-    }
+    },
+    "backwardRestoreProgress": {
+      "setupHandle": 7749,
+      "setupExit": 0,
+      "baselineHandle": 5107,
+      "baselineExit": 0,
+      "backupComparisonHandle": 68363,
+      "backupComparisonExit": 0,
+      "forwardHandle": 80939,
+      "forwardPid": 59348,
+      "forwardIdentity": "Tue Sep 22 03:07:46 2026",
+      "podUID": "a0287545-287f-4715-9d3e-9117190e1093",
+      "state": "Complete; rootlivecleanupconfirmed",
+      "mqttHandle": 54014,
+      "mqttExit": 0,
+      "cleanupHandle": 59610,
+      "cleanupExit": 0,
+      "forwardExit": 143
+    },
+    "restoreSummary": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+    "rootCleanupReview": "deploy/verification/candidate-40b9ed8/root-recovery-review/summary.json",
+    "restoreState": "Allownerhandlesended; actualboth0/noPods/4BoundPVC/3105+18885free; maincanonicalpreserved",
+    "independentFunctionalReview": "docs/product/REVIEW-045.md"
   },
   "previousStableCheckpoints": [
     {
@@ -442,7 +448,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T18:09:42.558791+00:00",
+  "updatedAt": "2026-09-21T18:13:59.153966+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",

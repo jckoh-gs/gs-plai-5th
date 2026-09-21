@@ -8899,8 +8899,34 @@
     {
       "id": "FR-VPP-STATUS-01",
       "description": "연동 시작과 RTU online 상태 관측",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+          "sha256": "b81b7262cd1441c0bda025fa0d3c1a2b88d5b8ec6e90404e647c7c11d043b92b"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/root-recovery-review/summary.json",
+          "sha256": "d1425e1827929052a4c7fc06a06596d9a71ed4ed5e1c953f24401c141594171b"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/outbox-restart.json",
+          "sha256": "c120a075c4bddb55ebf589b782a60379073583224aa755bd5a1abf5e09405c93"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/outbox-post-normal.json",
+          "sha256": "013cea274d9cf213f9adbab276170dfba2b259d52dfe0f762e848f82622490d8"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/normal-backup/summary.json",
+          "sha256": "b6058ea8ce19dc0ce9dc14825835c1bfdf7b6022e2b2f7be2bc6505ae30fdc0c"
+        },
+        {
+          "path": "deploy/verification/stable-backup-40b9ed8.json",
+          "sha256": "f891bd6a6752942e777a3e455504f4e4810f7cc9bd31cb10a4dfe90fbb4cf2ff"
+        }
+      ],
+      "assessment": "REVIEW045: exact40b9ed8/234ec56 main·outbox·1075081216B/5ff 동일snapshot fresh1.7.1/하위1.7 26보고서+2Pod 및 양rig정리 기능검증완료. form44 actual201·receipt14 성공응답baseline(201assert주장없음), 원래5단지/1시나리오보존. 새불변manifest 출처검증과 최종미디어/시간게이트는별도대기."
     },
     {
       "id": "AT-VPP-STATUS-01-01",
@@ -9006,9 +9032,33 @@
         {
           "path": "deploy/verification/candidate-40b9ed8/pre-deployment-review.json",
           "sha256": "aff6ec7506991b055ae39a66528baefc7444a89c605956182a3dbdb284da3e80"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+          "sha256": "b81b7262cd1441c0bda025fa0d3c1a2b88d5b8ec6e90404e647c7c11d043b92b"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/root-recovery-review/summary.json",
+          "sha256": "d1425e1827929052a4c7fc06a06596d9a71ed4ed5e1c953f24401c141594171b"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/outbox-restart.json",
+          "sha256": "c120a075c4bddb55ebf589b782a60379073583224aa755bd5a1abf5e09405c93"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/outbox-post-normal.json",
+          "sha256": "013cea274d9cf213f9adbab276170dfba2b259d52dfe0f762e848f82622490d8"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/normal-backup/summary.json",
+          "sha256": "b6058ea8ce19dc0ce9dc14825835c1bfdf7b6022e2b2f7be2bc6505ae30fdc0c"
+        },
+        {
+          "path": "deploy/verification/stable-backup-40b9ed8.json",
+          "sha256": "f891bd6a6752942e777a3e455504f4e4810f7cc9bd31cb10a4dfe90fbb4cf2ff"
         }
       ],
-      "assessment": "REVIEW044: exactimage79app/실제broker 및 main40b9ed8/234ec56 UI·API·수정guide·인증/SSE·preview/export/event/list·MQTT125/error0·monitoronline PASS. mainonline은 retained/LWT 증거 아님. outbox종결/정상백업/동일snapshot1.7.1·하위1.7복원·정리·새manifest 대기. 로컬317과합산하지않음."
+      "assessment": "REVIEW045: exact40b9ed8/234ec56 main·outbox·1075081216B/5ff 동일snapshot fresh1.7.1/하위1.7 26보고서+2Pod 및 양rig정리 기능검증완료. form44 actual201·receipt14 성공응답baseline(201assert주장없음), 원래5단지/1시나리오보존. 새불변manifest 출처검증과 최종미디어/시간게이트는별도대기."
     }
   ],
   "reviewedSource": {
