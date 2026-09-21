@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T14:30:21.442725+00:00",
+  "scope": "Exactimage HTTP responses equal actual image distfiles; no workingtree mounts",
+  "image": "sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+  "version": "1.5.0",
+  "indexSha256": "f5e5ec7d01ee38625e5676bfa16d8a2b892278d4679fc923d61002eea28e58c9",
+  "assets": [
+    {
+      "path": "/assets/index-CyjJuK5n.js",
+      "sha256": "b6c1288921d9fa2e67e284cdbf9596f3b81abeae6625f9500acd07970f2e1dda",
+      "bytes": 265836,
+      "matchesImageFile": true
+    },
+    {
+      "path": "/assets/index-DEfqZjZ9.css",
+      "sha256": "51137c1c0da56706d8cbe87f873b7ace2b530ccdc07673e1fccf2b8cf93166db",
+      "bytes": 19886,
+      "matchesImageFile": true
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+1790000972: Info: running mosquitto as user id: 1000.
+1790000972: mosquitto version 2.1.2 starting
+1790000972: Config loaded from /mosquitto/config/mosquitto.conf.
+1790000972: Bridge support available.
+1790000972: Persistence support available.
+1790000972: TLS support available.
+1790000972: TLS-PSK support available.
+1790000972: Websockets support available.
+1790000972: Opening ipv4 listen socket on port 1883.
+1790000972: Opening ipv6 listen socket on port 1883.
+1790000972: mosquitto version 2.1.2 running
+1790000996: New connection from 172.22.0.4:33280 on port 1883.
+1790000996: New client connected from 172.22.0.4:33280 as test-vpp-f7486117-9967-45d8-8cb2-f8958fea64d9 (p4, c1, k60).
+1790000996: New connection from 172.22.0.4:33288 on port 1883.
+1790000996: New client connected from 172.22.0.4:33288 as test-gateway-b32baeb5-40ff-4278-9198-6a0e43a18925 (p4, c1, k60).
+1790000996: New connection from 172.22.0.4:33294 on port 1883.
+1790000996: New client connected from 172.22.0.4:33294 as test-gateway-b32baeb5-40ff-4278-9198-6a0e43a18925-710c2987-daf7-447d-854a-4f03fd78e9ab (p4, c1, k60).
+1790000997: New connection from 172.22.0.5:48194 on port 1883.
+1790000997: New client connected from 172.22.0.5:48194 as test-vpp-5fd48f30-5058-4611-8766-48221c608931 (p4, c1, k60).
+1790000997: New connection from 172.22.0.5:48206 on port 1883.
+1790000997: New client connected from 172.22.0.5:48206 as test-gateway-29664ce6-7ecd-4043-9a1a-d01cf3363b1a (p4, c1, k60).
+1790000998: New connection from 172.22.0.5:48208 on port 1883.
+1790000998: New client connected from 172.22.0.5:48208 as test-gateway-29664ce6-7ecd-4043-9a1a-d01cf3363b1a-7cf31b23-e9af-483d-8599-bca12a498f79 (p4, c1, k60).
+1790000998: New connection from 172.22.0.5:48218 on port 1883.
+1790000998: New client connected from 172.22.0.5:48218 as test-gateway-29664ce6-7ecd-4043-9a1a-d01cf3363b1a-53b668f1-480a-4250-8a84-edd02fd0f32c (p4, c1, k60).
+1790000999: New connection from 172.22.0.6:56760 on port 1883.
+1790000999: New client connected from 172.22.0.6:56760 as vpp-scada-lab (p4, c1, k60).
+1790000999: Client test-gateway-29664ce6-7ecd-4043-9a1a-d01cf3363b1a-7cf31b23-e9af-483d-8599-bca12a498f79 [172.22.0.5:48208] disconnected: connection closed by client.
+1790001001: Client test-gateway-b32baeb5-40ff-4278-9198-6a0e43a18925-710c2987-daf7-447d-854a-4f03fd78e9ab [172.22.0.4:33294] disconnected.
+1790001001: Client test-gateway-b32baeb5-40ff-4278-9198-6a0e43a18925 [172.22.0.4:33288] disconnected.
+1790001001: New connection from 172.22.0.4:33298 on port 1883.
+1790001001: New connection from 172.22.0.4:33302 on port 1883.
+1790001001: New client connected from 172.22.0.4:33298 as test-gateway-b32baeb5-40ff-4278-9198-6a0e43a18925 (p4, c1, k60).
+1790001001: New client connected from 172.22.0.4:33302 as test-gateway-b32baeb5-40ff-4278-9198-6a0e43a18925-710c2987-daf7-447d-854a-4f03fd78e9ab (p4, c1, k60).
+1790001001: Client test-gateway-b32baeb5-40ff-4278-9198-6a0e43a18925-710c2987-daf7-447d-854a-4f03fd78e9ab [172.22.0.4:33302] disconnected.
+1790001001: Client test-gateway-b32baeb5-40ff-4278-9198-6a0e43a18925 [172.22.0.4:33298] disconnected.
+1790001001: Client test-vpp-f7486117-9967-45d8-8cb2-f8958fea64d9 [172.22.0.4:33280] disconnected: connection closed by client.
+1790001002: Client test-gateway-29664ce6-7ecd-4043-9a1a-d01cf3363b1a-53b668f1-480a-4250-8a84-edd02fd0f32c [172.22.0.5:48218] disconnected.
+1790001002: Client test-gateway-29664ce6-7ecd-4043-9a1a-d01cf3363b1a [172.22.0.5:48206] disconnected.
+1790001002: New connection from 172.22.0.5:48234 on port 1883.
+1790001002: New connection from 172.22.0.5:48240 on port 1883.
+1790001002: New client connected from 172.22.0.5:48234 as test-gateway-29664ce6-7ecd-4043-9a1a-d01cf3363b1a (p4, c1, k60).
+1790001002: New client connected from 172.22.0.5:48240 as test-gateway-29664ce6-7ecd-4043-9a1a-d01cf3363b1a-53b668f1-480a-4250-8a84-edd02fd0f32c (p4, c1, k60).
+1790001002: New connection from 172.22.0.5:48242 on port 1883.
+1790001002: New client connected from 172.22.0.5:48242 as test-gateway-29664ce6-7ecd-4043-9a1a-d01cf3363b1a-7cf31b23-e9af-483d-8599-bca12a498f79 (p4, c1, k60).
+1790001016: New connection from 172.22.0.5:36646 on port 1883.
+1790001016: New client connected from 172.22.0.5:36646 as test-gateway-29664ce6-7ecd-4043-9a1a-d01cf3363b1a-3482229e-0987-4521-a727-869a5e789aad (p4, c1, k60).
+1790001018: Client test-gateway-29664ce6-7ecd-4043-9a1a-d01cf3363b1a-7cf31b23-e9af-483d-8599-bca12a498f79 [172.22.0.5:48242] disconnected.
+1790001018: Client test-gateway-29664ce6-7ecd-4043-9a1a-d01cf3363b1a-53b668f1-480a-4250-8a84-edd02fd0f32c [172.22.0.5:48240] disconnected.
+1790001018: Client test-gateway-29664ce6-7ecd-4043-9a1a-d01cf3363b1a-3482229e-0987-4521-a727-869a5e789aad [172.22.0.5:36646] disconnected.
+1790001018: Client test-gateway-29664ce6-7ecd-4043-9a1a-d01cf3363b1a [172.22.0.5:48234] disconnected.
+1790001018: Client test-vpp-5fd48f30-5058-4611-8766-48221c608931 [172.22.0.5:48194] disconnected: connection closed by client.

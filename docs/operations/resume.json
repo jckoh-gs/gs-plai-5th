@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T14:28:16.373466+00:00",
+  "updatedAt": "2026-09-21T14:32:43.697629+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": "stable-v1.4.0",
@@ -10,7 +10,7 @@
     "productVersion": "1.5.0",
     "prdVersion": "1.12",
     "idea": "IDEA-009",
-    "state": "Local acceptance PASS; commit exact candidate source then build/review image before any main upgrade. Stable1.4 remains deployed."
+    "state": "Exact6d165d1/2fd3f21 image and security gates PASS, registrydigest confirmed; next firsthour1.4 capture then controlled upgrade/recovery. No duplicate build/push."
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -22,7 +22,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Commit local1.5 candidate and independently verify exact image/security before any main upgrade; capture stable1.4 first-hour prefix after14:49:42UTC, preserve its recovery checkpoint, then require remote UI/MQTT/outbox/exact backup/current and backward restore before1.5 promotion. Originalfreeze/media/deadline unchanged.",
+    "After14:49:42UTC preserve immutable stable1.4 firsthour observer prefix. Exact6d165d1/2fd3f21 candidate already verified/pushed; inspectactualstate then preupgradebackup and controlled main1.5 rollout with unchanged broker. Require mainUI/MQTT/outbox and exactsnapshot fresh1.5/backward1.4 restore beforepromotion; preserve1.4fallback. Originalfreeze/media/deadline unchanged.",
     "Continue existing1.4observers until originalfreeze; preserve first-hour prefix after14:49:42UTC and periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -374,7 +374,7 @@
     "adoptionCommit": "b9c10ae",
     "productVersion": "1.5.0",
     "prdVersion": "1.12",
-    "phase": "Local acceptance PASS; exact source commit/image build next; no remote rollout",
+    "phase": "Verified exactimage uploaded; no owned build or registryforward handles left; main1.4 unchanged",
     "uiOwner": "/root/ui",
     "browserOwner": "/root/issues",
     "securityOwner": "/root/security",
@@ -384,7 +384,13 @@
     "fixtureHandle": 84859,
     "retry": "Inspect existing fixture handle and browser evidence before rerun; only own test RTUs; require exact new served bundle proof before browser writes. Main1.4observer/processes unchanged.",
     "localAcceptance": "artifacts/checkpoints/candidate-1.5-local-summary.json",
-    "buildOwner": "/root/deployment"
+    "buildOwner": "/root/deployment",
+    "sourceCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+    "evidenceDirectory": "deploy/verification/candidate-6d165d1",
+    "restoreBrowserOwner": "/root/issues",
+    "appImage": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+    "imageReview": "deploy/verification/candidate-6d165d1/pre-deployment-review.json",
+    "registryPushProof": "deploy/verification/candidate-6d165d1/registry-push-proof.json"
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
   "previousCandidateFixture": {
@@ -394,7 +400,10 @@
     "privateDirectory": "artifacts/private/candidate-1.4",
     "mqttPrefix": "candidate14",
     "seedDemo": false,
-    "scope": "Local isolated UI acceptance; never mix1.3API3106 with1.4dist; no primary cluster writes"
+    "scope": "Local isolated UI acceptance; never mix1.3API3106 with1.4dist; no primary cluster writes",
+    "status": "stopped after verified1.5 localacceptance",
+    "endedEvidence": "artifacts/checkpoints/local-fixture-retirement-20260921T1431/summary.json",
+    "handleExitCode": 0
   },
   "previousCandidateOperations": {
     "sourceCommit": "fdd0491a5c08901962f46ac845f8582921150d45",
@@ -460,5 +469,17 @@
     "registryForwardCleanup": "deploy/verification/candidate-fdd0491/registry-forward-cleanup.json",
     "registryFutureRule": "Local15050closed; open newownedforward only for future explicitimagework afterlistenercheck; remote registry retained.",
     "deploymentChange": "Planned1.4 rollout and actual outbox restart completed and verified; no further runtime mutation during checkpoint/handoff documentation."
+  },
+  "retiredLocalFixtures": {
+    "evidence": "artifacts/checkpoints/local-fixture-retirement-20260921T1431/summary.json",
+    "versions": [
+      "1.3.0",
+      "1.4.0"
+    ],
+    "ports": [
+      3106,
+      3107
+    ],
+    "databasesPreserved": true
   }
 }

@@ -1,0 +1,31 @@
+{
+  "uid": 1000,
+  "scripts": [
+    "client-message.js",
+    "vpp-client.js"
+  ],
+  "npmPresent": false,
+  "hashes": {
+    "package.json": "f7837545e59f957c1367c9c8fbf1a7581e086a39600168b81773c905e809f227",
+    "package-lock.json": "c05e4b17e062226fe4009c2d8301d11b76aea50200b5a0225b9a5f55fb5cf0c7",
+    "scripts/vpp-client.js": "762cb18072e5db77b48199681a266b520ee08b12986efd8795356e4b877911cd",
+    "scripts/client-message.js": "b50665fcb86de98866bca6447a6459fdf81610e9c2aef77e9db6b61772dc61d3",
+    "docs/protocol.md": "5ae2df13b852466556ef6bad4a5c840aa8f0ef93e12bb12397b7cf4e03295ac1",
+    "server/command-export.js": "6bba250ec237006e1d8f9b7e4b475870f3366a5a7cc9299c3519f4fc8149863e",
+    "server/config.js": "9ed29685b837bb4da146792723bd4edd9cf4874a8a31e3da75f4f8027bcedac6",
+    "server/control.js": "ceabb746658b7bb3af35b767457ea81129da1ddf4f142850dc11a4fff467b9ac",
+    "server/dataset-preview.js": "9732f5fcc73000494fe4138ff1116ed94f03474c713438901eb225368a194443",
+    "server/index.js": "fdced6abe1dc0917d72a8ddedb110bb904b6a439c49071d947049a3a9fed593d",
+    "server/metrics.js": "590169fdfc7431bb07cf7df957ae969cdf707244b809a1d7c1c8e6d642f9f817",
+    "server/model.js": "875d936b0038ef5a9bd3c678a50dafdd8d33c7c0f8c60eba0316def51e95ba67",
+    "server/store.js": "5b497e48f84e0a918a6d565e5dc9c741c4e68fc69c8141d813e7921e96a73969",
+    "server/transport.js": "90c33b2c5b7eff62ffb6c2c2dc8a6a659b9ab6e770119eadc862f3094431d29a",
+    "server/weather.js": "4d10a10957053d68f22349021b358a1d730622a457b824e26521723f0fea64d9",
+    "samples/hybrid.csv": "c400918bb97a7fd173e2401f88db04cbb3edcfd9f62bb9c603a62d3527bf12bb",
+    "samples/solar.csv": "ca636abde604fef9efa9ef005baefdddc2faf82bfa41be1b573d2b4d514114b4",
+    "samples/wind.csv": "9003d6a7cec7ab4bc029a8aa02085a3c6e6c8aeb7da5004a012b6037e90d2891"
+  },
+  "result": "PASS",
+  "sourceCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+  "allRuntimeSourceFilesMatchArchive": true
+}

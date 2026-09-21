@@ -1,0 +1,31 @@
+{
+  "result": "PASS_PRE_DEPLOYMENT",
+  "checkedAt": "2026-09-21T14:32:43.697629+00:00",
+  "sourceCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+  "imageManifest": "sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+  "runtimeHashesComparedToGit": 18,
+  "appOnlyTests": 77,
+  "actualBrokerIntegration": "PASS",
+  "advancedIntegration": "PASS",
+  "servedAssetSHA256": "b6c1288921d9fa2e67e284cdbf9596f3b81abeae6625f9500acd07970f2e1dda",
+  "securityMatches": 4,
+  "securityDistinctCVEs": 2,
+  "newKnownMatches": 0,
+  "securityEvidenceHashesVerified": 3,
+  "registryProof": "registry-push-proof.json",
+  "scope": "Root independent saved evidence/hash review. Does not claim remote1.5 deployment, newbackup, restore or finalmedia complete.",
+  "files": {
+    "deploy/verification/candidate-6d165d1/advanced.log": "b8bda2433b04be29fb6fb8701807b62037ab481bfee07da478a823426c8aed3c",
+    "deploy/verification/candidate-6d165d1/broker.log": "0ba2e42b54ba77029e2bcdfcba645ec646409d6700b8f30cccc29ad5134a1c6f",
+    "deploy/verification/candidate-6d165d1/build.log": "5ff6b77e2b8dfee9b6e8a882daafe54accaa797a8a3120e463a58807dd4a1c5c",
+    "deploy/verification/candidate-6d165d1/integration.log": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c",
+    "deploy/verification/candidate-6d165d1/provenance.json": "deb1f24ec865099d842302e868886f8978c9533fc9956226ece7eb0cefcd7f4c",
+    "deploy/verification/candidate-6d165d1/push.log": "7fb23be6ffd2ea174213352139762e7826857e93531ac27883bb369a113c825f",
+    "deploy/verification/candidate-6d165d1/registry-forward.json": "d5888dff5302e06fdf45ac7ad0930f6bdbad315f35cf94c1f96a4ffe7da6af1a",
+    "deploy/verification/candidate-6d165d1/registry-push-proof.json": "83f78e4e059550248f9332e2449fa5466b1ecb6bd7bf6001077a990cc5c5af1c",
+    "deploy/verification/candidate-6d165d1/runtime-files.json": "3f5304c2e9bbf7963f92669af265e6a00bd750f16209e09b5bc3c4192153339e",
+    "deploy/verification/candidate-6d165d1/served-assets.json": "b05dbc788489a94bbb488a94cb1682940357e2eea887e09e6ab959f7d62eb2aa",
+    "deploy/verification/candidate-6d165d1/test-selection.json": "367087fdfb9dfcfbe1aa721c43674dd256ffeac83873dd8639247fe01510b0f7",
+    "deploy/verification/candidate-6d165d1/unit-app-serial.log": "d0c093c1769e4ad9b5be58bd689c95cf9841c769500536f1144fcf8fffca83e6"
+  }
+}

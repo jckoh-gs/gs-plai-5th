@@ -125,12 +125,16 @@
     "idea": "IDEA-009",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T14:14:28.603123+00:00",
-    "status": "Local implementation,263 unit tests/build/integration/advanced and independent UI/security/product acceptance PASS; exact image and remote/recovery gates pending; main1.4 unchanged",
+    "status": "Exactimage77app/actualbroker integration/advanced/servedassets/securityPASS and immutableimagepushed. Mainstable1.4 unchanged; awaitingfirsthour capture and remote/current-backwardrestore gates.",
     "fallbackTag": "stable-v1.4.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.4.0.json",
     "beforeEvidence": "artifacts/checkpoints/command-receipt-before/round2/result.json",
     "localAcceptance": "artifacts/checkpoints/candidate-1.5-local-summary.json",
-    "buildOwner": "/root/deployment"
+    "buildOwner": "/root/deployment",
+    "sourceCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+    "evidenceDirectory": "deploy/verification/candidate-6d165d1",
+    "appImage": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+    "imageReview": "deploy/verification/candidate-6d165d1/pre-deployment-review.json"
   },
   "previousStableCheckpoints": [
     {
@@ -222,7 +226,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T14:28:16.373466+00:00",
+  "updatedAt": "2026-09-21T14:32:43.697629+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",

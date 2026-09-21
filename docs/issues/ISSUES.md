@@ -445,3 +445,6 @@ pageErrors=[]; 고유A/B만생성했고끝에fault/on/limit/targetLimit을생성
 ### IDEA009 로컬 전체 검증 및 outbox 시험 fixture 수정
 
 전체 단위검사 round1은262개 중261통과/1실패였다. 이전 운영도구의 포트설정이 VM에서 process.env를 참조하지만 해당 fake환경에 process가 없었던 시험 fixture 문제다. 실제 앱 실패로 확대하지 않으며 원본 실패 로그를 보존했다. fakeenv/assert와 실제연결URL 확인을 추가하고 기본/명시/충돌/잘못된 포트 검사를 보강했다. 선택6개 및 전체 round2 263/263 PASS, build/실제로컬broker 통합·고급 PASS, 기존브라우저4종과 신규receipt14기록/기존form44검사 PASS다. 중복선택시험을 더해 세지 않는다. artifacts/checkpoints/candidate-1.5-local-summary.json 및 REVIEW025에 연결하며 ISSUE022는 정확이미지·원격·복원 게이트가 남아 FIX_PENDING을 유지한다.
+
+
+IDEA009 browser harness 재사용 준비: isolated-restore 명시모드는 정확한 http://127.0.0.1:3105만 허용하고 제품1.5/64자리소문자expected bundleSHA/명시적artifacts/private하위token파일을 요구한다. main3104/외부/URLuserinfo/모드불일치는파일읽기·Playwright로드·API요청전에거절한다. 복원served bundle은expectedSHA와직접비교하며현재localdist로대체하지않는다. local3109/defaulttoken/freshoutdir/기존설정불변·고유RTU정리는유지한다. import만하는preflight3tests PASS/node--check; 실제복원브라우저는아직실행하지않았다. 기존round1성공소스/증거불변.

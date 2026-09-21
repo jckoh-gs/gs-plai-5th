@@ -1,0 +1,120 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.37kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:24.21.0-alpine@sha256:ebfe2f90462722a7a4de65e91990e97fe0d401c70e0e762c5b53302f905ec1c1
+#2 DONE 2.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 96B done
+#3 DONE 0.0s
+
+#4 [build 1/7] FROM docker.io/library/node:24.21.0-alpine@sha256:ebfe2f90462722a7a4de65e91990e97fe0d401c70e0e762c5b53302f905ec1c1
+#4 resolve docker.io/library/node:24.21.0-alpine@sha256:ebfe2f90462722a7a4de65e91990e97fe0d401c70e0e762c5b53302f905ec1c1 done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 334.45kB done
+#5 DONE 0.0s
+
+#6 [build 2/7] WORKDIR /app
+#6 CACHED
+
+#7 [build 3/7] COPY package.json package-lock.json ./
+#7 DONE 0.0s
+
+#8 [build 4/7] RUN npm ci
+#8 ...
+
+#9 [stage-1  4/10] RUN apk upgrade --no-cache     && npm ci --omit=dev --ignore-scripts && npm cache clean --force     && rm -rf /usr/local/lib/node_modules/npm /usr/local/lib/node_modules/corepack /opt/yarn*     && rm -f /usr/local/bin/npm /usr/local/bin/npx /usr/local/bin/corepack /usr/local/bin/yarn /usr/local/bin/yarnpkg     && rm -rf /var/cache/apk/* /root/.npm
+#9 1.152 OK: 10.9 MiB in 18 packages
+#9 6.617 
+#9 6.617 added 110 packages, and audited 111 packages in 5s
+#9 6.617 
+#9 6.617 33 packages are looking for funding
+#9 6.617   run `npm fund` for details
+#9 6.619 
+#9 6.619 found 0 vulnerabilities
+#9 6.621 npm notice
+#9 6.621 npm notice New major version of npm available! 11.19.0 -> 12.0.2
+#9 6.621 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+#9 6.621 npm notice To update run: npm install -g npm@12.0.2
+#9 6.621 npm notice
+#9 7.080 npm warn using --force Recommended protections disabled.
+#9 DONE 7.7s
+
+#8 [build 4/7] RUN npm ci
+#8 13.58 
+#8 13.58 added 186 packages, and audited 187 packages in 13s
+#8 13.58 
+#8 13.58 38 packages are looking for funding
+#8 13.58   run `npm fund` for details
+#8 13.58 
+#8 13.58 found 0 vulnerabilities
+#8 13.59 npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+#8 13.59 npm warn install-scripts   esbuild@0.28.2 (postinstall: node install.js)
+#8 13.59 npm warn install-scripts
+#8 13.59 npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+#8 13.59 npm notice
+#8 13.59 npm notice New major version of npm available! 11.19.0 -> 12.0.2
+#8 13.59 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+#8 13.59 npm notice To update run: npm install -g npm@12.0.2
+#8 13.59 npm notice
+#8 DONE 13.7s
+
+#10 [build 5/7] COPY web ./web
+#10 DONE 0.1s
+
+#11 [build 6/7] COPY vite.config.js ./
+#11 DONE 0.0s
+
+#12 [build 7/7] RUN npm run build
+#12 0.548 
+#12 0.548 > grid-vpp-emulator@1.5.0 build
+#12 0.548 > vite build
+#12 0.548 
+#12 1.142 vite v7.3.6 building client environment for production...
+#12 1.245 transforming...
+#12 4.599 ✓ 2141 modules transformed.
+#12 4.776 rendering chunks...
+#12 4.854 computing gzip size...
+#12 4.873 ../dist/index.html                   0.41 kB │ gzip:   0.30 kB
+#12 4.873 ../dist/assets/index-DEfqZjZ9.css   19.89 kB │ gzip:   5.18 kB
+#12 4.873 ../dist/assets/index-CyjJuK5n.js   265.84 kB │ gzip:  84.89 kB
+#12 4.873 ../dist/assets/Scene-O1jrxZbj.js   885.86 kB │ gzip: 238.71 kB
+#12 4.874 
+#12 4.874 (!) Some chunks are larger than 500 kB after minification. Consider:
+#12 4.874 - Using dynamic import() to code-split the application
+#12 4.874 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+#12 4.874 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+#12 4.875 ✓ built in 3.71s
+#12 DONE 5.0s
+
+#13 [stage-1  5/10] COPY --from=build /app/dist ./dist
+#13 DONE 0.0s
+
+#14 [stage-1  6/10] COPY server ./server
+#14 DONE 0.0s
+
+#15 [stage-1  7/10] COPY scripts/vpp-client.js scripts/client-message.js ./scripts/
+#15 DONE 0.0s
+
+#16 [stage-1  8/10] COPY samples ./samples
+#16 DONE 0.0s
+
+#17 [stage-1  9/10] COPY docs/protocol.md ./docs/protocol.md
+#17 DONE 0.0s
+
+#18 [stage-1 10/10] RUN mkdir /data && chown node:node /data
+#18 DONE 0.1s
+
+#19 exporting to oci image format
+#19 exporting layers
+#19 exporting layers 0.3s done
+#19 exporting manifest sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f done
+#19 exporting config sha256:cf0519837034237683aace865a5f027365fe760a9f2d0543f012db69a3f66779 done
+#19 sending tarball
+#19 sending tarball 0.4s done
+#19 DONE 0.7s

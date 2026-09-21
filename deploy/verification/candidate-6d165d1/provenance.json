@@ -1,0 +1,41 @@
+{
+  "sourceCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+  "archive": "artifacts/private/grid-6d165d1.oci.tar",
+  "context": "isolated git archive",
+  "imageManifest": "sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+  "image": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+  "labels": {
+    "grid.prd.version": "1.12",
+    "grid.runtime.variant": "alpine",
+    "org.opencontainers.image.revision": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+    "org.opencontainers.image.version": "1.5.0"
+  },
+  "architecture": "amd64",
+  "os": "linux",
+  "deployed": false,
+  "registryPushed": true,
+  "checkedAt": "2026-09-21T14:30:49.821240+00:00",
+  "runtimeAppTests": {
+    "pass": 77,
+    "fail": 0,
+    "files": 21,
+    "concurrency": 1,
+    "mounts": "tests only; immutable image server/packages/client scripts"
+  },
+  "testSelection": "test-selection.json",
+  "actualBrokerIntegration": "PASS",
+  "advancedIntegration": "PASS",
+  "runtimeFileEquality": "runtime-files.json",
+  "servedAssets": "served-assets.json",
+  "harnessFailures": [],
+  "security": {
+    "findings": "docs/security/evidence/app-candidate-6d165d1-findings.json",
+    "sbom": "docs/security/evidence/app-candidate-6d165d1-sbom.json",
+    "packages": 130,
+    "residualMatches": 4,
+    "distinctCVEs": 2,
+    "newFindings": 0
+  },
+  "localQaCleanup": "All owned app/broker/network removed after terminal gates; no registry forward started",
+  "registryPushProof": "registry-push-proof.json"
+}

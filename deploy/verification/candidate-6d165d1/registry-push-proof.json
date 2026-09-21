@@ -1,0 +1,24 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T14:31:47.909471+00:00",
+  "image": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+  "sourceCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+  "archivePreserved": true,
+  "remoteManifestChecks": [
+    {
+      "ref": "candidate-6d165d1",
+      "status": 200,
+      "headerDigest": "sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+      "bodyDigest": "sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+      "bytes": 2759
+    },
+    {
+      "ref": "sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+      "status": 200,
+      "headerDigest": "sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+      "bodyDigest": "sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+      "bytes": 2759
+    }
+  ],
+  "mainDeploymentChanged": false
+}

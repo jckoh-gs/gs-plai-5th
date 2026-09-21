@@ -1,8 +1,22 @@
-// Independent acceptance harness: isolated local candidate only, actual REST with labeled response faults.
+// Independent acceptance harness: isolated local candidate or restore, actual REST with labeled response faults.
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{randomUUID,createHash}=require('node:crypto');
+function fixtureConfig(env=process.env){
+ const mode=env.GRID_FIXTURE_TARGET||'local';if(!['local','isolated-restore'].includes(mode))throw Error('Unknown receipt fixture target');
+ const version=env.GRID_CANDIDATE_VERSION||'1.5.0';if(version!=='1.5.0')throw Error('Unreviewed receipt product version');
+ const allowed=mode==='isolated-restore'?'http://127.0.0.1:3105':'http://127.0.0.1:3109',base=env.GRID_URL||allowed;
+ if(base!==allowed)throw Error('Receipt fixture URL mismatch; main3104 and external targets are forbidden');
+ const expectedBundleHash=env.EXPECTED_BUNDLE_SHA256;
+ if(mode==='isolated-restore'&&!/^[a-f0-9]{64}$/.test(expectedBundleHash||''))throw Error('Restore requires explicit verified bundle SHA256');
+ const tokenFile=env.API_TOKEN_FILE||(mode==='local'?'artifacts/private/candidate-1.5/api-token':null);
+ const privateRoot=path.resolve('artifacts/private')+path.sep;
+ if(!tokenFile||!path.resolve(tokenFile).startsWith(privateRoot))throw Error('Token must be an explicit private file for restore');
+ return {mode,version,base,expectedBundleHash,tokenFile,out:env.QA_DIRECTORY||'artifacts/checkpoints/command-receipts-1.5-'+(mode==='local'?'browser':'isolated-restore')+'-'+Date.now()};
+}
+module.exports={fixtureConfig};
+if(require.main===module){
+const config=fixtureConfig(),{base,out}=config;
 const {chromium}=require(path.join(process.env.PLAYWRIGHT_NODE_MODULES||'/Users/charleskoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules','playwright'));
-const base='http://127.0.0.1:3109',out=process.env.QA_DIRECTORY||'artifacts/checkpoints/command-receipts-1.5-browser-'+Date.now();
-const sha=b=>createHash('sha256').update(b).digest('hex'),fileSha=p=>sha(fs.readFileSync(p)),token=fs.readFileSync('artifacts/private/candidate-1.5/api-token','utf8').trim();
+const sha=b=>createHash('sha256').update(b).digest('hex'),fileSha=p=>sha(fs.readFileSync(p)),token=fs.readFileSync(config.tokenFile,'utf8').trim();
 const api=async(url,method='GET',body)=>{const response=await fetch(base+'/api'+url,{method,headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body),signal:AbortSignal.timeout(15000),redirect:'error'});assert(response.ok,`fixture HTTP ${response.status}`);return response.json()};
 const openGates=new Set();
 const gate=()=>{let resolve;const promise=new Promise(r=>resolve=r);const release=()=>{openGates.delete(release);resolve()};openGates.add(release);return{promise,release}},sleep=ms=>new Promise(r=>setTimeout(r,ms));
@@ -11,7 +25,7 @@ const settings=p=>({id:p.id,runId:p.runId,faults:p.faults,replay:p.replay,genera
  assert(process.env.EXPECTED_WEB_SHA,'Set the approved candidate web source SHA before running');assert.equal(fileSha('web/src.jsx'),process.env.EXPECTED_WEB_SHA,'source changed before run');
  assert(!fs.existsSync(out),'Evidence directory must be new');fs.mkdirSync(out,{recursive:true});
  const initial=await api('/state');assert.equal(initial.version,'1.5.0');const before=initial.plants.map(settings),owned=[],checks=[],posts=[],errors=[],loadedAssets=[];
- const html=await(await fetch(base,{signal:AbortSignal.timeout(5000),redirect:'error'})).text(),assets=[];for(const m of html.matchAll(/src="(\/assets\/[^\"]+\.js)"/g)){const bytes=Buffer.from(await(await fetch(base+m[1],{signal:AbortSignal.timeout(5000),redirect:'error'})).arrayBuffer());assert.equal(sha(bytes),fileSha('dist'+m[1]));assets.push({path:m[1],sha256:sha(bytes)})}assert(assets.length);
+ const html=await(await fetch(base,{signal:AbortSignal.timeout(5000),redirect:'error'})).text(),assets=[];for(const m of html.matchAll(/src="(\/assets\/[^\"]+\.js)"/g)){const bytes=Buffer.from(await(await fetch(base+m[1],{signal:AbortSignal.timeout(5000),redirect:'error'})).arrayBuffer());if(config.mode==='isolated-restore')assert.equal(sha(bytes),config.expectedBundleHash,'Served restore bundle differs from approved hash');else assert.equal(sha(bytes),fileSha('dist'+m[1]));assets.push({path:m[1],sha256:sha(bytes)})}assert(assets.length);
  const browser=await chromium.launch({channel:'chrome',headless:true});let page;
  try{
   for(const letter of ['A','B'])owned.push(await api('/plants','POST',{name:`Receipt15-${letter}-${randomUUID().slice(0,8)}`,type:'wind',count:1,ratedKw:1000,rampKwPerSec:1000,csv:'timestamp,power_kw\n2026-01-01T00:00:00Z,1000\n2026-01-01T00:10:00Z,1000'}));
@@ -51,7 +65,7 @@ const settings=p=>({id:p.id,runId:p.runId,faults:p.faults,replay:p.replay,genera
   for(let i=0;i<21;i++){const r=await submit(a,1001,30);assert.equal(r.status,'rejected');await expectReceipt(r.commandId,'rejected')}
   assert.equal(await page.locator('.command-receipt').count(),20);assert.equal(await receipt(timeoutId).count(),0);await page.locator('.receipt-history summary').click();assert.equal(await page.locator('.receipt-history .command-receipt').count(),19);await page.setViewportSize({width:390,height:844});await page.screenshot({path:path.join(out,'history-narrow.png')});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));checks.push({case:'memory-history20-oldest-excluded-narrow-layout'});
   const serverBeforeReload=(await api('/plants/'+a.id+'/commands')).length;await page.reload();await select(a);assert.equal(await page.locator('.command-receipt').count(),0);assert.equal((await api('/plants/'+a.id+'/commands')).length,serverBeforeReload);checks.push({case:'reload-clears-memory-only-server-history-retained'});
-  assert.deepEqual(errors,[]);assert(assets.every(a=>loadedAssets.includes(a.path)),'Browser did not load the hashed served bundle');assert.equal(fileSha('web/src.jsx'),process.env.EXPECTED_WEB_SHA,'source changed during run');fs.writeFileSync(path.join(out,'result.json'),JSON.stringify({result:'PASS',observedAt:new Date().toISOString(),scope:'Local1.5 actual REST/browser; response interception fixtures do not claim real server/network failures',checks,posts,assets,loadedAssets,source:{path:'web/src.jsx',sha256:fileSha('web/src.jsx')},pageErrors:errors},null,2));console.log(JSON.stringify({result:'PASS',checks:checks.length,out}));
+  assert.deepEqual(errors,[]);assert(assets.every(a=>loadedAssets.includes(a.path)),'Browser did not load the hashed served bundle');assert.equal(fileSha('web/src.jsx'),process.env.EXPECTED_WEB_SHA,'source changed during run');fs.writeFileSync(path.join(out,'result.json'),JSON.stringify({result:'PASS',observedAt:new Date().toISOString(),scope:config.mode+'1.5 actual REST/browser; response interception fixtures do not claim real server/network failures',checks,posts,assets,loadedAssets,source:{path:'web/src.jsx',sha256:fileSha('web/src.jsx')},pageErrors:errors},null,2));console.log(JSON.stringify({result:'PASS',checks:checks.length,out}));
  }finally{
   for(const release of [...openGates])release();
   const cleanupWait=async task=>{let timer;try{return await Promise.race([task,new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error('Browser cleanup exceeded 10 seconds')),10000)})])}finally{clearTimeout(timer)}};
@@ -62,3 +76,5 @@ const settings=p=>({id:p.id,runId:p.runId,faults:p.faults,replay:p.replay,genera
   }
  }
 })().catch(e=>{console.error(e.message);process.exitCode=1});
+
+}

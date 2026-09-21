@@ -1,0 +1,11 @@
+✔ receipt browser target rejects primary, external, credentials and mode mismatch before I/O (0.38725ms)
+✔ isolated restore requires exact approved lowercase digest, private token and version1.5 (0.158334ms)
+✔ default local mode remains isolated3109 with original private candidate token (0.046416ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33.34

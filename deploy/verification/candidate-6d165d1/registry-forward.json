@@ -1,0 +1,14 @@
+{
+  "createdAt": "2026-09-21T14:31:26.371105+00:00",
+  "execSession": 88899,
+  "pid": 96830,
+  "processStartIdentity": "Mon Sep 21 23:31:18 2026",
+  "args": "kubectl --context charles-k3s -n gs-plai-5h port-forward --address=127.0.0.1 deployment/grid-registry 15050:15050",
+  "priorListenerAbsent": true,
+  "remoteResourcesModified": false,
+  "result": "PASS",
+  "closedAt": "2026-09-21T14:31:52.768870+00:00",
+  "signal": "SIGTERM",
+  "originalExecTerminalExitCode": 143,
+  "listenerAbsentAfterCleanup": true
+}

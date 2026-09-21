@@ -14,7 +14,7 @@
 
 ## 진행 중인 1.5 후보
 
-PRD1.12/IDEA009의 명령 접수 확인 UI는 로컬 전체263검사·build·실제broker 통합/고급·신규receipt14기록·기존form44검사·브라우저4종 PASS다. [로컬 집계](../../artifacts/checkpoints/candidate-1.5-local-summary.json)와 [독립 인수](../product/REVIEW-025.md)를 확인한다. 정확한 소스 커밋 이미지/보안 검토가 다음 단계이며, 원격 배포·동일 백업·현재/하위 복원 전에는 stable1.4를 유지한다. 로컬fixture3109/handle84859는 기존 증거 확인 후 재사용하며 무조건 새로 기동하지 않는다.
+PRD1.12/IDEA009의 명령 접수 확인 UI는 로컬 전체263검사·build·실제broker 통합/고급·신규receipt14기록·기존form44검사·브라우저4종 PASS다. [로컬 집계](../../artifacts/checkpoints/candidate-1.5-local-summary.json)와 [독립 인수](../product/REVIEW-025.md)를 확인한다. 정확이미지77개 앱 검사·실제broker 통합/고급·제공asset 및 보안 검토도 통과했고, 레지스트리digest를 대조했다. 원격 배포·동일 백업·현재/하위 복원 전에는 stable1.4를 유지한다. 로컬fixture3109/handle84859는 기존 증거 확인 후 재사용하며 무조건 새로 기동하지 않는다. 이전3106/3107 fixture는 원래handle종료0을 확인했고 private DB를 보존했다.
 
 ## 고정 일정
 
@@ -49,7 +49,7 @@ native heartbeat `grid`가 10분마다 이 재개 절차를 호출한다. Mac과
 
 ## 채택된 다음 후보
 
-IDEA009를 PRD1.12/제품1.5.0 후보로 채택했다. 실제 로컬 beforeproof A/B/C와 REVIEW024가 근거이며 아직 구현·검증 전이다. REST 접수 상태·응답 유실·중복 제출을 로컬에서 구현하고 검증하는 단계부터 재개한다. 원격1.4 배포·백업·체크포인트 및 관측은 유지한다. 완료한1.4 배포를 반복하지 않는다.
+IDEA009 / PRD1.12 / 제품1.5.0 후보 runtime은 `6d165d1e8f3214a50ee66d2b13947f64d86658f5`다. 로컬 및 정확이미지·독립보안검토·레지스트리업로드가 완료됐다. 이미지 `sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f`와 `deploy/verification/candidate-6d165d1/pre-deployment-review.json`을 확인해 중복빌드/업로드를 피한다. 담당들의 빌드/전용15050forward는 모두 종료됐다. 다음은14:49:42Z 이후1.4 첫시간관찰 보존→업그레이드전 백업→main후보검증→동일백업 현재1.5/하위1.4복원이다. 격리 복원3105용 receipt검사 모드와3개경계시험도 준비됐다. 원격1.4 배포·백업·체크포인트 및 관측은 유지한다. 완료한1.4 배포를 반복하지 않는다.
 
 ## 남은 작업 순서
 
