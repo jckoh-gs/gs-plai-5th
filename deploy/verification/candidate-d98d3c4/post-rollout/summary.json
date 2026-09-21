@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:41:38.779380+00:00",
+  "version": "1.7.0",
+  "image": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+  "podUID": "1fcd847c-cab2-4905-9fae-2d684c166aa5",
+  "checks": [
+    "identity.json",
+    "health-config.json",
+    "auth.json",
+    "continuity.json",
+    "runtime-files.json",
+    "served-assets.json"
+  ],
+  "readOnly": true,
+  "noMainOrPortMutations": true
+}

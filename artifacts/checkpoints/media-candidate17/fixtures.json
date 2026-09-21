@@ -1,0 +1,10 @@
+{
+  "rehearsal": true,
+  "names": {
+    "wind": "Candidate1.7 wind b7ce1f0f-74c2-4413-bffb-ecfe8b7d99eb",
+    "solar": "Candidate1.7 solar 176c0aeb-29c4-4636-8d77-6fd1725c6d82",
+    "hybrid": "미디어17 복합 1790008670218",
+    "scenario": "미디어17 저장 1790008670218"
+  },
+  "scope": "Existing wind/solar selection read-only; only new UI registered hybrid owned"
+}

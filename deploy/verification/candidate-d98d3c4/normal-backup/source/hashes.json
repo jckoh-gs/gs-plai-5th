@@ -1,0 +1,8 @@
+{
+  "commit": "a8f48c145b3c60efde90045e7cafa10dcd64f6cd",
+  "files": {
+    "remote-backup-helpers.mjs": "73ace68aee69462f0c6eac06ad0445363bcb2143f1cfcff85a28eaf6c85d30fb",
+    "remote-backup.mjs": "2172449bf7161983062d1fe06b00f198060ede37cb5cea1062e701572d961c18"
+  },
+  "SNAPSHOT_SOURCE_SHA256": "0ebab4bb4993239e0872bdab427db16dadb8e1d877809c5f376665f2f922589b"
+}

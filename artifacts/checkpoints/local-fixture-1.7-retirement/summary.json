@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:50:05.832669+00:00",
+  "handle": 28735,
+  "pid": 28948,
+  "terminalExit": 0,
+  "port3111Free": true,
+  "databasePreserved": true,
+  "preStopProof": "pre-stop.json",
+  "scope": "Onlyrootownedlocalcandidate; main1.7supervisor/observersunchanged"
+}

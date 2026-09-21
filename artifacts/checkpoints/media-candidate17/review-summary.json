@@ -1,0 +1,86 @@
+{
+  "rehearsal": true,
+  "scope": "Preparation only; no final acceptance",
+  "terminalExitCode": 0,
+  "videoSeconds": 255.33,
+  "productionSeconds": 279.911,
+  "fullDecode": true,
+  "audioTechnicalVerification": {
+    "meanDb": -19.2,
+    "listened": false,
+    "scope": "Signal, decode, source narration/SRT text and timeline only; no auditory pronunciation assessment"
+  },
+  "pageErrors": [],
+  "srt": {
+    "cues": 32,
+    "maxDeviationSeconds": 2.842170943040401e-14,
+    "withinVideo": true
+  },
+  "visualReview": {
+    "scope": "Preparation only, sampled encoded frames not every frame",
+    "encodedSceneFrames": 8,
+    "additionalFrames": [
+      "review-receipt.png",
+      "review-command-completed.png",
+      "review-list-status-subtitle.png"
+    ],
+    "result": "PASS representative-frame review",
+    "receiptAndListStatusAndMQTTRowVisible": true,
+    "exportButtonVisible": true,
+    "metricsRightColumnComplete": true,
+    "CSVZoomRetained": true,
+    "pointerAndClickHaloVisible": true,
+    "KoreanSubtitlesLegible": true
+  },
+  "claimsReview": {
+    "scope": "rehearsal-only",
+    "MQTT": "accepted → executing → completed; actual125kW/error0",
+    "REST": "Stored-status query shows latest set_limit completed; stop superseded by following start, not completed stop",
+    "scenario": "actual201 registration and observed scenario restore new runId",
+    "external": "KMA/AWS/external production VPP not verified",
+    "commandList": "Actual normal list success/browser last-observed time; no HTTP failure fixture filmed, separate from MQTT fault injection and global SSE"
+  },
+  "recovery": {
+    "result": "PASS",
+    "path": "source/demo-recovery.json",
+    "settingsMatched": true,
+    "existingUnchanged": true,
+    "existingCount": 7,
+    "exactPriorRandomTrajectoryRestored": false
+  },
+  "finalWindow": {
+    "observedVideoProductionMinutes": 4.665183333333333,
+    "remainingOf30Minutes": 25.334816666666665,
+    "limitation": "Local rehearsal production4.67min; final remote verification/14-slide deck/review still required within original window"
+  },
+  "sourceSnapshots": {
+    "files": 43,
+    "allCopiedHashesMatch": true
+  },
+  "terminal": {
+    "handle": 58112,
+    "exitCode": 0,
+    "supervisorPid": 32322,
+    "workerPid": 32324,
+    "birthUTC": "2026-09-21T16:37:50Z",
+    "independentRecoveryNeeded": false
+  },
+  "videoSha256": "ccb890aa150f918d43cd8610147d5bd6a139c4b1664d1b71c82ef1adfc3acace",
+  "download": {
+    "rows": 5,
+    "plantId": "ddc8edb7-57cb-47e2-b658-95feb59eaf93",
+    "productVersion": "1.7.0",
+    "sha256": "f072ceed4338e8fcccbafe237c9c331562c90249e28c863d092d9478faea91c1"
+  },
+  "MQTT": {
+    "commandId": "cb0a2978-4083-473d-b7c5-813604db9e36",
+    "rtuId": "ddc8edb7-57cb-47e2-b658-95feb59eaf93",
+    "actualKw": 125,
+    "errorKw": 0,
+    "states": [
+      "accepted",
+      "executing",
+      "completed"
+    ]
+  }
+}

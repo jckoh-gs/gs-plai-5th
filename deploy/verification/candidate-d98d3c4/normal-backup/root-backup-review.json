@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:47:44.609794+00:00",
+  "metadata": "deploy/verification/stable-backup-d98d3c4.json",
+  "bytes": 931876864,
+  "sha256": "1cab74e110d172307ffd3605543da2db4261c27f009b97871a21bd1bf665827c",
+  "privateMode": "0600",
+  "terminalHandle": 24866,
+  "exitCode": 0,
+  "workerExitConfirmed": true,
+  "snapshotMs": 5185,
+  "healthSamples": 11,
+  "healthFailures": 0,
+  "maxHealthElapsedMs": 1141,
+  "podUID": "79784e51-f961-4e34-86d8-196827a8e26c",
+  "restartCounts": [
+    0,
+    0
+  ],
+  "scope": "Newnormal1.7 fullsnapshotSHA+integrity; exactsame current/backwardrestore activelypending"
+}

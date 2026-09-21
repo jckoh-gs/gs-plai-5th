@@ -1,0 +1,40 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:43:03.159299+00:00",
+  "version": "1.7.0",
+  "cases": {
+    "authSSE": {
+      "handle": 37666,
+      "exitCode": 0
+    },
+    "previewBrowser": {
+      "handle": 24869,
+      "exitCode": 0,
+      "purePreviewRequests": 7
+    },
+    "previewAPI": {
+      "exitCode": 0,
+      "noNewRTU": true
+    },
+    "export": {
+      "handle": 45568,
+      "exitCode": 0,
+      "afterMQTTProof": "../main-mqtt.json",
+      "savedStatesCompared": [
+        9,
+        1
+      ]
+    }
+  },
+  "pageErrors": [],
+  "cleanup": "All child commands exited0 after their finally closed browsers, owned proxy sockets and servers. Main forward/Pod/observers unchanged by these harnesses.",
+  "scope": "Auth/SSE stream silence and cut use local proxy only; export401 and preview delays are browser/proxy fixtures, not actual remote outages. POST is limited to nonpersisting dataset preview; no RTU/command/settings mutation is issued.",
+  "assetIdentityEvidence": "../main-command-list/result.json",
+  "expectedBundleSHA256": "154fe2de1f039fe27fbcce6793e15716e843ca3814c2d361392a2207b6918dfc",
+  "sourceHashes": {
+    "browser-preview-race.cjs": "2ce1248a8685c5d840dcf75f7ebda35f70e1a30f2f4f66a9cbda1a7c37224d56",
+    "browser-command-export.cjs": "d0496cd8a6f526bdddf61701272b1c9cf9d792d2dfbc489596eda87543a8a278",
+    "browser-check.cjs": "9844dbf9fe8d30ce08465c70c373798cd510ec4156737f8ce721f052d356c7c8",
+    "remote-preview.mjs": "fd00c96113a8b805502961a15ed3287ee1dbce1643be59c52d7978ad1a17a0cb"
+  }
+}

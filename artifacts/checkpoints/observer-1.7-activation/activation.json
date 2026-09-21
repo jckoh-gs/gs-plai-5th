@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-09-21T16:46:28.350572+00:00",
+  "processes": {
+    "primary": {
+      "handle": 85394,
+      "pid": 34756,
+      "processIdentity": "Tue Sep 22 01:45:54 2026"
+    },
+    "audit": {
+      "handle": 60682,
+      "pid": 34755,
+      "processIdentity": "Tue Sep 22 01:45:54 2026"
+    },
+    "supervisor": {
+      "handle": 77410,
+      "pid": 33567,
+      "processIdentity": "Tue Sep 22 01:40:37 2026"
+    }
+  },
+  "version": "1.7.0",
+  "primaryDirectory": "artifacts/soak/v1.7.0",
+  "auditDirectory": "artifacts/soak/telemetry-audit/2026-09-21T16-45-54-307Z-70932d07",
+  "scope": "Newconnectedread-onlyepoch; initialmessagecountsareactual,noonehourclaim",
+  "primaryMessages": 9,
+  "auditReceived": 9,
+  "originalFreeze": "2026-09-21T21:37:33.079009+00:00"
+}

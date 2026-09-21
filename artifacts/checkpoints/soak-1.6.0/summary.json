@@ -1,0 +1,59 @@
+{
+  "result": "PASS",
+  "scope": "Closed1.6 observationepoch beforeplanned1.7upgrade; notonehourorfinalgoal",
+  "runtimeCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+  "primary": {
+    "terminalHandle": 8363,
+    "exitCode": 0,
+    "elapsedSeconds": 2125.518,
+    "messages": 326,
+    "apiErrors": 0,
+    "connectionErrors": 0,
+    "invalid": 0,
+    "duplicates": 0
+  },
+  "audit": {
+    "terminalHandle": 4110,
+    "exitCode": 0,
+    "elapsedSeconds": 2120.579,
+    "received": 326,
+    "connectionErrors": 0,
+    "invalid": 0,
+    "duplicates": 0,
+    "rtus": [
+      {
+        "id": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+        "messages": 70,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0
+      },
+      {
+        "id": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+        "messages": 96,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0
+      },
+      {
+        "id": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+        "messages": 90,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0
+      },
+      {
+        "id": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+        "messages": 35,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0
+      },
+      {
+        "id": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+        "messages": 35,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0
+      }
+    ]
+  },
+  "endedAt": "2026-09-21T16:39:24.611Z",
+  "singleDisconnection": "Gracefulownedobserver shutdown; do notlabel asremoteoutage",
+  "limitation": "Receivedmessages only; no pre-subscription/transition coverage oruniversaldelivery proof."
+}

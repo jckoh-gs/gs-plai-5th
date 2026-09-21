@@ -1,0 +1,11 @@
+{
+  "summary.json": "46c0965150d95f672442602d263d67011bbe7df54fba7fdef3ad8636c0c1a727",
+  "audit/latest.json": "b2b7def970d0021eb98c1a001b3994d4f30ad8fa4c197e8ae179587ade2ab705",
+  "audit/observations.jsonl": "e45751ef4014838dc1a1cdb4bf9fc23ef5be3dd65c87f949b2f068793635bd78",
+  "audit/result.json": "b2b7def970d0021eb98c1a001b3994d4f30ad8fa4c197e8ae179587ade2ab705",
+  "primary/latest.json": "cf1f08b699351d9a3608652ffb81f25066de41701b774256bdaec7b7506516bb",
+  "primary/observations.jsonl": "279a6ab585a19de0780c3ef3914b61d1fc66f11f13b1d0e1b5e3965aa0d272aa",
+  "primary/session-71b30fed-fd5d-4de8-ba09-cb7423798b66.json": "4de98de5f8a354c88114cad4a16dff3338bf784b959a6e626110f282dfca9770",
+  "audit/source/telemetry-audit-monitor.mjs": "6c4bbb0b77c03e8a49d9d17c8f7e743c10765ab05b0d94f6b1a736f6a60c4617",
+  "audit/source/telemetry-audit.mjs": "ba6c2c1c9ac39e4a1666d7ad0b6468271a1eda163f2653df9e6bac842bb48486"
+}

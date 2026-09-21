@@ -1,0 +1,9 @@
+{
+  "actual-rendered.html": "5ff32210bb75667206cf97ff1da5467ff570c8d55b245a949c1722c40ad24dd1",
+  "result.json": "130e1539c1d8f42ff3bfc7a577eb0f5f67e223525a057d5648f80ca0f7a5615c",
+  "actual-desktop.png": "7f0d41ee72acce8e0149624eb65dda67bdd0b0f9b2132efab1c3ac43504b52ec",
+  "terminal.json": "532dc1a50275479d07d8882d8281bafcda9026ca64117ab1c08b9b7c744b9e0f",
+  "source/event-time.js": "251c71e39967b05c99ca054c093385a71728200db5f407d8cd6dc667972a7c28",
+  "source/browser-event-time.cjs": "9f63f93075f1f4df8ec80b58b14f1fab3ff3b7456b85d9ba68c961512da6aaf3",
+  "source/src.jsx": "ffbb204d9275fc14ebfdd9ea3ea488494ca2c0c97271f6af69f69993ddbfa592"
+}

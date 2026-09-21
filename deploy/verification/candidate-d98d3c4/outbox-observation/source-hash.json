@@ -1,0 +1,4 @@
+{
+  "sha256": "3ab9c5ecc929cecf3c6189ff67edec276e6af52a07b77e1e33b98f17106d54b0",
+  "scope": "read-only kubectl GET/exec HTTP health; no mutations"
+}

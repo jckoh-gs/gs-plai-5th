@@ -44,13 +44,13 @@
   "requestedModel": "Codex Astra",
   "modelVerification": "Agents inherited main session model; exact runtime model identifier not exposed by available goal tools.",
   "deployment": {
-    "observedAt": "2026-09-21T16:03:28.920Z",
-    "status": "Actual1.6Ready afterplannedoutboxrestart, original5settingsnormal, supervisorreconnected",
-    "sourceCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
-    "prdVersion": "1.13",
+    "observedAt": "2026-09-21T16:45:27.736Z",
+    "status": "Actual1.7Ready afterplannedoutboxrestart; original5settingsnormal/supervisorreconnected",
+    "sourceCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
+    "prdVersion": "1.14",
     "context": "charles-k3s",
     "namespace": "gs-plai-5h",
-    "appImage": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
+    "appImage": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
     "brokerImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
     "registryImage": "127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c",
     "uiTunnel": "http://127.0.0.1:3104",
@@ -60,10 +60,10 @@
     "recoveryReplicas": 0,
     "name": "grid",
     "mqttImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
-    "productVersion": "1.6.0",
-    "podUid": "581d826a-8a9f-4adb-8c3c-8229a2ba151a",
+    "productVersion": "1.7.0",
+    "podUid": "79784e51-f961-4e34-86d8-196827a8e26c",
     "appContainerRestarts": 0,
-    "podName": "grid-5c4f47d7fd-pskhb"
+    "podName": "grid-86dc4cf87-kq2hr"
   },
   "backup": {
     "result": "PASS",
@@ -149,7 +149,7 @@
     "idea": "IDEA-011",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T16:24:46.061882+00:00",
-    "status": "Exactimage/security/privatepush/preupgradebackup PASS; mainupgrade next",
+    "status": "Main1.7 image/UI/MQTT/outbox/rootnormal PASS; newnormalbackup/exactsnapshotrestore next",
     "fallbackTag": "stable-v1.6.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.6.0.json",
     "beforeEvidence": "artifacts/checkpoints/command-list-readonly-before/result.json",
@@ -276,14 +276,14 @@
     }
   ],
   "soak": {
-    "directory": "artifacts/soak/v1.6.0",
-    "sessionId": "71b30fed-fd5d-4de8-ba09-cb7423798b66",
-    "startedAt": "2026-09-21T16:03:59.093Z",
+    "directory": "artifacts/soak/v1.7.0",
+    "sessionId": "28208f59-d2d9-40c4-83a3-d608b1ac5570",
+    "startedAt": "2026-09-21T16:45:54.122Z",
     "readOnly": true,
     "expectedStopAt": "2026-09-21T21:37:33.079009+00:00",
-    "priorEvidence": "artifacts/checkpoints/soak-1.5.0/summary.json",
-    "gapReason": "Planned1.6upgrade/outbox restart; originalsettings restored before newepoch",
-    "activationEvidence": "artifacts/checkpoints/observer-1.6-activation/activation.json"
+    "priorEvidence": "artifacts/checkpoints/soak-1.6.0/summary.json",
+    "gapReason": "Planned1.7upgrade/outbox; originalsettingsrestored before newepoch",
+    "activationEvidence": "artifacts/checkpoints/observer-1.7-activation/activation.json"
   },
   "networkRecovery": {
     "supervisorCommand": "node scripts/connection-supervisor.mjs",
@@ -298,7 +298,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T16:38:48.981862+00:00",
+  "updatedAt": "2026-09-21T16:46:28.350572+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
@@ -379,13 +379,13 @@
     "evidence": "artifacts/checkpoints/host-power-guard-20260921T1333/activation.json"
   },
   "previousDeployment": {
-    "observedAt": "2026-09-21T13:46:07.542Z",
-    "status": "Verified stable1.4 functional runtime and exactsnapshot current/backwardrestore; finalmedia/time/deliverypending",
-    "sourceCommit": "fdd0491a5c08901962f46ac845f8582921150d45",
-    "prdVersion": "1.11",
+    "observedAt": "2026-09-21T16:03:28.920Z",
+    "status": "Actual1.6Ready afterplannedoutboxrestart, original5settingsnormal, supervisorreconnected",
+    "sourceCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+    "prdVersion": "1.13",
     "context": "charles-k3s",
     "namespace": "gs-plai-5h",
-    "appImage": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4",
+    "appImage": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
     "brokerImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
     "registryImage": "127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c",
     "uiTunnel": "http://127.0.0.1:3104",
@@ -395,7 +395,10 @@
     "recoveryReplicas": 0,
     "name": "grid",
     "mqttImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
-    "productVersion": "1.4.0"
+    "productVersion": "1.6.0",
+    "podUid": "581d826a-8a9f-4adb-8c3c-8229a2ba151a",
+    "appContainerRestarts": 0,
+    "podName": "grid-5c4f47d7fd-pskhb"
   },
   "historicalChecks": [
     {
@@ -433,16 +436,14 @@
     }
   ],
   "previousSoak": {
-    "directory": "artifacts/soak/v1.4.0",
-    "sessionId": "5a6055e9-97cb-4752-8f36-ee25d63fd1bd",
-    "startedAt": "2026-09-21T13:49:41.570Z",
+    "directory": "artifacts/soak/v1.6.0",
+    "sessionId": "71b30fed-fd5d-4de8-ba09-cb7423798b66",
+    "startedAt": "2026-09-21T16:03:59.093Z",
     "readOnly": true,
     "expectedStopAt": "2026-09-21T21:37:33.079009+00:00",
-    "priorEvidence": "artifacts/checkpoints/soak-1.3.0",
-    "gapReason": "planned1.4upgrade and outboxrestart proof; previous interruptions retained in1.3 archive",
-    "endedAt": "2026-09-21T14:50:14.747Z",
-    "endReason": "planned1.5upgrade",
-    "archive": "artifacts/checkpoints/soak-1.4.0/summary.json"
+    "priorEvidence": "artifacts/checkpoints/soak-1.5.0/summary.json",
+    "gapReason": "Planned1.6upgrade/outbox restart; originalsettings restored before newepoch",
+    "activationEvidence": "artifacts/checkpoints/observer-1.6-activation/activation.json"
   },
   "completedCandidates": [
     {
@@ -507,6 +508,30 @@
         "state": "Exactsame current1.6/backward1.5 restore androotcleanup plusindependentREVIEW032 verified"
       },
       "independentFunctionalReview": "docs/product/REVIEW-032.md"
+    }
+  ],
+  "deploymentHistory": [
+    {
+      "observedAt": "2026-09-21T16:03:28.920Z",
+      "status": "Actual1.6Ready afterplannedoutboxrestart, original5settingsnormal, supervisorreconnected",
+      "sourceCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+      "prdVersion": "1.13",
+      "context": "charles-k3s",
+      "namespace": "gs-plai-5h",
+      "appImage": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
+      "brokerImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+      "registryImage": "127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c",
+      "uiTunnel": "http://127.0.0.1:3104",
+      "mqttTunnel": "mqtt://127.0.0.1:18884",
+      "appPVC": "grid-data",
+      "brokerPVC": "grid-mqtt-data",
+      "recoveryReplicas": 0,
+      "name": "grid",
+      "mqttImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+      "productVersion": "1.6.0",
+      "podUid": "581d826a-8a9f-4adb-8c3c-8229a2ba151a",
+      "appContainerRestarts": 0,
+      "podName": "grid-5c4f47d7fd-pskhb"
     }
   ]
 }

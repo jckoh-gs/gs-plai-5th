@@ -1,0 +1,33 @@
+{
+  "endedAt": "2026-09-21T16:46:27.971568+00:00",
+  "exitCode": 0,
+  "durationSeconds": 41.43,
+  "journal": {
+    "runId": "grid-new-20260921T080733Z",
+    "startedAt": "2026-09-21T16:45:46.561Z",
+    "stopAt": "2026-09-21T16:48:46.561Z",
+    "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+    "sourceCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
+    "remotePath": "/data/stable-d98d3c4-20260921T164546561Z.sqlite",
+    "remotePartialPath": "/data/stable-d98d3c4-20260921T164546561Z.sqlite.snapshot.part",
+    "remoteCompressedPath": "/data/stable-d98d3c4-20260921T164546561Z.sqlite.20260921T164546561Z.gz",
+    "localPath": "artifacts/private/backups/stable-d98d3c4-20260921T164546561Z.sqlite",
+    "metadataPath": "deploy/verification/stable-backup-d98d3c4.json",
+    "status": "running",
+    "stage": "final deployment identity",
+    "remoteCancellationGuaranteed": false,
+    "snapshot": {
+      "result": "PASS",
+      "workerExitConfirmed": true,
+      "integrity": "ok",
+      "stage": "verified",
+      "steps": 2275,
+      "totalPages": 227509,
+      "remainingPages": 0,
+      "elapsedMs": 5185,
+      "snapshotAt": 1790009148742,
+      "supervisorMaxMs": 80000,
+      "hostCommandMaxMs": 90000
+    }
+  }
+}

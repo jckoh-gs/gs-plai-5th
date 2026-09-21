@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T16:38:48.981862+00:00",
+  "updatedAt": "2026-09-21T16:52:48.905886+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -308,17 +308,17 @@
     }
   ],
   "currentObservationHandles": {
-    "primary": 8363,
-    "audit": 4110,
-    "supervisor": 72380
+    "primary": 85394,
+    "audit": 60682,
+    "supervisor": 77410
   },
   "currentObservationBaselines": {
-    "observedAt": "2026-09-21T16:04:30.199613+00:00",
+    "observedAt": "2026-09-21T16:46:28.350572+00:00",
     "primaryApiErrors": 0,
     "primaryConnectionErrors": 0,
     "auditConnectionErrors": 0,
-    "evidence": "artifacts/checkpoints/observer-1.6-activation/activation.json",
-    "scope": "New1.6 epoch baseline; compare subsequentincrements without resetting andpreserve earliererrors"
+    "evidence": "artifacts/checkpoints/observer-1.7-activation/activation.json",
+    "scope": "New1.7baseline; comparelaterincrementswithoutresettinghistory"
   },
   "completedOperations": [
     {
@@ -346,19 +346,19 @@
   ],
   "currentObservationProcesses": {
     "primary": {
-      "handle": 8363,
-      "pid": 21356,
-      "processIdentity": "Tue Sep 22 01:03:59 2026"
+      "handle": 85394,
+      "pid": 34756,
+      "processIdentity": "Tue Sep 22 01:45:54 2026"
     },
     "audit": {
-      "handle": 4110,
-      "pid": 21357,
-      "processIdentity": "Tue Sep 22 01:03:59 2026"
+      "handle": 60682,
+      "pid": 34755,
+      "processIdentity": "Tue Sep 22 01:45:54 2026"
     },
     "supervisor": {
-      "handle": 72380,
-      "pid": 19942,
-      "processIdentity": "Tue Sep 22 00:58:48 2026"
+      "handle": 77410,
+      "pid": 33567,
+      "processIdentity": "Tue Sep 22 01:40:37 2026"
     }
   },
   "operationalDeadlineHardening": {
@@ -430,7 +430,7 @@
     "handle": 28735,
     "pid": 28948,
     "processIdentity": "Tue Sep 22 01:29:26 2026",
-    "state": "running owned root",
+    "state": "Endedgracefully aftermediarecoveryrootcomparison",
     "tokenFile": "artifacts/private/candidate-1.7/api-token",
     "creation": "artifacts/checkpoints/candidate-1.7-fixture/creation.json",
     "bundleSha256": "154fe2de1f039fe27fbcce6793e15716e843ca3814c2d361392a2207b6918dfc",
@@ -438,13 +438,16 @@
       "registrations": 3,
       "expiredCommand": 1
     },
-    "policy": "No main writes. Do not start duplicate3111. Before retry inspect creation intent/results."
+    "policy": "No main writes. Do not start duplicate3111. Before retry inspect creation intent/results.",
+    "terminalExit": 0,
+    "endedAt": "2026-09-21T16:50:05.832669+00:00",
+    "retirementEvidence": "artifacts/checkpoints/local-fixture-1.7-retirement/summary.json"
   },
   "candidateOperations": {
     "productVersion": "1.7.0",
     "prdVersion": "1.14",
     "idea": "IDEA-011",
-    "phase": "Exactimage/security/private-registry/preupgradebackup verified; plannedmainupgrade next",
+    "phase": "Current1.7same1cabrestore PASSandcleaned; backward1.6same1cab restore active; operationalrendererfixreview pending",
     "uiOwner": "/root/ui",
     "browserOwner": "/root/issues",
     "securityOwner": "/root/security",
@@ -452,14 +455,19 @@
     "beforeEvidence": "artifacts/checkpoints/command-list-readonly-before/result.json",
     "activeOperations": [
       {
-        "owner": "media",
-        "kind": "candidate1.7rehearsal",
-        "handle": 58112,
-        "supervisorPid": 32322,
-        "workerPid": 32324,
-        "processIdentity": "Tue Sep 22 01:37:50 2026",
-        "directory": "artifacts/media-preparation/full-candidate17-20260921",
-        "privateJournal": "artifacts/private/media-candidate17-1790008670218.json"
+        "owner": "deployment",
+        "kind": "backward1.6freshrestore",
+        "setupHandle": 99596,
+        "metadata": "deploy/verification/stable-backup-d98d3c4.json",
+        "ports": [
+          3105,
+          18885
+        ]
+      },
+      {
+        "owner": "security",
+        "kind": "operationaldeploymentrenderfix",
+        "scope": "Passedimmutableimageargumentmustoverridepinnedtemplate; no realapply"
       }
     ],
     "policy": "Actualmain1.6 andsupervisor72380/primary8363/audit4110 remainunchanged. Oldlocalfixtures areended. Rootcreates single1.7fixture3111 onlyafterbuiltcandidate; no duplicate. Originalfreeze/deadline unchanged.",
@@ -479,7 +487,54 @@
     },
     "exactImageVerification": "deploy/verification/candidate-d98d3c4/provenance.json",
     "registryProof": "deploy/verification/candidate-d98d3c4/registry-push-proof.json",
-    "security": "docs/security/evidence/app-candidate-d98d3c4-findings.json"
+    "security": "docs/security/evidence/app-candidate-d98d3c4-findings.json",
+    "mainMqtt": {
+      "handle": 37873,
+      "exitCode": 0,
+      "evidence": "deploy/verification/candidate-d98d3c4/main-mqtt.json"
+    },
+    "mainRegressions": "deploy/verification/candidate-d98d3c4/main-regression/summary.json",
+    "outboxRestart": {
+      "state": "PASSterminal0rootnormalconfirmed",
+      "targetOwnedRtu": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "evidence": "deploy/verification/candidate-d98d3c4/outbox-restart.json",
+      "temporaryPorts": [
+        3107,
+        18887
+      ],
+      "policy": "Oninterruption inspectactualPodUID/RTUoffline/outboxmessage andprocess before retry; finallymustrestoreoriginalofflinefalse.",
+      "handle": 17841,
+      "observerOwner": "deployment",
+      "observerHandle": 79945,
+      "normalEvidence": "deploy/verification/candidate-d98d3c4/outbox-post-normal.json"
+    },
+    "mediaRehearsal": {
+      "owner": "media",
+      "handle": 58112,
+      "exitCode": 0,
+      "directory": "artifacts/media-preparation/full-candidate17-20260921",
+      "privateJournal": "artifacts/private/media-candidate17-1790008670218.json",
+      "state": "NormalrecoveryPASS; compactindependentreviewpending; notfinal"
+    },
+    "normalBackup": {
+      "handle": 24866,
+      "exitCode": 0,
+      "metadata": "deploy/verification/stable-backup-d98d3c4.json",
+      "rootReview": "deploy/verification/candidate-d98d3c4/normal-backup/root-backup-review.json"
+    },
+    "currentRestoreProgress": {
+      "setupHandle": 79306,
+      "setupExit": 0,
+      "baselineHandle": 26502,
+      "baselineExit": 0,
+      "mqttHandle": 37540,
+      "mqttExit": 0,
+      "cleanupHandle": 60723,
+      "cleanupExit": 0,
+      "forwardHandle": 19658,
+      "forwardExit": 143,
+      "scope": "All reportedactualroleterminals; rootaggregateindependentreviewpending"
+    }
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
   "previousCandidateFixture": {
@@ -553,7 +608,28 @@
       3106,
       3107
     ],
-    "databasesPreserved": true
+    "databasesPreserved": true,
+    "laterRetirements": [
+      {
+        "version": "1.7.0",
+        "base": "http://127.0.0.1:3111",
+        "handle": 28735,
+        "pid": 28948,
+        "processIdentity": "Tue Sep 22 01:29:26 2026",
+        "state": "Endedgracefully aftermediarecoveryrootcomparison",
+        "tokenFile": "artifacts/private/candidate-1.7/api-token",
+        "creation": "artifacts/checkpoints/candidate-1.7-fixture/creation.json",
+        "bundleSha256": "154fe2de1f039fe27fbcce6793e15716e843ca3814c2d361392a2207b6918dfc",
+        "setupWrites": {
+          "registrations": 3,
+          "expiredCommand": 1
+        },
+        "policy": "No main writes. Do not start duplicate3111. Before retry inspect creation intent/results.",
+        "terminalExit": 0,
+        "endedAt": "2026-09-21T16:50:05.832669+00:00",
+        "retirementEvidence": "artifacts/checkpoints/local-fixture-1.7-retirement/summary.json"
+      }
+    ]
   },
   "firstHourCapturePreparation": {
     "preparedAt": "2026-09-21T15:07:39.597912+00:00",
@@ -635,6 +711,35 @@
       "receivedSampleDiscontinuities": 0,
       "evidence": "artifacts/checkpoints/backup-incident-20260921T1534/recovery-summary.json",
       "scope": "Postincident cumulativecounters; notreset; initialzero baseline preserved in observer1.5activation and rawlogs"
+    },
+    {
+      "productVersion": "1.6.0",
+      "closedEvidence": "artifacts/checkpoints/soak-1.6.0/summary.json",
+      "processes": {
+        "primary": {
+          "handle": 8363,
+          "pid": 21356,
+          "processIdentity": "Tue Sep 22 01:03:59 2026"
+        },
+        "audit": {
+          "handle": 4110,
+          "pid": 21357,
+          "processIdentity": "Tue Sep 22 01:03:59 2026"
+        },
+        "supervisor": {
+          "handle": 72380,
+          "pid": 19942,
+          "processIdentity": "Tue Sep 22 00:58:48 2026"
+        }
+      },
+      "baseline": {
+        "observedAt": "2026-09-21T16:04:30.199613+00:00",
+        "primaryApiErrors": 0,
+        "primaryConnectionErrors": 0,
+        "auditConnectionErrors": 0,
+        "evidence": "artifacts/checkpoints/observer-1.6-activation/activation.json",
+        "scope": "New1.6 epoch baseline; compare subsequentincrements without resetting andpreserve earliererrors"
+      }
     }
   ],
   "historicalObservationIncidents": [
@@ -668,7 +773,7 @@
   },
   "plannedConnectionTransition": {
     "reason": "1.7upgrade",
-    "state": "Preparednotstarted; exactcandidategates verified. Rootwillstopandarchiveonlyowned1.6observersbeforeimagepatch, thenreplaceowned supervisor afteractualReady1.7.",
+    "state": "Complete1.7upgrade/outbox/rootnormal+single supervisor77410 andnew85394/60682 observers; keepcurrentprocesses; no duplicate transition",
     "oldOwnedProcesses": {
       "primary": {
         "handle": 8363,
@@ -686,10 +791,22 @@
         "processIdentity": "Tue Sep 22 00:58:48 2026"
       }
     },
-    "oldOwnedProcessesEnded": false,
+    "oldOwnedProcessesEnded": true,
     "expectedOldImage": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
     "desiredImage": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
-    "runtimeCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9"
+    "runtimeCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
+    "closedObservation": "artifacts/checkpoints/soak-1.6.0/summary.json",
+    "oldTerminalCodes": {
+      "primary8363": 0,
+      "audit4110": 0,
+      "supervisor72380": 0
+    },
+    "portsFree": [
+      3104,
+      18884
+    ],
+    "actualRollout": "deploy/verification/candidate-d98d3c4/rollout/proof.json",
+    "actualPodUid": "1fcd847c-cab2-4905-9fae-2d684c166aa5"
   },
   "previousStableRuntime": {
     "productVersion": "1.5.0",

@@ -1,0 +1,5 @@
+# Candidate1.7 rehearsal checkpoint
+
+Preparation only; no final release/media acceptance. Exact candidate d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9/local3111 with served154fe bundle. Recorder58112 terminal0. Video255.33s, production279.911s, fullDecode1080pH264/AAC. Normal cleanup PASS, all7preexisting settings unchanged; journal0600 retained privately.
+
+Eight encoded representative scenes plus receipt/completed/list-subtitle frames reviewed. New list state/browser observation time, REST receipt, MQTT125/125 completed, and export are visible together. Stop superseded by subsequent start.32SRT cues match source/time; mean-19.2dB technical audio only, no listening claim.43 pre-run source snapshots hash verified. External KMA/AWS/operational VPP unverified; no command-list HTTP outage filmed. RNG prior trajectory not restored exactly. Large/raw media remains at `artifacts/media-preparation/full-candidate17-20260921` with hashes here. Original freeze/deadline remains authoritative; no final deliverables generated.

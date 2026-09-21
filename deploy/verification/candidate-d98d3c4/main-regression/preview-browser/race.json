@@ -1,0 +1,19 @@
+{
+  "result": "PASS",
+  "lateSuccessDiscarded": true,
+  "lateErrorDiscarded": true,
+  "duplicateDisabled": true,
+  "invalidation": [
+    "csv",
+    "type",
+    "unit",
+    "semantics"
+  ],
+  "pendingFileBlocksPreviewAndRegistration": true,
+  "manualCSVWinsLateFileRead": true,
+  "oversizeFileRejectedBeforeRead": true,
+  "narrowNoPageOverflow": true,
+  "authenticated": true,
+  "pageErrors": [],
+  "requests": 7
+}

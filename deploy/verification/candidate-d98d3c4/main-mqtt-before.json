@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-09-21T16:41:30.827983+00:00",
+  "id": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+  "runId": "26d2830a-4774-4f97-996d-a36dc227a62c",
+  "faults": {
+    "offline": false,
+    "latencyMs": 0,
+    "dropPct": 0,
+    "sensorFreeze": false,
+    "scadaReject": false,
+    "actuatorStuck": false
+  },
+  "generators": [
+    {
+      "id": "WT-01",
+      "on": true,
+      "limitPct": 100,
+      "targetLimitKw": 62.5
+    },
+    {
+      "id": "WT-02",
+      "on": true,
+      "limitPct": 100,
+      "targetLimitKw": 62.5
+    }
+  ],
+  "scope": "ExistingownedtestRTU already125 target; no newRTU"
+}

@@ -1,0 +1,27 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:48:48.729Z",
+  "fixture": {
+    "version": "1.7.0",
+    "base": "http://127.0.0.1:3111",
+    "handle": 28735,
+    "pid": 28948,
+    "processIdentity": "Tue Sep 22 01:29:26 2026",
+    "state": "running owned root",
+    "tokenFile": "artifacts/private/candidate-1.7/api-token",
+    "creation": "artifacts/checkpoints/candidate-1.7-fixture/creation.json",
+    "bundleSha256": "154fe2de1f039fe27fbcce6793e15716e843ca3814c2d361392a2207b6918dfc",
+    "setupWrites": {
+      "registrations": 3,
+      "expiredCommand": 1
+    },
+    "policy": "No main writes. Do not start duplicate3111. Before retry inspect creation intent/results."
+  },
+  "mediaOwnedId": "ddc8edb7-57cb-47e2-b658-95feb59eaf93",
+  "existingSettingsUnchanged": 7,
+  "ownedSettingsMatchActualBaseline": true,
+  "currentOwnedRunMatchesCapturedScenarioRun": true,
+  "processIdentityVerified": true,
+  "preservedDatabase": true,
+  "source": "media-candidate17 private ownership journal; actual read-only API projection"
+}
