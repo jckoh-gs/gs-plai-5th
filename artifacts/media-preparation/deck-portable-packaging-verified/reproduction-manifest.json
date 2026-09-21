@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "source/config.original.json",
+      "bytes": 12914,
+      "sha256": "71f013cd8fa58b7fc2b47aae95a980e27d73fe8c6a78d6cdc49384dedfbc074e"
+    },
+    {
+      "path": "source/config.portable.json",
+      "bytes": 12622,
+      "sha256": "d893bc76150a0ec1da38f0c9f48d886e73d32c9d908c2af869a6f5819716ad34"
+    },
+    {
+      "path": "source/build-deck.mjs",
+      "bytes": 11355,
+      "sha256": "f77a91384c61f9258324002adc4148c67f1e1a04a1d953e70db10eb8931f9483"
+    },
+    {
+      "path": "source/release-manifest.json",
+      "bytes": 6930,
+      "sha256": "1cdd72a87845d4811cb5617e149f1543befacc01d942ad2549b869a0492ed70e"
+    },
+    {
+      "path": "docs/operations/run.json",
+      "bytes": 8251,
+      "sha256": "b6c008fb195136d8aa811f3d16318647dc97804f03ce6f903f5b67a2fa1c7b94"
+    },
+    {
+      "path": "validation.json",
+      "bytes": 3756,
+      "sha256": "751bb44008370e13366d184361f027a904ccd1ed6e61c10111625d99c60b8007"
+    },
+    {
+      "path": "source/assets/slide-05.png",
+      "bytes": 196515,
+      "sha256": "c2eeb0bb737843155f0dc0064f43172997922e7c3b0fdd853d8b479d2d2ee4e8"
+    },
+    {
+      "path": "source/assets/slide-06.png",
+      "bytes": 118909,
+      "sha256": "4dc52134828592f43d038c53e588d73af2105e4a3cef65c88987c6518bc9b622"
+    },
+    {
+      "path": "source/assets/slide-07.png",
+      "bytes": 205310,
+      "sha256": "a1ff5d6e624acbd8d8aa9e7e3ff45dab964f1dd4a4c9eea6688c3a31cbc67a46"
+    },
+    {
+      "path": "source/assets/slide-08.png",
+      "bytes": 119045,
+      "sha256": "384368c4188dfa444bbcccefb85dfa6e9c3f8d88097703b57fe5323560a79560"
+    },
+    {
+      "path": "source/assets/slide-09.png",
+      "bytes": 118934,
+      "sha256": "0fa085b77d6ca01132fe4f47ca3d073b51b898659938098d6b5d80d0d552ec7f"
+    },
+    {
+      "path": "source/assets/slide-10.png",
+      "bytes": 125193,
+      "sha256": "7087f85a2ddcf06222fddb442770d5bac2bc25c380d5772c13b3436155af8912"
+    },
+    {
+      "path": "source/video-verification.json",
+      "bytes": 1487,
+      "sha256": "bfc5b36d91418e98beb7f9e69432772c1c4f4940d5d50318a903b3e75e83620d"
+    }
+  ],
+  "exactConfigSha256": "71f013cd8fa58b7fc2b47aae95a980e27d73fe8c6a78d6cdc49384dedfbc074e"
+}

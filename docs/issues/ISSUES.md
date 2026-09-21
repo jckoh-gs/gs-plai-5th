@@ -210,3 +210,23 @@ UI 소스는 클릭 당시 p.id로 URL/파일명을 함께 만든다. 메인 실
 기존 maxGapMs=18005는 **poll 시작 간격**이며 MQTT 무수신 간격이 아니다. 차후 실행용 `soak-diagnostics.mjs`는 maxPollGapMs를 명시하고 maxGapMs를 동일 의미의 호환 alias로 유지한다. maxTelemetryGapMs는 전체RTU에서 관측한 연속메시지 간 최대간격, telemetrySilenceMs는 마지막 수신 이후 현재경과이며 단일RTU의 유실 증명이 아니다. 연결/단절 전이 횟수와 마지막 연결/단절 시각도 별도 기록한다. 첫 연결 전 반복 실패와 중복close를 단절전이로 중복 집계하지 않는다.
 
 집중시험2/2 PASS(`review-011-diagnostics.log`), 기존 network-recovery/tests.log8/8PASS 확인. 새로운 진단은 **현재 soak에 소급 적용되지 않으며 실행중 프로세스를 중단/재시작하지 않았다.** 역사적 observations 원문도 수정하지 않았다. 메인의 supervisor가 소유한 터널 복구·상태 검증과 결합해 관측 중단과 실제 앱 장애를 구별한다.
+
+## ISSUE-015 — 최종 인도 inventory의 영상/PPT/재생성 source 연결 부족
+
+중요도 P2 증거 정합성, 상태 OPEN(메인에 전달, 수정 대기). 실제 잘못된 최종 산출물이 생성됐다는 뜻이 아니며 source 검토에서 확인한 verifier 경계다.
+
+- `verify-delivery.mjs`는 현재 selected MP4/video receipt와 deck/source/video-verification.json의 동일성을 비교하지 않고 deck verification도 제작에 사용한 videoSha256을 기록하지 않는다. 같은 release의 다른 영상/receipt로 바뀌면 PPT 제작 당시 영상과 다르더라도 inventory가 통과할 수 있다. 제작시 hash 검증은 존재하나 사후 인도 연결이 부족하다.
+- reproduction files 배열이 없거나 비어도 루프가0회로 통과한다. 필수 recorder 코드/입력assets를 요구하지 않고 recordingConfigSha256/exactConfigSha256을 현재 config와 비교하지 않는다. 소스 파일 일부 누락을 completeness로 오인할 수 있다.
+- digest 비교가 양쪽null이면 참이다. expected deployment digest가 유효함을 먼저 요구해야 한다.
+
+권고: deck receipt에 사용 videoSha256을 기록하고 실제MP4/복사된video receipt와 비교, reproduction schema/nonempty/필수목록과 config hashes 검사, digest 유효성 명시. 메인 파일은 수정하지 않았다.
+
+## Round 12 — 최종 미디어 보호 검토
+
+release-binding 기존 부정 fixture를 독립 재실행3/3PASS. commit/run/runtime/digest/endpoint 및 유효한freeze window 검증은 존재한다. recorder는 실제remote release verification을 요구하고 최종visual/claims를pending으로 남긴다. deck는 완성·리뷰된 동일release 영상/실제SHA를 먼저 확인하며 최종 검수pending을 남긴다. inventory의 completionClaim=false/claimBoundary는 유지돼 목표완료 선언으로 오인하지 않는다. 렌더/원격mutation/최종촬영은 수행하지 않았다. ISSUE015는 이 긍정 판단과 별개의 artifact-check false-positive 가능성이다.
+
+## Round 13 — ISSUE-015 수정 독립 부정 회귀
+
+상태: **수정 및 독립 artifact 검증 회귀 완료**. 메인이 deck.videoSha256/copy receipt/실제MP4 연결, 유효digest 필수, nonempty regeneration목록·필수코드/assets·config hash 검사를 추가했다. `tests/review-media-delivery.test.js`는 임시cwd에 독립 가짜 artifact tree를 만들고 실제verify-delivery 프로세스를 실행한다. 실제 영상/PPT/원격을 생성하거나 변경하지 않는다.
+
+5/5PASS(`evidence/review-013-delivery.log`): 일치하는fixture는 ARTIFACT_CHECKS_PASSED이지만 completionClaim=false; 같은release의영상교체는 exactreviewedvideo 검사 실패; 빈reproduction목록은 nonempty검사 실패; 잘못된configSHA는 exactconfig검사 실패; 양쪽잘못된digest는 validdigest검사 실패. 각 부정시험은 단순 nonzero가 아니라 해당하는 구체적 실패항목도 확인했다. 이 결과는 실제미디어 decoding/visual/claims/최종시간 준수를 대신하지 않는다.

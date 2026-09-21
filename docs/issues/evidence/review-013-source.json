@@ -1,0 +1,13 @@
+{
+  "reviewedAt": "2026-09-21T10:27:54.906969+00:00",
+  "commit": "1e7da47a95d67725a54dd49ff94b050af682e54a",
+  "workingTree": true,
+  "files": {
+    "scripts/verify-delivery.mjs": "02623d2efcd642c06c3a7a18cf9262156b7f77402ba5046166a088e8ce77fe05",
+    "scripts/media/build-deck.mjs": "9f97dfdb0cfb34db4949c580e9022e2bd8e76112e31765ad6dbcdeeed5208387",
+    "scripts/media/release-binding.cjs": "46fd7620f0bbc0890bd40b98b68093ccdedb0c24c77e9f2be3bb75402cf8f656",
+    "scripts/media/record-demo.cjs": "b75d517db577282e44319fe405020b06336e3076deed37403761420f4f779008",
+    "tests/review-media-delivery.test.js": "0266d1054ae0b9a6605d04c8833d411150d7f34d7d217f7d38ade082c50b3f55",
+    "docs/issues/evidence/review-013-delivery.log": "3dba4772350e06b4b9de5c7db6ce2142a853a46d74ab99ef465027b4b91f3521"
+  }
+}

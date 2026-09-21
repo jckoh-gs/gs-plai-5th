@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-09-21T10:29:51.562759+00:00",
+  "baseCommit": "1e7da47a95d67725a54dd49ff94b050af682e54a",
+  "workingTree": true,
+  "scope": "Media binding, source preservation, and artifact consistency only; no final media generated",
+  "sourceHashes": {
+    "scripts/media/release-binding.cjs": "46fd7620f0bbc0890bd40b98b68093ccdedb0c24c77e9f2be3bb75402cf8f656",
+    "scripts/media/recording-sources.cjs": "a3b785ab6b60cd5ae07ccbeb00ecc7e62d67e2c5a44bfe904946192f7f0878b5",
+    "scripts/media/record-demo.cjs": "598d2e92eed59a03ff3cc4353942241134f1e54bf8b919d8753621eb6f5ec70d",
+    "scripts/media/prepare-final-scenes.cjs": "2b02e559963a6e0e0dff9649696958cacc4c7ebaf82d01f80a9c297d84946c9c",
+    "scripts/media/build-deck.mjs": "9f97dfdb0cfb34db4949c580e9022e2bd8e76112e31765ad6dbcdeeed5208387",
+    "scripts/verify-delivery.mjs": "f073ec4a965ded3b0c97aa2b17f8230116a7ac1caf915b8323f887221f955e4d",
+    "tests/media-release-binding.test.js": "c048c26883146046cd1f3695ba9893c4bbd9d02aaa65e9a481e6f92c04d3877c",
+    "tests/recording-sources.test.js": "cd71c8191f429a1434b918dc7b2ce0c6189ab6b1ea5d5f37904b6fc1f8196f8e",
+    "tests/review-media-delivery.test.js": "c69e4cd2f31653ce16c6da29692b31c8d6044e2a3c88d85a46416cd25adaa0a3"
+  },
+  "tests": 16,
+  "passed": 16,
+  "preflight": "Expected INCOMPLETE: final video/deck remain absent before freeze"
+}

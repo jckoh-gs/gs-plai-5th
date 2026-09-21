@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-21T10:29:51.477Z",
+  "result": "INCOMPLETE",
+  "completionClaim": false,
+  "claimBoundary": "Checks recorded evidence, file identity and packaging only. Functional acceptance, actual decoding, each-slide visual/claims review, live deployment and final operation gates must be assessed separately.",
+  "runId": "grid-new-20260921T080733Z",
+  "productVersion": "1.2.0",
+  "releaseCommit": "e08014670816a1612af02a7d5b66073f179b42a1",
+  "runtimeCommit": "83d10cebcd7cab2b1f889c970011a463bad09099",
+  "manifestSha256": "90aed8f1eb9d715efcfeb6e9d3ef8542a42bfb3c57d744bff1158016077c59b2",
+  "backup": {
+    "path": "artifacts/private/backups/stable-83d10ce-20260921T100542773Z.sqlite",
+    "sha256": "805040d3897b7f71ca1f718e58729dbe49ec512e610c1fc79e053b58d3916c88",
+    "excludedFromPublicFiles": true
+  },
+  "checks": [
+    {
+      "name": "Nonempty file: artifacts/releases/checkpoint-1.2.0.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/operations/run.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: README.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/GOAL-VPP-AUTONOMOUS.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/PRD-VPP-SCADA-RTU.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/product/PRD-CHANGELOG.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/product/IDEAS.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/product/acceptance.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/protocol.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: scripts/vpp-client.js",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: scripts/client-message.js",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: deploy/README.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: deploy/app.yaml",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/security/VULNERABILITY-MANAGEMENT.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/issues/ISSUES.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/operations/DELIVERY-PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "Manifest belongs to current run",
+      "passed": true
+    },
+    {
+      "name": "Manifest matches recorded runtime",
+      "passed": true
+    },
+    {
+      "name": "Private backup hash matches manifest",
+      "passed": true
+    },
+    {
+      "name": "Required file: artifacts/video/verification.json",
+      "passed": false
+    },
+    {
+      "name": "Required file: artifacts/presentation/verification.json",
+      "passed": false
+    },
+    {
+      "name": "Required file: artifacts/video/GRID-VPP-demo-ko.mp4",
+      "passed": false
+    },
+    {
+      "name": "Required file: artifacts/video/GRID-VPP-demo-ko.srt",
+      "passed": false
+    },
+    {
+      "name": "Required file: artifacts/video/narration-ko.md",
+      "passed": false
+    },
+    {
+      "name": "Required file: artifacts/video/scenes.json",
+      "passed": false
+    },
+    {
+      "name": "Required file: artifacts/video/source/recording-config.original.json",
+      "passed": false
+    },
+    {
+      "name": "Required file: artifacts/video/source/reproduction.json",
+      "passed": false
+    },
+    {
+      "name": "Required file: artifacts/video/source/release-binding-proof.json",
+      "passed": false
+    },
+    {
+      "name": "Required file: artifacts/presentation/GRID-VPP-presentation-ko.pptx",
+      "passed": false
+    },
+    {
+      "name": "Required file: artifacts/presentation/speaker-notes.md",
+      "passed": false
+    },
+    {
+      "name": "Required file: artifacts/presentation/validation.json",
+      "passed": false
+    },
+    {
+      "name": "Required file: artifacts/presentation/reproduction-manifest.json",
+      "passed": false
+    },
+    {
+      "name": "Required file: artifacts/presentation/source/config.original.json",
+      "passed": false
+    },
+    {
+      "name": "Required file: artifacts/presentation/source/config.portable.json",
+      "passed": false
+    },
+    {
+      "name": "Required file: artifacts/presentation/source/build-deck.mjs",
+      "passed": false
+    },
+    {
+      "name": "Required file: artifacts/presentation/source/REGENERATE.md",
+      "passed": false
+    },
+    {
+      "name": "Release has a valid immutable image digest",
+      "passed": true
+    },
+    {
+      "name": "Source directory: artifacts/presentation/source",
+      "passed": false
+    },
+    {
+      "name": "Source directory: artifacts/video/source",
+      "passed": false
+    }
+  ],
+  "failures": [
+    "Required file: artifacts/video/verification.json",
+    "Required file: artifacts/presentation/verification.json",
+    "Required file: artifacts/video/GRID-VPP-demo-ko.mp4",
+    "Required file: artifacts/video/GRID-VPP-demo-ko.srt",
+    "Required file: artifacts/video/narration-ko.md",
+    "Required file: artifacts/video/scenes.json",
+    "Required file: artifacts/video/source/recording-config.original.json",
+    "Required file: artifacts/video/source/reproduction.json",
+    "Required file: artifacts/video/source/release-binding-proof.json",
+    "Required file: artifacts/presentation/GRID-VPP-presentation-ko.pptx",
+    "Required file: artifacts/presentation/speaker-notes.md",
+    "Required file: artifacts/presentation/validation.json",
+    "Required file: artifacts/presentation/reproduction-manifest.json",
+    "Required file: artifacts/presentation/source/config.original.json",
+    "Required file: artifacts/presentation/source/config.portable.json",
+    "Required file: artifacts/presentation/source/build-deck.mjs",
+    "Required file: artifacts/presentation/source/REGENERATE.md",
+    "Source directory: artifacts/presentation/source",
+    "Source directory: artifacts/video/source"
+  ],
+  "files": [
+    {
+      "path": "artifacts/releases/checkpoint-1.2.0.json",
+      "bytes": 106160,
+      "sha256": "90aed8f1eb9d715efcfeb6e9d3ef8542a42bfb3c57d744bff1158016077c59b2"
+    },
+    {
+      "path": "docs/operations/run.json",
+      "bytes": 8251,
+      "sha256": "b6c008fb195136d8aa811f3d16318647dc97804f03ce6f903f5b67a2fa1c7b94"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7183,
+      "sha256": "a74c15d06803804223a6d555303d99df32f7967d55b4b6bed737bf44b29b571e"
+    },
+    {
+      "path": "docs/GOAL-VPP-AUTONOMOUS.md",
+      "bytes": 33930,
+      "sha256": "f391e5fab594f02cb4953c52055cf4b01f3817343144a9d89df8b64fe8fd11f2"
+    },
+    {
+      "path": "docs/PRD-VPP-SCADA-RTU.md",
+      "bytes": 125437,
+      "sha256": "c4d15d46e5a2d52bc84d37ec5a18fee7f73dd7a2c2c45cf48130ab3d86e871e2"
+    },
+    {
+      "path": "docs/product/PRD-CHANGELOG.md",
+      "bytes": 3078,
+      "sha256": "ee5971c3816e1d68d310ec9b86a8cafc817c73e7d380830b0393b75582ef22d5"
+    },
+    {
+      "path": "docs/product/IDEAS.md",
+      "bytes": 11439,
+      "sha256": "d7f2162db9522f38d935f8ce1ce6a2a27489487b703d4eb4b03a51bd66ae335c"
+    },
+    {
+      "path": "docs/product/acceptance.json",
+      "bytes": 210570,
+      "sha256": "b890896007a19e5bb7ae60a7636eb153f2efb4138e334e50a6a7ec23c83e8f40"
+    },
+    {
+      "path": "docs/protocol.md",
+      "bytes": 21105,
+      "sha256": "5ae2df13b852466556ef6bad4a5c840aa8f0ef93e12bb12397b7cf4e03295ac1"
+    },
+    {
+      "path": "scripts/vpp-client.js",
+      "bytes": 5596,
+      "sha256": "762cb18072e5db77b48199681a266b520ee08b12986efd8795356e4b877911cd"
+    },
+    {
+      "path": "scripts/client-message.js",
+      "bytes": 2149,
+      "sha256": "b50665fcb86de98866bca6447a6459fdf81610e9c2aef77e9db6b61772dc61d3"
+    },
+    {
+      "path": "deploy/README.md",
+      "bytes": 8386,
+      "sha256": "1b0291d5fbbd662d0982af4ffa7d0f4699a4ddddbe3fa68e66d0b3e2ff012924"
+    },
+    {
+      "path": "deploy/app.yaml",
+      "bytes": 4185,
+      "sha256": "d9ca3bdc1ea65942c381457c479659ef254e173d5dd5ee9730a075712ab43222"
+    },
+    {
+      "path": "docs/security/VULNERABILITY-MANAGEMENT.md",
+      "bytes": 32075,
+      "sha256": "adf9a9aab6f1b05dc84ae8aff41f01560a4746a1cc7f8616f9f16b7878124721"
+    },
+    {
+      "path": "docs/issues/ISSUES.md",
+      "bytes": 34278,
+      "sha256": "6aff53c936a7fb26bec3cfd750dd64d9ec7e37804da93d0de1e1b1091658faa0"
+    },
+    {
+      "path": "docs/operations/DELIVERY-PLAN.md",
+      "bytes": 7990,
+      "sha256": "ae028dc1ab435e597f26c8d5b3945547f2ae3e6aa82d99e822733d2dda479ed7"
+    }
+  ]
+}

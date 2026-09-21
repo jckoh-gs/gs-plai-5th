@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-21T08:28:38.292Z",
+  "runId": "grid-new-20260921T080733Z",
+  "productVersion": "1.0.0",
+  "contractVersion": 2,
+  "source": {
+    "commit": "94f415103ae0ad7950afce2721b38d560ff350db",
+    "workingTreeStatus": "M docs/issues/ISSUES.md\n M server/control.js\n?? artifacts/checkpoints/restore-first.log\n?? docs/issues/evidence/review-003-mqtt.log\n?? docs/issues/evidence/review-003-source.json\n?? docs/issues/evidence/review-003-unit.log\n?? docs/security/evidence/app-grype.json\n?? docs/security/evidence/app-grype.log\n?? docs/security/evidence/mosquitto-grype.json\n?? docs/security/evidence/mosquitto-grype.log\n?? docs/security/evidence/registry2-grype.json\n?? docs/security/evidence/registry2-grype.log\n?? scripts/deploy-security-check.mjs\n?? scripts/restore-integration.js\n?? scripts/review-control-integration.js\n?? tests/review-control.test.js\n?? tests/review-retention.test.js",
+    "hashes": {
+      "Dockerfile": "a379923043b79634bee5cd7e6594416afe7ce36f1d6f30c7499901cbf3b9a205",
+      "package-lock.json": "f559b5c9e5ac78e8e6139d1560a8be8e8aeabf4348b1c5b65f4919263496631b",
+      "package.json": "50f094fc8d67f19261eb2beccacf97196b2b0d0280d84f4cf5f305761890e7ad",
+      "samples/hybrid.csv": "c400918bb97a7fd173e2401f88db04cbb3edcfd9f62bb9c603a62d3527bf12bb",
+      "samples/solar.csv": "ca636abde604fef9efa9ef005baefdddc2faf82bfa41be1b573d2b4d514114b4",
+      "samples/wind.csv": "9003d6a7cec7ab4bc029a8aa02085a3c6e6c8aeb7da5004a012b6037e90d2891",
+      "server/config.js": "9ed29685b837bb4da146792723bd4edd9cf4874a8a31e3da75f4f8027bcedac6",
+      "server/control.js": "ceabb746658b7bb3af35b767457ea81129da1ddf4f142850dc11a4fff467b9ac",
+      "server/index.js": "945a30388d0d9bb08ae70c2ab6d470778734875436be306e40d9f02afe408a8f",
+      "server/metrics.js": "590169fdfc7431bb07cf7df957ae969cdf707244b809a1d7c1c8e6d642f9f817",
+      "server/model.js": "ab20a7f7f7b64f8dc9be152b74f617647860524ef0a06577f160d2a3be522f47",
+      "server/store.js": "5b497e48f84e0a918a6d565e5dc9c741c4e68fc69c8141d813e7921e96a73969",
+      "server/transport.js": "90c33b2c5b7eff62ffb6c2c2dc8a6a659b9ab6e770119eadc862f3094431d29a",
+      "server/weather.js": "4d10a10957053d68f22349021b358a1d730622a457b824e26521723f0fea64d9",
+      "vite.config.js": "5b763ed5e4665084db571cf0b3c8016b1759096aac4b347bd396b40291770f4d",
+      "web/QA.md": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c",
+      "web/Scene.jsx": "216b34bc71d2a554e953b4ef3999418e42432505c877c91b42fa97df5a5be50f",
+      "web/index.html": "133010db1198097f8d34a6cc3e33c1fb500b6ca12f8dde027893e927256e3766",
+      "web/src.jsx": "cfe73bc22dcb050740e8d4c4becdb1943f91b5e36ed3ef35ce9056857f3dcb79",
+      "web/style.css": "18c579d72cbcdc786437e9158f3cfbbb5da60136b361fbc2b0a575360e68bdf6"
+    }
+  },
+  "prd": {
+    "path": "docs/PRD-VPP-SCADA-RTU.md",
+    "sha256": "3b1ef22b4cf03c8f036f9172ddbe4f39b26919acc9860b0e23ac6e068c49b165"
+  },
+  "deployment": {
+    "status": "pending"
+  },
+  "backup": {
+    "status": "pending"
+  },
+  "evidence": [
+    {
+      "path": "artifacts/checkpoints/advanced-first.log",
+      "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/browser-auth/result.json",
+      "sha256": "a2eeb6513112ca0bab3f4a12561531b05ed2d77bef9914180d712a8f7fc88fb0",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/browser-auth-round2.log",
+      "sha256": "992be332020d6f360098566ea88472acfc725ae154655162bbd50d51c7f06f92",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/browser-auth.log",
+      "sha256": "c23523325d0532afc3eac30c983d8d84e37b7b29491aa19fffe3321c0cba2e6c",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/build-round1.log",
+      "sha256": "e499f99f8454aef350b2c8e056b50bd4d6b3da81fe67a91144f4972ab41ba292",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/crash-first.log",
+      "sha256": "45c5574428bf7499b60cd99affe59fa1f3287656336fc63d515fdd07a1ab98b7",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/integration-first.log",
+      "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/npm-audit-initial.json",
+      "sha256": "b23916e775cad347bc3254955b7f62af03d4067958b0e577a26be1b67e475024",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/report-first.log",
+      "sha256": "0bdf352f86d888540539cb317960c4396efff8ca8419c96327dfee0da6b35811",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/report-round2.log",
+      "sha256": "87b81efba03df43a87093cb3d9818e7d914ed93f573fad69e2f5aa3db5f2be7e",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/restore-first.log",
+      "sha256": "f3e8bc67d5a9a2ea94bc0c9584201be00434c3e0e4a424a0c5ed9bf6c7deb772",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/sixty-second-first.log",
+      "sha256": "0660a7416c459b60a0f417455af500204eb9750a4f41096d0e0abd23e60d3845",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/unit-round1.log",
+      "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/unit-round2.log",
+      "sha256": "3718253695b1d325406fb93991f93f02c1d63eba422073374a40d2fb9048cd52",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    }
+  ],
+  "acceptance": {
+    "path": "docs/product/acceptance.json",
+    "sha256": "6201279d13102f9e839b823a9d615a42fe71090ae7adb2bdc2d2395d97f2ff9b"
+  },
+  "completion": "Not implied by manifest existence; require independent acceptance audit"
+}

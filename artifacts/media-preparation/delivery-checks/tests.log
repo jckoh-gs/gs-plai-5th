@@ -1,0 +1,24 @@
+✔ final media binds approved content digest, run, runtime and frozen window (0.447209ms)
+✔ syntactically valid but different image digest is rejected (0.15025ms)
+✔ mismatched release/run/runtime/version and invalid or expired schedule fail closed (0.15325ms)
+✔ preserves exact config, release, all source files including itself, and upload hashes (8.903208ms)
+✔ rejects config-secret before creating output (2.273ms)
+✔ rejects http-credentials before creating output (2.384917ms)
+✔ rejects mqtt-credentials before creating output (2.289792ms)
+✔ rejects private-upload before creating output (2.441417ms)
+✔ rejects private-symlink before creating output (2.650042ms)
+✔ rejects credential-outside-private before creating output (2.631333ms)
+✔ rejects upload-secret before creating output (2.143ms)
+✔ independent delivery fixture proves only artifact consistency, never completion (43.869083ms)
+✔ independent delivery rejects same release different reviewed video (40.342709ms)
+✔ independent delivery rejects empty reproduction list (39.8005ms)
+✔ independent delivery rejects wrong config hash (39.845875ms)
+✔ independent delivery rejects both image digests invalid (39.588458ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 235.026625

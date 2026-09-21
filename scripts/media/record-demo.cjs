@@ -15,11 +15,17 @@ function duration(p){let r;try{execFileSync(ffmpeg,['-i',p],{stdio:'pipe'});}cat
  if(!rehearsal && config.preparationTemplate)throw Error('Populate the template and clear preparationTemplate before final capture');
  if(!config.scenes?.length)throw Error('Scenes required');
  const manifest=JSON.parse(fs.readFileSync(config.releaseManifest));
- if(!rehearsal && (!config.approvedReleaseCommit || config.approvedReleaseCommit!==manifest.source.commit || !/(?:^|@)sha256:[a-f0-9]{64}$/.test(config.approvedImageDigest||'')))throw Error('Explicit verified release commit and image digest required');
+ if(!rehearsal)require('./release-binding.cjs')(config,manifest,run);
  if(config.rehearsalName&&!/^[a-z0-9-]+$/.test(config.rehearsalName))throw Error('Invalid rehearsal name');
  const out=path.resolve(rehearsal?'artifacts/media-preparation/'+(config.rehearsalName||'rehearsal'):config.outputDir||'artifacts/video');
  if(fs.existsSync(path.join(out,'GRID-VPP-demo-ko.mp4')))throw Error('Refusing to overwrite existing video');
  fs.mkdirSync(out,{recursive:true});const audioDir=path.join(out,'source');fs.mkdirSync(audioDir,{recursive:true});
+ if(!rehearsal){
+  const proof=JSON.parse(execFileSync(process.execPath,['scripts/verify-release.mjs',config.releaseManifest,'--at-commit','--remote'],{encoding:'utf8',timeout:20000,maxBuffer:1024*1024}));
+  if(proof.result!=='PASS'||!proof.remoteImageMatched)throw Error('Actual deployed release identity is not verified');
+  fs.writeFileSync(path.join(audioDir,'release-binding-proof.json'),JSON.stringify(proof,null,2)+'\n');
+  require('./recording-sources.cjs')({configPath:process.argv[2],out});
+ }
  // Voice is generated first. Each scene gets enough time for both its real action and voice.
  for(let i=0;i<config.scenes.length;i++){const sc=config.scenes[i];sc.voice=path.join(audioDir,`voice-${i}.aiff`);sc.cues=[];let offset=0;const inputs=[];const parts=sc.narration.match(/[^.!?。]+[.!?。]?/g)||[sc.narration];
   for(let j=0;j<parts.length;j++){const file=path.join(audioDir,`voice-${i}-${j}.aiff`);execFileSync('say',['-v','Yuna','-r',String(config.speechRate||170),'-o',file,parts[j].trim()]);const seconds=duration(file);sc.cues.push({start:offset,end:offset+seconds,text:parts[j].trim()});offset+=seconds;inputs.push('-i',file);}

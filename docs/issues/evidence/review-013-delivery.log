@@ -1,0 +1,13 @@
+✔ independent delivery fixture proves only artifact consistency, never completion (46.084542ms)
+✔ independent delivery rejects same release different reviewed video (42.647ms)
+✔ independent delivery rejects empty reproduction list (41.20675ms)
+✔ independent delivery rejects wrong config hash (41.498292ms)
+✔ independent delivery rejects both image digests invalid (42.58575ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 247.130458

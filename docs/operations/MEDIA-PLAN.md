@@ -72,3 +72,11 @@
 인증된 localhost:3103의1.2.0 후보에서 읽기 전용 UI 다운로드를22.03초 집중 리허설로 검증했다. 제작23.279초,1920×1080 H264/AAC, 전체 디코딩 성공, pageErrors=[], 음성 평균 -17.6dB이다. 선택 RTU의 실제4개 저장 상태를 내려받았다. 최대20개라는 범위이며 외부 VPP 수신 증거나 전체 감사 이력이 아니라는 내레이션/자막을 포함한다. 중앙 확대가 우측 버튼을 자르는 문제를 발견해 내보내기가 포함된 명령 장면은 전체 프레임을 유지하고 다른 장면의 점진 확대는 유지했다. 수정 프레임에서 버튼·포인터·자막을 확인했다.
 
 근거는 `artifacts/media-preparation/focused-command-export-v12-final-framing/verification.json`, 같은 폴더의 source/recent-command-states.json, `artifacts/media-preparation/command-export-validation.json`이다. 로컬 후보의 제작 검증이며 예비 매니페스트 정보는 최종 버전 증거가 아니다. 동결 시각/커밋/이미지/매니페스트 일치 및 최종 영상 검수 후 PPT 제작 방지장치는 유지한다. 최종 디렉터리는 생성하지 않았다.
+
+## 인도 전 일치 검사 보강
+
+최종 영상 준비기와 녹화기는 `release-binding.cjs`로 확정 커밋·실제 이미지 digest·runId·런타임 커밋·제품 버전·k3s 대상·HTTP/MQTT 접속 경로를 실행 기록과 비교한다. 유효하지 않은 일정이나 다른 이미지/로컬 fixture 경로는 거절한다. 녹화 직전에는 `verify-release.mjs --at-commit --remote`로 파일 해시와 실제 Ready 컨테이너 이미지를 다시 확인하고 결과를 영상 source 아래에 보존한다.
+
+PPT 제작기는 같은 릴리스의 검수 완료 영상이더라도 연결된 실제 MP4의 SHA가 다르면 거절한다. PPT 검증 기록은 사용한 영상 SHA를 남기며, 인도 검사기는 이 값과 PPT에 복사된 영상 검수 기록·현재 MP4를 함께 비교한다. 생성 소스·정확한 설정·사용 이미지·검증 영수증·상대 경로용 설정을 PPT 폴더 내부에 보존한다. 전체 구조와 실행 방법은 DELIVERY-PLAN.md에 있다.
+
+`node scripts/verify-delivery.mjs --manifest artifacts/releases/FINAL_MANIFEST.json --report artifacts/delivery/FINAL_INVENTORY.json`는 완성된 파일의 존재·해시·상대 영상 연결·재생성 자료를 검사한다. 보고서 경로는 새 파일을 사용한다. 누락/불일치는 종료코드1과 INCOMPLETE이며, 통과해도 ARTIFACT_CHECKS_PASSED 및 completionClaim:false다. 이 검사는 실제 동작·디코딩·육안/주장 검수·인수/운영시간 게이트를 대신하지 않는다. 현재 최종 영상/PPT 미생성 상태와 과거 리허설을 최종본으로 넣는 경우가 거절됨을 확인했다.

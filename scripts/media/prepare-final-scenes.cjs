@@ -4,7 +4,7 @@ const fs=require('node:fs');
  const input=JSON.parse(fs.readFileSync(process.argv[2])),run=JSON.parse(fs.readFileSync('docs/operations/run.json'));
  if(Date.now()<Date.parse(run.freezeAt)||Date.now()>Date.parse(run.deadlineAt))throw Error('Final scene binding is restricted to the frozen final window');
  const manifest=JSON.parse(fs.readFileSync(input.releaseManifest));
- if(input.approvedReleaseCommit!==manifest.source.commit||!/(?:^|@)sha256:[a-f0-9]{64}$/.test(input.approvedImageDigest||''))throw Error('Explicit verified release commit and image digest required');
+ require('./release-binding.cjs')(input,manifest,run);
  const headers=input.tokenFile?{Authorization:'Bearer '+fs.readFileSync(input.tokenFile,'utf8').trim()}:{};
  const response=await fetch(input.baseUrl+'/api/state',{headers,signal:AbortSignal.timeout(10000)});if(!response.ok)throw Error('Cannot read release state');const state=await response.json();
  if(state.version!==manifest.productVersion)throw Error('Running API version differs from release manifest');

@@ -27,3 +27,5 @@
 ## Reconnection entry
 
 After interruption, read `resume.json`, run `node scripts/resume-status.mjs`, and reconcile actual state before advancing its first incomplete checkpoint. The singleton `node scripts/connection-supervisor.mjs` owns local forwarding; check `artifacts/operations/status.json` before starting another. Native heartbeat `grid` checks every ten minutes while the Mac and Codex app are running. Preserve run.json deadlines. See NETWORK-RECOVERY.md.
+
+최종 인도 점검은 DELIVERY-PLAN.md를 따른다. 최종 미디어 생성 도구에는 서로 다른 이미지/접속 경로/영상의 혼합을 막는 검사가 추가되어 있다. MP4 검수 후 visualReview/claimsReview를 실제 확인 결과로 갱신하고 PPT를 생성한다. PPT 검수 후 `scripts/verify-delivery.mjs --manifest <최종 고정 매니페스트> --report <새 인도 목록 파일>`로 파일·해시·영상 연결·재생성 자료를 확인한다. 이 검사 통과만으로 목표 완료를 선언하지 않는다.
