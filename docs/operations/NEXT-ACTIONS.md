@@ -6,6 +6,8 @@
 
 ## 재연결 뒤 우선 확인
 
+미검수 facts 준비 템플릿 revision2는7번 슬라이드를 새 기상 조작 캡처에 연결했으며 REVIEW055를 따른다. [남은20개 게이트](../product/final-pending-gates.json)는 계획이고 acceptance는 승격하지 않았다. 새 [읽기전용 관측 준비](../../artifacts/checkpoints/demo-state-observer-integration/summary.json)는 격리11시험17616/실제CLI92454의 종료0, 독립 보안 검토와 소스 보존22시험을 완료했다. 이 핸들을 재실행하지 않는다. 최종에는 실제 final-scenes와 새 `artifacts/video/source/weather-observations.jsonl`을 사용해 권장360초만 새로 관측한다. 도구 종료와 recorder 종료는 별도로 확인하고 실제 소유ID/입력/출력·시각·영상/관측 해시를 연결한다.
+
 revision3 보존 커밋9c90808 전달 뒤 [19:24Z 읽기 점검](../../artifacts/checkpoints/resume-after-media-r3/summary.json)은 원격 main 일치, 동일1.7.1 Pod·이미지·인증API, 원장 정합성 및 현재3프로세스를 확인했다. 명령39652와 앞선push86269는 종료0이다. 양관측814메시지/invalid0와 이전API1·보조연결1오류를 그대로 보존했고 재시작하지 않았다. 이 과거 snapshot을 미래 연결 상태로 간주하지 않고 재개 시 새로 조회한다.
 
 `node scripts/resume-status.mjs`는 원격 Git·실제 이미지/Ready·인증 API·현재 관측 원장의 정합성을 읽기 전용으로 검사한다. 응답을 잃은 작업은 기존 journal·고유 리소스·담당의 원래 핸들·종료 영수증을 확인한다. 완료된 제어·배포·복원을 반복하거나 새 commandId를 발행하지 않는다. 보조 담당의 핸들이 메인 도구에서 보이지 않는 것만으로 종료를 추론하지 않는다. [네트워크 복구 절차](NETWORK-RECOVERY.md)를 따른다.

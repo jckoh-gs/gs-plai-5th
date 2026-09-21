@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-09-21T19:34:46.756642+00:00",
+  "scope": "Preparation-only source preservation, weather observation and final pending-gate mapping; no final media or remote mutation",
+  "observerSourceSha256": "7f9e3656821859d77a2c9cb42c1f3f428221119a28d39c56509b1638fd6b78cc",
+  "observerInventoryFilesVerified": 11,
+  "observerSourceMatchesPreservedCopy": true,
+  "actualIsolatedCli": {
+    "handle": 92454,
+    "exitCode": 0,
+    "sampleRows": 3,
+    "unavailableRows": 1,
+    "recorderTerminalConfirmed": false
+  },
+  "boundaryTests": {
+    "owner": "/root/media",
+    "handle": 17616,
+    "exitCode": 0,
+    "passed": 11
+  },
+  "packagingTests": {
+    "owner": "/root",
+    "command": [
+      "python3",
+      "scripts/deadline-command.py",
+      "--timeout-seconds",
+      "40",
+      "--",
+      "node",
+      "--test",
+      "tests/recording-sources.test.js",
+      "tests/review-media-delivery.test.js"
+    ],
+    "handle": null,
+    "exitCode": 0,
+    "passed": 22,
+    "failed": 0,
+    "note": "Original synchronous exec returned no session_id; includes missing observer source rejection. No repeated run for logging."
+  },
+  "securityReview": "docs/security/DEMO-STATE-OBSERVER-REVIEW.md",
+  "presentationReview": "docs/product/REVIEW-055.md",
+  "pendingAcceptanceIdsExactlyMapped": 20,
+  "acceptanceChanged": false,
+  "sourceSha256": {
+    "scripts/media/observe-demo-state.py": "7f9e3656821859d77a2c9cb42c1f3f428221119a28d39c56509b1638fd6b78cc",
+    "scripts/media/recording-sources.cjs": "bec110421857da912e768a4835dd254fcb383e480ca7d04660da643db55d0be0",
+    "scripts/verify-delivery.mjs": "f5bf5e44b4f1d9f7f562c4ebefc2249328acde063e7064a4165e99e728a9c05c",
+    "tests/recording-sources.test.js": "cd71c8191f429a1434b918dc7b2ce0c6189ab6b1ea5d5f37904b6fc1f8196f8e",
+    "tests/review-media-delivery.test.js": "c49fc62f7487831f4f8a1905a752f8fe4dae7f18ad742b1cb2211fd5126a0319",
+    "scripts/media/facts.template.json": "2e65175ff2251649e7262da89964a0a35b51d180ed7156b067f24df8fb576668",
+    "docs/product/final-pending-gates.json": "759e8bccede78c94ed1d2159a45e7b51e80ff809bdb41187824ecc4a370d9ad7"
+  },
+  "finalObserverRecommendedSeconds": 360,
+  "finalObserverMaxSeconds": 450,
+  "finalRecipe": "python3 scripts/deadline-command.py --timeout-seconds 365 -- python3 scripts/media/observe-demo-state.py --config artifacts/media-preparation/final-scenes.json --output artifacts/video/source/weather-observations.jsonl --seconds 360",
+  "finalRequiredReview": "Confirm actual recorder terminal separately, then correlate same-owned actual weather and CSV samples with recordingStartedAt+lead, source/video/JSONL hashes, recovery and real encoded frames. Preserve waiting/error rows. Observer exit0 alone is not final acceptance."
+}

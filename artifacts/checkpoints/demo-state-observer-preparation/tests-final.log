@@ -1,0 +1,16 @@
+test_401_stops_without_retry (__main__.Tests.test_401_stops_without_retry) ... ok
+test_actual_journal_transition_only (__main__.Tests.test_actual_journal_transition_only) ... ok
+test_connection_loss_reconnects (__main__.Tests.test_connection_loss_reconnects) ... ok
+test_deadline_interrupts_request (__main__.Tests.test_deadline_interrupts_request) ... ok
+test_existing_rtu_never_adopted (__main__.Tests.test_existing_rtu_never_adopted) ... ok
+test_expired_original_deadline_no_output (__main__.Tests.test_expired_original_deadline_no_output) ... ok
+test_no_registration_guess (__main__.Tests.test_no_registration_guess) ... ok
+test_output_never_overwritten (__main__.Tests.test_output_never_overwritten) ... ok
+test_read_outage_recovery_no_secret (__main__.Tests.test_read_outage_recovery_no_secret) ... ok
+test_redirect_never_followed (__main__.Tests.test_redirect_never_followed) ... ok
+test_unrecorded_run_change_not_sample (__main__.Tests.test_unrecorded_run_change_not_sample) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 12.164s
+
+OK

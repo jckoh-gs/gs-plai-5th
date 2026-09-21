@@ -1,6 +1,6 @@
 // File-only preservation. This helper does not authorize or perform final recording.
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
-const codeFiles=['scripts/media/demo-lifecycle.cjs','scripts/media/recover-demo.cjs','scripts/media/media-deadline.cjs','scripts/media/record-demo.cjs','scripts/media/recording-sources.cjs','scripts/media/release-binding.cjs','scripts/media/release-features.cjs','scripts/media/validate-command-download.cjs','scripts/media/scene-plan.cjs','scripts/media/prepare-final-scenes.cjs','scripts/verify-release.mjs','scripts/pod-identity.mjs','scripts/vpp-client.js','scripts/client-message.js','package.json','package-lock.json'];
+const codeFiles=['scripts/media/demo-lifecycle.cjs','scripts/media/recover-demo.cjs','scripts/media/observe-demo-state.py','scripts/media/media-deadline.cjs','scripts/media/record-demo.cjs','scripts/media/recording-sources.cjs','scripts/media/release-binding.cjs','scripts/media/release-features.cjs','scripts/media/validate-command-download.cjs','scripts/media/scene-plan.cjs','scripts/media/prepare-final-scenes.cjs','scripts/verify-release.mjs','scripts/pod-identity.mjs','scripts/vpp-client.js','scripts/client-message.js','package.json','package-lock.json'];
 const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 function preserveRecordingSources({configPath,out,root=process.cwd()}){
  const resolve=p=>path.resolve(root,p),originalConfig=fs.readFileSync(resolve(configPath)),config=JSON.parse(originalConfig);

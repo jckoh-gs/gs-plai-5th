@@ -18,6 +18,8 @@
 
 ## 영상 흐름
 
+발표자료 준비 템플릿 revision2의7번 슬라이드는 같은 최종 영상의 `weather-model-output.png`를 사용한다. 수동 기상·실제 출력 변화·CSV 복귀와 manual 출처를 설명하며 [REVIEW055](../product/REVIEW-055.md)에서 의미를 대조했다. 현재 facts는 reviewed=false/preparationTemplate=true이고 수치·캡처SHA는 최종 관측으로 확정한다. 과거 캡처나 준비 수치를 최종 결과로 대입하지 않는다. 나머지 슬라이드의 명령 접수/저장 상태와 MQTT 완료 구분은 유지한다.
+
 1. 실제 배포 대시보드: 가상 발전단지와 SCADA → RTU → MQTT → 외부 VPP 시험 목적, 실물 제어가 아닌 범위를 설명한다.
 2. CSV/TSV 등록: 시각·출력·전압·전류, 단지 유형과 발전기 구성, 좌표 기본값 출처를 보여준다.
 3. 발전 제어: 풍력·태양광·복합 장면, 풍향과 회전, 마우스 드래그/휠, 소유 RTU의 수동 기상 입력·실제 출력 변화·CSV 복귀, 출력 제한·정지·기동 및 일치하는 계측값을 보여준다.
@@ -28,6 +30,8 @@
 8. 검증 및 한계: k3s 이미지/영속 복원 증거, 실측 결과, 남은 취약점·외부 연동 제한을 사실대로 마무리한다.
 
 ## 제작·검수
+
+최종 기상 입력/출력 근거는 `scripts/media/observe-demo-state.py`로 실제 final-scenes와 private journal에 연결해 읽는다. [격리11시험·실제CLI 복구](../../artifacts/checkpoints/demo-state-observer-preparation/README.md), [독립 보안 검토](../security/DEMO-STATE-OBSERVER-REVIEW.md), [소스 보존22시험](../../artifacts/checkpoints/demo-state-observer-integration/summary.json)을 완료했다. 등록 actual201의 소유ID 전에는 대기하며 연결 오류는 고정행으로 남기고 읽기만 재시도한다. 최종 부모폴더 준비 후 `--seconds 360`/외부wrapper365초를 권장하며 원래마감과450초 상한은 유지한다. recorder의 실제 종료를 별도로 확인하고, 새 JSONL/소스/영상 SHA 및 실제 시각·날씨/CSV 전후 표본·encoded frame을 함께 검수한다. 종료0은 제한된 관측구간 종료이고 녹화 성공이 아니다. 관측 근거 경로는 `artifacts/video/source/weather-observations.jsonl`이며 최종 검수·PPT facts의 근거와 인벤토리에 연결한다.
 
 - 실제 브라우저 연속 녹화,1920×1080, 한국어 음성·자막. 단순 스크린샷 슬라이드쇼를 시연으로 대체하지 않는다.
 - 브라우저에 포인터 및 클릭 표시를 넣고 실제 이동을 녹화한다. 주요 제어·상태 읽기 장면에서 제한적으로 확대/축소하여 문맥을 유지한다.

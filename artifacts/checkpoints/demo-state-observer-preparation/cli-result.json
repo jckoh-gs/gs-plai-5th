@@ -1,0 +1,16 @@
+{
+  "preparationOnly": true,
+  "fixture": "synthetic isolated loopback only, no appRTU",
+  "exitCode": 0,
+  "summary": {
+    "scope": "read-only observer interval ended",
+    "samples": 3,
+    "unavailable": 1,
+    "recorderTerminalConfirmed": false,
+    "authorizationDenied": false,
+    "originalDeadlineReached": false
+  },
+  "outputSha256": "0b72ff185336c65343cda9d74ae42fd96a6e1f72b3859655e022c4a7984cb67f",
+  "originalDeadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "sourceSha256": "7f9e3656821859d77a2c9cb42c1f3f428221119a28d39c56509b1638fd6b78cc"
+}

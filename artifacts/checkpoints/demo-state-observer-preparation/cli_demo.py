@@ -1,0 +1,7 @@
+import importlib.util,pathlib,json,subprocess,shutil,hashlib
+p=pathlib.Path(__file__).resolve().parent;spec=importlib.util.spec_from_file_location('fixture',p/'test_observer.py');f=importlib.util.module_from_spec(spec);spec.loader.exec_module(f)
+t=f.Tests('test_read_outage_recovery_no_secret');t.setUp()
+try:
+ run=json.loads((f.ROOT/'docs/operations/run.json').read_text());t.run=run;t.j['runId']=run['runId'];t.j['deadlineAt']=run['deadlineAt'];t.j['productVersion']=run['deployment']['productVersion'];t.save();t.mode='outage'
+ cmd=['python3','scripts/media/observe-demo-state.py','--config',str(t.config),'--output',str(t.output),'--seconds','1.7'];r=subprocess.run(cmd,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,timeout=8);assert r.returncode==0;summary=json.loads(r.stdout);assert summary['samples']>=2 and summary['unavailable']==1;assert t.token not in t.output.read_text();shutil.copyfile(t.output,p/'actual-loopback-observations.jsonl');(p/'cli-result.json').write_text(json.dumps({'preparationOnly':True,'fixture':'synthetic isolated loopback only, no appRTU','exitCode':r.returncode,'summary':summary,'outputSha256':hashlib.sha256(t.output.read_bytes()).hexdigest(),'originalDeadlineAt':run['deadlineAt'],'sourceSha256':hashlib.sha256((f.ROOT/'scripts/media/observe-demo-state.py').read_bytes()).hexdigest()},indent=2)+'\n');print('CLI loopback read/outage/recovery PASS')
+finally:t.tearDown()

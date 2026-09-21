@@ -116,6 +116,8 @@ final_command 70 node scripts/verify-release.mjs artifacts/releases/final-202609
 
 ```sh
 node scripts/media/prepare-final-scenes.cjs artifacts/media-preparation/final-input.json
+# 먼저 artifacts/video/source를 준비하고 아래 읽기 관측기를 별도 도구 세션으로 시작한다.
+# 관측기 종료를 기다리지 않고 이 recorder를 시작하며 두 원래 핸들을 각각 기록한다.
 node scripts/media/record-demo.cjs artifacts/media-preparation/final-scenes.json
 # recorder 종료 후 source/demo-recovery.json의 PASS/settingsMatched/기존RTU불변 확인
 # 실패/중단이면 recorder 종료를 먼저 확인한 뒤 아래 독립 복구 절차 사용
@@ -124,6 +126,14 @@ node scripts/media/record-demo.cjs artifacts/media-preparation/final-scenes.json
 node scripts/media/prepare-final-deck.cjs artifacts/media-preparation/final-deck-input.json
 node scripts/media/build-deck.mjs artifacts/media-preparation/final-deck.json
 ```
+
+기상 관측기는 final-scenes와 private journal이 생성된 뒤 별도 도구 세션에서 시작한다. `artifacts/video/source` 부모만 준비하고 새 출력인지 확인한다. 아래 유한 관측을 recorder와 병행하며, 관측 종료를 기다린 뒤 녹화를 시작하지 않는다.
+
+```sh
+python3 scripts/deadline-command.py --timeout-seconds 365 -- python3 scripts/media/observe-demo-state.py --config artifacts/media-preparation/final-scenes.json --output artifacts/video/source/weather-observations.jsonl --seconds 360
+```
+
+이 도구의 종료0은 일부 유효 관측을 얻은 제한된 구간 종료다. 실제 recorder 종료·설정 복구·기상/CSV 전후 변화·같은 영상 시각/해시는 메인이 따로 검수한다. 연결 오류행은 보존하고 기존 출력은 덮어쓰지 않는다. 응답을 잃으면 원래 관측 핸들부터 확인한다.
 
 `final-input.json`은 아직 자동 생성되는 파일이 아니다. 메인이 검증된 scenes-template/기존 준비설정에서 실제 releaseManifest/approvedReleaseCommit/approvedImageDigest/baseUrl/tokenFile/mqtt/csvFile/outputDir를 채워 생성해야 한다. 덱 또한 실제 새 영상 캡처/타임코드/검수영수증을 연결하여 final-deck.json을 만든다. 최종 모드는 동결창 및 검수된 같은 영상 조건을 강제한다. 정확한 미디어 인도물/육안검수는 MEDIA-PLAN.md와 DELIVERY-PLAN.md를 따른다.
 

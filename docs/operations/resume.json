@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T19:23:03.326722+00:00",
+  "updatedAt": "2026-09-21T19:34:46.756642+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -1593,5 +1593,47 @@
     "actualVoiceSeconds": 161.6374375,
     "directListening": false,
     "checkedAt": "2026-09-21T19:23:03.326722+00:00"
+  },
+  "weatherPresentationPreparation": {
+    "state": "PREPARATION_TEMPLATE_REVIEWED_NOT_FINAL",
+    "templateRevision": 2,
+    "factsTemplate": "scripts/media/facts.template.json",
+    "sha256": "2e65175ff2251649e7262da89964a0a35b51d180ed7156b067f24df8fb576668",
+    "productReview": "docs/product/REVIEW-055.md",
+    "slide": 7,
+    "capture": "weather-model-output.png",
+    "scope": "Template connects new owned manual-weather scene/CSV return/manual provenance; final selected video and actual values must still be reviewed. No final PPT generated.",
+    "checkedAt": "2026-09-21T19:29:32.443461+00:00"
+  },
+  "finalPendingGatesPreparation": {
+    "path": "docs/product/final-pending-gates.json",
+    "count": 20,
+    "acceptanceUnchanged": true,
+    "completionClaim": false,
+    "checkedAt": "2026-09-21T19:29:32.443461+00:00"
+  },
+  "weatherObservationPreparation": {
+    "state": "PREPARATION_VERIFIED; final actual observation pending",
+    "owner": "/root/media",
+    "source": "scripts/media/observe-demo-state.py",
+    "reason": "Read-only final weather evidence must retain transient network errors and resume bounded observation without rerunning writes",
+    "originalFreezeAndDeadlineUnchanged": true,
+    "sourceSha256": "7f9e3656821859d77a2c9cb42c1f3f428221119a28d39c56509b1638fd6b78cc",
+    "evidence": "artifacts/checkpoints/demo-state-observer-preparation/result.json",
+    "rootIntegration": "artifacts/checkpoints/demo-state-observer-integration/summary.json",
+    "securityReview": "docs/security/DEMO-STATE-OBSERVER-REVIEW.md",
+    "finalTests": {
+      "handle": 17616,
+      "terminalExitCode": 0,
+      "passed": 11
+    },
+    "actualIsolatedCLI": {
+      "handle": 92454,
+      "terminalExitCode": 0
+    },
+    "packagingTestsPassed": 22,
+    "recommendedSeconds": 360,
+    "maxSeconds": 450,
+    "checkedAt": "2026-09-21T19:34:46.756642+00:00"
   }
 }

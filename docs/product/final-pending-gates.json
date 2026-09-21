@@ -1,0 +1,385 @@
+{
+  "schemaVersion": 1,
+  "state": "PREPARATION_PLAN_NOT_ACCEPTANCE_EVIDENCE",
+  "completionClaim": false,
+  "acceptanceSnapshotSha256": "58380cf7580351c37544e872a4ef1cbe456146fbae823ba331810c9d92c1922b",
+  "selectedPreparation": {
+    "productVersion": "1.7.1",
+    "prdVersion": "1.15",
+    "runtime": "40b9ed898f32037e7a87259d12d145457575a4a8",
+    "narrationRevision": 3,
+    "weatherDemonstrationRevision": 2,
+    "durationMeaning": "Prepared voice is161.6374375s;290s is the minimum planned timeline including per-scene duration floors, not voice duration. Actual final8scene video duration and production time must be measured separately.",
+    "minimumPlannedTimelineSeconds": 290,
+    "actualVoiceSeconds": 161.6374375
+  },
+  "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "pathPolicy": "All paths are planned locations, not claims of existence. Reuse authoritative existing plan paths; new closeout/software/inventory filenames may be resolved by main and recorded without weakening gates. No evidence is created by this checklist.",
+  "references": [
+    "docs/operations/FINAL-RESTORE-PLAN.md",
+    "docs/operations/DELIVERY-PLAN.md",
+    "docs/operations/MEDIA-PLAN.md",
+    "docs/product/REVIEW-042.md",
+    "docs/product/REVIEW-054.md"
+  ],
+  "gates": [
+    {
+      "id": "FR-FAULT-02",
+      "observedStatus": "partial",
+      "plannedEvidencePaths": [
+        "artifacts/video/source/demo-recovery.json",
+        "artifacts/video/verification.json",
+        "deploy/verification/final-main-normal.json"
+      ],
+      "requiredActualJudgments": [
+        "Actual owned RTU registration/restore transitions and settings/weather configuration recovery PASS; pre-existing RTUs unchanged; final delivered fault/control state checked.",
+        "Manual weather provenance may remain manual: no false claim of restoring historical weather source or exact RNG trajectory."
+      ],
+      "responsibleRole": "main + media + independent reviewer"
+    },
+    {
+      "id": "AT-UI",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "docs/product/acceptance.json",
+        "artifacts/video/verification.json",
+        "artifacts/video/GRID-VPP-demo-ko.mp4",
+        "artifacts/video/scenes.json",
+        "artifacts/video/GRID-VPP-demo-ko.srt",
+        "artifacts/video/narration-ko.md"
+      ],
+      "requiredActualJudgments": [
+        "Review child AT-UI-01..12 against their exact evidence scope; final AT-UI-12 must pass. Local fixtures are not relabeled remote coverage."
+      ],
+      "responsibleRole": "product + main"
+    },
+    {
+      "id": "VID-01",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "artifacts/video/verification.json",
+        "artifacts/video/GRID-VPP-demo-ko.mp4",
+        "artifacts/video/scenes.json",
+        "artifacts/video/GRID-VPP-demo-ko.srt",
+        "artifacts/video/narration-ko.md",
+        "artifacts/video/source/release-manifest.json",
+        "artifacts/video/source/release-binding-proof.json"
+      ],
+      "requiredActualJudgments": [
+        "New final selected-release capture after freeze; exact manifest/source/runtime/image and actual scene evidence agree.",
+        "Full decode,1080p,H264/AAC,Korean narration/subtitles and actual pointer/click/zoom reviewed; technical audio/ASR alone is not direct listening.",
+        "GOAL14 content includes owned manual-weather manipulation and actual output change/CSV return; r2 preparation does not substitute final observation.",
+        "MQTT command has actual terminal result; short offline clip is distinct from separately linked outbox restart/PUBACK evidence; no external-VPP receipt claim."
+      ],
+      "responsibleRole": "media + independent reviewer + main"
+    },
+    {
+      "id": "VID-02",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "artifacts/video/verification.json",
+        "artifacts/video/GRID-VPP-demo-ko.mp4",
+        "artifacts/video/scenes.json",
+        "artifacts/video/GRID-VPP-demo-ko.srt",
+        "artifacts/video/narration-ko.md",
+        "artifacts/video/source/vpp-command-4.json",
+        "artifacts/video/source/demo-recovery.json"
+      ],
+      "requiredActualJudgments": [
+        "Directly compare all GOAL14/PRD VID02 content against actual final8scenes, narration and screenshots; document any missing content.",
+        "Media r3 wording and weather r2 actions are preparation baselines; actual final duration measured, not inherited from 290s minimum planned timeline including scene floors."
+      ],
+      "responsibleRole": "product + media"
+    },
+    {
+      "id": "PPT-01",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "artifacts/presentation/verification.json",
+        "artifacts/presentation/validation.json",
+        "artifacts/presentation/GRID-VPP-presentation-ko.pptx",
+        "artifacts/presentation/speaker-notes.md",
+        "artifacts/presentation/reproduction-manifest.json",
+        "artifacts/video/verification.json",
+        "artifacts/video/GRID-VPP-demo-ko.mp4",
+        "artifacts/video/scenes.json",
+        "artifacts/video/GRID-VPP-demo-ko.srt",
+        "artifacts/video/narration-ko.md",
+        "artifacts/presentation/source/facts.original.json"
+      ],
+      "requiredActualJudgments": [
+        "PPT creation follows completed/reviewed final video; same actual video SHA/release/scene times; editable16:9 Korean deck with required content and notes.",
+        "Actual final video/image/manifest hashes agree across both packages; preparationTemplate false only after genuine review."
+      ],
+      "responsibleRole": "media + main"
+    },
+    {
+      "id": "PPT-02",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "artifacts/presentation/verification.json",
+        "artifacts/presentation/validation.json",
+        "artifacts/presentation/GRID-VPP-presentation-ko.pptx",
+        "artifacts/presentation/speaker-notes.md",
+        "artifacts/presentation/reproduction-manifest.json",
+        "artifacts/presentation/source/facts.original.json"
+      ],
+      "requiredActualJudgments": [
+        "Check every required background/boundary/architecture/data/control/UI/weather/RTU/fault/integration/deployment/security/issues/version/limits topic against selected release and actual video; no unsupported claims."
+      ],
+      "responsibleRole": "product + media"
+    },
+    {
+      "id": "PPT-03",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "artifacts/presentation/verification.json",
+        "artifacts/presentation/validation.json",
+        "artifacts/presentation/GRID-VPP-presentation-ko.pptx",
+        "artifacts/presentation/speaker-notes.md",
+        "artifacts/presentation/reproduction-manifest.json",
+        "artifacts/presentation/slide-01.png"
+      ],
+      "requiredActualJudgments": [
+        "Render every final slide, independently inspect Korean text/overlap/clipping/font/capture readability; fix and re-render affected slides.",
+        "Use all slide-NN.png files, not only planned slide-01; automated layout/import validation does not substitute visual/content judgment."
+      ],
+      "responsibleRole": "media + independent reviewer"
+    },
+    {
+      "id": "OPS-01",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "docs/operations/run.json",
+        "docs/operations/resume.json",
+        "docs/operations/final-closeout.json"
+      ],
+      "requiredActualJudgments": [
+        "Record actual start/freeze/end and interruptions against immutable original schedule; no automatic extension.",
+        "Record owned agents/processes/reservations termination and remaining deliverables honestly; elapsed time does not imply success."
+      ],
+      "responsibleRole": "main"
+    },
+    {
+      "id": "OPS-02",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "docs/product/IDEAS.md",
+        "docs/product/PRD-CHANGELOG.md",
+        "docs/security/VULNERABILITY-MANAGEMENT.md",
+        "docs/issues/ISSUES.md",
+        "docs/operations/final-role-closeout.json"
+      ],
+      "requiredActualJudgments": [
+        "Named product/security/issues final judgments tied to selected version/source/lock/image; adopted/deferred ideas and unresolved issues/CVEs retain owners/reasons/mitigation/revisit conditions.",
+        "Check final changes since last review; existing residual findings/unknown incident causes are not silently closed."
+      ],
+      "responsibleRole": "product + security + issues + main"
+    },
+    {
+      "id": "OPS-04",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "artifacts/video/verification.json",
+        "artifacts/video/GRID-VPP-demo-ko.mp4",
+        "artifacts/video/scenes.json",
+        "artifacts/video/GRID-VPP-demo-ko.srt",
+        "artifacts/video/narration-ko.md",
+        "artifacts/presentation/verification.json",
+        "artifacts/presentation/validation.json",
+        "artifacts/presentation/GRID-VPP-presentation-ko.pptx",
+        "artifacts/presentation/speaker-notes.md",
+        "artifacts/presentation/reproduction-manifest.json",
+        "artifacts/delivery/final-inventory.json",
+        "artifacts/releases/final-20260921.json"
+      ],
+      "requiredActualJudgments": [
+        "New video then same-video PPT then actual validation/inventory within original final window; partial outputs remain incomplete."
+      ],
+      "responsibleRole": "main"
+    },
+    {
+      "id": "NFR-08",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "artifacts/delivery/final-inventory.json",
+        "artifacts/releases/final-20260921.json",
+        "artifacts/delivery/software/checks.json",
+        "artifacts/delivery/software/execution.json",
+        "docs/protocol.md",
+        "docs/product/acceptance.json"
+      ],
+      "requiredActualJudgments": [
+        "Recheck exact final selected source/runtime/manifest/tags/remote refs and delivered samples3/package/lock/tests/scripts plus documentation/client contracts.",
+        "Software report requires original exit0 plus stdout exact saved-report SHA; prepared1.7.1 observation is not final refs check.",
+        "Verify software/media relative links, hashes, private-data exclusion and required final files; inventory existence alone is insufficient."
+      ],
+      "responsibleRole": "main + product + security"
+    },
+    {
+      "id": "AT-UI-12",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "artifacts/video/verification.json",
+        "artifacts/video/GRID-VPP-demo-ko.mp4",
+        "artifacts/video/scenes.json",
+        "artifacts/video/GRID-VPP-demo-ko.srt",
+        "artifacts/video/narration-ko.md",
+        "artifacts/video/source/release-manifest.json",
+        "artifacts/video/source/release-binding-proof.json"
+      ],
+      "requiredActualJudgments": [
+        "New final selected-release capture after freeze; exact manifest/source/runtime/image and actual scene evidence agree.",
+        "Full decode,1080p,H264/AAC,Korean narration/subtitles and actual pointer/click/zoom reviewed; technical audio/ASR alone is not direct listening.",
+        "GOAL14 content includes owned manual-weather manipulation and actual output change/CSV return; r2 preparation does not substitute final observation.",
+        "MQTT command has actual terminal result; short offline clip is distinct from separately linked outbox restart/PUBACK evidence; no external-VPP receipt claim."
+      ],
+      "responsibleRole": "media + independent reviewer + main"
+    },
+    {
+      "id": "AT-PPT-01",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "artifacts/presentation/verification.json",
+        "artifacts/presentation/validation.json",
+        "artifacts/presentation/GRID-VPP-presentation-ko.pptx",
+        "artifacts/presentation/speaker-notes.md",
+        "artifacts/presentation/reproduction-manifest.json",
+        "artifacts/video/verification.json",
+        "artifacts/video/GRID-VPP-demo-ko.mp4",
+        "artifacts/video/scenes.json",
+        "artifacts/video/GRID-VPP-demo-ko.srt",
+        "artifacts/video/narration-ko.md",
+        "artifacts/presentation/source/facts.original.json"
+      ],
+      "requiredActualJudgments": [
+        "PPT creation follows completed/reviewed final video; same actual video SHA/release/scene times; editable16:9 Korean deck with required content and notes.",
+        "Actual final video/image/manifest hashes agree across both packages; preparationTemplate false only after genuine review."
+      ],
+      "responsibleRole": "media + main"
+    },
+    {
+      "id": "AT-PPT-02",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "artifacts/presentation/verification.json",
+        "artifacts/presentation/validation.json",
+        "artifacts/presentation/GRID-VPP-presentation-ko.pptx",
+        "artifacts/presentation/speaker-notes.md",
+        "artifacts/presentation/reproduction-manifest.json",
+        "artifacts/presentation/slide-01.png"
+      ],
+      "requiredActualJudgments": [
+        "Render every final slide, independently inspect Korean text/overlap/clipping/font/capture readability; fix and re-render affected slides.",
+        "Use all slide-NN.png files, not only planned slide-01; automated layout/import validation does not substitute visual/content judgment."
+      ],
+      "responsibleRole": "media + independent reviewer"
+    },
+    {
+      "id": "AT-PPT-03",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "artifacts/presentation/verification.json",
+        "artifacts/presentation/validation.json",
+        "artifacts/presentation/GRID-VPP-presentation-ko.pptx",
+        "artifacts/presentation/speaker-notes.md",
+        "artifacts/presentation/reproduction-manifest.json",
+        "artifacts/delivery/final-inventory.json",
+        "artifacts/releases/final-20260921.json",
+        "artifacts/presentation/source/config.portable.json",
+        "artifacts/presentation/source/REGENERATE.md"
+      ],
+      "requiredActualJudgments": [
+        "Verify PPT/notes/generation sources/assets/review receipts and exact supplied video relative link; complete portable package/inventory hashes."
+      ],
+      "responsibleRole": "main + media"
+    },
+    {
+      "id": "AT-OPS-01",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "docs/operations/run.json",
+        "docs/operations/resume.json",
+        "docs/operations/final-closeout.json"
+      ],
+      "requiredActualJudgments": [
+        "Record actual start/freeze/end and interruptions against immutable original schedule; no automatic extension.",
+        "Record owned agents/processes/reservations termination and remaining deliverables honestly; elapsed time does not imply success."
+      ],
+      "responsibleRole": "main"
+    },
+    {
+      "id": "AT-OPS-03",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "docs/product/IDEAS.md",
+        "docs/product/PRD-CHANGELOG.md",
+        "docs/security/VULNERABILITY-MANAGEMENT.md",
+        "docs/issues/ISSUES.md",
+        "docs/operations/final-role-closeout.json"
+      ],
+      "requiredActualJudgments": [
+        "Named product/security/issues final judgments tied to selected version/source/lock/image; adopted/deferred ideas and unresolved issues/CVEs retain owners/reasons/mitigation/revisit conditions.",
+        "Check final changes since last review; existing residual findings/unknown incident causes are not silently closed."
+      ],
+      "responsibleRole": "product + security + issues + main"
+    },
+    {
+      "id": "AT-OPS-04",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "artifacts/video/verification.json",
+        "artifacts/video/GRID-VPP-demo-ko.mp4",
+        "artifacts/video/scenes.json",
+        "artifacts/video/GRID-VPP-demo-ko.srt",
+        "artifacts/video/narration-ko.md",
+        "artifacts/video/source/release-manifest.json",
+        "artifacts/video/source/release-binding-proof.json"
+      ],
+      "requiredActualJudgments": [
+        "New final selected-release capture after freeze; exact manifest/source/runtime/image and actual scene evidence agree.",
+        "Full decode,1080p,H264/AAC,Korean narration/subtitles and actual pointer/click/zoom reviewed; technical audio/ASR alone is not direct listening.",
+        "GOAL14 content includes owned manual-weather manipulation and actual output change/CSV return; r2 preparation does not substitute final observation.",
+        "MQTT command has actual terminal result; short offline clip is distinct from separately linked outbox restart/PUBACK evidence; no external-VPP receipt claim."
+      ],
+      "responsibleRole": "media + independent reviewer + main"
+    },
+    {
+      "id": "AT-OPS-05",
+      "observedStatus": "pending",
+      "plannedEvidencePaths": [
+        "artifacts/presentation/verification.json",
+        "artifacts/presentation/validation.json",
+        "artifacts/presentation/GRID-VPP-presentation-ko.pptx",
+        "artifacts/presentation/speaker-notes.md",
+        "artifacts/presentation/reproduction-manifest.json",
+        "artifacts/video/verification.json",
+        "artifacts/video/GRID-VPP-demo-ko.mp4",
+        "artifacts/video/scenes.json",
+        "artifacts/video/GRID-VPP-demo-ko.srt",
+        "artifacts/video/narration-ko.md",
+        "artifacts/presentation/source/facts.original.json"
+      ],
+      "requiredActualJudgments": [
+        "PPT creation follows completed/reviewed final video; same actual video SHA/release/scene times; editable16:9 Korean deck with required content and notes.",
+        "Actual final video/image/manifest hashes agree across both packages; preparationTemplate false only after genuine review."
+      ],
+      "responsibleRole": "media + main"
+    },
+    {
+      "id": "AT-RESUME-01-03",
+      "observedStatus": "partial",
+      "plannedEvidencePaths": [
+        "docs/operations/run.json",
+        "docs/operations/resume.json",
+        "docs/operations/final-closeout.json"
+      ],
+      "requiredActualJudgments": [
+        "Keep existing same-commandID/no-blind-retry policy; inspect unknown writes before cleanup.",
+        "Actually stop this run heartbeat and owned observer/forward/supervisor processes by verified identity; retain remote app/PVC and unrelated processes. Record actual tool/process outcomes and deadline; no offline-AI guarantee."
+      ],
+      "responsibleRole": "main"
+    }
+  ]
+}
