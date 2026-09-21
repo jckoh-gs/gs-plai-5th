@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Push a buildx OCI archive to the private loopback registry through kubectl."""
 import argparse,json,tarfile,urllib.request,urllib.error,urllib.parse
-p=argparse.ArgumentParser();p.add_argument('archive');p.add_argument('tag');p.add_argument('--registry',default='http://127.0.0.1:15050');a=p.parse_args()
-base=a.registry.rstrip('/')+'/v2/grid'
+p=argparse.ArgumentParser();p.add_argument('archive');p.add_argument('tag');p.add_argument('--registry',default='http://127.0.0.1:15050');p.add_argument('--repository',default='grid');a=p.parse_args()
+base=a.registry.rstrip('/')+'/v2/'+a.repository
 def request(method,url,data=None,headers=None):
     return urllib.request.urlopen(urllib.request.Request(url,data=data,method=method,headers=headers or {}),timeout=180)
 with tarfile.open(a.archive) as t:
@@ -22,4 +22,4 @@ with tarfile.open(a.archive) as t:
         loc+=('&' if '?' in loc else '?')+'digest='+urllib.parse.quote(digest)
         request('PUT',loc,b'',{'Content-Type':'application/octet-stream'})
         print('uploaded',digest,flush=True)
-    r=request('PUT',base+'/manifests/'+a.tag,manifest,{'Content-Type':m['mediaType']});print('IMAGE=127.0.0.1:15050/grid@'+r.headers['Docker-Content-Digest'])
+    r=request('PUT',base+'/manifests/'+a.tag,manifest,{'Content-Type':m['mediaType']});print('IMAGE=127.0.0.1:15050/'+a.repository+'@'+r.headers['Docker-Content-Digest'])

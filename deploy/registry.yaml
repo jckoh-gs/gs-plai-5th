@@ -47,10 +47,12 @@ spec:
           type: RuntimeDefault
       containers:
         - name: registry
-          image: registry:2@sha256:a3d8aaa63ed8681a604f1dea0aa03f100d5895b6a58ace528858a7b332415373
+          image: registry:3@sha256:fd374bae807c225661adfe2c0c1f9970a0b8fab1761fd7dfb91e0fd9a8748f9b
           env:
             - name: REGISTRY_HTTP_ADDR
               value: "127.0.0.1:15050"
+            - name: OTEL_TRACES_EXPORTER
+              value: none
           securityContext:
             allowPrivilegeEscalation: false
             capabilities:

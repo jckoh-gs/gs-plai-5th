@@ -6,6 +6,14 @@ spec:
   storageClassName: local-path
   resources: {requests: {storage: 5Gi}}
 ---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata: {name: grid-mqtt-data, namespace: gs-plai-5h}
+spec:
+  accessModes: [ReadWriteOnce]
+  storageClassName: local-path
+  resources: {requests: {storage: 1Gi}}
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata: {name: grid, namespace: gs-plai-5h}
@@ -19,6 +27,15 @@ spec:
       automountServiceAccountToken: false
       nodeSelector: {kubernetes.io/hostname: charleskoh-nucbox-g3}
       securityContext: {runAsUser: 1000, runAsGroup: 1000, fsGroup: 1000, seccompProfile: {type: RuntimeDefault}}
+      initContainers:
+        - name: migrate-mqtt-storage
+          image: MQTT_IMAGE
+          command: [sh, -c, 'if [ ! -e /broker/.migration-complete ]; then if [ -f /legacy/mosquitto.db ] && [ ! -e /broker/mosquitto.db ]; then cp /legacy/mosquitto.db /broker/mosquitto.db; fi; touch /broker/.migration-complete; fi']
+          securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: [ALL]}}
+          resources: {requests: {cpu: 10m, memory: 8Mi}, limits: {cpu: 100m, memory: 32Mi}}
+          volumeMounts:
+            - {name: data, mountPath: /legacy, readOnly: true}
+            - {name: mqtt-data, mountPath: /broker}
       containers:
         - name: app
           image: GRID_IMAGE
@@ -36,19 +53,22 @@ spec:
           readinessProbe: {httpGet: {path: /api/health, port: 3001}, initialDelaySeconds: 5, periodSeconds: 5}
           livenessProbe: {httpGet: {path: /api/health, port: 3001}, initialDelaySeconds: 30, periodSeconds: 15}
         - name: mqtt
-          image: eclipse-mosquitto:2@sha256:6f8d8a947c506f8a2290ec65cd4bd2bc7cb4d43fb5f6271f861cb013e2ef9797
-          command: [mosquitto, -c, /mosquitto/config/mosquitto.conf]
+          image: MQTT_IMAGE
+          command: [sh, -c, 'cp /mosquitto/secrets/passwords /run/mosquitto/passwords && cp /mosquitto/config/acl /run/mosquitto/acl && chmod 600 /run/mosquitto/passwords /run/mosquitto/acl && exec mosquitto -c /mosquitto/config/mosquitto.conf']
           securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: [ALL]}}
           resources: {requests: {cpu: 50m, memory: 32Mi}, limits: {cpu: '1', memory: 128Mi}}
           volumeMounts:
+            - {name: mqtt-runtime, mountPath: /run/mosquitto}
             - {name: mqtt-config, mountPath: /mosquitto/config}
             - {name: secrets, mountPath: /mosquitto/secrets, readOnly: true}
-            - {name: data, mountPath: /mosquitto/data}
+            - {name: mqtt-data, mountPath: /mosquitto/data}
           readinessProbe: {tcpSocket: {port: 1883}, initialDelaySeconds: 3, periodSeconds: 5}
       volumes:
         - {name: data, persistentVolumeClaim: {claimName: grid-data}}
+        - {name: mqtt-data, persistentVolumeClaim: {claimName: grid-mqtt-data}}
         - {name: mqtt-config, configMap: {name: grid-mqtt}}
-        - {name: secrets, secret: {secretName: grid-secrets, defaultMode: 288}}
+        - {name: mqtt-runtime, emptyDir: {medium: Memory, sizeLimit: 1Mi}}
+        - {name: secrets, secret: {secretName: grid-secrets, defaultMode: 288, items: [{key: passwords, path: passwords}]}}
 ---
 apiVersion: v1
 kind: Service
