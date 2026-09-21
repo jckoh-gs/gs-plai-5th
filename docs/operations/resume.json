@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T17:04:18.419637+00:00",
+  "updatedAt": "2026-09-21T17:06:03.250848+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -966,5 +966,17 @@
     "compactEvidence": "artifacts/checkpoints/media-candidate17-deck",
     "scope": "Preparation artifact only; finalsamevideoPPT must stillbe generated in originalwindow; donotbypass finalbinder guards",
     "handle": "Owner reports when a process starts; checkowner before duplicate work"
+  },
+  "documentationConsistency": {
+    "readme": "README.md",
+    "deployment": "deploy/README.md",
+    "security": "docs/security/VULNERABILITY-MANAGEMENT.md",
+    "scope": "Currentselection1.7/PRD1.14/d98/d1e4/1cab aligned; earlier securityscan currentphrases are historical. No newscan orcodechange."
+  },
+  "nextSecurityReview": {
+    "owner": "/root/security",
+    "state": "Currentdocument reconciliation done; fresh applicability check beforefreeze or upon dependency/base/advisoryDB change",
+    "source": "docs/security/VULNERABILITY-MANAGEMENT.md",
+    "scope": "Keep existing4matches2CVE unresolved unless actualfixedversion/patch/retest evidence exists; broker/registryscan age separate"
   }
 }
