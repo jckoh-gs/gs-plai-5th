@@ -1,0 +1,177 @@
+{
+  "result": "OBSERVED_INCIDENT_RECOVERED_CAUSE_UNKNOWN",
+  "capturedAt": "2026-09-21T18:56:29.403845+00:00",
+  "rangeStart": "2026-09-21T18:40:00Z",
+  "rangeEndExclusive": "2026-09-21T18:46:00Z",
+  "investigation": "Read-only; no process, counter, deployment, database or observer mutation",
+  "podUID": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+  "containers": [
+    {
+      "name": "app",
+      "ready": true,
+      "restartCount": 0,
+      "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876"
+    },
+    {
+      "name": "mqtt",
+      "ready": true,
+      "restartCount": 0,
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  ],
+  "findings": {
+    "primaryApiFailureAt": "2026-09-21T18:42:23.566Z",
+    "primaryApiRecoveredAt": "2026-09-21T18:42:38.225Z",
+    "supervisorOutageAt": "2026-09-21T18:43:21.612Z",
+    "supervisorFailure": "config phase timeout after5774ms",
+    "supervisorReconnectedAt": "2026-09-21T18:43:24.433Z",
+    "subscribersDisconnectedAt": "2026-09-21T18:43:21.616Z",
+    "subscribersReconnectedAt": "2026-09-21T18:43:23.850Z",
+    "observerCleanSession": true,
+    "observerRequestedQos": 1,
+    "publisherQos": 1,
+    "newGapRTUs": 4,
+    "unobservedSimulationSamples": 144,
+    "rootCause": "unknown",
+    "claimBoundary": "4 RTU receive histories omit 144 simulation sample positions across this window. This is received-observer coverage, not proof of generation loss or a sampler defect. Persisted generation/ACK query failed, so no persisted no-loss claim. Clean-session reconnect does not request durable offline subscription delivery. No causal attribution to downloads or general network outage."
+  },
+  "counterBaseline": {
+    "primaryCheckedAt": "2026-09-21T18:54:53.804Z",
+    "primaryMessages": 514,
+    "primaryApiErrors": 1,
+    "primaryConnectionErrors": 0,
+    "primaryDisconnections": 1,
+    "auditCheckedAt": "2026-09-21T18:54:45.978Z",
+    "auditReceived": 514,
+    "auditConnectionErrors": 1,
+    "auditInvalidMessages": 0,
+    "auditDuplicateMessages": 0
+  },
+  "rtus": [
+    {
+      "rtuId": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+      "beforeSequence": 1213,
+      "afterSequence": 1216,
+      "receivedMessagesDelta": 2,
+      "simulationSecondsDelta": 82,
+      "receivedSamplesDelta": 60,
+      "unobservedSimulationSampleCount": 22,
+      "newSequenceForwardJumps": 1,
+      "newSampleDiscontinuities": 1,
+      "maxReceiptGapMs": 61924
+    },
+    {
+      "rtuId": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+      "beforeSequence": 1426,
+      "afterSequence": 1429,
+      "receivedMessagesDelta": 2,
+      "simulationSecondsDelta": 90,
+      "receivedSamplesDelta": 60,
+      "unobservedSimulationSampleCount": 30,
+      "newSequenceForwardJumps": 1,
+      "newSampleDiscontinuities": 1,
+      "maxReceiptGapMs": 65474
+    },
+    {
+      "rtuId": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+      "beforeSequence": 1601,
+      "afterSequence": 1606,
+      "receivedMessagesDelta": 3,
+      "simulationSecondsDelta": 92,
+      "receivedSamplesDelta": 60,
+      "unobservedSimulationSampleCount": 32,
+      "newSequenceForwardJumps": 1,
+      "newSampleDiscontinuities": 1,
+      "maxReceiptGapMs": 66115
+    },
+    {
+      "rtuId": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+      "beforeSequence": 620,
+      "afterSequence": 621,
+      "receivedMessagesDelta": 1,
+      "simulationSecondsDelta": 60,
+      "receivedSamplesDelta": 60,
+      "unobservedSimulationSampleCount": 0,
+      "newSequenceForwardJumps": 0,
+      "newSampleDiscontinuities": 0,
+      "maxReceiptGapMs": 66469
+    },
+    {
+      "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "beforeSequence": 643,
+      "afterSequence": 645,
+      "receivedMessagesDelta": 1,
+      "simulationSecondsDelta": 120,
+      "receivedSamplesDelta": 60,
+      "unobservedSimulationSampleCount": 60,
+      "newSequenceForwardJumps": 1,
+      "newSampleDiscontinuities": 1,
+      "maxReceiptGapMs": 113013
+    }
+  ],
+  "podEventTimestamps": [
+    {
+      "reason": "Scheduled",
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "count": null
+    },
+    {
+      "reason": "Pulled",
+      "firstTimestamp": "2026-09-21T17:59:14Z",
+      "lastTimestamp": "2026-09-21T17:59:14Z",
+      "count": 1
+    },
+    {
+      "reason": "Created",
+      "firstTimestamp": "2026-09-21T17:59:14Z",
+      "lastTimestamp": "2026-09-21T17:59:14Z",
+      "count": 1
+    },
+    {
+      "reason": "Started",
+      "firstTimestamp": "2026-09-21T17:59:14Z",
+      "lastTimestamp": "2026-09-21T17:59:14Z",
+      "count": 1
+    },
+    {
+      "reason": "Pulled",
+      "firstTimestamp": "2026-09-21T17:59:15Z",
+      "lastTimestamp": "2026-09-21T17:59:15Z",
+      "count": 1
+    },
+    {
+      "reason": "Created",
+      "firstTimestamp": "2026-09-21T17:59:15Z",
+      "lastTimestamp": "2026-09-21T17:59:15Z",
+      "count": 1
+    },
+    {
+      "reason": "Started",
+      "firstTimestamp": "2026-09-21T17:59:15Z",
+      "lastTimestamp": "2026-09-21T17:59:15Z",
+      "count": 1
+    },
+    {
+      "reason": "Pulled",
+      "firstTimestamp": "2026-09-21T17:59:15Z",
+      "lastTimestamp": "2026-09-21T17:59:15Z",
+      "count": 1
+    },
+    {
+      "reason": "Created",
+      "firstTimestamp": "2026-09-21T17:59:16Z",
+      "lastTimestamp": "2026-09-21T17:59:16Z",
+      "count": 1
+    },
+    {
+      "reason": "Started",
+      "firstTimestamp": "2026-09-21T17:59:16Z",
+      "lastTimestamp": "2026-09-21T17:59:16Z",
+      "count": 1
+    }
+  ],
+  "queryFailure": "persisted-query-failure.json",
+  "sourceScope": "Auditor/primary startup source snapshots; current supervisor source inspected; deployed store/transport from exact40b9ed8 commit; no process-memory byte attestation",
+  "limits": "No packet capture, exact lost payload bodies, persisted outbox proof or incident-time remote Ready sampling. Current samePod Ready/restarts0 is recovery evidence, not continuous availability proof."
+}

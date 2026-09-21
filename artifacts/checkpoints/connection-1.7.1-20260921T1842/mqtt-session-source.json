@@ -1,0 +1,19 @@
+{
+  "version": "5.16.0",
+  "sourceSha256": "95361b3db351704f33b4ab4a6dfd23bfb323e93c9e26e63dd8c3fc8f5fc0cdbe",
+  "defaults": [
+    {
+      "line": 66,
+      "text": "    protocolVersion: 4,"
+    },
+    {
+      "line": 69,
+      "text": "    clean: true,"
+    },
+    {
+      "line": 70,
+      "text": "    resubscribe: true,"
+    }
+  ],
+  "subscribers": "Both subscribe QoS1 on connect; neither requests clean:false; default clean:true applies."
+}

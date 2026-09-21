@@ -1,0 +1,26 @@
+{
+  "readOnly": true,
+  "attempts": 2,
+  "queryExit": 1,
+  "errorCode": "ERR_SQLITE_ERROR",
+  "sqliteExtendedCode": 6410,
+  "message": "disk I/O error",
+  "remoteMutations": false,
+  "persistedGenerationOrACKNotEstablished": true,
+  "argv": [
+    "kubectl",
+    "--context",
+    "charles-k3s",
+    "-n",
+    "gs-plai-5h",
+    "exec",
+    "grid-69d8766f7-zmfq8",
+    "-c",
+    "app",
+    "--",
+    "node",
+    "-e",
+    "<exact source/query-outbox.cjs contents>"
+  ],
+  "stderrScope": "Only stable sanitized error fields retained; raw stderr was not saved. No credentials in query or argv. Both attempts used identical readOnly:true source; no option change or further retry."
+}

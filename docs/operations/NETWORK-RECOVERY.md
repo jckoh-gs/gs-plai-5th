@@ -78,3 +78,9 @@ ISSUE027에서 보조 관측과 supervisor의 중복 메타데이터가 종료�
 기존 1.7 관찰은 정상 종료와 함께 [별도 보존](../../artifacts/checkpoints/soak-1.7.0/summary.json)했다. 새 1.7.1 관찰의 프로세스·시작 identity·세션·소스·현재 원장 연결은 [활성화 증거](../../artifacts/checkpoints/observer-1.7.1-activation/activation.json)에, 실제 이미지/인증 API 및 중복 원장 정합성 확인은 [읽기 전용 재개 검사](../../artifacts/checkpoints/observer-1.7.1-activation/resume-status.json)에 저장했다. 이 파일들은 해당 시각의 증거다. 재연결할 때에는 항상 최신 run/resume과 실제 프로세스를 다시 확인한다. 완료된 명령을 반복하거나 이전 관찰기의 카운터를 새 관찰기에 합쳐 무중단 관측으로 표현하지 않는다.
 
 최신 사용자 요청에 따라 [1.7.1 재개 점검](../../artifacts/checkpoints/network-resume-1.7.1/summary.json)을 추가했다. 읽기 전용 재개 명령 종료0, 실제 원격 Git·Ready 이미지·인증 API, 현재 세 프로세스의 PID/시작시각/명령, 양쪽 관측 세션과 기존 heartbeat grid의 ACTIVE/10분 설정을 대조했다. [독립 보안 검토](../security/NETWORK-RESUME-20260922-REVIEW.md)의 격리32시험도 통과했다. 원래 실행 시각·동결·마감은 변경하지 않았다. 실제 전체 네트워크를 차단하거나 감독기·관측기를 재시작하지 않았으며, 저장된 heartbeat 설정이 Codex/호스트 종료 중의 실행을 보장하지는 않는다.
+
+## 1.7.1 관찰 중 실제 자동 재연결
+
+18:42:23Z API 조회 실패는 다음18:42:38Z 관측에서 회복됐다. 이후18:43:21Z 감독기의 config 조회가 시간 초과됐고, 소유 터널을 다시 열어18:43:24Z 전체 연결 검사를 통과했다. 두 구독자는18:43:21.616Z 단절 뒤23.850Z 재연결했다. 동일 Pod·이미지·재시작0/0은 사건 후 확인했으며 전 구간 무중단을 뜻하지 않는다. [사건 원문과 진단](../../artifacts/checkpoints/connection-1.7.1-20260921T1842/summary.json), ISSUE030에 관측 오류와 원인 미확정을 보존했다.
+
+4 RTU의 수신 관측에는144개 시뮬레이션 표본 위치가 비었다. [제한된 읽기 전용 DB 대조](../../artifacts/checkpoints/connection-1.7.1-20260921T1842-persisted-proof/summary.json)는 그 위치가 동일 실행의 연속된 outbox 데이터에 보존됐고 broker ACK가 기록됐음을 확인했다. 모든 구독자나 외부 VPP의 영속 수신을 증명하지 않는다. 이전 정렬 조회의6410 실패는 그대로 보존하고, 새 조회는 정렬 없이 좁은 sequence 범위19행만 읽었다.6410은 SQLite의 임시 디렉터리 탐색 오류이며 정렬과의 관계는 추론이다. [SQLite 공식 코드 설명](https://www.sqlite.org/rescode.html#ioerr_gettemppath). 관측기·감독기·원격 배포를 재시작하거나 누적 카운터를 초기화하지 않았다.

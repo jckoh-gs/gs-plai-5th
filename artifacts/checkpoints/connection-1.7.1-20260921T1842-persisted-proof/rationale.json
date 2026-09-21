@@ -1,0 +1,8 @@
+{
+  "priorEvidenceUnchanged": true,
+  "newEvidence": "SQLite extended6410 is SQLITE_IOERR_GETTEMPPATH; cannot find temporary directory",
+  "officialSource": "https://www.sqlite.org/rescode.html#ioerr_gettemppath",
+  "inference": "Prior ORDER BY may have required temporary sorting on readOnlyRootFilesystem. Not proven as the connection-incident cause.",
+  "queryChange": "One readOnly query per five small plant/sequence ranges; no ORDER BY, PRAGMA, writes or configuration changes; sort only in JS; overall max32 rows",
+  "attemptLimit": 1
+}

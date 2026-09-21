@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-09-21T18:59:11.512674+00:00",
+  "issue": "ISSUE030",
+  "result": "BOUNDED_PERSISTED_EVIDENCE_VERIFIED",
+  "sourceDirectory": "artifacts/checkpoints/connection-1.7.1-20260921T1842-persisted-proof",
+  "hashesVerified": 5,
+  "summarySha256": "c95f8e06ea8fae4d18500b2e1aee9622b220ee07bc8fcb925c5f6b2043cabac9",
+  "independentChecks": {
+    "rows": 19,
+    "maximum": 32,
+    "sameRunFiveRtus": true,
+    "continuousQueriedPositionsFiveRtus": true,
+    "allRowsAcked": true,
+    "unobservedPositionsMatchPersistedSequences": 144
+  },
+  "remoteQueryExecutedByReviewer": false,
+  "actualQueryHandle": 45718,
+  "actualQueryExit": 0,
+  "allSubscriberDeliveryProven": false,
+  "externalVppDeliveryProven": false,
+  "networkRootCause": "unknown",
+  "officialCodeReference": "https://www.sqlite.org/rescode.html#ioerr_gettemppath",
+  "priorEvidenceUnchanged": true
+}

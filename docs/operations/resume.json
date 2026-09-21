@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T18:33:26.191182+00:00",
+  "updatedAt": "2026-09-21T18:58:55.938195+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -451,14 +451,14 @@
     "scope": "Private ownership journal, interrupted-demo settings recovery, same-video reviewed-facts binder and portable deck packaging; no runtime change",
     "originalWindowUnchanged": true,
     "contentPreparationReview": "docs/operations/MEDIA-1.7-COMPATIBILITY.md",
-    "contentPreparationScope": "Unreviewed1.7/PRD1.14 14slide facts template; actual main66/currentrestore80/backward80events outside8scenes; listnormal shown in1.7rehearsal andcontrolledfailures separate; originalwindow finalnewvideo/PPT pending",
+    "contentPreparationScope": "Historical1.7 rehearsal preserved; current unreviewed facts template1.7.1/PRD1.15 and narration revision1. New final video/PPT in original window remain required.",
     "rehearsalEvidence": "artifacts/checkpoints/media-candidate17/README.md",
     "rehearsalIndependentReview": "docs/product/REVIEW-036.md",
     "currentFactsTemplate": {
       "path": "scripts/media/facts.template.json",
       "version": "1.7.1",
       "proof": "artifacts/checkpoints/media-candidate171-facts/verification.json",
-      "scope": "Unreviewedpreparation; exact10manifestEvidence checked; no finalbinder/rehearsal/media run."
+      "scope": "Unreviewed preparation only; selected1.7.1/PRD1.15, no final binder/media run."
     }
   },
   "mediaRecovery": {
@@ -469,7 +469,24 @@
     "lastLocalRehearsal": "artifacts/checkpoints/media-lifecycle-local-round1/result.json",
     "localFixtureOnly": true
   },
-  "currentObservationIncidents": [],
+  "currentObservationIncidents": [
+    {
+      "runtime": "1.7.1",
+      "issue": "ISSUE030",
+      "state": "RECOVERED_CAUSE_UNKNOWN",
+      "evidence": "artifacts/checkpoints/connection-1.7.1-20260921T1842/summary.json",
+      "independentReview": "docs/issues/evidence/issue030-observation-review.json",
+      "primaryApiErrorAt": "2026-09-21T18:42:23.566Z",
+      "supervisorReconnectAt": "2026-09-21T18:43:24.433Z",
+      "observerUnreceivedSimulationSamples": 144,
+      "observerAffectedRtus": 4,
+      "rootCause": "unknown",
+      "scope": "Observer receive gaps retained. Separate narrowed read-only query exit0 found the 144 inferred missing simulation positions persisted with broker ACK records and continuous same-run windows. No every-subscriber receipt or permanent external VPP receipt claim; connection root cause unknown. Prior6410 failed diagnostics retained.",
+      "persistedFollowupEvidence": "artifacts/checkpoints/connection-1.7.1-20260921T1842-persisted-proof/summary.json",
+      "persistedGeneratedAndBrokerAckedPositions": 144,
+      "persistedIndependentReview": "docs/issues/evidence/issue030-persisted-review.json"
+    }
+  ],
   "nextOperationalReview": "Maintain current1.7 observer epochs and authoritative ledger. No firsthourclaim before17:45:54.307Z; inspect fresh counters/actualReady/disk beforeoriginalfreeze. Continue finalmedia/deck preparation and finalsecurity/issues review.",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.7.1",
@@ -1367,5 +1384,34 @@
     },
     "finalWindowRecheckRequired": true,
     "scope": "Selected1.7.1 exact software Git inventory and remote refs observation with successful execution/hash receipt. Final window and media/role/end gates remain pending."
+  },
+  "audioReviewPreparation": {
+    "state": "PREPARATION_VERIFIED; final video and final audio review remain pending",
+    "narrationRevision": 1,
+    "narrationEvidence": "artifacts/checkpoints/audio-narration-adopted-r1/review.json",
+    "candidateComparison": "artifacts/checkpoints/audio-narration-clarity/review.md",
+    "technicalAnalysis": "artifacts/checkpoints/audio-review-preparation/analysis.json",
+    "localAsrToolEvidence": "artifacts/checkpoints/audio-asr-preparation/summary.json",
+    "reusableAsrHelper": "scripts/media/transcribe-audio.py",
+    "helperActualExecution": "artifacts/checkpoints/audio-final-helper-preparation/summary.json",
+    "independentBoundaryTests": "docs/issues/evidence/audio-transcription-review.json",
+    "securityReview": "docs/security/AUDIO-ASR-TOOLS-REVIEW.md",
+    "productReview": "docs/product/REVIEW-050.md",
+    "inputPreparation": "artifacts/checkpoints/final-input-1.7.1-preparation/summary.json",
+    "directListening": false,
+    "naturalPronunciationVerified": false,
+    "remainingRecognitionDifferences": [
+      "난수/난소",
+      "배속/개속",
+      "서버/써본"
+    ],
+    "scope": "ASR text comparison only; source of mismatches is unknown. Adopted revision1 preserves JSON format/max20/new runId/outbox and receipt-not-completion semantics. No product runtime change; final original window unchanged.",
+    "sourceSha256": {
+      "scripts/media/scene-plan.cjs": "274e72fba29fa8b34c6c7d2c4e4f939d5b112ef4b5e04b660afd37cc367d1231",
+      "scripts/media/scenes-template.json": "096e8ed40db8c83d9c37045449d47962e4ded10e0864d907bfe183c78c16d74e",
+      "scripts/media/transcribe-audio.py": "7077f0801685ebee5ef78f34ea17a57971267fb7716e8df1dda0d61cef26019a",
+      "scripts/media/final-input-template.json": "2cdcaaa09cc59ce104a9587f23e6e95d0c1cc2ddd3e4809542d470cede58d8e9"
+    },
+    "checkedAt": "2026-09-21T18:54:56.474955+00:00"
   }
 }

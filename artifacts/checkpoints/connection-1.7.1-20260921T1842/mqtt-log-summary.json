@@ -1,0 +1,9 @@
+{
+  "queryExit": 0,
+  "rangeStart": "18:40Z",
+  "rangeEndExclusive": "18:46Z",
+  "matchingLineCount": 0,
+  "returnedLines": 300,
+  "matchingLinesSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+  "contentScope": "No raw log payload retained; no root cause assertion"
+}

@@ -8,6 +8,8 @@
 
 [18:27Z 이후 추가 점검](../../artifacts/checkpoints/network-resume-1.7.1/summary.json)은 현재 실제 세 프로세스·Ready/API·원격 Git·기존 heartbeat 설정을 확인했다. 독립 격리32시험을 포함하며 실제 전체 네트워크 차단 시험은 아니다. 재연결 당시의 상태를 새로 확인해야 한다.
 
+그 뒤 ISSUE030에서18:42Z API 오류1회와18:43Z 소유 터널 자동 재연결을 관찰했다. 동일 supervisor/observer 프로세스를 유지하고 오류·수신 공백 카운터를 보존했다.4 RTU에서 관측하지 못한144표본 위치는 별도 읽기 조회로 원격 생성·outbox 보존·broker ACK를 대조했다. 모든 구독자의 수신이나 연결 장애 근본원인은 확인되지 않았다. [원문](../../artifacts/checkpoints/connection-1.7.1-20260921T1842/summary.json)과 [보존 대조](../../artifacts/checkpoints/connection-1.7.1-20260921T1842-persisted-proof/summary.json)를 첫1시간 및 최종 관찰 해석에 함께 사용한다.
+
 현재 root 소유 상주 프로세스는 다음과 같다. PID와 시작 identity를 함께 확인한 뒤 유지한다.
 
 - supervisor48590 / PID56137 / `Tue Sep 22 02:52:15 2026`: 단일3104/18884 연결 감독기.
@@ -35,5 +37,7 @@
 6. **22:07:33.079009Z (한국시간07:07:33)**까지 인도 파일·소스/샘플/시험·원격Git·정상배포와 완료/미완료를 확인한다. [DELIVERY-PLAN](DELIVERY-PLAN.md)에 따라 독립 검수와 해시를 기록한 뒤 이 실행의 heartbeat를 비활성화한다. 마감이나 목표 완료를 거짓으로 연장하지 않는다.
 
 소프트웨어 인도 도구와 현재1.7.1의 실제 Git 준비 관측을 [software-delivery-1.7.1](../../artifacts/checkpoints/software-delivery-1.7.1/summary.json)에 보존했다. source188/runtime28/추가README·환경·Compose·broker4파일, 당시main194파일과 원격 태그 관계를 확인했다. ISSUE029의 빈시험 목록/마감후PASS파일 오인 문제를 수정했고 독립18fixture가 통과했다. 최종창에서는 새 선택 manifest를 포함한 실제 원격 commit/tag로 재검사하고, 파일 단독이 아니라 원래 성공 종료·stdout 영수증·정확SHA를 함께 확인한다. 현재 runtime40b/image234·불변1.7.1 manifest·기존 태그는 변경하지 않았다.
+
+음성 준비는 [AUDIO-REVIEW-PREPARATION](AUDIO-REVIEW-PREPARATION.md)을 따른다. 한국어 원고 revision1의 쉬운 표현7개를 REVIEW050 이후 채택했고 별도 실제 음성·ASR로 대조했다. 제이슨은 JSON으로 인식되며 난수/배속/서버 일부 인식 차이는 남아 있다. 직접 청취·자연스러운 발음 적합 판정은 하지 않았다. 고정 도구·모델의 재사용 전사기는 기존 영상에서 실제 종료0/PCM246.78초/33구간, 독립 경계시험14개를 확인했다. 최종 새 MP4는 새 private 출력에서 다시 전사하고 원고와 대조해야 한다. 기존 초기 전사기의 고정 영상 길이는 재사용하지 않는다. 모델·CLI·PCM은 private에 유지하며 보안 잔여는 제품 이미지 취약점과 별도로 관리한다.
 
 기존 `.idea`, 미디어 리허설, `artifacts/releases/current.json`, 과거 partial과 검증 백업/PVC를 임의 삭제하지 않는다. private SQLite/토큰/Secret 값은 Git·화면·공개 로그에 넣지 않는다. 무관한3101/PID20846,1883브로커를 보존한다. 실제 대기 동작과 미완료 원격 작업을 먼저 확인하고, 필요한 소유 작업만 조정한다.

@@ -1,0 +1,335 @@
+{
+  "apiVersion": "v1",
+  "items": [
+    {
+      "action": "Binding",
+      "apiVersion": "v1",
+      "eventTime": "2026-09-21T17:59:13.883936Z",
+      "firstTimestamp": null,
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "grid-69d8766f7-zmfq8",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003433",
+        "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc"
+      },
+      "kind": "Event",
+      "lastTimestamp": null,
+      "message": "Successfully assigned gs-plai-5h/grid-69d8766f7-zmfq8 to charleskoh-nucbox-g3",
+      "metadata": {
+        "creationTimestamp": "2026-09-21T17:59:13Z",
+        "name": "grid-69d8766f7-zmfq8.18d767d7e6630e84",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003437",
+        "uid": "a8cf001f-7c51-4557-a2d4-633877e94207"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "default-scheduler-charleskoh-NucBox-G3",
+      "source": {},
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-09-21T17:59:14Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.initContainers{migrate-mqtt-storage}",
+        "kind": "Pod",
+        "name": "grid-69d8766f7-zmfq8",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003435",
+        "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-09-21T17:59:14Z",
+      "message": "Container image \"127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c\" already present on machine",
+      "metadata": {
+        "creationTimestamp": "2026-09-21T17:59:14Z",
+        "name": "grid-69d8766f7-zmfq8.18d767d811628ac7",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003442",
+        "uid": "e8bccaac-daf7-45a4-b1ea-eb3a8d3e570d"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "charleskoh-nucbox-g3",
+      "source": {
+        "component": "kubelet",
+        "host": "charleskoh-nucbox-g3"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-09-21T17:59:14Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.initContainers{migrate-mqtt-storage}",
+        "kind": "Pod",
+        "name": "grid-69d8766f7-zmfq8",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003435",
+        "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-09-21T17:59:14Z",
+      "message": "Created container: migrate-mqtt-storage",
+      "metadata": {
+        "creationTimestamp": "2026-09-21T17:59:14Z",
+        "name": "grid-69d8766f7-zmfq8.18d767d8132d0a5e",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003443",
+        "uid": "50a42218-db7f-4b8d-af32-cc5ad4748a80"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "charleskoh-nucbox-g3",
+      "source": {
+        "component": "kubelet",
+        "host": "charleskoh-nucbox-g3"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-09-21T17:59:14Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.initContainers{migrate-mqtt-storage}",
+        "kind": "Pod",
+        "name": "grid-69d8766f7-zmfq8",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003435",
+        "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-09-21T17:59:14Z",
+      "message": "Started container migrate-mqtt-storage",
+      "metadata": {
+        "creationTimestamp": "2026-09-21T17:59:14Z",
+        "name": "grid-69d8766f7-zmfq8.18d767d81ead3c48",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003444",
+        "uid": "f07edd69-c0e1-4cfb-bc6c-f5e02aa94bf2"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "charleskoh-nucbox-g3",
+      "source": {
+        "component": "kubelet",
+        "host": "charleskoh-nucbox-g3"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-09-21T17:59:15Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{app}",
+        "kind": "Pod",
+        "name": "grid-69d8766f7-zmfq8",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003435",
+        "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-09-21T17:59:15Z",
+      "message": "Container image \"127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876\" already present on machine",
+      "metadata": {
+        "creationTimestamp": "2026-09-21T17:59:15Z",
+        "name": "grid-69d8766f7-zmfq8.18d767d85a063ab6",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003446",
+        "uid": "2b9d81fb-49e3-401b-a02a-558c8242a56a"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "charleskoh-nucbox-g3",
+      "source": {
+        "component": "kubelet",
+        "host": "charleskoh-nucbox-g3"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-09-21T17:59:15Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{app}",
+        "kind": "Pod",
+        "name": "grid-69d8766f7-zmfq8",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003435",
+        "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-09-21T17:59:15Z",
+      "message": "Created container: app",
+      "metadata": {
+        "creationTimestamp": "2026-09-21T17:59:15Z",
+        "name": "grid-69d8766f7-zmfq8.18d767d85dc54151",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003450",
+        "uid": "517cf459-c21d-4d22-97c2-b318694dfb37"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "charleskoh-nucbox-g3",
+      "source": {
+        "component": "kubelet",
+        "host": "charleskoh-nucbox-g3"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-09-21T17:59:15Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{app}",
+        "kind": "Pod",
+        "name": "grid-69d8766f7-zmfq8",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003435",
+        "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-09-21T17:59:15Z",
+      "message": "Started container app",
+      "metadata": {
+        "creationTimestamp": "2026-09-21T17:59:15Z",
+        "name": "grid-69d8766f7-zmfq8.18d767d862a2f972",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003451",
+        "uid": "2098d584-8b9b-4346-81d4-75b371fb1e9c"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "charleskoh-nucbox-g3",
+      "source": {
+        "component": "kubelet",
+        "host": "charleskoh-nucbox-g3"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-09-21T17:59:15Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{mqtt}",
+        "kind": "Pod",
+        "name": "grid-69d8766f7-zmfq8",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003435",
+        "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-09-21T17:59:15Z",
+      "message": "Container image \"127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c\" already present on machine",
+      "metadata": {
+        "creationTimestamp": "2026-09-21T17:59:15Z",
+        "name": "grid-69d8766f7-zmfq8.18d767d862ba2619",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003452",
+        "uid": "70e1db59-bd62-41cc-8f1f-fdf2b7f31eb7"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "charleskoh-nucbox-g3",
+      "source": {
+        "component": "kubelet",
+        "host": "charleskoh-nucbox-g3"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-09-21T17:59:16Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{mqtt}",
+        "kind": "Pod",
+        "name": "grid-69d8766f7-zmfq8",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003435",
+        "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-09-21T17:59:16Z",
+      "message": "Created container: mqtt",
+      "metadata": {
+        "creationTimestamp": "2026-09-21T17:59:16Z",
+        "name": "grid-69d8766f7-zmfq8.18d767d8653f5b30",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003453",
+        "uid": "508b39f5-197a-47fc-8cfa-f9f4ebadccb2"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "charleskoh-nucbox-g3",
+      "source": {
+        "component": "kubelet",
+        "host": "charleskoh-nucbox-g3"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-09-21T17:59:16Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{mqtt}",
+        "kind": "Pod",
+        "name": "grid-69d8766f7-zmfq8",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003435",
+        "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-09-21T17:59:16Z",
+      "message": "Started container mqtt",
+      "metadata": {
+        "creationTimestamp": "2026-09-21T17:59:16Z",
+        "name": "grid-69d8766f7-zmfq8.18d767d86948f7dd",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003454",
+        "uid": "b2b1e01f-0636-4e5b-a7d0-00e3ab504ac4"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "charleskoh-nucbox-g3",
+      "source": {
+        "component": "kubelet",
+        "host": "charleskoh-nucbox-g3"
+      },
+      "type": "Normal"
+    }
+  ],
+  "kind": "List",
+  "metadata": {
+    "resourceVersion": ""
+  }
+}

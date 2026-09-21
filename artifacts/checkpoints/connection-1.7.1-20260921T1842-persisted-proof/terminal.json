@@ -1,0 +1,21 @@
+{
+  "startedAt": "2026-09-21T18:57:43.221441+00:00",
+  "endedAt": "2026-09-21T18:57:44.622944+00:00",
+  "exitCode": 0,
+  "argv": [
+    "kubectl",
+    "--context",
+    "charles-k3s",
+    "-n",
+    "gs-plai-5h",
+    "exec",
+    "grid-69d8766f7-zmfq8",
+    "-c",
+    "app",
+    "--",
+    "node",
+    "-e",
+    "<query.cjs exact contents>"
+  ],
+  "remoteMutation": false
+}

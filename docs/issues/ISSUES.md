@@ -21,6 +21,8 @@
 
 - ISSUE029: **RESOLVED_TOOLING**. 인도 검증기의 전체tests 부재·마감 후 PASS파일 잔존 경계를 실제 격리 fixture로 재현하고 수정 후18시험 통과. 실제 원격 Git 인도 증명과 별개다.
 
+- ISSUE030: **RECOVERED_CAUSE_UNKNOWN — 1.7.1 관측 연결 사건**. API 일시 실패와 이후 forward 자동 재생성·구독 재연결을 기록했다. 4/5 RTU의 미수신 표본 위치144개는 후속 제한 조회에서 저장된 생성 표본·broker ACK와 대응했다. 모든 구독자 수신 증명은 아니며 별도 readonly DB 진단6410 실패 이력과 연결 원인 미확정 상태를 유지한다.
+
 번호가 없는 IDEA011 명령 목록 실패 가시성 기록도 현재 기능 인수 완료로 정리한다. 로컬8검증군의 합성503·header/body timeout·전환/해제 시험과 실제 main/현재1.7 복원 읽기, REVIEW037/038를 근거로 한다. 이전1.6에 신규 안내가 있다고 주장하지 않는다.
 
 계속 남는 경계: 오디오의 실제 청취 미검증, 최종창 신규 미디어·동일 영상 PPT 검수, 실제 KMA/AWS/운영 VPP 외부 연동 미검증, 단일노드 k3s의 노드 HA 미검증은 해결로 바꾸지 않는다. SEC006의 현재 이미지 OS4매치/2CVE와 인증 사용자 자원 소모 잔여 위험은 보안 원장에 계속 연결한다. npm audit0/전체시험 PASS가 이를 해소하지 않는다. 원래 freeze21:37:33Z/deadline22:07:33Z를 유지하며 역할·전체목표는 아직 종료하지 않는다.
@@ -650,3 +652,25 @@ P2 운영 증거 정확성, 상태 RESOLVED_TOOLING. 메인이 새 scripts/verif
 fixture는 실제 임시 Git repository/annotated tags/local bare refs이며 승인 origin URL을 그대로 두고 process-scope GIT_SSH_COMMAND가 로컬 upload-pack만 호출한다. 실제 운영 origin 네트워크·원격 변경은 없고 임시 저장소는 finally에서 제거했다. helper 수정은 메인, 독립 tests/실패·최종 근거는 issues 소유였다. 실제 승인 origin 인도 증명은 메인 후속 별도 게이트이며18fixture PASS가 이를 대신하지 않는다.
 
 ISSUE024 최초 원인 미확정·자원 위험, 보안 원장의 잔여 CVE, 오디오청취/외부연동/HA 및 최종 미디어·원래 시간·전체목표 미완료는 유지한다.
+
+
+## ISSUE-030 — 1.7.1 관측 연결 일시 실패와 구독 표본 공백
+
+P2 관측 연속성. 상태 RECOVERED_CAUSE_UNKNOWN/관측 회복 확인·최초 원인 미확정. 메인 최초 발견 후 deployment가 읽기 진단, issues가 보존 근거를 독립 대조했다. 근거는 `artifacts/checkpoints/connection-1.7.1-20260921T1842/summary.json`, 원문 observations/supervisor events/Pod/process/source 및 sha256.json이다. 독립 검토는 저장된21파일 해시를 대조했으며 추가 원격·DB 조회나 카운터 초기화·프로세스 재시작을 하지 않았다.
+
+primary는18:42:23.566Z apiReady=false/apiErrors1을 기록한 후18:42:38.225Z true로 돌아왔다. 이후 supervisor는18:43:21.612Z config 단계5774ms timeout을 기록하고 자신이 소유한 forward를 자동 재생성했다. 양 구독자는18:43:21.616Z 끊김→18:43:23.850Z 재연결, supervisor는18:43:24.433Z verified ready다. 앞선 API 실패와 후속 config timeout은 각각 관찰한 사실이며 하나의 확인된 원인으로 합치지 않는다. 동일 supervisor PID56137, primary57533, audit57534 및 시작 identity가 유지됐고 사건 후 보존 Pod는 UID75f4bc7a/image234ec56/app·mqtt Ready/재시작0·0이다. 이는 회복 시점 증거이며 사건 내내 원격이 정상이라는 증명은 아니다.
+
+18:54 보존 snapshot에서 primary apiErrors1/connectionErrors0/disconnections1, audit connectionErrors1/invalid0/duplicate0, 양쪽 수신514를 유지했다. 감사 관측에서는 c81f4573·ed0ac897·adb56898·f49684af의 수신 이력에 각각22·30·32·60개의 simulation sample 위치가 빠져 합계144개이며 각 RTU sequence jump/sample discontinuity가1씩 증가했다. 90528620에는 새 공백이0이다. 모두5 RTU 수신이 재개됐지만 이는 과거 미수신 구간을 채웠다는 뜻이 아니다. sequence는 명령 이벤트와 공유되므로 sequence 건너뜀만으로 유실량을 계산하지 않았다.
+
+두 관측 구독자는 QoS1이나 clean:true 기본 세션이며 재연결 뒤 durable offline subscription 전달을 요청하지 않는다. 따라서 구독 이력의 표본 미수신과 원격 sampler 생성·저장 손실은 구분해야 한다. 해당 원격 생성/outbox/PUBACK 근거를 얻으려던 동일 readonly WAL SQLite query2회가 ERR_SQLITE_ERROR/extended6410/disk I/O error로 실패했다. query 소스/인수와 정제된 오류 근거는 별도 보존했고 추가 재시도·옵션 변경·쓰기 없이 중단했다. 이 진단 실패만으로 DB 손상·디스크 용량 고갈·원래 네트워크 원인을 확정하지 않으며 원격 무손실도 주장하지 않는다.
+
+제한된18:40~18:46 로그 조회의 관련 행 부재, 현재 Pod 상태, 연결 자동 회복만으로 최초 원인을 결정할 수 없다. 패킷 캡처·누락 payload 본문·사건시점 원격 Ready 연속 표본은 없다. 다운로드/호스트절전/일반 네트워크 장애 등의 원인이나 신규 기능 패치를 추정하지 않는다. 이 사건은 관측 중단 없는 soak로 표현할 수 없으며 최종 인수에는 누적 오류·미수신 범위를 그대로 남긴다. ISSUE024의 별도 backup 사건 원인 미확정과 혼합하지 않는다. 원래 freeze/deadline, 런타임·원장·observer 및 최종 미디어 미완료 상태는 변경하지 않았다. 독립 대조 receipt: `evidence/issue030-observation-review.json`.
+
+
+### ISSUE030 후속 — 제한된 저장 표본·broker ACK 대조
+
+메인이 승인한 새1회 좁은 readonly 조회(handle45718/terminal0)의 후속 근거 `artifacts/checkpoints/connection-1.7.1-20260921T1842-persisted-proof/`를 독립 읽기 검토했다. SQL ORDER BY/PRAGMA 없이 다섯 RTU의 제한된 sequence 범위만 읽어19행/최대32행을 얻었다. 원래 실패 bundle 및 issue030-observation-review.json은 불변으로 보존했으며 독립 검토자가 추가 조회를 실행하지 않았다.
+
+저장된 rows를 독립 계산하여 각 RTU의 같은runId, 조회 범위 내 연속 simulation 위치 및 모든 조회행 ACK 기록을 확인했다. 관측 미수신 위치144개는 c81f4573 seq1214의22개, ed0ac897 seq1427의30개, adb56898 seq1602·1603의32개, f49684af seq644의60개와 대응한다. 다섯 번째90528620은 관측 공백0이다. 이 후속 근거는 해당 범위의 생성 표본 보존과 broker PUBACK을 확인하지만 모든 구독자 수신이나 영구 외부 VPP 도달을 증명하지 않는다. 원문 수신 payload 전체가 보존된 것은 아니므로 미수신 위치의 추정은 연속 observer snapshot에 근거한다. 최초 관측 공백과 누적 오류는 없어지지 않는다.
+
+[SQLite 공식 extended result code](https://www.sqlite.org/rescode.html#ioerr_gettemppath)에 따라6410은 SQLITE_IOERR_GETTEMPPATH, 임시 파일을 둘 적합한 디렉터리 경로를 결정하지 못한 코드다. 앞선 ORDER BY 정렬/임시 경로와의 구체적 인과관계는 여전히 추론이며 네트워크 사건 원인으로 확정하지 않는다. 상태 RECOVERED_CAUSE_UNKNOWN은 유지한다. 새 독립 receipt는 evidence/issue030-persisted-review.json이며 기존 실패·부분snapshot·최종 인수 제한을 변경하지 않았다.

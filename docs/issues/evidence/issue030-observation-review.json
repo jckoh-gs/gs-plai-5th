@@ -1,0 +1,17 @@
+{
+  "reviewedAt": "2026-09-21T18:57:15.368681+00:00",
+  "issue": "ISSUE030",
+  "status": "RECOVERED_CAUSE_UNKNOWN",
+  "sourceDirectory": "artifacts/checkpoints/connection-1.7.1-20260921T1842",
+  "hashesVerified": 21,
+  "summarySha256": "fd224b62bb5956424f108cf94dee87639257e99009b091f303bb1cbc40c1c4fb",
+  "hashInventorySha256": "ee58be4243a93de46f37dbda018fe66dddc2459c3cd16c4f3da897ed5310e2ca",
+  "independentScope": "Saved local evidence inspection and hash verification only; no additional remote/DB query or mutation",
+  "newIndependentRuntimeTest": false,
+  "receivedHistoryUnobservedPositions": 144,
+  "affectedRtus": 4,
+  "generationLossEstablished": false,
+  "persistedNoLossEstablished": false,
+  "rootCause": "unknown",
+  "goalCompletionClaim": false
+}
