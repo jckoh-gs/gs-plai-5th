@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "verifiedAt": "2026-09-21T14:40:15.459994+00:00",
+  "backupMetadata": "deploy/verification/pre-1.5.0-backup.json",
+  "sourceCommit": "fdd0491a5c08901962f46ac845f8582921150d45",
+  "appImage": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4",
+  "remotePath": "/data/stable-fdd0491-20260921T143859710Z.sqlite",
+  "localPath": "artifacts/private/backups/stable-fdd0491-20260921T143859710Z.sqlite",
+  "bytes": 690266112,
+  "sha256": "5d64e6b8730d2ad88d37eeff40af99ccc560e134edbf97398bb0723bb12fc853",
+  "integrity": "ok",
+  "localMode": "0600",
+  "transferIdentity": {
+    "name": "grid-5c4cb58d7b-mrghv",
+    "uid": "f45d1e93-03e8-4f0a-a7af-7f4925b44190",
+    "image": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4",
+    "imageID": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4"
+  },
+  "scope": "Online preupgradebackup andverifiedtransfer; not a new restore proof; no rollout or observerstop",
+  "terminalHandle": 79669,
+  "terminalExitCode": 0
+}

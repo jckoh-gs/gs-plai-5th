@@ -48,3 +48,6 @@
 OPS06/AT-RESUME01: 네트워크복구후기존작업재개,영속ledger/실제identity대조/유한backoff/명령중복방지/10분기존heartbeat.시작·동결·마감및최종미디어일정유지.새제품기능버전추가없음.읽기전용시험과supervisor통제단절시험판정을분리.
 
 OPS06후속검증: network-recovery8/8 및실제소유forward ready증거연결. 기능범위통과,마감heartbeat정리는미완료. 전체목표완료주장없음.
+
+
+1.12 문서 정합성 보정 (REVIEW026): OPS03/05 제목의 오래된 “현재1.3” 표현을 선택된 stable checkpoint 기준으로 바꾸고, 후보1.5의 로컬·정확이미지 검증과 원격/복원 대기를 구분했다. 요구·계약·제품버전·원래 일정은 변경하지 않았다.

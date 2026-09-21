@@ -11,7 +11,7 @@
   "baselineCommit": "a59646b",
   "baselineDatabase": null,
   "documents": {
-    "docs/PRD-VPP-SCADA-RTU.md": "b8ed507346fb7c5c4915cfe5b016e49688487c47623ec33400925fcc660fe163",
+    "docs/PRD-VPP-SCADA-RTU.md": "559baffd5f8361b4c2a4948d5a8961c1888b7140eb7ed6bd0ab6807133745210",
     "docs/GOAL-VPP-AUTONOMOUS.md": "f391e5fab594f02cb4953c52055cf4b01f3817343144a9d89df8b64fe8fd11f2"
   },
   "roles": {
@@ -134,7 +134,8 @@
     "sourceCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
     "evidenceDirectory": "deploy/verification/candidate-6d165d1",
     "appImage": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
-    "imageReview": "deploy/verification/candidate-6d165d1/pre-deployment-review.json"
+    "imageReview": "deploy/verification/candidate-6d165d1/pre-deployment-review.json",
+    "preUpgradeBackup": "deploy/verification/pre-1.5.0-backup.json"
   },
   "previousStableCheckpoints": [
     {
@@ -226,7 +227,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T14:32:43.697629+00:00",
+  "updatedAt": "2026-09-21T14:41:24.461527+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",

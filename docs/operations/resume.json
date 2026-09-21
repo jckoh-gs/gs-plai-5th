@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T14:32:43.697629+00:00",
+  "updatedAt": "2026-09-21T14:41:24.461527+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": "stable-v1.4.0",
@@ -23,7 +23,7 @@
   ],
   "remainingInOrder": [
     "After14:49:42UTC preserve immutable stable1.4 firsthour observer prefix. Exact6d165d1/2fd3f21 candidate already verified/pushed; inspectactualstate then preupgradebackup and controlled main1.5 rollout with unchanged broker. Require mainUI/MQTT/outbox and exactsnapshot fresh1.5/backward1.4 restore beforepromotion; preserve1.4fallback. Originalfreeze/media/deadline unchanged.",
-    "Continue existing1.4observers until originalfreeze; preserve first-hour prefix after14:49:42UTC and periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
+    "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
   ],
@@ -390,7 +390,19 @@
     "restoreBrowserOwner": "/root/issues",
     "appImage": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
     "imageReview": "deploy/verification/candidate-6d165d1/pre-deployment-review.json",
-    "registryPushProof": "deploy/verification/candidate-6d165d1/registry-push-proof.json"
+    "registryPushProof": "deploy/verification/candidate-6d165d1/registry-push-proof.json",
+    "preUpgradeBackup": {
+      "owner": "/root/deployment",
+      "handle": 79669,
+      "metadata": "deploy/verification/pre-1.5.0-backup.json",
+      "log": "deploy/verification/candidate-6d165d1/pre-upgrade-backup.log",
+      "status": "Verified onlinebackup; ownerhandleterminal0; no mainupgrade",
+      "exitCode": 0,
+      "sha256": "5d64e6b8730d2ad88d37eeff40af99ccc560e134edbf97398bb0723bb12fc853",
+      "bytes": 690266112,
+      "verifiedAt": "2026-09-21T14:40:08.288Z",
+      "scope": "Additionalpreupgrade1.4 snapshot only; selected stable594944000B/be09 checkpoint unchanged; this new snapshot has not been restoreverified."
+    }
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
   "previousCandidateFixture": {
@@ -481,5 +493,37 @@
       3107
     ],
     "databasesPreserved": true
-  }
+  },
+  "firstHourCapturePreparation": {
+    "script": "artifacts/operations/capture-first-hour-1.4.py",
+    "sha256": "9e319aed4969d54f3572cbc05c111e3a40b00b9ccdf17c3acf9a87e81f4c3883",
+    "notBefore": "2026-09-21T14:49:42.893Z",
+    "expectedOutput": "artifacts/checkpoints/soak-1.4.0-first-hour",
+    "scope": "Prepared only; script refuses incompletehour/existingcheckpoint and preserves firstboundaryprefix. Confirm live handles/actualstate before execution."
+  },
+  "activeMediaRehearsal": {
+    "productVersion": "1.5.0",
+    "mode": "preparation only, notfinalmedia",
+    "handle": 70803,
+    "supervisorPid": 97447,
+    "supervisorIdentity": "Mon Sep 21 23:35:21 2026",
+    "workerPid": 97468,
+    "workerIdentity": "Mon Sep 21 23:35:22 2026",
+    "owner": "/root/media",
+    "baseUrl": "http://127.0.0.1:3109",
+    "mqttPort": 18883,
+    "mqttPrefix": "candidate15",
+    "config": "artifacts/media-preparation/full-candidate15-20260921/config.json",
+    "output": "artifacts/media-preparation/full-candidate15-20260921",
+    "privateJournal": "artifacts/private/media-candidate15-1790001321989.json",
+    "sourceEvidence": "artifacts/media-preparation/full-candidate15-20260921/source-hashes.json",
+    "policy": "The owning /root/media agent polls70803 in its own tool session. Root lookup returnedUnknown while verifiedsamePID/startidentity and ownerpollremainedlive. Do notrestart basedonrootlookup/fileage; ask ownerpoll or inspectactualprocessidentity. No independentrecovery until recorderterminal. Main1.4 untouched; originalwindowunchanged.",
+    "state": "Recorderterminal0; actual8scene video produced, normalsettingsrecoveryPASS; visual/contentreviewinprogress",
+    "exitCode": 0,
+    "verification": "artifacts/media-preparation/full-candidate15-20260921/verification.json",
+    "recovery": "artifacts/media-preparation/full-candidate15-20260921/source/demo-recovery.json",
+    "durationSeconds": 241.33,
+    "productionSeconds": 264.031
+  },
+  "fullGoalAudit": "docs/product/REVIEW-026.md"
 }
