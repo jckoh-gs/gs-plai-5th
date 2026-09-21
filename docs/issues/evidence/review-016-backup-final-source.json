@@ -1,0 +1,12 @@
+{
+  "reviewedAt": "2026-09-21T11:34:57.709169+00:00",
+  "transferChunkBytes": 1048576,
+  "files": {
+    "scripts/remote-backup.mjs": "29b37278cac24199101fdd35502ccf4dabb9a1418911791c82e8eba425a6faef",
+    "scripts/remote-backup-helpers.mjs": "499c3bb3caa37b22bb8653da7c140d56e981506c0281948195b84e8352e74390",
+    "tests/review-backup.test.js": "5a8161ef629bd877f0892ecff7c67569391de8216742bb287d078f120c6b97dd",
+    "tests/remote-backup.test.js": "f81c00491f62182faa2444f770ba09605a0efbb77b3c6b972e45cf58e1a5b164",
+    "docs/issues/evidence/review-016-backup-final.log": "4cc5742a4558bfc24c4ce23619d51f51ff7786778b0ed6e4be6ea448bbc1d123"
+  },
+  "scope": "isolated local fixtures; no live interruption or remote mutation"
+}

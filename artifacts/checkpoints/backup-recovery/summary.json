@@ -1,0 +1,82 @@
+{
+  "capturedAt": "2026-09-21T11:37:24.955Z",
+  "scope": "Operational backup/retransfer validation and separately observed local connection recovery; not a new runtime release or final media backup",
+  "snapshot": {
+    "path": "/data/stable-83d10ce-20260921T113246668Z.sqlite",
+    "bytes": 335704064,
+    "sha256": "7c0d8cec7bb8ab1be4a75681558469b05eaf72ffd71b904d820a15c4902c95ef",
+    "firstMetadata": "deploy/verification/backup-recovery-20260921T1133.json",
+    "secondMetadata": "deploy/verification/backup-recovery-1m-20260921T1135.json",
+    "firstElapsedMs": 66274,
+    "secondElapsedMs": 26960,
+    "secondTransferChunkBytes": 1048576,
+    "sameReadyPod": true,
+    "integrity": "ok"
+  },
+  "connectionObservation": {
+    "outageObservedAt": "2026-09-21T11:34:05.722Z",
+    "readyObservedAt": "2026-09-21T11:34:07.371Z",
+    "cause": "unknown; no causal attribution to backup or network infrastructure",
+    "forcedInterruption": false,
+    "supervisorUnchanged": true,
+    "primaryApiErrors": 2,
+    "primaryConnectionErrors": 3,
+    "supplementaryConnectionErrors": 6,
+    "invalidMessagesObserved": 0,
+    "sampleDiscontinuitiesObserved": 0
+  },
+  "files": [
+    {
+      "path": "creation-operation.json",
+      "sha256": "96e5b6805130eb515ae6f1905bfd0673277f75c8f8964021e6bb88ac86b077f4"
+    },
+    {
+      "path": "live-1m.log",
+      "sha256": "7ef7cb31fa26bbee8adb66fed5bfbc159c617f2252fa818fc27d862d66b6fbda"
+    },
+    {
+      "path": "live.log",
+      "sha256": "7e67b2cf985d6e46ed13e38534c152c77c7210ec52c0a51e16cc375b54367bc6"
+    },
+    {
+      "path": "reconnect-primary.jsonl",
+      "sha256": "fbc9da78bc30b0f6799ccdade23b9e98629d58a873a16d06c7cb100064c83c35"
+    },
+    {
+      "path": "reconnect-rtu.jsonl",
+      "sha256": "b9d4127558ed57e9f8d65b980f67202ace2913d32a5bd0a8a4732b4dc0e8bbfc"
+    },
+    {
+      "path": "reconnect-supervisor.jsonl",
+      "sha256": "7036584a0b088f8dc0a515bb77ab6e275e8faf3b531ce7ad8e8fb1204866a8af"
+    },
+    {
+      "path": "resource-observation.json",
+      "sha256": "216991c29be92e04c03502e5973870ab3819f70b348d5c327e79ddfaf1217dbe"
+    },
+    {
+      "path": "retransfer-operation.json",
+      "sha256": "bbdf77f9724537909bd357cfad58bbfb3d41c93e4bee53113d77ed209c29b339"
+    },
+    {
+      "path": "source-remote-backup-helpers.mjs",
+      "sha256": "499c3bb3caa37b22bb8653da7c140d56e981506c0281948195b84e8352e74390"
+    },
+    {
+      "path": "source-remote-backup.mjs",
+      "sha256": "29b37278cac24199101fdd35502ccf4dabb9a1418911791c82e8eba425a6faef"
+    },
+    {
+      "path": "supervisor-after.json",
+      "sha256": "6e64a5738784d0d63ca1960719cccc7743a91dd48294822a1f7d70b115cb89fa"
+    },
+    {
+      "path": "unit-final.log",
+      "sha256": "eb47bfd02cd583505141eb8e045a83f7f4cf92c6bbe31369fa10ab7c17cfca84"
+    },
+    {
+      "path": "unit-initial.log",
+      "sha256": "52b2b228041775a0c82076d4331e4ed942935cc1dcf94a38b788964fc15a98a5"
+    }
+  ]
+}

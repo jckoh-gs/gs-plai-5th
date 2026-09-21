@@ -68,10 +68,26 @@
     "supervisorProcessIdentity": "Mon Sep 21 20:19:20 2026",
     "previousSupervisorHandleTerminal": 98912,
     "knownCumulativeCounters": {
-      "primaryApiErrors": 1,
+      "primaryApiErrors": 2,
       "primaryConnectionErrors": 3,
-      "supplementaryConnectionErrors": 5
+      "supplementaryConnectionErrors": 6
     },
-    "instructions": "Do not reset counters or report known historical counts as new failures. Compare increases and current readiness/connection/freshness. Verify process identity before acting on a PID."
+    "instructions": "Do not reset counters or report known historical counts as new failures. Compare increases and current readiness/connection/freshness. Verify process identity before acting on a PID.",
+    "subsequentObservations": [
+      {
+        "outageObservedAt": "2026-09-21T11:34:05.722Z",
+        "readyObservedAt": "2026-09-21T11:34:07.371Z",
+        "evidence": "artifacts/checkpoints/backup-recovery/summary.json",
+        "cause": "unknown",
+        "forcedInterruption": false
+      }
+    ]
+  },
+  "backupRecovery": {
+    "source": "scripts/remote-backup.mjs",
+    "journalDirectory": "artifacts/operations/backups",
+    "verifiedSnapshotMetadata": "deploy/verification/backup-recovery-1m-20260921T1135.json",
+    "evidence": "artifacts/checkpoints/backup-recovery/summary.json",
+    "policy": "Original deadline; bounded network waits; only completed immutable snapshots may be retransferred; final freeze snapshot still required"
   }
 }

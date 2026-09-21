@@ -1,0 +1,18 @@
+✔ stalled child is killed within command budget, without printing sensitive stdout (157.172666ms)
+✔ original deadline and total budget reject subsequent launch instead of resetting on retry (1.053667ms)
+✔ expired remote snapshot never creates a partial or final file (26.679167ms)
+✔ snapshot failure leaves only private partial; existing verified final is preserved (42.370834ms)
+✔ successful online snapshot publishes complete private SQLite then compression preserves bytes (49.406292ms)
+✔ one MiB encoded chunk and final short chunk flush completely with matching byte hashes (47.175291ms)
+✔ independent actual backup CLI hung discovery stops within original deadline and keeps sensitive child output private (811.72625ms)
+✔ independent actual backup CLI expired original deadline launches no kubectl (35.098833ms)
+✔ independent budget expiration blocks a second command launch (23.261833ms)
+✔ independent snapshot expired remote deadline creates neither final nor part (21.675584ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 920.879208

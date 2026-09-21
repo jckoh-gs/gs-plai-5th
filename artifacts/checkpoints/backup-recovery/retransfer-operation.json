@@ -1,0 +1,16 @@
+{
+  "runId": "grid-new-20260921T080733Z",
+  "startedAt": "2026-09-21T11:34:32.058Z",
+  "stopAt": "2026-09-21T11:37:32.058Z",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "sourceCommit": "83d10cebcd7cab2b1f889c970011a463bad09099",
+  "remotePath": "/data/stable-83d10ce-20260921T113246668Z.sqlite",
+  "remotePartialPath": "/data/stable-83d10ce-20260921T113246668Z.sqlite.snapshot.part",
+  "remoteCompressedPath": "/data/stable-83d10ce-20260921T113246668Z.sqlite.20260921T113432058Z.gz",
+  "localPath": "artifacts/private/backups/stable-83d10ce-20260921T113246668Z.sqlite",
+  "metadataPath": "deploy/verification/backup-recovery-1m-20260921T1135.json",
+  "status": "verified",
+  "stage": "complete",
+  "remoteCancellationGuaranteed": false,
+  "verifiedAt": "2026-09-21T11:34:59.018Z"
+}

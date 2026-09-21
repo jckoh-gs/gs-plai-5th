@@ -1,0 +1,11 @@
+{
+  "reviewedAt": "2026-09-21T11:29:26.437737+00:00",
+  "source": "scripts/remote-backup.mjs",
+  "sha256": "cde2357ec7d953629fec5c810ded0eadd7dc875041d99cb10836da7799d09ac0",
+  "review": "read-only source inspection; no live interruption or remote mutation",
+  "findings": [
+    "unbounded execFile",
+    "no overall deadline enforcement",
+    "new remote snapshot written directly to final filename"
+  ]
+}

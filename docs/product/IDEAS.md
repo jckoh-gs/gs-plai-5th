@@ -31,6 +31,8 @@
 - 담당: 메인.
 
 ## IDEA-005 · 등록 전 CSV 해석 미리보기 — 채택·구현·기능 검증 완료
+
+현재 상태: 1.1.0 checkpoint에서 완료했고 현재1.2.0에 유지된다. 아래 후보·버전 제안 표현은 채택 당시 이력이다.
 - 핵심 목표: kW/kWh, 시점/구간평균, KST/UTC 해석 오류를 단지 생성 전에 발견한다. 현재 등록 폼은 성공 시 곧바로 RTU를 생성하므로 잘못 해석한 데이터로 시험을 시작할 수 있다.
 - 우선순위/효용: P1. 기존 CLI 보고서와 중복되지 않는 입력 품질 개선. 신규 OSS·외부키·DB마이그레이션 없음. 파서 재사용으로 계산 규칙 중복 방지.
 - 범위 제안: 인증 관리 API `POST /api/datasets/preview`에 `{csv,type,unit,semantics}`를 보내 parseCSV 결과의 행 수, 시작/끝 UTC 및 KST 표시, 입력 단위/선택 의미/실제 보간, 정규화 최소·최대kW, 앞3행을 반환. RTU/UUID/DB/outbox 생성이나 기상조회 없음. 등록폼에 명시적 미리보기 버튼과 요약을 추가하되 미리보기 후 실제 등록은 기존 서버 검증을 다시 수행한다.
@@ -39,7 +41,9 @@
 - 상태: 메인채택(PRD1.8/제품1.1.0후보). 기준 runtime af7f223, stable-runtime-v1.0.0-af7f223, delivery d853f59, artifacts/releases/checkpoint-1.0.0.json. 구현 및 배포기능 검증 완료(8599ab9/71unit/remote preview+browser races). 현재버전 복원·1.0.0역호환·stable 승격 완료. checkpoint-1.1.0.json 및 stable-runtime-v1.1.0-8599ab9 참조. 최종미디어/운영시간은 별도.
 - 버전: PRD1.8 / 제품1.1.0. MQTT계약2·보고서schema1 유지. 회귀/브라우저/배포/복원 통과 후 stable로 승격했고 이전1.0.0 checkpoint도 보존했다.
 
-## IDEA-006 · 최근 명령 이력 내보내기 — 대안, 동시 착수 비권장
+## IDEA-006 · 최근 명령 상태 내보내기 — 채택·구현·기능 검증 완료
+
+현재 상태: 제품1.2.0/runtime83d10ce/stable-v1.2.0. [REVIEW010](REVIEW-010.md)과 [REVIEW011](REVIEW-011.md)의 기능·복원·manifest 검증 완료. 아래 제안/재검토/채택 당시의 문장은 변경 이력이며 현재 미채택이나 후보 상태를 뜻하지 않는다.
 - 핵심 목표: UI로 수행한 시험도 지원 담당자에게 전달 가능한 작은 JSON 기록으로 남긴다. 기존 CLI report는 특정 dispatch 실행의 실시간 수신기록이며, 이 제안은 서버에 저장된 최근 명령 이력의 읽기 전용 내보내기다.
 - 우선순위/효용: P2. 기존CLI보고서와 일부 중복되므로 IDEA005보다 후순위. 새수집/자동재실행/압축파일/패키지는 추가하지 않는다.
 - 범위 제안: 선택RTU의 최근20개 commandId/action/status/source/시각/목표/실제/오차/정제원인과 productVersion,contractVersion,exportedAt,rtuId/runId를 허용목록으로 JSON 다운로드. 원본요청·CSV·기상키·브로커URL·인증·전체로그 제외. 서버에 없는 전이는 합성하지 않는다.

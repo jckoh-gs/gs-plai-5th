@@ -775,20 +775,22 @@ k3s 명령은 종료 코드 0이고 `gitVersion=v1.33.4+k3s1`, `platform=linux/a
 
 ## 25. 변경 관리와 후속 범위
 
+현재 상태: 제품 **1.2.0**, runtime `83d10cebcd7cab2b1f889c970011a463bad09099`, `stable-v1.2.0`이다. IDEA-001~006의 채택 기능은 검증 완료했다. CSV 미리보기는 1.1.0에서 완료되어 현재 버전에 유지된다. 근거는 [인수 추적](product/acceptance.json), [1.1.0 checkpoint](../artifacts/releases/checkpoint-1.1.0.json), [1.2.0 checkpoint](../artifacts/releases/checkpoint-1.2.0.json), [기능·복원 검토010](product/REVIEW-010.md), [453개 해시·실제 이미지 검토011](product/REVIEW-011.md)이다. 아래 수락 절차는 요구사항으로 유지하며, 과거 후보 승격 표현은 이미 수행한 절차의 기준이다. **최종 동결 점검·영상·PPT·운영시간 및 마감 정리는 아직 완료되지 않았다.** 기능 checkpoint를 전체 목표 완료로 해석하지 않는다.
+
 프로토콜 변경 시 schemaVersion, 가이드, 클라이언트, 통합 시험을 함께 변경한다. 등록 시 단위 정책이나 time 의미는 기존 데이터 마이그레이션 계획 없이 바꾸지 않는다. 제조사 모델·실물 프로토콜·대규모 부하·사용자 권한·브로커 업무 ACK·미래 제어 타임라인 재생은 별도 요구사항으로 설계한다.
 
 다음 단계의 권장 순서는 실제 VPP 메시지 계약 합의 → 접근 가능한 테스트 브로커 연결 → 데이터 수신 → 낮은 목표 왕복 → 실패·중복·단절 시험 → 운영 요건 및 실물 어댑터 검토다. 우선순위와 일정·비용은 실제 연동 대상이 확정된 뒤 산정하며 이 문서는 임의 납기나 설비 규모를 약속하지 않는다.
 
 
-### FR-VPP-REPORT-01 선택적 MQTT 시험 결과 파일 (IDEA-001, 작업본 구현·검증 대기)
+### FR-VPP-REPORT-01 선택적 MQTT 시험 결과 파일 (IDEA-001, 기능 검증 완료)
 
-IDEA-001의 선택적 JSON 결과 파일 요구는 신규 MQTT dispatch 클라이언트에도 유지한다. 과거 구현의 v2.0.1/v2.1.0 개발 순서·검증 상태를 신규 제품의 완료 상태로 승계하지 않는다. 신규 프로젝트 package 버전은 1.0.0이며 보고서 기능도 이번 필수 인수 범위다. 선택적이라는 표현은 실행 시 결과 파일 옵션이 선택이라는 뜻이며 기능 구현·인수 자체를 생략할 수 있다는 뜻이 아니다. 신규 릴리스 버전과 stable 승격은 실제 변경 및 검증 기록에서 확정한다. 이 요구의 채택은 구현 완료나 stable 승격을 뜻하지 않는다. MQTT schemaVersion 2와 기존 기본 실행/콘솔 출력을 유지하며 UI·서버 API 변경은 요구하지 않는다. 결과 파일은 dispatch 실행에서 `VPP_REPORT_FILE=/absolute/result.json`으로 지정한다. 미지정 시 기존 콘솔 실행을 유지하며 monitor에서 지정하면 입력 오류로 종료한다. `VPP_CONNECT_TIMEOUT_MS`는 연결 제한시간(ms)이며 기본 10000, 허용 범위 100~60000이다. `COMMAND_TIMEOUT_SECONDS`는 명령 제한시간(기본 120초, 1~3600)이며 클라이언트 결과 대기는 그 값+45초다. 연결 제한시간을 구독 응답이나 전체 시험의 제한시간으로 설명하지 않는다. 실제 옵션·사용 예·실패 의미를 연동 가이드와 클라이언트 사용 설명에 함께 제공한다.
+IDEA-001의 선택적 JSON 결과 파일 요구는 신규 MQTT dispatch 클라이언트에도 유지한다. 과거 구현의 v2.0.1/v2.1.0 개발 순서·검증 상태를 신규 제품의 완료 상태로 승계하지 않는다. 신규 프로젝트는 1.0.0으로 시작했으며 현재 검증 제품은 1.2.0이다. 보고서 기능도 이번 필수 인수 범위다. 선택적이라는 표현은 실행 시 결과 파일 옵션이 선택이라는 뜻이며 기능 구현·인수 자체를 생략할 수 있다는 뜻이 아니다. 신규 릴리스 버전과 stable 승격은 실제 변경 및 검증 기록에서 확정한다. 이 요구의 채택은 구현 완료나 stable 승격을 뜻하지 않는다. MQTT schemaVersion 2와 기존 기본 실행/콘솔 출력을 유지하며 UI·서버 API 변경은 요구하지 않는다. 결과 파일은 dispatch 실행에서 `VPP_REPORT_FILE=/absolute/result.json`으로 지정한다. 미지정 시 기존 콘솔 실행을 유지하며 monitor에서 지정하면 입력 오류로 종료한다. `VPP_CONNECT_TIMEOUT_MS`는 연결 제한시간(ms)이며 기본 10000, 허용 범위 100~60000이다. `COMMAND_TIMEOUT_SECONDS`는 명령 제한시간(기본 120초, 1~3600)이며 클라이언트 결과 대기는 그 값+45초다. 연결 제한시간을 구독 응답이나 전체 시험의 제한시간으로 설명하지 않는다. 실제 옵션·사용 예·실패 의미를 연동 가이드와 클라이언트 사용 설명에 함께 제공한다.
 
 결과 파일은 UTF-8 JSON이며 독립적인 `reportSchemaVersion: 1`을 둔다. 필수 정보는 실행 클라이언트 제품 버전, MQTT 계약 버전, RTU ID, commandId, 시작/종료 UTC, 요청 목표 kW, 실제 수신한 해당 명령의 상태 이벤트 목록(수신 UTC 포함), 마지막 관측 상태, 실제 출력 kW/오차 kW, 종료 원인, exitCode다. 서버 제품 버전과 해당 명령에 연관된 runId는 관측하지 못하면 null로 기록하며 클라이언트 버전이나 무관한 최신 telemetry로 대신하지 않는다. 미관측 출력/오차도 null이고 미수신 accepted/executing 전이를 합성하지 않는다. 결과 파일은 시험 증거이며 새로운 MQTT 메시지 계약이 아니다.
 
 해당 commandId의 completed를 실제 수신하고 요청된 파일 저장까지 성공하면 exit 0이다. 명령 실패·미도달·명령 결과 대기 timeout·연결/구독/발행 실패·파일 저장 실패는 exit 1이다. 명령 결과와 클라이언트 실행 실패를 구분해 기록하며 PUBACK만으로 completed를 생성하지 않는다. 연결 실패도 유한한 시간 안에 종료한다. 파일 저장이 가능한 실패 경로에서는 실패 결과를 남기고, 저장 자체가 실패하면 stderr와 exit 1로 알리며 결과 파일이 있다고 주장하지 않는다. 명령 전송 뒤 파일 저장 실패가 발생해도 같은 시험을 자동 재발행하지 않는다. 자격증명·키·인증서 본문·인증정보 포함 브로커 URL은 결과 파일과 오류 출력에서 제외한다.
 
-### AT-VPP-REPORT 신규 제품 보고서 수락 조건 (최종 릴리스 검증 대기)
+### AT-VPP-REPORT 신규 제품 보고서 수락 조건 (기능 수락 완료, 최종 인도 게이트 별도)
 
 1. 격리 DB/포트/MQTT prefix와 실제 로컬 브로커에서 충분한 가용 출력의 목표 요청을 실행한다. JSON의 commandId·실제 관측 전이·최종 출력/오차를 수신 증거와 대조하고 completed 및 exit 0을 확인한다.
 2. 가용량보다 높은 목표의 미도달 사례는 관측한 timed_out과 exit 1을 기록한다. 클라이언트 대기 timeout은 명령에서 수신한 timed_out과 다른 종료 원인으로 기록한다.
@@ -796,7 +798,7 @@ IDEA-001의 선택적 JSON 결과 파일 요구는 신규 MQTT dispatch 클라�
 4. 쓰기 불가 결과 경로는 명확한 저장 실패와 exit 1을 반환한다. 파일 저장 실패 때문에 명령을 자동 재전송하지 않는다. JSON/오류 출력에 시험용 자격증명이 노출되지 않는다.
 5. 결과 파일 옵션 없이 기존 monitor/dispatch가 동작하고 MQTT schemaVersion 2가 유지된다. 관련 단위 시험, 기본·고급 MQTT 통합 시험, build 및 실행 확인을 통과한 뒤에만 신규 제품 릴리스에 맞는 stable 태그와 증거를 기록한다.
 
-### FR-COMMAND-EXPORT-01 최근 명령 상태 내보내기 (IDEA-006, 제품1.2.0 후보)
+### FR-COMMAND-EXPORT-01 최근 명령 상태 내보내기 (IDEA-006, 제품1.2.0 기능 검증 완료)
 
 인증 `GET /api/plants/:id/commands/export`는 현재 저장된 선택단지 명령의 updatedAt 내림차순 최신 최대20개 스냅샷을 JSON으로 다운로드한다. 없는단지는404, 저장명령없는단지는빈commands와200이다. 루트계약은 `{schemaVersion:1,productVersion,contractVersion:2,exportedAt,plantId,scope:"recent-command-snapshots",limit:20,commands,redaction}`이다. exportedAt은실제UTC이며 현재단지runId를루트나누락된행에 대신넣지 않는다. redaction은 `{policy:"known-secrets-credential-urls-controls-length",redactedCommandIds:정제된commandId행수,identifiersForReplay:false,unknownPersonalDataMayRemain:true}`다.
 
@@ -817,7 +819,7 @@ IDEA-001의 선택적 JSON 결과 파일 요구는 신규 MQTT dispatch 클라�
 3.알려진credential이ID에있을때비노출,원본reason/request/canonical제외,metadata정제한계와재실행금지표시,전후DB/command/outbox불변을검증한다.
 4.실제브라우저다운로드파일과선택단지명령을대조하고기존preview/MQTT/단위/통합/고급/빌드회귀,k3s업데이트/1.1.0복원확인후1.2.0stable로승격한다.그전1.1.0정상fallback및최종영상/PPT·시간게이트를유지한다.
 
-### FR-PREVIEW-01 등록 전 CSV 미리보기 (IDEA-005, 제품1.1.0 후보)
+### FR-PREVIEW-01 등록 전 CSV 미리보기 (IDEA-005, 제품1.1.0에서 검증 완료·1.2.0에 유지)
 
 인증 관리 API `POST /api/datasets/preview`는 `{csv:string,type:"wind"|"solar"|"hybrid",unit:"kw"|"kwh",semantics:"sample"|"mean"}`을 받는다. type은 필수이며 unit/semantics 생략 기본은 기존 등록과 같은 kw/sample이다. 기존 parseCSV로 검증·정규화하고 등록과 동일20MiB JSON 제한·인증·400 `{error:string}` 행 오류를 적용한다. 발전단지 등록 검증은 이후 기존 경로에서 다시 수행한다. 등록·미리보기 공통 CSV 안전 한도는 헤더 제외 2~100000행, 행당 최대128열이다. 인용부호 내부 쉼표·탭·줄바꿈은 열·행 구분자로 세지 않으며, 구문 오류는 행 위치와 정제한 원인만 반환하고 원문 필드 값을 노출하지 않는다.
 
@@ -825,7 +827,7 @@ IDEA-001의 선택적 JSON 결과 파일 요구는 신규 MQTT dispatch 클라�
 
 이 API는 식별자/plant/command/outbox/scenario 생성, DB 쓰기, 기상조회, MQTT연결·발행을 하지 않는다. 입력 유형을 출력 모양에서 추론하지 않는다. preview결과는 계산모델의 실제출력 예측이나 VPP시험 완료증거가 아니다.
 
-### UI-08 등록 미리보기 (IDEA-005, 제품1.1.0 후보)
+### UI-08 등록 미리보기 (IDEA-005, 제품1.1.0에서 검증 완료·1.2.0에 유지)
 
 등록폼에 명시적인 미리보기 버튼과 위 요약을 표시한다. 입력 단위·선택 의미·실제 보간을 구분하고 kWh→평균kW 변환, UTC/KST 및 hybrid합계 의미를 설명한다. 자동입력마다 요청하지 않으며 처리중 중복호출을 막는다. csv/type/unit/semantics 중 하나라도 바뀌면 이전결과를 즉시 무효화한다. 입력revision과 요청순서를 확인하여 늦은 이전응답이 새로운결과나 오류를 덮어쓰지 않게 한다. 미리보기 실패는 기존행 오류를 표시하고 단지를 생성하지 않는다. 미리보기는 등록 전 보조기능이며 기존 등록절차를 불필요하게 차단하지 않는다.
 
@@ -836,13 +838,13 @@ IDEA-001의 선택적 JSON 결과 파일 요구는 신규 MQTT dispatch 클라�
 3.실제브라우저에서 미리보기·입력변경 무효화·재요청·오류·등록을 확인한다. 의도적으로 지연한 이전응답이 최신입력 결과를 덮어쓰지 않는 회귀검증을 남긴다.
 4.전체기존단위/통합/고급/빌드와 새기능검증, k3s업데이트 후 미리보기·기존MQTT왕복, 이전정상1.0.0복원 가능성을 확인한 뒤1.1.0후보를stable로 승격한다. 미완료 시1.0.0정상checkpoint를 유지한다.
 
-### FR-AUTH-01 원격 관리 UI 인증 (IDEA-002, 채택·검증 대기)
+### FR-AUTH-01 원격 관리 UI 인증 (IDEA-002, 기능 검증 완료)
 
 API_TOKEN이 있는 환경에서 UI는 401 후 비밀번호형 토큰 입력을 제공한다. 올바른 토큰으로 상태·SSE·명령·가이드/시나리오 다운로드가 모두 동작해야 한다. 잘못된 토큰은 성공 상태를 만들지 않는다. `/api/config`는 authRequired와 version만 공개한다. URL·내보내기·이벤트 로그·시연 영상에 토큰을 남기지 않는다. 공개 네트워크 접근 시 HTTPS 또는 인증된 터널을 사용한다. 단일 공유 관리 토큰은 사용자별 권한 관리가 아니다.
 
 AT-AUTH-01: 무인증 state 401, config 비밀 없음, 잘못된 토큰 재입력, 올바른 토큰 REST/SSE/다운로드, 새 탭 세션 경계 및 토큰 비노출을 실제 브라우저와 API에서 확인한다.
 
-### UI-07 화면 데이터 최신성 (IDEA-003, 채택·검증 대기)
+### UI-07 화면 데이터 최신성 (IDEA-003, 기능 검증 완료)
 
 UI는 마지막으로 정상 상태 스냅샷을 수신한 시각과 연결 상태를 표시한다. 상태를 5초 이상 받지 못하면 “오래된 데이터” 표시로 마지막 관측값과 실시간 상태를 구분한다. 브라우저 로컬 시각 기준 경과시간이며 서버·원본 CSV 시각과 혼동하지 않는다. SSE 연결 자체가 열려 있어도 데이터가 멈추면 오래된 상태가 된다. 정상 상태 스냅샷이 다시 도착하면 표시를 해제한다. 연결 복구나 HTTP 접수만으로 제어 completed를 합성하지 않는다.
 
@@ -858,13 +860,15 @@ AT-FRESH-01: 정상 수신 → 스트림 무수신 5초 → 오래된 데이터 
 
 ### AT-RESUME-01 재개 인수
 
+실제 후속 관측: [11:16 재접속 기록](../artifacts/checkpoints/reconnect-20260921T1116/summary.json)에서 로컬 관측 연결 단절 후 재접속과 동일 원격 Pod/Ready 상태를 확인했다. 무중단 운영이나 단절 원인은 입증하지 않는다. [ISSUE-017](issues/ISSUES.md#issue-017--로컬-forward-재생성-시-outagerecovery-시각-갱신-누락)은 복구 시각 기록 누락을 수정했고 격리 회귀 재실행은 9/9 통과했다. [11:19 계획 교체 기록](../artifacts/checkpoints/reconnect-20260921T1116/handoff-result.json)은 수정 supervisor 활성화와 재수신을 보존하며 11:16 사건과 구분한다. 이전 오류 카운터와 원본 증거를 유지했고 원격 배포·제어를 변경하지 않았다. 수정 시각 경로는 격리 시험으로 검증했으며 실제 강제 장애 시험으로 표현하지 않는다.
+
 검증 기록: `artifacts/checkpoints/network-recovery/tests.log` 8/8 통과 및 `live-owned-forward.json`의 실제1.1.0 image/pod/API/MQTT 연결·소유forward 확인. 통제된단절시험과실제정상연결검증을구분한다. 기존grid10분heartbeat 갱신은메인운영기록에따르며최종마감정리는아직미수행이다. 앱/Mac가동전제와오프라인AI무보장조건은유지한다.
 
 1.읽기전용재개검사/정책시험으로정상·연결불가·배포identity불일치·API불가·동결·마감결정을확인한다.원래runId/T0/freeze/deadline은유지한다.
 2.통제된터널/네트워크단절후backoff재접속·실제API복구와singleton identity를확인한다.상태조회외deploy/control쓰기없음,다른프로세스보존,재시도유한성을검증한다.
 3.응답유실명령은동일commandId를조회해미확정결과를확인하며새명령을자동생성하지않는다.기존heartbeat10분설정과현재task재개경로를확인하고최종마감에정리한다.
 
-### OPS-05 릴리스 증거 manifest (IDEA-004, 채택·검증 대기)
+### OPS-05 릴리스 증거 manifest (IDEA-004, 1.2.0 checkpoint 검증 완료)
 
 복원 가능한 각 릴리스는 기계 판독 가능한 JSON manifest를 제공한다. runId, 제품 버전, 소스 commit, PRD 버전과 SHA-256, 이미지 참조와 digest, SQLite backup API로 생성한 snapshot 경로·SHA-256, 시험 로그 경로·SHA-256·실행 revision·종료 코드, k3s context/namespace와 배포·복원 증거 경로를 기록한다. source commit이 없는 작업본은 dirty 여부와 관련 파일 해시를 명시하고 commit만으로 재현 가능한 릴리스라고 주장하지 않는다. 아직 생성되지 않거나 검증되지 않은 필드는 null 또는 pending으로 기록한다. 전체 필수 게이트를 통과하기 전에는 stable로 표시하지 않는다. 자격증명·토큰·개인키·DB 본문을 manifest에 포함하지 않는다.
 
@@ -884,7 +888,7 @@ AT-RELEASE-01: manifest가 JSON으로 파싱되고 기록된 파일의 실제 SH
 
 이슈는 ISSUE-NNN, 발견 버전, 재현 조건, 기대/실제, 심각도, 담당, 상태, 해결 과정, 변경 커밋, 검증 증거, 재발 방지를 기록한다. 해결 증거 없이 닫지 않으며 에이전트의 검토 보고와 실제 시험 결과를 구분한다.
 
-### OPS-03 검증 버전과 비파괴 복원 (채택, 실행 검증 대기)
+### OPS-03 검증 버전과 비파괴 복원 (1.2.0 checkpoint 검증 완료, 최종 동결 점검 대기)
 
 현재 기준 버전의 단위·통합·고급 시험·빌드 및 실행 확인을 통과하면 stable 커밋/태그, 시험 로그, SQLite backup API로 생성한 호환 snapshot을 기록한다. 이번 실행에서는 정상 종료 여부와 관계없이 단일 DB 파일 복사 대신 backup API를 사용한다. 신규 기능은 계약·기능·시험이 함께 완료되어야 stable로 승격한다.
 

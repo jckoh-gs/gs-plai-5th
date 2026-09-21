@@ -1,0 +1,29 @@
+{
+  "capturedAt": "2026-09-21T11:34:47.964Z",
+  "scope": "Read-only source review and isolated local fixture tests; no cluster mutation or real DB contents read",
+  "sourceHashes": {
+    "scripts/remote-backup.mjs": "29b37278cac24199101fdd35502ccf4dabb9a1418911791c82e8eba425a6faef",
+    "scripts/remote-backup-helpers.mjs": "499c3bb3caa37b22bb8653da7c140d56e981506c0281948195b84e8352e74390",
+    "scripts/pod-identity.mjs": "2e985af6a16219e34d39c11dd6c78eed6e62cdd161c1b13515e6252176b2a3e8",
+    "tests/remote-backup.test.js": "f81c00491f62182faa2444f770ba09605a0efbb77b3c6b972e45cf58e1a5b164",
+    "tests/review-backup.test.js": "5a8161ef629bd877f0892ecff7c67569391de8216742bb287d078f120c6b97dd",
+    "package-lock.json": "8a2c5124145f98930faf9ad632ec3916b1a6781f0949208743da4cc3fdd8fceb"
+  },
+  "tests": {
+    "count": 10,
+    "passed": 10,
+    "evidence": "remote-backup-review-tests.txt"
+  },
+  "review": {
+    "remotePartMode": "0600 with wx and umask077",
+    "finalSnapshotPublication": "hardlink after backup, integrity and deadline checks; existing final never overwritten",
+    "compression": "attempt-specific name; wx0600 partial",
+    "localTransfer": "1MiB chunks + short tail, perchunk and whole SHA256, streamedgzip, finalSQLiteintegrity",
+    "errorConfidentiality": "subprocess stdout/stderr and parsing/validation messages excluded from CLI failure diagnostics",
+    "journal": "0600 private content with operational paths/status, no DB bodies",
+    "cancellation": "local kubectl killed on budget; remote process cancellation not guaranteed",
+    "hardWallclock": "synchronous SQLite/FS stages and remote exec may continue between checks; no guarantee of absolute wall-clock kill",
+    "releaseMutation": false,
+    "newDependencies": false
+  }
+}

@@ -260,3 +260,35 @@ release-binding 기존 부정 fixture를 독립 재실행3/3PASS. commit/run/run
 메인은11:19:16Z에 기존PID40434의시작시각·command를 재검증하고 정상종료한 뒤 수정된supervisor25872/PID54951을 시작했다.11:19:22.705Z ready 및ownedforward를 확인했고 양쪽observer는 재시작하지 않았다. 계획된교체의MQTT관측단절은11:19:16.737Z~22.849/23.022Z이며 이전11:16자연발생사건과 분리한다. 새프로세스의최초기동이므로outage/reconnected필드null은 과거장애없음이아니라 새프로세스범위다. 과거event원문을보존했다.
 
 `artifacts/checkpoints/reconnect-20260921T1116/handoff-result.json`에 실제교체·실행sourceSHA·재수신과지속관찰ID를보존했다. main누적APIerror1/connectionErrors3, RTUobserverconnectionErrors5를초기화하지 않았고 수신구조오류/관측샘플불연속0이다. 원격deploy/Pod/제어를변경하지 않았다. 수정된시각기록경로의검증은격리시험이며 이를현장강제장애시험으로과장하지 않는다.
+
+11:34Z 후속 실제 관측에서는 같은 수정 supervisor가 `local_verification_failed`를11:34:05.722Z, 정상 복귀를11:34:07.371Z에 기록했다. 시각 기록 경로가 이번 자연 발생 관측에서도 실행되었다. 동일 Pod UID/Ready 상태와 이후 RTU5개 재수신을 확인했고 강제 네트워크 중단이나 수동 supervisor 재시작은 하지 않았다. 실패 원인은 미확정이다. 원본 구간은 `artifacts/checkpoints/backup-recovery/reconnect-*.jsonl`에 있으며 누적 API오류2/primary연결오류3/추가관측연결오류6을 유지한다. 앞선 격리 시험과11:19 계획 교체의 증거는 변경하지 않는다.
+
+## ISSUE-018 / REVIEW016 — remote backup의 무한 대기 및 미완성 최종명 노출
+
+중요도 P1 마감 운영, 현재 상태: 수정·격리 회귀 완료(후속 REVIEW016 및 최종1MiB검증 참조). 최초 발견 시 OPEN/메인 패치 대기였으며 아래는 당시 관찰 이력이다. `scripts/remote-backup.mjs` 현행소스를 직접읽어 확인했다. 모든 execFile(kubectl discovery/exec/최종image검증)에 timeout이 없고 전체deadline/elapsed검사도 없다. 연결이응답하지않으면 await에서 멈춰3회chunkretry조차 다음회차로 진행하지못한다. 유한운영14시간 보장과 충돌하는 실제제어흐름 결함이며 이번검토에서 live연결을 강제로끊거나 실제hang을 유발하지 않았다.
+
+신규remote snapshot은 backup(db,최종.sqlite)에 직접생성하고 chmod0600은완료후적용한다. 도중실패/remote process중단이면 미완성파일이최종이름으로남을수있다. 현재기존immutable backup이잘못됐다는증거는없다. 기존local.part→chunk/전체hash/integrity→podidentity→승격검사는유효하며보존해야한다.
+
+필수회귀:
+- discovery 및remoteexec정지fixture 모두유한timeout/kill로끝남. 개별재시도와전체시간예산둘다제한, 원래run.deadlineAt을늦추지않음.
+- 이미마감이면kubectl실행없이실패. 충분한예산의정상fixture는기존기능유지.
+- 신규remote snapshot은전용.part에0600으로생성,backup성공/무결성확인후원자적최종이름승격. 실패는최종이름/PASS증거를만들지않고기존final파일불변.
+- 로컬kubectl종료가remote Node프로세스종료를보장한다고가정하지않음. remote자체마감/작업중단또는완료명승격guard를별도로검토.
+- localgunzip/hash/SQLite검증도남은시간을고려하고deadline이후PASS를기록하지않음. .part잔존은미완료로구분하며원본DB를변경하지않음.
+
+이번라운드는읽기검토와issues문서만수정했다. 실행중supervisor/soak/관측기및remote배포는조작하지않았다. root패치후별도독립fixture검토로검증상태갱신예정.
+
+### REVIEW016 후속 — bounded backup 패치 독립 검증
+
+ISSUE018 상태: 네트워크대기·미완성최종명 경계 **수정·격리회귀완료**, 아래시간보장범위 유의. 실제CLI의 모든kubectl호출(discovery/Ready/remoteexec/chunk/finalidentity)은 budget.exec를사용한다. 원래deadline과180초중빠른시각을전체예산으로두고각명령은남은예산이하SIGKILLtimeout이다. remote snapshot은0600전용.snapshot.part에서backup·integrity·마감검증후hardlink최종이름을생성하며기존최종파일을덮어쓰지않는다. 기존localstreaming/hash검증유지, PASS직전예산재확인,실패시privatejournal과정제진단을남긴다.
+
+독립 `tests/review-backup.test.js` 실제CLI/fakekubectl에서 원래800ms남은deadline에hungchild를약810ms내종료,child민감stderr비노출/incompletejournal/noPASS확인. 이미만료한CLI는kubectl미실행. 두번째명령예산차단및remote만료시final/part미생성확인. 메인5fixture(성공SQLite/gzip,실패/기존보존포함)와함께9/9PASS `review-016-backup-after.log`.
+
+엄밀한제한: 로컬동기SQLite integrity_check와sync파일I/O자체는budget.check로중간취소되지않는다. 검증이끝나면마감초과PASS는차단되지만hunglocalI/O를포함해프로세스가반드시180초내끝난다는보장은아니다. remoteexec강제종료가원격프로세스취소를보장하지않는것도명시적으로유지한다. prelinkdeadline으로늦은snapshot승격을막는다. 이회귀는격리fixture이며live중단/remote변경은없다. 최초review016관찰은보존했다.
+
+
+### REVIEW016 최종 전송 chunk 변경 검토
+
+chunkSize가256KiB→1MiB이고result.transferChunkBytes에실제값을기록한다. exec maxBuffer8MiB/개별15초/전체budget/3retry/부분·전체SHA/streaming검증은그대로다. 1MiB base64는약1.34MiB여서8MiB stdout상한안에들어간다. 실제CHUNK_SOURCE의1MiB랜덤원문및마지막137B조각을자식stdout으로읽고길이/hash/연결원문동일성을검증한새회귀를포함해독립재실행10/10PASS(`review-016-backup-final.log`). 기존before/after로그·source기록은변경하지않고최종source는별도 `review-016-backup-final-source.json`에기록했다.
+
+실제335704064B백업의재전송은메인의별도실행증거이며본검토에서live재전송/중단을수행하지않았다. chunk개선만으로마감시예상DB전체가항상180초안에완료된다고보장하지않는다. 실제최종전송도예산내완료/hash/integrity/증거를별도로확인해야한다.

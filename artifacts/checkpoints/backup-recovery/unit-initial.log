@@ -1,0 +1,13 @@
+✔ stalled child is killed within command budget, without printing sensitive stdout (156.439042ms)
+✔ original deadline and total budget reject subsequent launch instead of resetting on retry (0.869ms)
+✔ expired remote snapshot never creates a partial or final file (23.893209ms)
+✔ snapshot failure leaves only private partial; existing verified final is preserved (40.831958ms)
+✔ successful online snapshot publishes complete private SQLite then compression preserves bytes (49.750459ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 305.920875

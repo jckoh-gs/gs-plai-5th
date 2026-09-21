@@ -1,0 +1,11 @@
+{
+  "reviewedAt": "2026-09-21T11:33:13.736532+00:00",
+  "files": {
+    "scripts/remote-backup.mjs": "e54f3d245405c30f9f34c5b2cb6000c320cb2d927b1c9a1017bd50437981b042",
+    "scripts/remote-backup-helpers.mjs": "499c3bb3caa37b22bb8653da7c140d56e981506c0281948195b84e8352e74390",
+    "tests/review-backup.test.js": "5a8161ef629bd877f0892ecff7c67569391de8216742bb287d078f120c6b97dd",
+    "tests/remote-backup.test.js": "b8236631d04aae2eca67ddaf711b8712a0aa0ba4135b481a7c5da32278968959",
+    "docs/issues/evidence/review-016-backup-after.log": "7d4dc5502c24224b404905f727fe9fcb6932148af05018cf4481dff8e5f4e49c"
+  },
+  "scope": "isolated local fixtures; no live interruption or remote mutation"
+}
