@@ -1,0 +1,16 @@
+{
+  "reviewedAt": "2026-09-21T18:00:49.054653+00:00",
+  "preparedAt": "2026-09-21T17:59:32.216108+00:00",
+  "actualPrimaryProcess": "57533 Tue Sep 22 02:59:54 2026     node artifacts/checkpoints/observer-1.7.1-activation/source/primary/soak-monitor.mjs",
+  "files": {
+    "artifacts/checkpoints/observer-1.7.1-activation/source/primary/soak-monitor.mjs": {
+      "originalPath": "scripts/soak-monitor.mjs",
+      "sha256": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3"
+    },
+    "artifacts/checkpoints/observer-1.7.1-activation/source/primary/soak-diagnostics.mjs": {
+      "originalPath": "scripts/soak-diagnostics.mjs",
+      "sha256": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c"
+    }
+  },
+  "scope": "These exact saved copies existed before1.7.1 observer launch and the current primary ps command points to that saved entrypoint. Hashes checked now; not a memory-loaded-code attestation and not a claim about earlier1.7 startup sources."
+}

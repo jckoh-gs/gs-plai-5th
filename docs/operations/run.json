@@ -485,7 +485,7 @@
       "scope": "Current read-only service and actual process identities, saved heartbeat configuration and existing isolated tests. No forced real network outage or AI restart guarantee."
     }
   },
-  "updatedAt": "2026-09-21T18:58:55.937349+00:00",
+  "updatedAt": "2026-09-21T19:01:30.049332+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
@@ -839,5 +839,27 @@
     "persistedFollowupEvidence": "artifacts/checkpoints/connection-1.7.1-20260921T1842-persisted-proof/summary.json",
     "persistedGeneratedAndBrokerAckedPositions": 144,
     "persistedIndependentReview": "docs/issues/evidence/issue030-persisted-review.json"
+  },
+  "firstHourObservation171": {
+    "evidence": "artifacts/checkpoints/soak-1.7.1-first-hour/summary.json",
+    "independentReview": "docs/product/REVIEW-051.md",
+    "capturedAt": "2026-09-21T19:00:10.292916+00:00",
+    "primaryDurationSeconds": 3607.263000011444,
+    "auditDurationSeconds": 3601.0540001392365,
+    "messagesEach": 564,
+    "primaryApiErrors": 1,
+    "auditConnectionErrors": 1,
+    "invalidMessages": 0,
+    "duplicates": 0,
+    "incident": "ISSUE030",
+    "persistedFollowup": "artifacts/checkpoints/connection-1.7.1-20260921T1842-persisted-proof/summary.json",
+    "scope": "First actual one-hour observer boundaries; original error/gap history retained. Not uninterrupted uptime, every-subscriber receipt or whole-goal completion.",
+    "execution": {
+      "owner": "/root",
+      "terminalExitCode": 0,
+      "handle": null,
+      "note": "Synchronous exec completed without session_id"
+    },
+    "processesContinue": true
   }
 }

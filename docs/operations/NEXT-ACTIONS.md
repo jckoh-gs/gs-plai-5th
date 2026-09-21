@@ -30,7 +30,7 @@
 ## 다음 작업과 원래 마감
 
 1. stable-v1.7.1(운영·근거c9b43bd)와 stable-runtime-v1.7.1-40b9ed8(정확 앱40b)의 원격 refs 확인을 완료했다. [태그 증거](../../artifacts/checkpoints/release-1.7.1/tags.json)를 재사용하며 다시 만들거나 이동하지 않는다.
-2. 현재 관측을 유지한다. 첫1시간 capture는 **18:59:55.011Z 이후 실제 양쪽 경계 poll이 존재할 때만** `firstHourCapturePreparation`의 스크립트와 SHA를 확인해 실행한다. [준비 검증](../../artifacts/checkpoints/soak-1.7.1-first-hour-preparation/summary.json)은 실제1시간 증거가 아니다. 이전1.7의 실제1시간과 종료 기록은 그대로 보존한다. 이후 아이디어는 구체적 문제 근거·PRD/아이디어/제품 버전과 검증된 fallback을 갖춰 채택한다.
+2. 현재 관측을 유지한다. [실제1.7.1 첫1시간](../../artifacts/checkpoints/soak-1.7.1-first-hour/summary.json)을19:00:10Z에 확보하고 root 및 REVIEW051이13개 해시·최초경계까지 원문prefix를 대조했다. primary3607.263초/audit3601.054초·각564메시지이며 invalid/duplicate0, API오류1/audit연결오류1·4RTU수신불연속은 ISSUE030과 함께 보존했다. 무오류·무중단으로 표현하지 않는다. 캡처를 반복하거나 관찰기를 재시작하지 않는다. 이전1.7 기록도 그대로 보존한다. 이후 아이디어는 구체적 문제 근거·PRD/아이디어/제품 버전과 검증된 fallback을 갖춰 채택한다.
 3. **21:27:33.079009Z**에 product/security/issues가 선택 버전의 최종 변경·문제·보안 검토를 수행한다. 계획과 링크만으로 역할 종료를 인정하지 않는다. 취약점 잔여와 ISSUE024의 미확정 원인은 유지한다.
 4. **21:37:33.079009Z (한국시간06:37:33)**부터 새 기능을 중단하고 [FINAL-RESTORE-PLAN](FINAL-RESTORE-PLAN.md)에 따라 실제 정상 버전·정확 스냅샷·최종 불변 매니페스트를 확보한다. 새 백업 복원 컷오프21:44:33Z를 넘기면 이미 같은 스냅샷 복원이 검증된 안정 체크포인트 선택 여부를 판단한다. 원래 T0와 종료 시각을 다시 시작하지 않는다.
 5. 그 최종창에 **새 실제 한국어 UI 시연 영상**을 녹화한다. 포인터·클릭·확대/축소·음성·자막,8장면과 실제MQTT125/error0/3상태를 검수한다. 자체201 RTU·private journal을 사용하고 recorder 실제종료 뒤 복구를 검증한다. 이전 리허설은 최종 영상이 아니다. 이어 검수된 동일 영상으로 **새 편집가능14장PPT**를 생성·재수입·전장렌더·검수한다. facts.template은1.7.1의 미검수 준비용이며 reviewed=false/preparationTemplate=true를 임의 승인하지 않는다.

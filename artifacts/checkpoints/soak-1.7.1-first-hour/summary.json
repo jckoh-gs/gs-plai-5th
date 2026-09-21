@@ -1,0 +1,97 @@
+{
+  "capturedAt": "2026-09-21T19:00:10.292916+00:00",
+  "sourceHead": "3ee6aa407054a7337e964e758860225914cc3cab",
+  "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "scope": "Immutable first poll after one hour for each live observer; processes continue. Not uninterrupted uptime or full acceptance proof.",
+  "primary": {
+    "sessionId": "0ea34e34-e199-4b14-84ab-40ff75fa5d96",
+    "startedAt": "2026-09-21T17:59:54.698Z",
+    "through": "2026-09-21T19:00:01.961Z",
+    "durationSeconds": 3607.263000011444,
+    "observations": 345,
+    "messages": 564,
+    "invalid": 0,
+    "duplicates": 0,
+    "apiErrors": 1,
+    "connectionErrors": 0,
+    "maxPending": 1,
+    "nonHealthyPolls": 0,
+    "apiUnavailablePolls": 1,
+    "minRssBytes": 102289408,
+    "maxRssBytes": 158879744
+  },
+  "supplementary": {
+    "sessionId": "1e38bd3c-002a-49f4-9aa8-9039887b7889",
+    "startedAt": "2026-09-21T17:59:55.011Z",
+    "through": "2026-09-21T18:59:56.065Z",
+    "durationSeconds": 3601.0540001392365,
+    "observations": 361,
+    "received": 564,
+    "invalidMessages": 0,
+    "duplicateMessages": 0,
+    "connectionErrors": 1,
+    "rtus": [
+      {
+        "rtuId": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+        "samples": 3591,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 1,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+        "samples": 3583,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 1,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+        "samples": 3581,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 1,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+        "samples": 3613,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+        "samples": 3553,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 1,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      }
+    ]
+  },
+  "incidentEvidence": [
+    "artifacts/checkpoints/connection-1.7.1-20260921T1842/summary.json"
+  ],
+  "interpretation": "Initial1.7.1 observercounterbaseline0; allcapturedcounterincrements and known1.7.1incidentreferences preserved. This is received-observation evidence, not every subscriber receipt or uninterrupted service proof; missingincidentlinks do not prove nooutage.",
+  "processesContinue": true,
+  "primarySourceProvenance": {
+    "reviewedAt": "2026-09-21T18:00:49.054653+00:00",
+    "preparedAt": "2026-09-21T17:59:32.216108+00:00",
+    "actualPrimaryProcess": "57533 Tue Sep 22 02:59:54 2026     node artifacts/checkpoints/observer-1.7.1-activation/source/primary/soak-monitor.mjs",
+    "files": {
+      "artifacts/checkpoints/observer-1.7.1-activation/source/primary/soak-monitor.mjs": {
+        "originalPath": "scripts/soak-monitor.mjs",
+        "sha256": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3"
+      },
+      "artifacts/checkpoints/observer-1.7.1-activation/source/primary/soak-diagnostics.mjs": {
+        "originalPath": "scripts/soak-diagnostics.mjs",
+        "sha256": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c"
+      }
+    },
+    "scope": "These exact saved copies existed before1.7.1 observer launch and the current primary ps command points to that saved entrypoint. Hashes checked now; not a memory-loaded-code attestation and not a claim about earlier1.7 startup sources."
+  }
+}

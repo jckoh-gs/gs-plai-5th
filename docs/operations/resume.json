@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T18:58:55.938195+00:00",
+  "updatedAt": "2026-09-21T19:01:30.049332+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -45,7 +45,7 @@
   ],
   "remainingInOrder": [
     "1.7.1stabletagsremoteverified; completedallmain/restore/manifestgates. Keep72957/8133/48590 andoriginaldeadline. No repeatedmainwrite orrestore.",
-    "Captureactual1.7.1 firsthour onlyafter18:59:55.011Z andbothboundarypolls usingfirstHourCapturePreparation; verifyallhashes independently. Keeporiginalfreeze/deadline; reviewfurtherideaswithversionedadoption andknownfallback.",
+    "Actual1.7.1 first-hour capture and REVIEW051 completed; preserve errors and ISSUE030 received gaps with persisted144-position brokerACK proof. Maintain same current processes until original freeze. Only adopt further concrete improvements with versioned scope and known fallback.",
     "At21:27:33.079009Z conductproduct/security/issues selectedversion finalreviews. Atoriginalfreeze21:37:33.079009Z followFINAL-RESTORE-PLAN actualnormalversion/exactsnapshot/immutablefinalmanifest.",
     "Inoriginalfinalwindow generateNEWrealKoreanUIvideo withpointer/zoom/voice/subtitles; verifyandrecoverownRTU,thenNEWeditable14-slidePPTusingthesamevideo/fullrenders. Existingrehearsalsnotfinal.",
     "Beforeoriginal22:07:33.079009Z deadline verifydelivery/artifacts/remoteGit/finalnormalstate andstopthisrunheartbeat. Do notextendT0 orpretendunfinishedworkcomplete."
@@ -872,7 +872,7 @@
       "podUID": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc"
     },
     "scope": "Preparation only. No first-hour capture, remote command, observer/process/counter changes or scheduled timer. Originalfreeze/deadline retained.",
-    "state": "Prepared only; not before18:59:55.011Z and actualbothhourboundaries; no timerstarted"
+    "state": "Completed actual capture at19:00:10Z, root13hash+exactprefixverified and REVIEW051 complete. Do not rerun or overwrite."
   },
   "activeMediaRehearsal": {
     "productVersion": "1.7.0",
@@ -1413,5 +1413,27 @@
       "scripts/media/final-input-template.json": "2cdcaaa09cc59ce104a9587f23e6e95d0c1cc2ddd3e4809542d470cede58d8e9"
     },
     "checkedAt": "2026-09-21T18:54:56.474955+00:00"
+  },
+  "firstHourObservation171": {
+    "evidence": "artifacts/checkpoints/soak-1.7.1-first-hour/summary.json",
+    "independentReview": "docs/product/REVIEW-051.md",
+    "capturedAt": "2026-09-21T19:00:10.292916+00:00",
+    "primaryDurationSeconds": 3607.263000011444,
+    "auditDurationSeconds": 3601.0540001392365,
+    "messagesEach": 564,
+    "primaryApiErrors": 1,
+    "auditConnectionErrors": 1,
+    "invalidMessages": 0,
+    "duplicates": 0,
+    "incident": "ISSUE030",
+    "persistedFollowup": "artifacts/checkpoints/connection-1.7.1-20260921T1842-persisted-proof/summary.json",
+    "scope": "First actual one-hour observer boundaries; original error/gap history retained. Not uninterrupted uptime, every-subscriber receipt or whole-goal completion.",
+    "execution": {
+      "owner": "/root",
+      "terminalExitCode": 0,
+      "handle": null,
+      "note": "Synchronous exec completed without session_id"
+    },
+    "processesContinue": true
   }
 }
