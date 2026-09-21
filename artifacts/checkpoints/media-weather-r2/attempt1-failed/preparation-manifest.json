@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "preparationOnly": true,
+  "productVersion": "1.7.1",
+  "source": {
+    "commit": "40b9ed898f32037e7a87259d12d145457575a4a8"
+  },
+  "deployment": {
+    "status": "isolated local narration revision2 preparation",
+    "baseUrl": "http://127.0.0.1:3113"
+  }
+}

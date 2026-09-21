@@ -1,0 +1,39 @@
+{
+  "reviewedAt": "2026-09-21T19:05:05.413556+00:00",
+  "result": "PASS",
+  "tests": 16,
+  "newWeatherCases": 5,
+  "existingCases": 11,
+  "terminalExit": 0,
+  "sessionHandle": null,
+  "execution": "Synchronous exec_command completed in 0.45 seconds; no session ID issued",
+  "command": "python3 scripts/deadline-command.py --timeout-seconds 60 -- sh -c 'node --test tests/review-demo-lifecycle.test.js > docs/issues/evidence/weather-demo-recovery-tests-round3.log 2>&1'",
+  "sourceAndLogSha256": {
+    "scripts/media/demo-lifecycle.cjs": "8c69afbe6718c55c2d9b86554fed2ba90e5e16619dcff22f1d5917c1c5a48beb",
+    "tests/review-demo-lifecycle.test.js": "d442a0b47c9e9e67145d1f87aad23aa48ffb74c2e2b4d242cf925743026b63ee",
+    "docs/issues/evidence/weather-demo-recovery-tests-round1.log": "3a5a0a74c1c208f28e606fa39ed8d8c97855dca595750f60ff5576efced4fec9",
+    "docs/issues/evidence/weather-demo-recovery-tests-round2.log": "3d1cb9dcd808d17c6f6140625bc84481169653f5d011809592f22f83ec1a9ac2",
+    "docs/issues/evidence/weather-demo-recovery-tests-round3.log": "77f327368d46e2f85cbf7322eede4cb3962dd3d243afc28e56bdacf7f405472b"
+  },
+  "scope": [
+    "Actual loopback HTTP fixture uses real server/model updateWeather with new temporary owned model and journal; no running app or deployment changes",
+    "Four numeric values plus weather-to-csv mode return to captured actual201 baseline; API truthfully changes default provenance to manual and receipt declares label difference",
+    "Lost weather PATCH response after applied real model change: next recovery reads state and does not resend",
+    "Missing/nonfinite/nonboolean numeric baseline checks reject capture before assigning journal.owned",
+    "Old journal without weather capture reports null weather match and explicitly no restoration claim",
+    "Already matched input values produce true weather match without PATCH or provenance alteration",
+    "Full preexisting internal model object remains identical; all writes target owned ID"
+  ],
+  "failedRoundsPreserved": {
+    "round1": "Wrapper exit125 withheld failed child output",
+    "round2": "15 pass/1 fail: test incorrectly compared publicPlant wall-clock timestamp across reads. No helper defect.",
+    "round3": "16 pass after test compares full underlying unchanged existing model instead of generated presentation timestamps"
+  },
+  "confirmedHelperDefects": [],
+  "limitations": [
+    "Registration capture receives real publicPlant object with explicit201; HTTP registration endpoint itself is not exercised by this fixture",
+    "No real KMA query, media recording or browser scene execution",
+    "No historical provenance restoration, exact RNG trajectory or full goal acceptance claim"
+  ],
+  "runtimeChanged": false
+}

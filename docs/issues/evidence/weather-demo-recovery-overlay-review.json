@@ -1,0 +1,28 @@
+{
+  "at": "2026-09-21T19:09:45.823527+00:00",
+  "issue": "ISSUE031",
+  "result": "FOCUSED_HELPER_REGRESSION_PASS",
+  "tests": 20,
+  "terminalExit": 0,
+  "sessionHandle": null,
+  "execution": "Bounded deadline-command timeout60; synchronous exec completed0.58s without session handle",
+  "sha256": {
+    "scripts/media/demo-lifecycle.cjs": "7674e060ea3cc85805100060810904ac6b29de1d99b8936e7dd6c9103a1a625c",
+    "scripts/media/record-demo.cjs": "dc01e9f9a4337b3de81842e2fd322a5c5bcf11fc834a44002874c1cb9d9794b0",
+    "tests/review-demo-lifecycle.test.js": "fbba2911200be354c9a42ca071de0f32b04ee99ddf354933e2ad350f7ff8b418",
+    "docs/issues/evidence/weather-demo-recovery-overlay-round1.log": "0ffefdada8e46c9ebc215b0de9a51ee847def67e0039886cb41fb3853a719bb3"
+  },
+  "provenScope": [
+    "Actual createPlant/publicPlant CSV overlay has raw wind8 and effective10; clock progression changes public direction; submitted overlay CSV now rejects before owned capture",
+    "Missing/empty/quoted/duplicate/unknown/weather headers and separate irradiance dataset reject capture",
+    "No-request legacy capture creates no weather baseline; old unverified weather field is ignored and null/no-claim returned",
+    "Actual submitted weather-free electrical CSV captures explicit basis and restores mode and input numbers",
+    "Earlier weather restoration/lost-response/no-repatch/provenance and preexisting isolation cases pass with explicit request third argument"
+  ],
+  "limitations": [
+    "Loopback real model fixture only; not actual final video acceptance",
+    "Prior 16test weather-free scope remains historical; no rewrite of earlier test receipts/failure logs",
+    "Actual second focused recording and recovery are pending; ISSUE031 remains open"
+  ],
+  "runtimeChanged": false
+}

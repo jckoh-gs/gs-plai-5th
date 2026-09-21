@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-09-21T19:11:03.184Z",
+  "narrationRevision": 2,
+  "scope": "Preparation only; no credential content, remote registration, final binding or video acceptance",
+  "csvFile": "artifacts/media-preparation/demo-synthetic-weather-control.csv",
+  "csvSha256": "9b763c3be810349c80535c59ad0dd065620dc444c517828e594150b0b15b8dea",
+  "csvHeaders": [
+    "timestamp",
+    "power_kw",
+    "voltage",
+    "current_a"
+  ],
+  "rows": 2,
+  "minPowerKw": 500,
+  "maxPowerKw": 500,
+  "sourceSha256": {
+    "scripts/media/final-input-template.json": "13ca3409b68979d16027db6f99683c2fd92f3a05e7e98f1a265c64502d251133",
+    "scripts/media/scene-plan.cjs": "d69f58893e36ed3c2bae1402a1b919ef983afa62cecc62d2a6e414465b46eb7e",
+    "scripts/media/scenes-template.json": "51ce8b4e6b84b44601aeb22a08f284c6698a4ef389ae62a600dacf44fa5f3a98",
+    "scripts/media/demo-lifecycle.cjs": "7674e060ea3cc85805100060810904ac6b29de1d99b8936e7dd6c9103a1a625c",
+    "scripts/media/record-demo.cjs": "dc01e9f9a4337b3de81842e2fd322a5c5bcf11fc834a44002874c1cb9d9794b0",
+    "server/dataset-preview.js": "9732f5fcc73000494fe4138ff1116ed94f03474c713438901eb225368a194443",
+    "server/model.js": "875d936b0038ef5a9bd3c678a50dafdd8d33c7c0f8c60eba0316def51e95ba67",
+    "artifacts/media-preparation/demo-synthetic-weather-control.csv": "9b763c3be810349c80535c59ad0dd065620dc444c517828e594150b0b15b8dea"
+  },
+  "priorPreparation": "artifacts/checkpoints/final-input-1.7.1-preparation/summary.json",
+  "reason": "Weather demo must distinguish actual manual inputs from CSV effective weather; ISSUE031",
+  "originalScheduleUnchanged": true,
+  "finalBindingRequired": true
+}

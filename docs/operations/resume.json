@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T19:01:30.049332+00:00",
+  "updatedAt": "2026-09-21T19:23:03.326722+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -1387,8 +1387,8 @@
   },
   "audioReviewPreparation": {
     "state": "PREPARATION_VERIFIED; final video and final audio review remain pending",
-    "narrationRevision": 1,
-    "narrationEvidence": "artifacts/checkpoints/audio-narration-adopted-r1/review.json",
+    "narrationRevision": 3,
+    "narrationEvidence": "artifacts/checkpoints/audio-narration-r3-preparation/review.json",
     "candidateComparison": "artifacts/checkpoints/audio-narration-clarity/review.md",
     "technicalAnalysis": "artifacts/checkpoints/audio-review-preparation/analysis.json",
     "localAsrToolEvidence": "artifacts/checkpoints/audio-asr-preparation/summary.json",
@@ -1396,23 +1396,39 @@
     "helperActualExecution": "artifacts/checkpoints/audio-final-helper-preparation/summary.json",
     "independentBoundaryTests": "docs/issues/evidence/audio-transcription-review.json",
     "securityReview": "docs/security/AUDIO-ASR-TOOLS-REVIEW.md",
-    "productReview": "docs/product/REVIEW-050.md",
-    "inputPreparation": "artifacts/checkpoints/final-input-1.7.1-preparation/summary.json",
+    "productReview": "docs/product/REVIEW-054.md",
+    "inputPreparation": "artifacts/checkpoints/final-input-weather-r2-preparation/summary.json",
     "directListening": false,
     "naturalPronunciationVerified": false,
     "remainingRecognitionDifferences": [
+      "재시작/제 시작",
       "난수/난소",
-      "배속/개속",
-      "서버/써본"
+      "대시보드/데시보드",
+      "RTU/RTO",
+      "복원/보건",
+      "취약점/최약점",
+      "padded silence ASR repeated/hallucinated fragments"
     ],
-    "scope": "ASR text comparison only; source of mismatches is unknown. Adopted revision1 preserves JSON format/max20/new runId/outbox and receipt-not-completion semantics. No product runtime change; final original window unchanged.",
+    "scope": "Revision3 preserves revision1 simplifications, adds revision2 actual weather demonstration and explicit separate outbox retransmission/broker evidence wording. Technical ASR only; final new-video audio review remains pending.",
     "sourceSha256": {
-      "scripts/media/scene-plan.cjs": "274e72fba29fa8b34c6c7d2c4e4f939d5b112ef4b5e04b660afd37cc367d1231",
-      "scripts/media/scenes-template.json": "096e8ed40db8c83d9c37045449d47962e4ded10e0864d907bfe183c78c16d74e",
-      "scripts/media/transcribe-audio.py": "7077f0801685ebee5ef78f34ea17a57971267fb7716e8df1dda0d61cef26019a",
-      "scripts/media/final-input-template.json": "2cdcaaa09cc59ce104a9587f23e6e95d0c1cc2ddd3e4809542d470cede58d8e9"
+      "scripts/media/scenes-template.json": "dc2da69b9a78fdf7be6d816941ee09afe45c376a815d1fb3cc72f7994e2770b5",
+      "scripts/media/scene-plan.cjs": "d69f58893e36ed3c2bae1402a1b919ef983afa62cecc62d2a6e414465b46eb7e",
+      "scripts/media/release-features.cjs": "52c5bd8f280f4344ec12da7347eee2265d12db1b673b19a807ec46df9266eb58",
+      "scripts/media/transcribe-audio.py": "7077f0801685ebee5ef78f34ea17a57971267fb7716e8df1dda0d61cef26019a"
     },
-    "checkedAt": "2026-09-21T18:54:56.474955+00:00"
+    "checkedAt": "2026-09-21T19:23:03.326722+00:00",
+    "revision1History": {
+      "narrationEvidence": "artifacts/checkpoints/audio-narration-adopted-r1/review.json",
+      "productReview": "docs/product/REVIEW-050.md",
+      "inputPreparation": "artifacts/checkpoints/final-input-1.7.1-preparation/summary.json",
+      "sourceSha256": {
+        "scripts/media/scene-plan.cjs": "274e72fba29fa8b34c6c7d2c4e4f939d5b112ef4b5e04b660afd37cc367d1231",
+        "scripts/media/scenes-template.json": "096e8ed40db8c83d9c37045449d47962e4ded10e0864d907bfe183c78c16d74e",
+        "scripts/media/transcribe-audio.py": "7077f0801685ebee5ef78f34ea17a57971267fb7716e8df1dda0d61cef26019a",
+        "scripts/media/final-input-template.json": "2cdcaaa09cc59ce104a9587f23e6e95d0c1cc2ddd3e4809542d470cede58d8e9"
+      },
+      "checkedAt": "2026-09-21T18:54:56.474955+00:00"
+    }
   },
   "firstHourObservation171": {
     "evidence": "artifacts/checkpoints/soak-1.7.1-first-hour/summary.json",
@@ -1435,5 +1451,147 @@
       "note": "Synchronous exec completed without session_id"
     },
     "processesContinue": true
+  },
+  "weatherMediaPreparation": {
+    "state": "PREPARATION_VERIFIED; final eight-scene recording remains pending",
+    "revision": 2,
+    "productVersion": "1.7.1",
+    "reason": "REVIEW052 identified missing actual weather-input manipulation and output-change coverage in prior scene3",
+    "productReview": "docs/product/REVIEW-053.md",
+    "sourceOwner": {
+      "lifecycle": "/root",
+      "scenePlanAndNarration": "/root/media",
+      "independentTests": "/root/issues"
+    },
+    "sourceFreeze": "Weather/lifecycle r2 sources verified; narration r3 subsequently reviewed separately, prior r2 source hashes remain historical",
+    "owner": "/root/media",
+    "localFixture": {
+      "handle": 85525,
+      "pid": 86092,
+      "processIdentity": "Tue Sep 22 04:03:26 2026",
+      "apiPort": 3113,
+      "mqttPort": 18883,
+      "mqttPrefix": "mediaweather2",
+      "identity": "artifacts/media-preparation/weather-r2-focused/fixture-identity.json",
+      "state": "TERMINAL",
+      "terminalExitCode": 0,
+      "port3113Closed": true
+    },
+    "recorder": {
+      "handle": 77008,
+      "parentPid": 86314,
+      "workerPid": 86315,
+      "processIdentity": "Tue Sep 22 04:04:33 2026",
+      "output": "artifacts/media-preparation/weather-r2-focused",
+      "state": "terminal1; do not restart"
+    },
+    "observer": {
+      "handle": 43984,
+      "pid": 86288,
+      "startedAt": "2026-09-21T19:04:29Z",
+      "state": "terminal125 after owner stop"
+    },
+    "journal": "artifacts/private/media-weather-r2/demo-journal.json",
+    "independentRecoveryTests": "docs/issues/evidence/weather-demo-recovery-review.json",
+    "policy": "Ask owner to poll original handles and compare actual PID/start identity. Do not restart or recover a live recording. Main3104/18884 and original21:37:33Z freeze/22:07:33Z deadline unchanged. Weather values/mode restore through public API; never forge default/KMA provenance.",
+    "attempt1": {
+      "recorder": {
+        "handle": 77008,
+        "terminalExit": 1
+      },
+      "observer": {
+        "handle": 43984,
+        "terminalExit": 125,
+        "reason": "intentional owner stop after failed recorder terminal"
+      },
+      "evidence": "artifacts/checkpoints/media-weather-r2/attempt1-failed",
+      "issue": "ISSUE031",
+      "scope": "Public effective weather from CSV was wrongly treated as manual configuration; no verified video. Existing2RTU settings unchanged; original failure preserved."
+    },
+    "fixedRecoveryTests": "docs/issues/evidence/weather-demo-recovery-overlay-review.json",
+    "round2": {
+      "state": "COMPLETED_PREPARATION_ONLY",
+      "output": "artifacts/media-preparation/weather-r2-round2",
+      "journal": "artifacts/private/media-weather-r2-round2/demo-journal.json",
+      "csv": "artifacts/media-preparation/demo-synthetic-weather-control.csv",
+      "sourceSha256": {
+        "scripts/media/demo-lifecycle.cjs": "7674e060ea3cc85805100060810904ac6b29de1d99b8936e7dd6c9103a1a625c",
+        "scripts/media/record-demo.cjs": "dc01e9f9a4337b3de81842e2fd322a5c5bcf11fc834a44002874c1cb9d9794b0",
+        "scripts/media/scene-plan.cjs": "d69f58893e36ed3c2bae1402a1b919ef983afa62cecc62d2a6e414465b46eb7e",
+        "scripts/media/scenes-template.json": "51ce8b4e6b84b44601aeb22a08f284c6698a4ef389ae62a600dacf44fa5f3a98",
+        "scripts/media/final-input-template.json": "13ca3409b68979d16027db6f99683c2fd92f3a05e7e98f1a265c64502d251133"
+      },
+      "recorder": {
+        "handle": 83763,
+        "parentPid": 87381,
+        "parentIdentity": "Tue Sep 22 04:10:18 2026",
+        "workerPid": 87382,
+        "workerIdentity": "Tue Sep 22 04:10:19 2026",
+        "terminalExitCode": 0
+      },
+      "observer": {
+        "handle": 98107,
+        "pid": 87355,
+        "processIdentity": "Tue Sep 22 04:10:15 2026",
+        "terminalExitCode": 0
+      },
+      "newInputPreparation": "artifacts/checkpoints/final-input-weather-r2-preparation/summary.json",
+      "securityReview": "docs/security/WEATHER-DEMO-REVIEW.md",
+      "evidence": "artifacts/checkpoints/media-weather-r2/round2-passed/summary.json",
+      "postMqtt": {
+        "handle": 77844,
+        "terminalExitCode": 0,
+        "actualKw": 125,
+        "errorKw": 0
+      },
+      "asr": {
+        "handle": 16567,
+        "terminalExitCode": 0,
+        "directListening": false
+      },
+      "weatherTransitionKw": [
+        500,
+        651.8,
+        500
+      ],
+      "normalRecovery": "PASS",
+      "postCommandRecovery": "PASS",
+      "preexistingThreeUnchanged": true,
+      "historicalWeatherProvenanceRestored": false,
+      "videoSha256": "969a05c0baae308e94bc6675e3eef3c899b42e7de85d3d9833ccdcd4f6c8d075",
+      "videoDurationSeconds": 131.13,
+      "finalEightSceneDurationEstimateSeconds": 291.33
+    },
+    "rootReview": "artifacts/checkpoints/media-weather-r2-root-review/checks.json",
+    "rootReviewExecution": "artifacts/checkpoints/media-weather-r2-root-review/execution.json",
+    "issueResolution": "docs/issues/evidence/issue031-after-review.json",
+    "checkedAt": "2026-09-21T19:20:34.169786+00:00"
+  },
+  "narrationRevision3Preparation": {
+    "state": "PREPARATION_VERIFIED",
+    "owner": "/root/media",
+    "reason": "REVIEW053 explicit separate outbox retransmission and broker confirmation explanation",
+    "scope": "Narration-only scene6 delta; actual voice duration/ASR preparation, no new UI/remote recording or runtime change",
+    "preserveRevision2": "artifacts/checkpoints/media-weather-r2",
+    "finalWindowUnchanged": true,
+    "evidence": "artifacts/checkpoints/audio-narration-r3-preparation/review.json",
+    "rootReview": "artifacts/checkpoints/audio-narration-r3-root-review/checks.json",
+    "productReview": "docs/product/REVIEW-054.md",
+    "synthesis": {
+      "handle": 88272,
+      "terminalExitCode": 0
+    },
+    "fullAsr": {
+      "handle": 40659,
+      "terminalExitCode": 0
+    },
+    "changedSceneAsr": {
+      "handle": 58340,
+      "terminalExitCode": 0
+    },
+    "minimumPlannedTimelineSeconds": 290,
+    "actualVoiceSeconds": 161.6374375,
+    "directListening": false,
+    "checkedAt": "2026-09-21T19:23:03.326722+00:00"
   }
 }

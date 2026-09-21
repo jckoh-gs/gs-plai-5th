@@ -1,0 +1,405 @@
+{
+  "preparationOnly": true,
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 3643,
+      "sha256": "e07fed76a9f10f95dd7bee16acf7eda18e9a6833f2bc3b559e54fd495233962b"
+    },
+    {
+      "file": "attempt1-failed/config.json",
+      "bytes": 8825,
+      "sha256": "d9ad7d5064f9fc06cf949e818e0b6bbed52a28f2e3d9965318c5f0f39ba64805"
+    },
+    {
+      "file": "attempt1-failed/fixture-identity.json",
+      "bytes": 1404,
+      "sha256": "3ae1b471528e8c8ddc00b54e57019741b0e342a6606d972daea30b7e557d70d0"
+    },
+    {
+      "file": "attempt1-failed/observer-terminal.json",
+      "bytes": 369,
+      "sha256": "51abd90ddd4c54cffb584cd3c2058ae4d3e301d4a9eb04ae8aafb7a63b6224fc"
+    },
+    {
+      "file": "attempt1-failed/preparation-manifest.json",
+      "bytes": 282,
+      "sha256": "95556d4bf35e8e464dd10e2f6960a57d75d777f48d97cdb724263bf21baa344e"
+    },
+    {
+      "file": "attempt1-failed/recovery-failed.json",
+      "bytes": 1459,
+      "sha256": "bf686579b7cea5cf036d211c999b848bd39e642c29981445bf52709d956d9630"
+    },
+    {
+      "file": "attempt1-failed/scene-guard-result.json",
+      "bytes": 116,
+      "sha256": "2ab6e130b2f1d68051fffd1aac21ae551778db05bdf102b4d885e13a3a9523e4"
+    },
+    {
+      "file": "attempt1-failed/source-hashes.json",
+      "bytes": 4579,
+      "sha256": "4f0fbcd6897ebc6758ccc06f6c06027a1c5538f76519990259edbb9978370034"
+    },
+    {
+      "file": "attempt1-failed/terminal.json",
+      "bytes": 387,
+      "sha256": "1a209b87d7cf24123af266e613c4c1c823b309d2afaa98f2511bf29ddf273a6c"
+    },
+    {
+      "file": "attempt1-failed/weather-before.png",
+      "bytes": 261652,
+      "sha256": "181be62352aeab4c72fd59e94500586be3e299361c4f8585d5872668c6b3ffc7"
+    },
+    {
+      "file": "attempt1-failed/weather-csv-restored.png",
+      "bytes": 194397,
+      "sha256": "772da81a1211c35ccd0ce7f17a6f5592ae04c0865c88a4fa6a2155b7360d2abc"
+    },
+    {
+      "file": "attempt1-failed/weather-model-output.png",
+      "bytes": 193985,
+      "sha256": "372e55cce637e18c4b9eba682731b44fbfdfc75ed58533dde49b2f6d6d198991"
+    },
+    {
+      "file": "attempt1-failed/weather-transition-summary.json",
+      "bytes": 2694,
+      "sha256": "824e7d13dba20e07850f451772f8aee1ada7330930edd8eb23db4587397a92c5"
+    },
+    {
+      "file": "narration-asr/receipt.json",
+      "bytes": 4445,
+      "sha256": "0fb9b1f86c74695f594d5696b10edb0cfa5b1ec73e6ee26fc485716b27e4646a"
+    },
+    {
+      "file": "narration-asr/terminal.json",
+      "bytes": 252,
+      "sha256": "177bbbafc5998a4f8ab262380921d6a7ec770ce0e46ab28ac83829978cd55d9b"
+    },
+    {
+      "file": "narration-asr/transcription.json",
+      "bytes": 2438,
+      "sha256": "6c803f43a03b7c1a7ae1817d70ad965e559ad19df863b9c366033f30b7371822"
+    },
+    {
+      "file": "narration-asr/transcription.srt",
+      "bytes": 883,
+      "sha256": "dbb4fb1aab0132a919280ca5df75ff94d915c7e9e8d12e77cb7e54f6da78f662"
+    },
+    {
+      "file": "narration-asr/transcription.txt",
+      "bytes": 645,
+      "sha256": "65ec1c4a773ad9c305cbb2039da3f20fa5dc04f00e1044d0c5717b55d7716124"
+    },
+    {
+      "file": "observe.py",
+      "bytes": 1012,
+      "sha256": "e5ae86a8985024cb4b27a634527db9e6172cdec08d7a44db0248a23ac32ea033"
+    },
+    {
+      "file": "round2-passed/GRID-VPP-demo-ko.srt",
+      "bytes": 1655,
+      "sha256": "0b7c102767df32aef2e258967421d82042aa20ce473abb4869c27609faa4af2c"
+    },
+    {
+      "file": "round2-passed/config.json",
+      "bytes": 8867,
+      "sha256": "8d147e00891b621f26fdaff301f7128b49fc26da99aca6d0c42aa93287cd8113"
+    },
+    {
+      "file": "round2-passed/csv-500-encoded.png",
+      "bytes": 384916,
+      "sha256": "c7d62942272f8fb3035fda07dd6c891e7475b884af43a4fe6ecdbf2149d20997"
+    },
+    {
+      "file": "round2-passed/demo-recovery.json",
+      "bytes": 1954,
+      "sha256": "b303338e7b889782bd3fb712cf4cd2f1513cd2303dcf9d7abcb74dab30448173"
+    },
+    {
+      "file": "round2-passed/encoded-frame-times.json",
+      "bytes": 3742,
+      "sha256": "b1c4435aa9ea6c9e51a3d4ccdd8ba8fb2c22fd32bcce56eb2887d6f773d5913c"
+    },
+    {
+      "file": "round2-passed/fixture-stop-request.json",
+      "bytes": 199,
+      "sha256": "6440dfac7eb7fe401cff890da585bc932b8a72f34683607da4fee21089cc92ed"
+    },
+    {
+      "file": "round2-passed/narration-ko.md",
+      "bytes": 1304,
+      "sha256": "75dff9d93e9fe4602197a9c679bdf478c5222a5be6bfbfe39f2396e5e003e495"
+    },
+    {
+      "file": "round2-passed/observe.py",
+      "bytes": 1011,
+      "sha256": "c9930ec61abff9d768e8ce819bfc07164ed6dbf91282b285fb792b86949d6bfb"
+    },
+    {
+      "file": "round2-passed/post-command-recovery.json",
+      "bytes": 1713,
+      "sha256": "d1c1f21bd61ff311774228b38d90a49658a93369859f3730a9260bf6cfb76afb"
+    },
+    {
+      "file": "round2-passed/post-command.cjs",
+      "bytes": 1815,
+      "sha256": "0208f2d511e755868efe4fb0afcf406cc0e15d513e9c94e2385918c3a119bc75"
+    },
+    {
+      "file": "round2-passed/post-weather-command.json",
+      "bytes": 1213,
+      "sha256": "f4c63da9b7fcd082a55561b82bcf4809ab53debecbe80881dd7a48eacb32167a"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/artifacts/media-preparation/demo-synthetic-weather-control.csv",
+      "bytes": 111,
+      "sha256": "9b763c3be810349c80535c59ad0dd065620dc444c517828e594150b0b15b8dea"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/artifacts/media-preparation/weather-r2-round2/config.json",
+      "bytes": 8867,
+      "sha256": "8d147e00891b621f26fdaff301f7128b49fc26da99aca6d0c42aa93287cd8113"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/build-deck.mjs",
+      "bytes": 14224,
+      "sha256": "529899c6ba2eab70e9dac58549bad6a26ac36d8629c330ba1aa75e4bfffba9d3"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/deck-template.json",
+      "bytes": 10520,
+      "sha256": "9687e368bb78003edf4bbcae7345c36c09547fe6a50532b51f3a0e3d9294da26"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/demo-lifecycle.cjs",
+      "bytes": 12691,
+      "sha256": "7674e060ea3cc85805100060810904ac6b29de1d99b8936e7dd6c9103a1a625c"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/facts.template.json",
+      "bytes": 15704,
+      "sha256": "004464ebfea30cf2c2b4686a0a8332219b94c21bde1ecf0c8005eb7b5bc89319"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/final-deck-binding.cjs",
+      "bytes": 12395,
+      "sha256": "b105931fcfde888e607e867845ea0b32c1dee26869e759584f4e1dbeb6225371"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/final-input-template.json",
+      "bytes": 507,
+      "sha256": "13ca3409b68979d16027db6f99683c2fd92f3a05e7e98f1a265c64502d251133"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/media-deadline.cjs",
+      "bytes": 4313,
+      "sha256": "fdac80297e5938d921e7090c82e7934c5afececc5bce6cc2e70bfe7dae808721"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/prepare-final-deck.cjs",
+      "bytes": 756,
+      "sha256": "993b41ee7eae315e7554822a348e5ef5dc5e77ddc87388e221fb3700eb253b7b"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/prepare-final-scenes.cjs",
+      "bytes": 3048,
+      "sha256": "e89c70ed3fa96d8eb9c330d72b862185952905b5b436d6c421fa5074ba9ea0ae"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/prepare-rehearsal.cjs",
+      "bytes": 1598,
+      "sha256": "830f3398871b763e44cfaf3ccb68845ef01644511d004ce735c05ea806797f6a"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/presentation-pilot.mjs",
+      "bytes": 3548,
+      "sha256": "0a7747f735ef5594b62b2909f8e2006329e39f6cecd3e0022bbff33c3770a7a5"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/record-demo.cjs",
+      "bytes": 20186,
+      "sha256": "dc01e9f9a4337b3de81842e2fd322a5c5bcf11fc834a44002874c1cb9d9794b0"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/recording-sources.cjs",
+      "bytes": 4111,
+      "sha256": "12280b429f3cf83d33d3850f291d207771f1548836d3b28f29b37f5221258eff"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/recover-demo.cjs",
+      "bytes": 1435,
+      "sha256": "803558acb145447b45c1ff9e4c98178c130a4120d9d398fda16e6568c0c02762"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/release-binding.cjs",
+      "bytes": 1947,
+      "sha256": "46fd7620f0bbc0890bd40b98b68093ccdedb0c24c77e9f2be3bb75402cf8f656"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/release-features.cjs",
+      "bytes": 510,
+      "sha256": "52c5bd8f280f4344ec12da7347eee2265d12db1b673b19a807ec46df9266eb58"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/scene-plan.cjs",
+      "bytes": 8522,
+      "sha256": "d69f58893e36ed3c2bae1402a1b919ef983afa62cecc62d2a6e414465b46eb7e"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/scenes-template.json",
+      "bytes": 4413,
+      "sha256": "51ce8b4e6b84b44601aeb22a08f284c6698a4ef389ae62a600dacf44fa5f3a98"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/transcribe-audio.py",
+      "bytes": 9398,
+      "sha256": "7077f0801685ebee5ef78f34ea17a57971267fb7716e8df1dda0d61cef26019a"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/validate-command-download.cjs",
+      "bytes": 1711,
+      "sha256": "baa22eb3c4528805818928a386b37e34a83e153ee8258c3fe7af356933011c11"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/scripts/media/video-pilot.cjs",
+      "bytes": 3795,
+      "sha256": "d2457e54aa0c98c5e5fd2b8f30073021c50326600c31a6595eafd1879c6d405d"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/server/command-export.js",
+      "bytes": 3562,
+      "sha256": "6bba250ec237006e1d8f9b7e4b475870f3366a5a7cc9299c3519f4fc8149863e"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/server/config.js",
+      "bytes": 1547,
+      "sha256": "9ed29685b837bb4da146792723bd4edd9cf4874a8a31e3da75f4f8027bcedac6"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/server/control.js",
+      "bytes": 7506,
+      "sha256": "ceabb746658b7bb3af35b767457ea81129da1ddf4f142850dc11a4fff467b9ac"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/server/dataset-preview.js",
+      "bytes": 1515,
+      "sha256": "9732f5fcc73000494fe4138ff1116ed94f03474c713438901eb225368a194443"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/server/index.js",
+      "bytes": 12215,
+      "sha256": "fdced6abe1dc0917d72a8ddedb110bb904b6a439c49071d947049a3a9fed593d"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/server/metrics.js",
+      "bytes": 1430,
+      "sha256": "590169fdfc7431bb07cf7df957ae969cdf707244b809a1d7c1c8e6d642f9f817"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/server/model.js",
+      "bytes": 21183,
+      "sha256": "875d936b0038ef5a9bd3c678a50dafdd8d33c7c0f8c60eba0316def51e95ba67"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/server/store.js",
+      "bytes": 7162,
+      "sha256": "5b497e48f84e0a918a6d565e5dc9c741c4e68fc69c8141d813e7921e96a73969"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/server/transport.js",
+      "bytes": 8832,
+      "sha256": "90c33b2c5b7eff62ffb6c2c2dc8a6a659b9ab6e770119eadc862f3094431d29a"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/server/weather.js",
+      "bytes": 4323,
+      "sha256": "4d10a10957053d68f22349021b358a1d730622a457b824e26521723f0fea64d9"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/web/command-list.js",
+      "bytes": 1951,
+      "sha256": "18e353fb7119f39724209f662458bab82e5737e827ad1013529cdfff3011f026"
+    },
+    {
+      "file": "round2-passed/pre-run-sources/web/src.jsx",
+      "bytes": 60027,
+      "sha256": "ffbb204d9275fc14ebfdd9ea3ea488494ca2c0c97271f6af69f69993ddbfa592"
+    },
+    {
+      "file": "round2-passed/preparation-manifest.json",
+      "bytes": 282,
+      "sha256": "95556d4bf35e8e464dd10e2f6960a57d75d777f48d97cdb724263bf21baa344e"
+    },
+    {
+      "file": "round2-passed/scene1-encoded.png",
+      "bytes": 441172,
+      "sha256": "293524c56791517e00725f68fdf7ba6dc76622c694edc08a38c7e69d94601a2c"
+    },
+    {
+      "file": "round2-passed/scene2-encoded.png",
+      "bytes": 347325,
+      "sha256": "dd1dfeccf1a512834b3b8e5ee4a1a67946fe78f1bda2cf97949946361532568c"
+    },
+    {
+      "file": "round2-passed/scenes.json",
+      "bytes": 12829,
+      "sha256": "98a29e44aa46afa60c6574f49a43e2c5842b4603f2a409b43184aafbc6b75ede"
+    },
+    {
+      "file": "round2-passed/source-hashes.json",
+      "bytes": 4746,
+      "sha256": "b23279a39980e6bfefade5e232510a4ae5c94b1679a0945d832386e89d09f7fe"
+    },
+    {
+      "file": "round2-passed/subtitle-check.json",
+      "bytes": 211,
+      "sha256": "18fbc301aa9f1cb37fb0a2a7f85d20ddaa4e4680ff62f155e4f9c22f2015eedc"
+    },
+    {
+      "file": "round2-passed/summary.json",
+      "bytes": 2028,
+      "sha256": "27ed806a24f32e2153581a9d0130dc133bf7dd700f67f0a9193544c2919cf948"
+    },
+    {
+      "file": "round2-passed/verification.json",
+      "bytes": 3326,
+      "sha256": "d56906c45d4946dac8122dba7ca864c608bf29da22531cbaa13d0525ee745065"
+    },
+    {
+      "file": "round2-passed/video-asr/receipt.json",
+      "bytes": 4404,
+      "sha256": "8d2d5e53cd28f90fd61acdc5559bf3758b62380de180f11c42057e0416c17f89"
+    },
+    {
+      "file": "round2-passed/video-asr/terminal.json",
+      "bytes": 388,
+      "sha256": "5d7acd2c2e39130087edf0946529b65e6723d063ecdbf9e931617a7ff1f4d8cd"
+    },
+    {
+      "file": "round2-passed/video-asr/transcription.json",
+      "bytes": 4268,
+      "sha256": "8a3ceeae758704f43daf6d7c3aaf586a3dfd1ed98bd40973bf677929ab0fe597"
+    },
+    {
+      "file": "round2-passed/video-asr/transcription.srt",
+      "bytes": 1729,
+      "sha256": "0492fb9d0a458af58bc3fcfa0234d8bfb2cafef24865c7359da3c3498cbef620"
+    },
+    {
+      "file": "round2-passed/video-asr/transcription.txt",
+      "bytes": 1213,
+      "sha256": "15636f952775989d1f680fd78f644019b6a9da1286e4e15a3cb4d7c3afb201c2"
+    },
+    {
+      "file": "round2-passed/weather-6518-encoded.png",
+      "bytes": 374916,
+      "sha256": "2ec767cbc27889f7aa6638b4b9b8ef304c77912f0fa33cbce3b9c9b7cee3a57e"
+    },
+    {
+      "file": "round2-passed/weather-observations.jsonl",
+      "bytes": 242025,
+      "sha256": "a5ed55921e672bfe60a3a474896d71019957b7ef49b165f1ebee7f03d1bc584d"
+    }
+  ]
+}

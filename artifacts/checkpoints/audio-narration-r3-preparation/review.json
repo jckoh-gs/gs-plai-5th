@@ -1,0 +1,29 @@
+{
+  "preparationOnly": true,
+  "narrationRevision": 3,
+  "synthesis": {
+    "sessionId": 88272,
+    "exitCode": 0,
+    "sentences": 34,
+    "scenes": 8,
+    "actualVoiceSeconds": 161.6374375,
+    "minimumPlannedSeconds": 290,
+    "plannedSrtSourceMatches": true
+  },
+  "scope": "current1.7.1 feature-expanded final-wording script only; no video,app,RTU,remote or actual deployment action",
+  "changedScene": 6,
+  "changedSentence": 3,
+  "adoptedText": "미확인 배치의 재시작 후 재전송과 브로커 확인은 함께 제공하는 별도 실행 근거에서 확인할 수 있습니다.",
+  "fullAsrFinding": "Retransmission and broker confirmation explicitly recognized as separate execution evidence. Full290s padded audio produces duplicated/hallucinated fragments aroundscene4/8; do not use rawASR as narration truth or pronunciation pass.",
+  "focusedAsrFinding": "재전송과 브로커 확인 / 별도 실행 근거 recognized; 재시작 rendered 제 시작 and 의 rendered 에. No attribution of mismatch cause.",
+  "otherRecognitionDifferences": [
+    "난수→난소",
+    "대시보드→데시보드",
+    "RTU→RTO in one scene",
+    "복원/취약점→보건/최약점 in closing"
+  ],
+  "directListening": false,
+  "naturalPronunciationVerified": false,
+  "timingLimit": "290s is floor from max(scene.seconds,actualVoice+1.5), before browser-action overruns/loadlead; planned SRT has no actualvideo alignment claim.",
+  "oldEvidenceModified": false
+}

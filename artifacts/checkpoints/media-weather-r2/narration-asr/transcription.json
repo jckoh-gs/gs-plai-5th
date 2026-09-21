@@ -1,0 +1,109 @@
+{
+	"systeminfo": "WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | SME2 = 1 | ACCELERATE = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": true,
+		"vocab": 51865,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/ggml-small.bin",
+		"language": "ko",
+		"translate": false
+	},
+	"result": {
+		"language": "ko"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:04,600"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 4600
+			},
+			"text": " 풍력과 태양광, 복합 단지를 같은 데시보드에서 선택합니다."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:04,600",
+				"to": "00:00:10,120"
+			},
+			"offsets": {
+				"from": 4600,
+				"to": 10120
+			},
+			"text": " 3차원 장면에서 풍양과 회전을 확인하고, 드래그와 휠 로 시점을 조절합니다."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:10,120",
+				"to": "00:00:14,640"
+			},
+			"offsets": {
+				"from": 10120,
+				"to": 14640
+			},
+			"text": " 측정한 값은 현재 선택한 단지와 발전기 상태를 보여줍니다."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:14,640",
+				"to": "00:00:22,600"
+			},
+			"offsets": {
+				"from": 14640,
+				"to": 22600
+			},
+			"text": " 수동 기상으로 풍속과 풍향, 일사 입력을 바꾸고 출력, 변화를 확인한 귀 CSV1 본 출력으로 돌아옵니다."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:22,600",
+				"to": "00:00:26,200"
+			},
+			"offsets": {
+				"from": 22600,
+				"to": 26200
+			},
+			"text": " 수동으로 적용한 기상 출처는 수동 상태로 남습니다."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:26,200",
+				"to": "00:00:28,320"
+			},
+			"offsets": {
+				"from": 26200,
+				"to": 28320
+			},
+			"text": " 명령 접수는 완료와 다릅니다."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:28,320",
+				"to": "00:00:35,120"
+			},
+			"offsets": {
+				"from": 28320,
+				"to": 35120
+			},
+			"text": " 접수 패널은 마지막으로 받은 결과를 보여주며, 저장 상태 확인으로 서버 상태를 다시 조회합니다."
+		}
+	]
+}

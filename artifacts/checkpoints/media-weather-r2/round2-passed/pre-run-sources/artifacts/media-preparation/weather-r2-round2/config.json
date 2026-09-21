@@ -1,0 +1,339 @@
+{
+  "baseUrl": "http://127.0.0.1:3113",
+  "tokenFile": "artifacts/private/media-weather-r2/api-token",
+  "releaseManifest": "artifacts/media-preparation/weather-r2-round2/preparation-manifest.json",
+  "approvedReleaseCommit": "POPULATE_AT_FREEZE",
+  "approvedImageDigest": "POPULATE_AT_FREEZE",
+  "outputDir": "artifacts/video",
+  "speechRate": 170,
+  "scenes": [
+    {
+      "title": "VPP 시험 목적과 시스템 경계",
+      "seconds": 24,
+      "narration": "이 영상은 제작 과정을 확인하는 리허설입니다. 로컬 가상 데이터로 실제 화면을 조작합니다. GRID는 외부 VPP의 데이터 수집과 제어 경로를 시험하며 실물 설비나 시장 입찰은 다루지 않습니다.",
+      "actions": [
+        {
+          "type": "click",
+          "role": "link",
+          "name": "통합 대시보드"
+        },
+        {
+          "type": "click",
+          "selector": ".plant-card:has(h3:text-is(\"Weather r2 wind\"))"
+        },
+        {
+          "type": "wait",
+          "ms": 1500
+        }
+      ]
+    },
+    {
+      "title": "CSV 등록과 가상 현장",
+      "seconds": 34,
+      "narration": "CSV 또는 TSV를 넣고 해석 미리보기로 시각과 단위, 정규화 출력을 먼저 확인합니다. 미리보기는 RTU를 만들지 않습니다. 실제 등록 때 다시 검증하고 일 초 단위 수집을 시작합니다. 원본 전류와 추정 전류도 구분합니다.",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "header button"
+        },
+        {
+          "type": "fill",
+          "label": "단지명",
+          "value": "날씨 r2 재검증 복합 1790017773889"
+        },
+        {
+          "type": "select",
+          "label": "발전 유형",
+          "value": "hybrid"
+        },
+        {
+          "type": "fill",
+          "label": "발전기 수 (기)",
+          "value": 2
+        },
+        {
+          "type": "fill",
+          "label": "1기 정격 (kW)",
+          "value": 500
+        },
+        {
+          "type": "fill",
+          "label": "램프 (kW/s)",
+          "value": 25
+        },
+        {
+          "type": "upload",
+          "label": "발전 CSV / TSV 파일",
+          "file": "artifacts/media-preparation/demo-synthetic-weather-control.csv"
+        },
+        {
+          "type": "wait",
+          "ms": 2000
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "CSV 해석 미리보기"
+        },
+        {
+          "type": "assert",
+          "label": "CSV 해석 미리보기 결과"
+        },
+        {
+          "type": "focus",
+          "label": "CSV 해석 미리보기 결과"
+        },
+        {
+          "type": "wait",
+          "ms": 2500
+        },
+        {
+          "type": "capture",
+          "name": "csv-preview"
+        },
+        {
+          "type": "capture",
+          "name": "csv-registration"
+        },
+        {
+          "type": "register",
+          "role": "button",
+          "name": "RTU 등록 · 수집 시작"
+        },
+        {
+          "type": "wait",
+          "ms": 2500
+        }
+      ],
+      "zoom": {
+        "scale": 1.1
+      }
+    },
+    {
+      "title": "풍력 태양광 복합 UI",
+      "seconds": 72,
+      "narration": "풍력과 태양광, 복합 단지를 같은 대시보드에서 선택합니다. 삼차원 장면에서 풍향과 회전을 확인하고 드래그와 휠로 시점을 조절합니다. 측정한 값은 현재 선택한 단지와 발전기 상태를 보여줍니다. 수동 기상으로 풍속과 풍향, 일사 입력을 바꾸고 출력 변화를 확인한 뒤 CSV 원본 출력으로 돌아옵니다. 수동으로 적용한 기상 출처는 수동 상태로 남습니다. 명령 접수는 완료와 다릅니다. 접수 패널은 마지막으로 받은 결과를 보여주며, 저장 상태 확인으로 서버 상태를 다시 조회합니다.",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": ".scene canvas"
+        },
+        {
+          "type": "drag",
+          "selector": ".scene canvas",
+          "from": [
+            0.4,
+            0.5
+          ],
+          "to": [
+            0.65,
+            0.55
+          ]
+        },
+        {
+          "type": "scroll",
+          "y": -140
+        },
+        {
+          "type": "wait",
+          "ms": 1500
+        },
+        {
+          "type": "capture",
+          "name": "hybrid-camera"
+        },
+        {
+          "type": "click",
+          "selector": ".plant-card:has(h3:text-is(\"Weather r2 wind\"))"
+        },
+        {
+          "type": "wait",
+          "ms": 2000
+        },
+        {
+          "type": "click",
+          "selector": ".plant-card:has(h3:text-is(\"Weather r2 solar\"))"
+        },
+        {
+          "type": "wait",
+          "ms": 2000
+        },
+        {
+          "type": "click",
+          "selector": ".plant-card:has(h3:text-is(\"날씨 r2 재검증 복합 1790017773889\"))"
+        },
+        {
+          "type": "focus",
+          "label": "발전 입력 모드"
+        },
+        {
+          "type": "capture",
+          "name": "weather-before"
+        },
+        {
+          "type": "select",
+          "label": "발전 입력 모드",
+          "value": "weather"
+        },
+        {
+          "type": "fill",
+          "label": "풍속 (m/s)",
+          "value": 14
+        },
+        {
+          "type": "fill",
+          "label": "풍향 (°)",
+          "value": 90
+        },
+        {
+          "type": "fill",
+          "label": "일사 (W/m²)",
+          "value": 300
+        },
+        {
+          "type": "fill",
+          "label": "온도 (°C)",
+          "value": 22
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "기상 적용",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 10000
+        },
+        {
+          "type": "focus",
+          "selector": ".scene canvas"
+        },
+        {
+          "type": "capture",
+          "name": "weather-model-output"
+        },
+        {
+          "type": "select",
+          "label": "발전 입력 모드",
+          "value": "csv"
+        },
+        {
+          "type": "fill",
+          "label": "풍속 (m/s)",
+          "value": 8
+        },
+        {
+          "type": "fill",
+          "label": "풍향 (°)",
+          "value": 240
+        },
+        {
+          "type": "fill",
+          "label": "일사 (W/m²)",
+          "value": 650
+        },
+        {
+          "type": "fill",
+          "label": "온도 (°C)",
+          "value": 22
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "기상 적용",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 12000
+        },
+        {
+          "type": "focus",
+          "selector": ".scene canvas"
+        },
+        {
+          "type": "capture",
+          "name": "weather-csv-restored"
+        },
+        {
+          "type": "range",
+          "selector": "#limit",
+          "value": 80
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "출력 상한 적용",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 2000
+        },
+        {
+          "type": "click",
+          "selector": ".dashboard-bottom .button.danger",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 2000
+        },
+        {
+          "type": "click",
+          "selector": ".dashboard-bottom .button-row button:first-child",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 3000
+        },
+        {
+          "type": "range",
+          "selector": "#limit",
+          "value": 100
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "출력 상한 적용",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 1500
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "저장 상태 확인"
+        },
+        {
+          "type": "wait",
+          "ms": 1500
+        },
+        {
+          "type": "capture",
+          "name": "rest-receipt-stored-status"
+        }
+      ]
+    }
+  ],
+  "preparationTemplate": true,
+  "mqtt": {
+    "url": "mqtt://127.0.0.1:18883",
+    "prefix": "mediaweather2"
+  },
+  "lifecycle": {
+    "journalPath": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/media-weather-r2-round2/demo-journal.json",
+    "registration": {
+      "name": "날씨 r2 재검증 복합 1790017773889",
+      "type": "hybrid",
+      "count": 2,
+      "ratedKw": 500,
+      "rampKwPerSec": 25
+    }
+  },
+  "rehearsalName": "weather-r2-round2"
+}

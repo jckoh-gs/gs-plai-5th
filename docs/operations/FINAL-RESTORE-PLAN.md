@@ -4,6 +4,8 @@
 
 직전1.7/1cab(931876864바이트)의 `checkpoint-1.7.0.json`·태그·복원 근거를 보존한다. 그 이전 검증된 `checkpoint-1.6.0.json`은 source b729f4287cf6a5a5527fa37f105e61bd41e135b7/1466해시/REVIEW033/SHA fd3fedc9dffb6bdc8d6e69982554dabde24bf3054113f02dc8370385bc238ae5를 보존한다. stable-v1.6.0의 전체 운영·근거180fa68과 runtimealias331을 구분한다. 1.6/9bd(851673088바이트),1.5/ad34(719527936바이트),1.4/be09 등 이전 불변 manifest·백업은 그대로 보존하고 현재1.7.1/5ff 증거와 혼합하지 않는다. 동결21:37:33Z, 종료22:07:33Z는 변경하지 않는다. 재개 시 resume.json의 현재PID·핸들·실제Git을 확인하며 완료한 배포·제어·복원을 반복하지 않는다.
 
+최종 미디어 입력은 revision2의 기상열없는 `artifacts/media-preparation/demo-synthetic-weather-control.csv`를 사용한다. 실제 제출 CSV와201 응답으로 검증된 입력 기준만 복구하며 default/KMA 과거 출처를 만들어 복원하지 않는다. [REVIEW053](../product/REVIEW-053.md)과 [메인 검수](../../artifacts/checkpoints/media-weather-r2-root-review/checks.json)는 집중3장면의500→651.8→500·후속125·복구를 확인한 준비 근거다. 최종 녹화에서도 새 고유 journal·소유RTU를 사용하고 같은 관측/복구를 새로 검수한다. 전체영상 약291초 예상은 실측값이 아니며 아래7~15분 제작창과 원래 마감은 유지한다.
+
 ## 선행 준비와 한계
 
 프로젝트 루트에서 Node24+, Python3, kubectl charles-k3s 접근, Chrome/Playwright 런타임, 기존 비밀 파일 `artifacts/private/deploy/{api-token,client-password}`가 필요하다. 비밀을 명령행/로그/공개 Git에 넣지 않는다. 실제 클러스터의 여유 디스크를 동결 전에 다시 확인한다. 과거 공간 관측은 당시 값이며 현재 여유량으로 재사용하지 않는다. 선택1.7.1 단일 snapshot1075081216바이트와 /data 전체 파일 크기를 구분한다. host 파일시스템 여유는 PVC 전용 예약량이 아니다. 최종 snapshot·압축파일·로컬복사·복원PVC의 중복 공간과 이후 성장량을 함께 계산하며 자동삭제하지 않는다. 원본PVC의 새 SQLite 및 압축본, 별도 복원PVC, 로컬 전송본을 모두 보관할 공간이 필요하며 현재 파일 크기로 밤의 크기를 보장하지 않는다. 이미지가 이미 노드에 있더라도 레지스트리와 PVC 상태를 읽기 점검한다.

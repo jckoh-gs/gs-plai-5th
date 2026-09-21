@@ -1,0 +1,112 @@
+{
+  "state": "TECHNICAL_ASR_RECORDED",
+  "requiresSuccessfulExitReceipt": true,
+  "startedAt": "2026-09-21T19:13:11.204838+00:00",
+  "recordedAt": "2026-09-21T19:13:17.919081+00:00",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "source": {
+    "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/weather-r2-round2/GRID-VPP-demo-ko.mp4",
+    "sha256": "969a05c0baae308e94bc6675e3eef3c899b42e7de85d3d9833ccdcd4f6c8d075"
+  },
+  "pcm": {
+    "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/media-weather-r2-round2/video-asr/audio.wav",
+    "sha256": "2dc0e0b8ebcd784e46f7517451e7795ac4478d633a77b6d8f6df994bd50c5900",
+    "frames": 1508369,
+    "durationSeconds": 94.2730625
+  },
+  "tools": {
+    "cli": {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/build/bin/whisper-cli",
+      "sha256": "645af2334c629a5ee8ed33b76a2cad4745c9c39c4b003a3ca90616326cb98528"
+    },
+    "model": {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/ggml-small.bin",
+      "sha256": "1be3a9b2063867b937e64e2ec7483364a79917e157fa98c5d94b5c1fffea987b"
+    },
+    "ffmpeg": {
+      "path": "/Users/charleskoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+      "sha256": "6d175a4743ca50256e89a8cdd731100f9cee33bd79aeea46894d209410dc6617"
+    }
+  },
+  "commands": [
+    {
+      "argv": [
+        "/Users/charleskoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-nostdin",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-protocol_whitelist",
+        "file,pipe",
+        "-i",
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/weather-r2-round2/GRID-VPP-demo-ko.mp4",
+        "-vn",
+        "-ac",
+        "1",
+        "-ar",
+        "16000",
+        "-c:a",
+        "pcm_s16le",
+        "-t",
+        "601",
+        "-n",
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/media-weather-r2-round2/video-asr/audio.wav"
+      ],
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/build/bin/whisper-cli",
+        "-m",
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/ggml-small.bin",
+        "-f",
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/media-weather-r2-round2/video-asr/audio.wav",
+        "-l",
+        "ko",
+        "-t",
+        "4",
+        "-ng",
+        "-oj",
+        "-otxt",
+        "-osrt",
+        "-of",
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/media-weather-r2-round2/video-asr/transcription"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/media-weather-r2-round2/video-asr/transcription.json",
+      "bytes": 4268,
+      "sha256": "8a3ceeae758704f43daf6d7c3aaf586a3dfd1ed98bd40973bf677929ab0fe597"
+    },
+    {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/media-weather-r2-round2/video-asr/transcription.txt",
+      "bytes": 1213,
+      "sha256": "15636f952775989d1f680fd78f644019b6a9da1286e4e15a3cb4d7c3afb201c2"
+    },
+    {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/media-weather-r2-round2/video-asr/transcription.srt",
+      "bytes": 1729,
+      "sha256": "0492fb9d0a458af58bc3fcfa0234d8bfb2cafef24865c7359da3c3498cbef620"
+    },
+    {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/media-weather-r2-round2/video-asr/decode.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/media-weather-r2-round2/video-asr/asr.log",
+      "bytes": 5126,
+      "sha256": "417eef435bc2a98448becbcac6e1d1acf79c5f0d4d17c0d81487681fca9d462f"
+    }
+  ],
+  "segments": 15,
+  "nonemptyAndActualPcmBoundsValidated": true,
+  "language": "ko",
+  "promptProvided": false,
+  "directListening": false,
+  "naturalPronunciationVerified": false,
+  "semanticReviewRequired": true
+}

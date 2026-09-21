@@ -2,6 +2,8 @@
 
 현재 기능상 안정 버전은 **1.7.1 / PRD1.15 / IDEA012 v1**이다. 앱 소스 `40b9ed898f32037e7a87259d12d145457575a4a8`, 이미지 `234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876`, 실제 main PodUID `75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc`를 확인했다. 전체 목표는 최종 시간·영상·PPT·인도가 남아 있다. 재개할 때 최신 사용자 지시, 현재 시각, [run.json](run.json), [resume.json](resume.json), 실제 Git·프로세스·배포부터 대조한다.
 
+기상 시연 revision2 준비를 완료했다. [80개 파일·35개 소스 메인 대조](../../artifacts/checkpoints/media-weather-r2-root-review/checks.json), [REVIEW053](../product/REVIEW-053.md), [ISSUE031 수정 후 대조](../issues/evidence/issue031-after-review.json)를 확인한다. 새CSV/소유RTU의500→651.8→500, 후속MQTT125/error0, 양복구 및 기존3RTU 불변을 검증했다. 실패 첫 시도는 보존했다. recorder83763/observer98107/postMQTT77844/ASR16567/fixture85525는 모두 종료0,3113닫힘이므로 재실행하지 않는다. 최종8장면은 원래 동결 이후 새로 만든다. scene6의 별도 재전송·브로커 확인 설명을 명시한 원고 revision3도 준비를 마쳤다. [22파일·34문장 음성 대조](../../artifacts/checkpoints/audio-narration-r3-root-review/checks.json)와 [REVIEW054](../product/REVIEW-054.md)를 따른다. 합성88272/전체ASR40659/장면ASR58340 모두 종료0이다. 실제 음성161.637초, 최소계획290초이며 최종 영상 길이가 아니다. 직접청취false와 인식 차이를 유지한다.
+
 ## 재연결 뒤 우선 확인
 
 `node scripts/resume-status.mjs`는 원격 Git·실제 이미지/Ready·인증 API·현재 관측 원장의 정합성을 읽기 전용으로 검사한다. 응답을 잃은 작업은 기존 journal·고유 리소스·담당의 원래 핸들·종료 영수증을 확인한다. 완료된 제어·배포·복원을 반복하거나 새 commandId를 발행하지 않는다. 보조 담당의 핸들이 메인 도구에서 보이지 않는 것만으로 종료를 추론하지 않는다. [네트워크 복구 절차](NETWORK-RECOVERY.md)를 따른다.

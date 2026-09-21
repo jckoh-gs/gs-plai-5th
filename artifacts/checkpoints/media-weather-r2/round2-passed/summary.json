@@ -1,0 +1,72 @@
+{
+  "preparationOnly": true,
+  "narrationRevision": 2,
+  "productVersion": "1.7.1",
+  "recordingScope": "3 focused scenes; not full8scene replay or final media",
+  "recorder": {
+    "sessionId": 83763,
+    "exitCode": 0
+  },
+  "observer": {
+    "sessionId": 98107,
+    "exitCode": 0
+  },
+  "postMqtt": {
+    "sessionId": 77844,
+    "exitCode": 0,
+    "actualKw": 125,
+    "errorKw": 0,
+    "states": [
+      "accepted",
+      "executing",
+      "completed"
+    ]
+  },
+  "fixture": {
+    "sessionId": 85525,
+    "exitCode": 0,
+    "port": 3113,
+    "prefix": "mediaweather2",
+    "stopped": true
+  },
+  "video": {
+    "path": "artifacts/media-preparation/weather-r2-round2/GRID-VPP-demo-ko.mp4",
+    "sha256": "969a05c0baae308e94bc6675e3eef3c899b42e7de85d3d9833ccdcd4f6c8d075",
+    "durationSeconds": 131.13,
+    "productionSeconds": 142.685,
+    "fullDecode": true,
+    "audioMeanDb": -18.5
+  },
+  "weather": {
+    "input": [
+      14,
+      90,
+      300,
+      22
+    ],
+    "stableAvailableKw": 651.8,
+    "stablePowerKw": 651.8,
+    "csvRestoredPowerKw": 500,
+    "restoredInput": [
+      8,
+      240,
+      650,
+      22
+    ],
+    "weatherSourceBefore": "default",
+    "weatherSourceAfter": "manual",
+    "historicalProvenanceRestored": false
+  },
+  "normalRecovery": "PASS",
+  "postCommandRecovery": "PASS",
+  "weatherConfigurationMatched": true,
+  "existingUnchanged": [
+    true,
+    true,
+    true
+  ],
+  "visualReview": "4 encoded frames individually viewed: both weather and CSV frames contain complete right inputs,3D,pointer,power; weather subtitle legible; unchanged CSV centerzoom present",
+  "directListening": false,
+  "ASR": "technical checks recorded with lexical differences; no pronunciation pass",
+  "full8SceneRehearsalDecision": "No repeat necessary for unchanged later scenes: prior full1.7 8scene proof plus r2focused recording + postweather125 MQTT and recovery. Finalwindow still requires entirely new8scene recording. Estimatedfullvideo previous255.33+36≈291.33sec; estimate not measurement."
+}

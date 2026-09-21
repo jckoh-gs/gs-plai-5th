@@ -1,0 +1,468 @@
+{
+  "preparationOnly": true,
+  "narrationRevision": 3,
+  "productVersion": "1.7.1",
+  "voice": "Yuna",
+  "speechRate": 170,
+  "directListening": false,
+  "actualVideoCreated": false,
+  "createdAt": "2026-09-21T19:20:59.826661+00:00",
+  "sourceHashes": {
+    "scripts/media/scenes-template.json": "dc2da69b9a78fdf7be6d816941ee09afe45c376a815d1fb3cc72f7994e2770b5",
+    "scripts/media/scene-plan.cjs": "d69f58893e36ed3c2bae1402a1b919ef983afa62cecc62d2a6e414465b46eb7e",
+    "scripts/media/release-features.cjs": "52c5bd8f280f4344ec12da7347eee2265d12db1b673b19a807ec46df9266eb58",
+    "scripts/media/transcribe-audio.py": "7077f0801685ebee5ef78f34ea17a57971267fb7716e8df1dda0d61cef26019a"
+  },
+  "minimumPlannedTimelineSeconds": 290.0,
+  "totalVoiceSeconds": 161.6374375,
+  "srtSourceMatched": true,
+  "srtSentenceCount": 34,
+  "plannedPcmSha256": "fc8e3e5ddf28578fdec0bd6484ad3e4890624e2eb4c41a05b251e8f2129d7b9f",
+  "limitation": "Timing is synthesized lower-bound scene plan; browser action overruns, startup lead and final actual scene times are unmeasured. Planned SRT is not final video SRT.",
+  "scenes": [
+    {
+      "scene1": 1,
+      "title": "VPP 시험 목적과 시스템 경계",
+      "narration": "GRID는 가상 발전 현장에서 외부 VPP 연동을 시험하는 에뮬레이터입니다. 화면은 검증한 케이쓰리에스 배포 버전입니다. 실물 설비를 조작하거나 시장에 입찰하지 않습니다.",
+      "plannedSeconds": 24,
+      "voiceSeconds": 11.96425,
+      "minimumSceneSeconds": 24.0,
+      "plannedStart": 0,
+      "plannedEnd": 24.0,
+      "scenePCMsha256": "1a9843b458e6cfd964c1b23fc472daff17c067adb9a2bbcb8271033b8ec31414",
+      "sentences": [
+        {
+          "sentence1": 1,
+          "text": "GRID는 가상 발전 현장에서 외부 VPP 연동을 시험하는 에뮬레이터입니다.",
+          "start": 0,
+          "end": 5.437375,
+          "aiffDurationSeconds": 5.43737,
+          "pcmDurationSeconds": 5.437375,
+          "AIFFsha256": "c69f30cff945e99a013069cddaab973fbe26512daca945364fb87bd765fb8d6a",
+          "PCMsha256": "3449ae6a560abc03bd95bd92feccb0df8d76943ebbd87527a63bf6b8609a93d0"
+        },
+        {
+          "sentence1": 2,
+          "text": "화면은 검증한 케이쓰리에스 배포 버전입니다.",
+          "start": 5.437375,
+          "end": 8.5425,
+          "aiffDurationSeconds": 3.105079,
+          "pcmDurationSeconds": 3.105125,
+          "AIFFsha256": "83533d8cec5fd5bfa18058aba4ea4dc4e85de26d8db261ebedccc435297bcfe9",
+          "PCMsha256": "e9b018055f62d0d9f6610df2504c5d38bf534b4b43dade2adafbd4040341dbfc"
+        },
+        {
+          "sentence1": 3,
+          "text": "실물 설비를 조작하거나 시장에 입찰하지 않습니다.",
+          "start": 8.5425,
+          "end": 11.96425,
+          "aiffDurationSeconds": 3.421723,
+          "pcmDurationSeconds": 3.42175,
+          "AIFFsha256": "4640fd17be065470c229dda8e8f28b542f8f5e343e01bf63aa78984ee38efb99",
+          "PCMsha256": "64bdfbc506a43bf98409a5e880bb62fbc38fd2697571bd5238f14ae011660f6e"
+        }
+      ]
+    },
+    {
+      "scene1": 2,
+      "title": "CSV 등록과 가상 현장",
+      "narration": "CSV 또는 TSV를 넣고 해석 미리보기로 시각과 단위, 정규화 출력을 먼저 확인합니다. 미리보기는 RTU를 만들지 않습니다. 실제 등록 때 다시 검증하고 일 초 단위 수집을 시작합니다. 원본 전류와 추정 전류도 구분합니다.",
+      "plannedSeconds": 34,
+      "voiceSeconds": 16.880625000000002,
+      "minimumSceneSeconds": 34.0,
+      "plannedStart": 24.0,
+      "plannedEnd": 58.0,
+      "scenePCMsha256": "cfe08d91e83d5c1aa01bdb18a9e069e36f2e23afe92ab7b9d60802fd865b9f14",
+      "sentences": [
+        {
+          "sentence1": 1,
+          "text": "CSV 또는 TSV를 넣고 해석 미리보기로 시각과 단위, 정규화 출력을 먼저 확인합니다.",
+          "start": 0,
+          "end": 6.9623125,
+          "aiffDurationSeconds": 6.962268,
+          "pcmDurationSeconds": 6.9623125,
+          "AIFFsha256": "861542ac24f36ecbf84de0fc541583991482668dd0e64c8188d6e620abb2bba9",
+          "PCMsha256": "6ad538063757932cf58ffd90a7cc66c5304ed5d0d02a239ac0de723ab38d330a"
+        },
+        {
+          "sentence1": 2,
+          "text": "미리보기는 RTU를 만들지 않습니다.",
+          "start": 6.9623125,
+          "end": 9.68825,
+          "aiffDurationSeconds": 2.725896,
+          "pcmDurationSeconds": 2.7259375,
+          "AIFFsha256": "d5b57e852ed14d7c4b84dae1a275807ba4b2838a5a3db475abbb1c918a308e97",
+          "PCMsha256": "2c8ca9700004555266b8fcfe99a4214fd932c8ae633a51f294f8adb4bb55211b"
+        },
+        {
+          "sentence1": 3,
+          "text": "실제 등록 때 다시 검증하고 일 초 단위 수집을 시작합니다.",
+          "start": 9.68825,
+          "end": 14.2478125,
+          "aiffDurationSeconds": 4.559501,
+          "pcmDurationSeconds": 4.5595625,
+          "AIFFsha256": "5b928098e9547ad46af6cc670122e3ba26523694c029c6ed3ece38230cad126f",
+          "PCMsha256": "6ed5a3224dcfaac959d943d46248878cbacae86e3e517ae87662a67c9cd07758"
+        },
+        {
+          "sentence1": 4,
+          "text": "원본 전류와 추정 전류도 구분합니다.",
+          "start": 14.2478125,
+          "end": 16.880625000000002,
+          "aiffDurationSeconds": 2.632789,
+          "pcmDurationSeconds": 2.6328125,
+          "AIFFsha256": "77c396335e5607526f0184753a6b0f241715216a6923ac2312d79a44f80f499e",
+          "PCMsha256": "993374a3441d4e1ec424d2ea9d2d5745bb160ddec8451eef32ccc4c008b3c8e4"
+        }
+      ]
+    },
+    {
+      "scene1": 3,
+      "title": "풍력 태양광 복합 UI",
+      "narration": "풍력과 태양광, 복합 단지를 같은 대시보드에서 선택합니다. 삼차원 장면에서 풍향과 회전을 확인하고 드래그와 휠로 시점을 조절합니다. 측정한 값은 현재 선택한 단지와 발전기 상태를 보여줍니다. 수동 기상으로 풍속과 풍향, 일사 입력을 바꾸고 출력 변화를 확인한 뒤 CSV 원본 출력으로 돌아옵니다. 수동으로 적용한 기상 출처는 수동 상태로 남습니다. 명령 접수는 완료와 다릅니다. 접수 패널은 마지막으로 받은 결과를 보여주며, 저장 상태 확인으로 서버 상태를 다시 조회합니다.",
+      "plannedSeconds": 72,
+      "voiceSeconds": 35.143499999999996,
+      "minimumSceneSeconds": 72.0,
+      "plannedStart": 58.0,
+      "plannedEnd": 130.0,
+      "scenePCMsha256": "e1e26efdbf3fd6b16b6209151eece1b54a6b598ff7b5fede61e8737315112646",
+      "sentences": [
+        {
+          "sentence1": 1,
+          "text": "풍력과 태양광, 복합 단지를 같은 대시보드에서 선택합니다.",
+          "start": 0,
+          "end": 4.6383125,
+          "aiffDurationSeconds": 4.638277,
+          "pcmDurationSeconds": 4.6383125,
+          "AIFFsha256": "86ed9a5c30c298e8782132364f014983c67b41691a0ac7aa334e9ec133c0b2de",
+          "PCMsha256": "3f7a85b5703806ce22705c2760b5bcb01f5b944082a21b3d76517bca3965b85a"
+        },
+        {
+          "sentence1": 2,
+          "text": "삼차원 장면에서 풍향과 회전을 확인하고 드래그와 휠로 시점을 조절합니다.",
+          "start": 4.6383125,
+          "end": 10.1848125,
+          "aiffDurationSeconds": 5.546485,
+          "pcmDurationSeconds": 5.5465,
+          "AIFFsha256": "371c129ecfb2dd781616d4c95c4f9e3fdf3cec2ae87c2582f588007cea0cfbe8",
+          "PCMsha256": "e1aca839f4497779a7a438c02b4ae3b68f01885166946d356dfb05431dd57f6b"
+        },
+        {
+          "sentence1": 3,
+          "text": "측정한 값은 현재 선택한 단지와 발전기 상태를 보여줍니다.",
+          "start": 10.1848125,
+          "end": 14.688625,
+          "aiffDurationSeconds": 4.503764,
+          "pcmDurationSeconds": 4.5038125,
+          "AIFFsha256": "bc33d3aa3ba1b28a10a5e6be67707be27c709b8e6d5ae8d85b2a9334286ae82c",
+          "PCMsha256": "9e9a8e165e6f4f5bdaa9860f6df03c427947347ebd25306a0d41360d4c22190e"
+        },
+        {
+          "sentence1": 4,
+          "text": "수동 기상으로 풍속과 풍향, 일사 입력을 바꾸고 출력 변화를 확인한 뒤 CSV 원본 출력으로 돌아옵니다.",
+          "start": 14.688625,
+          "end": 22.6380625,
+          "aiffDurationSeconds": 7.949433,
+          "pcmDurationSeconds": 7.9494375,
+          "AIFFsha256": "29f96256a37ccd64c4a8fbf30943fd068f4ff2c151a487bdbe220471847d513a",
+          "PCMsha256": "15f6603e00712425408272c6f0ff54b873a78e7f568e620068398f6464d7c5e7"
+        },
+        {
+          "sentence1": 5,
+          "text": "수동으로 적용한 기상 출처는 수동 상태로 남습니다.",
+          "start": 22.6380625,
+          "end": 26.2338125,
+          "aiffDurationSeconds": 3.595692,
+          "pcmDurationSeconds": 3.59575,
+          "AIFFsha256": "0d35934aa0cc83746c206a36f9a392b4d5ff9fafe44b4f03450ea2686ddb1b85",
+          "PCMsha256": "9f9659fda8f15d4a703d44422fd1e66b1100da24649cc4514029645c9548e71e"
+        },
+        {
+          "sentence1": 6,
+          "text": "명령 접수는 완료와 다릅니다.",
+          "start": 26.2338125,
+          "end": 28.3556875,
+          "aiffDurationSeconds": 2.121859,
+          "pcmDurationSeconds": 2.121875,
+          "AIFFsha256": "2b8a4cfabd78e7c6883ccda93cb9954384cabeba11066c5a5487503a8145426a",
+          "PCMsha256": "48ed400d672a846a614ec7bf361c2a617392a172f988c9d2573b8ef3a9458718"
+        },
+        {
+          "sentence1": 7,
+          "text": "접수 패널은 마지막으로 받은 결과를 보여주며, 저장 상태 확인으로 서버 상태를 다시 조회합니다.",
+          "start": 28.3556875,
+          "end": 35.143499999999996,
+          "aiffDurationSeconds": 6.7878,
+          "pcmDurationSeconds": 6.7878125,
+          "AIFFsha256": "0c291cf321dd34dacf64bb8641020b5b9ee91efd1ad56ab9e7df7be8c18cbbd4",
+          "PCMsha256": "95f21c79c6f0ea79c2e0bb03a63970bfe8456ff7caeefa396f35b008760065bf"
+        }
+      ]
+    },
+    {
+      "scene1": 4,
+      "title": "RTU와 전체 SCADA 데이터",
+      "narration": "각 RTU는 연결과 건강 상태를 독립적으로 관리합니다. 전체 발전기의 샘플을 수집하고 기본 육십 초마다 MQTT로 전송합니다. 큐오에스 일은 전달 과정에서 중복이 생길 수 있으므로 메시지 아이디로 중복을 처리합니다.",
+      "plannedSeconds": 28,
+      "voiceSeconds": 15.8521875,
+      "minimumSceneSeconds": 28.0,
+      "plannedStart": 130.0,
+      "plannedEnd": 158.0,
+      "scenePCMsha256": "5949a0ba8ab611e27bb3177b0ee8b1c5a5cd1b9a0c3d6828f4474152a223feba",
+      "sentences": [
+        {
+          "sentence1": 1,
+          "text": "각 RTU는 연결과 건강 상태를 독립적으로 관리합니다.",
+          "start": 0,
+          "end": 4.1821875,
+          "aiffDurationSeconds": 4.182132,
+          "pcmDurationSeconds": 4.1821875,
+          "AIFFsha256": "9affff938d04d51b8fb67e22e7213cc44b391ec8d22f46cec812b95a55166d1d",
+          "PCMsha256": "e94df7d497ff0699817535c00a739b1b7047229a129a4af8af7ca352e46889aa"
+        },
+        {
+          "sentence1": 2,
+          "text": "전체 발전기의 샘플을 수집하고 기본 육십 초마다 MQTT로 전송합니다.",
+          "start": 4.1821875,
+          "end": 9.843875,
+          "aiffDurationSeconds": 5.661633,
+          "pcmDurationSeconds": 5.6616875,
+          "AIFFsha256": "af392fb15a7ad7af117abef5fcc3cbda4c2640eeff50fd702ea8f273695ed93b",
+          "PCMsha256": "f88ab073c11feb2005b7db85772451ad9cbc3dd111fc34a8d1ddf7fab37c7507"
+        },
+        {
+          "sentence1": 3,
+          "text": "큐오에스 일은 전달 과정에서 중복이 생길 수 있으므로 메시지 아이디로 중복을 처리합니다.",
+          "start": 9.843875,
+          "end": 15.8521875,
+          "aiffDurationSeconds": 6.008254,
+          "pcmDurationSeconds": 6.0083125,
+          "AIFFsha256": "787622ddffbee5630977575bb3cc4141fd30b4fce3c2c2d97455b3e460d8bcbe",
+          "PCMsha256": "f4615b5c664462fd5eacb0b039df7af50a7baf82e4fa4d4b91dff37c48ebbf36"
+        }
+      ]
+    },
+    {
+      "scene1": 5,
+      "title": "외부 VPP 목표 출력 제어",
+      "narration": "별도 MQTT 클라이언트로 백이십오 킬로와트를 요청합니다. 수락과 실행을 거쳐 실제 출력이 목표에 도달하면 완료 상태를 받습니다. 화면의 MQTT 출처와 목표 및 실제 값을 확인합니다. 이 결과는 실제 배포 브로커에서 관측한 값입니다. 목록의 마지막 확인 시각은 브라우저 조회 시각이며 명령 완료 시각과 다릅니다. 최근 저장 상태를 최대 스무 개까지 제이슨 파일로 내보냅니다. 이 파일은 외부 VPP 수신 증거나 전체 감사 이력이 아닙니다.",
+      "plannedSeconds": 46,
+      "voiceSeconds": 31.3805625,
+      "minimumSceneSeconds": 46.0,
+      "plannedStart": 158.0,
+      "plannedEnd": 204.0,
+      "scenePCMsha256": "cfe2975a5c75a7a582bda25ad1cbbf3089ed1498687565833bb01fa0c013bd58",
+      "sentences": [
+        {
+          "sentence1": 1,
+          "text": "별도 MQTT 클라이언트로 백이십오 킬로와트를 요청합니다.",
+          "start": 0,
+          "end": 4.425125,
+          "aiffDurationSeconds": 4.425079,
+          "pcmDurationSeconds": 4.425125,
+          "AIFFsha256": "fcdb2f8edd5260c04d86514a5f260d22340cb7590c0d0f01d55d579409476754",
+          "PCMsha256": "6ccf1dce698fb11a9794af36be7800c434dc87565cd0475d5ac09a7459a64546"
+        },
+        {
+          "sentence1": 2,
+          "text": "수락과 실행을 거쳐 실제 출력이 목표에 도달하면 완료 상태를 받습니다.",
+          "start": 4.425125,
+          "end": 9.4953125,
+          "aiffDurationSeconds": 5.070159,
+          "pcmDurationSeconds": 5.0701875,
+          "AIFFsha256": "39a6b8a48a5a8a49d6f3f601fbe2288e4b7ef7a502f2c9e4ef7959ad7f7ea204",
+          "PCMsha256": "cfd5551f1ab6f6b1ef66f11135ff0f642f0f452baaab604966a6f526735f5b1b"
+        },
+        {
+          "sentence1": 3,
+          "text": "화면의 MQTT 출처와 목표 및 실제 값을 확인합니다.",
+          "start": 9.4953125,
+          "end": 13.656937500000002,
+          "aiffDurationSeconds": 4.161587,
+          "pcmDurationSeconds": 4.161625,
+          "AIFFsha256": "ea99c1e4b37b8813f78c1a490f68c1b938ccd3a78b7ca925984d773a31453de3",
+          "PCMsha256": "9b4ea589355c369566f0c5a3524548f76636f190bec325be41bf31a81a711fb6"
+        },
+        {
+          "sentence1": 4,
+          "text": "이 결과는 실제 배포 브로커에서 관측한 값입니다.",
+          "start": 13.656937500000002,
+          "end": 17.253500000000003,
+          "aiffDurationSeconds": 3.596553,
+          "pcmDurationSeconds": 3.5965625,
+          "AIFFsha256": "1272427e2d8955e52b3464990323849c12b274ce76fb8629d3f49b2d1e316dcd",
+          "PCMsha256": "63f7ecdff25f31b90edd0c94260aec18f4daa4568ff437902d1aadf25b3aa965"
+        },
+        {
+          "sentence1": 5,
+          "text": "목록의 마지막 확인 시각은 브라우저 조회 시각이며 명령 완료 시각과 다릅니다.",
+          "start": 17.253500000000003,
+          "end": 22.626250000000002,
+          "aiffDurationSeconds": 5.372698,
+          "pcmDurationSeconds": 5.37275,
+          "AIFFsha256": "c4b6a889d1d09eec5bf846b8ca7e60c1098ef3295ca511625b77c73187822196",
+          "PCMsha256": "d23f76962754aeea962a0276625089f70b6b4876db0eca0b0bcffd90c27ab469"
+        },
+        {
+          "sentence1": 6,
+          "text": "최근 저장 상태를 최대 스무 개까지 제이슨 파일로 내보냅니다.",
+          "start": 22.626250000000002,
+          "end": 26.9596875,
+          "aiffDurationSeconds": 4.333424,
+          "pcmDurationSeconds": 4.3334375,
+          "AIFFsha256": "0a731667d9f9082ea36afab3f68f12e4e258b50fc434dbf4f47887f0156842d2",
+          "PCMsha256": "aa6069a78cf57822cc90808bb54fc3e8f78146d2cd8a648f9cc3ef58706db47e"
+        },
+        {
+          "sentence1": 7,
+          "text": "이 파일은 외부 VPP 수신 증거나 전체 감사 이력이 아닙니다.",
+          "start": 26.9596875,
+          "end": 31.3805625,
+          "aiffDurationSeconds": 4.420862,
+          "pcmDurationSeconds": 4.420875,
+          "AIFFsha256": "c1ec15e89e0fd709c91b1d3e59e61c1863492936ec40833e974c94bda743bec5",
+          "PCMsha256": "79ec22a59d11778a72bbe25db7bf47d5bac8b91d838089007f1a95827a357ba9"
+        }
+      ]
+    },
+    {
+      "scene1": 6,
+      "title": "장애 주입과 복구",
+      "narration": "통신 단절과 지연, 센서 중지를 구분해 시험합니다. 센서가 멈춘 구간은 결측으로 남습니다. 미확인 배치의 재시작 후 재전송과 브로커 확인은 함께 제공하는 별도 실행 근거에서 확인할 수 있습니다.",
+      "plannedSeconds": 32,
+      "voiceSeconds": 14.211125,
+      "minimumSceneSeconds": 32.0,
+      "plannedStart": 204.0,
+      "plannedEnd": 236.0,
+      "scenePCMsha256": "9ae141c19c9f9e7600159891c35fc58e1a75ddeb31e1892b3ea8a3b46851fd46",
+      "sentences": [
+        {
+          "sentence1": 1,
+          "text": "통신 단절과 지연, 센서 중지를 구분해 시험합니다.",
+          "start": 0,
+          "end": 3.988125,
+          "aiffDurationSeconds": 3.988118,
+          "pcmDurationSeconds": 3.988125,
+          "AIFFsha256": "e46d33a06bd76d27541958037b81e13b9a3caaba14bf964298a2fe29e84361d8",
+          "PCMsha256": "012569dc4058729ced18dc3be509b30381849a08c3dfcf75a356ee40be330d1e"
+        },
+        {
+          "sentence1": 2,
+          "text": "센서가 멈춘 구간은 결측으로 남습니다.",
+          "start": 3.988125,
+          "end": 6.9805625,
+          "aiffDurationSeconds": 2.992426,
+          "pcmDurationSeconds": 2.9924375,
+          "AIFFsha256": "ba6c21052ee67d55aba7b2eb1cf28ede4b0ea0e2a106d69d870f11f0fe238752",
+          "PCMsha256": "cc2a312fa91836c37603a8364dd6d78203cb7f698b759f387c60ff48146e97a5"
+        },
+        {
+          "sentence1": 3,
+          "text": "미확인 배치의 재시작 후 재전송과 브로커 확인은 함께 제공하는 별도 실행 근거에서 확인할 수 있습니다.",
+          "start": 6.9805625,
+          "end": 14.211125,
+          "aiffDurationSeconds": 7.230522,
+          "pcmDurationSeconds": 7.2305625,
+          "AIFFsha256": "f9fcd14682f1e5a9e88235e788c28d16f263b277469fde765c1a259d6d8cc2df",
+          "PCMsha256": "13cd8e1e014b5223db8fd25b8f816f61da50946659f2d9e6fe10217b6ed7a704"
+        }
+      ]
+    },
+    {
+      "scene1": 7,
+      "title": "재현 가능한 시나리오와 연동",
+      "narration": "배속과 일시정지, 난수 생성에 쓰는 초기값으로 시험 조건을 조절합니다. 선택한 RTU에 저장된 시나리오를 다시 불러오면 새 실행 아이디가 생깁니다. 이전 실행은 런 아이디로 구분하며 기존 아웃박스를 삭제하지 않습니다. 가이드에서 이 RTU의 토픽과 메시지 형식을 확인합니다.",
+      "plannedSeconds": 30,
+      "voiceSeconds": 19.6410625,
+      "minimumSceneSeconds": 30.0,
+      "plannedStart": 236.0,
+      "plannedEnd": 266.0,
+      "scenePCMsha256": "b11248bc0f5d2d2f1ccb272d74c90eaa0b10e3a1e353de1d792a8a7b7cee4698",
+      "sentences": [
+        {
+          "sentence1": 1,
+          "text": "배속과 일시정지, 난수 생성에 쓰는 초기값으로 시험 조건을 조절합니다.",
+          "start": 0,
+          "end": 5.607625,
+          "aiffDurationSeconds": 5.607574,
+          "pcmDurationSeconds": 5.607625,
+          "AIFFsha256": "049f397eb5cbc059249f21706fe51c6de0f158613691fe476447258fabe59d0f",
+          "PCMsha256": "6eccb6d24f237528731fd70ff4cf0a5dc0d8b4a607d09decc2d3a07796374c2e"
+        },
+        {
+          "sentence1": 2,
+          "text": "선택한 RTU에 저장된 시나리오를 다시 불러오면 새 실행 아이디가 생깁니다.",
+          "start": 5.607625,
+          "end": 11.038062499999999,
+          "aiffDurationSeconds": 5.430385,
+          "pcmDurationSeconds": 5.4304375,
+          "AIFFsha256": "91a84db33d25ba89deb8d605182bf8eaf636458ab201e21519da7ae2008853bd",
+          "PCMsha256": "3aa9b9585644e30480edddd84f3743a241d965f38eff36ea78d137946228105f"
+        },
+        {
+          "sentence1": 3,
+          "text": "이전 실행은 런 아이디로 구분하며 기존 아웃박스를 삭제하지 않습니다.",
+          "start": 11.038062499999999,
+          "end": 15.575,
+          "aiffDurationSeconds": 4.536916,
+          "pcmDurationSeconds": 4.5369375,
+          "AIFFsha256": "2d8fed4947166dc37e2d98aad6e81cad4d6839e6f8c063a32b4aee6e320b036b",
+          "PCMsha256": "2b9592456a8b628350b5efe08a1a38712955363c797a6f35c4a91775170fa941"
+        },
+        {
+          "sentence1": 4,
+          "text": "가이드에서 이 RTU의 토픽과 메시지 형식을 확인합니다.",
+          "start": 15.575,
+          "end": 19.6410625,
+          "aiffDurationSeconds": 4.066032,
+          "pcmDurationSeconds": 4.0660625,
+          "AIFFsha256": "a8c55dbeb7dd212f33eb02198969ac8f70fb026d33bc8dbac2f3d2c1aec1ccb7",
+          "PCMsha256": "81416d2ba8d9efcc9fae3367ed80abcd21f190a3ca003fc3cab8715575ce19de"
+        }
+      ]
+    },
+    {
+      "scene1": 8,
+      "title": "검증 범위와 남은 제약",
+      "narration": "최종 릴리스에는 시험 증거와 복원 자료, 취약점 및 이슈 기록을 함께 제공합니다. 실제 VPP와 외부 클라우드 자격증명이 없는 부분은 미검증으로 구분합니다. 상세 검증 범위와 남은 제약은 같은 버전의 릴리스 문서에서 확인합니다.",
+      "plannedSeconds": 24,
+      "voiceSeconds": 16.564125,
+      "minimumSceneSeconds": 24.0,
+      "plannedStart": 266.0,
+      "plannedEnd": 290.0,
+      "scenePCMsha256": "e7557a10b4c2559c5bcfb606c5e9f8b22d9d9121ed82d1fe57216ff5032dd488",
+      "sentences": [
+        {
+          "sentence1": 1,
+          "text": "최종 릴리스에는 시험 증거와 복원 자료, 취약점 및 이슈 기록을 함께 제공합니다.",
+          "start": 0,
+          "end": 5.924,
+          "aiffDurationSeconds": 5.923991,
+          "pcmDurationSeconds": 5.924,
+          "AIFFsha256": "09ccd2301462e8e2dc0810dfdffa52271561a89ee14d36457d8f5de368a28a90",
+          "PCMsha256": "f40b974eb3875b12f3e7eeb1978f211f774491b5e27ce19e82a447ea6837de8e"
+        },
+        {
+          "sentence1": 2,
+          "text": "실제 VPP와 외부 클라우드 자격증명이 없는 부분은 미검증으로 구분합니다.",
+          "start": 5.924,
+          "end": 11.4471875,
+          "aiffDurationSeconds": 5.523129,
+          "pcmDurationSeconds": 5.5231875,
+          "AIFFsha256": "4d0ec1cc16d0405427b3de4123263c928e1c7772474c6c00dda8253056af3711",
+          "PCMsha256": "e75a747bfec8c67cd5d925812f7058e179c3e554611bfdca09953e89e824015c"
+        },
+        {
+          "sentence1": 3,
+          "text": "상세 검증 범위와 남은 제약은 같은 버전의 릴리스 문서에서 확인합니다.",
+          "start": 11.4471875,
+          "end": 16.564125,
+          "aiffDurationSeconds": 5.116916,
+          "pcmDurationSeconds": 5.1169375,
+          "AIFFsha256": "778cc06108f243e40b0a37106efa0c53bf617d23cfed825837731a9617a7e7e1",
+          "PCMsha256": "53c70c54ce12f69541ebbee6a3dc58f91866bef4ea8d4ad9036879005ab7bd66"
+        }
+      ]
+    }
+  ]
+}

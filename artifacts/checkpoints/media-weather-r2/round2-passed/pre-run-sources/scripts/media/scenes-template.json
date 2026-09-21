@@ -1,0 +1,93 @@
+{
+  "baseUrl": "http://127.0.0.1:3104",
+  "tokenFile": "artifacts/private/deploy/api-token",
+  "releaseManifest": "artifacts/releases/final-20260921.json",
+  "approvedReleaseCommit": "POPULATE_AT_FREEZE",
+  "approvedImageDigest": "POPULATE_AT_FREEZE",
+  "outputDir": "artifacts/video",
+  "speechRate": 170,
+  "scenes": [
+    {
+      "title": "VPP 시험 목적과 시스템 경계",
+      "seconds": 24,
+      "narration": "GRID는 가상 발전 현장에서 외부 VPP 연동을 시험하는 에뮬레이터입니다. 화면은 검증한 케이쓰리에스 배포 버전입니다. 실물 설비를 조작하거나 시장에 입찰하지 않습니다.",
+      "actions": [
+        {
+          "type": "click",
+          "role": "link",
+          "name": "통합 대시보드"
+        }
+      ]
+    },
+    {
+      "title": "CSV 등록과 가상 현장",
+      "seconds": 34,
+      "narration": "십 분 간격의 CSV 또는 TSV를 등록하면 일 초 단위 발전 데이터를 생성합니다. 출력의 시점 값과 구간 평균, 에너지 단위를 구분합니다. 원본 전류와 추정 전류도 구분해 제공합니다.",
+      "actions": [],
+      "zoom": {
+        "scale": 1.1
+      }
+    },
+    {
+      "title": "풍력 태양광 복합 UI",
+      "seconds": 28,
+      "narration": "풍력과 태양광, 복합 단지를 같은 대시보드에서 선택합니다. 삼차원 장면에서 풍향과 회전을 확인하고 드래그와 휠로 시점을 조절합니다. 측정한 값은 현재 선택한 단지와 발전기 상태를 보여줍니다. 수동 기상으로 풍속과 풍향, 일사 입력을 바꾸고 출력 변화를 확인한 뒤 CSV 원본 출력으로 돌아옵니다. 수동으로 적용한 기상 출처는 수동 상태로 남습니다.",
+      "actions": []
+    },
+    {
+      "title": "RTU와 전체 SCADA 데이터",
+      "seconds": 28,
+      "narration": "각 RTU는 연결과 건강 상태를 독립적으로 관리합니다. 전체 발전기의 샘플을 수집하고 기본 육십 초마다 MQTT로 전송합니다. 큐오에스 일은 전달 과정에서 중복이 생길 수 있으므로 메시지 아이디로 중복을 처리합니다.",
+      "actions": [
+        {
+          "type": "click",
+          "role": "link",
+          "name": "RTU 디바이스"
+        }
+      ],
+      "zoom": {
+        "scale": 1.12
+      }
+    },
+    {
+      "title": "외부 VPP 목표 출력 제어",
+      "seconds": 40,
+      "narration": "외부 클라이언트의 목표 출력은 검증을 거쳐 SCADA 제어로 전달됩니다. 수락과 실행, 실제 목표 도달은 서로 다른 상태입니다. 지금 표시한 결과는 실제 수신한 명령 상태와 출력이며, 전송 확인만으로 성공을 만들지 않습니다.",
+      "actions": [],
+      "zoom": {
+        "scale": 1.12
+      }
+    },
+    {
+      "title": "장애 주입과 복구",
+      "seconds": 32,
+      "narration": "통신 단절과 지연, 센서 중지를 구분해 시험합니다. 센서가 멈춘 구간은 결측으로 남습니다. 미확인 배치의 재시작 복구는 함께 제공하는 별도 실행 근거에서 확인할 수 있습니다.",
+      "actions": []
+    },
+    {
+      "title": "재현 가능한 시나리오와 연동",
+      "seconds": 30,
+      "narration": "배속과 일시정지, 난수 생성에 쓰는 초기값으로 시험 조건을 조절합니다. 선택한 RTU에 저장된 시나리오를 다시 불러오면 새 실행 아이디가 생깁니다. 이전 실행은 런 아이디로 구분하며 기존 아웃박스를 삭제하지 않습니다. 가이드에서 이 RTU의 토픽과 메시지 형식을 확인합니다.",
+      "actions": [
+        {
+          "type": "click",
+          "role": "link",
+          "name": "연동 가이드"
+        }
+      ]
+    },
+    {
+      "title": "검증 범위와 남은 제약",
+      "seconds": 24,
+      "narration": "최종 릴리스에는 시험 증거와 복원 자료, 취약점 및 이슈 기록을 함께 제공합니다. 실제 VPP와 외부 클라우드 자격증명이 없는 부분은 미검증으로 구분합니다. 상세 검증 범위와 남은 제약은 같은 버전의 릴리스 문서에서 확인합니다.",
+      "actions": [
+        {
+          "type": "click",
+          "role": "link",
+          "name": "통합 대시보드"
+        }
+      ]
+    }
+  ],
+  "preparationTemplate": true
+}

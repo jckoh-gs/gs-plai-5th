@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-09-21T19:20:34.169786+00:00",
+  "owner": "/root",
+  "terminalExitCode": 0,
+  "handle": null,
+  "note": "Synchronous bounded exec completed without session_id",
+  "stdoutReceipt": {
+    "state": "PREPARATION_CHECKS_RECORDED",
+    "output": "artifacts/checkpoints/media-weather-r2-root-review/checks.json",
+    "sha256": "c23f784005dfa5ac38ebefa8ed7ca40bd4d5abfa7b9a574a5e400f7c1c77bc82",
+    "filesVerified": 80
+  }
+}

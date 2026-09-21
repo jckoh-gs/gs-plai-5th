@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-09-21T19:23:03.326722+00:00",
+  "inventoryFilesVerified": 22,
+  "currentAndPreservedSourceFiles": 4,
+  "sentenceAiffAndPcmHashesVerified": 34,
+  "sentenceDurationsAndSrtMatched": true,
+  "totalVoiceSeconds": 161.6374375,
+  "minimumPlannedTimelineSeconds": 290,
+  "actualVideoTiming": false,
+  "bothOriginalOwnerAsrTerminalsAndSourceOutputHashesMatched": true,
+  "sourceHashes": {
+    "scripts/media/scenes-template.json": "dc2da69b9a78fdf7be6d816941ee09afe45c376a815d1fb3cc72f7994e2770b5",
+    "scripts/media/scene-plan.cjs": "d69f58893e36ed3c2bae1402a1b919ef983afa62cecc62d2a6e414465b46eb7e",
+    "scripts/media/release-features.cjs": "52c5bd8f280f4344ec12da7347eee2265d12db1b673b19a807ec46df9266eb58",
+    "scripts/media/transcribe-audio.py": "7077f0801685ebee5ef78f34ea17a57971267fb7716e8df1dda0d61cef26019a"
+  },
+  "inventorySha256": "72e087c2ab4a1cb64f508bd5c4bd2f3938bf253a2f99e395de98d536770898b5",
+  "productReview": "docs/product/REVIEW-054.md",
+  "directListening": false,
+  "naturalPronunciationVerified": false,
+  "scope": "Preparation-only technical evidence; ASR mismatch and hallucination remain. Not final audio/video or completion."
+}

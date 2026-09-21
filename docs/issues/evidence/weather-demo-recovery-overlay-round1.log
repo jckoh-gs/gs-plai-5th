@@ -1,0 +1,28 @@
+✔ actual model API cleanup restores owned settings only, remains idempotent and does not rewind dynamic time/output (46.769042ms)
+✔ lost write response is reconciled without replaying already applied patch (22.537625ms)
+✔ lost registration response identifies unique candidate but cannot invent initial baseline or write (13.462334ms)
+✔ pre-existing or wrong registration ID and changed owned run fail closed (14.06575ms)
+✔ expired deadline and wrong journal scope fail before writes; existing differences are report-only (19.414125ms)
+✔ planned same-owned scenario HTTP200 transition preserves original settings baseline (29.043333ms)
+✔ wrong scenario owner and unresolved planned response never authorize cleanup (18.367541ms)
+✔ begin reuses unchanged baseline without rewriting file and rejects changed pre-existing settings (6.715833ms)
+✔ actual201 ownership and cleanup tolerate independent server clock offset -30000 (19.874375ms)
+✔ actual201 ownership and cleanup tolerate independent server clock offset 30000 (19.888666ms)
+✔ lost registration with independent clock still never creates a baseline or writes (12.894958ms)
+✔ weather input baseline restores all four numbers and mode, truthfully manual, existing RTU unchanged (21.2215ms)
+✔ weather PATCH applied but response lost is not replayed on recovery (20.78575ms)
+✔ actual201 missing or nonfinite weather cannot invent owned baseline (55.242959ms)
+✔ older journal has no weather baseline and never claims or attempts its restoration (20.821042ms)
+✔ already matched weather returns true and preserves source without writes (21.891417ms)
+✔ actual model CSV weather overlay differs from raw configuration and is rejected before ownership (9.3455ms)
+✔ unverified headers and irradiance overlays fail closed before owned baseline (79.866916ms)
+✔ legacy two argument capture creates no weather baseline; unverifiable old field is ignored (40.650958ms)
+✔ verified request stores explicit basis and permits only intended electrical headers (20.0695ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 557.838167

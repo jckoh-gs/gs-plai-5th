@@ -1,0 +1,59 @@
+whisper_init_from_file_with_params_no_state: loading model from '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/ggml-small.bin'
+whisper_init_with_params_no_state: use gpu    = 0
+whisper_init_with_params_no_state: flash attn = 1
+whisper_init_with_params_no_state: gpu_device = 0
+whisper_init_with_params_no_state: dtw        = 0
+whisper_init_with_params_no_state: devices    = 2
+whisper_init_with_params_no_state: backends   = 2
+whisper_model_load: loading model
+whisper_model_load: n_vocab       = 51865
+whisper_model_load: n_audio_ctx   = 1500
+whisper_model_load: n_audio_state = 768
+whisper_model_load: n_audio_head  = 12
+whisper_model_load: n_audio_layer = 12
+whisper_model_load: n_text_ctx    = 448
+whisper_model_load: n_text_state  = 768
+whisper_model_load: n_text_head   = 12
+whisper_model_load: n_text_layer  = 12
+whisper_model_load: n_mels        = 80
+whisper_model_load: ftype         = 1
+whisper_model_load: qntvr         = 0
+whisper_model_load: type          = 3 (small)
+whisper_model_load: adding 1608 extra tokens
+whisper_model_load: n_langs       = 99
+whisper_model_load:          CPU total size =   487.01 MB
+whisper_model_load: model size    =  487.01 MB
+whisper_backend_init_gpu: no GPU found
+whisper_backend_init: using BLAS backend
+whisper_init_state: kv self size  =   18.87 MB
+whisper_init_state: kv cross size =   56.62 MB
+whisper_init_state: kv pad  size  =    4.72 MB
+whisper_init_state: compute buffer (conv)   =   22.42 MB
+whisper_init_state: compute buffer (encode) =   33.85 MB
+whisper_init_state: compute buffer (cross)  =    6.20 MB
+whisper_init_state: compute buffer (decode) =   97.28 MB
+read_audio_data: reading audio data from '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-r3-preparation/changed-scene-asr/audio.wav' ...
+read_audio_data: trying to decode with miniaudio
+
+system_info: n_threads = 4 / 15 | WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | SME2 = 1 | ACCELERATE = 1 | REPACK = 1 | 
+
+main: processing '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-r3-preparation/changed-scene-asr/audio.wav' (227378 samples, 14.2 sec), 4 threads, 1 processors, 5 beams + best of 5, lang = ko, task = transcribe, timestamps = 1 ...
+
+
+[00:00:00.000 --> 00:00:03.960]   통신 단절과 지연, 센서 중지를 구분해 시험합니다.
+[00:00:03.960 --> 00:00:06.960]   센서가 멈춘 구간은 결측으로 남습니다.
+[00:00:06.960 --> 00:00:11.840]   미확인 배치에 제 시작 후 재전송과 브로커 확인은 함께 제공하는 별도
+[00:00:11.840 --> 00:00:14.160]   실행 근거에서 확인할 수 있습니다.
+output_txt: saving output to '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-r3-preparation/changed-scene-asr/transcription.txt'
+output_srt: saving output to '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-r3-preparation/changed-scene-asr/transcription.srt'
+output_json: saving output to '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-r3-preparation/changed-scene-asr/transcription.json'
+
+whisper_print_timings:     load time =   102.88 ms
+whisper_print_timings:     fallbacks =   0 p /   0 h
+whisper_print_timings:      mel time =     3.94 ms
+whisper_print_timings:   sample time =    55.95 ms /   407 runs (     0.14 ms per run)
+whisper_print_timings:   encode time =   505.77 ms /     1 runs (   505.77 ms per run)
+whisper_print_timings:   decode time =     0.00 ms /     1 runs (     0.00 ms per run)
+whisper_print_timings:   batchd time =   770.81 ms /   405 runs (     1.90 ms per run)
+whisper_print_timings:   prompt time =     0.00 ms /     1 runs (     0.00 ms per run)
+whisper_print_timings:    total time =  1453.39 ms

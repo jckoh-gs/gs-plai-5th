@@ -1,0 +1,17 @@
+{
+  "at": "2026-09-21T19:08:43.672739+00:00",
+  "issue": "ISSUE031",
+  "status": "OPEN",
+  "observedRecorderHandle": 77008,
+  "exitCode": 1,
+  "videoVerified": false,
+  "evidenceSha256": {
+    "artifacts/checkpoints/media-weather-r2/attempt1-failed/terminal.json": "1a209b87d7cf24123af266e613c4c1c823b309d2afaa98f2511bf29ddf273a6c",
+    "artifacts/checkpoints/media-weather-r2/attempt1-failed/recovery-failed.json": "bf686579b7cea5cf036d211c999b848bd39e642c29981445bf52709d956d9630",
+    "artifacts/checkpoints/media-weather-r2/attempt1-failed/weather-transition-summary.json": "824e7d13dba20e07850f451772f8aee1ada7330930edd8eb23db4587397a92c5",
+    "artifacts/checkpoints/media-weather-r2/attempt1-failed/source-hashes.json": "4f0fbcd6897ebc6758ccc06f6c06027a1c5538f76519990259edbb9978370034"
+  },
+  "reviewScope": "Saved failure evidence and actual publicPlant/snapshotPlant source inspection; no rerun or runtime mutation",
+  "prior16TestLimitation": "Weather-free CSV did not exercise effective weather overlay",
+  "newFixVerified": false
+}

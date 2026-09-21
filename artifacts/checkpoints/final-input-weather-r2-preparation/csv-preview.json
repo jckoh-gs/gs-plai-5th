@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "type": "hybrid",
+  "unit": "kw",
+  "semantics": "sample",
+  "interpolation": "linear",
+  "rowCount": 2,
+  "intervalSeconds": 600,
+  "start": {
+    "utc": "2026-01-01T00:00:00.000Z",
+    "kst": "2026-01-01T09:00:00.000+09:00"
+  },
+  "end": {
+    "utc": "2026-01-01T00:10:00.000Z",
+    "kst": "2026-01-01T09:10:00.000+09:00"
+  },
+  "powerSource": "power_kw",
+  "minPowerKw": 500,
+  "maxPowerKw": 500,
+  "rows": [
+    {
+      "timestamp": "2026-01-01T00:00:00.000Z",
+      "power_kw": 500,
+      "voltage": 22000,
+      "current_a": 13.12,
+      "totalPowerKw": 500,
+      "timestampKst": "2026-01-01T09:00:00.000+09:00"
+    },
+    {
+      "timestamp": "2026-01-01T00:10:00.000Z",
+      "power_kw": 500,
+      "voltage": 22000,
+      "current_a": 13.12,
+      "totalPowerKw": 500,
+      "timestampKst": "2026-01-01T09:10:00.000+09:00"
+    }
+  ]
+}

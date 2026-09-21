@@ -1,0 +1,8 @@
+{
+  "recorderSessionId": 77008,
+  "exitCode": 1,
+  "videoVerified": false,
+  "rawVideo": "artifacts/media-preparation/weather-r2-focused/source/page@915c59611a3592b9bccb9a6b777362b4.webm",
+  "rawVideoSha256": "4d62b36fcb6f9e6d741dafefe41ce62ac388a4bcaa7ef4054048d1f29b29f3f1",
+  "cause": "Weather cleanup read effective CSV observations as raw inputs; no final video receipt generated"
+}

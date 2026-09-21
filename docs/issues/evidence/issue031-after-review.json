@@ -1,0 +1,25 @@
+{
+  "at": "2026-09-21T19:18:25.770897+00:00",
+  "issue": "ISSUE031",
+  "status": "RESOLVED_TOOLING",
+  "inventoryFilesVerified": 80,
+  "videoSha256": "969a05c0baae308e94bc6675e3eef3c899b42e7de85d3d9833ccdcd4f6c8d075",
+  "sha256": {
+    "artifacts/checkpoints/media-weather-r2/round2-passed/summary.json": "27ed806a24f32e2153581a9d0130dc133bf7dd700f67f0a9193544c2919cf948",
+    "artifacts/checkpoints/media-weather-r2/round2-passed/demo-recovery.json": "b303338e7b889782bd3fb712cf4cd2f1513cd2303dcf9d7abcb74dab30448173",
+    "artifacts/checkpoints/media-weather-r2/round2-passed/post-command-recovery.json": "d1c1f21bd61ff311774228b38d90a49658a93369859f3730a9260bf6cfb76afb",
+    "artifacts/checkpoints/media-weather-r2/round2-passed/post-weather-command.json": "f4c63da9b7fcd082a55561b82bcf4809ab53debecbe80881dd7a48eacb32167a",
+    "artifacts/checkpoints/media-weather-r2/round2-passed/fixture-stop-request.json": "6440dfac7eb7fe401cff890da585bc932b8a72f34683607da4fee21089cc92ed",
+    "artifacts/checkpoints/media-weather-r2/round2-passed/verification.json": "d56906c45d4946dac8122dba7ca864c608bf29da22531cbaa13d0525ee745065"
+  },
+  "checks": [
+    "same owned RTU across two PASS recovery reports and actual125kW completed command",
+    "weather settings matched and baseline/actual projection hashes equal",
+    "preexisting3 unchanged in both recovery reports",
+    "actual video bytes match summary and verification SHA"
+  ],
+  "terminalScope": "Saved summary records actual session exit0; independent reviewer did not rerun processes",
+  "preparationOnly": true,
+  "finalEightSceneOrListeningApproved": false,
+  "priorFailureUnchanged": true
+}

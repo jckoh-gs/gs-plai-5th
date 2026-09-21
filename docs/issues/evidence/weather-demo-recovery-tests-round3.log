@@ -1,0 +1,24 @@
+✔ actual model API cleanup restores owned settings only, remains idempotent and does not rewind dynamic time/output (50.056ms)
+✔ lost write response is reconciled without replaying already applied patch (25.4275ms)
+✔ lost registration response identifies unique candidate but cannot invent initial baseline or write (15.575584ms)
+✔ pre-existing or wrong registration ID and changed owned run fail closed (13.289667ms)
+✔ expired deadline and wrong journal scope fail before writes; existing differences are report-only (20.151459ms)
+✔ planned same-owned scenario HTTP200 transition preserves original settings baseline (39.049041ms)
+✔ wrong scenario owner and unresolved planned response never authorize cleanup (22.356375ms)
+✔ begin reuses unchanged baseline without rewriting file and rejects changed pre-existing settings (6.970792ms)
+✔ actual201 ownership and cleanup tolerate independent server clock offset -30000 (20.387292ms)
+✔ actual201 ownership and cleanup tolerate independent server clock offset 30000 (19.897583ms)
+✔ lost registration with independent clock still never creates a baseline or writes (11.980584ms)
+✔ weather input baseline restores all four numbers and mode, truthfully manual, existing RTU unchanged (22.080334ms)
+✔ weather PATCH applied but response lost is not replayed on recovery (21.723375ms)
+✔ actual201 missing or nonfinite weather cannot invent owned baseline (51.228ms)
+✔ older journal has no weather baseline and never claims or attempts its restoration (20.923875ms)
+✔ already matched weather returns true and preserves source without writes (21.728459ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 431.325791

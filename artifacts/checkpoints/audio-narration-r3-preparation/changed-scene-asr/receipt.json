@@ -1,0 +1,112 @@
+{
+  "state": "TECHNICAL_ASR_RECORDED",
+  "requiresSuccessfulExitReceipt": true,
+  "startedAt": "2026-09-21T19:21:40.995532+00:00",
+  "recordedAt": "2026-09-21T19:21:42.695766+00:00",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "source": {
+    "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-r3-preparation/voice-5.wav",
+    "sha256": "9ae141c19c9f9e7600159891c35fc58e1a75ddeb31e1892b3ea8a3b46851fd46"
+  },
+  "pcm": {
+    "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-r3-preparation/changed-scene-asr/audio.wav",
+    "sha256": "4e8b0df7d42b7e76f973bdc8877b93654456ccb59bf73cedc1e8d9851dbbb4f6",
+    "frames": 227378,
+    "durationSeconds": 14.211125
+  },
+  "tools": {
+    "cli": {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/build/bin/whisper-cli",
+      "sha256": "645af2334c629a5ee8ed33b76a2cad4745c9c39c4b003a3ca90616326cb98528"
+    },
+    "model": {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/ggml-small.bin",
+      "sha256": "1be3a9b2063867b937e64e2ec7483364a79917e157fa98c5d94b5c1fffea987b"
+    },
+    "ffmpeg": {
+      "path": "/Users/charleskoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+      "sha256": "6d175a4743ca50256e89a8cdd731100f9cee33bd79aeea46894d209410dc6617"
+    }
+  },
+  "commands": [
+    {
+      "argv": [
+        "/Users/charleskoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-nostdin",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-protocol_whitelist",
+        "file,pipe",
+        "-i",
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-r3-preparation/voice-5.wav",
+        "-vn",
+        "-ac",
+        "1",
+        "-ar",
+        "16000",
+        "-c:a",
+        "pcm_s16le",
+        "-t",
+        "601",
+        "-n",
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-r3-preparation/changed-scene-asr/audio.wav"
+      ],
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/build/bin/whisper-cli",
+        "-m",
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/ggml-small.bin",
+        "-f",
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-r3-preparation/changed-scene-asr/audio.wav",
+        "-l",
+        "ko",
+        "-t",
+        "4",
+        "-ng",
+        "-oj",
+        "-otxt",
+        "-osrt",
+        "-of",
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-r3-preparation/changed-scene-asr/transcription"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-r3-preparation/changed-scene-asr/transcription.json",
+      "bytes": 1583,
+      "sha256": "d4d5c6af2821606dda3156270b5976bcf748cd00ce8fee3eb5028294c69c1eea"
+    },
+    {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-r3-preparation/changed-scene-asr/transcription.txt",
+      "bytes": 266,
+      "sha256": "624f4f4393a38d2e7dbca4c77c9ed8a10349a5af874b60d6c4d5fb48c7c75ee1"
+    },
+    {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-r3-preparation/changed-scene-asr/transcription.srt",
+      "bytes": 402,
+      "sha256": "664d462b23d9d3b4570dd90e21681da5f52aec37247d2b277ff11b3d4a01bbdd"
+    },
+    {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-r3-preparation/changed-scene-asr/decode.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-r3-preparation/changed-scene-asr/asr.log",
+      "bytes": 3879,
+      "sha256": "1ccd62ebf82f47e9b2171bb1c25dd2b0f914045be58ff735bbc4105c1333fec8"
+    }
+  ],
+  "segments": 4,
+  "nonemptyAndActualPcmBoundsValidated": true,
+  "language": "ko",
+  "promptProvided": false,
+  "directListening": false,
+  "naturalPronunciationVerified": false,
+  "semanticReviewRequired": true
+}

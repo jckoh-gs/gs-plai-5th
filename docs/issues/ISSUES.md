@@ -23,6 +23,8 @@
 
 - ISSUE030: **RECOVERED_CAUSE_UNKNOWN — 1.7.1 관측 연결 사건**. API 일시 실패와 이후 forward 자동 재생성·구독 재연결을 기록했다. 4/5 RTU의 미수신 표본 위치144개는 후속 제한 조회에서 저장된 생성 표본·broker ACK와 대응했다. 모든 구독자 수신 증명은 아니며 별도 readonly DB 진단6410 실패 이력과 연결 원인 미확정 상태를 유지한다.
 
+- ISSUE031: **RESOLVED_TOOLING — 데모 기상 복원 baseline의 effective CSV 값 오인**. 최초 recorder77008 실패와20시험 근거를 보존하고, 실제2차 focused 녹화·후속125kW 명령·양복구 PASS로 좁은 결함을 종결했다. 최종창 새8장면 영상은 별도다.
+
 번호가 없는 IDEA011 명령 목록 실패 가시성 기록도 현재 기능 인수 완료로 정리한다. 로컬8검증군의 합성503·header/body timeout·전환/해제 시험과 실제 main/현재1.7 복원 읽기, REVIEW037/038를 근거로 한다. 이전1.6에 신규 안내가 있다고 주장하지 않는다.
 
 계속 남는 경계: 오디오의 실제 청취 미검증, 최종창 신규 미디어·동일 영상 PPT 검수, 실제 KMA/AWS/운영 VPP 외부 연동 미검증, 단일노드 k3s의 노드 HA 미검증은 해결로 바꾸지 않는다. SEC006의 현재 이미지 OS4매치/2CVE와 인증 사용자 자원 소모 잔여 위험은 보안 원장에 계속 연결한다. npm audit0/전체시험 PASS가 이를 해소하지 않는다. 원래 freeze21:37:33Z/deadline22:07:33Z를 유지하며 역할·전체목표는 아직 종료하지 않는다.
@@ -674,3 +676,24 @@ primary는18:42:23.566Z apiReady=false/apiErrors1을 기록한 후18:42:38.225Z 
 저장된 rows를 독립 계산하여 각 RTU의 같은runId, 조회 범위 내 연속 simulation 위치 및 모든 조회행 ACK 기록을 확인했다. 관측 미수신 위치144개는 c81f4573 seq1214의22개, ed0ac897 seq1427의30개, adb56898 seq1602·1603의32개, f49684af seq644의60개와 대응한다. 다섯 번째90528620은 관측 공백0이다. 이 후속 근거는 해당 범위의 생성 표본 보존과 broker PUBACK을 확인하지만 모든 구독자 수신이나 영구 외부 VPP 도달을 증명하지 않는다. 원문 수신 payload 전체가 보존된 것은 아니므로 미수신 위치의 추정은 연속 observer snapshot에 근거한다. 최초 관측 공백과 누적 오류는 없어지지 않는다.
 
 [SQLite 공식 extended result code](https://www.sqlite.org/rescode.html#ioerr_gettemppath)에 따라6410은 SQLITE_IOERR_GETTEMPPATH, 임시 파일을 둘 적합한 디렉터리 경로를 결정하지 못한 코드다. 앞선 ORDER BY 정렬/임시 경로와의 구체적 인과관계는 여전히 추론이며 네트워크 사건 원인으로 확정하지 않는다. 상태 RECOVERED_CAUSE_UNKNOWN은 유지한다. 새 독립 receipt는 evidence/issue030-persisted-review.json이며 기존 실패·부분snapshot·최종 인수 제한을 변경하지 않았다.
+
+
+## ISSUE-031 — 데모 복원 helper가 CSV 유효 기상을 원래 입력 설정으로 오인
+
+P2 최종 데모 복구 정확성, 현재 RESOLVED_TOOLING/실제 focused 회귀 확인. 최초 상태 OPEN/메인 수정 중. 실제 focused 녹화77008 terminal1에서 발견했다. `artifacts/checkpoints/media-weather-r2/attempt1-failed/terminal.json` 및 recovery-failed/weather-transition-summary.json이 최초 근거이며 실패 raw WebM과 소스 해시는 보존한다. 최종 video receipt는 생성되지 않았고 이 시도를 검증 영상으로 판정하지 않는다.
+
+publicPlant는 snapshotPlant의 effectiveWeather로 weather를 덮어쓴다. 따라서 CSV에 기상 컬럼이 있으면 공개 weather는 raw 입력 설정과 다를 수 있다. 이전 helper는 actual201 공개 응답만으로 기상 입력 baseline을 만들었다. 첫 값10m/s·220도 부근·900W/m²를 설정으로 오인했고 CSV 풍향이 시간에 따라 바뀌어 복원 이후 weatherConfigurationMatched=false가 됐다. 실패 receipt의 baselineHash와 actualHash는 동일했고 preexisting2의 projection도 unchanged였으나 기상 복원 판정은 실패했다. 이를 기존 RTU 설정 훼손이나 앱 런타임 결함으로 확대하지 않는다.
+
+앞선 독립16시험은 기상 컬럼 없는 timestamp,power_kw CSV를 사용했으므로 이 overlay를 검증하지 못했다. 해당 PASS와 실패 round1~3은 실제 당시 범위 그대로 유지하며 전체 CSV 기상 복원 보장으로 해석하지 않는다.
+
+메인 수정 원칙은 실제 제출 registration request를 captureRegistration의 세 번째 인수로 전달하고 명시적으로 허용한 기상 없는 CSV 헤더·별도 irradianceDataset 부재를 확인한 경우만 입력 baseline의 근거를 기록하는 것이다. 기상 overlay/quoted 또는 미확인 헤더/별도 일사 데이터는 거절하며 owned baseline을 만들지 않는다. 2인수 legacy 및 검증근거 없는 과거 journal의 기상 baseline은 복원 대상으로 신뢰하지 않고 no-weather-claim으로 남긴다. 이는 아직 수정·회귀·새 녹화 PASS를 선행 선언한 것이 아니다. 최종 녹화용 CSV는 기상 없는 명시적 헤더/500kW 상수로 준비하며 기존 실패 journal·영상은 변경하지 않는다. 독립 회귀는 소스 준비 통보 후 실제 model overlay 재현과 거절·legacy 경계를 추가한다.
+
+
+ISSUE031 후속 helper 회귀: 수정 소스를 대상으로 기존 fixture가 실제 제출 request를 세 번째 인수로 제공하도록 바꾸고, real createPlant/publicPlant에서 raw풍속8과 CSV effective10 및 진행 시 풍향 변화를 직접 재현했다. 해당 overlay는 이제 baseline 생성 전 거절한다. missing/empty/quoted/duplicate/unknown/weather 헤더·별도irradiance dataset, 2인수 legacy 및 basis 없는 과거 field의 null/no-claim, 허용한 electrical CSV의 명시적 basis와 복원을 포함해20/20 PASS(동기exit0, handle 미발급)다. 기존 응답 유실 후 중복PATCH0·manual 출처·기존model 불변 시험도 함께 통과했다. evidence/weather-demo-recovery-overlay-review.json에 새source/test/log SHA를 보존하며 이전16시험 receipt·실패 로그는 변경하지 않는다. 이는 helper 격리 회귀 통과이며 실제2차 녹화/복구가 남아 ISSUE031은 OPEN이다.
+
+
+ISSUE031 종결 대조: `artifacts/checkpoints/media-weather-r2/inventory.json`의80파일 바이트·SHA와 실제 round2 MP4 SHA969a05c0…를 독립 대조했다. round2-passed summary는 recorder83763/observer98107/후속MQTT77844/격리fixture85525의 실제 종료0을 기록하며 fixture-stop-request는 소유3113/PID86092만 대상으로 한다. 독립 검토는 이 보존 종료 기록을 읽었으며 추가 프로세스 조작·복구 재실행을 하지 않았다.
+
+실제 round2 demo-recovery 및 post-command-recovery는 같은 새 소유RTU c2bccd06에 settings/weatherConfigurationMatched=true, baselineHash=actualHash, 기존3 RTU unchanged를 기록한다. 기상14/90/300/22에서 출력651.8kW, CSV500kW·입력8/240/650/22 복귀를 기록했고 provenance는 default→manual로 정직하게 남겼다. 후속 실제 MQTT 명령은 accepted→executing→completed/125kW/error0/exit0이며 이후2쓰기 복구도 PASS다. 일반 복구 writes0은 화면 조작이 이미 복구한 상태에서 재쓰기하지 않았다는 범위다.
+
+이상으로 잘못된 effective CSV baseline 신뢰 결함은20개 helper 회귀와 실제2차 준비 녹화/복구를 결합하여 RESOLVED_TOOLING으로 종결한다. 최초 attempt1 실패 raw영상/journal·이전16시험 누락범위·20시험 로그는 그대로 보존한다. 영상131.13초/3 focused scenes는 준비 범위이며 최종창 새8장면 영상·동일영상PPT·직접청취·전체목표 인수를 대신하지 않는다. verification의 rehearsal/pending visualReview 및 placeholder imageDigest도 최종 release media receipt로 승격하지 않는다. 원래freeze21:37:33Z/deadline22:07:33Z 불변. 독립 receipt는 evidence/issue031-after-review.json이다.

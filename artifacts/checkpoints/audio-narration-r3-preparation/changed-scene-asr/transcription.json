@@ -1,0 +1,76 @@
+{
+	"systeminfo": "WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | SME2 = 1 | ACCELERATE = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": true,
+		"vocab": 51865,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/ggml-small.bin",
+		"language": "ko",
+		"translate": false
+	},
+	"result": {
+		"language": "ko"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:03,960"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 3960
+			},
+			"text": " 통신 단절과 지연, 센서 중지를 구분해 시험합니다."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,960",
+				"to": "00:00:06,960"
+			},
+			"offsets": {
+				"from": 3960,
+				"to": 6960
+			},
+			"text": " 센서가 멈춘 구간은 결측으로 남습니다."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:06,960",
+				"to": "00:00:11,840"
+			},
+			"offsets": {
+				"from": 6960,
+				"to": 11840
+			},
+			"text": " 미확인 배치에 제 시작 후 재전송과 브로커 확인은 함께 제공하는 별도"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:11,840",
+				"to": "00:00:14,160"
+			},
+			"offsets": {
+				"from": 11840,
+				"to": 14160
+			},
+			"text": " 실행 근거에서 확인할 수 있습니다."
+		}
+	]
+}

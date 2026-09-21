@@ -1,0 +1,115 @@
+{
+  "preparationOnly": true,
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 1345,
+      "sha256": "6e7e65f94fbd9a417d5e38c26f9da497b4c0969821f92da8b8e6848ccb507775"
+    },
+    {
+      "file": "asr/asr.log",
+      "bytes": 8202,
+      "sha256": "f69ce4ba464dee74bddc7dc5383508ada17c3de3ece3cea85f8c2ed205cb0ce3"
+    },
+    {
+      "file": "asr/receipt.json",
+      "bytes": 4415,
+      "sha256": "d5bb244ccf5170318b6757378d809020fc50bb46de69daf93559e49d0170f90f"
+    },
+    {
+      "file": "asr/terminal.json",
+      "bytes": 172,
+      "sha256": "479b395abd9a0adb8d65879f1e5dd0aa41a73ae9a319b08ebef1cb16405a9dfb"
+    },
+    {
+      "file": "asr/transcription.json",
+      "bytes": 10616,
+      "sha256": "ee83fb5e7093c139c32288f7f16ce315a73d8736df83f474e6028fd9e9fcd8c7"
+    },
+    {
+      "file": "asr/transcription.srt",
+      "bytes": 4825,
+      "sha256": "42a1357eccb1db29aa426df83c9bbaa47cdc2c00fa00d615a9143e4e8c5c591a"
+    },
+    {
+      "file": "asr/transcription.txt",
+      "bytes": 3399,
+      "sha256": "3857be07e9df7a5fcf37bc03b1020dffbe1cae9add9d237f86152361faf50674"
+    },
+    {
+      "file": "changed-scene-asr/asr.log",
+      "bytes": 3879,
+      "sha256": "1ccd62ebf82f47e9b2171bb1c25dd2b0f914045be58ff735bbc4105c1333fec8"
+    },
+    {
+      "file": "changed-scene-asr/receipt.json",
+      "bytes": 4522,
+      "sha256": "1cf4e21519f79104ee002d6afc6a4288a687ab9df0445bdae22cd1fd20044119"
+    },
+    {
+      "file": "changed-scene-asr/terminal.json",
+      "bytes": 172,
+      "sha256": "d55ef04fed5e92a73bef147a37559770683598497d86ecacc38d3f7e4b08f92d"
+    },
+    {
+      "file": "changed-scene-asr/transcription.json",
+      "bytes": 1583,
+      "sha256": "d4d5c6af2821606dda3156270b5976bcf748cd00ce8fee3eb5028294c69c1eea"
+    },
+    {
+      "file": "changed-scene-asr/transcription.srt",
+      "bytes": 402,
+      "sha256": "664d462b23d9d3b4570dd90e21681da5f52aec37247d2b277ff11b3d4a01bbdd"
+    },
+    {
+      "file": "changed-scene-asr/transcription.txt",
+      "bytes": 266,
+      "sha256": "624f4f4393a38d2e7dbca4c77c9ed8a10349a5af874b60d6c4d5fb48c7c75ee1"
+    },
+    {
+      "file": "plan.json",
+      "bytes": 3932,
+      "sha256": "edcc4d906df4fa532a87505dbbc0ae18209225608db0e3a81160d9659573c1de"
+    },
+    {
+      "file": "planned-ko.srt",
+      "bytes": 4121,
+      "sha256": "073d1aaaaffaac1fd40e90e463bb1f1527bdb0e90696048d359122cf655bdb28"
+    },
+    {
+      "file": "review.json",
+      "bytes": 1478,
+      "sha256": "54043e30f64cf29e23962061d05cd038ded4cf83f0fe88a7a39d3bb2c75df826"
+    },
+    {
+      "file": "sources/release-features.cjs",
+      "bytes": 510,
+      "sha256": "52c5bd8f280f4344ec12da7347eee2265d12db1b673b19a807ec46df9266eb58"
+    },
+    {
+      "file": "sources/scene-plan.cjs",
+      "bytes": 8522,
+      "sha256": "d69f58893e36ed3c2bae1402a1b919ef983afa62cecc62d2a6e414465b46eb7e"
+    },
+    {
+      "file": "sources/scenes-template.json",
+      "bytes": 4440,
+      "sha256": "dc2da69b9a78fdf7be6d816941ee09afe45c376a815d1fb3cc72f7994e2770b5"
+    },
+    {
+      "file": "sources/transcribe-audio.py",
+      "bytes": 9398,
+      "sha256": "7077f0801685ebee5ef78f34ea17a57971267fb7716e8df1dda0d61cef26019a"
+    },
+    {
+      "file": "synthesis.json",
+      "bytes": 23460,
+      "sha256": "88fb2056ab8b62b1780c289d684f9a5af2ddd3ac8b24fb9361992b2bc967186a"
+    },
+    {
+      "file": "synthesize.py",
+      "bytes": 3748,
+      "sha256": "4b3f8b2d95d02cb0f5f5d113910845ab6b36ef0a42c824134f1855bb4c788137"
+    }
+  ]
+}

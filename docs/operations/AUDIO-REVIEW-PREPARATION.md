@@ -56,3 +56,8 @@ python3 scripts/deadline-command.py --timeout-seconds 180 -- python3 scripts/med
 성공 증거는 **원래 실행의 종료0·stdout의 receipt SHA·저장 receipt의 실제 SHA** 세 가지다. 중단 후 남은 파일이나 `TECHNICAL_ASR_RECORDED` 문자열만으로 성공을 인정하지 않는다. 원본 WAV·도구·모델은 private에 두고 전사와 영수증만 소형 검수 묶음으로 보존한다. 이어 최종 원고와 의미를 직접 대조한다. 전사기의 성공은 문장 뜻·한국어 자연스러움·음성 인수 완료를 뜻하지 않는다.
 
 실제 기존1.7 MP4로 실행한 root2205는 종료0, PCM246.7816875초/33구간이었다. `artifacts/checkpoints/audio-final-helper-preparation`에 원래 stdout 영수증과 결과 해시를 남겼다. 이 자료도 준비 검증이며 새 최종 MP4를 대신하지 않는다. 기존 원회성 `audio-asr-preparation/transcribe.py`의 고정255.33초 한계를 최종 파일에 재사용하지 않는다.
+# 최신 원고 revision3 준비 후속
+
+기상 조작을 추가한 revision2의 실제 집중3장면 MP4 및 두 문장 전사는 [media-weather-r2](../../artifacts/checkpoints/media-weather-r2/README.md)에 보존한다. 그다음 revision3은 장면6의 재시작 후 재전송·브로커 확인을 별도 실행 근거로 명시했다. [REVIEW054](../product/REVIEW-054.md)는 같은1.7.1 manifest의 실제 outbox 근거와 의미를 대조했다.
+
+[revision3 준비](../../artifacts/checkpoints/audio-narration-r3-preparation/review.json)는 현재1.7.1 기능별 문구를 포함한8장면34문장의 실제 Yuna170 음성을 새로 합성했다. 음성161.637초, 장면 하한 포함계획290초다. [메인 검사](../../artifacts/checkpoints/audio-narration-r3-root-review/checks.json)에서22파일·소스4개·34문장의 AIFF/PCM 해시·길이·계획SRT 일치를 확인했다. 전체ASR40659 및 변경장면58340 종료0/영수증/출력SHA를 대조했다. 긴 무음의 ASR 중복·환각과 전문용어 인식 차이는 그대로 보존한다. 계획 자막을 실제 영상 자막으로 취급하지 않으며 ASR를 원고의 정답이나 발음 적합 판정에 사용하지 않는다. 직접청취false, 최종 MP4 새 전사·시각/주장 검수 필요라는 경계는 유지한다. 이전 revision1/2 기록은 당시 소스의 이력이며 변경하지 않았다.

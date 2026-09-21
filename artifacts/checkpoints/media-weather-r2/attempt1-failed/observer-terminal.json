@@ -1,0 +1,8 @@
+{
+  "sessionId": 43984,
+  "supervisorExitCode": 125,
+  "reason": "Owned read-only observer explicitly terminated after recorder terminal and failed recovery proof; no remote operation",
+  "path": "artifacts/media-preparation/weather-r2-focused/weather-observations.jsonl",
+  "sha256": "ffd2a9be667a54664c9ea7acd0cca3b20b21256c2dccb00e66a02488a39e6fef",
+  "lines": 377
+}

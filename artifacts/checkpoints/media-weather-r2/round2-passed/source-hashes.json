@@ -1,0 +1,142 @@
+[
+  {
+    "path": "scripts/media/scenes-template.json",
+    "sha256": "51ce8b4e6b84b44601aeb22a08f284c6698a4ef389ae62a600dacf44fa5f3a98"
+  },
+  {
+    "path": "scripts/media/record-demo.cjs",
+    "sha256": "dc01e9f9a4337b3de81842e2fd322a5c5bcf11fc834a44002874c1cb9d9794b0"
+  },
+  {
+    "path": "scripts/media/final-deck-binding.cjs",
+    "sha256": "b105931fcfde888e607e867845ea0b32c1dee26869e759584f4e1dbeb6225371"
+  },
+  {
+    "path": "scripts/media/deck-template.json",
+    "sha256": "9687e368bb78003edf4bbcae7345c36c09547fe6a50532b51f3a0e3d9294da26"
+  },
+  {
+    "path": "scripts/media/prepare-final-scenes.cjs",
+    "sha256": "e89c70ed3fa96d8eb9c330d72b862185952905b5b436d6c421fa5074ba9ea0ae"
+  },
+  {
+    "path": "scripts/media/recover-demo.cjs",
+    "sha256": "803558acb145447b45c1ff9e4c98178c130a4120d9d398fda16e6568c0c02762"
+  },
+  {
+    "path": "scripts/media/demo-lifecycle.cjs",
+    "sha256": "7674e060ea3cc85805100060810904ac6b29de1d99b8936e7dd6c9103a1a625c"
+  },
+  {
+    "path": "scripts/media/final-input-template.json",
+    "sha256": "13ca3409b68979d16027db6f99683c2fd92f3a05e7e98f1a265c64502d251133"
+  },
+  {
+    "path": "scripts/media/scene-plan.cjs",
+    "sha256": "d69f58893e36ed3c2bae1402a1b919ef983afa62cecc62d2a6e414465b46eb7e"
+  },
+  {
+    "path": "scripts/media/video-pilot.cjs",
+    "sha256": "d2457e54aa0c98c5e5fd2b8f30073021c50326600c31a6595eafd1879c6d405d"
+  },
+  {
+    "path": "scripts/media/transcribe-audio.py",
+    "sha256": "7077f0801685ebee5ef78f34ea17a57971267fb7716e8df1dda0d61cef26019a"
+  },
+  {
+    "path": "scripts/media/release-features.cjs",
+    "sha256": "52c5bd8f280f4344ec12da7347eee2265d12db1b673b19a807ec46df9266eb58"
+  },
+  {
+    "path": "scripts/media/facts.template.json",
+    "sha256": "004464ebfea30cf2c2b4686a0a8332219b94c21bde1ecf0c8005eb7b5bc89319"
+  },
+  {
+    "path": "scripts/media/prepare-rehearsal.cjs",
+    "sha256": "830f3398871b763e44cfaf3ccb68845ef01644511d004ce735c05ea806797f6a"
+  },
+  {
+    "path": "scripts/media/media-deadline.cjs",
+    "sha256": "fdac80297e5938d921e7090c82e7934c5afececc5bce6cc2e70bfe7dae808721"
+  },
+  {
+    "path": "scripts/media/validate-command-download.cjs",
+    "sha256": "baa22eb3c4528805818928a386b37e34a83e153ee8258c3fe7af356933011c11"
+  },
+  {
+    "path": "scripts/media/build-deck.mjs",
+    "sha256": "529899c6ba2eab70e9dac58549bad6a26ac36d8629c330ba1aa75e4bfffba9d3"
+  },
+  {
+    "path": "scripts/media/presentation-pilot.mjs",
+    "sha256": "0a7747f735ef5594b62b2909f8e2006329e39f6cecd3e0022bbff33c3770a7a5"
+  },
+  {
+    "path": "scripts/media/prepare-final-deck.cjs",
+    "sha256": "993b41ee7eae315e7554822a348e5ef5dc5e77ddc87388e221fb3700eb253b7b"
+  },
+  {
+    "path": "scripts/media/recording-sources.cjs",
+    "sha256": "12280b429f3cf83d33d3850f291d207771f1548836d3b28f29b37f5221258eff"
+  },
+  {
+    "path": "scripts/media/release-binding.cjs",
+    "sha256": "46fd7620f0bbc0890bd40b98b68093ccdedb0c24c77e9f2be3bb75402cf8f656"
+  },
+  {
+    "path": "server/control.js",
+    "sha256": "ceabb746658b7bb3af35b767457ea81129da1ddf4f142850dc11a4fff467b9ac"
+  },
+  {
+    "path": "server/weather.js",
+    "sha256": "4d10a10957053d68f22349021b358a1d730622a457b824e26521723f0fea64d9"
+  },
+  {
+    "path": "server/metrics.js",
+    "sha256": "590169fdfc7431bb07cf7df957ae969cdf707244b809a1d7c1c8e6d642f9f817"
+  },
+  {
+    "path": "server/store.js",
+    "sha256": "5b497e48f84e0a918a6d565e5dc9c741c4e68fc69c8141d813e7921e96a73969"
+  },
+  {
+    "path": "server/transport.js",
+    "sha256": "90c33b2c5b7eff62ffb6c2c2dc8a6a659b9ab6e770119eadc862f3094431d29a"
+  },
+  {
+    "path": "server/index.js",
+    "sha256": "fdced6abe1dc0917d72a8ddedb110bb904b6a439c49071d947049a3a9fed593d"
+  },
+  {
+    "path": "server/config.js",
+    "sha256": "9ed29685b837bb4da146792723bd4edd9cf4874a8a31e3da75f4f8027bcedac6"
+  },
+  {
+    "path": "server/command-export.js",
+    "sha256": "6bba250ec237006e1d8f9b7e4b475870f3366a5a7cc9299c3519f4fc8149863e"
+  },
+  {
+    "path": "server/dataset-preview.js",
+    "sha256": "9732f5fcc73000494fe4138ff1116ed94f03474c713438901eb225368a194443"
+  },
+  {
+    "path": "server/model.js",
+    "sha256": "875d936b0038ef5a9bd3c678a50dafdd8d33c7c0f8c60eba0316def51e95ba67"
+  },
+  {
+    "path": "web/src.jsx",
+    "sha256": "ffbb204d9275fc14ebfdd9ea3ea488494ca2c0c97271f6af69f69993ddbfa592"
+  },
+  {
+    "path": "web/command-list.js",
+    "sha256": "18e353fb7119f39724209f662458bab82e5737e827ad1013529cdfff3011f026"
+  },
+  {
+    "path": "artifacts/media-preparation/weather-r2-round2/config.json",
+    "sha256": "8d147e00891b621f26fdaff301f7128b49fc26da99aca6d0c42aa93287cd8113"
+  },
+  {
+    "path": "artifacts/media-preparation/demo-synthetic-weather-control.csv",
+    "sha256": "9b763c3be810349c80535c59ad0dd065620dc444c517828e594150b0b15b8dea"
+  }
+]

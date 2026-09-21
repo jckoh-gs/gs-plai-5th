@@ -1,0 +1,13 @@
+{
+  "owner": "/root",
+  "terminalExitCode": 0,
+  "handle": null,
+  "note": "Synchronous read-only evidence verification and ledger update; no session_id",
+  "stdoutReceipt": {
+    "checks": "artifacts/checkpoints/audio-narration-r3-root-review/checks.json",
+    "sha256": "e4d14711a3374731221eb4f59588ebf15c69b81f6fbccd4183b2a09509dc1324",
+    "filesVerified": 22,
+    "sentencesVerified": 34,
+    "plannedSeconds": 290
+  }
+}
