@@ -1,5 +1,5 @@
 {
-  "prdVersion": "1.8",
+  "prdVersion": "1.9",
   "runId": "grid-new-20260921T080733Z",
   "scope": "greenfield, mandatory k3s",
   "policy": "pending until new-run direct evidence covers complete requirement; code presence/legacy reports are not pass",
@@ -1425,26 +1425,75 @@
     {
       "id": "AT-DATA",
       "description": "데이터",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [],
+      "coveredBy": [
+        "AT-DATA-01",
+        "AT-DATA-02",
+        "AT-DATA-03",
+        "AT-DATA-04",
+        "AT-DATA-05",
+        "AT-DATA-06",
+        "AT-DATA-07",
+        "AT-DATA-08"
+      ],
+      "assessment": "All named child cases directly covered; see child evidence and1.1.0checkpoint."
     },
     {
       "id": "AT-MODEL",
       "description": "발전 모델",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [],
+      "coveredBy": [
+        "AT-MODEL-01",
+        "AT-MODEL-02",
+        "AT-MODEL-03",
+        "AT-MODEL-04",
+        "AT-MODEL-05",
+        "AT-MODEL-06",
+        "AT-MODEL-07",
+        "AT-MODEL-08"
+      ],
+      "assessment": "All named child cases directly covered; see child evidence and1.1.0checkpoint."
     },
     {
       "id": "AT-CONTROL",
       "description": "명령",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [],
+      "coveredBy": [
+        "AT-CONTROL-01",
+        "AT-CONTROL-02",
+        "AT-CONTROL-03",
+        "AT-CONTROL-04",
+        "AT-CONTROL-05",
+        "AT-CONTROL-06",
+        "AT-CONTROL-07",
+        "AT-CONTROL-08",
+        "AT-CONTROL-09",
+        "AT-CONTROL-10",
+        "AT-CONTROL-11"
+      ],
+      "assessment": "All named child cases directly covered; see child evidence and1.1.0checkpoint."
     },
     {
       "id": "AT-MQTT",
       "description": "저장·통신",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [],
+      "coveredBy": [
+        "AT-MQTT-01",
+        "AT-MQTT-02",
+        "AT-MQTT-03",
+        "AT-MQTT-04",
+        "AT-MQTT-05",
+        "AT-MQTT-06",
+        "AT-MQTT-07",
+        "AT-MQTT-08",
+        "AT-MQTT-09",
+        "AT-MQTT-10"
+      ],
+      "assessment": "All named child cases directly covered; see child evidence and1.1.0checkpoint."
     },
     {
       "id": "AT-UI",
@@ -1485,7 +1534,7 @@
     {
       "id": "FR-VPP-REPORT-01",
       "description": "선택적 MQTT 시험 결과 파일 (IDEA-001, 작업본 구현·검증 대기)",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/unit-round5.log",
@@ -1498,16 +1547,40 @@
         {
           "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
           "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.1.0.json",
+          "sha256": "b0e4c652b9fdcafd78f3eb1887c243e51c0dd6e980d445e8cdf9991d684bcfee"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/restore-summary.json",
+          "sha256": "f8e1e3173ebac71ee6f1c439f728166cf7051ae459a52f1e58aaf90b397ece74"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/outbox-restart.json",
+          "sha256": "745dce80fb3d44394a5722018c58d83b4a33c23e97b0e92f1a92287764b35218"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+          "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
         }
       ],
-      "assessment": "Report success/failure/nonleak/noredispatch/timeout fully functional; finalrelease suite/build/stable linking remains.",
+      "assessment": "1.1.0 checkpoint: exact105144320byte backupSHA29071f..1879,currentrestore and backward1.0UI/MQTT/original5plants, actualpodoutboxrestart, stabletag peeled8599ab9, immutable manifest244evidence hashes independently matched. Sameimage build/suites and earlier feature-specific evidence retained. Finalmedia/time excluded.",
       "auditRound": "005"
     },
     {
       "id": "AT-VPP-REPORT",
       "description": "제품 v2.1.0 수락 조건 (전체 검증 대기)",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [],
+      "coveredBy": [
+        "AT-VPP-REPORT-01",
+        "AT-VPP-REPORT-02",
+        "AT-VPP-REPORT-03",
+        "AT-VPP-REPORT-04",
+        "AT-VPP-REPORT-05"
+      ],
+      "assessment": "All named child cases directly covered; see child evidence and1.1.0checkpoint."
     },
     {
       "id": "FR-AUTH-01",
@@ -1569,7 +1642,7 @@
     {
       "id": "OPS-03",
       "description": "검증 버전과 비파괴 복원 (채택, 실행 검증 대기)",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "deploy/verification/post-restart.json",
@@ -1630,9 +1703,25 @@
         {
           "path": "deploy/verification/restore-patched-original-data.json",
           "sha256": "fda8706dc251743b18616bbc5849c39c232071d5a40ee11539f4baa3ff6a719e"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.1.0.json",
+          "sha256": "b0e4c652b9fdcafd78f3eb1887c243e51c0dd6e980d445e8cdf9991d684bcfee"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/restore-summary.json",
+          "sha256": "f8e1e3173ebac71ee6f1c439f728166cf7051ae459a52f1e58aaf90b397ece74"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/outbox-restart.json",
+          "sha256": "745dce80fb3d44394a5722018c58d83b4a33c23e97b0e92f1a92287764b35218"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+          "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
         }
       ],
-      "assessment": "Remote previous image separate restore and patched restore browser+MQTT125 pass;original4plant IDs/run/generator IDs/dataset counts+scenario preserved. Functional rollback evidence exists; final af7f223 deploy and stable/tag/manifest linkage outstanding, no longer missing rollback smoke.",
+      "assessment": "1.1.0 checkpoint: exact105144320byte backupSHA29071f..1879,currentrestore and backward1.0UI/MQTT/original5plants, actualpodoutboxrestart, stabletag peeled8599ab9, immutable manifest244evidence hashes independently matched. Sameimage build/suites and earlier feature-specific evidence retained. Finalmedia/time excluded.",
       "releaseRevalidation": "Verify final af7f223 image and final gates; functional evidence is cumulative, not final release certification."
     },
     {
@@ -1799,14 +1888,16 @@
     {
       "id": "NFR-09",
       "description": "코드에는 사용자 CSV, API 키와 무관한 재현 fixture가 있어야 한다. 시험은 임시 DB/API 포트/MQTT prefix로 격리한다.",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [],
+      "assessment": "Prior evidence consolidated: control sensorFreeze executing withholding +scadaReject/actuator realMQTT outcomes; isolated harness tempDB/ports/prefix and fixtures; lazyScene source+chunk/buildwarning and realbrowser loading. Final release evidence in checkpoint."
     },
     {
       "id": "NFR-10",
       "description": "3D 번들은 지연 로딩하고 첫 화면의 운영 정보 접근을 막지 않는다. 현재 번들 크기 경고는 성능 제한으로 기록한다.",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [],
+      "assessment": "Prior evidence consolidated: control sensorFreeze executing withholding +scadaReject/actuator realMQTT outcomes; isolated harness tempDB/ports/prefix and fixtures; lazyScene source+chunk/buildwarning and realbrowser loading. Final release evidence in checkpoint."
     },
     {
       "id": "AT-DATA-01",
@@ -2347,7 +2438,7 @@
     {
       "id": "AT-CONTROL-09",
       "description": "scadaReject는 failed, actuatorStuck는 미도달 timeout, sensorFreeze는 도달 판정 중지.",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/unit-round1.log",
@@ -2370,7 +2461,7 @@
           "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
         }
       ],
-      "assessment": "Some subcases tested. Remaining explicit boundary coverage needed: expiresAt dedup conflict; all malformed/8KB/schema/targets; unchanged model on both expiry paths; equal-priority and disjoint devices; sensorFreeze completion withholding is unit only; unfinished command across process restart; explicit stop after timed_out.",
+      "assessment": "Prior evidence consolidated: control sensorFreeze executing withholding +scadaReject/actuator realMQTT outcomes; isolated harness tempDB/ports/prefix and fixtures; lazyScene source+chunk/buildwarning and realbrowser loading. Final release evidence in checkpoint.",
       "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
     },
     {
@@ -3033,7 +3124,7 @@
     {
       "id": "AT-VPP-REPORT-05",
       "description": "결과 파일 옵션 없이 기존 monitor/dispatch가 동작하고 MQTT schemaVersion 2가 유지된다. 관련 단위 시험, 기본·고급 MQTT 통합 시험, build 및 실행 확인을 통과한 뒤에만 v2.1.0 stable 태그와 증거를 기록한다.",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/report-round2.log",
@@ -3042,9 +3133,25 @@
         {
           "path": "scripts/report-integration.js",
           "sha256": "d9e293f159144c5d79300530333024451389607340dddaf6e78f14bdbe16862a"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.1.0.json",
+          "sha256": "b0e4c652b9fdcafd78f3eb1887c243e51c0dd6e980d445e8cdf9991d684bcfee"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/restore-summary.json",
+          "sha256": "f8e1e3173ebac71ee6f1c439f728166cf7051ae459a52f1e58aaf90b397ece74"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/outbox-restart.json",
+          "sha256": "745dce80fb3d44394a5722018c58d83b4a33c23e97b0e92f1a92287764b35218"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+          "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
         }
       ],
-      "assessment": "Observed timed_out exit1 and no-report monitor/dispatch pass; result-wait timeout distinction needs dedicated case; final revision full suite/build/stable promotion missing.",
+      "assessment": "1.1.0 checkpoint: exact105144320byte backupSHA29071f..1879,currentrestore and backward1.0UI/MQTT/original5plants, actualpodoutboxrestart, stabletag peeled8599ab9, immutable manifest244evidence hashes independently matched. Sameimage build/suites and earlier feature-specific evidence retained. Finalmedia/time excluded.",
       "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
     },
     {
@@ -3119,7 +3226,7 @@
     {
       "id": "AT-OPS-02",
       "description": "PRD의 해당 명시 인수 조건",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "deploy/verification/post-restart.json",
@@ -3180,9 +3287,25 @@
         {
           "path": "deploy/verification/restore-patched-original-data.json",
           "sha256": "fda8706dc251743b18616bbc5849c39c232071d5a40ee11539f4baa3ff6a719e"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.1.0.json",
+          "sha256": "b0e4c652b9fdcafd78f3eb1887c243e51c0dd6e980d445e8cdf9991d684bcfee"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/restore-summary.json",
+          "sha256": "f8e1e3173ebac71ee6f1c439f728166cf7051ae459a52f1e58aaf90b397ece74"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/outbox-restart.json",
+          "sha256": "745dce80fb3d44394a5722018c58d83b4a33c23e97b0e92f1a92287764b35218"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+          "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
         }
       ],
-      "assessment": "Remote previous image separate restore and patched restore browser+MQTT125 pass;original4plant IDs/run/generator IDs/dataset counts+scenario preserved. Functional rollback evidence exists; final af7f223 deploy and stable/tag/manifest linkage outstanding, no longer missing rollback smoke.",
+      "assessment": "1.1.0 checkpoint: exact105144320byte backupSHA29071f..1879,currentrestore and backward1.0UI/MQTT/original5plants, actualpodoutboxrestart, stabletag peeled8599ab9, immutable manifest244evidence hashes independently matched. Sameimage build/suites and earlier feature-specific evidence retained. Finalmedia/time excluded.",
       "releaseRevalidation": "Verify final af7f223 image and final gates; functional evidence is cumulative, not final release certification."
     },
     {
@@ -3409,8 +3532,26 @@
     {
       "id": "G-06",
       "description": "문서와 실행 가능한 MQTT 클라이언트만으로 실제 VPP 팀이 연결을 시작할 수 있게 한다.",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/releases/checkpoint-1.1.0.json",
+          "sha256": "b0e4c652b9fdcafd78f3eb1887c243e51c0dd6e980d445e8cdf9991d684bcfee"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/restore-summary.json",
+          "sha256": "f8e1e3173ebac71ee6f1c439f728166cf7051ae459a52f1e58aaf90b397ece74"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/outbox-restart.json",
+          "sha256": "745dce80fb3d44394a5722018c58d83b4a33c23e97b0e92f1a92287764b35218"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+          "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
+        }
+      ],
+      "assessment": "1.1.0 checkpoint: exact105144320byte backupSHA29071f..1879,currentrestore and backward1.0UI/MQTT/original5plants, actualpodoutboxrestart, stabletag peeled8599ab9, immutable manifest244evidence hashes independently matched. Sameimage build/suites and earlier feature-specific evidence retained. Finalmedia/time excluded."
     },
     {
       "id": "CHECK-test",
@@ -3482,7 +3623,7 @@
     {
       "id": "CHECK-build",
       "description": "npm run build must exit 0 on final release revision; log and revision required",
-      "status": "observed_prior_pass",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/build-round1.log",
@@ -3491,9 +3632,25 @@
         {
           "path": "vite.config.js",
           "sha256": "5b763ed5e4665084db571cf0b3c8016b1759096aac4b347bd396b40291770f4d"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.1.0.json",
+          "sha256": "b0e4c652b9fdcafd78f3eb1887c243e51c0dd6e980d445e8cdf9991d684bcfee"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/restore-summary.json",
+          "sha256": "f8e1e3173ebac71ee6f1c439f728166cf7051ae459a52f1e58aaf90b397ece74"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/outbox-restart.json",
+          "sha256": "745dce80fb3d44394a5722018c58d83b4a33c23e97b0e92f1a92287764b35218"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+          "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
         }
       ],
-      "assessment": "Command success observed in log for earlier working tree; exact final release revision not certified. Build retains Three chunk warning.",
+      "assessment": "1.1.0 checkpoint: exact105144320byte backupSHA29071f..1879,currentrestore and backward1.0UI/MQTT/original5plants, actualpodoutboxrestart, stabletag peeled8599ab9, immutable manifest244evidence hashes independently matched. Sameimage build/suites and earlier feature-specific evidence retained. Finalmedia/time excluded.",
       "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
     },
     {
@@ -3568,7 +3725,7 @@
     {
       "id": "OPS-05",
       "description": "릴리스 manifest에 commit/dirty 파일 해시/PRD/image/backup/tests/deploy/restore 기록",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "deploy/verification/post-restart.json",
@@ -3601,15 +3758,31 @@
         {
           "path": "artifacts/checkpoints/restored-browser/result.json",
           "sha256": "fa49a395097d93b953a4658c7525f09cda46e89d04338a81c98767a92299efac"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.1.0.json",
+          "sha256": "b0e4c652b9fdcafd78f3eb1887c243e51c0dd6e980d445e8cdf9991d684bcfee"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/restore-summary.json",
+          "sha256": "f8e1e3173ebac71ee6f1c439f728166cf7051ae459a52f1e58aaf90b397ece74"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/outbox-restart.json",
+          "sha256": "745dce80fb3d44394a5722018c58d83b4a33c23e97b0e92f1a92287764b35218"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+          "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
         }
       ],
-      "assessment": "Local SQLite backup API/integrity/separateDB restore now includes exact pendingbody+id redelivery/PUBACK persistence/new75kW completed and restored browser visual+stream/download check. Restored fixture authRequired=false: authenticatedSSE:true in historical result is misnamed and proves no authentication. Final stable/tag/image/manifest and remote previous-version rollback still incomplete.",
+      "assessment": "1.1.0 checkpoint: exact105144320byte backupSHA29071f..1879,currentrestore and backward1.0UI/MQTT/original5plants, actualpodoutboxrestart, stabletag peeled8599ab9, immutable manifest244evidence hashes independently matched. Sameimage build/suites and earlier feature-specific evidence retained. Finalmedia/time excluded.",
       "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
       "id": "AT-RELEASE-01",
       "description": "manifest 파싱, 실제 hash/digest 일치, 해당 revision 로그, 별도 복원 UI/MQTT/DB/outbox 검증",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "deploy/verification/post-restart.json",
@@ -3642,9 +3815,25 @@
         {
           "path": "artifacts/checkpoints/restored-browser/result.json",
           "sha256": "fa49a395097d93b953a4658c7525f09cda46e89d04338a81c98767a92299efac"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.1.0.json",
+          "sha256": "b0e4c652b9fdcafd78f3eb1887c243e51c0dd6e980d445e8cdf9991d684bcfee"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/restore-summary.json",
+          "sha256": "f8e1e3173ebac71ee6f1c439f728166cf7051ae459a52f1e58aaf90b397ece74"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/outbox-restart.json",
+          "sha256": "745dce80fb3d44394a5722018c58d83b4a33c23e97b0e92f1a92287764b35218"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+          "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
         }
       ],
-      "assessment": "Local SQLite backup API/integrity/separateDB restore now includes exact pendingbody+id redelivery/PUBACK persistence/new75kW completed and restored browser visual+stream/download check. Restored fixture authRequired=false: authenticatedSSE:true in historical result is misnamed and proves no authentication. Final stable/tag/image/manifest and remote previous-version rollback still incomplete.",
+      "assessment": "1.1.0 checkpoint: exact105144320byte backupSHA29071f..1879,currentrestore and backward1.0UI/MQTT/original5plants, actualpodoutboxrestart, stabletag peeled8599ab9, immutable manifest244evidence hashes independently matched. Sameimage build/suites and earlier feature-specific evidence retained. Finalmedia/time excluded.",
       "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
@@ -3714,7 +3903,7 @@
     {
       "id": "AT-PREVIEW-01",
       "description": "1.1.0미리보기 전체인수",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "deploy/verification/candidate-8599ab9/unit.log",
@@ -3739,9 +3928,25 @@
         {
           "path": "deploy/verification/candidate-8599ab9/browser-preview/race.json",
           "sha256": "2f31432dfefbbad77cb10c90d477f12879bb8206a15c886f6984e0b6c1cc185f"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.1.0.json",
+          "sha256": "b0e4c652b9fdcafd78f3eb1887c243e51c0dd6e980d445e8cdf9991d684bcfee"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/restore-summary.json",
+          "sha256": "f8e1e3173ebac71ee6f1c439f728166cf7051ae459a52f1e58aaf90b397ece74"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/outbox-restart.json",
+          "sha256": "745dce80fb3d44394a5722018c58d83b4a33c23e97b0e92f1a92287764b35218"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+          "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
         }
       ],
-      "assessment": "Feature/local+deployed71unit/integration/advanced/authpreview/browserpass. Current1.1.0 outboxpodrestart/newbackuprestore/backward1.0.0compatibility and1.1.0stablemanifest still pending; prior1.0.0 evidence is not substituted."
+      "assessment": "1.1.0 checkpoint: exact105144320byte backupSHA29071f..1879,currentrestore and backward1.0UI/MQTT/original5plants, actualpodoutboxrestart, stabletag peeled8599ab9, immutable manifest244evidence hashes independently matched. Sameimage build/suites and earlier feature-specific evidence retained. Finalmedia/time excluded."
     },
     {
       "id": "AT-PREVIEW-01-01",
@@ -3842,7 +4047,7 @@
     {
       "id": "AT-PREVIEW-01-04",
       "description": "전체회귀/배포/기존복원/stable",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "deploy/verification/candidate-8599ab9/unit.log",
@@ -3867,9 +4072,147 @@
         {
           "path": "deploy/verification/candidate-8599ab9/browser-preview/race.json",
           "sha256": "2f31432dfefbbad77cb10c90d477f12879bb8206a15c886f6984e0b6c1cc185f"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.1.0.json",
+          "sha256": "b0e4c652b9fdcafd78f3eb1887c243e51c0dd6e980d445e8cdf9991d684bcfee"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/restore-summary.json",
+          "sha256": "f8e1e3173ebac71ee6f1c439f728166cf7051ae459a52f1e58aaf90b397ece74"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/outbox-restart.json",
+          "sha256": "745dce80fb3d44394a5722018c58d83b4a33c23e97b0e92f1a92287764b35218"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+          "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
         }
       ],
-      "assessment": "Feature/local+deployed71unit/integration/advanced/authpreview/browserpass. Current1.1.0 outboxpodrestart/newbackuprestore/backward1.0.0compatibility and1.1.0stablemanifest still pending; prior1.0.0 evidence is not substituted."
+      "assessment": "1.1.0 checkpoint: exact105144320byte backupSHA29071f..1879,currentrestore and backward1.0UI/MQTT/original5plants, actualpodoutboxrestart, stabletag peeled8599ab9, immutable manifest244evidence hashes independently matched. Sameimage build/suites and earlier feature-specific evidence retained. Finalmedia/time excluded."
+    },
+    {
+      "id": "FR-COMMAND-EXPORT-01",
+      "description": "읽기전용최근20개허용목록스냅샷",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "UI-09",
+      "description": "선택RTU명령상태다운로드",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-COMMAND-EXPORT-01",
+      "description": "명령상태내보내기전체인수",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-COMMAND-EXPORT-01-01",
+      "description": "계약정렬인증분리",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-COMMAND-EXPORT-01-02",
+      "description": "runId/목표/시각null",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-COMMAND-EXPORT-01-03",
+      "description": "정제/부작용없음",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-COMMAND-EXPORT-01-04",
+      "description": "브라우저회귀배포복원stable",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "OPS-06",
+      "description": "기존run네트워크복구/영속재개/identity/동일명령/시각유지",
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/network-recovery/tests.log",
+          "sha256": "9e19a2b23f998e84eb1e18b9bbe30798c17e13267fa84f9dde4bd429873b0c04"
+        },
+        {
+          "path": "artifacts/checkpoints/network-recovery/live-owned-forward.json",
+          "sha256": "7dfc36540528d94a13fbf3bb2036446cda781dbc957faeec16ff4243bb83528a"
+        }
+      ],
+      "assessment": "8/8controlledoutage/cappedretry/identitymismatch/no-write/unrelatedportpreservation/singleton/deadlineownedcleanup tests PASS; actual1.1 liveownedforward state ready with expectedimage/podUID/authAPI+MQTT checks. Controlledoutage fixture is distinct from liveverifiedconnection; no uncontrolled realnetworkoutage claim. Mac/app running required; noofflineAI guarantee. Finalheartbeat cleanup remains operational gate."
+    },
+    {
+      "id": "AT-RESUME-01",
+      "description": "재개전체인수",
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/network-recovery/tests.log",
+          "sha256": "9e19a2b23f998e84eb1e18b9bbe30798c17e13267fa84f9dde4bd429873b0c04"
+        },
+        {
+          "path": "artifacts/checkpoints/network-recovery/live-owned-forward.json",
+          "sha256": "7dfc36540528d94a13fbf3bb2036446cda781dbc957faeec16ff4243bb83528a"
+        }
+      ],
+      "assessment": "8/8controlledoutage/cappedretry/identitymismatch/no-write/unrelatedportpreservation/singleton/deadlineownedcleanup tests PASS; actual1.1 liveownedforward state ready with expectedimage/podUID/authAPI+MQTT checks. Controlledoutage fixture is distinct from liveverifiedconnection; no uncontrolled realnetworkoutage claim. Mac/app running required; noofflineAI guarantee. Finalheartbeat cleanup remains operational gate."
+    },
+    {
+      "id": "AT-RESUME-01-01",
+      "description": "읽기전용정책/실제상태대조",
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/network-recovery/tests.log",
+          "sha256": "9e19a2b23f998e84eb1e18b9bbe30798c17e13267fa84f9dde4bd429873b0c04"
+        },
+        {
+          "path": "artifacts/checkpoints/network-recovery/live-owned-forward.json",
+          "sha256": "7dfc36540528d94a13fbf3bb2036446cda781dbc957faeec16ff4243bb83528a"
+        }
+      ],
+      "assessment": "8/8controlledoutage/cappedretry/identitymismatch/no-write/unrelatedportpreservation/singleton/deadlineownedcleanup tests PASS; actual1.1 liveownedforward state ready with expectedimage/podUID/authAPI+MQTT checks. Controlledoutage fixture is distinct from liveverifiedconnection; no uncontrolled realnetworkoutage claim. Mac/app running required; noofflineAI guarantee. Finalheartbeat cleanup remains operational gate."
+    },
+    {
+      "id": "AT-RESUME-01-02",
+      "description": "통제단절/singleton/backoff/무쓰기",
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/network-recovery/tests.log",
+          "sha256": "9e19a2b23f998e84eb1e18b9bbe30798c17e13267fa84f9dde4bd429873b0c04"
+        },
+        {
+          "path": "artifacts/checkpoints/network-recovery/live-owned-forward.json",
+          "sha256": "7dfc36540528d94a13fbf3bb2036446cda781dbc957faeec16ff4243bb83528a"
+        }
+      ],
+      "assessment": "8/8controlledoutage/cappedretry/identitymismatch/no-write/unrelatedportpreservation/singleton/deadlineownedcleanup tests PASS; actual1.1 liveownedforward state ready with expectedimage/podUID/authAPI+MQTT checks. Controlledoutage fixture is distinct from liveverifiedconnection; no uncontrolled realnetworkoutage claim. Mac/app running required; noofflineAI guarantee. Finalheartbeat cleanup remains operational gate."
+    },
+    {
+      "id": "AT-RESUME-01-03",
+      "description": "같은commandId/기존heartbeat/마감정리",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/network-recovery/tests.log",
+          "sha256": "9e19a2b23f998e84eb1e18b9bbe30798c17e13267fa84f9dde4bd429873b0c04"
+        },
+        {
+          "path": "artifacts/checkpoints/network-recovery/live-owned-forward.json",
+          "sha256": "7dfc36540528d94a13fbf3bb2036446cda781dbc957faeec16ff4243bb83528a"
+        }
+      ],
+      "assessment": "No-write/identity retry policy and unchangedcommandID handling documented; main reports existing grid10minheartbeat updated. Finaldeadlineheartbeat cleanup has not occurred and remains pending."
     }
   ],
   "reviewedSource": {

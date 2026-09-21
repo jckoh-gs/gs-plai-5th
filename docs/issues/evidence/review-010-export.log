@@ -1,0 +1,14 @@
+✔ command export authenticates, omits raw fields and scrubs secrets from all configuration layers (35.080792ms)
+✔ export DTO keeps only typed snapshots, records redaction, and makes no de-identification/replay promise (1.1655ms)
+✔ explicit broker URL password is treated as known credential in informational IDs (0.228ms)
+✔ export target and observed values preserve real accepted, executing and completed command semantics (8.144792ms)
+✔ HTTP export has latest20 only, original run IDs, RTU isolation and no persistent or control side effects (33.707625ms)
+✔ independent HTTP command export preserves persisted observations across old run, absent fields, auth and RTU selection without writes (38.40075ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 136.124

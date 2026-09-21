@@ -10,6 +10,7 @@ import {createPlant,publicPlant,stepPlant,updateGenerator,updateReplay,updateWea
 import {refreshWeather} from './weather.js';
 import {readConfig,authorized,redact} from './config.js';
 import {previewDataset} from './dataset-preview.js';
+import {exportCommandStates} from './command-export.js';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const {version}=JSON.parse(readFileSync(resolve(root,'package.json'),'utf8'));
 export function createRuntime(config=readConfig()) {
@@ -70,6 +71,7 @@ export function createRuntime(config=readConfig()) {
   app.post('/api/plants',(req,res)=>{const p=createPlant(req.body);store.transaction(()=>{store.savePlant(p);store.audit('INFO',`RTU 등록: ${p.name}`);});plants.set(p.id,p);transport.sync();res.status(201).json(publishPlant(p));void weather(p.id).catch(()=>{});});
   app.post('/api/plants/:id/commands',(req,res)=>{getPlant(req.params.id);const started=Date.now(),result=controller.submit(req.params.id,req.body,'REST');transport.recordCommand(result,started);res.json(result);});
   app.get('/api/plants/:id/commands',(req,res)=>{getPlant(req.params.id);res.json(controller.list(req.params.id));});
+  app.get('/api/plants/:id/commands/export',(req,res)=>{const p=getPlant(req.params.id);res.attachment(`command-states-${p.id.replace(/[^A-Za-z0-9-]/g,'')}-${Date.now()}.json`).json(exportCommandStates({plantId:p.id,commands:controller.list(p.id),productVersion:version,config}));});
   app.patch('/api/plants/:id/weather',(req,res)=>res.json(publishPlant(mutate(req.params.id,p=>updateWeather(p,req.body)))));
   app.post('/api/plants/:id/weather/refresh',async(req,res)=>res.json(await weather(req.params.id,true)));
   app.post('/api/plants/:id/replay',(req,res)=>res.json(publishPlant(mutate(req.params.id,p=>updateReplay(p,req.body)))));

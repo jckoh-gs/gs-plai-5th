@@ -244,6 +244,7 @@ HTTP 관리 API는 MQTT 연동에 필수는 아니며 내장 관리 UI에서 사
 - POST /api/datasets/preview: `{csv,type,unit,semantics}`의 등록 전 해석 확인. type은 필수이며 unit 기본값은 `kw`, semantics 기본값은 `sample`입니다. 등록과 같은 파서를 사용하고 RTU·명령·DB를 변경하지 않습니다.
 - POST /api/plants/{id}/commands: 동일 RTU 명령 처리기로 시험.
 - GET /api/plants/{id}/commands: 최근 200개 명령 추적.
+- GET /api/plants/{id}/commands/export: 선택 RTU의 최근 갱신 순 최대20개 저장 명령 상태를 JSON 첨부파일로 다운로드.
 - PATCH /api/plants/{id}/faults: 장애 설정.
 - POST /api/plants/{id}/replay: seconds/paused/speed/seed/noisePct/freezeLiveWeather.
 - PATCH /api/plants/{id}/generators/{generatorId}: 모델 설정. 활성 명령 추적 취소.
@@ -258,9 +259,12 @@ HTTP 관리 API는 MQTT 연동에 필수는 아니며 내장 관리 UI에서 사
 
 CSV 미리보기 응답은 schemaVersion 1, type/unit/semantics/interpolation, rowCount, intervalSeconds(600), start/end의 UTC·KST, powerSource, minPowerKw/maxPowerKw, 최대 3개의 정규화 rows입니다. 각 행의 timestamp는 UTC이며 timestampKst와 totalPowerKw를 추가합니다. end는 마지막 입력 행의 시각입니다. `power_kw`가 있으면 시뮬레이터와 동일하게 우선하고, 복합 분리 출력만 있으면 풍력+태양광 합계를 사용합니다. kWh는 10분 구간 에너지를 6배하여 kW로 환산하고 구간 유지(hold)합니다. 요청 본문은 20MiB 이하이며 CSV는 헤더 제외 2~100000행, 행당 최대128열입니다. 구문 오류 응답에는 원문 필드 값을 포함하지 않습니다. 미리보기 후 입력을 바꾸면 결과가 무효화되며 실제 등록 시 다시 검증합니다.
 
+명령 상태 내보내기는 `schemaVersion:1`, productVersion, `contractVersion:2`, exportedAt, plantId, `scope:"recent-command-snapshots"`, `limit:20`, redaction, commands를 반환합니다. 각 행에는 commandId/commandIdRedacted, 원래 저장된 runId, action/source/status, acceptedAt/dispatchedAt/deadlineAt/expiresAt/updatedAt, targetKw/actualKw/errorKw만 포함합니다. 유효하지 않거나 관측되지 않은 값은 null입니다. 목표값은 저장된 모든 targets가 유한한 숫자일 때의 합이며 전달 전 start/set_limit의 목표를 추정하지 않습니다. runId가 없으면 현재 실행 ID로 대체하지 않습니다.
+
+이 파일은 전체 수신 이력이나 상태 전이 타임라인, 외부 VPP의 실제 수신 증거가 아닙니다. 저장되지 않은 초기 거절·중복 이벤트는 별도 행이 되지 않습니다. 원본 요청·자유문자열 사유·설정·CSV는 제외하며 상세 원인은 UI에서 확인합니다. commandId의 알려진 비밀값·인증 URL·제어문자·과도한 길이는 정제하고 commandIdRedacted로 표시합니다. redaction에는 정제된 ID 수, `identifiersForReplay:false`, `unknownPersonalDataMayRemain:true`가 포함됩니다. 식별자는 정보 확인용이며 제어 재발행에 사용하지 마세요. 알려지지 않은 개인정보를 모두 제거한다는 뜻은 아닙니다. 내보내기는 읽기 전용이며 명령을 새로 만들거나 다시 발행하지 않습니다.
+
 ```bash
 npm test
 npm run test:integration
 npm run test:advanced
 ```
-

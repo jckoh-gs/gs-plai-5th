@@ -1,0 +1,18 @@
+{
+  "reviewedAt": "2026-09-21T09:52:59.470668+00:00",
+  "commit": "cb4fd796bf35ff4864b526b598e4aef8629d552c",
+  "workingTree": true,
+  "productVersion": "1.2.0",
+  "prdVersion": "1.9",
+  "files": {
+    "server/command-export.js": "16fa7401f241b9a8852657233f8ccf2d07b0c2d2a16cec1b8642370d33798280",
+    "server/index.js": "fdced6abe1dc0917d72a8ddedb110bb904b6a439c49071d947049a3a9fed593d",
+    "web/src.jsx": "c8fd73b4e46377485e6a596536585541d976d3743139daa0d3dbd6bf69408bcd",
+    "tests/review-command-export.test.js": "bff4a958cbc567b165b8014613f1a1cf7e6f854bbc19fd1181b1633566197d9a",
+    "tests/command-export.test.js": "7e708c668fe64fb6dd047e3db1ff6b49527504d9bebc4aef728ab68a2ea36740",
+    "tests/command-export-security.test.js": "cf4de622ecbc2deac62e60de69fc107e7f8f567e93d30c1d0763e283ff22ca46",
+    "scripts/browser-command-export.cjs": "65fc8b42d98b7e0ce921213f811f960179c97653406e3b3d79e0636a22660f54",
+    "artifacts/checkpoints/export-browser/result.json": "990f9dd6b5ed44981c5fbe858c5335eb1c9f876a10e2709cdc979722cbc77f07",
+    "docs/issues/evidence/review-010-export.log": "b381a0170cc5c7f075b3b0038a1ca1d6f686adf3850b3aea0f139771dfb3af5d"
+  }
+}

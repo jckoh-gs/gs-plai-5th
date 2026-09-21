@@ -1,0 +1,1 @@
+{"schemaVersion":1,"productVersion":"1.2.0","contractVersion":2,"exportedAt":"2026-09-21T09:46:20.398Z","plantId":"e2dec254-b4f2-4022-b128-5a3f97fe18d1","scope":"recent-command-snapshots","limit":20,"redaction":{"policy":"known-secrets-credential-urls-controls-length","redactedCommandIds":0,"identifiersForReplay":false,"unknownPersonalDataMayRemain":true},"commands":[]}

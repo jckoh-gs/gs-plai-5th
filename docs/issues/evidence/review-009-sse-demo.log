@@ -1,0 +1,2 @@
+{"result":"PASS","suite":"slow-real-SSE","generators":100,"quietTicks":20,"quietFrames":20,"fillTicks":19,"actualWritableNeedDrain":true,"blockedTicks":20,"skippedSnapshots":20,"persistedFramesDuringBackpressure":20,"continuousSimulationSeconds":true,"scope":"Bounded explicit engine ticks with actual paused TCP client; not sustained realtime throughput benchmark"}
+{"result":"PASS","suite":"demo-real-runtime-restart","firstPlants":3,"secondPlants":3,"originalIDsPreserved":true,"allDatasetsDeepEqual":true,"types":["hybrid","solar","wind"]}

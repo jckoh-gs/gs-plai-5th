@@ -1,0 +1,12 @@
+{
+  "reviewedAt": "2026-09-21T09:41:00.782447+00:00",
+  "commit": "cb4fd796bf35ff4864b526b598e4aef8629d552c",
+  "workingTree": true,
+  "files": {
+    "scripts/review-sse-demo.js": "5a8be9f577351db7af1f21634c29d7cae1e361f675327484728e808f8d22a7d7",
+    "server/index.js": "205344dc62174c3a2302731812c307b65da658fcecd34f0c3bcb2c01999aedb0",
+    "server/model.js": "875d936b0038ef5a9bd3c678a50dafdd8d33c7c0f8c60eba0316def51e95ba67",
+    "server/store.js": "5b497e48f84e0a918a6d565e5dc9c741c4e68fc69c8141d813e7921e96a73969",
+    "docs/issues/evidence/review-009-sse-demo.log": "e30f9403d8114a9afa4ea25a0d6cec8c0df12aeb1ced4637adbadaac9dc9d0e6"
+  }
+}

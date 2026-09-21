@@ -184,3 +184,21 @@ ISSUE-005의 배포/브라우저/복원/미디어 등 다른 게이트는 이 �
 - remote-outbox-restart는 이번 변경 후 **다시 rollout하지 않았다**. 새로운 identity helper 단위/실제 읽기 검증과 이전 candidate8599 outbox 성공 증거를 구분한다. verify-release 전체 최종 manifest 검증은 릴리스 책임자가 수행한다.
 
 실패 경로: 중간 실패하면 .part 및 remote gzip/backup을 남기며 PASS evidence를 만들지 않는다. 검증 전 local 승격하지 않고 기존 remote SQLite를 덮어쓰지 않는다. remote gzip 재생성과 검증 실패 시의 잔여 임시 파일은 데이터 손실 없이 후속 정리가 가능하다. timestamp/sourceCommit이 붙은 파일명은 provenance의 대체물이 아니며 재전송은 원래 snapshot capture 증거와 함께 사용해야 한다.
+
+## Round 9 — 실제 느린 SSE 소비와 데모 재시작
+
+`review-sse-demo.js`를 격리 temp DB/port와 현행 runtime으로 실행했다. 새 결함 없음. `evidence/review-009-sse-demo.log` 두 suite PASS.
+
+- 실제 HTTP SSE 소비자의 response/socket을 pause한100기 fixture. quiet20 engine ticks에서20개 frame을 먼저 확인했다. 실제 TCP 송신을 유지한 채19 tick 후 서버 response.writableNeedDrain을 관측했다. 이후20 engine ticks 동안 화면 write20개를 건너뛰었지만 SQLite full frame20개가 모두 추가됐고 전체 simulationSeconds가1씩 연속했다. res.write는 실제 원본 호출을 전달하며 호출 횟수만 관측한다. writableNeedDrain을 mock하지 않았다.
+- 이 시험은 명시적 runtime.tick로 실제 엔진/저장소/HTTP backpressure 상호작용을 확인한 bounded fixture이며 장시간 실시간1Hz 부하 인증은 아니다. 기존 실시간60초 시험과 적용 범위를 구분한다.
+- SEED_DEMO=true runtime.start→stop→동일DB의 새 runtime.start에서 첫3개와 두 번째3개가 같고 wind/solar/hybrid 각각1개, 원래 ID 및 전체 정규화 datasets deepEqual을 확인했다. DB row count도3이며6개로 중복되지 않는다. main soak/원격 배포를 변경하지 않았다.
+
+## Round 10 — 제품1.2.0 / PRD1.9 명령 상태 JSON export
+
+새 결함은 발견하지 않았다. 독립 `tests/review-command-export.test.js`와 기존 기능/보안 시험을 함께 실행해6/6 PASS(`evidence/review-010-export.log`).
+
+실제 Controller가 만든 completed40kW/오차0, 이후 새run의accepted 및 rejected를 HTTP export와 비교했다. accepted/dispatched/deadline/expires/updated 시각은 저장값 그대로, 누락은null, 각 행은 원래runId를 유지한다. 없는 수치를0으로 합성하지 않는다. 다른 RTU 명령은 분리되고 인증없는 요청은 존재/미존재 ID 모두401이며 attachment header가 없다. 요청 전후 모든 DB테이블/total_changes/전체plant/command 상태 deepEqual로 read-only 확인했다.
+
+기존 시험을 독립 재실행해 갱신순최대20, 정확한 반환필드 allowlist, 잘못된시각/null/합계overflow 처리, credential URL/host+override+explicitbroker 비밀번호 정제, 긴ID128자 제한/정제flag를 확인했다. unknown 개인정보를 완전히 제거하거나 replay 가능한 식별자라고 주장하지 않는 DTO 메타데이터도 확인했다.
+
+UI 소스는 클릭 당시 p.id로 URL/파일명을 함께 만든다. 메인 실제 브라우저 `export-browser/result.json`은 두 RTU4개/0개 저장상태 비교·401시파일없음·선택격리·credential비노출·좁은화면PASS이며 해당 script/source와 대조했다. 이번 독립 검토자는 브라우저를 다시 실행하지 않았다. 새로운1.2.0 배포/복원/최종 릴리스 게이트는 별도이며 기존1.1stable 및 soak는 변경하지 않았다.

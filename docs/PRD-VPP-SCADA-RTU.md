@@ -1,6 +1,6 @@
 # GRID — VPP·SCADA·RTU 통합 에뮬레이터 PRD
 
-문서 버전: 1.8 · 기준일: 2026-09-21 · 제품 기준: SCADA Emulation Engine v2 / MQTT 계약 v2
+문서 버전: 1.9 · 기준일: 2026-09-21 · 제품 기준: SCADA Emulation Engine v2 / MQTT 계약 v2
 
 ## 문서의 목적과 사용법
 
@@ -459,6 +459,7 @@ PUBACK 지연은 발행 요청부터 callback 확인까지의 시간이며 제�
 - GET /events: text/event-stream, 연결 초기 및 약 1초마다 `data: <state JSON>\n\n`. 끊어진 클라이언트 정리. 느린 클라이언트에는 화면 스냅샷을 건너뛰되 데이터 엔진을 멈추지 않는다.
 - POST /plants: 5장 등록 JSON, 성공 201과 공개 plant.
 - POST /plants/{id}/commands: 9장 명령 JSON, 접수 결과. 동일 제어 처리기 사용.
+- GET /plants/{id}/commands/export: FR-COMMAND-EXPORT-01의최신20개명령상태JSON.
 - GET /plants/{id}/commands: 최근 200개 명령 배열.
 - PATCH /plants/{id}/weather: {mode:"csv"|"weather", wind_speed_ms?, wind_direction_deg?, irradiance_wm2?, temperature?}; 공개 plant 반환.
 - POST /plants/{id}/weather/refresh: KMA 수동 조회 및 weather 모드 활성화; 관측 결과 반환.
@@ -795,6 +796,27 @@ IDEA-001의 선택적 JSON 결과 파일 요구는 신규 MQTT dispatch 클라�
 4. 쓰기 불가 결과 경로는 명확한 저장 실패와 exit 1을 반환한다. 파일 저장 실패 때문에 명령을 자동 재전송하지 않는다. JSON/오류 출력에 시험용 자격증명이 노출되지 않는다.
 5. 결과 파일 옵션 없이 기존 monitor/dispatch가 동작하고 MQTT schemaVersion 2가 유지된다. 관련 단위 시험, 기본·고급 MQTT 통합 시험, build 및 실행 확인을 통과한 뒤에만 신규 제품 릴리스에 맞는 stable 태그와 증거를 기록한다.
 
+### FR-COMMAND-EXPORT-01 최근 명령 상태 내보내기 (IDEA-006, 제품1.2.0 후보)
+
+인증 `GET /api/plants/:id/commands/export`는 현재 저장된 선택단지 명령의 updatedAt 내림차순 최신 최대20개 스냅샷을 JSON으로 다운로드한다. 없는단지는404, 저장명령없는단지는빈commands와200이다. 루트계약은 `{schemaVersion:1,productVersion,contractVersion:2,exportedAt,plantId,scope:"recent-command-snapshots",limit:20,commands,redaction}`이다. exportedAt은실제UTC이며 현재단지runId를루트나누락된행에 대신넣지 않는다. redaction은 `{policy:"known-secrets-credential-urls-controls-length",redactedCommandIds:정제된commandId행수,identifiersForReplay:false,unknownPersonalDataMayRemain:true}`다.
+
+각행은 commandId/commandIdRedacted/runId/action/source/status/acceptedAt/dispatchedAt/deadlineAt/expiresAt/updatedAt/targetKw/actualKw/errorKw만허용한다. commandId는bounded정제문자열또는null, commandIdRedacted는비밀치환·제어문자제거·길이절단등원본과어떤변경이라도있으면true인boolean이다. runId는유효한UUID만유지하고그외null이다. action은4지원명령enum또는null, source는REST/MQTT또는null, status는정의된명령상태또는null이다. 시각은실제달력에유효한ISO입력만정규UTC ISO로변환하고그외null, 출력은유한수또는null이다. targetKw는비어있지않은targets의모든targetKw가유한수일때만합산하며합산결과도유한해야한다. 미확정start/limit의목표를0으로채우거나현재모델의값으로계산하지않는다.
+
+원본reason/request/canonical/scadaSignal/targets/CSV/plantName/브로커URL/비밀설정은포함하지않는다. ID에서알려진자격증명·URL인증·제어문자를정제하고길이를제한한다. metadata는정제ID가원본과다를수있어재실행용이아님과알수없는개인정보완전제거를보장하지않음을명시한다. 파일명은서버관리단지ID와UTC로만만들고인증/no-store를유지한다. DB쓰기/명령재발행/상태변경/통신생성/외부업로드를하지않는다.
+
+이는수신이벤트타임라인·완전감사로그·실제VPP수신보고서가아니다. earlyreject/중복수신등저장command목록에없는사실을합성하지않는다. 기존CLI단일dispatch보고서와별개기능이다.
+
+### UI-09 최근 명령 상태 다운로드
+
+선택RTU의명령목록에내보내기버튼을제공한다. 최근최대20개저장상태이며전체이력/재실행파일이아님을알린다. 선택변경/오류/인증실패가성공다운로드로표시되지않아야한다. 실제서버응답을기존인증download경로로저장한다.
+
+### AT-COMMAND-EXPORT-01 인수
+
+1.행허용목록·20개updatedAt정렬·다른RTU제외·빈목록200/없는ID404·무인증401을검증한다.
+2.서로다른run의원래runId보존/누락null,미확정targets/null/전체유한합/합overflow/null,관측하지않은시각·출력null을검증한다.
+3.알려진credential이ID에있을때비노출,원본reason/request/canonical제외,metadata정제한계와재실행금지표시,전후DB/command/outbox불변을검증한다.
+4.실제브라우저다운로드파일과선택단지명령을대조하고기존preview/MQTT/단위/통합/고급/빌드회귀,k3s업데이트/1.1.0복원확인후1.2.0stable로승격한다.그전1.1.0정상fallback및최종영상/PPT·시간게이트를유지한다.
+
 ### FR-PREVIEW-01 등록 전 CSV 미리보기 (IDEA-005, 제품1.1.0 후보)
 
 인증 관리 API `POST /api/datasets/preview`는 `{csv:string,type:"wind"|"solar"|"hybrid",unit:"kw"|"kwh",semantics:"sample"|"mean"}`을 받는다. type은 필수이며 unit/semantics 생략 기본은 기존 등록과 같은 kw/sample이다. 기존 parseCSV로 검증·정규화하고 등록과 동일20MiB JSON 제한·인증·400 `{error:string}` 행 오류를 적용한다. 발전단지 등록 검증은 이후 기존 경로에서 다시 수행한다. 등록·미리보기 공통 CSV 안전 한도는 헤더 제외 2~100000행, 행당 최대128열이다. 인용부호 내부 쉼표·탭·줄바꿈은 열·행 구분자로 세지 않으며, 구문 오류는 행 위치와 정제한 원인만 반환하고 원문 필드 값을 노출하지 않는다.
@@ -825,6 +847,22 @@ AT-AUTH-01: 무인증 state 401, config 비밀 없음, 잘못된 토큰 재입�
 UI는 마지막으로 정상 상태 스냅샷을 수신한 시각과 연결 상태를 표시한다. 상태를 5초 이상 받지 못하면 “오래된 데이터” 표시로 마지막 관측값과 실시간 상태를 구분한다. 브라우저 로컬 시각 기준 경과시간이며 서버·원본 CSV 시각과 혼동하지 않는다. SSE 연결 자체가 열려 있어도 데이터가 멈추면 오래된 상태가 된다. 정상 상태 스냅샷이 다시 도착하면 표시를 해제한다. 연결 복구나 HTTP 접수만으로 제어 completed를 합성하지 않는다.
 
 AT-FRESH-01: 정상 수신 → 스트림 무수신 5초 → 오래된 데이터 표시 → 정상 스냅샷 수신 → 해제를 실제 UI 또는 브라우저 시험에서 확인한다. 처음 상태를 받기 전에는 수신 대기 상태를 표시하며 기존 관측값을 최신인 것처럼 표시하지 않는다.
+
+### OPS-06 네트워크 단절 후 기존 작업 재개 (사용자 추가 요청, 기능 검증 완료)
+
+기존run을재개하며새run이나14시간일정을시작하지않는다. 로컬 `docs/operations/resume.json`에정상checkpoint/현재후보/완료단계/남은순서/재시도정책을영속기록한다. 재접속시 `scripts/resume-status.mjs` 같은읽기전용검사로실제Git커밋·태그·원격상태,k3s context/namespace의배포digest·Ready pod imageID,API상태와원래run.json의시각을대조한뒤첫미완료작업부터이어간다. 문서/PID파일만으로실행중이나배포성공을가정하지않는다.
+
+터널/연결복구는유한timeout과backoff를사용하고동일supervisor의중복실행을실제process identity로막는다. 기존살아있는정상터널을재사용하며소유하지않은프로세스를종료하지않는다. 연결복구가deploy/rollout/명령재발행을자동유발하면안된다. 응답을잃은제어는기존commandId의영속상태를먼저확인하고새ID로중복실행하지않는다. 부분backup/media는검증전성공으로표시하지않는다.
+
+기존task의native heartbeat를10분주기로재개점검에사용한다. 별도중복task/run을만들지않고변화없음은조용히유지하며유의미한복구·실패·필요조치만알린다. 원래freeze/deadline을변경하지않는다. 동결이되면검증정상버전선택과신규최종영상→PPT로진행하고마감후개발/재배포를계속하지않는다. Mac과앱이실행중이어야하며오프라인중AI작업이나절전/앱종료중자동복구를보장하지않는다. 사용자의중지/취소지시가우선한다.
+
+### AT-RESUME-01 재개 인수
+
+검증 기록: `artifacts/checkpoints/network-recovery/tests.log` 8/8 통과 및 `live-owned-forward.json`의 실제1.1.0 image/pod/API/MQTT 연결·소유forward 확인. 통제된단절시험과실제정상연결검증을구분한다. 기존grid10분heartbeat 갱신은메인운영기록에따르며최종마감정리는아직미수행이다. 앱/Mac가동전제와오프라인AI무보장조건은유지한다.
+
+1.읽기전용재개검사/정책시험으로정상·연결불가·배포identity불일치·API불가·동결·마감결정을확인한다.원래runId/T0/freeze/deadline은유지한다.
+2.통제된터널/네트워크단절후backoff재접속·실제API복구와singleton identity를확인한다.상태조회외deploy/control쓰기없음,다른프로세스보존,재시도유한성을검증한다.
+3.응답유실명령은동일commandId를조회해미확정결과를확인하며새명령을자동생성하지않는다.기존heartbeat10분설정과현재task재개경로를확인하고최종마감에정리한다.
 
 ### OPS-05 릴리스 증거 manifest (IDEA-004, 채택·검증 대기)
 
