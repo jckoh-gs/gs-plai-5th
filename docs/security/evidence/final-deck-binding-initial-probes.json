@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-09-21T12:52:18.685Z",
+  "scope": "Synthetic temporary fixtures only; no rendering or final artifacts",
+  "findings": [
+    {
+      "mode": "unbound-scenario-evidence",
+      "accepted": true
+    },
+    {
+      "mode": "missing-duration",
+      "accepted": true
+    },
+    {
+      "mode": "non-ISO-createdAt",
+      "accepted": true
+    },
+    {
+      "mode": "symlink-private-source",
+      "accepted": true
+    },
+    {
+      "mode": "raw-secret-facts",
+      "accepted": true
+    }
+  ]
+}

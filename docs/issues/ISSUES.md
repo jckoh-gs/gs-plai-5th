@@ -376,3 +376,32 @@ REVIEW021 remote manifest 경계 수정 완료: verify-release --remote는 원�
 격리 실제CLI6/6PASS: fakekubectl hang은2.5초 원래deadline에서 종료/두번째호출 없음, 이미만료는호출0, secretstderr 실패비노출, 정상Ready app/mqtt실제digest검사2호출PASS, --remote없는검사는만료run과무관, --at-commit은workingfile변경에도git원본해시유지. 원격cluster접근은없다. source/log는 review-021-release-boundary-final 기록. 계획directcommand wrapper와 미디어deadline은 메인/다른담당 범위이며 이시험으로 종결하지 않는다.
 
 REVIEW021 최종 결합 검증: 메인의 deadline-command wrapper를 FINAL-RESTORE-PLAN의 직접 get/logs/scale/wait 및 release 명령에 적용했다. streaming32MiB/원래마감/소유그룹 종료/SIGTERM/실패출력 차단을 추가했다. 미디어 담당은 별도 watchdog·각 child 시간제한·receipt 직전 창 검사를 적용하고, 보안 검토 후 회수된PID 신호 금지·시작식별/부모계보 재확인으로 보완했다. 인도 검사도 두 산출물의 새 helper 소스 보존을 요구한다. 관련38시험PASS, 실제 기존1.3 checkpoint688해시·현재Ready image를 새 bounded 경로로 확인했다. 실제 서비스/이미지 변경·새 최종미디어 생성은 없었다. 중간실패와 한계, 독립보안검토는 artifacts/checkpoints/final-window-boundaries/summary.json 및 docs/security/OPERATING-DEADLINE-REVIEW.md에 연결한다. 전체목표/최종미디어 완료를 뜻하지 않는다.
+
+
+### REVIEW022 / FR-FAULT-02 — 시연 소유 RTU 설정 복구 준비
+
+시연 등록/제어 이후 중단 시 소유권 journal과 설정 정리가 없는 공백을 메인이 발견했다. scripts/media/demo-lifecycle.cjs는 createLifecycle({baseUrl,tokenFile,journalPath,deadlineAt,runId,productVersion})를 제공한다. tokenFile/journalPath는 절대경로, endpoint는 userinfo 없는 HTTP loopback origin이다. begin()은 기존RTU runId/모델·제어·재생·장애 projection을 private0600 atomic journal에 기록한다. prepareRegistration(spec)은 고유 name/type/count/rated/ramp intent를 실제 클릭 전에 기록한다. captureRegistration(plant,201)은 기존ID 제외/fingerprint/생성시각을 검증하고 생성직후 baseline을 durable하게 기록한다. recorder는 이 함수 성공 전 제어/재생 변경으로 진행하지 않아야 한다. 현재 recorder 통합은 메인 소유이며 아직 이 helper 시험으로 전체 시연복구가 입증된 것은 아니다.
+
+recover()는 매 요청 전 실제 state를 읽고 소유 새RTU의 ID/runId/생성시각을 확인하며 설정차이만 API로 복구한다. 기존RTU에는 쓰지 않고 변경비교만 보고한다. fault/generator 허용설정/replay를 복원하며 commandId/scenario restore/DBrollback/삭제/날씨PATCH는 사용하지 않는다. power/simulationSeconds/seconds/저장된 과거RNG 상태를 복원하지 않는다. seed 설정 복구는 기존 API 의미상 rngState를 seed로 재초기화하며 공개결과 rngReinitializedBySeedPatch 및 exactPriorRandomTrajectoryRestored=false로 명시한다. 정확한 과거 난수궤적을 복원한다는 주장이 아니다.
+
+등록 응답 유실 시 기존ID 제외+고유이름/fingerprint/생성시각 후보가 정확히 하나여도 초기baseline을 추정하지 않는다. 식별만 private기록하고 NO_BASELINE_NEEDS_MAIN_RECONCILIATION으로 자동쓰기 보류한다. 여러 후보/잘못된ID/변경된run은 fail closed다. CLI recover-demo.cjs는 원래 run.json deadline/runId/product/endpoint와 journal을 대조하며 원래deadline/총60초/HTTP5초 redirect거절을 적용한다. 공개 결과는 ID/설정hash/비교판정/시각 및 제한된 작업요약만, raw journal/토큰은 출력하지 않는다.
+
+격리 loopback HTTP + 실제 model create/update/publicPlant를 사용한5/5PASS: 소유설정복원/기존RTU불변/동적출력·시간불변/seed42재초기화/반복쓰기0, 응답유실 PATCH 후 실제값재조회로중복쓰기0, 등록응답유실 baseline미추정/모호후보거절, 기존ID·changedrun거절, 만료/다른journal스코프거절 및 기존RTU 변경 report-only. 기존운영3104/클러스터는 접근하지 않았다. source/log는 review-022-demo-lifecycle-final 기록이며 전체goal/mediaPASS와 구분한다.
+
+
+REVIEW022 round2: 계획된 시나리오 복원만 prepareScenarioRestore(scenarioId)에서 현재ownedrun 및 GET/scenarios의plantId를 확인해 durable intent를 남긴다. captureScenarioRestore(actualPlant,200)는 같은소유ID/생성identity/새runId를 받아 transition만기록하고 초기baseline은변경하지않는다. 응답유실 unresolved intent와 의도없는 changedrun은 자동쓰기거절한다. 기존journal begin은 아직등록intent/owned가없고 기존전체설정projection이동일할때만 파일수정없이재사용한다. cleanup후runId는시나리오의새run을유지하며settingsMatched는이명시적전이만제외하고초기설정과비교한다. currentRunId/baselineRunId도공개요약에구분한다.
+
+최종8/8fixture PASS: 기존5개+정상200전이/초기baseline불변+다른시나리오owner 및응답유실거절+begin읽기재사용/기존변경시거절. original deadline은불변이며긴녹화각phase/cleanup은같은options의새lifecycle인스턴스로60초예산을다시확보해야한다. recorder통합담당에계약전달완료. round2소스/로그는별도보존한다.
+
+
+## ISSUE-021 — 큰 명령 유효시간 입력에서 브라우저 날짜 예외
+
+- 중요도 P2. 상태 OPEN, 담당 메인/UI, IDEA-008 제안 v2에 연결.
+- 실제 로컬1.3 브라우저의 유효시간에100000000000000000000을 넣으면 native validity=true이나 명령 클릭 시 Invalid time value 예외가 발생한다. POST는0회이며 원격 k3s나 실제 제어에는 영향을 주지 않았다.
+- 원인: 입력 숫자를 Date로 변환하고 toISOString을 호출하기 전에 유효 날짜 여부를 확인하지 않는다. 서버범위 정합성 문제와 구분되는 UI 오류 처리 누락이다.
+- 수정 전 증거: artifacts/checkpoints/command-expiry-before/result.json, 실행 소스/로그/화면. 일반 입력 범위의 별도 재현은 artifacts/checkpoints/command-form-before/.
+- 기대: 유효하지 않은 날짜는 전송 전 사용자에게 안내하고 예외를 발생시키지 않는다. 정상 만료일/소수 허용/target0/의도한 가용초과 시험 및 서버 검증은 유지한다. 임의 업무상 상한은 추가하지 않는다.
+- 아직 소스 수정·회귀·배포하지 않았다. 첫1시간1.3 관찰 후 메인이 채택 및 버전을 판단하며 개발자 응답을 기다리지 않는다.
+
+
+REVIEW022 최종 통합 후속: 실제로 시간대가 다른 서버의 createdAt을 로컬 intent 시각과 순서 비교하면1ms 시계 지연만으로도 정상201 소유권 기록을 거절했다(보안 독립 fixture). 생성시각은 불변 identity로 보존하되 서로 다른 시계의 순서 비교를 제거했다. 관측된201·원래 POST 다섯 설정값·기존에 없는 ID/run·fingerprint를 확인한다. 응답 유실은 후보가 하나여도 초기 기준을 추정하지 않고 자동쓰기하지 않는다. 독립수명주기11개와 실제POST본문 거절검사3개 통과. 로컬 UI 실패/catch복구 및 성공 리허설은 artifacts/checkpoints/media-lifecycle-local-round1/result.json, 최종 준비65+11시험/덱패키징은 artifacts/checkpoints/final-media-lifecycle/summary.json에 연결한다. 실제영상 성공 후 추가한 두 방어는 fixture 결과이며 원격 시연 성공으로 확대하지 않는다.

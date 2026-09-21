@@ -45,3 +45,10 @@ RTU별 추가 전체 SCADA 관찰도 실행 중이다. 현재 강화 세션9a9f5
 After interruption, read `resume.json`, run `node scripts/resume-status.mjs`, and reconcile actual state before advancing its first incomplete checkpoint. The singleton `node scripts/connection-supervisor.mjs` owns local forwarding; check `artifacts/operations/status.json` before starting another. Native heartbeat `grid` checks every ten minutes while the Mac and Codex app are running. Preserve run.json deadlines. See NETWORK-RECOVERY.md.
 
 최종 인도 점검은 DELIVERY-PLAN.md를 따른다. 최종 미디어 생성 도구에는 서로 다른 이미지/접속 경로/영상의 혼합을 막는 검사가 추가되어 있다. MP4 검수 후 visualReview/claimsReview를 실제 확인 결과로 갱신하고 PPT를 생성한다. PPT 검수 후 `scripts/verify-delivery.mjs --manifest <최종 고정 매니페스트> --report <새 인도 목록 파일>`로 파일·해시·영상 연결·재생성 자료를 확인한다. 이 검사 통과만으로 목표 완료를 선언하지 않는다.
+
+
+## 현재 미디어 준비 및 다음 제품 후보
+
+최종 제작 준비 보완은 artifacts/checkpoints/final-media-lifecycle/summary.json에 보존했다. 실제 로컬 UI 시연 중단 후 소유RTU 정리, 재시험 등록/시나리오 전이/정리/영상디코딩,14장 PPT와 portable 재생성을 확인했다.76개 관련 시험과 독립보안 검토는 준비 증거이며 최종창 미디어를 대신하지 않는다. 최종녹화 실패 시 해당 핸들 종료 확인 후 private lifecycle journal을 읽고 recover-demo CLI를 사용한다. 초기baseline/실제응답이 없는 경우 메인이 실제상태를 대조하고 기존RTU 일괄초기화나 재등록을 반복하지 않는다. 최종facts는 same-video binder를 통과한 뒤 PPT 소스 묶음에 보존한다.
+
+IDEA-008은 제안 v2이며 아직 미채택이다. 실제 로컬 일반폼 범위 재현 및 극단 validSeconds의 날짜 예외(ISSUE-021)를 REVIEW-017에 기록했다.1.3 관찰 첫1시간 이후 메인이 범위/효용/안정성을 판단하고 채택 시 PRD/제품버전을 먼저 갱신한다. 새버전을 채택하면 release-features/final-deck-binding의 지원버전과 실제시연 문구도 함께 검토하며 기존1.3 안정복원 기준을 보존한다.

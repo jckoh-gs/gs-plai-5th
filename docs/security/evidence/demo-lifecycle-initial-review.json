@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-09-21T13:05:12.311Z",
+  "scope": "Independent source review and ephemeral local HTTP fixtures; no live3106/cluster calls or source edits",
+  "sourceHashes": {
+    "scripts/media/demo-lifecycle.cjs": "56367d9ab90c70e1617aef9923c76e31195eb0869580882967831b78cb90a92b",
+    "scripts/media/recover-demo.cjs": "803558acb145447b45c1ff9e4c98178c130a4120d9d398fda16e6568c0c02762",
+    "scripts/media/record-demo.cjs": "845d5b3f80e59ac552fec6e7eb869a9ee6c7cb37cc10a826dbfb79111398d8ab",
+    "scripts/media/scene-plan.cjs": "9776f25754fb47ce248dc256043e74bb9ca7b60c8017b84e8d2ddeed8f8f734f",
+    "tests/review-demo-lifecycle.test.js": "5263d83362fcb60a0e6365c0831aec9c7014d0812d8b004428be8f5a5e3d222d"
+  },
+  "fixtureSuite": {
+    "tests": 8,
+    "passed": 8
+  },
+  "finding": "Cross-clock createdAt ownership rejection reproduced; fix and rereview pending"
+}

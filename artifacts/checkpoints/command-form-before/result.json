@@ -1,0 +1,61 @@
+{
+  "observedAt": "2026-09-21T12:44:04.629Z",
+  "result": "REPRODUCED",
+  "scope": "Local1.3 fixture only; one deliberately invalid command rejected with no SCADA dispatch; no k3s write",
+  "checks": [
+    {
+      "label": "허용 오차 (kW)",
+      "value": "0",
+      "min": "0",
+      "max": "",
+      "step": "any",
+      "nativeValid": true
+    },
+    {
+      "label": "허용 오차 (kW)",
+      "value": "10001",
+      "min": "0",
+      "max": "",
+      "step": "any",
+      "nativeValid": true
+    },
+    {
+      "label": "실행 timeout (초)",
+      "value": "0",
+      "min": "0",
+      "max": "",
+      "step": "any",
+      "nativeValid": true
+    },
+    {
+      "label": "실행 timeout (초)",
+      "value": "3601",
+      "min": "0",
+      "max": "",
+      "step": "any",
+      "nativeValid": true
+    },
+    {
+      "label": "우선순위 (0–100)",
+      "value": "101",
+      "min": "0",
+      "max": "",
+      "step": "any",
+      "nativeValid": true
+    }
+  ],
+  "request": {
+    "rtuId": "c3e5543e-10e7-403b-a8db-490a8cd36c9f",
+    "commandId": "1bc9a341-cf24-4c1b-ab03-9a6c66ddf951",
+    "priority": 101,
+    "httpStatus": 200,
+    "status": "rejected",
+    "reason": "priority must be 0..100"
+  },
+  "servedAsset": {
+    "path": "/assets/index-Bq6rJvbB.js",
+    "sha256": "8d61e59d833af0cea234ed17c6d61300e4b564708cfeb78f51f8a0ab2e6a5a3c",
+    "bytes": 256876
+  },
+  "pageErrors": []
+}

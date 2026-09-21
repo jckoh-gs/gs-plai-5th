@@ -100,8 +100,17 @@ final_command 70 node scripts/verify-release.mjs artifacts/releases/final-202609
 ```sh
 node scripts/media/prepare-final-scenes.cjs artifacts/media-preparation/final-input.json
 node scripts/media/record-demo.cjs artifacts/media-preparation/final-scenes.json
+# recorder 종료 후 source/demo-recovery.json의 PASS/settingsMatched/기존RTU불변 확인
+# 실패/중단이면 recorder 종료를 먼저 확인한 뒤 아래 독립 복구 절차 사용
 # 실제 전체디코딩·장면·음성·자막·주장 검수 뒤 verification의 판정을 기록
+# 사실 검수 후 입력 JSON으로 같은 영상의 해시/시간/시나리오 전이를 결합
+node scripts/media/prepare-final-deck.cjs artifacts/media-preparation/final-deck-input.json
 node scripts/media/build-deck.mjs artifacts/media-preparation/final-deck.json
 ```
 
 `final-input.json`은 아직 자동 생성되는 파일이 아니다. 메인이 검증된 scenes-template/기존 준비설정에서 실제 releaseManifest/approvedReleaseCommit/approvedImageDigest/baseUrl/tokenFile/mqtt/csvFile/outputDir를 채워 생성해야 한다. 덱 또한 실제 새 영상 캡처/타임코드/검수영수증을 연결하여 final-deck.json을 만든다. 최종 모드는 동결창 및 검수된 같은 영상 조건을 강제한다. 정확한 미디어 인도물/육안검수는 MEDIA-PLAN.md와 DELIVERY-PLAN.md를 따른다.
+
+
+`prepare-final-scenes`는 고유 UUID 시험 RTU 이름과 private lifecycle journal을 만들고 기존 RTU 설정 기준을 저장한다. 등록 실제201 응답을 보존하기 전에는 제어를 진행하지 않는다. 같은 출력 설정 파일을 덮어쓰지 않으며 중단 후 기존 파일/journal/실제 상태를 먼저 읽는다. 정상 녹화와 catch 경로는 소유 시험 RTU만 초기 모델·제어·재생·장애 설정으로 복구하고 기존 RTU의 불변을 확인한다. 프로세스 강제종료는 finally를 보장하지 않으므로, 종료한 녹화 핸들을 확인한 다음 `node scripts/media/recover-demo.cjs ABSOLUTE_PRIVATE_JOURNAL ABSOLUTE_TOKEN_FILE`로 원래 마감 내 독립 복구한다. 명령 응답 유실/복원 run 전이 미확인은 자동으로 추정하지 않으며 메인이 저장된 intent와 실제 상태를 대조한다. 기존 RTU에 일괄 reset을 보내지 않는다.
+
+`final-deck-input.json`은 releaseManifest/videoDir/factsFile/outputConfig/presentationDir의 공개 저장소 상대 경로만 담는다. facts.template.json을 새 파일로 복사하고 실제 영상/장면/MQTT/복구/캡처 해시·선택 RTU·시나리오 run 전이·슬라이드 근거를 직접 검수한 뒤 reviewed=true, preparationTemplate=false로 표시한다. 바인더는 실제 원장 시각의 UTC 마이크로초 형식을 읽으며 원장을 다시 쓰지 않는다. 준비 template을 최종 검수 사실로 대체하지 않는다.

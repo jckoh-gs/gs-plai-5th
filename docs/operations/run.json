@@ -195,5 +195,12 @@
     "intervalMinutes": 10,
     "constraints": "Mac and Codex app must remain running; no offline AI work guarantee; original deadline unchanged",
     "deadlineHardening": "artifacts/checkpoints/final-window-boundaries/summary.json"
+  },
+  "updatedAt": "2026-09-21T13:09:13.550157+00:00",
+  "finalMediaPreparation": {
+    "state": "verified preparation; final media pending",
+    "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
+    "scope": "Private ownership journal, interrupted-demo settings recovery, same-video reviewed-facts binder and portable deck packaging; no runtime change",
+    "originalWindowUnchanged": true
   }
 }

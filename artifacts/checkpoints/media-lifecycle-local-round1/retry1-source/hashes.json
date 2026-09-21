@@ -1,0 +1,9 @@
+{
+  "capturedAt": "2026-09-21T13:03:59.698Z",
+  "files": {
+    "scripts/media/record-demo.cjs": "845d5b3f80e59ac552fec6e7eb869a9ee6c7cb37cc10a826dbfb79111398d8ab",
+    "scripts/media/demo-lifecycle.cjs": "10ff5f2fd2f3421f0c908a7f3d8f8b722f4e7df3382e63f6249a3f75c76648cc",
+    "scripts/media/scene-plan.cjs": "9776f25754fb47ce248dc256043e74bb9ca7b60c8017b84e8d2ddeed8f8f734f",
+    "scripts/media/media-deadline.cjs": "fdac80297e5938d921e7090c82e7934c5afececc5bce6cc2e70bfe7dae808721"
+  }
+}

@@ -50,3 +50,10 @@
 최종 영상/원본 WebM/음성 및 인도 압축본은 Git에서 제외하되 로컬 인도 경로에 보존한다. Git 제외는 삭제나 산출물 생략이 아니다. 두 미디어 폴더와 인도 목록을 함께 제공하고 필요시 상대 경로를 유지한 압축본을 만든다. 비밀 폴더/운영 DB/자격증명 내용은 그 묶음에 포함하지 않는다.
 
 인도 검사기는 두 source/release-manifest.json이 선택된 매니페스트와 같은지, PPT 구조·배치·폰트·재수입 검증 영수증도 실제로 통과했는지 확인한다. 이 검사들은 육안/내용 검수의 대체가 아니다. 관련 보호·보존·불일치 거절 시험18개를 통과했다.
+
+발표자료 구성 설정은 `prepare-final-deck.cjs`와 `final-deck-binding.cjs`로 검수한 실제 영상에 연결한다. `facts.template.json`은 사전 검토용이며 최종물에 그 값을 그대로 제출하지 않는다. 실제 사용한 facts JSON 및 SHA-256, 바인더 두 파일과 release-features.cjs/validate-command-download.cjs를 최종 PPT 재생성 소스 묶음에 포함하고 인벤토리에서 확인해야 한다. build-deck는 source/facts.original.json과 source/deck-binding-input.json 및 네 바인더 의존소스를 자동 보존하고 모든 해시를 reproduction-manifest에 포함한다. portable 설정은 묶음 내부 facts 경로를 사용한다. 본문/노트는 reviewed facts, 시간은 실제 scenes.json, 캡처는 같은 video/source, 과거 복구 주장은 선택 manifest의 정확한 evidence 해시를 기준으로 한다.
+
+
+영상의 `source/demo-recovery.json`에는 실제201 등록 응답으로 확인한 소유 RTU, 실제200 시나리오 run 전환, 초기 설정 복구 및 기존 RTU 불변 결과를 보관한다. 같은 객체를 verification.demoRecovery에 연결한다. private journal 원본은 인도 묶음에 넣지 않는다. 재생 seed 복원은 기존 API 의미상 난수 상태를 재초기화하며 과거 시간·출력·난수 궤적 복원을 주장하지 않는다. scenario runId 전환 때문에 baselineHash와 actualHash가 달라질 수 있으며 settingsMatched 및 기록된 전이를 함께 확인한다.
+
+인도 검사는 복구 기록/PPT facts/바인더 입력·소스 누락과 해당 영상·장면·MQTT 보고서·릴리스·복구 파일의 해시 불일치를 거절한다. 이 검사의 통과만으로 실제 운영/육안 검수 또는 전체 목표가 완료되었다고 선언하지 않는다.

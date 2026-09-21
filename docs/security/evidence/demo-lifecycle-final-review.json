@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-09-21T13:05:53.062Z",
+  "scope": "Independent current source review and isolated fixture reruns; no live3106/cluster mutation or actual media creation",
+  "sourceHashes": {
+    "scripts/media/demo-lifecycle.cjs": "56367d9ab90c70e1617aef9923c76e31195eb0869580882967831b78cb90a92b",
+    "scripts/media/recover-demo.cjs": "803558acb145447b45c1ff9e4c98178c130a4120d9d398fda16e6568c0c02762",
+    "scripts/media/record-demo.cjs": "da386865cde5bf5d024d5861dbdd6dc98eb37ad32a1b205ad6d2bd5d0a09943f",
+    "scripts/media/scene-plan.cjs": "08fff466a948124e1148927c863d1da847c7c4a56438c1144d757abb7580e899",
+    "scripts/verify-delivery.mjs": "69347d267e3d84791812010a4645b0e9780a6bc9d0cdb15cb0b344a15a243907",
+    "tests/review-demo-lifecycle.test.js": "5263d83362fcb60a0e6365c0831aec9c7014d0812d8b004428be8f5a5e3d222d",
+    "tests/review-media-delivery.test.js": "d290f8fd1ea02a55c64aa930a330f935211c28802025bc264b8e61e8bca69a54"
+  },
+  "fixtureSuites": {
+    "lifecycle": {
+      "tests": 11,
+      "passed": 11
+    },
+    "delivery": {
+      "tests": 13,
+      "passed": 13
+    }
+  },
+  "clockOrderingFinding": "Resolved: observed actual201 identity no longer depends on cross-clock ordering; response-loss remains no-baseline/no-autowrite",
+  "hashComparison": "baselineHash and actualHash may legitimately differ after runId transition; verifier checks shapes/settings/actual transition, not unconditional equality"
+}

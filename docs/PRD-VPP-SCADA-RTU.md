@@ -775,7 +775,7 @@ k3s 명령은 종료 코드 0이고 `gitVersion=v1.33.4+k3s1`, `platform=linux/a
 
 ## 25. 변경 관리와 후속 범위
 
-현재 상태: 제품 **1.2.0**, runtime `83d10cebcd7cab2b1f889c970011a463bad09099`, `stable-v1.2.0`이다. IDEA-001~006의 채택 기능은 검증 완료했다. IDEA-007은 3fa3ba0 제품1.3.0의 실제배포·격리복원에서 기능검증을 완료했다([REVIEW015](product/REVIEW-015.md)). 현재정상1.2.0checkpoint는보존하며1.3.0태그·immutablemanifest 승격은별도확인한다. CSV 미리보기는 1.1.0에서 완료되어 현재 버전에 유지된다. 근거는 [인수 추적](product/acceptance.json), [1.1.0 checkpoint](../artifacts/releases/checkpoint-1.1.0.json), [1.2.0 checkpoint](../artifacts/releases/checkpoint-1.2.0.json), [기능·복원 검토010](product/REVIEW-010.md), [453개 해시·실제 이미지 검토011](product/REVIEW-011.md)이다. 아래 수락 절차는 요구사항으로 유지하며, 과거 후보 승격 표현은 이미 수행한 절차의 기준이다. **최종 동결 점검·영상·PPT·운영시간 및 마감 정리는 아직 완료되지 않았다.** 기능 checkpoint를 전체 목표 완료로 해석하지 않는다.
+현재 상태: 제품 **1.3.0**, runtime `3fa3ba0a6984dc752a8968d1788e72a3069b1267`, `stable-v1.3.0`이다. IDEA-001~007의 채택 기능과 1.3.0 배포·복원을 검증했다. [기능 검토015](product/REVIEW-015.md), [688개 해시·실제 Ready 이미지 독립 검토016](product/REVIEW-016.md), [1.3.0 checkpoint](../artifacts/releases/checkpoint-1.3.0.json), [인수 추적](product/acceptance.json)이 현재 근거다. 이전 [1.1.0 checkpoint](../artifacts/releases/checkpoint-1.1.0.json)와 [1.2.0 checkpoint](../artifacts/releases/checkpoint-1.2.0.json)는 과거 검증·복원 근거로 보존한다. 아래 수락 절차는 요구사항으로 유지하며 과거 후보 승격 표현은 당시 수행 절차의 기준이다. **최종 동결 점검·영상·PPT·운영시간·역할 마감 및 최종 정리는 아직 완료되지 않았다.** 기능 checkpoint를 전체 목표 완료로 해석하지 않는다.
 
 프로토콜 변경 시 schemaVersion, 가이드, 클라이언트, 통합 시험을 함께 변경한다. 등록 시 단위 정책이나 time 의미는 기존 데이터 마이그레이션 계획 없이 바꾸지 않는다. 제조사 모델·실물 프로토콜·대규모 부하·사용자 권한·브로커 업무 ACK·미래 제어 타임라인 재생은 별도 요구사항으로 설계한다.
 
@@ -883,7 +883,7 @@ AT-FRESH-01: 정상 수신 → 스트림 무수신 5초 → 오래된 데이터 
 2.통제된터널/네트워크단절후backoff재접속·실제API복구와singleton identity를확인한다.상태조회외deploy/control쓰기없음,다른프로세스보존,재시도유한성을검증한다.
 3.응답유실명령은동일commandId를조회해미확정결과를확인하며새명령을자동생성하지않는다.기존heartbeat10분설정과현재task재개경로를확인하고최종마감에정리한다.
 
-### OPS-05 릴리스 증거 manifest (IDEA-004, 1.2.0 checkpoint 검증 완료)
+### OPS-05 릴리스 증거 manifest (IDEA-004, 현재 1.3.0 checkpoint 검증 완료)
 
 복원 가능한 각 릴리스는 기계 판독 가능한 JSON manifest를 제공한다. runId, 제품 버전, 소스 commit, PRD 버전과 SHA-256, 이미지 참조와 digest, SQLite backup API로 생성한 snapshot 경로·SHA-256, 시험 로그 경로·SHA-256·실행 revision·종료 코드, k3s context/namespace와 배포·복원 증거 경로를 기록한다. source commit이 없는 작업본은 dirty 여부와 관련 파일 해시를 명시하고 commit만으로 재현 가능한 릴리스라고 주장하지 않는다. 아직 생성되지 않거나 검증되지 않은 필드는 null 또는 pending으로 기록한다. 전체 필수 게이트를 통과하기 전에는 stable로 표시하지 않는다. 자격증명·토큰·개인키·DB 본문을 manifest에 포함하지 않는다.
 
@@ -903,7 +903,7 @@ AT-RELEASE-01: manifest가 JSON으로 파싱되고 기록된 파일의 실제 SH
 
 이슈는 ISSUE-NNN, 발견 버전, 재현 조건, 기대/실제, 심각도, 담당, 상태, 해결 과정, 변경 커밋, 검증 증거, 재발 방지를 기록한다. 해결 증거 없이 닫지 않으며 에이전트의 검토 보고와 실제 시험 결과를 구분한다.
 
-### OPS-03 검증 버전과 비파괴 복원 (1.2.0 checkpoint 검증 완료, 최종 동결 점검 대기)
+### OPS-03 검증 버전과 비파괴 복원 (현재 1.3.0 checkpoint 검증 완료, 최종 동결 점검 대기)
 
 현재 기준 버전의 단위·통합·고급 시험·빌드 및 실행 확인을 통과하면 stable 커밋/태그, 시험 로그, SQLite backup API로 생성한 호환 snapshot을 기록한다. 이번 실행에서는 정상 종료 여부와 관계없이 단일 DB 파일 복사 대신 backup API를 사용한다. 신규 기능은 계약·기능·시험이 함께 완료되어야 stable로 승격한다.
 

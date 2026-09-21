@@ -1,0 +1,19 @@
+✔ final media binds approved content digest, run, runtime and frozen window (0.443125ms)
+✔ syntactically valid but different image digest is rejected (0.143209ms)
+✔ mismatched release/run/runtime/version and invalid or expired schedule fail closed (0.152ms)
+✔ preserves exact config, release, all source files including itself, and upload hashes (8.337542ms)
+✔ rejects config-secret before creating output (2.438959ms)
+✔ rejects http-credentials before creating output (2.243708ms)
+✔ rejects mqtt-credentials before creating output (2.327417ms)
+✔ rejects private-upload before creating output (2.462875ms)
+✔ rejects private-symlink before creating output (2.616708ms)
+✔ rejects credential-outside-private before creating output (2.394375ms)
+✔ rejects upload-secret before creating output (2.601208ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 88.55875

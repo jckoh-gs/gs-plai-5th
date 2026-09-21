@@ -1,0 +1,12 @@
+{
+  "summary.json": "6ff960e8ae239e02a07c904542b434d3bd0383ad21775f8e42ec5fbe5e76cd37",
+  "facts.rehearsal.json": "e34fad9525a167b4df33a3101674857617815a23d965def1b00d4b6da44aa7e5",
+  "config.rehearsal.json": "19521e5ab444d1373b2c4f522d8d0bb32fff57f86f836af8df77984dad58a438",
+  "reproduction-manifest.json": "820e126c2221df926eec39561b183e4bae83967ae680308d44fd1f4825af2c21",
+  "slide-14.png": "57c989d3fce8aa05e23a88cda67149cf4d2c294e2793da80d26192cb5d7a1746",
+  "slide-01.png": "3efc4841b003193927f2f5c13a906c85d021e21ed4b5d57cce276f4899a5383d",
+  "slide-04.png": "a2f0db19a4d39015784b4fd09e235f615ea48673a8de9146afc1e5ffcf4cf7ec",
+  "validation.json": "3412941578302c64cae79bd546a9e7e895df979e09708da2e4844dfa69186f43",
+  "slide-07.png": "bef69fcfad2d345af20f51d5fec23a8ad0639ab297ab18a60aeb136709eb720e",
+  "verification.json": "d585b138c174b2fddb01fe0728d080679500ea2a29f0816b673fc41ddf3f0a9e"
+}

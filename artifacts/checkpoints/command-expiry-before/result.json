@@ -1,0 +1,15 @@
+{
+  "observedAt": "2026-09-21T12:50:00.947Z",
+  "result": "REPRODUCED",
+  "scope": "Local1.3 browser only; no command POST and no k3s access",
+  "input": {
+    "value": "100000000000000000000",
+    "min": "0",
+    "max": "",
+    "valid": true
+  },
+  "commandPosts": 0,
+  "pageErrors": [
+    "Invalid time value"
+  ]
+}

@@ -1,0 +1,16 @@
+✔ actual model API cleanup restores owned settings only, remains idempotent and does not rewind dynamic time/output (49.84125ms)
+✔ lost write response is reconciled without replaying already applied patch (23.359125ms)
+✔ lost registration response identifies unique candidate but cannot invent initial baseline or write (14.579083ms)
+✔ pre-existing or wrong registration ID and changed owned run fail closed (13.892667ms)
+✔ expired deadline and wrong journal scope fail before writes; existing differences are report-only (19.446625ms)
+✔ planned same-owned scenario HTTP200 transition preserves original settings baseline (27.946958ms)
+✔ wrong scenario owner and unresolved planned response never authorize cleanup (22.738875ms)
+✔ begin reuses unchanged baseline without rewriting file and rejects changed pre-existing settings (9.565542ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 222.232375

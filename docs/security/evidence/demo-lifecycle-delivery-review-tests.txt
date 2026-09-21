@@ -1,0 +1,21 @@
+✔ independent delivery fixture proves only artifact consistency, never completion (49.55925ms)
+✔ independent delivery rejects changed cleanup receipt (45.020667ms)
+✔ independent delivery rejects missing reviewed facts (44.599834ms)
+✔ independent delivery rejects missing binder inventory (44.815791ms)
+✔ independent delivery rejects changed binding command report (48.679792ms)
+✔ independent delivery rejects invented recovery with changed existing RTU (47.558791ms)
+✔ independent delivery rejects changed source manifest (45.161291ms)
+✔ independent delivery rejects failed package validation (45.062542ms)
+✔ independent delivery rejects same release different reviewed video (44.713542ms)
+✔ independent delivery rejects missing deadline source (44.311459ms)
+✔ independent delivery rejects empty reproduction list (43.623584ms)
+✔ independent delivery rejects wrong config hash (43.465833ms)
+✔ independent delivery rejects both image digests invalid (43.231166ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 623.18575

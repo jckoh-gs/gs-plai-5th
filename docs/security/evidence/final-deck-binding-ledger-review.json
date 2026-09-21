@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-09-21T13:01:22.502Z",
+  "scope": "Ledger parser delta only; extracted pure parser in VM and local fixture suite; no media generated or authoritative ledger mutation",
+  "sourceHashes": {
+    "scripts/media/final-deck-binding.cjs": "457e84de6fcd7cf7296b35f22450a590af9af66ccf9ea9d9bd783fc32d114a9a",
+    "tests/final-deck-binding.test.js": "8f7581f228e97ac9490c4a43c90c994eaf09d8b3e1881a84b87dbf8c669be761"
+  },
+  "fixtureSuite": {
+    "tests": 31,
+    "passed": 31
+  },
+  "independentCases": [
+    {
+      "case": "2026-09-21T21:37:33.079009+00:00",
+      "accepted": true
+    },
+    {
+      "case": "2026-09-21T22:07:33.079009+00:00",
+      "accepted": true
+    },
+    {
+      "case": "2026-09-21T21:37:33.123456+00:00",
+      "accepted": true
+    },
+    {
+      "case": "2026-09-21T21:37:33.1Z",
+      "accepted": true
+    },
+    {
+      "case": "2024-02-29T00:00:00+00:00",
+      "accepted": true
+    },
+    {
+      "case": "2026-02-30T00:00:00.1+00:00",
+      "accepted": false
+    },
+    {
+      "case": "2026-09-21T24:00:00Z",
+      "accepted": false
+    },
+    {
+      "case": "2026-09-21T21:37:33+09:00",
+      "accepted": false
+    },
+    {
+      "case": "2026-09-21T21:37:33.1234567Z",
+      "accepted": false
+    },
+    {
+      "case": "Mon, 21 Sep 2026 21:37:33 GMT",
+      "accepted": false
+    }
+  ],
+  "submillisecondValuePreserved": true,
+  "evidenceTimestampsStillStrictIso": true
+}

@@ -1,0 +1,39 @@
+✔ binds real offsets, hashes, same video assets and relative reference (7.709084ms)
+✔ rejects late (2.432542ms)
+✔ rejects missing-asset (2.87325ms)
+✔ rejects changed-video (2.59975ms)
+✔ rejects wrong-manifest (2.677875ms)
+✔ rejects unreviewed (2.191709ms)
+✔ rejects placeholder (2.637125ms)
+✔ rejects future-version (2.569ms)
+✔ rejects same-run (2.672584ms)
+✔ CLI refuses to overwrite existing output (27.633875ms)
+✔ security rejects invented-transition (3.029042ms)
+✔ security rejects private-symlink (4.041666ms)
+✔ security rejects parent-traversal (2.918875ms)
+✔ security rejects outside-absolute (2.777208ms)
+✔ security rejects missing-duration (2.33675ms)
+✔ security rejects nan-duration (2.636667ms)
+✔ security rejects negative-scene (2.549542ms)
+✔ security rejects utc-string (2.514ms)
+✔ security rejects rollover-date (2.819208ms)
+✔ security rejects credential-body (25.386292ms)
+✔ security rejects wrong-run (2.478334ms)
+✔ security rejects wrong-prd (2.167208ms)
+✔ security rejects unknown-input (2.199583ms)
+✔ security rejects old-command-report (3.577958ms)
+✔ security rejects changed-recovery (2.497166ms)
+✔ security rejects output-private (2.156125ms)
+✔ rejects credential-like text derived from command report before config write (28.843959ms)
+✔ accepts actual unchanged authoritative microsecond UTC ledger timestamps (3.881167ms)
+✔ rejects noncanonical ledger 2026-02-30T21:37:33.079009+00:00 (2.514792ms)
+✔ rejects noncanonical ledger 2026-09-21T21:37:33.079009+09:00 (2.066417ms)
+✔ rejects noncanonical ledger Mon, 21 Sep 2026 21:37:33 GMT (1.992625ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 196.573959

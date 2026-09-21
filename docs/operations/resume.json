@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T12:41:39.226757+00:00",
+  "updatedAt": "2026-09-21T13:09:13.550157+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": "stable-v1.3.0",
@@ -10,7 +10,7 @@
     "productVersion": "1.3.0",
     "prdVersion": "1.10",
     "idea": "IDEA-007",
-    "state": "Verified stable runtime1.3.0 and immutable checkpoint1.3.0;688hashes/backupSHA/actualReadyimages independently PASS. No unfinished app feature; finalmedia/time/delivery remain."
+    "state": "Verified stable runtime1.3.0 and immutable688hash checkpoint. Operational media preparation verified76tests/actual local UI cleanup/portable14slide package. IDEA008v2 and ISSUE021 remain unadopted/unfixed. Finalmedia/time/delivery pending."
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -32,7 +32,8 @@
     "deployment": "Compare live deployment and Ready pod imageID with intended digest before applying; do not blindly repeat a rollout",
     "controlCommands": "Inspect persisted commandId and outcome; never generate a new ID merely because a response was lost",
     "backup": "Reuse the immutable remote path and verify chunks, whole SHA and SQLite; .part is not a successful backup",
-    "media": "Inspect existing verification and preserve valid outputs; use a new directory for incomplete reruns"
+    "media": "Inspect existing verification and preserve valid outputs; use a new directory for incomplete reruns",
+    "demoRecording": "Inspect config.lifecycle private journal and actual owned RTU. Confirm recorder handle terminal before recover-demo.cjs; never repeat registration or reset pre-existing RTUs on an uncertain result. Preserve failed recording and use a new output/journal only after reconciliation."
   },
   "entryCommand": "node scripts/resume-status.mjs",
   "supervisorCommand": "node scripts/connection-supervisor.mjs",
@@ -227,9 +228,24 @@
   },
   "nextProductProposal": {
     "id": "IDEA-008",
-    "revision": 1,
+    "revision": 2,
     "state": "proposed, not adopted",
     "review": "docs/product/REVIEW-017.md",
-    "nextDecision": "After first-hour1.3 observation checkpoint, reassess command-form server-range alignment; version PRD/product before any adoption. No user response required."
+    "nextDecision": "After first-hour1.3 observation checkpoint, reassess command-form server-range alignment; version PRD/product before any adoption. No user response required.",
+    "newFinding": "ISSUE-021: local1.3 extreme validSeconds causes Invalid time value before POST; unfixed, evaluate with range guidance after first-hour observation."
+  },
+  "finalMediaPreparation": {
+    "state": "verified preparation; final media pending",
+    "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
+    "scope": "Private ownership journal, interrupted-demo settings recovery, same-video reviewed-facts binder and portable deck packaging; no runtime change",
+    "originalWindowUnchanged": true
+  },
+  "mediaRecovery": {
+    "plan": "docs/operations/FINAL-RESTORE-PLAN.md",
+    "helper": "scripts/media/recover-demo.cjs",
+    "usage": "node scripts/media/recover-demo.cjs ABSOLUTE_PRIVATE_JOURNAL ABSOLUTE_TOKEN_FILE",
+    "guard": "original run/deadline/product/main endpoint; actual201 ownership and planned actual200 run transition; unresolved response requires main reconciliation, never invented baseline",
+    "lastLocalRehearsal": "artifacts/checkpoints/media-lifecycle-local-round1/result.json",
+    "localFixtureOnly": true
   }
 }

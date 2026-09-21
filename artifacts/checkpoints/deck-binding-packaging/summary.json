@@ -1,0 +1,52 @@
+{
+  "result": "PASS_REHEARSAL_PACKAGING_ONLY",
+  "rehearsal": true,
+  "scope": "Historical local mixed-version capture/config reuse; no final facts binding, final acceptance or final release claim",
+  "runs": [
+    {
+      "path": "artifacts/media-preparation/deck-binding-packaging-rehearsal",
+      "slideCount": 14,
+      "notesCount": 14,
+      "preservedFiles": 20,
+      "allHashesPassed": true,
+      "factsExact": true,
+      "receiptPassed": true,
+      "pptSha256": "bcfdb79fd0d69dcd6c9882b785784a411f5c693779cdf8b1bc679f67a7fee956"
+    },
+    {
+      "path": "artifacts/media-preparation/deck-binding-packaging-rehearsal/artifacts/media-preparation/portable-rebuild",
+      "slideCount": 14,
+      "notesCount": 14,
+      "preservedFiles": 20,
+      "allHashesPassed": true,
+      "factsExact": true,
+      "receiptPassed": true,
+      "pptSha256": "06ebc6fda07feff3159e30153f6af2a59319d4f5d7c7124112a1d1d887e604d9"
+    }
+  ],
+  "portableRebuild": true,
+  "all14SlidesVisuallyInspected": true,
+  "visualFindings": "Korean titles/body/notes layouts fit; no clipping/overlap. Actual UI screenshots retained with visible rehearsal banners; small screenshot detail is explained by large body text. Historical version text intentionally not final.",
+  "identicalRenderedSlides": [
+    "slide-01.png",
+    "slide-02.png",
+    "slide-03.png",
+    "slide-04.png",
+    "slide-05.png",
+    "slide-06.png",
+    "slide-07.png",
+    "slide-08.png",
+    "slide-09.png",
+    "slide-10.png",
+    "slide-11.png",
+    "slide-12.png",
+    "slide-13.png",
+    "slide-14.png"
+  ],
+  "sourceBinderCopiesIdentical": true,
+  "portableOperationalPathsValid": true,
+  "historicalBinderInputPreserved": true,
+  "videoPlacementNote": "Original rehearsal notes resolve to sibling ../rehearsal. Nested portable-rebuild output preserves that logical reference; when delivering a rebuilt deck, place it beside the corresponding video folder or adjust the relative link. No video is copied by deck generation.",
+  "sourceChanges": false,
+  "finalMediaCreated": false
+}

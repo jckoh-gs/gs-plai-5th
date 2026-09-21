@@ -1,0 +1,35 @@
+✔ binds real offsets, hashes, same video assets and relative reference (6.974084ms)
+✔ rejects late (2.587833ms)
+✔ rejects missing-asset (2.944333ms)
+✔ rejects changed-video (2.684584ms)
+✔ rejects wrong-manifest (2.680125ms)
+✔ rejects unreviewed (2.313417ms)
+✔ rejects placeholder (2.409791ms)
+✔ rejects future-version (2.788292ms)
+✔ rejects same-run (2.496625ms)
+✔ CLI refuses to overwrite existing output (28.056125ms)
+✔ security rejects invented-transition (2.956458ms)
+✔ security rejects private-symlink (4.124375ms)
+✔ security rejects parent-traversal (2.724833ms)
+✔ security rejects outside-absolute (2.773708ms)
+✔ security rejects missing-duration (2.270334ms)
+✔ security rejects nan-duration (2.362417ms)
+✔ security rejects negative-scene (2.682834ms)
+✔ security rejects utc-string (2.538958ms)
+✔ security rejects rollover-date (2.359833ms)
+✔ security rejects credential-body (24.324875ms)
+✔ security rejects wrong-run (2.569541ms)
+✔ security rejects wrong-prd (2.276542ms)
+✔ security rejects unknown-input (2.142375ms)
+✔ security rejects old-command-report (3.511875ms)
+✔ security rejects changed-recovery (2.455542ms)
+✔ security rejects output-private (2.091333ms)
+✔ rejects credential-like text derived from command report before config write (28.812583ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 185.159375

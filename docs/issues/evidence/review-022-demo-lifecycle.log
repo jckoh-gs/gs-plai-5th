@@ -1,0 +1,13 @@
+✔ actual model API cleanup restores owned settings only, remains idempotent and does not rewind dynamic time/output (46.328708ms)
+✔ lost write response is reconciled without replaying already applied patch (22.378541ms)
+✔ lost registration response identifies unique candidate but cannot invent initial baseline or write (14.49175ms)
+✔ pre-existing or wrong registration ID and changed owned run fail closed (14.122166ms)
+✔ expired deadline and wrong journal scope fail before writes; existing differences are report-only (19.391042ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 157.181083

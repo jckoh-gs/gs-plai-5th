@@ -99,3 +99,27 @@ PPT 제작기는 같은 릴리스의 검수 완료 영상이더라도 연결된 
 작은 시험에서 남은 시간/만료 기록 차단, 멈춘 동기 child 종료, 이벤트 루프가 막힌 작업과 별도 그룹 자식의 종료를 확인했다. 정상 리허설 도구 실행과 소스 보존 시험 포함12개 통과. 전체 녹화나 PPT 렌더를 반복하지 않았다.
 
 마감 감시의 소유권 보완: worker의 exit/error 이벤트 뒤에는 이미 회수된 PID나 그룹에 신호를 보내지 않는다. 살아 있는 작업의 PID·시작 시각·명령 식별정보를 저장하고, 종료 직전 각 자식의 같은 식별정보와 부모 계보를 다시 확인한다. 다른 프로세스나 부모가 바뀐 대상은 건너뛴다. 종료 탐색은1초 예산과 각 ps 최대500ms로 제한한다. macOS의 ps 확인과 signal 사이에는 원자적 PID 핸들이 없어 극히 짧은 TOCTOU가 남으며 PID 재사용을 완전히 방지한다고 주장하지 않는다. 정상 종료, 재사용된/회수된 worker, 바뀐 자식 식별정보, 무관한 프로세스 제외와 실제 detached 자식 종료를 시험했다. 소스 보존 포함14개 통과. 녹화기의 최상위 실패 메시지는 하위 명령의 원문 stderr를 출력하지 않는다.
+
+## 검수한 영상에서 최종14장 설정 바인딩
+
+`scripts/media/prepare-final-deck.cjs`는 녹화나 렌더를 하지 않는다. 입력 JSON은 `releaseManifest`, `videoDir`, `factsFile`, `outputConfig`와 선택적 `presentationDir`를 가진다. CLI는 원래 run.json의 동결 창 안에서만 동작하고 기록 직전 마감도 확인한다. 출력 파일이 존재하면 거절한다. `final-deck-binding.cjs`는 순수 파일 바인딩 계층이며 시험에서만 clock/root를 주입한다.
+
+`facts.template.json`에 제품1.3 기준14장 본문·설명·장면 번호·캡처 이름·현재 문서 근거 후보를 미리 작성했다. reviewed:false/preparationTemplate:true이며 현재 최종 설정으로 사용할 수 없다. 영상 검수 후 실제 videoSha256/scenesSha256, selectedRtuId, 시나리오 복원 전후 runId와 근거, PRD 버전, 사용하는 캡처별 SHA-256을 채우고 각 본문과 근거를 확인한다. 최종 버전이1.0~1.2로 복원되면1.3 개선 문구/미지원 캡처를 반드시 바꾼다. 미래 제품 버전은 바인더의 명시적 검토 없이는 거절한다.
+
+바인더는 non-rehearsal/fullDecode/visualReview=passed/claimsReview=passed와 실제 MP4 해시·매니페스트 해시·커밋·image digest를 비교한다. scenes.json의 실제 start/end+lead로 MM:SS를 만든다.8장면의 경계와 영상 길이를 확인하고 실제 같은 영상 source 내부 캡처 및 검수된 캡처 해시를 요구한다. 별도 MQTT 보고서의125kW/실제125/오차0, accepted/executing/completed, 선택 RTU를 확인한다. 지원 버전의 명령 내보내기도 같은 RTU·최대20개·파일 해시를 확인한다. 시나리오 새run 주장은 검수된 facts의 이전/새run과 별도 근거를 요구하며 스크린샷만으로 run 변경을 추정하지 않는다.
+
+과거 outbox/backup 검증은 각 slide.manifestEvidence의 경로가 **선택한** manifest.evidence에 있고 파일 SHA가 일치할 때만 추가한다. 템플릿의 후보가 새 매니페스트에 없거나 바뀌면 최종 근거를 다시 선택한다. 외부 KMA 실관측/AWS/운영 VPP는 explicit unverified로 남기며 시험 브로커의 별도 클라이언트 관측과 구별한다. 바인딩 이후 `build-deck.mjs`로 제작하고 모든 장을 검수하는 순서는 유지한다.
+
+새 바인더 자체와 사용한 facts는 최종 재생성 근거다. 메인 패키징/검증기에 `prepare-final-deck.cjs`, `final-deck-binding.cjs`, 의존 `release-features.cjs`/`validate-command-download.cjs`, 정확한 사용 facts 파일과 해시를 추가 연결해야 한다. 현재 build-deck의 설정/이미지/생성 소스 보존과 별도로 필요한 파일이며 이 작업에서 기존 생성기를 수정하지 않았다. 합성 fixture10개 시험으로 시간표시/동일 영상 해시/자산/마감/덮어쓰기 제한을 확인했으며 실제 최종 config를 생성하지 않았다.
+
+### Recorder lifecycle integration (FR-FAULT-02)
+
+`prepare-final-scenes.cjs` creates a unique registration fingerprint and a mode0600 private baseline/journal through `demo-lifecycle.cjs`. The final config contains `lifecycle.journalPath` and `lifecycle.registration`; final recording refuses missing lifecycle options. The recorder reuses only an unchanged, pre-intent baseline. Previous rehearsal configs without lifecycle options retain their action format.
+
+The registration click is preceded by durable intent and followed by the actual POST201 body capture before any owned controls. Mutating scene actions verify that the displayed target is the journal-owned hybrid RTU. Existing wind/solar selections are observation only. Scenario restore verifies its original owner, writes intent, and records the actual HTTP200 distinct run transition without replacing the initial settings baseline. Lost registration/restore responses never authorize an invented baseline or run transition.
+
+After capture, cleanup and unchanged-existing-RTU verification finish before encoding. `source/demo-recovery.json` and `verification.json.demoRecovery` record registration basis, scenario transitions, settings comparison, and existing RTU hashes; failure or ambiguity prevents a verified video. Catch attempts one bounded cleanup. The final recorder watchdog stops90seconds before the original deadline; rehearsal remains15minutes and no final deadline is extended.
+
+After interruption, the main agent must first confirm that the recording tool handle/worker has stopped, then inspect the private journal and invoke `node scripts/media/recover-demo.cjs /absolute/journal.json /absolute/token-file`. Do not automatically run cleanup alongside a live recording. Forced termination cannot guarantee finally/catch execution. Ambiguous ownership or unresolved restore requires main-agent state/journal reconciliation, not blind re-registration or resetting other RTUs. Keep private baselines/journals out of shared delivery assets; preserve helper source code separately.
+
+Bounded tests passed: lifecycle real-model HTTP fixture8, deadline/watchdog7, scene-plan compatibility/ownership2. No remote3104 mutation or complete video was performed by this integration check.

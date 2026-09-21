@@ -1,0 +1,3 @@
+// Final configuration only. No rendering, recording, remote calls or time override.
+const fs=require('node:fs'),bind=require('./final-deck-binding.cjs');
+try{const input=JSON.parse(fs.readFileSync(process.argv[2]));if(!input.outputConfig)throw Error('outputConfig required');const config=bind(input);const run=JSON.parse(fs.readFileSync('docs/operations/run.json'));if(Date.now()>=Date.parse(run.deadlineAt))throw Error('Window expired before config write');fs.writeFileSync(input.outputConfig,JSON.stringify(config,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({output:input.outputConfig,slides:config.slides.length}));}catch{console.error('Final deck binding refused; verify window, reviewed facts and same-video evidence.');process.exitCode=1;}

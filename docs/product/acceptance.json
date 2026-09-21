@@ -1822,7 +1822,8 @@
         }
       ],
       "assessment": "1.1.0 checkpoint: exact105144320byte backupSHA29071f..1879,currentrestore and backward1.0UI/MQTT/original5plants, actualpodoutboxrestart, stabletag peeled8599ab9, immutable manifest244evidence hashes independently matched. Sameimage build/suites and earlier feature-specific evidence retained. Finalmedia/time excluded.",
-      "releaseRevalidation": "Verify final af7f223 image and final gates; functional evidence is cumulative, not final release certification."
+      "releaseRevalidation": "Verify the actually selected final runtime/image and final gates; historical functional evidence is cumulative, not final release certification.",
+      "currentCheckpoint": "1.3.0 / 3fa3ba0a6984dc752a8968d1788e72a3069b1267 / checkpoint-1.3.0.json / REVIEW-016 / 688 hashes and Ready image verified; final freeze/media/time/role closeout pending"
     },
     {
       "id": "OPS-04",
@@ -2871,7 +2872,7 @@
         }
       ],
       "assessment": "Native browser evidence:3types+fixed-camera0→140yaw;20%/stop/start charts and rows reconcile400.2/0/400.2;name search+selection persists;RTU4topics change+clipboard paste+keyboard label/range. Non-target command finite target fallback regression confirmed.",
-      "releaseRevalidation": "Verify final af7f223 image and final gates; functional evidence is cumulative, not final release certification."
+      "releaseRevalidation": "Verify the actually selected final runtime/image and final gates; historical functional evidence is cumulative, not final release certification."
     },
     {
       "id": "AT-UI-04",
@@ -2904,7 +2905,7 @@
         }
       ],
       "assessment": "Native browser evidence:3types+fixed-camera0→140yaw;20%/stop/start charts and rows reconcile400.2/0/400.2;name search+selection persists;RTU4topics change+clipboard paste+keyboard label/range. Non-target command finite target fallback regression confirmed.",
-      "releaseRevalidation": "Verify final af7f223 image and final gates; functional evidence is cumulative, not final release certification."
+      "releaseRevalidation": "Verify the actually selected final runtime/image and final gates; historical functional evidence is cumulative, not final release certification."
     },
     {
       "id": "AT-UI-05",
@@ -2937,7 +2938,7 @@
         }
       ],
       "assessment": "Native browser evidence:3types+fixed-camera0→140yaw;20%/stop/start charts and rows reconcile400.2/0/400.2;name search+selection persists;RTU4topics change+clipboard paste+keyboard label/range. Non-target command finite target fallback regression confirmed.",
-      "releaseRevalidation": "Verify final af7f223 image and final gates; functional evidence is cumulative, not final release certification."
+      "releaseRevalidation": "Verify the actually selected final runtime/image and final gates; historical functional evidence is cumulative, not final release certification."
     },
     {
       "id": "AT-UI-06",
@@ -2974,7 +2975,7 @@
         }
       ],
       "assessment": "Actual SIGKILL counters preserve sample/attempt/PUBACK/byte/command history; prior health threshold tests and observed shared gateway memory label cover scope.",
-      "releaseRevalidation": "Verify final af7f223 image and final gates; functional evidence is cumulative, not final release certification."
+      "releaseRevalidation": "Verify the actually selected final runtime/image and final gates; historical functional evidence is cumulative, not final release certification."
     },
     {
       "id": "AT-UI-07",
@@ -3106,7 +3107,7 @@
         }
       ],
       "assessment": "Native browser evidence:3types+fixed-camera0→140yaw;20%/stop/start charts and rows reconcile400.2/0/400.2;name search+selection persists;RTU4topics change+clipboard paste+keyboard label/range. Non-target command finite target fallback regression confirmed.",
-      "releaseRevalidation": "Verify final af7f223 image and final gates; functional evidence is cumulative, not final release certification."
+      "releaseRevalidation": "Verify the actually selected final runtime/image and final gates; historical functional evidence is cumulative, not final release certification."
     },
     {
       "id": "AT-UI-11",
@@ -3408,7 +3409,7 @@
         }
       ],
       "assessment": "1.1.0 checkpoint: exact105144320byte backupSHA29071f..1879,currentrestore and backward1.0UI/MQTT/original5plants, actualpodoutboxrestart, stabletag peeled8599ab9, immutable manifest244evidence hashes independently matched. Sameimage build/suites and earlier feature-specific evidence retained. Finalmedia/time excluded.",
-      "releaseRevalidation": "Verify final af7f223 image and final gates; functional evidence is cumulative, not final release certification."
+      "releaseRevalidation": "Verify the actually selected final runtime/image and final gates; historical functional evidence is cumulative, not final release certification."
     },
     {
       "id": "AT-OPS-03",
@@ -3895,7 +3896,8 @@
         }
       ],
       "assessment": "Current1.3checkpoint independentlyverified --at-commit --remote:688hashes/source d077120/runtime3fa3ba0/backupSHA/actualReadyapp+broker match. Bothlocalstabletags peel3fa3ba0. Prioractualrestore acceptance retained. This establishes functionalcheckpoint provenance, not finalfreeze/media/time/remoteGitpush.",
-      "releaseRevalidation": "Final release commit/image full checks remain required."
+      "releaseRevalidation": "Final release commit/image full checks remain required.",
+      "currentCheckpoint": "1.3.0 / 3fa3ba0a6984dc752a8968d1788e72a3069b1267 / checkpoint-1.3.0.json / REVIEW-016 / 688 hashes and Ready image verified; final freeze/media/time/role closeout pending"
     },
     {
       "id": "AT-RELEASE-01",
@@ -3968,7 +3970,8 @@
         }
       ],
       "assessment": "Current1.3checkpoint independentlyverified --at-commit --remote:688hashes/source d077120/runtime3fa3ba0/backupSHA/actualReadyapp+broker match. Bothlocalstabletags peel3fa3ba0. Prioractualrestore acceptance retained. This establishes functionalcheckpoint provenance, not finalfreeze/media/time/remoteGitpush.",
-      "releaseRevalidation": "Final release commit/image full checks remain required."
+      "releaseRevalidation": "Final release commit/image full checks remain required.",
+      "currentCheckpoint": "1.3.0 / 3fa3ba0a6984dc752a8968d1788e72a3069b1267 / checkpoint-1.3.0.json / REVIEW-016 / 688 hashes and Ready image verified; final freeze/media/time/role closeout pending"
     },
     {
       "id": "FR-PREVIEW-01",

@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-09-21T12:59:30.321Z",
+  "scope": "Synthetic temp fixtures and source review only; no final config/render/remote call",
+  "sourceHashes": {
+    "scripts/media/final-deck-binding.cjs": "b6b6919b0ab5d2c4a5d1924222713683d6e49db76a5c98ec4a9111545ea56d61",
+    "scripts/media/prepare-final-deck.cjs": "993b41ee7eae315e7554822a348e5ef5dc5e77ddc87388e221fb3700eb253b7b",
+    "scripts/media/facts.template.json": "6bb2a4d81d49672cd898e8cbc9929f18ac2ea41ae2250f2c6bb3c03196a476ba",
+    "tests/final-deck-binding.test.js": "54aad2f2bbc7e10c849767468b4a7c91d0d20a5fb3267c3fa6e392a9cc931a5a"
+  },
+  "fixtureSuite": {
+    "tests": 27,
+    "passed": 27
+  },
+  "independentProbes": [
+    {
+      "mode": "invented-transition",
+      "rejected": true
+    },
+    {
+      "mode": "missing-duration",
+      "rejected": true
+    },
+    {
+      "mode": "non-ISO-createdAt",
+      "rejected": true
+    },
+    {
+      "mode": "symlink-private-source",
+      "rejected": true
+    },
+    {
+      "mode": "raw-secret-facts",
+      "rejected": true
+    },
+    {
+      "mode": "derived-secret-commandId",
+      "rejected": true
+    }
+  ]
+}

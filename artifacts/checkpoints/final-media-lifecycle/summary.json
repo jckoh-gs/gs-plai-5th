@@ -1,0 +1,122 @@
+{
+  "checkedAt": "2026-09-21T13:07:54.385725+00:00",
+  "result": "PREPARATION_VERIFIED",
+  "finalMediaCreated": false,
+  "runtimeUnchanged": "1.3.0 / 3fa3ba0 / image5563acc1",
+  "tests": {
+    "lifecycleBinderDeadlineDelivery": 65,
+    "recordingSourceReleaseBinding": 11,
+    "allPassed": true
+  },
+  "actualLocalUi": "artifacts/checkpoints/media-lifecycle-local-round1/result.json",
+  "actualEditableDeckPackaging": "artifacts/checkpoints/deck-binding-packaging/summary.json",
+  "reviews": [
+    "docs/security/FINAL-DECK-BINDING-REVIEW.md",
+    "docs/security/DEMO-LIFECYCLE-REVIEW.md",
+    "docs/operations/MEDIA-READINESS-REVIEW.md",
+    "docs/product/REVIEW-018.md"
+  ],
+  "sources": [
+    {
+      "source": "scripts/media/demo-lifecycle.cjs",
+      "savedAs": "source/scripts/media/demo-lifecycle.cjs",
+      "sha256": "56367d9ab90c70e1617aef9923c76e31195eb0869580882967831b78cb90a92b"
+    },
+    {
+      "source": "scripts/media/recover-demo.cjs",
+      "savedAs": "source/scripts/media/recover-demo.cjs",
+      "sha256": "803558acb145447b45c1ff9e4c98178c130a4120d9d398fda16e6568c0c02762"
+    },
+    {
+      "source": "scripts/media/record-demo.cjs",
+      "savedAs": "source/scripts/media/record-demo.cjs",
+      "sha256": "da386865cde5bf5d024d5861dbdd6dc98eb37ad32a1b205ad6d2bd5d0a09943f"
+    },
+    {
+      "source": "scripts/media/recording-sources.cjs",
+      "savedAs": "source/scripts/media/recording-sources.cjs",
+      "sha256": "12280b429f3cf83d33d3850f291d207771f1548836d3b28f29b37f5221258eff"
+    },
+    {
+      "source": "scripts/media/media-deadline.cjs",
+      "savedAs": "source/scripts/media/media-deadline.cjs",
+      "sha256": "fdac80297e5938d921e7090c82e7934c5afececc5bce6cc2e70bfe7dae808721"
+    },
+    {
+      "source": "scripts/media/prepare-final-scenes.cjs",
+      "savedAs": "source/scripts/media/prepare-final-scenes.cjs",
+      "sha256": "e89c70ed3fa96d8eb9c330d72b862185952905b5b436d6c421fa5074ba9ea0ae"
+    },
+    {
+      "source": "scripts/media/scene-plan.cjs",
+      "savedAs": "source/scripts/media/scene-plan.cjs",
+      "sha256": "08fff466a948124e1148927c863d1da847c7c4a56438c1144d757abb7580e899"
+    },
+    {
+      "source": "scripts/media/final-deck-binding.cjs",
+      "savedAs": "source/scripts/media/final-deck-binding.cjs",
+      "sha256": "457e84de6fcd7cf7296b35f22450a590af9af66ccf9ea9d9bd783fc32d114a9a"
+    },
+    {
+      "source": "scripts/media/prepare-final-deck.cjs",
+      "savedAs": "source/scripts/media/prepare-final-deck.cjs",
+      "sha256": "993b41ee7eae315e7554822a348e5ef5dc5e77ddc87388e221fb3700eb253b7b"
+    },
+    {
+      "source": "scripts/media/facts.template.json",
+      "savedAs": "source/scripts/media/facts.template.json",
+      "sha256": "6bb2a4d81d49672cd898e8cbc9929f18ac2ea41ae2250f2c6bb3c03196a476ba"
+    },
+    {
+      "source": "scripts/media/build-deck.mjs",
+      "savedAs": "source/scripts/media/build-deck.mjs",
+      "sha256": "529899c6ba2eab70e9dac58549bad6a26ac36d8629c330ba1aa75e4bfffba9d3"
+    },
+    {
+      "source": "scripts/verify-delivery.mjs",
+      "savedAs": "source/scripts/verify-delivery.mjs",
+      "sha256": "69347d267e3d84791812010a4645b0e9780a6bc9d0cdb15cb0b344a15a243907"
+    },
+    {
+      "source": "tests/final-deck-binding.test.js",
+      "savedAs": "source/tests/final-deck-binding.test.js",
+      "sha256": "8f7581f228e97ac9490c4a43c90c994eaf09d8b3e1881a84b87dbf8c669be761"
+    },
+    {
+      "source": "tests/review-demo-lifecycle.test.js",
+      "savedAs": "source/tests/review-demo-lifecycle.test.js",
+      "sha256": "5263d83362fcb60a0e6365c0831aec9c7014d0812d8b004428be8f5a5e3d222d"
+    },
+    {
+      "source": "tests/media-scene-lifecycle.test.js",
+      "savedAs": "source/tests/media-scene-lifecycle.test.js",
+      "sha256": "f6c554bccd348c880a0e9064fc13cd1ab70720b1c718bc37c3ed438bde887bda"
+    },
+    {
+      "source": "tests/media-deadline.test.js",
+      "savedAs": "source/tests/media-deadline.test.js",
+      "sha256": "8d418ec8c4e133521cdeaea2dd69683dd361d8517cbf00dee03dbb06f81f88ed"
+    },
+    {
+      "source": "tests/review-media-delivery.test.js",
+      "savedAs": "source/tests/review-media-delivery.test.js",
+      "sha256": "d290f8fd1ea02a55c64aa930a330f935211c28802025bc264b8e61e8bca69a54"
+    },
+    {
+      "source": "tests/recording-sources.test.js",
+      "savedAs": "source/tests/recording-sources.test.js",
+      "sha256": "cd71c8191f429a1434b918dc7b2ce0c6189ab6b1ea5d5f37904b6fc1f8196f8e"
+    },
+    {
+      "source": "tests/media-release-binding.test.js",
+      "savedAs": "source/tests/media-release-binding.test.js",
+      "sha256": "c048c26883146046cd1f3695ba9893c4bbd9d02aaa65e9a481e6f92c04d3877c"
+    }
+  ],
+  "limits": [
+    "Actual local UI retry used pre-clock-fix lifecycle and pre-request-body-guard recorder; later deltas have dedicated fixture evidence.",
+    "No newly captured final eight-scene movie or final deck; original freeze and deadline unchanged.",
+    "Cleanup restores model/control/replay/fault settings, not time, output history or exact previous random trajectory.",
+    "Natural-language slide claims and full final video/each-slide review remain required."
+  ]
+}

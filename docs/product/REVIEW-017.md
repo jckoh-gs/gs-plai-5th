@@ -11,3 +11,12 @@
 위험: 이도구는오류시험용이기도하므로UIinvalid요청을막는것을버그로볼수있다. 일반폼은유효명령입력,고의invalid는MQTT시험경로라는구분에메인이동의할때만채택한다. 합의가없으면보류해도현재필수기능checkpoint완료를뒤집지않는다.
 
 현재는제안/소스관찰만이다. PRD/버전/소스/배포/운영handle변경없음.1.3정상checkpoint와원래21:37:33UTC동결·22:07:33UTC마감유지. 이외추가기능을만들필요는발견하지못했다.
+
+
+## 후속 실제 브라우저 재현 · 제안 v2
+
+메인이 로컬1.3의 실제 index-Bq6rJvbB.js(SHA256 8d61e59d833af0cea234ed17c6d61300e4b564708cfeb78f51f8a0ab2e6a5a3c)에서 경계를 재현했다. `artifacts/checkpoints/command-form-before/result.json`은 서버 범위 밖 입력들이 native validity를 통과함을 기록한다. priority101은 실제 POST 후 HTTP200/rejected로 반환되고 SCADA 제어를 실행하지 않았다. 이는 원격 k3s 시험이 아니며 서버 방어 실패도 아니다.
+
+추가로 `validSeconds=100000000000000000000`을 입력하면 native validity는 true이나 클릭 시 `Invalid time value` 브라우저 예외가 발생하고 명령 POST는0회였다. `artifacts/checkpoints/command-expiry-before/result.json`과 화면·실행소스로 보존했다. ISSUE-021로 등록한다. 제안 v2는 기존 범위 정합성에 더해, 만료일을 ISO로 변환할 수 있는지 미리 확인하고 불가능한 입력에 사용자 피드백을 주는 범위를 포함한다. 계약에 없는 업무상 만료시간 상한을 만들거나 값을 자동 보정하지 않는다.
+
+아직 채택/수정/배포하지 않았다. 다음 결정 시1.3 관찰 결과와 함께 검토하고 채택 전에 PRD/제품 버전을 기록한다. 기존 v1 제안과 수정 전 증거는 보존한다.

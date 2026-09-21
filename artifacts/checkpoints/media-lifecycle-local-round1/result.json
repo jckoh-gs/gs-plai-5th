@@ -1,0 +1,72 @@
+{
+  "result": "PASS_AFTER_RECORDER_CLICK_FIX",
+  "checkedAt": "2026-09-21T13:05:15.421Z",
+  "scope": "Local1.3 short3scene rehearsal only; not final remote video or full goal acceptance",
+  "baseUrl": "http://127.0.0.1:3106",
+  "output": "artifacts/media-preparation/media-lifecycle-local-round1-retry1",
+  "firstAttempt": {
+    "result": "FAILED_CAPTURE_RECOVERED",
+    "proof": "attempt1-result.json",
+    "rawEvidence": "artifacts/media-preparation/media-lifecycle-local-round1",
+    "recovery": "attempt1-recovery.json",
+    "sourceDifference": "Raw mouse coordinates from an earlier bounding box; retry replaced four click paths with locator.click({delay:180}) and preserved actual pointer events.",
+    "exactRecorderSourceHash": null,
+    "sourceHashNote": "Exact pre-fix source snapshot was not captured; do not infer it from retry source."
+  },
+  "retry": {
+    "fullDecode": true,
+    "durationSeconds": 30.17,
+    "dimensions": "1920x1080",
+    "audioMeanDb": -19.4,
+    "pageErrors": [],
+    "registration": {
+      "ownedId": "95d579ed-12f3-4d3c-a54f-ac23016a6069",
+      "basis": "actual201",
+      "capturedAt": "2026-09-21T13:03:26.746Z",
+      "initialRunId": "0d66c1df-0be9-40c8-9947-863dbaef882c"
+    },
+    "scenarioTransitions": [
+      {
+        "scenarioId": "c14b3246-65b8-4a60-b66a-4607c67c5772",
+        "fromRunId": "0d66c1df-0be9-40c8-9947-863dbaef882c",
+        "toRunId": "c2a0153f-7263-4b99-864e-12bedbea8348",
+        "preparedAt": "2026-09-21T13:03:43.401Z",
+        "capturedAt": "2026-09-21T13:03:43.630Z"
+      }
+    ],
+    "cleanup": {
+      "result": "PASS",
+      "settingsMatched": true,
+      "existingCount": 19,
+      "existingUnchanged": true,
+      "writes": 4,
+      "rngReinitializedBySeedPatch": true,
+      "exactPriorRandomTrajectoryRestored": false
+    },
+    "journalMode": "0600",
+    "recordingStartedAt": "2026-09-21T13:03:19.236Z",
+    "videoSha256": "4588b318be2ff40093e8d4bf67041bdaf021a982fcf8c47f4dc20314188ea799"
+  },
+  "sourceEvidence": "retry1-source/hashes.json",
+  "sourceNote": "Pre-clock-fix lifecycle source; local same-host time only. Parent independently validates server/local clock skew fix.",
+  "visualChecks": [
+    "Actual scene2 PNG shows owned RTU sensorPause enabled/latency100",
+    "Encoded frame3 shows restored scenario and new runId, rehearsal banner, no visible credential"
+  ],
+  "limitations": [
+    "No remote3104 or18884 mutation",
+    "No external MQTT dispatch in this bounded rehearsal",
+    "No full8scene run, zoom acceptance or final narration review",
+    "Audio verified by non-silent decode/level rather than listening",
+    "Absolute random trajectory intentionally not rewound"
+  ],
+  "followup": {
+    "behavioralRerun": false,
+    "changes": [
+      "Parent changed lifecycle actual201 clock ordering guard after retry",
+      "Recorder now validates actual POST body name/type/count/ratedKw/rampKwPerSec against pending intent before201capture"
+    ],
+    "verification": "media-scene-lifecycle.test.js3testsPASS incl wrongfield/null/array/string-count rejection",
+    "sourceEvidence": "guarded-source/hashes.json"
+  }
+}

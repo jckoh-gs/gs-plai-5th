@@ -1,0 +1,9 @@
+{
+  "at": "2026-09-21T12:52:03.790650+00:00",
+  "sha256": {
+    "scripts/media/demo-lifecycle.cjs": "10ff5f2fd2f3421f0c908a7f3d8f8b722f4e7df3382e63f6249a3f75c76648cc",
+    "scripts/media/recover-demo.cjs": "803558acb145447b45c1ff9e4c98178c130a4120d9d398fda16e6568c0c02762",
+    "tests/review-demo-lifecycle.test.js": "696413c9598def2e06df48efba2a1aa37bdf7cb1cf17e89018616747b175118e",
+    "docs/issues/evidence/review-022-demo-lifecycle-round2.log": "cf2d0871c39755a4389b5dc08774e69676391d1ef1035d6ee08447a1f45e3f9e"
+  }
+}

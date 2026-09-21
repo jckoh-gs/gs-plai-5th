@@ -1,0 +1,10 @@
+{
+  "result": "FAILED_CAPTURE_RECOVERED",
+  "videoVerified": false,
+  "ownedId": "041b8fde-6716-411f-a541-4259b7ff5125",
+  "cleanup": "PASS",
+  "existingUnchanged": true,
+  "inference": "Pointer coordinates stale after toast layout shifted; Scenario tab not opened before name field wait",
+  "failureFrame": "failure-frame.png",
+  "log": "record.log"
+}
