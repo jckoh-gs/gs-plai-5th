@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T17:37:36.953589+00:00",
+  "updatedAt": "2026-09-21T17:48:08.894247+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -43,7 +43,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Validate adopted1.7.1 CLI/protocol correction locally (fullsuite, actualbroker CLI/dispatch, cleanenvguide), independently review source/security/media compatibility, commit exactruntime andbuild/scanimage. Keepactualstable1.7 observers; no rollout beforeactual1h capture17:45:54.307Z. Then explicitnewbackup/current+backwardrestore/manifest gates; fallback1.7 preserved.",
+    "1.7.1 local/exactimage/security/registry and stable1.7actualfirsthour complete. Await owner45736 prebackup terminal; verifywholebackuphash/integrity/workerexit/UID. Then gracefully stop and archive primary85394/audit60682, stop supervisor77410 afterobservertermination, release preparedexact234 rollout usingactualfirsthourindex8e4d091f... andprebackupmetadatahash. VerifyReady/continuity; updateactualrun; startsinglematching supervisor; remoteUI/MQTT/online/outbox thennormalbackup/current1.7.1+back1.7restore/newmanifest. No repeat of completed local/image gates.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -101,6 +101,13 @@
       "supplementaryThrough": "2026-09-21T14:49:43.871Z",
       "processesContinuedAtCapture": true,
       "currentProcessStatus": "Ended at14:50forplanned1.5upgrade; fullarchive separately preserved"
+    },
+    {
+      "path": "artifacts/checkpoints/soak-1.7.0-first-hour/summary.json",
+      "primaryThrough": "2026-09-21T17:45:54.620Z",
+      "supplementaryThrough": "2026-09-21T17:45:55.626Z",
+      "processesContinuedAtCapture": true,
+      "scope": "Actual firstpoll after1hour each; received observation only, notuniversalreceipt/uptimeclaim"
     }
   ],
   "connectionIncident": {
@@ -463,8 +470,20 @@
     "adoptionReview": "docs/product/REVIEW-040.md",
     "implementationOwner": "/root/transport",
     "scope": "StrictbooleanRTUonline in suppliedmonitor; exampleenv/ports/unsupportedlegacy wording. No serverDBUI/wire/OSS changes. Do not rollout before captured actual1.7 firsthour at17:45:54.307Z.",
-    "phase": "Exact1.7.1 image, isolated runtime/MQTT/clientstatus, fresh security and registry proof complete. Await real1.7firsthour prefix >=17:45:54.307Z before anymain rollout.",
-    "activeOperations": [],
+    "phase": "Actual stable1.7 firsthour captured and root13hash review passed; fresh pre1.7.1 backup active45736. No rollout yet.",
+    "activeOperations": [
+      {
+        "owner": "/root/deployment",
+        "kind": "fresh pre1.7.1 backup with health monitor",
+        "handle": 45736,
+        "hostBackupPid": 55340,
+        "ownerReportedStart": "2026-09-21T17:46:57.245Z",
+        "metadata": "deploy/verification/pre-1.7.1-backup.json",
+        "operationJournal": "artifacts/operations/backups/20260921T174657281Z.json",
+        "remotePath": "/data/stable-d98d3c4-20260921T174657281Z.sqlite",
+        "state": "Owner polling; reconcile same journal/immutabletarget before any retry."
+      }
+    ],
     "mainWritesAllowed": false,
     "localClientStatusEvidence": "artifacts/checkpoints/candidate-1.7.1-local/client-status-integration.json",
     "mediaCompatibility": "docs/operations/MEDIA-1.7.1-COMPATIBILITY.md",
@@ -651,16 +670,25 @@
   "firstHourCapturePreparation": {
     "preparedAt": "2026-09-21T17:02:56.101386+00:00",
     "script": "artifacts/checkpoints/soak-1.7-first-hour-preparation/capture-first-hour.py",
-    "sha256": "4ebe96dd97ad7280e94b0f26c7ee130957d8f74c3807d4072494b1db2a050d13",
+    "sha256": "919d6b64231fb76462ba1c4e2cfe8b93cd7e448462d54150daa621393208db41",
     "notBefore": "2026-09-21T17:45:54.307Z",
     "expectedOutput": "artifacts/checkpoints/soak-1.7.0-first-hour",
-    "scope": "Preparation only; immutable prefix capture requires fullhour before any remotequery/outputdirectory. Checksactualcurrentversion/observer identities/Readyimage, keepsobserverprocessesrunning. No automatictimer registered. Native heartbeat/main may invoke afteractualboundary.",
+    "scope": "Preparation only; prefix first requires fullhour before remotequery/output. Primary source captured now with d98byteequality (not startup attestation); audit actual startup-source hashes checked. Allsource preflight before remotequery/outdircreation. Actualprocess/Readychecks retained.",
     "guardCheck": {
       "result": "PASS",
       "prematureExitCode": 1,
       "message": "First hour not yet observed; do not create checkpoint"
     },
-    "state": "prepared; not yet executed at1hour"
+    "state": "Captured actualfirsthour androotverified, processes continue",
+    "originalScriptSha256": "4ebe96dd97ad7280e94b0f26c7ee130957d8f74c3807d4072494b1db2a050d13",
+    "primarySourcePreparation": "artifacts/checkpoints/soak-1.7-first-hour-preparation/primary-source/provenance.json",
+    "captureHandle": 72480,
+    "captureExitCode": 0,
+    "evidence": "artifacts/checkpoints/soak-1.7.0-first-hour/summary.json",
+    "indexSha256": "8e4d091fb5022a3da4e5b51b7d89539c7c3deae592afbdb81e78cf9f748f5cd4",
+    "rootHashChecks": 13,
+    "independentReview": "docs/product/REVIEW-043.md",
+    "correctedPrematureGuard": "artifacts/checkpoints/soak-1.7-first-hour-preparation/corrected-premature-guard.json"
   },
   "activeMediaRehearsal": {
     "productVersion": "1.7.0",

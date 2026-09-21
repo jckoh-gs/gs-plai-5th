@@ -1,0 +1,15 @@
+{
+  "summary.json": "2e75e0e1d8261c092aff8e97b6cc402b4b04efc12eedb63602336951c4bf9822",
+  "audit-boundary.json": "f67bf5b0e86b15dba588a39b4070eda9478a7ea3463568f2426b9da96d1cf3d4",
+  "primary-observations.jsonl": "48cb7db65fcf68cee7a9dd76aa458a3f57da8560fb12853e26f6f45c9b485cb4",
+  "primary-boundary.json": "31b5670a6193a3b8fbf56972d408a65a8533e4fac8178deed1a8b3b24d273dd5",
+  "audit-observations.jsonl": "3458ff3b5c5021f43ddc756681d4111c03bd38715e4c8239fa367327748a31ac",
+  "resource-observation.json": "8c36ace0d57ff94ed43f42c1ced773a2ccb6d0952c966c0533004cdea797bd7d",
+  "source/telemetry-audit-monitor.mjs": "6c4bbb0b77c03e8a49d9d17c8f7e743c10765ab05b0d94f6b1a736f6a60c4617",
+  "source/provenance.json": "7516761b057c00ee7524527c7b7d5bcd751f9c3766ca866f305f13363be254e4",
+  "source/soak-diagnostics.mjs": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c",
+  "source/resource-read.mjs": "dd392b03ab27d4489f72f8f3706fcea8268b22c6764be2d4f471c0ac39db20ee",
+  "source/telemetry-audit.mjs": "ba6c2c1c9ac39e4a1666d7ad0b6468271a1eda163f2653df9e6bac842bb48486",
+  "source/soak-monitor.mjs": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3",
+  "source/capture-first-hour.py": "919d6b64231fb76462ba1c4e2cfe8b93cd7e448462d54150daa621393208db41"
+}

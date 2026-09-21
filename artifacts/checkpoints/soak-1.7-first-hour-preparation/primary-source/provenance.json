@@ -1,0 +1,17 @@
+{
+  "capturedAt": "2026-09-21T17:42:21.117234+00:00",
+  "scope": "Primary source captured now, not at observer startup. Current bytes equal stable1.7 commit d98, whose files precede this epoch. This is not an independent startup loaded-code attestation. Audit has its separate actual startup source hashes.",
+  "actualPrimaryProcess": "34756 Tue Sep 22 01:45:54 2026     node scripts/soak-monitor.mjs",
+  "files": {
+    "artifacts/checkpoints/soak-1.7-first-hour-preparation/primary-source/soak-monitor.mjs": {
+      "originalPath": "scripts/soak-monitor.mjs",
+      "sha256": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3",
+      "matchingHistoricalCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9"
+    },
+    "artifacts/checkpoints/soak-1.7-first-hour-preparation/primary-source/soak-diagnostics.mjs": {
+      "originalPath": "scripts/soak-diagnostics.mjs",
+      "sha256": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c",
+      "matchingHistoricalCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9"
+    }
+  }
+}

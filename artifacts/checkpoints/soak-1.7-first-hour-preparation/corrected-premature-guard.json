@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T17:42:21.176990+00:00",
+  "prematureExitCode": 1,
+  "message": "First hour not yet observed; no remote read or output creation reached",
+  "sourceSyntax": "PASS",
+  "outputDirectoryAbsent": true
+}

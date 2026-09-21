@@ -161,8 +161,20 @@
     "localSummary": "artifacts/checkpoints/candidate-1.7.1-local/summary.json",
     "independentLocalReview": "docs/product/REVIEW-041.md",
     "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
-    "phase": "Exact1.7.1 image, isolated runtime/MQTT/clientstatus, fresh security and registry proof complete. Await real1.7firsthour prefix >=17:45:54.307Z before anymain rollout.",
-    "activeOperations": [],
+    "phase": "Actual stable1.7 firsthour captured and root13hash review passed; fresh pre1.7.1 backup active45736. No rollout yet.",
+    "activeOperations": [
+      {
+        "owner": "/root/deployment",
+        "kind": "fresh pre1.7.1 backup with health monitor",
+        "handle": 45736,
+        "hostBackupPid": 55340,
+        "ownerReportedStart": "2026-09-21T17:46:57.245Z",
+        "metadata": "deploy/verification/pre-1.7.1-backup.json",
+        "operationJournal": "artifacts/operations/backups/20260921T174657281Z.json",
+        "remotePath": "/data/stable-d98d3c4-20260921T174657281Z.sqlite",
+        "state": "Owner polling; reconcile same journal/immutabletarget before any retry."
+      }
+    ],
     "completedImageBuild": {
       "owner": "/root/deployment",
       "handle": 78456,
@@ -371,7 +383,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T17:37:36.954102+00:00",
+  "updatedAt": "2026-09-21T17:47:39.708651+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",

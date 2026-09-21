@@ -17,6 +17,8 @@
 
 - ISSUE027: **RESOLVED_METADATA — 관측 원장 현재 프로세스 연결 불일치**. supplementaryObservation의 이전1.6 참조는 메인이 수정했고, 독립 검토에서 supervisorDiagnosticUpgrade의 이전 current/nextStep 참조를 추가 발견했다. 두 필드 모두 메인 수정 후 실제identity/activation 대조 완료. 실제 관측·카운터·첫1시간 guard는 변경하지 않았다.
 
+- ISSUE028: **RESOLVED_PREPARATION**. 첫1시간 준비의 존재하지 않는 source경로를 수정하고 원격조회·출력생성 전 소스검증을 확인했다. 실제 첫1시간 capture/전체완료를 뜻하지 않는다.
+
 번호가 없는 IDEA011 명령 목록 실패 가시성 기록도 현재 기능 인수 완료로 정리한다. 로컬8검증군의 합성503·header/body timeout·전환/해제 시험과 실제 main/현재1.7 복원 읽기, REVIEW037/038를 근거로 한다. 이전1.6에 신규 안내가 있다고 주장하지 않는다.
 
 계속 남는 경계: 오디오의 실제 청취 미검증, 최종창 신규 미디어·동일 영상 PPT 검수, 실제 KMA/AWS/운영 VPP 외부 연동 미검증, 단일노드 k3s의 노드 HA 미검증은 해결로 바꾸지 않는다. SEC006의 현재 이미지 OS4매치/2CVE와 인증 사용자 자원 소모 잔여 위험은 보안 원장에 계속 연결한다. npm audit0/전체시험 PASS가 이를 해소하지 않는다. 원래 freeze21:37:33Z/deadline22:07:33Z를 유지하며 역할·전체목표는 아직 종료하지 않는다.
@@ -608,3 +610,16 @@ P2 운영 재개 정확성. 현재 상태 RESOLVED_METADATA/두 현재 연결 �
 ISSUE027 종료 대조: `artifacts/checkpoints/resume-1.7-audit-binding/supervisor-followup.json`의 before/after와 현재 resume를 독립 대조했다. supervisorDiagnosticUpgrade는 verified-active1.7/PID33567/handle77410/start01:40:37 및 실제 존재하는 observer-1.7 activation으로 일치한다. 옛 필드는 historicalActivation1_6에 보존되었다. audit 현재세션·primary run.soak·observationHandles/baselines·firstHour notBefore도 앞선 실제latest/ps와 일치했다. 이번 제한된 활성 관측 필드 점검에서 추가 stale activebinding은 발견하지 않았다. 좁은 metadata 결함을 종료하며 실제1시간 capture/원격복구/전체목표 완료의 판정으로 확대하지 않는다. 원장 수정은 메인만 수행했고 독립 검토자는 이슈 증거만 작성했다.
 
 ISSUE027 예방 보강: 현재/중복 관측 소유 필드를 자동 대조하는 운영 도구를 추가했다. 불일치 시 일반 재개 대신 원장 정합성 확인을 권고하며 마감·동결·연결·배포 우선순위와 실제 프로세스 확인 요구를 유지한다. [root 검증](../../artifacts/checkpoints/resume-1.7-audit-binding/guard-summary.json)은 전체323개와 최종 집중8개(7개 중복·추가 보안1개), 실제 이전 필드 재현·현재 읽기 확인을 구분한다. 별도 보안 검토에서 지적한 malformed state와 비양수 handle도 수정했다. 앱 이미지·제품 기능 변경은 없다.
+
+## ISSUE-028 — 첫1시간 checkpoint 준비의 존재하지 않는 소스 경로
+
+P2 관측 증거 완성도, 현재 상태 RESOLVED_PREPARATION/준비 경로·소스 사전검사 수정 확인. 최초 상태는 OPEN/메인 수정 중이었다. 메인이 실제 첫1시간 이전17:41 preflight에서 발견했다. `artifacts/checkpoints/soak-1.7-first-hour-preparation/capture-first-hour.py`의 기존 SHA4ebe96dd97ad7280e94b0f26c7ee130957d8f74c3807d4072494b1db2a050d13은 존재하지 않는 observer-1.7-activation/source를 참조했다. 실제 activation 디렉터리에는 activation/primary/audit JSON3개만 있다. 독립 소스 확인에서 remote 읽기 이후 out.mkdir를 한 다음 이 경로를 iterdir하므로, 실제1시간 조건을 통과하면 출력 디렉터리를 부분 생성한 뒤 실패할 경로임을 확인했다. 첫1시간 capture 자체를 실행하거나 해당 실패를 실제로 유발하지 않았으며 소스/경로 증거는 `evidence/issue028-before.json`이다.
+
+계획된 보완은 모든 입력 소스를 원격 조회·출력 디렉터리 생성 전에 검사하고 primary soak-monitor/soak-diagnostics를 현재시각에 보존하여 정확 stable d98 소스 바이트와 비교하는 것이다. 이것을 시작 시점 source capture라고 주장하지 않는다. audit의 실제 시작 시점 보존 source는 별도로 유지한다. 기존 스크립트·새 해시·negative guard 증거를 보존한 후 독립 확인할 예정이다.
+
+관측 데이터·프로세스·카운터 결함이 아니라 증거 포장 준비의 경로 결함이다. 운영원장·runtime·observer파일·firsthour guard·원래시간은 독립 검토자가 변경하지 않았다. 현재수정완료/첫1시간검증/전체목표완료를 미리 선언하지 않는다.
+
+
+ISSUE028 후속 수정 검토: 새 script SHA919d6b64231fb76462ba1c4e2cfe8b93cd7e448462d54150daa621393208db41의 primary 소스 SHA/디렉터리 및 audit 실제시작 소스 SHA 검사가 모든 kubectl과 out.mkdir 이전임을 독립 소스 읽기로 확인했다. primary2파일은 현재시각17:42:21에 보존한 바이트를 git show 정확d98과 직접 비교했고 audit2파일은 실제observerSources의 시작 보존 SHA와 대조했다. 모두 일치한다. primary provenance는 시작시점 capture/메모리코드 증명이 아님을 명시한다.
+
+메인의 corrected-premature-guard.json은 premature exit1/remote·output 미도달/AST PASS를 기록한다. 독립 검토는 capture를 실행하지 않고 AST·바이트·경로 검증만 수행했으며 그 시각 output디렉터리 부재를 확인했다. `evidence/issue028-after.json`에4소스와새script SHA를 보존한다. 원래 guard·마감·관측프로세스·카운터를 변경하지 않은 좁은 준비 결함 수정으로 종결하며 실제 첫1시간 checkpoint 성공은 후속별도증거다.

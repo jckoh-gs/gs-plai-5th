@@ -1,0 +1,96 @@
+{
+  "capturedAt": "2026-09-21T17:46:19.023184+00:00",
+  "sourceHead": "f1eb0d377b5e404c3ddc1ab15af7ed064db00c7a",
+  "runtimeCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
+  "scope": "Immutable first poll after one hour for each live observer; processes continue. Not uninterrupted uptime or full acceptance proof.",
+  "primary": {
+    "sessionId": "28208f59-d2d9-40c4-83a3-d608b1ac5570",
+    "startedAt": "2026-09-21T16:45:54.122Z",
+    "through": "2026-09-21T17:45:54.620Z",
+    "durationSeconds": 3600.49799990654,
+    "observations": 346,
+    "messages": 598,
+    "invalid": 0,
+    "duplicates": 0,
+    "apiErrors": 0,
+    "connectionErrors": 0,
+    "maxPending": 3,
+    "nonHealthyPolls": 0,
+    "apiUnavailablePolls": 0,
+    "minRssBytes": 101363712,
+    "maxRssBytes": 157900800
+  },
+  "supplementary": {
+    "sessionId": "70932d07-b127-4b9b-874f-e2796728ff12",
+    "startedAt": "2026-09-21T16:45:54.307Z",
+    "through": "2026-09-21T17:45:55.626Z",
+    "durationSeconds": 3601.319000005722,
+    "observations": 361,
+    "received": 598,
+    "invalidMessages": 0,
+    "duplicateMessages": 0,
+    "connectionErrors": 0,
+    "rtus": [
+      {
+        "rtuId": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+        "samples": 3599,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+        "samples": 3599,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+        "samples": 3599,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+        "samples": 3599,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+        "samples": 3599,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      }
+    ]
+  },
+  "incidentEvidence": [],
+  "interpretation": "Initial1.7 observercounterbaseline0; allcapturedcounterincrements and known1.7incidentreferences preserved. This is received-observation evidence, not every subscriber receipt or uninterrupted service proof; missingincidentlinks do not prove nooutage.",
+  "processesContinue": true,
+  "primarySourceProvenance": {
+    "capturedAt": "2026-09-21T17:42:21.117234+00:00",
+    "scope": "Primary source captured now, not at observer startup. Current bytes equal stable1.7 commit d98, whose files precede this epoch. This is not an independent startup loaded-code attestation. Audit has its separate actual startup source hashes.",
+    "actualPrimaryProcess": "34756 Tue Sep 22 01:45:54 2026     node scripts/soak-monitor.mjs",
+    "files": {
+      "artifacts/checkpoints/soak-1.7-first-hour-preparation/primary-source/soak-monitor.mjs": {
+        "originalPath": "scripts/soak-monitor.mjs",
+        "sha256": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3",
+        "matchingHistoricalCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9"
+      },
+      "artifacts/checkpoints/soak-1.7-first-hour-preparation/primary-source/soak-diagnostics.mjs": {
+        "originalPath": "scripts/soak-diagnostics.mjs",
+        "sha256": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c",
+        "matchingHistoricalCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9"
+      }
+    }
+  }
+}

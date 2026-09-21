@@ -6,7 +6,7 @@
 
 NFR08 독립 검토에서 공급 monitor가 online true/false를 모두 같은 객체로 출력하고, protocol quickstart의 환경 준비·포트가 맞지 않으며 미지원 v1 호환 문장이 남아 있음을 확인했다. [수정 전 근거](NFR08-CONTRACT-FIXTURES-20260922.json), [REVIEW040](../product/REVIEW-040.md)를 근거로 IDEA012v1/PRD1.15/제품1.7.1 패치를 채택했다. CLI strictboolean online 및 가이드·부록·예제 안내만 수정한다. 실제1.7 배포/관측/복구 기준은 유지한다.
 
-로컬 전체 317개·실제 broker 통합/고급·report/client-security·공급 monitor의 late online/실제 RTU LWT offline 시험을 통과했다. 별도 새 폴더의 의존성·환경·DB·빌드와 3개 RTU 연결도 통과했다. 기존 소유 브로커를 재사용하고 점유된 3101 대신 3112를 지정한 범위이며, 기존 환경 파일과 무관한 프로세스를 보존했다. [로컬 집계](../../artifacts/checkpoints/candidate-1.7.1-local/summary.json)를 확인한다. REVIEW041의 로컬 인수와 정확 이미지 `234ec56`의 79개 app 시험·실제 broker/client status·보안·registry 전달을 완료했다. 정확 소스는 `40b9ed898f32037e7a87259d12d145457575a4a8`이고 [root 이미지 대조](../../deploy/verification/candidate-40b9ed8/pre-deployment-review.json)를 통과했다. 원격 교체·동일 백업 현재/하위 복원 인수는 남아 있다. 서버·web·DB·제어·wire schema·OSS 변경은 없다. 미디어 도구의 exact1.7.1 호환 검사53개는 전체시험과 합산하지 않는다. 현재facts는stable1.7 미검수 템플릿을 유지한다. **기존1.7 관찰의 실제 첫1시간17:45:54.307Z 캡처 전에는 후보를 운영에 교체하지 않는다.** 담당·활성작업은 resume.candidateOperations를 읽고 중복 기동하지 않는다.
+로컬 전체 317개·실제 broker 통합/고급·report/client-security·공급 monitor의 late online/실제 RTU LWT offline 시험을 통과했다. 별도 새 폴더의 의존성·환경·DB·빌드와 3개 RTU 연결도 통과했다. 기존 소유 브로커를 재사용하고 점유된 3101 대신 3112를 지정한 범위이며, 기존 환경 파일과 무관한 프로세스를 보존했다. [로컬 집계](../../artifacts/checkpoints/candidate-1.7.1-local/summary.json)를 확인한다. REVIEW041의 로컬 인수와 정확 이미지 `234ec56`의 79개 app 시험·실제 broker/client status·보안·registry 전달을 완료했다. 정확 소스는 `40b9ed898f32037e7a87259d12d145457575a4a8`이고 [root 이미지 대조](../../deploy/verification/candidate-40b9ed8/pre-deployment-review.json)를 통과했다. 원격 교체·동일 백업 현재/하위 복원 인수는 남아 있다. 서버·web·DB·제어·wire schema·OSS 변경은 없다. 미디어 도구의 exact1.7.1 호환 검사53개는 전체시험과 합산하지 않는다. 현재facts는stable1.7 미검수 템플릿을 유지한다. **실제1.7 첫1시간을 17:46:19Z에 저장하고 13개 파일 해시를 root와 REVIEW043에서 대조했다. 이제 새 사전 백업 검증·기존 관측 종료/보존 후에만 후보로 교체한다.** 담당·활성작업은 resume.candidateOperations를 읽고 중복 기동하지 않는다.
 
 ## 완료한1.7 안정 단계
 
@@ -17,7 +17,7 @@ NFR08 독립 검토에서 공급 monitor가 online true/false를 모두 같은 �
 
 ## 다음 관찰·준비
 
-[REVIEW039](../product/REVIEW-039.md)의 당시 검토는 새 제안을 보류했으나, 이후 구체적NFR08 before근거로 위1.7.1 정정 패치를 채택했다. 현재 관찰과 최종 보안·이슈 정합성·영상/PPT 인도 준비를 계속한다. 첫1시간 캡처는17:45:54.307Z 이후 실제 완성된 두 관찰 구간이 있을 때만 [준비 스크립트](../../artifacts/checkpoints/soak-1.7-first-hour-preparation/capture-first-hour.py)를 실행한다. 조기 실행은 원격조회·체크포인트 생성 전에 거절됨을 확인했다. 현재 짧은 관찰을1시간으로 표현하지 않는다. media 역할은1.7의 바뀐 원고·캡처로14장 준비용 덱 배치·편집가능성·노트·패키징 검토를 완료했다. root도25개 compact파일·21개 재생성파일 해시와 대표3장을 확인했다. [준비 검토](../../artifacts/checkpoints/media-candidate17-deck/root-review.json)는 최종 PPT가 아니다. 고유출력과 완료 상태는 resume.additionalMediaPreparation을 읽고 같은 준비작업을 중복 시작하지 않는다. 최종 영상을 새로 제작할 원래 창은 유지한다.
+[REVIEW039](../product/REVIEW-039.md)의 당시 검토는 새 제안을 보류했으나, 이후 구체적NFR08 before근거로 위1.7.1 정정 패치를 채택했다. 현재 관찰과 최종 보안·이슈 정합성·영상/PPT 인도 준비를 계속한다. [실제 첫1시간](../../artifacts/checkpoints/soak-1.7.0-first-hour/summary.json)은 primary 3600.498초·audit 3601.319초, 각 598수신·오류0을 보존한다. maxPending은3이었고 두 epoch 모두 각 첫 3600초 이상 poll에서 끝나는 prefix다. [REVIEW043](../product/REVIEW-043.md)이 해시/경계/범위를 독립 확인했다. ISSUE028의 잘못된 준비 경로를 실제 저장 전에 수정했고 primary 소스는 사후 현재 바이트와 d98의 일치로 보관했으며 시작 시점 attestation으로 표현하지 않는다. 현재 원본 관측은 사전 백업 검증까지 계속 동작한다. media 역할은1.7의 바뀐 원고·캡처로14장 준비용 덱 배치·편집가능성·노트·패키징 검토를 완료했다. root도25개 compact파일·21개 재생성파일 해시와 대표3장을 확인했다. [준비 검토](../../artifacts/checkpoints/media-candidate17-deck/root-review.json)는 최종 PPT가 아니다. 고유출력과 완료 상태는 resume.additionalMediaPreparation을 읽고 같은 준비작업을 중복 시작하지 않는다. 최종 영상을 새로 제작할 원래 창은 유지한다.
 
 ## 재접속과 현재 소유 프로세스
 

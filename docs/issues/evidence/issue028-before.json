@@ -1,0 +1,7 @@
+{
+  "source": "artifacts/checkpoints/soak-1.7-first-hour-preparation/capture-first-hour.py",
+  "sha256": "4ebe96dd97ad7280e94b0f26c7ee130957d8f74c3807d4072494b1db2a050d13",
+  "missingPath": "artifacts/checkpoints/observer-1.7-activation/source",
+  "pathExists": false,
+  "finding": "iterdir of missing source after output directory creation; no first-hour execution performed by reviewer"
+}

@@ -1,0 +1,16 @@
+{
+  "result": "PASS_SOURCE_PREPARATION_REVIEW",
+  "checkedAt": "2026-09-21T17:42:59.769727+00:00",
+  "scriptSha256": "919d6b64231fb76462ba1c4e2cfe8b93cd7e448462d54150daa621393208db41",
+  "primaryCurrentCaptureMatchesHistoricalCommit": true,
+  "auditStartupHashesMatched": true,
+  "checkedSources": [
+    "artifacts/checkpoints/soak-1.7-first-hour-preparation/primary-source/soak-monitor.mjs",
+    "artifacts/checkpoints/soak-1.7-first-hour-preparation/primary-source/soak-diagnostics.mjs",
+    "artifacts/soak/telemetry-audit/2026-09-21T16-45-54-307Z-70932d07/source/telemetry-audit.mjs",
+    "artifacts/soak/telemetry-audit/2026-09-21T16-45-54-307Z-70932d07/source/telemetry-audit-monitor.mjs"
+  ],
+  "captureExecuted": false,
+  "outputDirectoryAbsent": true,
+  "scope": "AST/source-order inspection and exact byte/hash reads only; first-hour capture not executed; primary not startup attestation"
+}
