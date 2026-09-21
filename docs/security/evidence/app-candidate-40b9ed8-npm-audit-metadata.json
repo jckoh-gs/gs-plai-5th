@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-09-21T17:25:31.659469+00:00",
+  "sourceCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "command": [
+    "npm",
+    "audit",
+    "--json",
+    "--include=dev"
+  ],
+  "exitCode": 0,
+  "sourceSha256": {
+    "package.json": "8560c180daec6b576feb057395d6ee692e5f77a4f851e3398dad54719f2db304",
+    "package-lock.json": "7fc8d323eb98ed41aa1c5387168068695793c70aa006c9190c51f3cbe421f563"
+  },
+  "exactFilesMatchCommit": true,
+  "nonRootPackageEntriesUnchangedVsD98d3c4": true,
+  "vulnerabilities": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "stderrPresent": false
+}

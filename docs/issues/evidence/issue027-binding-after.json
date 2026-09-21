@@ -1,0 +1,104 @@
+{
+  "resume": {
+    "supplementaryObservation": {
+      "kind": "read-only per-RTU full SCADA auditor v1",
+      "sessionId": "70932d07-b127-4b9b-874f-e2796728ff12",
+      "directory": "artifacts/soak/telemetry-audit/2026-09-21T16-45-54-307Z-70932d07",
+      "startedAt": "2026-09-21T16:45:54.307Z",
+      "expectedStopAt": "2026-09-21T21:37:33.079Z",
+      "instructions": "docs/operations/TELEMETRY-AUDIT.md",
+      "handle": 60682,
+      "pid": 34755,
+      "processIdentity": "Tue Sep 22 01:45:54 2026",
+      "scope": "Current1.7 read-only epoch after planned upgrade/outbox; earlier ended epochs retained in previousObservations and historical baselines. No uninterrupted/universal receipt claim."
+    },
+    "currentObservationProcesses": {
+      "primary": {
+        "handle": 85394,
+        "pid": 34756,
+        "processIdentity": "Tue Sep 22 01:45:54 2026"
+      },
+      "audit": {
+        "handle": 60682,
+        "pid": 34755,
+        "processIdentity": "Tue Sep 22 01:45:54 2026"
+      },
+      "supervisor": {
+        "handle": 77410,
+        "pid": 33567,
+        "processIdentity": "Tue Sep 22 01:40:37 2026"
+      }
+    },
+    "currentObservationHandles": {
+      "primary": 85394,
+      "audit": 60682,
+      "supervisor": 77410
+    },
+    "currentObservationBaselines": {
+      "observedAt": "2026-09-21T16:46:28.350572+00:00",
+      "primaryApiErrors": 0,
+      "primaryConnectionErrors": 0,
+      "auditConnectionErrors": 0,
+      "evidence": "artifacts/checkpoints/observer-1.7-activation/activation.json",
+      "scope": "New1.7baseline; comparelaterincrementswithoutresettinghistory"
+    },
+    "firstHourCapturePreparation": {
+      "preparedAt": "2026-09-21T17:02:56.101386+00:00",
+      "script": "artifacts/checkpoints/soak-1.7-first-hour-preparation/capture-first-hour.py",
+      "sha256": "4ebe96dd97ad7280e94b0f26c7ee130957d8f74c3807d4072494b1db2a050d13",
+      "notBefore": "2026-09-21T17:45:54.307Z",
+      "expectedOutput": "artifacts/checkpoints/soak-1.7.0-first-hour",
+      "scope": "Preparation only; immutable prefix capture requires fullhour before any remotequery/outputdirectory. Checksactualcurrentversion/observer identities/Readyimage, keepsobserverprocessesrunning. No automatictimer registered. Native heartbeat/main may invoke afteractualboundary.",
+      "guardCheck": {
+        "result": "PASS",
+        "prematureExitCode": 1,
+        "message": "First hour not yet observed; do not create checkpoint"
+      },
+      "state": "prepared; not yet executed at1hour"
+    },
+    "networkRecovery": null,
+    "hostPowerGuard": {
+      "handle": 11821,
+      "pid": 80946,
+      "processIdentity": "Mon Sep 21 22:33:11 2026",
+      "command": "caffeinate -i -s -t 30861",
+      "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+      "scope": "Temporary idle/system sleep assertions until original deadline, no persistent settings changed; system assertion applies only on AC. Cannot guarantee against manual/forced sleep, shutdown or process termination. Existing unrelated caffeinate processes preserved.",
+      "evidence": "artifacts/checkpoints/host-power-guard-20260921T1333/activation.json"
+    }
+  },
+  "run": {
+    "soak": {
+      "directory": "artifacts/soak/v1.7.0",
+      "sessionId": "28208f59-d2d9-40c4-83a3-d608b1ac5570",
+      "startedAt": "2026-09-21T16:45:54.122Z",
+      "readOnly": true,
+      "expectedStopAt": "2026-09-21T21:37:33.079009+00:00",
+      "priorEvidence": "artifacts/checkpoints/soak-1.6.0/summary.json",
+      "gapReason": "Planned1.7upgrade/outbox; originalsettingsrestored before newepoch",
+      "activationEvidence": "artifacts/checkpoints/observer-1.7-activation/activation.json"
+    },
+    "networkRecovery": {
+      "supervisorCommand": "node scripts/connection-supervisor.mjs",
+      "statusFile": "artifacts/operations/status.json",
+      "resumeCommand": "node scripts/resume-status.mjs",
+      "resumeLedger": "docs/operations/resume.json",
+      "tests": "artifacts/checkpoints/network-recovery/tests.log",
+      "heartbeatId": "grid",
+      "intervalMinutes": 10,
+      "constraints": "Mac and Codex app must remain running; no offline AI work guarantee; original deadline unchanged",
+      "deadlineHardening": "artifacts/checkpoints/final-window-boundaries/summary.json",
+      "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
+      "handoffConsistencyReview": "docs/product/REVIEW-023.md"
+    },
+    "hostPowerGuard": {
+      "handle": 11821,
+      "pid": 80946,
+      "processIdentity": "Mon Sep 21 22:33:11 2026",
+      "command": "caffeinate -i -s -t 30861",
+      "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+      "scope": "Temporary idle/system sleep assertions until original deadline, no persistent settings changed; system assertion applies only on AC. Cannot guarantee against manual/forced sleep, shutdown or process termination. Existing unrelated caffeinate processes preserved.",
+      "evidence": "artifacts/checkpoints/host-power-guard-20260921T1333/activation.json"
+    }
+  }
+}

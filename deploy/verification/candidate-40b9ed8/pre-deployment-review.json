@@ -1,0 +1,43 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T17:29:54.313324+00:00",
+  "scope": "Root independent read-only source/OCI/labels/evidence consistency review; actual main1.7 remains unchanged. Remote1.7.1 and samebackup restores still pending.",
+  "sourceCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "imageManifest": "sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "archiveSha256": "ca1a0d36c61dd2aab345ad52d41d4fd2ed0544bee7106d364270def86dea59c9",
+  "runtimeFilesMatchedCommit": [
+    "package.json",
+    "package-lock.json",
+    "scripts/vpp-client.js",
+    "scripts/client-message.js",
+    "docs/protocol.md",
+    "server/control.js",
+    "server/weather.js",
+    "server/metrics.js",
+    "server/store.js",
+    "server/transport.js",
+    "server/index.js",
+    "server/config.js",
+    "server/command-export.js",
+    "server/dataset-preview.js",
+    "server/model.js"
+  ],
+  "exactImageAppTests": 79,
+  "actualBrokerIntegration": "PASS",
+  "advancedIntegration": "PASS",
+  "shippedClientStatusIntegration": {
+    "result": "PASS",
+    "path": "client-status-integration.log",
+    "mounts": "Only exact client-status-integration.js/test-harness.js mounted read-only; shipped vpp-client.js/client-message.js and runtime server retained"
+  },
+  "securityMatches": 4,
+  "distinctCVEs": 2,
+  "securityFilesHashMatched": [
+    "app-candidate-40b9ed8-grype.json",
+    "app-candidate-40b9ed8-sbom.json",
+    "app-candidate-40b9ed8-official-feed.json",
+    "app-candidate-40b9ed8-npm-audit.json"
+  ],
+  "registryProof": "deploy/verification/candidate-40b9ed8/registry-push-proof.json",
+  "firstHourBeforeRollout": "Wait until actual1.7 firsthour prefix captured at or after17:45:54.307Z; no main mutation authorized by this PASS alone."
+}

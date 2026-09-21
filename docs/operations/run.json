@@ -159,7 +159,41 @@
     "implementationOwner": "/root/transport",
     "scope": "StrictbooleanRTUonline in suppliedmonitor; exampleenv/ports/unsupportedlegacy wording. No serverDBUI/wire/OSS changes. Do not rollout before captured actual1.7 firsthour at17:45:54.307Z.",
     "localSummary": "artifacts/checkpoints/candidate-1.7.1-local/summary.json",
-    "independentLocalReview": "docs/product/REVIEW-041.md"
+    "independentLocalReview": "docs/product/REVIEW-041.md",
+    "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+    "phase": "Exact1.7.1 image, isolated runtime/MQTT/clientstatus, fresh security and registry proof complete. Await real1.7firsthour prefix >=17:45:54.307Z before anymain rollout.",
+    "activeOperations": [],
+    "completedImageBuild": {
+      "owner": "/root/deployment",
+      "handle": 78456,
+      "exitCode": 0,
+      "imageManifest": "sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+      "archive": "artifacts/private/grid-40b9ed8.oci.tar"
+    },
+    "completedImageSecurity": {
+      "owner": "/root/security",
+      "findings": "docs/security/evidence/app-candidate-40b9ed8-findings.json",
+      "residualMatches": 4,
+      "distinctCVEs": 2,
+      "freshNpmAuditVulnerabilities": 0,
+      "scope": "Exact candidate only; no new matched vulnerability vs1.7. Official Alpinefeed nofixedversion then, not proofallpatchesabsent. Broker/registry notrescanned."
+    },
+    "completedImageVerification": {
+      "owner": "/root/deployment",
+      "handle": 56899,
+      "exitCode": 0,
+      "proof": "deploy/verification/candidate-40b9ed8/provenance.json",
+      "rootReview": "deploy/verification/candidate-40b9ed8/pre-deployment-review.json",
+      "appTests": 79
+    },
+    "completedRegistryPush": {
+      "handle": 34414,
+      "exitCode": 0,
+      "forwardHandle": 40217,
+      "forwardExitCode": 143,
+      "proof": "deploy/verification/candidate-40b9ed8/registry-push-proof.json",
+      "port15050Closed": true
+    }
   },
   "previousStableCheckpoints": [
     {
@@ -328,7 +362,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T17:24:41.533596+00:00",
+  "updatedAt": "2026-09-21T17:30:41.999723+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",

@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "suite": "advanced",
+  "evidence": {
+    "independentRTUs": true,
+    "immutableOutboxRestart": true,
+    "ratedRejection": true,
+    "scadaReject": true,
+    "expiry": true,
+    "unavailableTimeout": true,
+    "actuatorTimeout": true,
+    "sensorFreeze": true,
+    "failureRetry": true,
+    "hundredGenerators": true,
+    "maxObservedBytes": 70006
+  }
+}

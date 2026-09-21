@@ -1,0 +1,27 @@
+{
+  "scope": "Read-only in-memory replay of actual old metadata; no ledger mutation or process changes",
+  "checkedAt": "2026-09-21T17:30:41.924Z",
+  "oldAudit": {
+    "ok": false,
+    "issues": [
+      "supplementaryObservation.pid: current audit mismatch",
+      "supplementaryObservation.handle: current audit mismatch",
+      "supplementaryObservation.processIdentity: current audit mismatch"
+    ],
+    "scope": "Metadata consistency only; verify actual PID/start identity and observation files before acting"
+  },
+  "oldSupervisor": {
+    "ok": false,
+    "issues": [
+      "supervisorDiagnosticUpgrade.currentPid: current supervisor mismatch",
+      "supervisorDiagnosticUpgrade.currentHandle: current supervisor mismatch",
+      "supervisorDiagnosticUpgrade.currentIdentity: current supervisor mismatch"
+    ],
+    "scope": "Metadata consistency only; verify actual PID/start identity and observation files before acting"
+  },
+  "corrected": {
+    "ok": true,
+    "issues": [],
+    "scope": "Metadata consistency only; verify actual PID/start identity and observation files before acting"
+  }
+}

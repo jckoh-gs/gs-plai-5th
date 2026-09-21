@@ -1,0 +1,13 @@
+{
+  "result": "PASS_METADATA_RECONCILIATION",
+  "checkedAt": "2026-09-21T17:27:08.607082+00:00",
+  "inputs": {
+    "artifacts/checkpoints/resume-1.7-audit-binding/summary.json": "c414f742d95ae28b28044483834a47764a7ab1dac4bcea7023f928714b5cb1d2",
+    "artifacts/checkpoints/resume-1.7-audit-binding/supervisor-followup.json": "c1a18f159d3e121dea371126bb4dcac80cd49146e6b83897e264c5aae8902563",
+    "artifacts/checkpoints/observer-1.7-activation/activation.json": "3b9ca44e77ec7f21327eb189ed1cc44f409b9207476c7c18a9b38493b7a7a176",
+    "artifacts/checkpoints/soak-1.7-first-hour-preparation/capture-first-hour.py": "4ebe96dd97ad7280e94b0f26c7ee130957d8f74c3807d4072494b1db2a050d13"
+  },
+  "firstHourCaptureExecuted": false,
+  "runtimeOrProcessChangedByReviewer": false,
+  "scope": "Active observer/supervisor metadata identity consistency only; historical fields retained"
+}

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "runId": "grid-new-20260921T080733Z",
+  "checkedAt": "2026-09-21T17:29:21.369Z",
+  "nextAction": "resume-first-incomplete-checkpoint",
+  "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "head": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "workingTree": [
+    "M docs/issues/ISSUES.md",
+    " M docs/operations/resume.json",
+    " M docs/operations/run.json",
+    " M docs/security/VULNERABILITY-MANAGEMENT.md",
+    " M scripts/resume-policy.mjs",
+    " M scripts/resume-status.mjs",
+    "?? .idea/",
+    "?? artifacts/checkpoints/resume-1.7-audit-binding/",
+    "?? artifacts/media-preparation/candidate17-layout/",
+    "?? artifacts/media-preparation/deck-binding-packaging-rehearsal/",
+    "?? artifacts/media-preparation/deck-candidate17-rehearsal/",
+    "?? artifacts/media-preparation/full-candidate15-20260921/",
+    "?? artifacts/media-preparation/full-candidate15-receipts-20260921/",
+    "?? artifacts/media-preparation/full-candidate17-20260921/",
+    "?? artifacts/media-preparation/media-lifecycle-local-round1-retry1/",
+    "?? artifacts/media-preparation/media-lifecycle-local-round1/",
+    "?? artifacts/releases/current.json",
+    "?? deploy/verification/candidate-1197ab5/",
+    "?? deploy/verification/candidate-40b9ed8/",
+    "?? deploy/verification/candidate-8599ab9/operational-baseline.json",
+    "?? docs/issues/evidence/issue027-binding-after.json",
+    "?? docs/issues/evidence/issue027-binding-review.json",
+    "?? docs/issues/evidence/issue027-supervisor-stale.json",
+    "?? docs/security/evidence/app-candidate-40b9ed8-findings.json",
+    "?? docs/security/evidence/app-candidate-40b9ed8-grype.json",
+    "?? docs/security/evidence/app-candidate-40b9ed8-grype.log",
+    "?? docs/security/evidence/app-candidate-40b9ed8-npm-audit-metadata.json",
+    "?? docs/security/evidence/app-candidate-40b9ed8-npm-audit.json",
+    "?? docs/security/evidence/app-candidate-40b9ed8-official-feed.json",
+    "?? docs/security/evidence/app-candidate-40b9ed8-sbom.json",
+    "?? docs/security/evidence/app-candidate-40b9ed8-sbom.log",
+    "?? scripts/observation-bindings.mjs",
+    "?? tests/observation-bindings.test.js"
+  ],
+  "remoteMain": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "remoteGitReachable": true,
+  "clusterReachable": true,
+  "api": {
+    "ok": true,
+    "version": "1.7.0",
+    "plantCount": 5
+  },
+  "identity": {
+    "ok": true,
+    "pod": {
+      "name": "grid-86dc4cf87-kq2hr",
+      "uid": "79784e51-f961-4e34-86d8-196827a8e26c",
+      "image": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+      "imageID": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692"
+    },
+    "broker": {
+      "name": "grid-86dc4cf87-kq2hr",
+      "uid": "79784e51-f961-4e34-86d8-196827a8e26c",
+      "image": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  },
+  "observationLedger": {
+    "ok": true,
+    "issues": [],
+    "scope": "Metadata consistency only; verify actual PID/start identity and observation files before acting"
+  },
+  "workingMilestone": {
+    "productVersion": "1.7.1",
+    "prdVersion": "1.15",
+    "idea": "IDEA-012",
+    "state": "Candidateexistingcontractpatch; actualmainstable1.7"
+  },
+  "remainingInOrder": [
+    "Validate adopted1.7.1 CLI/protocol correction locally (fullsuite, actualbroker CLI/dispatch, cleanenvguide), independently review source/security/media compatibility, commit exactruntime andbuild/scanimage. Keepactualstable1.7 observers; no rollout beforeactual1h capture17:45:54.307Z. Then explicitnewbackup/current+backwardrestore/manifest gates; fallback1.7 preserved.",
+    "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
+    "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
+    "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
+  ],
+  "mutationsPerformed": false
+}

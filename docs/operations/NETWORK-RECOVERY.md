@@ -65,3 +65,7 @@ The new diagnostics classified13:25:53.396Z as a health timeout after5004ms; ver
 
 
 ISSUE024 후속 로컬 보완: `artifacts/checkpoints/backup-hardening-1.6/receipt.json`은 합성 WAL의 동시 writer, 중간취소, 부모신호, 멈춘worker, 기존final보존·미확인종료 승격거절을 로컬과 실제후보Node24.21에서 검증한다. `docs/security/BACKUP-CANCELLATION-REVIEW.md`는 독립검토와 남은 metadata단계/강제종료/커널I/O 한계를 구분한다. 이증거는 운영I/O에서 원인이나무영향을 입증하지 않는다. 긴read transaction의 WAL보존/디스크증가를 계속 관찰하며 원격 재시도는 마지막미완료operation의종료·경로·실제Ready를 확인한 뒤 별도1회로기록한다. 신규생성은 `snapshotCreation=new-supervised`, 기존완료파일재전송은 `existing-final-retransfer`와 `snapshot:null`로구분하며 예전파일의생성방식을 새helper로소급하지않는다.
+
+## 관측 세션 인계 정합성
+
+ISSUE027에서 보조 관측과 supervisor의 중복 메타데이터가 종료된 1.6 세션을 현재로 가리키는 문제를 수정했다. `resume-status.mjs`는 현재 소유 PID·시작 identity·handle과 중복 필드가 일치하는지 검사하고, 불일치하면 일반 재개 대신 `reconcile-observation-ledger`를 보고한다. 마감·동결·연결·배포 확인의 우선순위는 유지한다. 이 검사는 메타데이터 정합성만 확인한다. 실제 프로세스 생존과 관측 파일·세션은 여전히 별도로 대조해야 하며, 자동 재기동이나 제어 재시도는 수행하지 않는다. [323개 전체 시험·8개 최종 집중 검사·실제 이전 필드 재현·현재 읽기 확인](../../artifacts/checkpoints/resume-1.7-audit-binding/guard-summary.json)을 보존한다.

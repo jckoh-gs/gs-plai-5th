@@ -1,0 +1,49 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T17:26:03.756847+00:00",
+  "scope": "Operational ledger correction only; no process, runtime, counter, guard, observation or deadline changes. First-hour capture remains not yet eligible.",
+  "finding": "supplementaryObservation still referenced ended1.6 despite currentObservationProcesses and actual sessions correctly1.7; capture guard would reject mismatch",
+  "before": {
+    "kind": "read-only per-RTU full SCADA auditor v1",
+    "sessionId": "6e2228e4-badd-4f86-a812-694a2bac907a",
+    "directory": "artifacts/soak/telemetry-audit/2026-09-21T16-03-59-292Z-6e2228e4",
+    "startedAt": "2026-09-21T16:03:59.292Z",
+    "expectedStopAt": "2026-09-21T21:37:33.079Z",
+    "instructions": "docs/operations/TELEMETRY-AUDIT.md",
+    "handle": 4110,
+    "pid": 21357,
+    "processIdentity": "Tue Sep 22 01:03:59 2026",
+    "scope": "New readonly epoch afterplannedupgrade/outboxrestart; earlier1.5period/errors retainedseparately; no uninterrupted/universalreceiptclaim"
+  },
+  "after": {
+    "kind": "read-only per-RTU full SCADA auditor v1",
+    "sessionId": "70932d07-b127-4b9b-874f-e2796728ff12",
+    "directory": "artifacts/soak/telemetry-audit/2026-09-21T16-45-54-307Z-70932d07",
+    "startedAt": "2026-09-21T16:45:54.307Z",
+    "expectedStopAt": "2026-09-21T21:37:33.079Z",
+    "instructions": "docs/operations/TELEMETRY-AUDIT.md",
+    "handle": 60682,
+    "pid": 34755,
+    "processIdentity": "Tue Sep 22 01:45:54 2026",
+    "scope": "Current1.7 read-only epoch after planned upgrade/outbox; earlier ended epochs retained in previousObservations and historical baselines. No uninterrupted/universal receipt claim."
+  },
+  "activation": "artifacts/checkpoints/observer-1.7-activation/activation.json",
+  "actualIdentity": "Tue Sep 22 01:45:54 2026",
+  "actualLastObservedAt": "2026-09-21T17:25:55.318Z",
+  "observedCounters": {
+    "received": 399,
+    "invalidMessages": 0,
+    "duplicateMessages": 0,
+    "connectionErrors": 0
+  },
+  "checks": [
+    "Actual audit PID/start identity matches currentObservationProcesses and activation",
+    "First/last actual audit session identity agrees with corrected ledger",
+    "Runtime expected commit equals stable1.7 runtime",
+    "Old ended1.6 epoch remains historical; no restart and no reset"
+  ],
+  "sourceHashes": {
+    "artifacts/checkpoints/observer-1.7-activation/activation.json": "3b9ca44e77ec7f21327eb189ed1cc44f409b9207476c7c18a9b38493b7a7a176",
+    "artifacts/checkpoints/soak-1.7-first-hour-preparation/capture-first-hour.py": "4ebe96dd97ad7280e94b0f26c7ee130957d8f74c3807d4072494b1db2a050d13"
+  }
+}

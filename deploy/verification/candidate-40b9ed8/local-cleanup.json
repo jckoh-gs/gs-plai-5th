@@ -1,0 +1,9 @@
+{
+  "ownedResourcesRemoved": [
+    "grid-40b-qa",
+    "grid-40b-broker",
+    "grid-40b-http"
+  ],
+  "checkedAt": "2026-09-21T17:26:57.417783+00:00",
+  "mainOrRegistryChanged": false
+}

@@ -1,0 +1,11 @@
+{
+  "network": "grid-40b-qa",
+  "containers": [
+    "grid-40b-unit",
+    "grid-40b-broker",
+    "grid-40b-integration",
+    "grid-40b-advanced",
+    "grid-40b-http"
+  ],
+  "scope": "isolated local Docker only; broker has no published ports"
+}

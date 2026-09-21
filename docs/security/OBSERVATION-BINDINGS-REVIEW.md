@@ -1,0 +1,9 @@
+# ISSUE027 observation metadata review
+
+Final source gate passes; seven local focused tests independently pass, including a new malformed-supervisor/secret-marker/deadline-priority fixture. Exact source hashes/logs are in evidence/observation-bindings-review.json and observation-bindings-review-tests.log. No remote request or process operation was performed by this review.
+
+The helper compares current role identity fields, duplicate handles, supplementary audit identity and active supervisor-upgrade identity; ended historical entries are not treated as current ownership. Fixed issue strings name fields, not their values, so malformed token-like metadata is not echoed. Matching metadata explicitly does not establish process liveness, ownership of a reused PID or fresh observations. Actual process start identities/files must still be checked before acting.
+
+Two initial code observations were reported and root corrected them before final tests: handles must be positive and supervisor state must be a string before startsWith. The latter formerly risked throwing before policy evaluation on malformed metadata. Final malformed fixtures return issues without exceptions/raw values. Existing policy order remains deadline, freeze, connectivity, deployment identity, API readiness, then observation reconciliation, then first incomplete checkpoint. Metadata warnings cannot authorize writes or override final-window behavior.
+
+Resume-status adds only metadata report/decision input and continues its existing private atomic report write; this is not an automatic ledger repair, process restart or source of authority to replay uncertain mutations. No dependency, image or server code change is involved, and no npm/image rescans were performed. This narrow review is not a complete schema validator for arbitrary hostile ledger objects or a fresh remote health claim.

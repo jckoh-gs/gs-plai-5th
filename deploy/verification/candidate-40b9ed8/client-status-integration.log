@@ -1,0 +1,53 @@
+{
+  "result": "PASS",
+  "suite": "client-status-monitor",
+  "scope": "Isolated localhost broker/runtime/tempDB and unique topic prefix; no remote writes",
+  "checks": [
+    "late monitor sees retained online true",
+    "actual unexpected RTU disconnect produces offline false through LWT",
+    "command status remains separate and missing LWT timestamp stays null",
+    "other RTU stays connected and monitor remains RTU scoped",
+    "read-only monitor publishes no commands",
+    "monitor SIGTERM exits zero"
+  ],
+  "observed": [
+    {
+      "topic": "test-5f2e9e07-ab5d-4669-bc8e-a7e519f09bc3/rtu/3a640c11-02ca-4874-8523-ecd3fbe5f315/status",
+      "kind": "status",
+      "rtuId": "3a640c11-02ca-4874-8523-ecd3fbe5f315",
+      "online": true,
+      "messageId": null,
+      "runId": null,
+      "serverVersion": null,
+      "commandId": null,
+      "status": null,
+      "actualKw": null,
+      "errorKw": null,
+      "reason": null,
+      "timestamp": "2026-09-21T17:26:53.764Z",
+      "powerKw": null,
+      "sampleCount": null
+    },
+    {
+      "topic": "test-5f2e9e07-ab5d-4669-bc8e-a7e519f09bc3/rtu/3a640c11-02ca-4874-8523-ecd3fbe5f315/status",
+      "kind": "status",
+      "rtuId": "3a640c11-02ca-4874-8523-ecd3fbe5f315",
+      "online": false,
+      "messageId": null,
+      "runId": null,
+      "serverVersion": null,
+      "commandId": null,
+      "status": null,
+      "actualKw": null,
+      "errorKw": null,
+      "reason": null,
+      "timestamp": null,
+      "powerKw": null,
+      "sampleCount": null
+    }
+  ],
+  "terminal": {
+    "code": 0,
+    "signal": null
+  }
+}

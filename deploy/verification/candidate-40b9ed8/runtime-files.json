@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "hashes": {
+    "package.json": "8560c180daec6b576feb057395d6ee692e5f77a4f851e3398dad54719f2db304",
+    "package-lock.json": "7fc8d323eb98ed41aa1c5387168068695793c70aa006c9190c51f3cbe421f563",
+    "scripts/vpp-client.js": "762cb18072e5db77b48199681a266b520ee08b12986efd8795356e4b877911cd",
+    "scripts/client-message.js": "ecb5f3b3fcdf74fa5a3d352da33856b47116eb27b4eb91b039fa58b39e12b53f",
+    "docs/protocol.md": "07295bdbc14613aa87a3890ee32439e715009ca2310859ad2dc18259d4734709",
+    "server/control.js": "ceabb746658b7bb3af35b767457ea81129da1ddf4f142850dc11a4fff467b9ac",
+    "server/weather.js": "4d10a10957053d68f22349021b358a1d730622a457b824e26521723f0fea64d9",
+    "server/metrics.js": "590169fdfc7431bb07cf7df957ae969cdf707244b809a1d7c1c8e6d642f9f817",
+    "server/store.js": "5b497e48f84e0a918a6d565e5dc9c741c4e68fc69c8141d813e7921e96a73969",
+    "server/transport.js": "90c33b2c5b7eff62ffb6c2c2dc8a6a659b9ab6e770119eadc862f3094431d29a",
+    "server/index.js": "fdced6abe1dc0917d72a8ddedb110bb904b6a439c49071d947049a3a9fed593d",
+    "server/config.js": "9ed29685b837bb4da146792723bd4edd9cf4874a8a31e3da75f4f8027bcedac6",
+    "server/command-export.js": "6bba250ec237006e1d8f9b7e4b475870f3366a5a7cc9299c3519f4fc8149863e",
+    "server/dataset-preview.js": "9732f5fcc73000494fe4138ff1116ed94f03474c713438901eb225368a194443",
+    "server/model.js": "875d936b0038ef5a9bd3c678a50dafdd8d33c7c0f8c60eba0316def51e95ba67"
+  },
+  "uid": "1000"
+}

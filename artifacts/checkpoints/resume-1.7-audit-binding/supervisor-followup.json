@@ -1,0 +1,56 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T17:26:47.341631+00:00",
+  "scope": "Second stale operational active binding corrected; old1.6 field preserved historically. No process/runtime/counter/deadline mutation.",
+  "before": {
+    "state": "verified-active1.6",
+    "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
+    "evidence": "artifacts/checkpoints/supervisor-diagnostics/summary.json",
+    "currentPid": 19942,
+    "currentHandle": 72380,
+    "currentIdentity": "Tue Sep 22 00:58:48 2026",
+    "nextStep": "Maintain verified1.6 supervisor72380/PID19942 andprimary8363/PID21356,audit4110/PID21357 throughoriginalfreeze; noduplicateforward/observers.",
+    "historicalActivation": {
+      "scope": "Planned1.3 diagnostic activation13:23UTC; this process has since ended for the planned1.4 upgrade.",
+      "evidence": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
+      "previousHandleTerminal": 25872,
+      "activatedProcess": {
+        "pid": 80224,
+        "handle": 7353,
+        "processIdentity": "Mon Sep 21 22:23:12 2026"
+      },
+      "activatedHandleNowTerminal": 7353
+    },
+    "currentActivation": "deploy/verification/candidate-331ab9a/connection-activation/proof.json"
+  },
+  "after": {
+    "state": "verified-active1.7",
+    "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
+    "evidence": "artifacts/checkpoints/supervisor-diagnostics/summary.json",
+    "currentPid": 33567,
+    "currentHandle": 77410,
+    "currentIdentity": "Tue Sep 22 01:40:37 2026",
+    "nextStep": "Maintain currentObservationProcesses for actual stable1.7 until the planned candidate transition; no duplicate forward/observer. Preserve original freeze and deadline.",
+    "historicalActivation": {
+      "scope": "Planned1.3 diagnostic activation13:23UTC; this process has since ended for the planned1.4 upgrade.",
+      "evidence": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
+      "previousHandleTerminal": 25872,
+      "activatedProcess": {
+        "pid": 80224,
+        "handle": 7353,
+        "processIdentity": "Mon Sep 21 22:23:12 2026"
+      },
+      "activatedHandleNowTerminal": 7353
+    },
+    "currentActivation": "artifacts/checkpoints/observer-1.7-activation/activation.json",
+    "historicalActivation1_6": {
+      "state": "verified-active1.6",
+      "currentPid": 19942,
+      "currentHandle": 72380,
+      "currentIdentity": "Tue Sep 22 00:58:48 2026",
+      "nextStep": "Maintain verified1.6 supervisor72380/PID19942 andprimary8363/PID21356,audit4110/PID21357 throughoriginalfreeze; noduplicateforward/observers.",
+      "currentActivation": "deploy/verification/candidate-331ab9a/connection-activation/proof.json"
+    }
+  },
+  "actualStartIdentity": "Tue Sep 22 01:40:37 2026"
+}

@@ -1,0 +1,16 @@
+✔ consistent current metadata accepts historical ended records without treating them as active (0.351708ms)
+✔ stale supplementary session ownership is reported without mutating history or current records (0.322875ms)
+✔ reused audit PID with changed start identity is a mismatch (0.050417ms)
+✔ stale supervisor ownership and duplicate handle field are independently reported (0.101375ms)
+✔ incomplete current observation metadata fails closed once a soak exists (0.158542ms)
+✔ metadata reconciliation never overrides disconnection, deployment mismatch, freeze or deadline (0.078166ms)
+✔ network recovery resumes from evidence while freeze and deadline remain authoritative (0.381042ms)
+✔ malformed supervisor metadata returns fixed issues without raw values or exceptions (0.981958ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33.621041

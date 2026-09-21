@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T17:24:41.534332+00:00",
+  "updatedAt": "2026-09-21T17:30:41.999723+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -68,15 +68,15 @@
   ],
   "supplementaryObservation": {
     "kind": "read-only per-RTU full SCADA auditor v1",
-    "sessionId": "6e2228e4-badd-4f86-a812-694a2bac907a",
-    "directory": "artifacts/soak/telemetry-audit/2026-09-21T16-03-59-292Z-6e2228e4",
-    "startedAt": "2026-09-21T16:03:59.292Z",
+    "sessionId": "70932d07-b127-4b9b-874f-e2796728ff12",
+    "directory": "artifacts/soak/telemetry-audit/2026-09-21T16-45-54-307Z-70932d07",
+    "startedAt": "2026-09-21T16:45:54.307Z",
     "expectedStopAt": "2026-09-21T21:37:33.079Z",
     "instructions": "docs/operations/TELEMETRY-AUDIT.md",
-    "handle": 4110,
-    "pid": 21357,
-    "processIdentity": "Tue Sep 22 01:03:59 2026",
-    "scope": "New readonly epoch afterplannedupgrade/outboxrestart; earlier1.5period/errors retainedseparately; no uninterrupted/universalreceiptclaim"
+    "handle": 60682,
+    "pid": 34755,
+    "processIdentity": "Tue Sep 22 01:45:54 2026",
+    "scope": "Current1.7 read-only epoch after planned upgrade/outbox; earlier ended epochs retained in previousObservations and historical baselines. No uninterrupted/universal receipt claim."
   },
   "observationCheckpoints": [
     {
@@ -394,13 +394,13 @@
   "currentObservationIncidents": [],
   "nextOperationalReview": "Maintain current1.7 observer epochs and authoritative ledger. No firsthourclaim before17:45:54.307Z; inspect fresh counters/actualReady/disk beforeoriginalfreeze. Continue finalmedia/deck preparation and finalsecurity/issues review.",
   "supervisorDiagnosticUpgrade": {
-    "state": "verified-active1.6",
+    "state": "verified-active1.7",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
     "evidence": "artifacts/checkpoints/supervisor-diagnostics/summary.json",
-    "currentPid": 19942,
-    "currentHandle": 72380,
-    "currentIdentity": "Tue Sep 22 00:58:48 2026",
-    "nextStep": "Maintain verified1.6 supervisor72380/PID19942 andprimary8363/PID21356,audit4110/PID21357 throughoriginalfreeze; noduplicateforward/observers.",
+    "currentPid": 33567,
+    "currentHandle": 77410,
+    "currentIdentity": "Tue Sep 22 01:40:37 2026",
+    "nextStep": "Maintain currentObservationProcesses for actual stable1.7 until the planned candidate transition; no duplicate forward/observer. Preserve original freeze and deadline.",
     "historicalActivation": {
       "scope": "Planned1.3 diagnostic activation13:23UTC; this process has since ended for the planned1.4 upgrade.",
       "evidence": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
@@ -412,7 +412,15 @@
       },
       "activatedHandleNowTerminal": 7353
     },
-    "currentActivation": "deploy/verification/candidate-331ab9a/connection-activation/proof.json"
+    "currentActivation": "artifacts/checkpoints/observer-1.7-activation/activation.json",
+    "historicalActivation1_6": {
+      "state": "verified-active1.6",
+      "currentPid": 19942,
+      "currentHandle": 72380,
+      "currentIdentity": "Tue Sep 22 00:58:48 2026",
+      "nextStep": "Maintain verified1.6 supervisor72380/PID19942 andprimary8363/PID21356,audit4110/PID21357 throughoriginalfreeze; noduplicateforward/observers.",
+      "currentActivation": "deploy/verification/candidate-331ab9a/connection-activation/proof.json"
+    }
   },
   "hostPowerGuard": {
     "handle": 11821,
@@ -455,7 +463,7 @@
     "adoptionReview": "docs/product/REVIEW-040.md",
     "implementationOwner": "/root/transport",
     "scope": "StrictbooleanRTUonline in suppliedmonitor; exampleenv/ports/unsupportedlegacy wording. No serverDBUI/wire/OSS changes. Do not rollout before captured actual1.7 firsthour at17:45:54.307Z.",
-    "phase": "Local gates passed; exact source commit and image build/security next; actual stable1.7 remains unchanged",
+    "phase": "Exact1.7.1 image, isolated runtime/MQTT/clientstatus, fresh security and registry proof complete. Await real1.7firsthour prefix >=17:45:54.307Z before anymain rollout.",
     "activeOperations": [],
     "mainWritesAllowed": false,
     "localClientStatusEvidence": "artifacts/checkpoints/candidate-1.7.1-local/client-status-integration.json",
@@ -502,7 +510,39 @@
     },
     "quickstartEvidence": "artifacts/checkpoints/candidate-1.7.1-local/quickstart.json",
     "localSummary": "artifacts/checkpoints/candidate-1.7.1-local/summary.json",
-    "independentLocalReview": "docs/product/REVIEW-041.md"
+    "independentLocalReview": "docs/product/REVIEW-041.md",
+    "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+    "completedImageBuild": {
+      "owner": "/root/deployment",
+      "handle": 78456,
+      "exitCode": 0,
+      "imageManifest": "sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+      "archive": "artifacts/private/grid-40b9ed8.oci.tar"
+    },
+    "completedImageSecurity": {
+      "owner": "/root/security",
+      "findings": "docs/security/evidence/app-candidate-40b9ed8-findings.json",
+      "residualMatches": 4,
+      "distinctCVEs": 2,
+      "freshNpmAuditVulnerabilities": 0,
+      "scope": "Exact candidate only; no new matched vulnerability vs1.7. Official Alpinefeed nofixedversion then, not proofallpatchesabsent. Broker/registry notrescanned."
+    },
+    "completedImageVerification": {
+      "owner": "/root/deployment",
+      "handle": 56899,
+      "exitCode": 0,
+      "proof": "deploy/verification/candidate-40b9ed8/provenance.json",
+      "rootReview": "deploy/verification/candidate-40b9ed8/pre-deployment-review.json",
+      "appTests": 79
+    },
+    "completedRegistryPush": {
+      "handle": 34414,
+      "exitCode": 0,
+      "forwardHandle": 40217,
+      "forwardExitCode": 143,
+      "proof": "deploy/verification/candidate-40b9ed8/registry-push-proof.json",
+      "port15050Closed": true
+    }
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
   "previousCandidateFixture": {
@@ -1037,5 +1077,11 @@
     "state": "Currentdocument reconciliation done; fresh applicability check beforefreeze or upon dependency/base/advisoryDB change",
     "source": "docs/security/VULNERABILITY-MANAGEMENT.md",
     "scope": "Keep existing4matches2CVE unresolved unless actualfixedversion/patch/retest evidence exists; broker/registryscan age separate"
+  },
+  "observationBindingHardening": {
+    "state": "Passed operational full323 and finalfocused8 (one added security case; seven overlap). Actual old metadata replay detected; current1.7 readonly check passes.",
+    "evidence": "artifacts/checkpoints/resume-1.7-audit-binding/guard-summary.json",
+    "noActiveHandles": true,
+    "policy": "Metadata agreement is not process liveness. Still verifyactualPID/startidentity, completed artifacts and immutabledeadline beforeaction."
   }
 }

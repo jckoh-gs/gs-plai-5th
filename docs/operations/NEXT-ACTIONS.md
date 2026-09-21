@@ -6,7 +6,7 @@
 
 NFR08 독립 검토에서 공급 monitor가 online true/false를 모두 같은 객체로 출력하고, protocol quickstart의 환경 준비·포트가 맞지 않으며 미지원 v1 호환 문장이 남아 있음을 확인했다. [수정 전 근거](NFR08-CONTRACT-FIXTURES-20260922.json), [REVIEW040](../product/REVIEW-040.md)를 근거로 IDEA012v1/PRD1.15/제품1.7.1 패치를 채택했다. CLI strictboolean online 및 가이드·부록·예제 안내만 수정한다. 실제1.7 배포/관측/복구 기준은 유지한다.
 
-로컬 전체 317개·실제 broker 통합/고급·report/client-security·공급 monitor의 late online/실제 RTU LWT offline 시험을 통과했다. 별도 새 폴더의 의존성·환경·DB·빌드와 3개 RTU 연결도 통과했다. 기존 소유 브로커를 재사용하고 점유된 3101 대신 3112를 지정한 범위이며, 기존 환경 파일과 무관한 프로세스를 보존했다. [로컬 집계](../../artifacts/checkpoints/candidate-1.7.1-local/summary.json)를 확인한다. 독립 인수/정확 이미지·보안·배포·복원 인수는 남아 있다. 서버·web·DB·제어·wire schema·OSS 변경은 없다. 미디어 도구의 exact1.7.1 호환 검사53개는 전체시험과 합산하지 않는다. 현재facts는stable1.7 미검수 템플릿을 유지한다. **기존1.7 관찰의 실제 첫1시간17:45:54.307Z 캡처 전에는 후보를 운영에 교체하지 않는다.** 담당·활성작업은 resume.candidateOperations를 읽고 중복 기동하지 않는다.
+로컬 전체 317개·실제 broker 통합/고급·report/client-security·공급 monitor의 late online/실제 RTU LWT offline 시험을 통과했다. 별도 새 폴더의 의존성·환경·DB·빌드와 3개 RTU 연결도 통과했다. 기존 소유 브로커를 재사용하고 점유된 3101 대신 3112를 지정한 범위이며, 기존 환경 파일과 무관한 프로세스를 보존했다. [로컬 집계](../../artifacts/checkpoints/candidate-1.7.1-local/summary.json)를 확인한다. REVIEW041의 로컬 인수와 정확 이미지 `234ec56`의 79개 app 시험·실제 broker/client status·보안·registry 전달을 완료했다. 정확 소스는 `40b9ed898f32037e7a87259d12d145457575a4a8`이고 [root 이미지 대조](../../deploy/verification/candidate-40b9ed8/pre-deployment-review.json)를 통과했다. 원격 교체·동일 백업 현재/하위 복원 인수는 남아 있다. 서버·web·DB·제어·wire schema·OSS 변경은 없다. 미디어 도구의 exact1.7.1 호환 검사53개는 전체시험과 합산하지 않는다. 현재facts는stable1.7 미검수 템플릿을 유지한다. **기존1.7 관찰의 실제 첫1시간17:45:54.307Z 캡처 전에는 후보를 운영에 교체하지 않는다.** 담당·활성작업은 resume.candidateOperations를 읽고 중복 기동하지 않는다.
 
 ## 완료한1.7 안정 단계
 

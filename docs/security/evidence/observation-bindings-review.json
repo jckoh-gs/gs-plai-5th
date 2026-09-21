@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-09-21T17:29:34.196741+00:00",
+  "sourceSha256": {
+    "scripts/observation-bindings.mjs": "8970fb2793b0aa3d92f3871ce0340ffc7cd7cc5bc21246e18edf0afa31ebed9e",
+    "scripts/resume-policy.mjs": "6c5d5eca4f9c41cddba39f804722ace63762ec3b4c84e83c76766766eb6dfbed",
+    "scripts/resume-status.mjs": "f69e4b9821d84ae640f3c603646664ccb56c6d467cf15742755154e8f81d29f5",
+    "tests/observation-bindings.test.js": "4ba7845d9195e22d840df295aff3eb99050cb670ec9b06d1e913cad6f0fba1f2",
+    "tests/security-observation-bindings.test.js": "88d333c4bdc4ec5590492d326c6bd6e5b46810289583ef63b95e77d034b32bc3"
+  },
+  "focusedTestsPassed": 7,
+  "scope": "Local metadata fixtures/source only; no remote or process liveness check"
+}

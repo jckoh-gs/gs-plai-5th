@@ -1,0 +1,38 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T17:30:41.999723+00:00",
+  "scope": "Operational resume reporting only; no app runtime/image changes. Corrected metadata and checker do not restart processes, replay commands or prove liveness.",
+  "fullSuite": {
+    "handle": 43927,
+    "exitCode": 0,
+    "passed": 323,
+    "failed": 0,
+    "log": "artifacts/checkpoints/resume-1.7-audit-binding/full-suite.log",
+    "note": "Six new operational cases added to prior317. Subsequent test-only expansion within existing malformedmetadata case rechecked in focused-final; production source unchanged."
+  },
+  "focusedFinal": {
+    "exitCode": 0,
+    "passed": 8,
+    "log": "artifacts/checkpoints/resume-1.7-audit-binding/focused-final-with-security.log",
+    "scope": "Seven cases overlap full323; one security test was added after fullsuite start. Final focused run also includes root test-only malformedmetadata expansion. 324 distinct cases covered across runs, not a single full324 run."
+  },
+  "liveReadOnly": {
+    "handle": 93628,
+    "exitCode": 0,
+    "report": "artifacts/checkpoints/resume-1.7-audit-binding/live-resume-status.json",
+    "actualVersion": "1.7.0",
+    "nextAction": "resume-first-incomplete-checkpoint",
+    "metadataMatch": true
+  },
+  "actualBeforeRegression": "artifacts/checkpoints/resume-1.7-audit-binding/regression-before.json",
+  "independentSecurity": "docs/security/OBSERVATION-BINDINGS-REVIEW.md",
+  "sourceHashes": {
+    "scripts/observation-bindings.mjs": "8970fb2793b0aa3d92f3871ce0340ffc7cd7cc5bc21246e18edf0afa31ebed9e",
+    "scripts/resume-policy.mjs": "6c5d5eca4f9c41cddba39f804722ace63762ec3b4c84e83c76766766eb6dfbed",
+    "scripts/resume-status.mjs": "f69e4b9821d84ae640f3c603646664ccb56c6d467cf15742755154e8f81d29f5",
+    "tests/observation-bindings.test.js": "1f09aaeaee783c4ee4270b17e612725f3d4230c623a0756f2fd5157271d7af51",
+    "tests/resume-policy.test.js": "21e3553c31064df53677da857954b5619d29e5dedbda2949827644a11c015875",
+    "tests/security-observation-bindings.test.js": "88d333c4bdc4ec5590492d326c6bd6e5b46810289583ef63b95e77d034b32bc3"
+  },
+  "independentReviewFollowup": "Security review recorded earlier tests/observation-bindings hash; production3 source hashes remain equal. Subsequent test-only expansion is captured by this root summary/finalfocused log."
+}

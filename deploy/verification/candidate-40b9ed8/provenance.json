@@ -1,0 +1,52 @@
+{
+  "sourceCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "archive": "artifacts/private/grid-40b9ed8.oci.tar",
+  "archiveSha256": "ca1a0d36c61dd2aab345ad52d41d4fd2ed0544bee7106d364270def86dea59c9",
+  "sourceArchiveSha256": "e032073cd2feee43909edcc5dce4b150abc959239cd7258f4f09afd3db88a6e7",
+  "imageManifest": "sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "labels": {
+    "grid.prd.version": "1.15",
+    "grid.runtime.variant": "alpine",
+    "org.opencontainers.image.revision": "40b9ed898f32037e7a87259d12d145457575a4a8",
+    "org.opencontainers.image.version": "1.7.1"
+  },
+  "architecture": "amd64",
+  "os": "linux",
+  "deployed": false,
+  "registryPushed": true,
+  "checkedAt": "2026-09-21T17:27:08.976069+00:00",
+  "runtimeAppTests": {
+    "pass": 79,
+    "fail": 0,
+    "files": 21,
+    "concurrency": 1
+  },
+  "actualBrokerIntegration": "PASS",
+  "advancedIntegration": "PASS",
+  "shippedClientStatusIntegration": {
+    "result": "PASS",
+    "path": "client-status-integration.log",
+    "mounts": "Only exact client-status-integration.js/test-harness.js mounted read-only; shipped vpp-client.js/client-message.js and runtime server retained"
+  },
+  "runtimeFileEquality": "runtime-files.json",
+  "servedAssets": "served-assets.json",
+  "fileCounts": {
+    "sourceFiles": 15,
+    "servedIndex": 1,
+    "servedAssets": 2
+  },
+  "harnessFailures": [],
+  "security": {
+    "findings": "docs/security/evidence/app-candidate-40b9ed8-findings.json",
+    "packages": 130,
+    "residualMatches": 4,
+    "distinctCVEs": 2,
+    "newFindings": 0
+  },
+  "localQaCleanup": "All owned grid-40b containers/network removed",
+  "verificationTerminalExit": 0,
+  "buildHandle": 78456,
+  "verificationHandle": 56899,
+  "secretOutputCheck": "secret-output-check.json",
+  "registryPushProof": "registry-push-proof.json"
+}

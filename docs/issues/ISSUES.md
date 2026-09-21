@@ -15,6 +15,8 @@
 
 - ISSUE026: **FIX_VERIFIED_LOCAL / 원격·복원 인수 대기 — NFR08 연동 client/quickstart 계약 불일치**. 순수 before fixture에서 status online true/false 출력 유실을 확인했고 독립 quickstart 환경 준비 누락 및 지원하지 않는 legacy 문구를 함께 관리한다. IDEA012 v1/제품1.7.1/PRD1.15 채택 및 로컬 수정 검증 완료. 실제 main은1.7이며 원격·복원은 미완료다. 아래 최초 기록과 후속 참조.
 
+- ISSUE027: **RESOLVED_METADATA — 관측 원장 현재 프로세스 연결 불일치**. supplementaryObservation의 이전1.6 참조는 메인이 수정했고, 독립 검토에서 supervisorDiagnosticUpgrade의 이전 current/nextStep 참조를 추가 발견했다. 두 필드 모두 메인 수정 후 실제identity/activation 대조 완료. 실제 관측·카운터·첫1시간 guard는 변경하지 않았다.
+
 번호가 없는 IDEA011 명령 목록 실패 가시성 기록도 현재 기능 인수 완료로 정리한다. 로컬8검증군의 합성503·header/body timeout·전환/해제 시험과 실제 main/현재1.7 복원 읽기, REVIEW037/038를 근거로 한다. 이전1.6에 신규 안내가 있다고 주장하지 않는다.
 
 계속 남는 경계: 오디오의 실제 청취 미검증, 최종창 신규 미디어·동일 영상 PPT 검수, 실제 KMA/AWS/운영 VPP 외부 연동 미검증, 단일노드 k3s의 노드 HA 미검증은 해결로 바꾸지 않는다. SEC006의 현재 이미지 OS4매치/2CVE와 인증 사용자 자원 소모 잔여 위험은 보안 원장에 계속 연결한다. npm audit0/전체시험 PASS가 이를 해소하지 않는다. 원래 freeze21:37:33Z/deadline22:07:33Z를 유지하며 역할·전체목표는 아직 종료하지 않는다.
@@ -590,3 +592,19 @@ IDEA012 v1/제품1.7.1/PRD1.15 채택 후 `docs/product/REVIEW-041.md` 및 `arti
 026-C: protocol과 PRD가 예제/기본 포트 및 환경 준비 guard를 일치시켰고 v1 legacy_accepted 지원 약속을 제거했다. greenfield 범위 밖 legacy migration 기능을 새로 구현했다고 표현하지 않는다.
 
 전체317/317·실제broker integration/advanced·report/client-security·root build는 각각 기록된 범위에서 PASS다. focused client4/media53은 전체317의 부분집합이므로 더하지 않는다. UI 번들154fe2는 기존1.7과 같지만 metadata/guide/client 변경의 정확 이미지 게이트를 대신하지 않는다. 이번 독립 작업은 읽기와 이슈 문서 갱신만이며 실제 KMA/AWS/VPP·오디오 청취·HA·최종 미디어와 시간 게이트의 잔여 상태는 유지한다.
+
+
+## ISSUE-027 — 관측 인계 원장의 현재 프로세스 연결 불일치
+
+P2 운영 재개 정확성. 현재 상태 RESOLVED_METADATA/두 현재 연결 수정·독립 대조 완료. 최초 상태는 FIX_PENDING/부분 수정이었다. 메인은 resume.currentObservationProcesses 및 run.soak는 실제1.7인데 supplementaryObservation이 종료된1.6 audit6e2228e4/PID21357/handle4110을 가리키는 불일치를 발견했다. 실제 첫1시간 capture guard는 이 세션 불일치를 거절하도록 되어 있으므로 guard 결함이 아니라 원장 갱신 누락이다. 원래1시간 이전 capture를 수행하거나 guard를 약화하지 않았다.
+
+메인 수정 receipt `artifacts/checkpoints/resume-1.7-audit-binding/summary.json`은 before/after와 실제 identity를 보존한다. 독립 읽기에서 수정 후 audit70932d07-b127-4b9b-874f-e2796728ff12/시작16:45:54.307Z/PID34755/handle60682, primary28208f59/16:45:54.122Z/PID34756/handle85394가 activation과 실제latest에 일치함을 확인했다. ps의 두 process lstart는 모두 Tue Sep22 01:45:54 2026이며 supervisor33567/77410의01:40:37 identity도 실제status ready 및activation과 일치한다. 원래 caffeinate80946/22:33:11 identity도 유지된다. 증거 `evidence/issue027-binding-after.json`은 수정 후 읽기 snapshot이며 수정 전이라고 주장하지 않는다.
+
+추가 독립 발견: resume.supervisorDiagnosticUpgrade가 verified-active1.6/currentPid19942/currentHandle72380/currentIdentity00:58:48 및 “Maintain verified1.6 ... throughoriginalfreeze” nextStep/currentActivation을 계속 현재로 표시한다. 실제 currentObservationProcesses와 모순되어 재개 작업에 잘못된 PID/handle을 제시할 수 있다. 메인에 즉시 전달했고 `evidence/issue027-supervisor-stale.json`에 원문 필드를 보존했다. 역사적인 connectionIncident/previousObservations/oldOwnedProcesses는 당시 사건으로 남기며 오래됐다는 이유만으로 현재 결함으로 분류하지 않는다.
+
+이슈 범위는 인계 metadata의 일관성이다. 앱 장애·관측 중단·카운터 초기화 증거는 없으며 과정에서 프로세스 재시작/관측 파일 변경/원장 수정은 하지 않았다. notBefore17:45:54.307Z 및 원래freeze/deadline은 유지한다. 추가 current 필드가 수정된 뒤 실제identity와 재대조하여 좁은 이슈를 종료하며 첫1시간·전체목표 완료와 구분한다.
+
+
+ISSUE027 종료 대조: `artifacts/checkpoints/resume-1.7-audit-binding/supervisor-followup.json`의 before/after와 현재 resume를 독립 대조했다. supervisorDiagnosticUpgrade는 verified-active1.7/PID33567/handle77410/start01:40:37 및 실제 존재하는 observer-1.7 activation으로 일치한다. 옛 필드는 historicalActivation1_6에 보존되었다. audit 현재세션·primary run.soak·observationHandles/baselines·firstHour notBefore도 앞선 실제latest/ps와 일치했다. 이번 제한된 활성 관측 필드 점검에서 추가 stale activebinding은 발견하지 않았다. 좁은 metadata 결함을 종료하며 실제1시간 capture/원격복구/전체목표 완료의 판정으로 확대하지 않는다. 원장 수정은 메인만 수행했고 독립 검토자는 이슈 증거만 작성했다.
+
+ISSUE027 예방 보강: 현재/중복 관측 소유 필드를 자동 대조하는 운영 도구를 추가했다. 불일치 시 일반 재개 대신 원장 정합성 확인을 권고하며 마감·동결·연결·배포 우선순위와 실제 프로세스 확인 요구를 유지한다. [root 검증](../../artifacts/checkpoints/resume-1.7-audit-binding/guard-summary.json)은 전체323개와 최종 집중8개(7개 중복·추가 보안1개), 실제 이전 필드 재현·현재 읽기 확인을 구분한다. 별도 보안 검토에서 지적한 malformed state와 비양수 handle도 수정했다. 앱 이미지·제품 기능 변경은 없다.
