@@ -1,0 +1,101 @@
+{
+  "rehearsal": true,
+  "lead": 1.9899999999999984,
+  "scenes": [
+    {
+      "title": "최근 명령 저장 상태 내보내기",
+      "seconds": 24,
+      "narration": "선택한 RTU의 최근 스무 개 명령 저장 상태를 JSON으로 내보냅니다. 이 파일은 현재 저장된 스냅샷이며, 실제 외부 VPP 수신 증거나 전체 감사 이력이 아닙니다.",
+      "zoom": {
+        "scale": 1.1
+      },
+      "actions": [
+        {
+          "type": "click",
+          "role": "link",
+          "name": "시험 시나리오"
+        },
+        {
+          "type": "select",
+          "label": "관찰 RTU",
+          "value": "1198d24d-8257-4d8b-baa9-169461b827e6"
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "목표값·처리 결과"
+        },
+        {
+          "type": "focus",
+          "text": "명령 처리 결과"
+        },
+        {
+          "type": "download",
+          "role": "button",
+          "name": "최근 명령 상태 JSON 내보내기",
+          "file": "recent-command-states.json",
+          "validate": "command-states",
+          "rtuId": "selected"
+        },
+        {
+          "type": "wait",
+          "ms": 1500
+        },
+        {
+          "type": "capture",
+          "name": "command-export-state"
+        }
+      ],
+      "voice": "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/focused-command-export-v12/source/voice-0.aiff",
+      "cues": [
+        {
+          "start": 0,
+          "end": 5.07,
+          "text": "선택한 RTU의 최근 스무 개 명령 저장 상태를 JSON으로 내보냅니다."
+        },
+        {
+          "start": 5.07,
+          "end": 12.010000000000002,
+          "text": "이 파일은 현재 저장된 스냅샷이며, 실제 외부 VPP 수신 증거나 전체 감사 이력이 아닙니다."
+        }
+      ],
+      "duration": 24,
+      "start": 0,
+      "end": 24.05
+    }
+  ],
+  "interactions": [
+    {
+      "kind": "click",
+      "at": 0.646,
+      "x": 110.5,
+      "y": 278
+    },
+    {
+      "kind": "click",
+      "at": 2.076,
+      "x": 552.28125,
+      "y": 399.1875
+    },
+    {
+      "kind": "click",
+      "at": 3.497,
+      "x": 1757.140625,
+      "y": 610.1875
+    }
+  ],
+  "downloads": [
+    {
+      "schemaVersion": 1,
+      "contractVersion": 2,
+      "productVersion": "1.2.0",
+      "plantId": "1198d24d-8257-4d8b-baa9-169461b827e6",
+      "scope": "recent-command-snapshots",
+      "limit": 20,
+      "count": 4,
+      "file": "source/recent-command-states.json",
+      "sha256": "33502ab242784f01ef59ff36ceb363a3b5c84c7e879800ddd73dfbe91e6438fb",
+      "at": 3.69
+    }
+  ]
+}

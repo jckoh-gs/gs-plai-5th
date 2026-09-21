@@ -1,0 +1,39 @@
+{
+  "rehearsal": true,
+  "createdAt": "2026-09-21T09:57:07.417Z",
+  "productionSeconds": 23.789,
+  "releaseCommit": "94f415103ae0ad7950afce2721b38d560ff350db",
+  "imageDigest": "POPULATE_AT_FREEZE",
+  "manifestSha256": "1cdd72a87845d4811cb5617e149f1543befacc01d942ad2549b869a0492ed70e",
+  "videoSha256": "f07c34f4fd753a6314d7a648331fddb0a9262e150ca3eb103669f52f59f439b6",
+  "fullDecode": true,
+  "audioMeanDb": -17.6,
+  "pageErrors": [],
+  "downloads": [
+    {
+      "schemaVersion": 1,
+      "contractVersion": 2,
+      "productVersion": "1.2.0",
+      "plantId": "1198d24d-8257-4d8b-baa9-169461b827e6",
+      "scope": "recent-command-snapshots",
+      "limit": 20,
+      "count": 4,
+      "file": "source/recent-command-states.json",
+      "sha256": "806463ba18cf812b890fe7ab7808bce734039f84cad6a1a03204b64dfb01da4b",
+      "at": 3.682
+    }
+  ],
+  "duration": 22,
+  "dimensions": "1920x1080",
+  "codecs": "H264/AAC",
+  "frames": [
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/focused-command-export-v12-reviewed/frame-1.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/focused-command-export-v12-reviewed/frame-2.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/focused-command-export-v12-reviewed/frame-3.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/focused-command-export-v12-reviewed/frame-4.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/focused-command-export-v12-reviewed/frame-5.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/focused-command-export-v12-reviewed/frame-6.png"
+  ],
+  "visualReview": "pending",
+  "claimsReview": "pending"
+}

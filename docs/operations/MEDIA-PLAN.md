@@ -64,3 +64,11 @@
 발표자료도14장 전체를 export→무결성/폰트/기하 검사→최종 PPT 재수입→전장 렌더링했다. 전장 개별 육안 검수에서 한글·본문·이미지·구조도의 잘림/겹침이 없음을 확인했다. 실제 최종 내용은 영상 제작 뒤 갱신하며 현재 리허설은 로컬1.0.0 흐름과1.1.0 후보의 보완 캡처를 함께 사용한 제작 검증이다. 동일 최종 릴리스 검증 자료가 아니다.
 
 최종 입력 예시는 `scripts/media/final-input-template.json`이다. 실제 MQTT 터널 포트를 확인한 후 복사해 사용한다. 생성된 final-scenes.json은 녹화 직전8장면 조작을 검토할 수 있는 실행 계획이며, 토큰·암호 본문을 포함하지 않는다. 본문 값을 입력하지 말고 파일 경로만 전달한다. 최종용 기존 출력이 있으면 새 outputDir로 생성하며 기존 정상 산출물을 덮어쓰지 않는다. 리허설 추가 실행은 rehearsalName으로 별도 artifacts/media-preparation 하위 폴더를 선택할 수 있다.
+
+## 제품1.2 명령 상태 내보내기 준비
+
+확정 매니페스트 제품 버전으로 기능을 선택한다. 1.0은 미리보기/내보내기를 제외하고, 1.1은 CSV 미리보기만, 1.2 이상은 기존 명령 장면에 최근 명령 상태 JSON 다운로드를 추가한다. 새 장면은 늘리지 않는다. `release-features.cjs`가 버전 선택을, `validate-command-download.cjs`가 선택 RTU·schemaVersion1·contractVersion2·scope·최대20개 및 DTO 허용 필드와 알려진 자격증명 미포함을 확인한다. 잘못된 RTU, 21행, 원본 request/reason 필드는 거절한다.
+
+인증된 localhost:3103의1.2.0 후보에서 읽기 전용 UI 다운로드를22.03초 집중 리허설로 검증했다. 제작23.279초,1920×1080 H264/AAC, 전체 디코딩 성공, pageErrors=[], 음성 평균 -17.6dB이다. 선택 RTU의 실제4개 저장 상태를 내려받았다. 최대20개라는 범위이며 외부 VPP 수신 증거나 전체 감사 이력이 아니라는 내레이션/자막을 포함한다. 중앙 확대가 우측 버튼을 자르는 문제를 발견해 내보내기가 포함된 명령 장면은 전체 프레임을 유지하고 다른 장면의 점진 확대는 유지했다. 수정 프레임에서 버튼·포인터·자막을 확인했다.
+
+근거는 `artifacts/media-preparation/focused-command-export-v12-final-framing/verification.json`, 같은 폴더의 source/recent-command-states.json, `artifacts/media-preparation/command-export-validation.json`이다. 로컬 후보의 제작 검증이며 예비 매니페스트 정보는 최종 버전 증거가 아니다. 동결 시각/커밋/이미지/매니페스트 일치 및 최종 영상 검수 후 PPT 제작 방지장치는 유지한다. 최종 디렉터리는 생성하지 않았다.

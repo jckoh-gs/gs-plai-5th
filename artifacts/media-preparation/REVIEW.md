@@ -13,3 +13,11 @@
 수정 후 공통 장면 생성기(scene-plan.cjs)는 인증·원격 주소를 입력받고, 최종 바인더는 실제 API와 확정 매니페스트의 제품 버전을 비교한다. 동결 밖 실행, 미완성 템플릿, 같은 커밋/매니페스트로 검수하지 않은 영상 뒤의 최종PPT 제작을 차단한다. 최종 요구의 완성을 주장하는 기록이 아니다.
 
 `media-alignment-check.json`: 전체25문장과 보완4문장의 SRT 시작/끝을 실제 문장 음성 cue 길이와 대조했다. 최대 차이1ms미만이며 MP4에서H264·1920×1080·AAC·mov_text 트랙을 직접 확인했다. `freeze-guard-check.json`: 동결 전 최종 장면 바인딩 실행은 거절되고 최종 파일을 만들지 않았다.
+
+## 제품1.2 명령 상태 내보내기 준비
+
+확정 매니페스트 제품 버전으로 기능을 선택한다. 1.0은 미리보기/내보내기를 제외하고, 1.1은 CSV 미리보기만, 1.2 이상은 기존 명령 장면에 최근 명령 상태 JSON 다운로드를 추가한다. 새 장면은 늘리지 않는다. `release-features.cjs`가 버전 선택을, `validate-command-download.cjs`가 선택 RTU·schemaVersion1·contractVersion2·scope·최대20개 및 DTO 허용 필드와 알려진 자격증명 미포함을 확인한다. 잘못된 RTU, 21행, 원본 request/reason 필드는 거절한다.
+
+인증된 localhost:3103의1.2.0 후보에서 읽기 전용 UI 다운로드를22.03초 집중 리허설로 검증했다. 제작23.279초,1920×1080 H264/AAC, 전체 디코딩 성공, pageErrors=[], 음성 평균 -17.6dB이다. 선택 RTU의 실제4개 저장 상태를 내려받았다. 최대20개라는 범위이며 외부 VPP 수신 증거나 전체 감사 이력이 아니라는 내레이션/자막을 포함한다. 중앙 확대가 우측 버튼을 자르는 문제를 발견해 내보내기가 포함된 명령 장면은 전체 프레임을 유지하고 다른 장면의 점진 확대는 유지했다. 수정 프레임에서 버튼·포인터·자막을 확인했다.
+
+근거는 `artifacts/media-preparation/focused-command-export-v12-final-framing/verification.json`, 같은 폴더의 source/recent-command-states.json, `artifacts/media-preparation/command-export-validation.json`이다. 로컬 후보의 제작 검증이며 예비 매니페스트 정보는 최종 버전 증거가 아니다. 동결 시각/커밋/이미지/매니페스트 일치 및 최종 영상 검수 후 PPT 제작 방지장치는 유지한다. 최종 디렉터리는 생성하지 않았다.

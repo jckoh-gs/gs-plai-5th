@@ -1,0 +1,32 @@
+{
+  "result": "PASS",
+  "actualDownload": {
+    "schemaVersion": 1,
+    "contractVersion": 2,
+    "productVersion": "1.2.0",
+    "plantId": "1198d24d-8257-4d8b-baa9-169461b827e6",
+    "scope": "recent-command-snapshots",
+    "limit": 20,
+    "count": 4
+  },
+  "rejected": [
+    "wrong-RTU",
+    "over-20",
+    "unexpected-raw-request",
+    "unexpected-reason"
+  ],
+  "features": {
+    "1.0.0": {
+      "preview": false,
+      "commandExport": false
+    },
+    "1.1.0": {
+      "preview": true,
+      "commandExport": false
+    },
+    "1.2.0": {
+      "preview": true,
+      "commandExport": true
+    }
+  }
+}
