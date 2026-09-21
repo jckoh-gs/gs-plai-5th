@@ -1,0 +1,14 @@
+{
+  "summary.json": "dd8a6078d86e0ea082f323a3e2bb426fcbcee10d6befe4c675fb364c1d9ada4f",
+  "audit/latest.json": "e94d578bc16fef856cbcdb14e7c248856d287f60ee3d4c10f75e32d35e0e383a",
+  "audit/observations.jsonl": "a4331ea690e6ef0e1047613d1ef499cc3e17fbfd2f6c9fe089637a254b1c2768",
+  "audit/result.json": "e94d578bc16fef856cbcdb14e7c248856d287f60ee3d4c10f75e32d35e0e383a",
+  "primary/latest.json": "59e6cbc93748bd742adebd893df2bc1864111c583e6b7882065e1ee3962ba1ad",
+  "primary/observations.jsonl": "b1c341a7a1ba6f7bc24dfaefb4a564468fa8a53fb8ef3c6c2b44193e954af077",
+  "primary/session-28208f59-d2d9-40c4-83a3-d608b1ac5570.json": "ec29319c55992b5d13087ef8480807013311d5b4dc7509ab13afc5348d46511a",
+  "primary/source/provenance.json": "7516761b057c00ee7524527c7b7d5bcd751f9c3766ca866f305f13363be254e4",
+  "primary/source/soak-diagnostics.mjs": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c",
+  "primary/source/soak-monitor.mjs": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3",
+  "audit/source/telemetry-audit-monitor.mjs": "6c4bbb0b77c03e8a49d9d17c8f7e743c10765ab05b0d94f6b1a736f6a60c4617",
+  "audit/source/telemetry-audit.mjs": "ba6c2c1c9ac39e4a1666d7ad0b6468271a1eda163f2653df9e6bac842bb48486"
+}

@@ -1,0 +1,24 @@
+{
+  "diskAvailableBytes": 61107826688,
+  "files": [
+    {
+      "path": "/data/stable-6d165d1-20260921T153417228Z.sqlite",
+      "exists": false
+    },
+    {
+      "path": "/data/stable-6d165d1-20260921T153417228Z.sqlite.snapshot.part",
+      "exists": true,
+      "bytes": 439500800
+    },
+    {
+      "path": "/data/stable-40b9ed8-20260921T180009013Z.sqlite",
+      "exists": true,
+      "bytes": 1075081216
+    },
+    {
+      "path": "/data/stable-40b9ed8-20260921T180009013Z.sqlite.snapshot.part",
+      "exists": false
+    }
+  ],
+  "processes": []
+}

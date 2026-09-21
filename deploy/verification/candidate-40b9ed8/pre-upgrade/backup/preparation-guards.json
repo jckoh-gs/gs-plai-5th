@@ -1,0 +1,19 @@
+{
+  "result": "PASS",
+  "checks": [
+    {
+      "invocation": "withoutrelease",
+      "result": "PASS",
+      "exitCode": 1,
+      "reason": "Explicit root start required",
+      "remoteCalls": 0
+    },
+    {
+      "invocation": "prematurewithflag",
+      "result": "PASS",
+      "exitCode": 1,
+      "reason": "Actual first-hour checkpoint required",
+      "remoteCalls": 0
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T17:58:29.852Z",
+  "mode": "before",
+  "readOnly": true,
+  "pod": {
+    "name": "grid-77c68c94f8-5xfb8",
+    "uid": "2a16a910-1600-47f8-ac19-16c263850d26",
+    "image": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+    "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876"
+  },
+  "version": "1.7.1",
+  "plants": [
+    {
+      "id": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+      "runId": "c83f35c0-23b7-45c5-b567-0dbf1fb3e1a0",
+      "health": "HEALTHY",
+      "pending": 0,
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      }
+    },
+    {
+      "id": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+      "runId": "1ad54156-ba54-4fc0-8bbb-ec7595e25a80",
+      "health": "HEALTHY",
+      "pending": 0,
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      }
+    },
+    {
+      "id": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+      "runId": "0c51962b-d6a3-4513-8118-c54f0bbefb3b",
+      "health": "HEALTHY",
+      "pending": 0,
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      }
+    },
+    {
+      "id": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+      "runId": "efdcb3c8-851b-42ea-8501-61907552b932",
+      "health": "HEALTHY",
+      "pending": 0,
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      }
+    },
+    {
+      "id": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "runId": "26d2830a-4774-4f97-996d-a36dc227a62c",
+      "health": "HEALTHY",
+      "pending": 0,
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      }
+    }
+  ],
+  "original5SettingsUnchanged": true,
+  "scenarioListUnchanged": true,
+  "canonicalBaseline": "deploy/verification/candidate-d98d3c4/pre-upgrade/baseline.json",
+  "temporaryPortsFree": {
+    "3107": true,
+    "18887": true
+  },
+  "supervisor": {
+    "schemaVersion": 1,
+    "at": "2026-09-21T17:58:27.450Z",
+    "pid": 56137,
+    "processIdentity": "Tue Sep 22 02:52:15 2026",
+    "state": "ready",
+    "reason": "verified",
+    "outageAt": null,
+    "lastOutageAt": null,
+    "reconnectedAt": null,
+    "readOnly": true,
+    "commandsAllowed": true,
+    "context": "charles-k3s",
+    "namespace": "gs-plai-5h",
+    "expectedImage": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+    "expectedVersion": "1.7.1",
+    "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+    "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+    "failures": 0,
+    "forwardOwned": true,
+    "lastLocalVerification": {
+      "checkedAt": "2026-09-21T17:58:27.450Z",
+      "result": "passed",
+      "phase": "complete",
+      "kind": "verified",
+      "durationMs": 1158
+    },
+    "podUID": "2a16a910-1600-47f8-ac19-16c263850d26",
+    "retryInMs": 10000
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T17:52:15.602532+00:00",
+  "pod": "grid-77c68c94f8-5xfb8",
+  "uid": "2a16a910-1600-47f8-ac19-16c263850d26",
+  "containers": [
+    {
+      "name": "app",
+      "ready": true,
+      "restartCount": 0,
+      "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876"
+    },
+    {
+      "name": "mqtt",
+      "ready": true,
+      "restartCount": 0,
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  ],
+  "scope": "Independent actualReady identity after ownertransition terminal0. RemoteUI/MQTT/outbox/pairedrestore stillpending."
+}

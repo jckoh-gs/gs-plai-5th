@@ -1,0 +1,4 @@
+{
+  "sha256": "4cf80b785b15b17da4b9256eb8611f2ea0f21398873294ff86eb44aef6e699ed",
+  "scope": "Read-only health GET/pod GET; internalhealth exec only if tunnel unavailable; max320s/originaldeadline"
+}

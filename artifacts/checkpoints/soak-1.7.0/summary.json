@@ -1,0 +1,72 @@
+{
+  "result": "PASS",
+  "scope": "Closed1.7 observation epoch beforeplanned1.7.1upgrade; separatelyverified actualfirsthour exists; notwholegoal acceptance",
+  "runtimeCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
+  "primary": {
+    "terminalHandle": 85394,
+    "exitCode": 0,
+    "elapsedSeconds": 3829.734,
+    "messages": 635,
+    "apiErrors": 0,
+    "connectionErrors": 0,
+    "invalid": 0,
+    "duplicates": 0
+  },
+  "audit": {
+    "terminalHandle": 60682,
+    "exitCode": 0,
+    "elapsedSeconds": 3831.381,
+    "received": 635,
+    "connectionErrors": 0,
+    "invalidMessages": 0,
+    "duplicateMessages": 0,
+    "rtus": [
+      {
+        "rtuId": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+        "messages": 128,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+        "messages": 192,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+        "messages": 187,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+        "messages": 64,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+        "messages": 64,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      }
+    ]
+  },
+  "endedAt": "2026-09-21T17:49:45.688Z",
+  "supervisor": {
+    "terminalHandle": 77410,
+    "exitCode": 0,
+    "portsClosed": [
+      3104,
+      18884
+    ]
+  },
+  "singleDisconnection": "Gracefulownedobserver shutdown, not a remoteoutage",
+  "limitation": "Received messages only; no pre-subscription/transition coverage or universaldelivery proof; primarysourceprovenance records actual latercapture separately"
+}

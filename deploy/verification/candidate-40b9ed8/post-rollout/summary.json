@@ -1,0 +1,28 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T17:53:59.271227+00:00",
+  "version": "1.7.1",
+  "image": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "podUID": "2a16a910-1600-47f8-ac19-16c263850d26",
+  "checks": [
+    "identity.json",
+    "health-config.json",
+    "auth.json",
+    "continuity.json",
+    "runtime-files.json",
+    "served-assets.json",
+    "served-guide.json",
+    "../main-event-time/result.json",
+    "../main-command-list/result.json"
+  ],
+  "readOnly": true,
+  "noMainOrPortMutations": true,
+  "directProofHandle": 49668,
+  "directProofTerminalExit": 0,
+  "browserHandles": [
+    75520,
+    61254
+  ],
+  "allBrowserTerminals": 0,
+  "allMainApiWrites": 0
+}

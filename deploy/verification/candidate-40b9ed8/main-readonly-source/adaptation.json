@@ -1,0 +1,8 @@
+{
+  "scope": "Only reviewed product-version guards updated in copied browser harnesses; remote main actual-only/GET route protections retained. Direct proof version/image/UID/expected source hashes adapted, canonical original d98 baseline retained.",
+  "hashes": {
+    "check-command-list-freshness.cjs": "67e8735277673f5006b201cf65f3ebb6f60ef7207a31299c4870cd89fc3ad616",
+    "browser-event-time.cjs": "c2a51f60c67be2e031abdd763ebe8a4b50383795c6de2fc4dc86d091d3a78ca9",
+    "post-rollout.py": "78b50eca89e3eaacac49920a0f13a941e6a241b18af47ee2c813bc750962cfc3"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "attempt1": {
+    "handle": 74513,
+    "exitCode": 125,
+    "mutations": false,
+    "cause": "Wrong local supervisor status path; safe diagnostic ENOENT after canonical/Ready/ports checks",
+    "replayDiagnosticExit": 1
+  },
+  "correction": "Use actual supervisor directory after inspecting source"
+}

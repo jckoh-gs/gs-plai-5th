@@ -1,0 +1,5 @@
+{
+  "artifacts/private/pre-1.7.1-backup-monitor.py": "f9eb12ce298232ffc1d1a990929ca92d4f77bb84b871065092cdf0fe09319d42",
+  "deploy/verification/candidate-40b9ed8/pre-upgrade/backup/source/remote-backup-helpers.mjs": "73ace68aee69462f0c6eac06ad0445363bcb2143f1cfcff85a28eaf6c85d30fb",
+  "deploy/verification/candidate-40b9ed8/pre-upgrade/backup/source/remote-backup.mjs": "2172449bf7161983062d1fe06b00f198060ede37cb5cea1062e701572d961c18"
+}

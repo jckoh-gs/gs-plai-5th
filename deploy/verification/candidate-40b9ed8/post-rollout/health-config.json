@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "version": "1.7.1",
+  "health": "ok",
+  "mqttConnected": true,
+  "authRequired": true
+}

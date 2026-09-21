@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "pod": "grid-77c68c94f8-5xfb8",
+  "uid": "2a16a910-1600-47f8-ac19-16c263850d26",
+  "image": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "onlyAppImageChanged": true,
+  "canonicalBeforeAfterPreserved": true,
+  "servedGuideStrictBooleanVerified": true,
+  "noOwnPortForward": true
+}

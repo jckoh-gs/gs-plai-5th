@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "at": "2026-09-21T17:52:28.508Z",
+  "pid": 56137,
+  "processIdentity": "Tue Sep 22 02:52:15 2026",
+  "state": "ready",
+  "reason": "verified",
+  "outageAt": null,
+  "lastOutageAt": null,
+  "reconnectedAt": null,
+  "readOnly": true,
+  "commandsAllowed": true,
+  "context": "charles-k3s",
+  "namespace": "gs-plai-5h",
+  "expectedImage": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "expectedVersion": "1.7.1",
+  "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "failures": 0,
+  "forwardOwned": true,
+  "lastLocalVerification": {
+    "checkedAt": "2026-09-21T17:52:28.508Z",
+    "result": "passed",
+    "phase": "complete",
+    "kind": "verified",
+    "durationMs": 1411
+  },
+  "podUID": "2a16a910-1600-47f8-ac19-16c263850d26",
+  "retryInMs": 10000
+}

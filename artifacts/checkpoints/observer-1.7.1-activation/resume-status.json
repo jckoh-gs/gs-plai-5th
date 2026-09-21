@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "runId": "grid-new-20260921T080733Z",
+  "checkedAt": "2026-09-21T18:01:09.185Z",
+  "nextAction": "resume-first-incomplete-checkpoint",
+  "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "head": "3723bd8387f3d5c2aa5fd26c253ec3a299276f3c",
+  "workingTree": [
+    "M docs/operations/NEXT-ACTIONS.md",
+    " M docs/operations/resume.json",
+    " M docs/operations/run.json",
+    " M docs/product/acceptance.json",
+    " M scripts/browser-event-time.cjs",
+    " M scripts/check-command-list-freshness.cjs",
+    " M tests/review-command-list-target.test.js",
+    " M tests/review-event-browser-target.test.js",
+    "?? .idea/",
+    "?? artifacts/checkpoints/browser-guards-1.7.1/",
+    "?? artifacts/checkpoints/observer-1.7.1-activation/",
+    "?? artifacts/checkpoints/soak-1.7.0/",
+    "?? artifacts/checkpoints/soak-1.7.1-first-hour-preparation/",
+    "?? artifacts/media-preparation/candidate17-layout/",
+    "?? artifacts/media-preparation/deck-binding-packaging-rehearsal/",
+    "?? artifacts/media-preparation/deck-candidate17-rehearsal/",
+    "?? artifacts/media-preparation/full-candidate15-20260921/",
+    "?? artifacts/media-preparation/full-candidate15-receipts-20260921/",
+    "?? artifacts/media-preparation/full-candidate17-20260921/",
+    "?? artifacts/media-preparation/media-lifecycle-local-round1-retry1/",
+    "?? artifacts/media-preparation/media-lifecycle-local-round1/",
+    "?? artifacts/releases/current.json",
+    "?? deploy/verification/candidate-1197ab5/",
+    "?? deploy/verification/candidate-40b9ed8/connection-activation/",
+    "?? deploy/verification/candidate-40b9ed8/main-client-online.json",
+    "?? deploy/verification/candidate-40b9ed8/main-command-list.log",
+    "?? deploy/verification/candidate-40b9ed8/main-command-list/",
+    "?? deploy/verification/candidate-40b9ed8/main-event-time.log",
+    "?? deploy/verification/candidate-40b9ed8/main-event-time/",
+    "?? deploy/verification/candidate-40b9ed8/main-mqtt.json",
+    "?? deploy/verification/candidate-40b9ed8/main-readonly-source/",
+    "?? deploy/verification/candidate-40b9ed8/main-regression/",
+    "?? deploy/verification/candidate-40b9ed8/normal-backup/",
+    "?? deploy/verification/candidate-40b9ed8/outbox-observation/",
+    "?? deploy/verification/candidate-40b9ed8/outbox-post-normal.json",
+    "?? deploy/verification/candidate-40b9ed8/outbox-preflight.json",
+    "?? deploy/verification/candidate-40b9ed8/outbox-restart.json",
+    "?? deploy/verification/candidate-40b9ed8/outbox-restart.log",
+    "?? deploy/verification/candidate-40b9ed8/post-rollout/",
+    "?? deploy/verification/candidate-40b9ed8/pre-upgrade/",
+    "?? deploy/verification/candidate-40b9ed8/prepared-rollout/",
+    "?? deploy/verification/candidate-40b9ed8/root-outbox-normal-attempts.json",
+    "?? deploy/verification/candidate-40b9ed8/root-outbox-normal-first-attempt.mjs",
+    "?? deploy/verification/candidate-40b9ed8/root-outbox-normal.mjs",
+    "?? deploy/verification/candidate-40b9ed8/transition-execution.log",
+    "?? deploy/verification/candidate-8599ab9/operational-baseline.json",
+    "?? deploy/verification/pre-1.7.1-backup.json",
+    "?? docs/product/REVIEW-044.md"
+  ],
+  "remoteMain": "3723bd8387f3d5c2aa5fd26c253ec3a299276f3c",
+  "remoteGitReachable": true,
+  "clusterReachable": true,
+  "api": {
+    "ok": true,
+    "version": "1.7.1",
+    "plantCount": 5
+  },
+  "identity": {
+    "ok": true,
+    "pod": {
+      "name": "grid-69d8766f7-zmfq8",
+      "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+      "image": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+      "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876"
+    },
+    "broker": {
+      "name": "grid-69d8766f7-zmfq8",
+      "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+      "image": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  },
+  "observationLedger": {
+    "ok": true,
+    "issues": [],
+    "scope": "Metadata consistency only; verify actual PID/start identity and observation files before acting"
+  },
+  "workingMilestone": {
+    "productVersion": "1.7.1",
+    "prdVersion": "1.15",
+    "idea": "IDEA-012",
+    "state": "Actualmain/outbox PASS; normalbackup/current+backrestore pending; stablefallback1.7/1cab"
+  },
+  "remainingInOrder": [
+    "Candidate1.7.1 actualmain/outbox/normal andnewobserversPASS. Await normalbackupownerterminal, verifyexactwholehash; then current1.7.1/backward1.7 samebackup restore+cleanup, independentacceptance/newimmutablemanifest. Do not repeatcompletedrollout/MQTT/restart.",
+    "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
+    "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
+    "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
+  ],
+  "mutationsPerformed": false
+}

@@ -1,0 +1,25 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T17:53:31.181748+00:00",
+  "actualVersion": "1.7.1",
+  "podUID": "2a16a910-1600-47f8-ac19-16c263850d26",
+  "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "ready": true,
+  "monitorSourceCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "sourceHashes": {
+    "scripts/vpp-client.js": "762cb18072e5db77b48199681a266b520ee08b12986efd8795356e4b877911cd",
+    "scripts/client-message.js": "ecb5f3b3fcdf74fa5a3d352da33856b47116eb27b4eb91b039fa58b39e12b53f"
+  },
+  "observed": {
+    "kind": "status",
+    "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+    "online": true,
+    "status": null,
+    "timestamp": "2026-09-21T17:50:57.757Z",
+    "serverVersion": null
+  },
+  "monitorExitCode": 0,
+  "remotePodUnchanged": true,
+  "mainMutations": false,
+  "scope": "Exact committed local supplied monitor subscribes to actual candidate broker; no --dispatch and no device disconnection. The client output does not expose the MQTT retain flag, so this observation does not establish retained delivery. Online is not a guarantee of current device-health or missed-session delivery. Actual offline/LWT was separately verified in isolated exact image."
+}

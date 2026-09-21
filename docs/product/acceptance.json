@@ -8978,9 +8978,37 @@
         {
           "path": "artifacts/checkpoints/candidate-1.7.1-local/client-security.log",
           "sha256": "ba2b71c5693cd96f8e366b1f7e1038ffcf873d471597396faebe612fc8a75c5c"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-regression/summary.json",
+          "sha256": "75b9c733adc9f0b078a32d053815fc33ad8e46bc739dfc89eda2051430e433d2"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/post-rollout/summary.json",
+          "sha256": "71cf8dfebcd0d39a5dd5c6ab6fdc4fcd9a53787146be7997e67221275ab1cc58"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/post-rollout/runtime-files.json",
+          "sha256": "92d26b06d78652a9fee6a35be8b1e51e8fb1fc2c988c4bf7cf80368d26c98456"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/post-rollout/served-guide.json",
+          "sha256": "557a233a81f9156b8f34cbf442eab749ea850e97253b5b4ed3f7f99273bfdaca"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-mqtt.json",
+          "sha256": "24f098431a8d23d21e3776828a6cb2bc0c3976516be39c442c78179fb182ed4f"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-client-online.json",
+          "sha256": "e0dc07e67ec20464e68f3aa80b12c0fb7d23f253fb7ae2cf93e131382fe4ab4b"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/pre-deployment-review.json",
+          "sha256": "aff6ec7506991b055ae39a66528baefc7444a89c605956182a3dbdb284da3e80"
         }
       ],
-      "assessment": "로컬317단위 및 실제 broker 통합/고급/report/client-security PASS. 정확 이미지 k3s·동일 백업 현재1.7.1/하위1.7 복원·정리·불변 checkpoint 대기. REVIEW041."
+      "assessment": "REVIEW044: exactimage79app/실제broker 및 main40b9ed8/234ec56 UI·API·수정guide·인증/SSE·preview/export/event/list·MQTT125/error0·monitoronline PASS. mainonline은 retained/LWT 증거 아님. outbox종결/정상백업/동일snapshot1.7.1·하위1.7복원·정리·새manifest 대기. 로컬317과합산하지않음."
     }
   ],
   "reviewedSource": {

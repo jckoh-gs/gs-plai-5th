@@ -1,0 +1,26 @@
+import pathlib,json,subprocess as s,urllib.request,urllib.error,hashlib,re,datetime
+p=pathlib.Path('deploy/verification/candidate-40b9ed8/post-rollout');base='http://127.0.0.1:3104';token=pathlib.Path('artifacts/private/deploy/api-token').read_text().strip();k=['kubectl','--context','charles-k3s','-n','gs-plai-5h'];image='127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876';uid='2a16a910-1600-47f8-ac19-16c263850d26'
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+ def redirect_request(self,*a,**k):raise AssertionError('redirect refused')
+http=urllib.request.build_opener(NoRedirect())
+def raw(path,auth=False):return http.open(urllib.request.Request(base+path,headers={'Authorization':'Bearer '+token}if auth else {}),timeout=15).read()
+def api(path):return json.loads(raw(path,True))
+def save(n,v):(p/n).write_text(json.dumps(v,indent=2)+'\n')
+d=json.loads(s.check_output(k+['get','pods','-l','app=grid','-o','json'],timeout=15));assert len(d['items'])==1;pod=d['items'][0];assert pod['metadata']['uid']==uid;cs=pod['status']['containerStatuses'];assert all(c['ready']and c['restartCount']==0 for c in cs);assert next(c for c in cs if c['name']=='app')['imageID']==image;assert next(c for c in cs if c['name']=='mqtt')['imageID']=='127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c';save('identity.json',{'result':'PASS','checkedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'pod':pod['metadata']['name'],'uid':uid,'containers':[{q:c[q]for q in ['name','ready','restartCount','imageID']}for c in cs]})
+state=api('/api/state');config=api('/api/config');health=api('/api/health');assert config['version']==state['version']==health['version']=='1.7.1';assert health['status']=='ok'and health['mqtt']['connected'];save('health-config.json',{'result':'PASS','version':'1.7.1','health':'ok','mqttConnected':True,'authRequired':config['authRequired']})
+try:raw('/api/state');raise AssertionError('unauthenticated state succeeded')
+except urllib.error.HTTPError as e:assert e.code==401
+save('auth.json',{'result':'PASS','unauthenticatedStateStatus':401,'authenticatedStateStatus':200,'tokenSource':'private file'})
+baseline=json.load(open('deploy/verification/candidate-d98d3c4/pre-upgrade/baseline.json'))
+def project(actual,template):
+ if isinstance(template,dict):return {key:project(actual[key],value)for key,value in template.items()}
+ if isinstance(template,list):
+  if template and isinstance(template[0],dict)and'id'in template[0]:return [project(next(x for x in actual if x['id']==v['id']),v)for v in template]
+  return actual
+ return actual
+assert len(state['plants'])==len(baseline['plants'])==5;projected=project(state['plants'],baseline['plants']);assert projected==baseline['plants'];scenes=api('/api/scenarios');assert len(scenes)==len(baseline['scenarios']);assert project(scenes,baseline['scenarios'])==baseline['scenarios'];save('continuity.json',{'result':'PASS','baseline':'../pre-upgrade/baseline.json','plants':projected,'scenarios':baseline['scenarios'],'canonicalProjection':'Exact baseline keys including on/limitPct/target/rating/ramp/startupDelay/wind curve/temperature/solar efficiency and replay/fault/mode/station/dataset metadata','originalRunIdsPreserved':True,'apiWrites':0})
+hashes=json.load(open('deploy/verification/candidate-40b9ed8/runtime-files.json'))['hashes'];code="import{readFileSync}from'node:fs';import{createHash}from'node:crypto';const paths=JSON.parse(process.argv[1]);console.log(JSON.stringify(Object.fromEntries(paths.map(p=>[p,createHash('sha256').update(readFileSync('/app/'+p)).digest('hex')]))));";actual=json.loads(s.check_output(k+['exec',pod['metadata']['name'],'-c','app','--','node','--input-type=module','-e',code,json.dumps(list(hashes))],timeout=20));assert actual==hashes;save('runtime-files.json',{'result':'PASS','actualRemoteFiles':len(actual),'hashes':actual,'baseline':'../runtime-files.json'})
+index=raw('/');assets=[];b=json.load(open('deploy/verification/candidate-40b9ed8/served-assets.json'));assert hashlib.sha256(index).hexdigest()==b['indexSha256']
+for path in re.findall(r'(?:src|href)="(/assets/[^\"]+)"',index.decode()):
+ data=raw(path);sha=hashlib.sha256(data).hexdigest();assert sha==next(x['sha256']for x in b['assets']if x['path']==path);assets.append({'path':path,'sha256':sha,'bytes':len(data)})
+save('served-assets.json',{'result':'PASS','indexSha256':b['indexSha256'],'assets':assets,'baseline':'../served-assets.json'});guide=raw('/api/guide',True);assert hashlib.sha256(guide).hexdigest()==hashlib.sha256(pathlib.Path('artifacts/private/build-40b9ed8/docs/protocol.md').read_bytes()).hexdigest();assert b'boolean `online`'in guide and b'online: null'in guide;save('served-guide.json',{'result':'PASS','status':200,'bytes':len(guide),'sha256':hashlib.sha256(guide).hexdigest(),'strictBooleanOnlineAndNullGuidance':True});save('summary.json',{'result':'PASS','checkedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'version':'1.7.1','image':image,'podUID':uid,'checks':['identity.json','health-config.json','auth.json','continuity.json','runtime-files.json','served-assets.json'],'readOnly':True,'noMainOrPortMutations':True})

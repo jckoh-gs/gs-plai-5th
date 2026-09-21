@@ -1,0 +1,14 @@
+✔ command list observer requires exact target/version/digest/private path before I/O (0.406625ms)
+✔ remote observation forbids controlled faults unless explicit actual-only (0.103125ms)
+✔ list patch-version support retains exact versions and actual-only remote gates (0.150875ms)
+✔ readonly event harness requires explicit matching reviewed target before I/O (0.486959ms)
+✔ event source gate refuses missing version/hash/token/output and unsafe path (0.11275ms)
+✔ event patch-version support preserves exact local and remote destinations (0.170292ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 32.703458

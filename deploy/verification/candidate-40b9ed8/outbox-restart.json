@@ -1,0 +1,48 @@
+{
+  "result": "PASS",
+  "sourceCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "appImage": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "checkedAt": "2026-09-21T17:59:32.358Z",
+  "context": "charles-k3s",
+  "namespace": "gs-plai-5h",
+  "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+  "beforePod": {
+    "name": "grid-77c68c94f8-5xfb8",
+    "uid": "2a16a910-1600-47f8-ac19-16c263850d26",
+    "image": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+    "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876"
+  },
+  "afterPod": {
+    "name": "grid-69d8766f7-zmfq8",
+    "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+    "image": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+    "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876"
+  },
+  "podReplaced": true,
+  "messageId": "2a075930-2dd7-4384-a97b-2d9575fbb7bd",
+  "sequence": 599,
+  "bodySha256": "5ac56ba090d3db1c92ee9f420ceba21a7e16edaadadaa5c381cc220c9426b978",
+  "samePersistedBodyBeforeAndAfterRestart": true,
+  "sameObservedMQTTBody": true,
+  "ackedAt": "2026-09-21T17:59:26.037Z",
+  "consistentPendingBackup": "/data/pending-outbox-40b9ed8-20260921T175846022Z.sqlite",
+  "pendingSnapshot": {
+    "result": "PASS",
+    "workerExitConfirmed": true,
+    "integrity": "ok",
+    "stage": "verified",
+    "steps": 2622,
+    "totalPages": 262222,
+    "remainingPages": 0,
+    "elapsedMs": 11254,
+    "snapshotAt": 1790013540426,
+    "snapshotCreation": "new-supervised",
+    "method": "fixed WAL read snapshot; supervised node:sqlite backup",
+    "timePolicy": {
+      "stopAt": "2026-09-21T18:03:46.022Z",
+      "supervisorMaxMs": 80000,
+      "hostCommandMaxMs": 90000,
+      "remoteCancellationGuaranteed": false
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T18:01:48.287803+00:00",
+  "readOnly": true,
+  "metadata": "deploy/verification/stable-backup-40b9ed8.json",
+  "sha256": "5ff34f3e5dbc52f07b899f0c8013db130e5fd13c3d315e92aa512d474ea1f782",
+  "bytes": 1075081216,
+  "mode": "0600",
+  "integrity": "ok",
+  "plants": 5,
+  "pending": 0,
+  "snapshotWorkerExitConfirmed": true,
+  "operationJournalStatus": "verified",
+  "operationJournalStage": "complete",
+  "postRemoteWorkers": 0,
+  "scope": "Root independent whole localSHA/SQLite/permissions and completedsource/worker/journal evidence. Restore notyetproved; stable1.7/1cab remainsfallback."
+}

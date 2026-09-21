@@ -1,0 +1,19 @@
+{
+  "state": "PREPARED_NOT_EXECUTED",
+  "preparedAt": "2026-09-21T17:44:29.659719+00:00",
+  "metadataPath": "deploy/verification/pre-1.7.1-backup.json",
+  "expectedImage": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+  "expectedPodUID": "79784e51-f961-4e34-86d8-196827a8e26c",
+  "commandAfterExplicitRootStart": "python3 artifacts/private/pre-1.7.1-backup-monitor.py --start-after-root-first-hour-release > deploy/verification/candidate-40b9ed8/pre-upgrade/backup/monitor.log 2>&1",
+  "guards": [
+    "Explicit root-start flag",
+    "Actual firsthour summary exists and UTC>=17:45:54.307",
+    "Currentrun exactd98/d1e4; expected actualPodUID and Ready images/restarts0/0",
+    "Metadata absent and no journal for same metadata",
+    "Old failed final absent, old439MBpartial retained, oldoperation process absent; disk>=3GB",
+    "Before freeze and originaldeadline enforced"
+  ],
+  "observations": "3-second health (3s HTTP timeout), Pod identity/readiness/restarts, disk and current/old paths sizes, remote process target/startticks/codeSHA; JSONL/hoststart/end/terminal/source hashes preserved. Consecutive health failures printalert and writehealth-alert.json for root immediate notification; no automated broad kill.",
+  "backupBounds": "Currenthelper: remote supervisor80s/worker exit proof, host snapshot90s, entirebackup180s; monitor200s/originaldeadline",
+  "scope": "Preparation only, no kubectl/API/backup executed. At start one backup unique timestamp; no retries or oldfile deletion."
+}

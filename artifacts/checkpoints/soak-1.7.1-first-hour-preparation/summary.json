@@ -1,0 +1,32 @@
+{
+  "result": "PREPARATION_VERIFIED",
+  "preparedAt": "2026-09-21T18:01:05.423846+00:00",
+  "script": "artifacts/checkpoints/soak-1.7.1-first-hour-preparation/capture-first-hour.py",
+  "sha256": "5ddb1143d7fa51e0dcf8842461e789cf10fec8271e7ed6a53dd8aec884800735",
+  "notBefore": "2026-09-21T18:59:55.011Z",
+  "expectedOutput": "artifacts/checkpoints/soak-1.7.1-first-hour",
+  "guardCheck": {
+    "prematureExitCode": 1,
+    "message": "First hour not yet observed; no remote read or checkpoint directory creation reached",
+    "outputDirectoryAbsent": true,
+    "sourceAST": "PASS"
+  },
+  "sourcePreflightBeforeRemoteAndOutput": true,
+  "primarySourceScope": "Actual launch command uses pre-saved1.7.1 entrypoint and its sibling diagnostics; current exact hashes verified. Not memory attestation or earlier epoch source claim.",
+  "expectedIdentities": {
+    "primary": {
+      "pid": 57533,
+      "handle": 72957,
+      "sessionId": "0ea34e34-e199-4b14-84ab-40ff75fa5d96",
+      "startedAt": "2026-09-21T17:59:54.698Z"
+    },
+    "audit": {
+      "pid": 57534,
+      "handle": 8133,
+      "sessionId": "1e38bd3c-002a-49f4-9aa8-9039887b7889",
+      "startedAt": "2026-09-21T17:59:55.011Z"
+    },
+    "podUID": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc"
+  },
+  "scope": "Preparation only. No first-hour capture, remote command, observer/process/counter changes or scheduled timer. Originalfreeze/deadline retained."
+}

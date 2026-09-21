@@ -45,13 +45,13 @@
   "requestedModel": "Codex Astra",
   "modelVerification": "Agents inherited main session model; exact runtime model identifier not exposed by available goal tools.",
   "deployment": {
-    "observedAt": "2026-09-21T16:58:35.615984+00:00",
-    "status": "Actual1.7 Ready after controlled outboxrestart; root verified after both restoration rigs cleaned",
-    "sourceCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
-    "prdVersion": "1.14",
+    "observedAt": "2026-09-21T17:59:36.972Z",
+    "status": "Actual1.7.1 mainfunctional+outbox+rootnormal PASS; newobservers andnormalbackup/current+backwardrestore pending",
+    "sourceCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+    "prdVersion": "1.15",
     "context": "charles-k3s",
     "namespace": "gs-plai-5h",
-    "appImage": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+    "appImage": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
     "brokerImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
     "registryImage": "127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c",
     "uiTunnel": "http://127.0.0.1:3104",
@@ -61,10 +61,10 @@
     "recoveryReplicas": 0,
     "name": "grid",
     "mqttImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
-    "productVersion": "1.7.0",
-    "podUid": "79784e51-f961-4e34-86d8-196827a8e26c",
+    "productVersion": "1.7.1",
+    "podUid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
     "appContainerRestarts": 0,
-    "podName": "grid-86dc4cf87-kq2hr"
+    "podName": "grid-69d8766f7-zmfq8"
   },
   "backup": {
     "result": "PASS",
@@ -151,7 +151,7 @@
     "idea": "IDEA-012",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T17:16:40.505705+00:00",
-    "status": "Exact candidate image/local/independent security/registry complete; no mainwrite before actual1.7 firsthour capture",
+    "status": "Actual1.7.1 main identity/UI/API/MQTT/online allPASS; controlledoutbox next",
     "fallbackTag": "stable-v1.7.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.7.0.json",
     "beforeEvidence": "docs/operations/NFR08-CONTRACT-FIXTURES-20260922.json",
@@ -161,18 +161,20 @@
     "localSummary": "artifacts/checkpoints/candidate-1.7.1-local/summary.json",
     "independentLocalReview": "docs/product/REVIEW-041.md",
     "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
-    "phase": "Actual stable1.7 firsthour captured and root13hash review passed; fresh pre1.7.1 backup active45736. No rollout yet.",
+    "phase": "Normal1.7.1 backupwholeSHA/SQLite/rootreview PASS; pairedsame5ffcurrent1.7.1/back1.7restore starting",
     "activeOperations": [
       {
         "owner": "/root/deployment",
-        "kind": "fresh pre1.7.1 backup with health monitor",
-        "handle": 45736,
-        "hostBackupPid": 55340,
-        "ownerReportedStart": "2026-09-21T17:46:57.245Z",
-        "metadata": "deploy/verification/pre-1.7.1-backup.json",
-        "operationJournal": "artifacts/operations/backups/20260921T174657281Z.json",
-        "remotePath": "/data/stable-d98d3c4-20260921T174657281Z.sqlite",
-        "state": "Owner polling; reconcile same journal/immutabletarget before any retry."
+        "kind": "pairedisolatedrestore setup/baseline/MQTT/cleanup",
+        "state": "Dispatched; askownerforactualhandle beforeaction",
+        "currentRig": "grid-restore-40b9ed8",
+        "backwardRig": "grid-restore-back-40b9ed8",
+        "backup": "deploy/verification/stable-backup-40b9ed8.json"
+      },
+      {
+        "owner": "/root/issues",
+        "kind": "pairedisolatedrestore browserregression andownfixtures",
+        "state": "Coordinating afterownerReady; no mainwrites"
       }
     ],
     "completedImageBuild": {
@@ -214,6 +216,45 @@
       "guards": "deploy/verification/candidate-40b9ed8/transition-preparation/focused-guards.json",
       "guardChecks": 15,
       "requires": "Root captures actualfirsthour and verifies freshsamecurrentprebackup before explicit release. Stop/archive currentobserver epoch andsingle supervisor onlyafterthosechecks."
+    },
+    "completedPreUpgradeBackup": {
+      "owner": "/root/deployment",
+      "handle": 45736,
+      "exitCode": 0,
+      "metadata": "deploy/verification/pre-1.7.1-backup.json",
+      "rootReview": "deploy/verification/candidate-40b9ed8/pre-upgrade/backup/root-backup-review.json",
+      "sha256": "7f1735fa246fab173061cc1c92025168f300b716ff8d7554626eb808b7a81c87",
+      "bytes": 1050394624
+    },
+    "mainWritesAllowed": true,
+    "mainWriteScope": "Owned RTUf496 offline true/false +sameimage controlledrestart only; restoreoriginalfalse. No new model/settings/SCADA dispatch.",
+    "completedRollout": {
+      "owner": "/root/deployment",
+      "handle": 95275,
+      "exitCode": 0,
+      "proof": "deploy/verification/candidate-40b9ed8/prepared-rollout/proof.json",
+      "rootProof": "deploy/verification/candidate-40b9ed8/prepared-rollout/root-ready.json"
+    },
+    "completedMainReadProofs": {
+      "regression": "deploy/verification/candidate-40b9ed8/main-regression/summary.json",
+      "readonly": "deploy/verification/candidate-40b9ed8/post-rollout/summary.json",
+      "allHandlesTerminal": true
+    },
+    "completedOutbox": {
+      "handle": 87050,
+      "exitCode": 0,
+      "observerHandle": 71381,
+      "observerExitCode": 0,
+      "evidence": "deploy/verification/candidate-40b9ed8/outbox-restart.json",
+      "normalEvidence": "deploy/verification/candidate-40b9ed8/outbox-post-normal.json"
+    },
+    "completedNormalBackup": {
+      "handle": 9205,
+      "exitCode": 0,
+      "metadata": "deploy/verification/stable-backup-40b9ed8.json",
+      "rootReview": "deploy/verification/candidate-40b9ed8/normal-backup/root-backup-review.json",
+      "sha256": "5ff34f3e5dbc52f07b899f0c8013db130e5fd13c3d315e92aa512d474ea1f782",
+      "bytes": 1075081216
     }
   },
   "previousStableCheckpoints": [
@@ -361,14 +402,15 @@
     }
   ],
   "soak": {
-    "directory": "artifacts/soak/v1.7.0",
-    "sessionId": "28208f59-d2d9-40c4-83a3-d608b1ac5570",
-    "startedAt": "2026-09-21T16:45:54.122Z",
+    "directory": "artifacts/soak/v1.7.1",
+    "sessionId": "0ea34e34-e199-4b14-84ab-40ff75fa5d96",
+    "startedAt": "2026-09-21T17:59:54.698Z",
     "readOnly": true,
     "expectedStopAt": "2026-09-21T21:37:33.079009+00:00",
-    "priorEvidence": "artifacts/checkpoints/soak-1.6.0/summary.json",
-    "gapReason": "Planned1.7upgrade/outbox; originalsettingsrestored before newepoch",
-    "activationEvidence": "artifacts/checkpoints/observer-1.7-activation/activation.json"
+    "priorEvidence": "artifacts/checkpoints/soak-1.7.0/summary.json",
+    "gapReason": "Planned1.7.1upgrade/outbox; originalsettings verified before newepoch",
+    "activationEvidence": "artifacts/checkpoints/observer-1.7.1-activation/activation.json",
+    "state": "Active1.7.1"
   },
   "networkRecovery": {
     "supervisorCommand": "node scripts/connection-supervisor.mjs",
@@ -383,7 +425,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T17:47:39.708651+00:00",
+  "updatedAt": "2026-09-21T18:02:35.372097+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
@@ -655,5 +697,18 @@
       "appContainerRestarts": 0,
       "podName": "grid-5c4f47d7fd-pskhb"
     }
-  ]
+  ],
+  "previousSoak1_7": {
+    "directory": "artifacts/soak/v1.7.0",
+    "sessionId": "28208f59-d2d9-40c4-83a3-d608b1ac5570",
+    "startedAt": "2026-09-21T16:45:54.122Z",
+    "readOnly": true,
+    "expectedStopAt": "2026-09-21T21:37:33.079009+00:00",
+    "priorEvidence": "artifacts/checkpoints/soak-1.6.0/summary.json",
+    "gapReason": "Planned1.7upgrade/outbox; originalsettingsrestored before newepoch",
+    "activationEvidence": "artifacts/checkpoints/observer-1.7-activation/activation.json",
+    "state": "Ended1.7epoch forplanned1.7.1upgrade",
+    "endedAt": "2026-09-21T17:49:45.688Z",
+    "archive": "artifacts/checkpoints/soak-1.7.0/summary.json"
+  }
 }

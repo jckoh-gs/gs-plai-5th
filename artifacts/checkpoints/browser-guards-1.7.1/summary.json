@@ -1,0 +1,16 @@
+{
+  "result": "PASS_FOCUSED_OPERATIONAL_GUARDS",
+  "checkedAt": "2026-09-21T17:58:00.300866+00:00",
+  "tests": 6,
+  "exitCode": 0,
+  "nodeCheck": "both PASS",
+  "sourceHashes": {
+    "scripts/browser-event-time.cjs": "31e14c0dfe3aa744dd017fa30f60683dffa30fef9c8f0ff7f6c00321135bd1a6",
+    "scripts/check-command-list-freshness.cjs": "7af39b24ad9f3a1e102ed31b4cb1acaf1d49d9395551cf07900f2ed665fe90bb",
+    "tests/review-event-browser-target.test.js": "415253f2c7619fcb0ca60d7830b0ba111194d8c56316108d3e16ae5e3b6a9472",
+    "tests/review-command-list-target.test.js": "480113a4ef6574955660111f270d11c27cc3358678d9d1555ae7a61ffd712398"
+  },
+  "priorExecutedCopies": "deploy/verification/candidate-40b9ed8/main-readonly-source/adaptation.json",
+  "difference": "Public list retains both reviewed1.7.0 and1.7.1 instead of privatecopy1.7.1-only. Public event retains1.6.0/1.7.0 and adds1.7.1; local1.7.x maps explicit existing3111, not privatecopy fallback3110. No new ports or URL formats. Main3104/restore3105 and digest/token/actual-only behavior unchanged. Future/prerelease/buildmetadata rejected.",
+  "scope": "Only verification guards/tests. No runtime changes, browser rerun, remote requests or writes; previously passed private main evidence remains its original source proof. No claim that local1.7.1 fixture was run."
+}

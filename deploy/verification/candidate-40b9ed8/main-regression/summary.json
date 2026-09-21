@@ -1,0 +1,33 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T17:54:36.566931+00:00",
+  "version": "1.7.1",
+  "terminals": {
+    "authSSE85505": 0,
+    "previewBrowser88795": 0,
+    "previewAPI83497": 0,
+    "export56614": 0
+  },
+  "reports": [
+    "auth-sse/result.json",
+    "preview-browser/race.json",
+    "preview-api.json",
+    "export/result.json"
+  ],
+  "exactServedIdentity": "served-identity.json",
+  "original5IdentityAfter": "after-identity.json",
+  "pageErrors": [],
+  "exportAfter": "../main-mqtt.json PASS actual125/error0",
+  "exportStatesCompared": [
+    10,
+    1
+  ],
+  "scope": "No persisted RTU/settings/control writes from these scripts. Preview POST is pure/nonpersisting; auth/SSE interruption and preview delays use owned local proxies; export401 is browser response fixture, not remoteoutage.",
+  "cleanup": "All wrappers terminal0 after scriptfinally browser/proxy sockets/server cleanup. Main forward/Pod/observers not changed by reviewer.",
+  "sourceHashes": {
+    "browser-preview-race.cjs": "2ce1248a8685c5d840dcf75f7ebda35f70e1a30f2f4f66a9cbda1a7c37224d56",
+    "browser-command-export.cjs": "d0496cd8a6f526bdddf61701272b1c9cf9d792d2dfbc489596eda87543a8a278",
+    "browser-check.cjs": "9844dbf9fe8d30ce08465c70c373798cd510ec4156737f8ce721f052d356c7c8",
+    "remote-preview.mjs": "fd00c96113a8b805502961a15ed3287ee1dbce1643be59c52d7978ad1a17a0cb"
+  }
+}

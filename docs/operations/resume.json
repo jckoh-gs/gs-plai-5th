@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T17:48:08.894247+00:00",
+  "updatedAt": "2026-09-21T18:02:35.372719+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -31,7 +31,7 @@
     "productVersion": "1.7.1",
     "prdVersion": "1.15",
     "idea": "IDEA-012",
-    "state": "Candidateexistingcontractpatch; actualmainstable1.7"
+    "state": "Actualmain/outbox PASS; normalbackup/current+backrestore pending; stablefallback1.7/1cab"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -43,7 +43,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "1.7.1 local/exactimage/security/registry and stable1.7actualfirsthour complete. Await owner45736 prebackup terminal; verifywholebackuphash/integrity/workerexit/UID. Then gracefully stop and archive primary85394/audit60682, stop supervisor77410 afterobservertermination, release preparedexact234 rollout usingactualfirsthourindex8e4d091f... andprebackupmetadatahash. VerifyReady/continuity; updateactualrun; startsinglematching supervisor; remoteUI/MQTT/online/outbox thennormalbackup/current1.7.1+back1.7restore/newmanifest. No repeat of completed local/image gates.",
+    "Normal1.7.1 exact5ff backup/rootreview complete. Await deployment/issues pairedcurrent1.7.1/back1.7samebackup allproofs+cleanup. Root independentlychecks, thenproductacceptance/newimmutablemanifest. No repeatedmainwrite; keep72957/8133/48590 alive.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -68,15 +68,16 @@
   ],
   "supplementaryObservation": {
     "kind": "read-only per-RTU full SCADA auditor v1",
-    "sessionId": "70932d07-b127-4b9b-874f-e2796728ff12",
-    "directory": "artifacts/soak/telemetry-audit/2026-09-21T16-45-54-307Z-70932d07",
-    "startedAt": "2026-09-21T16:45:54.307Z",
+    "sessionId": "1e38bd3c-002a-49f4-9aa8-9039887b7889",
+    "directory": "artifacts/soak/telemetry-audit/v1.7.1-20260921T1800",
+    "startedAt": "2026-09-21T17:59:55.011Z",
     "expectedStopAt": "2026-09-21T21:37:33.079Z",
     "instructions": "docs/operations/TELEMETRY-AUDIT.md",
-    "handle": 60682,
-    "pid": 34755,
-    "processIdentity": "Tue Sep 22 01:45:54 2026",
-    "scope": "Current1.7 read-only epoch after planned upgrade/outbox; earlier ended epochs retained in previousObservations and historical baselines. No uninterrupted/universal receipt claim."
+    "handle": 8133,
+    "pid": 57534,
+    "processIdentity": "Tue Sep 22 02:59:54 2026",
+    "scope": "New connected read-only epoch after rootoutboxpostnormal; no firsthourclaim. Primary launched exact saved source copy, audit actual startup hashes verified.",
+    "state": "Active1.7.1"
   },
   "observationCheckpoints": [
     {
@@ -312,20 +313,82 @@
       },
       "archive": "artifacts/checkpoints/soak-1.5.0/summary.json",
       "endedAt": "2026-09-21T15:54:29.707Z"
+    },
+    {
+      "scope": "Ended1.7epoch archived before1.7.1 transition",
+      "primary": {
+        "handle": 85394,
+        "pid": 34756,
+        "processIdentity": "Tue Sep 22 01:45:54 2026",
+        "state": "ended",
+        "exitCode": 0
+      },
+      "audit": {
+        "handle": 60682,
+        "pid": 34755,
+        "processIdentity": "Tue Sep 22 01:45:54 2026",
+        "state": "ended",
+        "exitCode": 0
+      },
+      "supplementaryObservation": {
+        "kind": "read-only per-RTU full SCADA auditor v1",
+        "sessionId": "70932d07-b127-4b9b-874f-e2796728ff12",
+        "directory": "artifacts/soak/telemetry-audit/2026-09-21T16-45-54-307Z-70932d07",
+        "startedAt": "2026-09-21T16:45:54.307Z",
+        "expectedStopAt": "2026-09-21T21:37:33.079Z",
+        "instructions": "docs/operations/TELEMETRY-AUDIT.md",
+        "handle": 60682,
+        "pid": 34755,
+        "processIdentity": "Tue Sep 22 01:45:54 2026",
+        "scope": "Current1.7 read-only epoch after planned upgrade/outbox; earlier ended epochs retained in previousObservations and historical baselines. No uninterrupted/universal receipt claim.",
+        "state": "Ended1.7; retainhistory untilnew1.7.1epoch"
+      },
+      "baseline": {
+        "observedAt": "2026-09-21T16:46:28.350572+00:00",
+        "primaryApiErrors": 0,
+        "primaryConnectionErrors": 0,
+        "auditConnectionErrors": 0,
+        "evidence": "artifacts/checkpoints/observer-1.7-activation/activation.json",
+        "scope": "New1.7baseline; comparelaterincrementswithoutresettinghistory"
+      },
+      "firstHourPreparation": {
+        "preparedAt": "2026-09-21T17:02:56.101386+00:00",
+        "script": "artifacts/checkpoints/soak-1.7-first-hour-preparation/capture-first-hour.py",
+        "sha256": "919d6b64231fb76462ba1c4e2cfe8b93cd7e448462d54150daa621393208db41",
+        "notBefore": "2026-09-21T17:45:54.307Z",
+        "expectedOutput": "artifacts/checkpoints/soak-1.7.0-first-hour",
+        "scope": "Preparation only; prefix first requires fullhour before remotequery/output. Primary source captured now with d98byteequality (not startup attestation); audit actual startup-source hashes checked. Allsource preflight before remotequery/outdircreation. Actualprocess/Readychecks retained.",
+        "guardCheck": {
+          "result": "PASS",
+          "prematureExitCode": 1,
+          "message": "First hour not yet observed; do not create checkpoint"
+        },
+        "state": "Historical1.7 firsthour complete andepoch ended. New1.7.1 script beingprepared; neverrerun oldcapture.",
+        "originalScriptSha256": "4ebe96dd97ad7280e94b0f26c7ee130957d8f74c3807d4072494b1db2a050d13",
+        "primarySourcePreparation": "artifacts/checkpoints/soak-1.7-first-hour-preparation/primary-source/provenance.json",
+        "captureHandle": 72480,
+        "captureExitCode": 0,
+        "evidence": "artifacts/checkpoints/soak-1.7.0-first-hour/summary.json",
+        "indexSha256": "8e4d091fb5022a3da4e5b51b7d89539c7c3deae592afbdb81e78cf9f748f5cd4",
+        "rootHashChecks": 13,
+        "independentReview": "docs/product/REVIEW-043.md",
+        "correctedPrematureGuard": "artifacts/checkpoints/soak-1.7-first-hour-preparation/corrected-premature-guard.json"
+      },
+      "archive": "artifacts/checkpoints/soak-1.7.0/summary.json"
     }
   ],
   "currentObservationHandles": {
-    "primary": 85394,
-    "audit": 60682,
-    "supervisor": 77410
+    "primary": 72957,
+    "audit": 8133,
+    "supervisor": 48590
   },
   "currentObservationBaselines": {
-    "observedAt": "2026-09-21T16:46:28.350572+00:00",
+    "observedAt": "2026-09-21T18:00:47.974489+00:00",
     "primaryApiErrors": 0,
     "primaryConnectionErrors": 0,
     "auditConnectionErrors": 0,
-    "evidence": "artifacts/checkpoints/observer-1.7-activation/activation.json",
-    "scope": "New1.7baseline; comparelaterincrementswithoutresettinghistory"
+    "evidence": "artifacts/checkpoints/observer-1.7.1-activation/activation.json",
+    "scope": "New1.7.1baseline afterplannedoutbox; preserve earlierhistory and laterincrements"
   },
   "completedOperations": [
     {
@@ -353,19 +416,19 @@
   ],
   "currentObservationProcesses": {
     "primary": {
-      "handle": 85394,
-      "pid": 34756,
-      "processIdentity": "Tue Sep 22 01:45:54 2026"
+      "handle": 72957,
+      "pid": 57533,
+      "processIdentity": "Tue Sep 22 02:59:54 2026"
     },
     "audit": {
-      "handle": 60682,
-      "pid": 34755,
-      "processIdentity": "Tue Sep 22 01:45:54 2026"
+      "handle": 8133,
+      "pid": 57534,
+      "processIdentity": "Tue Sep 22 02:59:54 2026"
     },
     "supervisor": {
-      "handle": 77410,
-      "pid": 33567,
-      "processIdentity": "Tue Sep 22 01:40:37 2026"
+      "handle": 48590,
+      "pid": 56137,
+      "processIdentity": "Tue Sep 22 02:52:15 2026"
     }
   },
   "operationalDeadlineHardening": {
@@ -401,13 +464,13 @@
   "currentObservationIncidents": [],
   "nextOperationalReview": "Maintain current1.7 observer epochs and authoritative ledger. No firsthourclaim before17:45:54.307Z; inspect fresh counters/actualReady/disk beforeoriginalfreeze. Continue finalmedia/deck preparation and finalsecurity/issues review.",
   "supervisorDiagnosticUpgrade": {
-    "state": "verified-active1.7",
+    "state": "verified-active1.7.1",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
     "evidence": "artifacts/checkpoints/supervisor-diagnostics/summary.json",
-    "currentPid": 33567,
-    "currentHandle": 77410,
-    "currentIdentity": "Tue Sep 22 01:40:37 2026",
-    "nextStep": "Maintain currentObservationProcesses for actual stable1.7 until the planned candidate transition; no duplicate forward/observer. Preserve original freeze and deadline.",
+    "currentPid": 56137,
+    "currentHandle": 48590,
+    "currentIdentity": "Tue Sep 22 02:52:15 2026",
+    "nextStep": "Keep current48590 supervisor and72957/8133 read-only1.7.1 observers. VerifyactualPID/startidentity beforeaction; originalfreeze unchanged.",
     "historicalActivation": {
       "scope": "Planned1.3 diagnostic activation13:23UTC; this process has since ended for the planned1.4 upgrade.",
       "evidence": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
@@ -419,7 +482,7 @@
       },
       "activatedHandleNowTerminal": 7353
     },
-    "currentActivation": "artifacts/checkpoints/observer-1.7-activation/activation.json",
+    "currentActivation": "deploy/verification/candidate-40b9ed8/connection-activation/proof.json",
     "historicalActivation1_6": {
       "state": "verified-active1.6",
       "currentPid": 19942,
@@ -427,6 +490,14 @@
       "currentIdentity": "Tue Sep 22 00:58:48 2026",
       "nextStep": "Maintain verified1.6 supervisor72380/PID19942 andprimary8363/PID21356,audit4110/PID21357 throughoriginalfreeze; noduplicateforward/observers.",
       "currentActivation": "deploy/verification/candidate-331ab9a/connection-activation/proof.json"
+    },
+    "historicalActivation1_7": {
+      "state": "verified-active1.7",
+      "currentPid": 33567,
+      "currentHandle": 77410,
+      "currentIdentity": "Tue Sep 22 01:40:37 2026",
+      "nextStep": "Maintain currentObservationProcesses for actual stable1.7 until the planned candidate transition; no duplicate forward/observer. Preserve original freeze and deadline.",
+      "currentActivation": "artifacts/checkpoints/observer-1.7-activation/activation.json"
     }
   },
   "hostPowerGuard": {
@@ -463,28 +534,30 @@
     "idea": "IDEA-012",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T17:16:40.505705+00:00",
-    "status": "Exact candidate image/local/independent security/registry complete; no mainwrite before actual1.7 firsthour capture",
+    "status": "Actual1.7.1 main identity/UI/API/MQTT/online allPASS; controlledoutbox next",
     "fallbackTag": "stable-v1.7.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.7.0.json",
     "beforeEvidence": "docs/operations/NFR08-CONTRACT-FIXTURES-20260922.json",
     "adoptionReview": "docs/product/REVIEW-040.md",
     "implementationOwner": "/root/transport",
     "scope": "StrictbooleanRTUonline in suppliedmonitor; exampleenv/ports/unsupportedlegacy wording. No serverDBUI/wire/OSS changes. Do not rollout before captured actual1.7 firsthour at17:45:54.307Z.",
-    "phase": "Actual stable1.7 firsthour captured and root13hash review passed; fresh pre1.7.1 backup active45736. No rollout yet.",
+    "phase": "Normal1.7.1 backupwholeSHA/SQLite/rootreview PASS; pairedsame5ffcurrent1.7.1/back1.7restore starting",
     "activeOperations": [
       {
         "owner": "/root/deployment",
-        "kind": "fresh pre1.7.1 backup with health monitor",
-        "handle": 45736,
-        "hostBackupPid": 55340,
-        "ownerReportedStart": "2026-09-21T17:46:57.245Z",
-        "metadata": "deploy/verification/pre-1.7.1-backup.json",
-        "operationJournal": "artifacts/operations/backups/20260921T174657281Z.json",
-        "remotePath": "/data/stable-d98d3c4-20260921T174657281Z.sqlite",
-        "state": "Owner polling; reconcile same journal/immutabletarget before any retry."
+        "kind": "pairedisolatedrestore setup/baseline/MQTT/cleanup",
+        "state": "Dispatched; askownerforactualhandle beforeaction",
+        "currentRig": "grid-restore-40b9ed8",
+        "backwardRig": "grid-restore-back-40b9ed8",
+        "backup": "deploy/verification/stable-backup-40b9ed8.json"
+      },
+      {
+        "owner": "/root/issues",
+        "kind": "pairedisolatedrestore browserregression andownfixtures",
+        "state": "Coordinating afterownerReady; no mainwrites"
       }
     ],
-    "mainWritesAllowed": false,
+    "mainWritesAllowed": true,
     "localClientStatusEvidence": "artifacts/checkpoints/candidate-1.7.1-local/client-status-integration.json",
     "mediaCompatibility": "docs/operations/MEDIA-1.7.1-COMPATIBILITY.md",
     "policy": "Preserve actual1.7/1cab/stabletags; capture real first hour before rollout. Owned private quickstart3112 ended; unrelated3101 PID20846 preserved. CLI test used random tempDB/HTTPport/prefix and owned local18883 broker. No ended fixture restart.",
@@ -570,6 +643,58 @@
       "guards": "deploy/verification/candidate-40b9ed8/transition-preparation/focused-guards.json",
       "guardChecks": 15,
       "requires": "Root captures actualfirsthour and verifies freshsamecurrentprebackup before explicit release. Stop/archive currentobserver epoch andsingle supervisor onlyafterthosechecks."
+    },
+    "completedPreUpgradeBackup": {
+      "owner": "/root/deployment",
+      "handle": 45736,
+      "exitCode": 0,
+      "metadata": "deploy/verification/pre-1.7.1-backup.json",
+      "rootReview": "deploy/verification/candidate-40b9ed8/pre-upgrade/backup/root-backup-review.json",
+      "sha256": "7f1735fa246fab173061cc1c92025168f300b716ff8d7554626eb808b7a81c87",
+      "bytes": 1050394624
+    },
+    "mainWriteScope": "Owned RTUf496 offline true/false +sameimage controlledrestart only; restoreoriginalfalse. No new model/settings/SCADA dispatch.",
+    "completedRollout": {
+      "owner": "/root/deployment",
+      "handle": 95275,
+      "exitCode": 0,
+      "proof": "deploy/verification/candidate-40b9ed8/prepared-rollout/proof.json",
+      "rootProof": "deploy/verification/candidate-40b9ed8/prepared-rollout/root-ready.json"
+    },
+    "completedMainMQTT": {
+      "handle": 51889,
+      "exitCode": 0,
+      "evidence": "deploy/verification/candidate-40b9ed8/main-mqtt.json",
+      "commandId": "247378f3-5d3e-499b-b283-d00cc6672547",
+      "actualKw": 125,
+      "errorKw": 0
+    },
+    "completedMainClientOnline": {
+      "handle": 61515,
+      "exitCode": 0,
+      "evidence": "deploy/verification/candidate-40b9ed8/main-client-online.json",
+      "scope": "Onlinepayload seen; clientdoesnotexpose retainflag, no retained-delivery claim"
+    },
+    "completedMainReadProofs": {
+      "regression": "deploy/verification/candidate-40b9ed8/main-regression/summary.json",
+      "readonly": "deploy/verification/candidate-40b9ed8/post-rollout/summary.json",
+      "allHandlesTerminal": true
+    },
+    "completedOutbox": {
+      "handle": 87050,
+      "exitCode": 0,
+      "observerHandle": 71381,
+      "observerExitCode": 0,
+      "evidence": "deploy/verification/candidate-40b9ed8/outbox-restart.json",
+      "normalEvidence": "deploy/verification/candidate-40b9ed8/outbox-post-normal.json"
+    },
+    "completedNormalBackup": {
+      "handle": 9205,
+      "exitCode": 0,
+      "metadata": "deploy/verification/stable-backup-40b9ed8.json",
+      "rootReview": "deploy/verification/candidate-40b9ed8/normal-backup/root-backup-review.json",
+      "sha256": "5ff34f3e5dbc52f07b899f0c8013db130e5fd13c3d315e92aa512d474ea1f782",
+      "bytes": 1075081216
     }
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
@@ -668,27 +793,37 @@
     ]
   },
   "firstHourCapturePreparation": {
-    "preparedAt": "2026-09-21T17:02:56.101386+00:00",
-    "script": "artifacts/checkpoints/soak-1.7-first-hour-preparation/capture-first-hour.py",
-    "sha256": "919d6b64231fb76462ba1c4e2cfe8b93cd7e448462d54150daa621393208db41",
-    "notBefore": "2026-09-21T17:45:54.307Z",
-    "expectedOutput": "artifacts/checkpoints/soak-1.7.0-first-hour",
-    "scope": "Preparation only; prefix first requires fullhour before remotequery/output. Primary source captured now with d98byteequality (not startup attestation); audit actual startup-source hashes checked. Allsource preflight before remotequery/outdircreation. Actualprocess/Readychecks retained.",
+    "result": "PREPARATION_VERIFIED",
+    "preparedAt": "2026-09-21T18:01:05.423846+00:00",
+    "script": "artifacts/checkpoints/soak-1.7.1-first-hour-preparation/capture-first-hour.py",
+    "sha256": "5ddb1143d7fa51e0dcf8842461e789cf10fec8271e7ed6a53dd8aec884800735",
+    "notBefore": "2026-09-21T18:59:55.011Z",
+    "expectedOutput": "artifacts/checkpoints/soak-1.7.1-first-hour",
     "guardCheck": {
-      "result": "PASS",
       "prematureExitCode": 1,
-      "message": "First hour not yet observed; do not create checkpoint"
+      "message": "First hour not yet observed; no remote read or checkpoint directory creation reached",
+      "outputDirectoryAbsent": true,
+      "sourceAST": "PASS"
     },
-    "state": "Captured actualfirsthour androotverified, processes continue",
-    "originalScriptSha256": "4ebe96dd97ad7280e94b0f26c7ee130957d8f74c3807d4072494b1db2a050d13",
-    "primarySourcePreparation": "artifacts/checkpoints/soak-1.7-first-hour-preparation/primary-source/provenance.json",
-    "captureHandle": 72480,
-    "captureExitCode": 0,
-    "evidence": "artifacts/checkpoints/soak-1.7.0-first-hour/summary.json",
-    "indexSha256": "8e4d091fb5022a3da4e5b51b7d89539c7c3deae592afbdb81e78cf9f748f5cd4",
-    "rootHashChecks": 13,
-    "independentReview": "docs/product/REVIEW-043.md",
-    "correctedPrematureGuard": "artifacts/checkpoints/soak-1.7-first-hour-preparation/corrected-premature-guard.json"
+    "sourcePreflightBeforeRemoteAndOutput": true,
+    "primarySourceScope": "Actual launch command uses pre-saved1.7.1 entrypoint and its sibling diagnostics; current exact hashes verified. Not memory attestation or earlier epoch source claim.",
+    "expectedIdentities": {
+      "primary": {
+        "pid": 57533,
+        "handle": 72957,
+        "sessionId": "0ea34e34-e199-4b14-84ab-40ff75fa5d96",
+        "startedAt": "2026-09-21T17:59:54.698Z"
+      },
+      "audit": {
+        "pid": 57534,
+        "handle": 8133,
+        "sessionId": "1e38bd3c-002a-49f4-9aa8-9039887b7889",
+        "startedAt": "2026-09-21T17:59:55.011Z"
+      },
+      "podUID": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc"
+    },
+    "scope": "Preparation only. No first-hour capture, remote command, observer/process/counter changes or scheduled timer. Originalfreeze/deadline retained.",
+    "state": "Prepared only; not before18:59:55.011Z and actualbothhourboundaries; no timerstarted"
   },
   "activeMediaRehearsal": {
     "productVersion": "1.7.0",
@@ -814,43 +949,44 @@
     "state": "Unused: observed1.5period ended before1hour; do notexecute onclosedepoch"
   },
   "plannedConnectionTransition": {
-    "reason": "1.7upgrade",
-    "state": "Complete1.7upgrade/outbox/rootnormal+single supervisor77410 andnew85394/60682 observers; keepcurrentprocesses; no duplicate transition",
+    "reason": "1.7.1 upgrade afteractual1.7firsthour and freshprebackup",
+    "state": "Completed1.7.1 rollout/outbox/newread-onlyepoch activation",
     "oldOwnedProcesses": {
       "primary": {
-        "handle": 8363,
-        "pid": 21356,
-        "processIdentity": "Tue Sep 22 01:03:59 2026"
+        "handle": 85394,
+        "pid": 34756,
+        "processIdentity": "Tue Sep 22 01:45:54 2026"
       },
       "audit": {
-        "handle": 4110,
-        "pid": 21357,
-        "processIdentity": "Tue Sep 22 01:03:59 2026"
+        "handle": 60682,
+        "pid": 34755,
+        "processIdentity": "Tue Sep 22 01:45:54 2026"
       },
       "supervisor": {
-        "handle": 72380,
-        "pid": 19942,
-        "processIdentity": "Tue Sep 22 00:58:48 2026"
+        "handle": 77410,
+        "pid": 33567,
+        "processIdentity": "Tue Sep 22 01:40:37 2026"
       }
     },
     "oldOwnedProcessesEnded": true,
-    "expectedOldImage": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
-    "desiredImage": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
-    "runtimeCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
-    "closedObservation": "artifacts/checkpoints/soak-1.6.0/summary.json",
+    "expectedOldImage": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+    "desiredImage": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+    "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+    "preBackup": "deploy/verification/pre-1.7.1-backup.json",
+    "firstHour": "artifacts/checkpoints/soak-1.7.0-first-hour/summary.json",
     "oldTerminalCodes": {
-      "primary8363": 0,
-      "audit4110": 0,
-      "supervisor72380": 0
+      "primary85394": 0,
+      "audit60682": 0,
+      "supervisor77410": 0
     },
-    "actualRollout": "deploy/verification/candidate-d98d3c4/rollout/proof.json",
-    "initialRolloutPodUid": "1fcd847c-cab2-4905-9fae-2d684c166aa5",
-    "currentVerifiedPodUid": "79784e51-f961-4e34-86d8-196827a8e26c",
+    "closedObservation": "artifacts/checkpoints/soak-1.7.0/summary.json",
     "portsFreedAtOldProcessRetirement": [
       3104,
       18884
     ],
-    "currentPortOwner": "supervisor77410 owns3104/18884; do not treat historical freedports as currentlyfree"
+    "actualRollout": "deploy/verification/candidate-40b9ed8/prepared-rollout/proof.json",
+    "initialRolloutPodUid": "2a16a910-1600-47f8-ac19-16c263850d26",
+    "currentVerifiedPodUid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc"
   },
   "previousStableRuntime": {
     "productVersion": "1.6.0",
@@ -1132,5 +1268,47 @@
       "issues"
     ],
     "requirement": "Actual selectedversion endverdicts and endchanges required; links/plansalone arenotcompletion"
-  }
+  },
+  "previousConnectionTransitions": [
+    {
+      "reason": "1.7upgrade",
+      "state": "Complete1.7upgrade/outbox/rootnormal+single supervisor77410 andnew85394/60682 observers; keepcurrentprocesses; no duplicate transition",
+      "oldOwnedProcesses": {
+        "primary": {
+          "handle": 8363,
+          "pid": 21356,
+          "processIdentity": "Tue Sep 22 01:03:59 2026"
+        },
+        "audit": {
+          "handle": 4110,
+          "pid": 21357,
+          "processIdentity": "Tue Sep 22 01:03:59 2026"
+        },
+        "supervisor": {
+          "handle": 72380,
+          "pid": 19942,
+          "processIdentity": "Tue Sep 22 00:58:48 2026"
+        }
+      },
+      "oldOwnedProcessesEnded": true,
+      "expectedOldImage": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
+      "desiredImage": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+      "runtimeCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
+      "closedObservation": "artifacts/checkpoints/soak-1.6.0/summary.json",
+      "oldTerminalCodes": {
+        "primary8363": 0,
+        "audit4110": 0,
+        "supervisor72380": 0
+      },
+      "actualRollout": "deploy/verification/candidate-d98d3c4/rollout/proof.json",
+      "initialRolloutPodUid": "1fcd847c-cab2-4905-9fae-2d684c166aa5",
+      "currentVerifiedPodUid": "79784e51-f961-4e34-86d8-196827a8e26c",
+      "portsFreedAtOldProcessRetirement": [
+        3104,
+        18884
+      ],
+      "currentPortOwner": "supervisor77410 owns3104/18884; do not treat historical freedports as currentlyfree"
+    }
+  ],
+  "currentObservationState": "Actual1.7.1 observers72957/8133 andsupervisor48590 verified. All older1.7 processes ended."
 }

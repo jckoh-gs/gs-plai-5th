@@ -1,0 +1,37 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T17:48:37.124677+00:00",
+  "metadata": "deploy/verification/pre-1.7.1-backup.json",
+  "metadataSha256": "49b56d47c2ec6722aca6354e10958b793dcff501636164fcc287f2584404e3a0",
+  "bytes": 1050394624,
+  "sha256": "7f1735fa246fab173061cc1c92025168f300b716ff8d7554626eb808b7a81c87",
+  "remotePath": "/data/stable-d98d3c4-20260921T174657281Z.sqlite",
+  "snapshot": {
+    "result": "PASS",
+    "workerExitConfirmed": true,
+    "integrity": "ok",
+    "stage": "verified",
+    "steps": 2564,
+    "totalPages": 256444,
+    "remainingPages": 0,
+    "elapsedMs": 18613,
+    "snapshotAt": 1790012818123,
+    "supervisorMaxMs": 80000,
+    "hostCommandMaxMs": 90000
+  },
+  "localMode": "0600",
+  "healthObservations": 21,
+  "healthFailures": 0,
+  "maxHealthElapsedMs": 1403,
+  "allReady": true,
+  "appBrokerRestarts": [
+    0,
+    0
+  ],
+  "samePodUID": "79784e51-f961-4e34-86d8-196827a8e26c",
+  "ownedRemoteProcessesRemaining": 0,
+  "oldIncompletePartialPreserved": true,
+  "otherVerifiedBackupsPreserved": true,
+  "terminalExit": 0,
+  "rolloutStarted": false
+}

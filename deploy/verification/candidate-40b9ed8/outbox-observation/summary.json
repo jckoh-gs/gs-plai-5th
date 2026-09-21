@@ -1,0 +1,39 @@
+{
+  "result": "OBSERVED",
+  "readOnly": true,
+  "startedAt": "2026-09-21T17:57:30.210614+00:00",
+  "endedAt": "2026-09-21T17:59:33.975652+00:00",
+  "samples": 38,
+  "podUIDs": [
+    "2a16a910-1600-47f8-ac19-16c263850d26",
+    "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc"
+  ],
+  "localHealthErrors": 4,
+  "stopReason": "root outbox proof PASS and current Ready/API1.7.1 recovered",
+  "limitation": "Observation begins after delegation; may miss earlier planned replacement. Root operation proof establishes full transition.",
+  "terminalExit": 0,
+  "preUID": "2a16a910-1600-47f8-ac19-16c263850d26",
+  "postUID": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+  "postHealth": {
+    "status": "ok",
+    "version": "1.7.1",
+    "mqttConnected": true,
+    "elapsedMs": 41
+  },
+  "postContainers": [
+    {
+      "name": "app",
+      "ready": true,
+      "restartCount": 0,
+      "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876"
+    },
+    {
+      "name": "mqtt",
+      "ready": true,
+      "restartCount": 0,
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  ],
+  "livenessFailureEvents": [],
+  "plannedReplacementObserved": true
+}

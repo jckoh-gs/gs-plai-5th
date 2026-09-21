@@ -1,8 +1,10 @@
 # 자율 실행 인계
 
-현재 실제 배포는 **제품 1.7.0 / PRD 1.14 / IDEA011 v1**이다. 소스 `d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9`, 이미지 `sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692`를 사용한다. 전체 목표는 미완료이며, 1.7/1cab의 기능·동일 스냅샷 복구 인수를 완료했다. 새 불변 매니페스트와 태그 원격 전달을 완료했으며 이전 검증된 1.6/9bd 체크포인트도 보존한다. 재개 시 현재 시각·최신 사용자 지시·[run.json](run.json)·[resume.json](resume.json)부터 읽는다.
+현재 실제 배포는 **후보 제품 1.7.1 / PRD 1.15 / IDEA012 v1**이다. 소스 `40b9ed898f32037e7a87259d12d145457575a4a8`, 이미지 `sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876`를 사용한다. 검증된 복원 기준은 아직 stable1.7/1cab이다. 전체 목표는 미완료이며, 1.7/1cab의 기능·동일 스냅샷 복구 인수를 완료했다. 새 불변 매니페스트와 태그 원격 전달을 완료했으며 이전 검증된 1.6/9bd 체크포인트도 보존한다. 재개 시 현재 시각·최신 사용자 지시·[run.json](run.json)·[resume.json](resume.json)부터 읽는다.
 
 ## 현재 후속 후보1.7.1 — 먼저 확인
+
+실제 교체와 원격 UI/API/가이드/online/MQTT 검증은 모두 종료0이다. supervisor48590/PID56137만 현재 연결을 소유한다. 기존1.7 primary85394/audit60682/supervisor77410은 종료0·보존 완료했으므로 재시작하지 않는다. outbox87050 종료0·root 정상화와 원래5설정·임시포트 종료를 확인했다. 새1.7.1 primary72957/PID57533, audit8133/PID57534를 기동하고 실제 수신 및 모든 현재 원장 연결을 확인했다. 1.7.1 정상 백업9205 종료0이며 1075081216B/SHA5ff34의 전체 해시·SQLite·0600·worker종료를 root도 확인했다. deployment/issues가 동일 백업의 현재1.7.1/하위1.7 격리 복원을 담당한다. 정확 백업 현재1.7.1/하위1.7 복원 인수 전까지 stable1.7/1cab을 유지한다. 현재 활성 작업은 resume.candidateOperations를 우선하며, 아래 준비 단계 설명은 역사 기록이다.
 
 NFR08 독립 검토에서 공급 monitor가 online true/false를 모두 같은 객체로 출력하고, protocol quickstart의 환경 준비·포트가 맞지 않으며 미지원 v1 호환 문장이 남아 있음을 확인했다. [수정 전 근거](NFR08-CONTRACT-FIXTURES-20260922.json), [REVIEW040](../product/REVIEW-040.md)를 근거로 IDEA012v1/PRD1.15/제품1.7.1 패치를 채택했다. CLI strictboolean online 및 가이드·부록·예제 안내만 수정한다. 실제1.7 배포/관측/복구 기준은 유지한다.
 

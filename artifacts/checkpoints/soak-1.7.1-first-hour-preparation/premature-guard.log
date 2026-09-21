@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/charleskoh/research/20260921-RALPTON/artifacts/checkpoints/soak-1.7.1-first-hour-preparation/capture-first-hour.py", line 12, in <module>
+    assert datetime.datetime.now(datetime.timezone.utc).timestamp()>=stamp('2026-09-21T18:59:55.011Z'),'First hour not yet observed; do not create checkpoint'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: First hour not yet observed; do not create checkpoint

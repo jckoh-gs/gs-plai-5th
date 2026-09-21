@@ -1,0 +1,38 @@
+{
+  "result": "PASS",
+  "metadata": "deploy/verification/stable-backup-40b9ed8.json",
+  "metadataSha256": "f891bd6a6752942e777a3e455504f4e4810f7cc9bd31cb10a4dfe90fbb4cf2ff",
+  "bytes": 1075081216,
+  "sha256": "5ff34f3e5dbc52f07b899f0c8013db130e5fd13c3d315e92aa512d474ea1f782",
+  "remotePath": "/data/stable-40b9ed8-20260921T180009013Z.sqlite",
+  "localMode": "0600",
+  "snapshot": {
+    "result": "PASS",
+    "workerExitConfirmed": true,
+    "integrity": "ok",
+    "stage": "verified",
+    "steps": 2624,
+    "totalPages": 262471,
+    "remainingPages": 0,
+    "elapsedMs": 10719,
+    "snapshotAt": 1790013609436,
+    "supervisorMaxMs": 80000,
+    "hostCommandMaxMs": 90000
+  },
+  "healthObservations": 16,
+  "healthFailures": 0,
+  "maxHealthElapsedMs": 2192,
+  "allReady": true,
+  "appBrokerRestarts": [
+    0,
+    0
+  ],
+  "samePodUID": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+  "ownedRemoteProcessesRemaining": 0,
+  "oldIncompletePartialAndVerifiedBackupsPreserved": true,
+  "terminalExit": 0,
+  "restoreStarted": false,
+  "finalJournal": "final-journal.json",
+  "finalJournalStatus": "verified",
+  "finalJournalStage": "complete"
+}

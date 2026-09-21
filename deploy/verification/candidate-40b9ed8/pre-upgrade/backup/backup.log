@@ -1,0 +1,49 @@
+{
+  "result": "PASS",
+  "capturedAt": "2026-09-21T17:47:03.066Z",
+  "verifiedAt": "2026-09-21T17:48:21.666Z",
+  "sourceCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
+  "appImage": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+  "verifiedTransferPod": {
+    "name": "grid-86dc4cf87-kq2hr",
+    "uid": "79784e51-f961-4e34-86d8-196827a8e26c",
+    "image": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+    "imageID": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692"
+  },
+  "podVerificationStage": "transfer",
+  "remotePath": "/data/stable-d98d3c4-20260921T174657281Z.sqlite",
+  "localPath": "artifacts/private/backups/stable-d98d3c4-20260921T174657281Z.sqlite",
+  "bytes": 1050394624,
+  "sha256": "7f1735fa246fab173061cc1c92025168f300b716ff8d7554626eb808b7a81c87",
+  "compressedBytes": 36987184,
+  "verifiedChunks": 36,
+  "transferChunkBytes": 1048576,
+  "remoteCompressionPeakRssBytes": 134770688,
+  "localPeakRssBytes": 264650752,
+  "integrity": "ok",
+  "plants": 5,
+  "pending": 0,
+  "snapshot": {
+    "result": "PASS",
+    "workerExitConfirmed": true,
+    "integrity": "ok",
+    "stage": "verified",
+    "steps": 2564,
+    "totalPages": 256444,
+    "remainingPages": 0,
+    "elapsedMs": 18613,
+    "snapshotAt": 1790012818123,
+    "supervisorMaxMs": 80000,
+    "hostCommandMaxMs": 90000
+  },
+  "snapshotCreation": "new-supervised",
+  "method": "fixed WAL read snapshot; supervised node:sqlite backup; streaming gzip and disk-backed chunk+whole SHA256 verification; private0600 copy",
+  "timePolicy": {
+    "startedAt": "2026-09-21T17:46:57.281Z",
+    "stopAt": "2026-09-21T17:49:57.281Z",
+    "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+    "remoteCancellationGuaranteed": false
+  },
+  "metadataPath": "deploy/verification/pre-1.7.1-backup.json",
+  "operationJournal": "artifacts/operations/backups/20260921T174657281Z.json"
+}
