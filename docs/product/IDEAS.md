@@ -134,3 +134,7 @@ IDEA010 기능·배포·복원 완료: REVIEW032에서 runtime331/image4af, main
 
 
 IDEA011 개정1 채택: PRD1.14/제품1.7.0후보, UI13 및 AT-COMMAND-LIST01 네개계약확정. 목록별마지막성공브라우저시각·조회상태·이전행보존/복구·RTU전환·단일유한abort polling에한정하며구현/인수는대기다. 위미채택표현은제안당시이력이다. stable1.6 운영checkpoint180fa68/runtime331/9bd fallback과원래21:37:33Z동결/22:07:33Z종료·최종영상/PPT조건은불변이다.
+
+### IDEA011 구현·배포·복원 인수 완료
+
+제품1.7.0/runtime d98d3c4/PRD1.14를 실제k3s에 배포했다. 로컬8군 경계검증과 실제main/현재복원 목록읽기, 같은1cab 스냅샷의1.7/1.6복원23보고서+2Pod identity를 REVIEW037에서 대조했다. REVIEW038은 checkpoint-1.7.0의1731해시/실제Ready/선택백업을 확인했다. 위 제안·채택대기 표현은 당시 이력이다. 종료시각과 최종 신규 영상·같은영상 PPT 게이트는 남아 있으며 전체 목표 완료를 뜻하지 않는다.

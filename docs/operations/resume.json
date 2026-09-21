@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T16:59:57.610640+00:00",
+  "updatedAt": "2026-09-21T17:02:02.711346+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -18,14 +18,18 @@
   },
   "stableManifest": {
     "path": "artifacts/releases/checkpoint-1.7.0.json",
-    "state": "pending-generation",
-    "historicalFallback": "artifacts/releases/checkpoint-1.6.0.json"
+    "state": "verified",
+    "historicalFallback": "artifacts/releases/checkpoint-1.6.0.json",
+    "sha256": "146d33ee23f426cee4826c1e1f1d569bbad2614051c65efa2f99b865bb08e439",
+    "manifestSourceCommit": "91a23b8d2e620ca9e12d584cf7169627c7e01437",
+    "independentReview": "docs/product/REVIEW-038.md",
+    "verification": "artifacts/checkpoints/release-1.7/verification.json"
   },
   "workingMilestone": {
     "productVersion": "1.7.0",
     "prdVersion": "1.14",
     "idea": "IDEA-011",
-    "state": "Functional main and same-snapshot paired restore accepted; publish immutable1.7 checkpoint next"
+    "state": "1.7 functional/runtime/recovery and immutablemanifest independentlyverified; new tags/push pending"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -37,7 +41,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Commit1.7 functional/recovery/review evidence, generate immutable checkpoint-1.7.0.json, verify allhashes/actualReady/selected1cabbackup independently, then create newstable/runtime tags and push. Do not repeat completed deployments/commands/backups/restores.",
+    "Create new stable-v1.7.0 at completed operational/evidence commit and runtimealias stable-runtime-v1.7.0-d98d3c4 at exactsource; atomic push/remote peel verify. Preserve immutable manifest and oldtags.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -362,7 +366,7 @@
     "instruction": "Use FINAL-RESTORE-PLAN bounded direct commands and media watchdog; inspect uncertain remote outcome before retry; immutable1.3 checkpoint unchanged"
   },
   "nextProductProposal": {
-    "state": "Adopted IDEA011revision1/product1.7/PRD1.14",
+    "state": "Implemented and functionallyaccepted IDEA011revision1/product1.7/PRD1.14; REVIEW037/038 complete",
     "owner": "/root/product",
     "review": "docs/product/REVIEW-034.md",
     "scope": "Existingcommandrows hide subsequentGETfailure despite healthyglobalSSE; browser-only503fixture/APIwrites0. Consider bounded command-list freshness UI withoutserver/DB/control changes.",
@@ -389,7 +393,7 @@
     "localFixtureOnly": true
   },
   "currentObservationIncidents": [],
-  "nextOperationalReview": "Candidate1.7 localimplementation/testing; main1.6observation stayslive. Rootownsprivatefixture setup. No firsthourclaim before17:03:59Z.",
+  "nextOperationalReview": "Publish verified1.7 checkpoint tags; maintain live1.7 observer epochs, no firsthourclaim before17:45:54.307Z. Originalfreeze21:37:33Z/deadline22:07:33Z unchanged.",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.6",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
@@ -443,7 +447,7 @@
     "productVersion": "1.7.0",
     "prdVersion": "1.14",
     "idea": "IDEA-011",
-    "phase": "All1.7 functional/current+backward recovery gates accepted; immutablemanifest/tags pending",
+    "phase": "1.7 all functional/restore/manifest gates PASS; new stable/runtime tags publication pending",
     "uiOwner": "/root/ui",
     "browserOwner": "/root/issues",
     "securityOwner": "/root/security",
@@ -647,28 +651,19 @@
     "state": "Unused: observed1.5period ended before1hour; do notexecute onclosedepoch"
   },
   "activeMediaRehearsal": {
-    "productVersion": "1.5.0",
+    "productVersion": "1.7.0",
     "mode": "preparation only, notfinalmedia",
-    "handle": 77945,
-    "supervisorPid": 99083,
-    "supervisorIdentity": "Mon Sep 21 23:43:48 2026",
-    "workerPid": 99087,
-    "workerIdentity": "Mon Sep 21 23:43:48 2026",
     "owner": "/root/media",
-    "state": "Corrected8scene rehearsal complete, reviewedframes/subtitles/technicalaudio and normalrecoveryPASS; finalmedia notcreated",
-    "baseUrl": "http://127.0.0.1:3109",
-    "mqttPort": 18883,
-    "mqttPrefix": "candidate15",
-    "config": "artifacts/media-preparation/full-candidate15-receipts-20260921/config.json",
-    "output": "artifacts/media-preparation/full-candidate15-receipts-20260921",
-    "privateJournal": "artifacts/private/media-candidate15-receipts-1790001828556.json",
-    "sourceEvidence": "artifacts/media-preparation/full-candidate15-receipts-20260921/source-hashes.json",
-    "policy": "Ask owning /root/media to poll77945 in its session. Main lookup maynotseethisownerhandle; inspect actualsamePID/startidentity too. Do not restart or independentrecover until confirmedterminal; preserve all priorattempts. Originalwindow unchanged.",
+    "handle": 58112,
     "exitCode": 0,
-    "checkpoint": "artifacts/checkpoints/media-candidate15-receipts",
-    "durationSeconds": 249.33,
-    "productionSeconds": 272.706,
-    "limitations": "Audio technical verification only; no pronunciation/listeningclaim."
+    "state": "Ended; restoredownedsettings/preexistingunchanged; local3111fixture retired",
+    "checkpoint": "artifacts/checkpoints/media-candidate17",
+    "output": "artifacts/media-preparation/full-candidate17-20260921",
+    "privateJournal": "artifacts/private/media-candidate17-1790008670218.json",
+    "durationSeconds": 255.33,
+    "productionSeconds": 279.911,
+    "independentReview": "docs/product/REVIEW-036.md",
+    "limitations": "Audio technical checks only, notpronunciationlistening; newfinalvideo required"
   },
   "fullGoalAudit": "docs/product/REVIEW-026.md",
   "previousMediaRehearsal": {
