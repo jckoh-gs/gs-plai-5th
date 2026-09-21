@@ -1,0 +1,14 @@
+{
+  "state": "READ_ONLY_OBSERVATION_COMPLETED",
+  "executionOwner": "root",
+  "tool": "exec_command",
+  "chunkId": "3d2b14",
+  "sessionId": null,
+  "exitCode": 0,
+  "wallTimeSeconds": 0.767084167,
+  "deadlineWrapperSeconds": 45,
+  "observedAt": "2026-09-21T19:53:24.772Z",
+  "observationSha256": "3a7fb1c20aa5eb2db04c7265e39411a463517fcfe0fb27d59e5ec6eef564df2a",
+  "operation": "Read exact main Pod identity before/after, execute preserved resource-read.mjs in app without DB access, read PVC and registry status, read local filesystem availability",
+  "scope": "Actual successful synchronous read. No backup, restore, deploy or final gate acceptance."
+}

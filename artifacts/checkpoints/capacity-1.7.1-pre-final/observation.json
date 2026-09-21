@@ -1,0 +1,66 @@
+{
+  "state": "READ_ONLY_OBSERVATION",
+  "startedAt": "2026-09-21T19:53:24.380682+00:00",
+  "observedAt": "2026-09-21T19:53:24.772Z",
+  "pod": {
+    "name": "grid-69d8766f7-zmfq8",
+    "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+    "node": "charleskoh-nucbox-g3",
+    "containers": [
+      {
+        "name": "app",
+        "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+        "ready": true,
+        "restarts": 0
+      },
+      {
+        "name": "mqtt",
+        "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+        "ready": true,
+        "restarts": 0
+      }
+    ]
+  },
+  "resources": {
+    "observedAt": "2026-09-21T19:53:24.772Z",
+    "filesystemAvailableBytes": 58713100288,
+    "databaseBytes": 1295220736,
+    "walBytes": 4882232,
+    "dataFileBytes": 17042063275
+  },
+  "localFilesystemAvailableBytes": 567562420224,
+  "pvcCount": 35,
+  "pvcPhases": {
+    "Bound": 35
+  },
+  "mainPvc": [
+    {
+      "name": "grid-data",
+      "phase": "Bound",
+      "requested": "5Gi",
+      "reportedCapacity": "5Gi"
+    },
+    {
+      "name": "grid-mqtt-data",
+      "phase": "Bound",
+      "requested": "1Gi",
+      "reportedCapacity": "1Gi"
+    }
+  ],
+  "registry": {
+    "desired": 1,
+    "ready": 1,
+    "images": [
+      "127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c"
+    ]
+  },
+  "comparison": {
+    "previousObservedAt": "2026-09-21T19:00:10.210Z",
+    "elapsedHours": 0.8873783333333333,
+    "databaseGrowthBytes": 103960576,
+    "observedDatabaseGrowthBytesPerHour": 117154737.83260429,
+    "scope": "Observed interval only; not a guaranteed future growth rate"
+  },
+  "scope": "Read-only preparation observation. Host filesystem availability is not dedicated PVC reservation. No backup/restore or final capacity acceptance. Recheck actual capacity before freeze.",
+  "sourceSha256": "dd392b03ab27d4489f72f8f3706fcea8268b22c6764be2d4f471c0ac39db20ee"
+}

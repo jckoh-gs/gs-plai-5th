@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T19:34:46.756642+00:00",
+  "updatedAt": "2026-09-21T19:54:16.907816+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -1635,5 +1635,23 @@
     "recommendedSeconds": 360,
     "maxSeconds": 450,
     "checkedAt": "2026-09-21T19:34:46.756642+00:00"
+  },
+  "preFinalCapacityPreparation": {
+    "state": "PREPARATION_READ_COMPLETED",
+    "observedAt": "2026-09-21T19:53:24.772Z",
+    "evidence": "artifacts/checkpoints/capacity-1.7.1-pre-final/observation.json",
+    "execution": "artifacts/checkpoints/capacity-1.7.1-pre-final/execution.json",
+    "sourceSha256": "dd392b03ab27d4489f72f8f3706fcea8268b22c6764be2d4f471c0ac39db20ee",
+    "sameMainPodUid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+    "scope": "Read-only current capacity/Ready preparation; recheck before freeze; not final backup/restore or acceptance."
+  },
+  "lateIdeaReview": {
+    "state": "NO_NEW_PRODUCT_CHANGE_ADOPTED",
+    "review": "docs/product/REVIEW-056.md",
+    "reviewedSourceCommit": "a05e7c3",
+    "decisionAt": "2026-09-21T19:54:16.907816+00:00",
+    "reason": "No newly demonstrated product defect or valuable bounded enhancement justified before the remaining final delivery gates. Preserve 1.7.1 observation and verified fallback; revisit only on new evidence.",
+    "preFreezeRoleReviewUnchanged": "2026-09-21T21:27:33.079009Z",
+    "scope": "Additional idea review only; not final role verdict or acceptance."
   }
 }
