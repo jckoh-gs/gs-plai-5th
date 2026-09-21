@@ -1,6 +1,6 @@
 # GRID — VPP·SCADA·RTU 통합 에뮬레이터 PRD
 
-문서 버전: 1.10 · 기준일: 2026-09-21 · 제품 기준: SCADA Emulation Engine v2 / MQTT 계약 v2
+문서 버전: 1.11 · 기준일: 2026-09-21 · 제품 기준: SCADA Emulation Engine v2 / MQTT 계약 v2
 
 ## 문서의 목적과 사용법
 
@@ -774,6 +774,27 @@ k3s 명령은 종료 코드 0이고 `gitVersion=v1.33.4+k3s1`, `platform=linux/a
 초기 사용자 결정은 기본 REST 관리 + MQTT 외부 연동, 발전 설비 규모·정격·응답시간 미정, 제공된 timestamp/power_kw/voltage/current_a 파일을 풍력 입력으로 취급하는 것이다. 과거 대화에 포함된 인증키를 문서에 다시 싣지 않는다.
 
 ## 25. 변경 관리와 후속 범위
+
+개발 후보: **1.4.0 / IDEA-008 채택 개정3**. 일반 목표 입력 범위 안내와 ISSUE-021 만료일 예외 처리를 채택했다. 아래 현재 배포·복원 기준1.3.0은 후보의 실제 브라우저·회귀·k3s·백업/복원 인수 전까지 유지한다. 첫1시간 관찰에 로컬 연결 공백이 있었으며 원격 저장/PUBACK 증거와 구분해 보존했다. 이를 무중단 성공으로 간주하지 않는다. 원래 동결·마감과 최종 영상/PPT 조건은 유지한다.
+
+### FR-CONTROL-FORM-01 일반 목표 입력 검증 (IDEA-008, 제품1.4.0 후보·인수 대기)
+
+일반 목표 폼은 기존 서버 범위인 toleranceKw 0.01~10000, timeoutSeconds 1~3600, priority 0~100에 입력 min/max를 맞추고 단위와 범위를 표시한다. 소수를 허용하며 clamp·반올림·조용한 기본값 대체를 하지 않는다. target0, 정격 이내이지만 가용량을 넘는 목표 및 서버 측 검증은 유지한다. 클라이언트 검증은 편의 기능이며 보안 경계가 아니다.
+
+validSeconds는 제출 시 한 번 읽은 현재 시각으로 만료일을 계산하고 유한 숫자·유효 Date 및 현재 서버의 네 자리 연도 ISO 형식과 호환되는지 확인한다. 변환 불가 또는 확장 연도는 전송 전에 한국어 오류로 안내하고 act/command POST를 실행하지 않는다. 0초와 소수 유효시간을 유지하고 임의의 업무상 만료기간 상한을 추가하지 않는다. 정상 입력도 서버 시각이나 전달 지연에 따라 expired될 수 있다.
+
+### UI-11 목표 입력 오류 안내
+
+날짜 오류를 해당 필드 가까이에 표시하고 접근 가능한 alert·필드 연결·포커스를 제공한다. 잘못된 값을 고친 뒤 버튼 또는 Enter로 다시 제출할 수 있어야 한다. 좁은 화면에서도 범위와 오류를 읽을 수 있고, 선택 RTU 전환 시 이전 폼 오류가 다른 RTU의 결과로 남지 않아야 한다. 다른 폼 전체나 서버/MQTT 계약을 변경하지 않는다.
+
+### AT-CONTROL-FORM-01 인수 (대기)
+
+1. 실제 브라우저에서 tolerance0/10001, timeout0/3601, priority−1/101을 버튼과 Enter로 각각 제출한다. command POST0, pageerror0, unhandledrejection0과 해당 입력 안내를 확인한다. native validity 속성만으로 제출 차단을 증명하지 않는다.
+2. 각 min/max 및 정상 소수·빈칸·비유한 값을 검사한다. 유효 입력과 실제 요청 숫자를 대조하며 자동 보정이 없어야 한다. 경계 검증과 실제 명령 완료 증거를 구분한다.
+3. validSeconds1e20 및 Date는 유효하지만 확장 연도가 되는 값에서 안내/POST0/예외0을 확인한다. 정상30초·소수·0초 경로와 임의 max 부재를 검사한다.
+4. 오류 수정 후 키보드 제출·좁은 화면·포커스·RTU 전환 및 명령 목록 불변을 확인한다.
+5. 별도 소유 로컬 RTU에서 accepted/executing/completed, target0과stop 구분, 가용량 초과·정격 이내 목표의 timed_out, 소수 요청 보존을 확인한다. 정격 초과 서버 거절과 기존 REST/MQTT 검증도 유지한다.
+6. 기존 preview/export/시나리오·전체 시험/빌드·실제 MQTT·정확한 후보 이미지의 k3s 배포·백업/복원을 검증한 뒤 승격한다. 수정 전 증거를 보존하고 새 증거를 소스/번들/환경에 연결한다. 최종 미디어·시간·인도 게이트는 별도다.
 
 현재 상태: 제품 **1.3.0**, runtime `3fa3ba0a6984dc752a8968d1788e72a3069b1267`, `stable-v1.3.0`이다. IDEA-001~007의 채택 기능과 1.3.0 배포·복원을 검증했다. [기능 검토015](product/REVIEW-015.md), [688개 해시·실제 Ready 이미지 독립 검토016](product/REVIEW-016.md), [1.3.0 checkpoint](../artifacts/releases/checkpoint-1.3.0.json), [인수 추적](product/acceptance.json)이 현재 근거다. 이전 [1.1.0 checkpoint](../artifacts/releases/checkpoint-1.1.0.json)와 [1.2.0 checkpoint](../artifacts/releases/checkpoint-1.2.0.json)는 과거 검증·복원 근거로 보존한다. 아래 수락 절차는 요구사항으로 유지하며 과거 후보 승격 표현은 당시 수행 절차의 기준이다. **최종 동결 점검·영상·PPT·운영시간·역할 마감 및 최종 정리는 아직 완료되지 않았다.** 기능 checkpoint를 전체 목표 완료로 해석하지 않는다.
 

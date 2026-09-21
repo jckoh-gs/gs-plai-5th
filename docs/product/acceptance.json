@@ -1,5 +1,5 @@
 {
-  "prdVersion": "1.10",
+  "prdVersion": "1.11",
   "runId": "grid-new-20260921T080733Z",
   "scope": "greenfield, mandatory k3s",
   "policy": "pending until new-run direct evidence covers complete requirement; code presence/legacy reports are not pass",
@@ -5376,6 +5376,62 @@
         }
       ],
       "assessment": "Current1.3checkpoint independentlyverified --at-commit --remote:688hashes/source d077120/runtime3fa3ba0/backupSHA/actualReadyapp+broker match. Bothlocalstabletags peel3fa3ba0. Prioractualrestore acceptance retained. This establishes functionalcheckpoint provenance, not finalfreeze/media/time/remoteGitpush."
+    },
+    {
+      "id": "FR-CONTROL-FORM-01",
+      "description": "일반 목표의 서버 범위·표현 가능한 만료일",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "PRD1.11/product1.4.0 candidate adopted; before-change reproduction is not acceptance."
+    },
+    {
+      "id": "UI-11",
+      "description": "범위·날짜 오류 접근성과 RTU 격리",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "PRD1.11/product1.4.0 candidate adopted; before-change reproduction is not acceptance."
+    },
+    {
+      "id": "AT-CONTROL-FORM-01-01",
+      "description": "범위 밖 버튼·Enter 제출 차단",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "PRD1.11/product1.4.0 candidate adopted; before-change reproduction is not acceptance."
+    },
+    {
+      "id": "AT-CONTROL-FORM-01-02",
+      "description": "경계·소수·비유한 입력",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "PRD1.11/product1.4.0 candidate adopted; before-change reproduction is not acceptance."
+    },
+    {
+      "id": "AT-CONTROL-FORM-01-03",
+      "description": "Date·서버 ISO 호환성",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "PRD1.11/product1.4.0 candidate adopted; before-change reproduction is not acceptance."
+    },
+    {
+      "id": "AT-CONTROL-FORM-01-04",
+      "description": "오류 수정·좁은 화면·RTU 전환",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "PRD1.11/product1.4.0 candidate adopted; before-change reproduction is not acceptance."
+    },
+    {
+      "id": "AT-CONTROL-FORM-01-05",
+      "description": "의도된 제어 의미 보존",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "PRD1.11/product1.4.0 candidate adopted; before-change reproduction is not acceptance."
+    },
+    {
+      "id": "AT-CONTROL-FORM-01-06",
+      "description": "회귀·정확한 이미지·배포·복원",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "PRD1.11/product1.4.0 candidate adopted; before-change reproduction is not acceptance."
     }
   ],
   "reviewedSource": {
