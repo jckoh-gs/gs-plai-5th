@@ -1,0 +1,1725 @@
+{
+  "prdVersion": "1.7",
+  "runId": "grid-new-20260921T080733Z",
+  "scope": "greenfield, mandatory k3s",
+  "policy": "pending until new-run direct evidence covers complete requirement; code presence/legacy reports are not pass",
+  "requirements": [
+    {
+      "id": "FR-REG-01",
+      "description": "등록 입력",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-REG-02",
+      "description": "좌표 미입력",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-REG-03",
+      "description": "발전기 구성",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-DATA-01",
+      "description": "형식과 열",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-DATA-02",
+      "description": "검증",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-DATA-03",
+      "description": "출력 의미와 보간",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-DATA-04",
+      "description": "분배와 전기 계측",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-SIM-01",
+      "description": "두 모드",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-SIM-02",
+      "description": "시간과 난수",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-SIM-03",
+      "description": "풍력",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-SIM-04",
+      "description": "태양광",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-SIM-05",
+      "description": "제한과 응답",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-WTH-01",
+      "description": "KMA 조회",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-WTH-02",
+      "description": "덮어쓰기 정책",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-WTH-03",
+      "description": "일사",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-CTRL-01",
+      "description": "지원 명령",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-CTRL-02",
+      "description": "수신 검증과 중복",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-CTRL-03",
+      "description": "시간·우선순위",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-CTRL-04",
+      "description": "상태 전이",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-MQTT-01",
+      "description": "연결과 토픽",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-MQTT-02",
+      "description": "전체 SCADA",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-MQTT-03",
+      "description": "전달 보장 경계",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-STORE-01",
+      "description": "데이터와 식별",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-STORE-02",
+      "description": "트랜잭션과 발행",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-STORE-03",
+      "description": "보존과 이력",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-METRIC-01",
+      "description": "단말별 필수 지표",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-METRIC-02",
+      "description": "health 우선순위",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-FAULT-01",
+      "description": "지원 장애",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-FAULT-02",
+      "description": "UI 피드백",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-SCENE-01",
+      "description": "저장 범위",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-SCENE-02",
+      "description": "복원",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "UI-01",
+      "description": "통합 대시보드 / #dashboard",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "UI-02",
+      "description": "RTU 디바이스 / #devices",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "UI-03",
+      "description": "시험 시나리오 / #lab",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "UI-04",
+      "description": "이벤트 로그 / #logs",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "UI-05",
+      "description": "연동 가이드 / #api",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "UI-06",
+      "description": "RTU 추가",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "DEPLOY-01",
+      "description": "— 필수 k3s 배포 수락 기준",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-DATA",
+      "description": "데이터",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-MODEL",
+      "description": "발전 모델",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-CONTROL",
+      "description": "명령",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-MQTT",
+      "description": "저장·통신",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-UI",
+      "description": "화면·기상·운영",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "VID-01",
+      "description": "산출물",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "VID-02",
+      "description": "구성",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "PPT-01",
+      "description": "제작 순서와 산출물",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "PPT-02",
+      "description": "필수 발표 내용",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "PPT-03",
+      "description": "검수 및 인수 기준",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-VPP-REPORT-01",
+      "description": "선택적 MQTT 시험 결과 파일 (IDEA-001, 작업본 구현·검증 대기)",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-VPP-REPORT",
+      "description": "제품 v2.1.0 수락 조건 (전체 검증 대기)",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FR-AUTH-01",
+      "description": "원격 관리 UI 인증 (IDEA-002, 채택·검증 대기)",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "OPS-01",
+      "description": "시간 제한과 역할 (채택, 실행 검증 대기)",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "OPS-02",
+      "description": "개선·보안·이슈 추적 (채택, 실행 검증 대기)",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "OPS-03",
+      "description": "검증 버전과 비파괴 복원 (채택, 실행 검증 대기)",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "OPS-04",
+      "description": "최종 시연과 인수 증거 (채택, 실행 검증 대기)",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "NFR-01",
+      "description": "단지 최대 기기 수 100을 입력 검증하고 해당 크기의 전체 SCADA 패킷 상한을 시험한다. 이는 다수 단지×100기×60배속 부하 성능 인증이 아니다.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "NFR-02",
+      "description": "정상 조건에서 모델은 1초 가상 간격, UI는 약 1초 갱신. 브라우저나 SSE의 느린 소비 때문에 수집 데이터를 잃지 않는다.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "NFR-03",
+      "description": "영속 outbox/ID를 사용하고 중복 가능성을 명시한다. exactly-once 보장은 하지 않는다.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "NFR-04",
+      "description": "모든 API 수치를 서버에서 검증한다. 잘못된 요청으로 일부 모델만 변경하지 않는다.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "NFR-05",
+      "description": "키를 소스·로그·문서에 노출하지 않고 TLS 검증을 유지한다.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "NFR-06",
+      "description": "재시작 복원과 기존 DB 호환성을 검증한다. 저장 매체 장애·용량 부족에 대한 HA는 제외한다.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "NFR-07",
+      "description": "외부 KMA 장애로 전체 에뮬레이터가 멈추지 않는다. 기존값과 오류 출처를 유지한다.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "NFR-08",
+      "description": "코드·문서·샘플·자동 시험을 함께 납품하며 토픽과 필드의 문서 불일치를 허용하지 않는다.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "NFR-09",
+      "description": "코드에는 사용자 CSV, API 키와 무관한 재현 fixture가 있어야 한다. 시험은 임시 DB/API 포트/MQTT prefix로 격리한다.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "NFR-10",
+      "description": "3D 번들은 지연 로딩하고 첫 화면의 운영 정보 접근을 막지 않는다. 현재 번들 크기 경고는 성능 제한으로 기록한다.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-DATA-01",
+      "description": "CSV와 TSV, BOM, 한글 별칭을 각각 등록한다. 정규화 결과와 입력 단위를 확인한다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "assessment": "Corresponding parser tests inspect CSV/TSV/BOM/Korean aliases, time/units, 300/599/600, energy hold, direction wrap, invalid rows and final interval wrap. PASS log observed; not k3s evidence.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-DATA-02",
+      "description": "10분 시점 값 100→200kW에서 300초는 150kW다. 599초와 경계 600초도 검증한다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "assessment": "Corresponding parser tests inspect CSV/TSV/BOM/Korean aliases, time/units, 300/599/600, energy hold, direction wrap, invalid rows and final interval wrap. PASS log observed; not k3s evidence.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-DATA-03",
+      "description": "10kWh 구간은 60kW×600초로 제어 전 10kWh. mean 모드도 동일 구간 유지 의미를 확인한다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "assessment": "Corresponding parser tests inspect CSV/TSV/BOM/Korean aliases, time/units, 300/599/600, energy hold, direction wrap, invalid rows and final interval wrap. PASS log observed; not k3s evidence.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-DATA-04",
+      "description": "350→10도 풍향의 중간은 0도다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "assessment": "Corresponding parser tests inspect CSV/TSV/BOM/Korean aliases, time/units, 300/599/600, energy hold, direction wrap, invalid rows and final interval wrap. PASS log observed; not k3s evidence.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-DATA-05",
+      "description": "중복/누락/역순/잘못된 날짜/빈 필수값/음수/NaN을 거절하고 원본 행을 식별한다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "assessment": "Corresponding parser tests inspect CSV/TSV/BOM/Korean aliases, time/units, 300/599/600, energy hold, direction wrap, invalid rows and final interval wrap. PASS log observed; not k3s evidence.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-DATA-06",
+      "description": "마지막 600초 유지 후 처음으로 반복한다. 선형 wrap을 하지 않는다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "assessment": "Corresponding parser tests inspect CSV/TSV/BOM/Korean aliases, time/units, 300/599/600, energy hold, direction wrap, invalid rows and final interval wrap. PASS log observed; not k3s evidence.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-DATA-07",
+      "description": "사용자 풍력 TSV를 wind로 등록하고 380V 원본과 비례 전류 추정, 원본 0일 때 null을 검증한다.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        },
+        {
+          "path": "web/QA.md",
+          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        }
+      ],
+      "assessment": "Voltage/current/zero-null and split hybrid are directly tested; exact user 55-row TSV fixture and hybrid total-power allocation at type-group level need explicit remaining evidence.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-DATA-08",
+      "description": "hybrid 총출력과 유형별 출력 각각의 배분을 검증한다.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        },
+        {
+          "path": "web/QA.md",
+          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        }
+      ],
+      "assessment": "Voltage/current/zero-null and split hybrid are directly tested; exact user 55-row TSV fixture and hybrid total-power allocation at type-group level need explicit remaining evidence.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MODEL-01",
+      "description": "풍속 cut-in 미만 및 cut-out 이상은 0, rated wind는 정격. 중간값은 수식과 일치한다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "assessment": "Direct model assertions cover these isolated acceptance cases. Snapshot determinism is 10 steps; weather-only CSV edit is checked.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MODEL-02",
+      "description": "사용자 곡선 보간, 중복 풍속 거절, null 복귀를 검증한다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "assessment": "Direct model assertions cover these isolated acceptance cases. Snapshot determinism is 10 steps; weather-only CSV edit is checked.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MODEL-03",
+      "description": "태양광 1000W/㎡·25℃·보정1은 정격, 일사0은0, 상한 제한과 온도계수 반영 확인.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "assessment": "Direct model assertions cover these isolated acceptance cases. Snapshot determinism is 10 steps; weather-only CSV edit is checked.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MODEL-04",
+      "description": "1000kW·ramp50에서 목표500은 step당 최대50만 변한다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "assessment": "Direct model assertions cover these isolated acceptance cases. Snapshot determinism is 10 steps; weather-only CSV edit is checked.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MODEL-05",
+      "description": "정지/재시작과 기동 지연, 소수 지연에서 완료 조기 판정이 없음을 검증한다.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        },
+        {
+          "path": "tests/control.test.js",
+          "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
+        }
+      ],
+      "assessment": "Fractional 1.5s startup and post-dispatch sample are tested separately; command completion under fractional startup is not asserted jointly.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MODEL-06",
+      "description": "20% 제한은 정격1000에서 최대200. set_target은 기존 비율 상한을 교체한다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        },
+        {
+          "path": "tests/control.test.js",
+          "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
+        }
+      ],
+      "assessment": "20% of 1000 gives 200; Controller set_target resets previous limitPct to100.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MODEL-07",
+      "description": "동일 시드·snapshot의 첫 10개 출력이 일치한다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "assessment": "Direct model assertions cover these isolated acceptance cases. Snapshot determinism is 10 steps; weather-only CSV edit is checked.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MODEL-08",
+      "description": "CSV 모드에서 기상값만 바꾸어 CSV 발전량을 임의로 바꾸지 않는다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "assessment": "Direct model assertions cover these isolated acceptance cases. Snapshot determinism is 10 steps; weather-only CSV edit is checked.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-CONTROL-01",
+      "description": "실제 MQTT setpoint를 발행하여 accepted→executing→completed와 scadaSignal을 받는다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "scripts/integration.js",
+          "sha256": "e05ffc170c6c85a0298ef8662d7a8a2c039a543fa714a11cd30d0ab5200fc143"
+        }
+      ],
+      "assessment": "Actual broker accepts/executes/completes 125kW with scadaSignal, actual125/error0; duplicate response and single command record observed.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-CONTROL-02",
+      "description": "125kW 목표, 충분한 가용 출력에서 actual=125, error=0을 확인한다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "scripts/integration.js",
+          "sha256": "e05ffc170c6c85a0298ef8662d7a8a2c039a543fa714a11cd30d0ab5200fc143"
+        }
+      ],
+      "assessment": "Actual broker accepts/executes/completes 125kW with scadaSignal, actual125/error0; duplicate response and single command record observed.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-CONTROL-03",
+      "description": "정격 이내지만 가용량보다 높은 목표는 completed가 아닌 timed_out.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        }
+      ],
+      "assessment": "Actual MQTT target1800 within total rating2000 but above available1000 yields timed_out.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-CONTROL-04",
+      "description": "같은 commandId/본문 재발행은 duplicate:true와 최신 결과이며 재실행하지 않는다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "scripts/integration.js",
+          "sha256": "e05ffc170c6c85a0298ef8662d7a8a2c039a543fa714a11cd30d0ab5200fc143"
+        }
+      ],
+      "assessment": "Actual broker accepts/executes/completes 125kW with scadaSignal, actual125/error0; duplicate response and single command record observed.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-CONTROL-05",
+      "description": "같은 ID로 값·RTU·expiresAt 변경은 rejected.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "tests/control.test.js",
+          "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
+        },
+        {
+          "path": "tests/transport.test.js",
+          "sha256": "c01531d46197f283a7798acd7da62e2a9123ad1a56d5579e6bda6764866bbdde"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        }
+      ],
+      "assessment": "Some subcases tested. Remaining explicit boundary coverage needed: expiresAt dedup conflict; all malformed/8KB/schema/targets; unchanged model on both expiry paths; equal-priority and disjoint devices; sensorFreeze completion withholding is unit only; unfinished command across process restart; explicit stop after timed_out.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-CONTROL-06",
+      "description": "잘못된 action/schema/대상/수치/8KB초과/JSON을 거절한다.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "tests/control.test.js",
+          "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
+        },
+        {
+          "path": "tests/transport.test.js",
+          "sha256": "c01531d46197f283a7798acd7da62e2a9123ad1a56d5579e6bda6764866bbdde"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        }
+      ],
+      "assessment": "Some subcases tested. Remaining explicit boundary coverage needed: expiresAt dedup conflict; all malformed/8KB/schema/targets; unchanged model on both expiry paths; equal-priority and disjoint devices; sensorFreeze completion withholding is unit only; unfinished command across process restart; explicit stop after timed_out.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-CONTROL-07",
+      "description": "이미 만료한 명령, 지연 중 만료한 명령은 SCADA 설정을 바꾸지 않는다.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "tests/control.test.js",
+          "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
+        },
+        {
+          "path": "tests/transport.test.js",
+          "sha256": "c01531d46197f283a7798acd7da62e2a9123ad1a56d5579e6bda6764866bbdde"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        }
+      ],
+      "assessment": "Some subcases tested. Remaining explicit boundary coverage needed: expiresAt dedup conflict; all malformed/8KB/schema/targets; unchanged model on both expiry paths; equal-priority and disjoint devices; sensorFreeze completion withholding is unit only; unfinished command across process restart; explicit stop after timed_out.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-CONTROL-08",
+      "description": "우선순위 낮은 충돌은 거절, 같거나 높은 충돌은 superseded. 대상이 다른 기기는 독립.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "tests/control.test.js",
+          "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
+        },
+        {
+          "path": "tests/transport.test.js",
+          "sha256": "c01531d46197f283a7798acd7da62e2a9123ad1a56d5579e6bda6764866bbdde"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        }
+      ],
+      "assessment": "Some subcases tested. Remaining explicit boundary coverage needed: expiresAt dedup conflict; all malformed/8KB/schema/targets; unchanged model on both expiry paths; equal-priority and disjoint devices; sensorFreeze completion withholding is unit only; unfinished command across process restart; explicit stop after timed_out.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-CONTROL-09",
+      "description": "scadaReject는 failed, actuatorStuck는 미도달 timeout, sensorFreeze는 도달 판정 중지.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "tests/control.test.js",
+          "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
+        },
+        {
+          "path": "tests/transport.test.js",
+          "sha256": "c01531d46197f283a7798acd7da62e2a9123ad1a56d5579e6bda6764866bbdde"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        }
+      ],
+      "assessment": "Some subcases tested. Remaining explicit boundary coverage needed: expiresAt dedup conflict; all malformed/8KB/schema/targets; unchanged model on both expiry paths; equal-priority and disjoint devices; sensorFreeze completion withholding is unit only; unfinished command across process restart; explicit stop after timed_out.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-CONTROL-10",
+      "description": "서버 재시작 후 미완료 명령과 실제 시간 deadline을 복원한다.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "tests/control.test.js",
+          "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
+        },
+        {
+          "path": "tests/transport.test.js",
+          "sha256": "c01531d46197f283a7798acd7da62e2a9123ad1a56d5579e6bda6764866bbdde"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        }
+      ],
+      "assessment": "Some subcases tested. Remaining explicit boundary coverage needed: expiresAt dedup conflict; all malformed/8KB/schema/targets; unchanged model on both expiry paths; equal-priority and disjoint devices; sensorFreeze completion withholding is unit only; unfinished command across process restart; explicit stop after timed_out.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-CONTROL-11",
+      "description": "timeout 후 기존 목표 설정을 자동 원복하지 않으며 명시적 stop으로 해제됨을 확인한다.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "tests/control.test.js",
+          "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
+        },
+        {
+          "path": "tests/transport.test.js",
+          "sha256": "c01531d46197f283a7798acd7da62e2a9123ad1a56d5579e6bda6764866bbdde"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        }
+      ],
+      "assessment": "Some subcases tested. Remaining explicit boundary coverage needed: expiresAt dedup conflict; all malformed/8KB/schema/targets; unchanged model on both expiry paths; equal-priority and disjoint devices; sensorFreeze completion withholding is unit only; unfinished command across process restart; explicit stop after timed_out.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MQTT-01",
+      "description": "실제 Mosquitto로 모든 발전기가 samples[] 및 scada에 포함되는지 확인한다.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "scripts/integration.js",
+          "sha256": "e05ffc170c6c85a0298ef8662d7a8a2c039a543fa714a11cd30d0ab5200fc143"
+        }
+      ],
+      "assessment": "scada.generators length2 checked; every samples[].generators complete set not asserted in this integration test.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MQTT-02",
+      "description": "1배속·60초·작은 단지의 정상 완전 구간은 60샘플, 크기에 따른 분할은 합산으로 비교한다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/sixty-second-first.log",
+          "sha256": "0660a7416c459b60a0f417455af500204eb9750a4f41096d0e0abd23e60d3845"
+        },
+        {
+          "path": "scripts/sixty-second-integration.js",
+          "sha256": "a8de74104aea22baf01954e3695195f67c7ac24439a6a725457550686e757a93"
+        }
+      ],
+      "assessment": "Real 60s period override and speed1: second complete batch60, consecutive simulationSeconds; initial partial batch59. No remote performance claim.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MQTT-03",
+      "description": "100기 snapshot도 메시지 전체 UTF-8 크기≤120000 bytes, sampleCount 일치.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        },
+        {
+          "path": "tests/store.test.js",
+          "sha256": "bf4fac2f6b0d9bd1d6f5abf0fa6f81eab5b289f7dbf45c30b02b480e62ea1dbe"
+        }
+      ],
+      "assessment": "Actual 100-generator message length<=120000 and store fixtures assert sampleCount===samples.length plus UTF-8 byte count.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MQTT-04",
+      "description": "한 RTU 연결 단절 중 다른 RTU가 계속 데이터를 발행한다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        }
+      ],
+      "assessment": "Independent RTU continues during disconnect; persisted immutable pending body is delivered after restart/reconnect; drop100 queues and drop0 drains.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MQTT-05",
+      "description": "단절 중 수집은 디스크에 남고 복구 뒤 기존 ID/관측시각으로 전송된다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        }
+      ],
+      "assessment": "Independent RTU continues during disconnect; persisted immutable pending body is delivered after restart/reconnect; drop100 queues and drop0 drains.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MQTT-06",
+      "description": "PUBACK 전 프로세스를 종료한 뒤 재시작해 outbox 복원 및 VPP 중복 제거를 검증한다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/crash-first.log",
+          "sha256": "45c5574428bf7499b60cd99affe59fa1f3287656336fc63d515fdd07a1ab98b7"
+        },
+        {
+          "path": "docs/issues/evidence/review-002-crash.log",
+          "sha256": "45c5574428bf7499b60cd99affe59fa1f3287656336fc63d515fdd07a1ab98b7"
+        },
+        {
+          "path": "scripts/crash-integration.js",
+          "sha256": "3a5ca553db09ff40b960cfd0a4b868c64d2921d419e958451f0eb2c2120c86d9"
+        }
+      ],
+      "assessment": "Actual broker/PUBACK-withholding proxy/SIGKILL/SQLite acked=null/same message JSON after restart/fixture receiver Set dedup. Does not claim production client dedup.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MQTT-07",
+      "description": "dropPct=100에서 대기 유지, 0으로 해제 후 전송 완료.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        }
+      ],
+      "assessment": "Independent RTU continues during disconnect; persisted immutable pending body is delivered after restart/reconnect; drop100 queues and drop0 drains.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MQTT-08",
+      "description": "센서 중단 기간은 frame이 생성되지 않고 복구 후 누락 구간을 만들어 채우지 않는다.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        }
+      ],
+      "assessment": "generatedSamples stays fixed while sensorFreeze. No explicit timestamp-gap/no-backfill assertion after resume.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MQTT-09",
+      "description": "이전 run의 대기분과 새 run이 같은 payload에 섞이지 않는다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/store.test.js",
+          "sha256": "bf4fac2f6b0d9bd1d6f5abf0fa6f81eab5b289f7dbf45c30b02b480e62ea1dbe"
+        }
+      ],
+      "assessment": "Pending frames intentionally span run a/b and each serialized batch asserts all frames match envelope runId.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-MQTT-10",
+      "description": "오래된 완료 데이터만 보존기간 정리되고 미전송·ID·시나리오는 남는다.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/store.test.js",
+          "sha256": "bf4fac2f6b0d9bd1d6f5abf0fa6f81eab5b289f7dbf45c30b02b480e62ea1dbe"
+        }
+      ],
+      "assessment": "Prune preserves unacknowledged/unbatched/command IDs/scenarios; removal of old completed rows is not asserted.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-UI-01",
+      "description": "빈 DB 데모 3개, 재시작 후 중복 생성 없음.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "web/QA.md",
+          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "tests/weather.test.js",
+          "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+        }
+      ],
+      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-UI-02",
+      "description": "추가 폼에서 사용자 TSV와 좌표 생략 등록, 유형/좌표 출처 확인.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "web/QA.md",
+          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        }
+      ],
+      "assessment": "Human-agent native Chrome observation recorded registration of dedicated wind TSV voltage/current fixture with blank coordinates and virtual-coordinate label. Exact user55 rows not claimed.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-UI-03",
+      "description": "풍력·태양광·복합 3D 렌더링, 단지 변경, 풍향/회전/확대 확인.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "web/QA.md",
+          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "tests/weather.test.js",
+          "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+        }
+      ],
+      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-UI-04",
+      "description": "출력 제한·정지·기동과 차트·기기 표가 같은 값을 보여준다.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "web/QA.md",
+          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "tests/weather.test.js",
+          "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+        }
+      ],
+      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-UI-05",
+      "description": "RTU 검색·선택·상세와 발전 제어 화면 이동에서 선택이 유지된다.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "web/QA.md",
+          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "tests/weather.test.js",
+          "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+        }
+      ],
+      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-UI-06",
+      "description": "health 임계값, PUBACK 지연, 누적 지표 재시작 복원 및 공용 메모리 라벨 확인.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "web/QA.md",
+          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "tests/weather.test.js",
+          "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+        }
+      ],
+      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-UI-07",
+      "description": "기상청 정상/키 없음/timeout/오래된 관측/결측 풍향 fixture를 시험한다. 실제 키가 있으면 실제 조회도 별도로 기록한다.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "web/QA.md",
+          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "tests/weather.test.js",
+          "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+        }
+      ],
+      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-UI-08",
+      "description": "수동 기상이 자동 관측에 덮어써지지 않는다. 일사 CSV 시간 정렬·범위 밖 fallback 확인.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "docs/issues/evidence/review-002-unit.log",
+          "sha256": "4bf03b5628c1159879a7b4a719f7338f95a493058de1b31c3abf0940e7995e35"
+        },
+        {
+          "path": "tests/review-regressions.test.js",
+          "sha256": "1879b71013a304604383387daf73aa60b5ccf18074c780e0f6e22e1ef48c1fb4"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "assessment": "Delayed HTTP manual/station protection checked; irradiance timestamp interpolation and out-of-range manual fallback checked. Local fixture only; no actual KMA claim.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-UI-09",
+      "description": "시나리오 저장·복원·JSON 내려받기, 새 runId와 명령 cancelled 확인.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "web/QA.md",
+          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "tests/weather.test.js",
+          "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+        }
+      ],
+      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-UI-10",
+      "description": "가이드 RTU별 토픽 갱신, 복사와 문서 다운로드, keyboard label 확인.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "web/QA.md",
+          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "tests/weather.test.js",
+          "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+        }
+      ],
+      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-UI-11",
+      "description": "console error 없이 주요 화면 사용 및 긴 SSE payload로 연속 수신 확인.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "web/QA.md",
+          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "tests/weather.test.js",
+          "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+        }
+      ],
+      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-UI-12",
+      "description": "영상의 파일 디코딩, 1080p, 음성·한글 자막, 실제 시험 주장과 기록 일치 확인.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-VPP-REPORT-01",
+      "description": "격리 DB/포트/MQTT prefix와 실제 로컬 브로커에서 충분한 가용 출력의 목표 요청을 실행한다. JSON의 commandId·실제 관측 전이·최종 출력/오차를 수신 증거와 대조하고 completed 및 exit 0을 확인한다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/report-round2.log",
+          "sha256": "87b81efba03df43a87093cb3d9818e7d914ed93f573fad69e2f5aa3db5f2be7e"
+        },
+        {
+          "path": "scripts/report-integration.js",
+          "sha256": "d9e293f159144c5d79300530333024451389607340dddaf6e78f14bdbe16862a"
+        }
+      ],
+      "assessment": "Independent subscriber matches saved command events and output; offline bounded fail/null data with credential non-leak; save failure exit1 and exactly1 publication.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-VPP-REPORT-02",
+      "description": "가용량보다 높은 목표의 미도달 사례는 관측한 timed_out과 exit 1을 기록한다. 클라이언트 대기 timeout은 명령에서 수신한 timed_out과 다른 종료 원인으로 기록한다.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/report-round2.log",
+          "sha256": "87b81efba03df43a87093cb3d9818e7d914ed93f573fad69e2f5aa3db5f2be7e"
+        },
+        {
+          "path": "scripts/report-integration.js",
+          "sha256": "d9e293f159144c5d79300530333024451389607340dddaf6e78f14bdbe16862a"
+        }
+      ],
+      "assessment": "Observed timed_out exit1 and no-report monitor/dispatch pass; result-wait timeout distinction needs dedicated case; final revision full suite/build/stable promotion missing.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-VPP-REPORT-03",
+      "description": "브로커 불가 사례가 유한한 시간 내 실패 결과와 exit 1로 끝나며, 미관측 상태/출력/runId를 성공값으로 채우지 않는다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/report-round2.log",
+          "sha256": "87b81efba03df43a87093cb3d9818e7d914ed93f573fad69e2f5aa3db5f2be7e"
+        },
+        {
+          "path": "scripts/report-integration.js",
+          "sha256": "d9e293f159144c5d79300530333024451389607340dddaf6e78f14bdbe16862a"
+        }
+      ],
+      "assessment": "Independent subscriber matches saved command events and output; offline bounded fail/null data with credential non-leak; save failure exit1 and exactly1 publication.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-VPP-REPORT-04",
+      "description": "쓰기 불가 결과 경로는 명확한 저장 실패와 exit 1을 반환한다. 파일 저장 실패 때문에 명령을 자동 재전송하지 않는다. JSON/오류 출력에 시험용 자격증명이 노출되지 않는다.",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/report-round2.log",
+          "sha256": "87b81efba03df43a87093cb3d9818e7d914ed93f573fad69e2f5aa3db5f2be7e"
+        },
+        {
+          "path": "scripts/report-integration.js",
+          "sha256": "d9e293f159144c5d79300530333024451389607340dddaf6e78f14bdbe16862a"
+        }
+      ],
+      "assessment": "Independent subscriber matches saved command events and output; offline bounded fail/null data with credential non-leak; save failure exit1 and exactly1 publication.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-VPP-REPORT-05",
+      "description": "결과 파일 옵션 없이 기존 monitor/dispatch가 동작하고 MQTT schemaVersion 2가 유지된다. 관련 단위 시험, 기본·고급 MQTT 통합 시험, build 및 실행 확인을 통과한 뒤에만 v2.1.0 stable 태그와 증거를 기록한다.",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/report-round2.log",
+          "sha256": "87b81efba03df43a87093cb3d9818e7d914ed93f573fad69e2f5aa3db5f2be7e"
+        },
+        {
+          "path": "scripts/report-integration.js",
+          "sha256": "d9e293f159144c5d79300530333024451389607340dddaf6e78f14bdbe16862a"
+        }
+      ],
+      "assessment": "Observed timed_out exit1 and no-report monitor/dispatch pass; result-wait timeout distinction needs dedicated case; final revision full suite/build/stable promotion missing.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-AUTH-01",
+      "description": "PRD의 해당 명시 인수 조건",
+      "status": "pending",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/browser-auth.log",
+          "sha256": "c23523325d0532afc3eac30c983d8d84e37b7b29491aa19fffe3321c0cba2e6c"
+        },
+        {
+          "path": "scripts/browser-check.cjs",
+          "sha256": "c0960fca825aa30fc798d4a9134ce0379b97d00f888c25c3d4ae36b78160a71f"
+        }
+      ],
+      "assessment": "Current browser run failed waiting stale label; no broad authentication or freshness pass. Correct-token login/SSE screenshot alone does not establish wrong-token/relogin/session/non-leak/download coverage. Main diagnosed invalid offline fixture: existing SSE continued receiving; not proof of UI bug. Real socket-cut proxy round2 in progress; result not yet reviewed.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-PPT-01",
+      "description": "PRD의 해당 명시 인수 조건",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-PPT-02",
+      "description": "PRD의 해당 명시 인수 조건",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-PPT-03",
+      "description": "PRD의 해당 명시 인수 조건",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-OPS-01",
+      "description": "PRD의 해당 명시 인수 조건",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-OPS-02",
+      "description": "PRD의 해당 명시 인수 조건",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-OPS-03",
+      "description": "PRD의 해당 명시 인수 조건",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-OPS-04",
+      "description": "PRD의 해당 명시 인수 조건",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-OPS-05",
+      "description": "PRD의 해당 명시 인수 조건",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "G-01",
+      "description": "10분 발전 이력을 1초 SCADA 상태로 변환해 외부 시스템이 반복적으로 사용할 수 있게 한다.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "G-02",
+      "description": "VPP가 MQTT로 전달한 목표 kW를 RTU가 검증하고 SCADA 제어로 변환하며, 실제 모델 출력으로 도달 여부를 판단한다.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "G-03",
+      "description": "풍력·태양광·복합 발전단지와 발전기 상태를 화면 및 3D로 관찰한다.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "G-04",
+      "description": "통신 단절, 지연, 센서 중단, 제어 거절, 목표 미도달 같은 실패 조건을 재현한다.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "G-05",
+      "description": "데이터·명령·상태를 보존하고 재시작 후 시험을 계속한다.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "G-06",
+      "description": "문서와 실행 가능한 MQTT 클라이언트만으로 실제 VPP 팀이 연결을 시작할 수 있게 한다.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "CHECK-test",
+      "description": "npm test must exit 0 on final release revision; log and revision required",
+      "status": "observed_prior_pass",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "package.json",
+          "sha256": "50f094fc8d67f19261eb2beccacf97196b2b0d0280d84f4cf5f305761890e7ad"
+        }
+      ],
+      "assessment": "Command success observed in log for earlier working tree; exact final release revision not certified. Build retains Three chunk warning.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "CHECK-test-integration",
+      "description": "npm run test:integration must exit 0 on final release revision; log and revision required",
+      "status": "observed_prior_pass",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "scripts/integration.js",
+          "sha256": "e05ffc170c6c85a0298ef8662d7a8a2c039a543fa714a11cd30d0ab5200fc143"
+        }
+      ],
+      "assessment": "Command success observed in log for earlier working tree; exact final release revision not certified. Build retains Three chunk warning.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "CHECK-test-advanced",
+      "description": "npm run test:advanced must exit 0 on final release revision; log and revision required",
+      "status": "observed_prior_pass",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        }
+      ],
+      "assessment": "Command success observed in log for earlier working tree; exact final release revision not certified. Build retains Three chunk warning.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "CHECK-build",
+      "description": "npm run build must exit 0 on final release revision; log and revision required",
+      "status": "observed_prior_pass",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/build-round1.log",
+          "sha256": "e499f99f8454aef350b2c8e056b50bd4d6b3da81fe67a91144f4972ab41ba292"
+        },
+        {
+          "path": "vite.config.js",
+          "sha256": "5b763ed5e4665084db571cf0b3c8016b1759096aac4b347bd396b40291770f4d"
+        }
+      ],
+      "assessment": "Command success observed in log for earlier working tree; exact final release revision not certified. Build retains Three chunk warning.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "UI-07",
+      "description": "5초 무수신 UI 오래된 데이터/초기 대기/정상 수신 해제",
+      "status": "pending",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/browser-auth.log",
+          "sha256": "c23523325d0532afc3eac30c983d8d84e37b7b29491aa19fffe3321c0cba2e6c"
+        },
+        {
+          "path": "scripts/browser-check.cjs",
+          "sha256": "c0960fca825aa30fc798d4a9134ce0379b97d00f888c25c3d4ae36b78160a71f"
+        }
+      ],
+      "assessment": "Current browser run failed waiting stale label; no broad authentication or freshness pass. Correct-token login/SSE screenshot alone does not establish wrong-token/relogin/session/non-leak/download coverage. Main diagnosed invalid offline fixture: existing SSE continued receiving; not proof of UI bug. Real socket-cut proxy round2 in progress; result not yet reviewed.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "AT-FRESH-01",
+      "description": "실제 UI 또는 브라우저 시험에서 수신→5초 중단→stale→복구 검증",
+      "status": "pending",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/browser-auth.log",
+          "sha256": "c23523325d0532afc3eac30c983d8d84e37b7b29491aa19fffe3321c0cba2e6c"
+        },
+        {
+          "path": "scripts/browser-check.cjs",
+          "sha256": "c0960fca825aa30fc798d4a9134ce0379b97d00f888c25c3d4ae36b78160a71f"
+        }
+      ],
+      "assessment": "Current browser run failed waiting stale label; no broad authentication or freshness pass. Correct-token login/SSE screenshot alone does not establish wrong-token/relogin/session/non-leak/download coverage. Main diagnosed invalid offline fixture: existing SSE continued receiving; not proof of UI bug. Real socket-cut proxy round2 in progress; result not yet reviewed.",
+      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+    },
+    {
+      "id": "OPS-05",
+      "description": "릴리스 manifest에 commit/dirty 파일 해시/PRD/image/backup/tests/deploy/restore 기록",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-RELEASE-01",
+      "description": "manifest 파싱, 실제 hash/digest 일치, 해당 revision 로그, 별도 복원 UI/MQTT/DB/outbox 검증",
+      "status": "pending",
+      "evidence": []
+    }
+  ],
+  "reviewedSource": {
+    "commit": "a59646b032baf362802b7c7307fc762357b22367",
+    "workingTree": "development in progress; not release",
+    "recordedAt": "2026-09-21T08:25:26.351091+00:00",
+    "sha256": {
+      "docs/PRD-VPP-SCADA-RTU.md": "3b1ef22b4cf03c8f036f9172ddbe4f39b26919acc9860b0e23ac6e068c49b165",
+      "server/index.js": "945a30388d0d9bb08ae70c2ab6d470778734875436be306e40d9f02afe408a8f",
+      "web/src.jsx": "cfe73bc22dcb050740e8d4c4becdb1943f91b5e36ed3ef35ce9056857f3dcb79",
+      "docs/operations/run.json": "42e175e3d76ebf602f2f2bf4b91c5e1d7dd8993ffb17da446e13bb009d3ab5d4"
+    }
+  },
+  "statusPolicy": {
+    "verified_local": "Direct named acceptance criterion covered by reviewed test assertions and recorded local passing evidence; final release revalidation required",
+    "partial": "Only stated subcases covered; entire requirement remains incomplete",
+    "observed_prior_pass": "Earlier working-tree command success, not final-release check",
+    "pending": "Missing, failed or insufficient direct evidence"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "reviewedAt": "2026-09-21T08:21:52.026242+00:00",
+  "commit": "a59646b032baf362802b7c7307fc762357b22367",
+  "workingTree": true,
+  "files": {
+    "server/model.js": "ab20a7f7f7b64f8dc9be152b74f617647860524ef0a06577f160d2a3be522f47",
+    "server/index.js": "945a30388d0d9bb08ae70c2ab6d470778734875436be306e40d9f02afe408a8f",
+    "scripts/crash-integration.js": "3a5ca553db09ff40b960cfd0a4b868c64d2921d419e958451f0eb2c2120c86d9",
+    "scripts/sixty-second-integration.js": "a8de74104aea22baf01954e3695195f67c7ac24439a6a725457550686e757a93",
+    "scripts/report-integration.js": "027a03479999e19c7ca0f55d39f9fb51ca81c706a8fe7c604fcc3985be42f59e",
+    "scripts/vpp-client.js": "f04cb78d4d4522edf704df71f2152a6a32f47633b6eb9562618912a955fe7e55",
+    "scripts/test-harness.js": "4610d56889bad1a0722c3df01779ce56325ef9ba5716472460dded2671fa5e34",
+    "tests/model.test.js": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb",
+    "tests/review-regressions.test.js": "1879b71013a304604383387daf73aa60b5ccf18074c780e0f6e22e1ef48c1fb4",
+    "artifacts/checkpoints/crash-first.log": "45c5574428bf7499b60cd99affe59fa1f3287656336fc63d515fdd07a1ab98b7",
+    "artifacts/checkpoints/sixty-second-first.log": "0660a7416c459b60a0f417455af500204eb9750a4f41096d0e0abd23e60d3845",
+    "artifacts/checkpoints/report-first.log": "0bdf352f86d888540539cb317960c4396efff8ca8419c96327dfee0da6b35811"
+  }
+}

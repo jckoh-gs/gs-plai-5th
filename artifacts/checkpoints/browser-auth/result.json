@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "authRequired": true,
+  "authenticatedSSE": true,
+  "staleAfterFiveSeconds": true,
+  "resumeClearsStale": true,
+  "guideDownload": true,
+  "narrowViewportNoPageOverflow": true,
+  "pageErrors": []
+}

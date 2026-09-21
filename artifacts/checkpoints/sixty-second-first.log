@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "suite": "60-second-real-time",
+  "initialSampleCount": 59,
+  "completeWindowSamples": 60,
+  "first": "2026-09-21T08:20:05.245Z",
+  "last": "2026-09-21T08:21:04.296Z",
+  "telemetrySeconds": 60,
+  "virtualSpeed": 1
+}

@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "suite": "report",
+  "cases": [
+    "observed success with persisted report",
+    "observed timed_out exit1",
+    "unreachable broker bounded exit1 null observations",
+    "save failure exit1 without automatic redispatch"
+  ]
+}

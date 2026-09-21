@@ -1,0 +1,9 @@
+{
+  "capturedAt": "2026-09-21T08:16:10.912Z",
+  "node": "v24.16.0",
+  "npm": "11.13.0",
+  "lockSha256": "f559b5c9e5ac78e8e6139d1560a8be8e8aeabf4348b1c5b65f4919263496631b",
+  "command": "npm audit --json (development + production)",
+  "advisorySource": "npm configured registry audit endpoint",
+  "findings": 0
+}

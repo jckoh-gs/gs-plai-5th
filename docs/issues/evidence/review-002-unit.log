@@ -1,0 +1,27 @@
+✔ CSV/TSV BOM and Korean aliases, unit and missing weather (3.327792ms)
+✔ linear 300/599/600 boundaries and last interval hold, no wrapping interpolation (0.342ms)
+✔ mean/kWh energy holds original interval without claiming ramp-adjusted energy (0.634ms)
+✔ direction shortest arc and optional missing data never backwards-filled (0.393083ms)
+✔ strict actual dates, offsets, seconds, leap years (0.431375ms)
+✔ invalid CSV errors identify original row/field; duplicate, reverse, gap, NaN, empty (1.064416ms)
+✔ registration validates whole input and generates correct hybrid IDs and virtual coordinates (0.987167ms)
+✔ CSV total allocation and hybrid separate allocation, voltage/current provenance (0.604875ms)
+✔ weather wind power cubic/rated/cut-out and custom interpolation (0.290125ms)
+✔ solar temperature correction, saturation, efficiency and manual night irradiance (0.218208ms)
+✔ ramp, stopping, fractional startup and actuator freeze (0.463584ms)
+✔ percentage limit and rated reductions, unchanged CSV power on weather-only edit (0.264375ms)
+✔ all PATCH validators are atomic including RNG and source metadata (0.574875ms)
+✔ LCG common noise, independent fault RNG, snapshot deterministic replay and pause (0.421916ms)
+✔ separate irradiance CSV aligns source timestamp and falls back outside range (0.315833ms)
+✔ frame includes complete state and excludes custom curve data; API retains curve (0.220208ms)
+✔ loop count records actual dataset wraps, not seeks, and survives scenario JSON snapshots (0.21425ms)
+✔ independent review: generated sample files accepted by production parser (37.530042ms)
+✔ independent review: delayed KMA HTTP result cannot overwrite newer manual edit or station (42.24525ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 186.69775

@@ -1,0 +1,31 @@
+{
+  "imageManifest": "sha256:a1d0373c25b0d60c13b918e056a8a6e599ef80142f4736675adf01be6288f00c",
+  "sourceCommit": null,
+  "status": "uncommitted early checkpoint; not final acceptance",
+  "files": {
+    "app/package-lock.json": "f559b5c9e5ac78e8e6139d1560a8be8e8aeabf4348b1c5b65f4919263496631b",
+    "app/package.json": "50f094fc8d67f19261eb2beccacf97196b2b0d0280d84f4cf5f305761890e7ad",
+    "app/dist/assets/Scene-B84j_hbe.js": "62ec86cc17edde322537f2622cc8e48e9703c9c47219935a7d0681b537ae2b8f",
+    "app/dist/assets/index-B3eu6ofx.css": "afec4877605cc91924f140f48a8d5fc57c3164e6bd1caaca0d4aac1730e95258",
+    "app/dist/assets/index-D-J_AW5n.js": "155ad397c3bd7944c3b3b4760b3559568ad353fc249373605ca84df00982383a",
+    "app/dist/index.html": "8424fdb3306bdbec4e3407b98825db8b72b2fa603a97665d68d4be3ceb9cbc5c",
+    "app/server/config.js": "a6ac42381ad8065265340bd5417b1ac6e3394db18dab4b920deb4cde9aa866e6",
+    "app/server/control.js": "8d01f84625301f80fa004309276f354b8421c2841ea2084ad9a3f2b45fec3175",
+    "app/server/index.js": "945a30388d0d9bb08ae70c2ab6d470778734875436be306e40d9f02afe408a8f",
+    "app/server/metrics.js": "590169fdfc7431bb07cf7df957ae969cdf707244b809a1d7c1c8e6d642f9f817",
+    "app/server/model.js": "7caaea2dc467f196b225c3b632de5cf9d8294f58439eb88b6c6c469cd94a6103",
+    "app/server/store.js": "5b497e48f84e0a918a6d565e5dc9c741c4e68fc69c8141d813e7921e96a73969",
+    "app/server/transport.js": "90c33b2c5b7eff62ffb6c2c2dc8a6a659b9ab6e770119eadc862f3094431d29a",
+    "app/server/weather.js": "4d10a10957053d68f22349021b358a1d730622a457b824e26521723f0fea64d9",
+    "app/scripts/advanced-integration.js": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32",
+    "app/scripts/backup.js": "0dd93266d60c714b38b4d01e9d2bb2566b31eebb54844269154330ed7046e5d7",
+    "app/scripts/generate-samples.js": "072607d2c3cdf1c310e730da6e910ad87cc6381888e04f1fdc9a793fc8a450fe",
+    "app/scripts/integration.js": "e05ffc170c6c85a0298ef8662d7a8a2c039a543fa714a11cd30d0ab5200fc143",
+    "app/scripts/test-harness.js": "cfca8ec548cbc5958e6a776f1b3d7178982c6f77d6593c15b23bb36df266b2fe",
+    "app/scripts/vpp-client.js": "478987df36c55c5be3300b66fee73a6bf7957b997cd75089acc2543696eab3b4",
+    "app/samples/hybrid.csv": "c400918bb97a7fd173e2401f88db04cbb3edcfd9f62bb9c603a62d3527bf12bb",
+    "app/samples/solar.csv": "ca636abde604fef9efa9ef005baefdddc2faf82bfa41be1b573d2b4d514114b4",
+    "app/samples/wind.csv": "9003d6a7cec7ab4bc029a8aa02085a3c6e6c8aeb7da5004a012b6037e90d2891",
+    "app/docs/protocol.md": "52a0606d32c382c2b754d23904c175c56b0b0cbc37fa0c1fa32c7eca64d6e720"
+  }
+}

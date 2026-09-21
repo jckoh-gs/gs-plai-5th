@@ -1,0 +1,4 @@
+locator.waitFor: Timeout 12000ms exceeded.
+Call log:
+[2m  - waiting for getByText(/데이터 지연 ·/) to be visible[22m
+

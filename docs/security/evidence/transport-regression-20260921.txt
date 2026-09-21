@@ -1,0 +1,13 @@
+✔ storage failure during pump keeps row retryable and other event errors never escape (24.311042ms)
+✔ delayed storage failure and PUBACK ack failure retain original queue row for retry (62.541291ms)
+✔ per RTU independent inflight; only PUBACK removes immutable row; malformed and retained rejected (36.413125ms)
+✔ connection client IDs remain caller-specific with common auth configuration (0.230833ms)
+✔ delayed pump reads latest model object and REST receipts persist (16.336209ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 145.766375

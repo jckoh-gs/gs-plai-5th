@@ -1,0 +1,13 @@
+✔ malformed, null, array, oversized, retained and cross-RTU statuses rejected (0.618666ms)
+✔ only allowlisted fields survive; raw credentials and controls are removed from reason (0.163292ms)
+✔ runtime keeps tick/prune/shutdown alive when audit and storage both fail (24.133667ms)
+✔ shutdown closes HTTP and SQLite even if transport stop rejects (2.353875ms)
+✔ unauthenticated health/config contain no configured credentials; protected state requires token (6.3715ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 120.619792

@@ -1,0 +1,20 @@
+✔ canonical global dedup, validation atomicity, priority intersections (7.482792ms)
+✔ expiry before dispatch; sensor freeze cannot complete; restart deadline real time (1.073167ms)
+✔ target checks every allocated device and signed actual error, then completion (1.124542ms)
+✔ stop clears pending startup and completed requires a post-dispatch model sample (0.374208ms)
+✔ failed durable dispatch rolls back model, command cache and outbox together (0.527ms)
+✔ setpoint action validation applies even to known duplicate IDs (0.223333ms)
+✔ outer model transaction rollback also restores nested command cancellation cache (0.274917ms)
+✔ independent review: generated sample files accepted by production parser (32.644916ms)
+✔ independent review: delayed KMA HTTP result cannot overwrite newer manual edit or station (32.491084ms)
+✔ per RTU independent inflight; only PUBACK removes immutable row; malformed and retained rejected (35.197291ms)
+✔ connection client IDs remain caller-specific with common auth configuration (0.211666ms)
+✔ delayed pump reads latest model object and REST receipts persist (17.287667ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 152.81275

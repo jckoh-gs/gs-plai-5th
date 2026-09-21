@@ -1,0 +1,26 @@
+{
+  "name": "grid-vpp-emulator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=24.0.0"},
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env server/index.js",
+    "start": "node --env-file-if-exists=.env server/index.js",
+    "web": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "test": "node --test tests/*.test.js",
+    "test:integration": "node scripts/integration.js",
+    "test:advanced": "node scripts/advanced-integration.js",
+    "broker": "docker compose up -d mqtt",
+    "vpp:monitor": "node --env-file-if-exists=.env scripts/vpp-client.js",
+    "vpp:dispatch": "node --env-file-if-exists=.env scripts/vpp-client.js --dispatch",
+    "samples": "node scripts/generate-samples.js"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.0", "@react-three/fiber": "^9.3.0",
+    "csv-parse": "^7.0.2", "express": "^5.1.0", "lucide-react": "^0.468.0",
+    "mqtt": "^5.14.0", "react": "19.2.0", "react-dom": "19.2.0", "three": "^0.180.0"
+  },
+  "devDependencies": {"vite": "^7.1.0"}
+}

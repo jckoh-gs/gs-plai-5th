@@ -1,0 +1,67 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata: {name: grid-data, namespace: gs-plai-5h}
+spec:
+  accessModes: [ReadWriteOnce]
+  storageClassName: local-path
+  resources: {requests: {storage: 5Gi}}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: grid, namespace: gs-plai-5h}
+spec:
+  replicas: 1
+  strategy: {type: Recreate}
+  selector: {matchLabels: {app: grid}}
+  template:
+    metadata: {labels: {app: grid}}
+    spec:
+      automountServiceAccountToken: false
+      nodeSelector: {kubernetes.io/hostname: charleskoh-nucbox-g3}
+      securityContext: {runAsUser: 1000, runAsGroup: 1000, fsGroup: 1000, seccompProfile: {type: RuntimeDefault}}
+      containers:
+        - name: app
+          image: GRID_IMAGE
+          ports: [{containerPort: 3001}]
+          env:
+            - {name: MQTT_URL, value: 'mqtt://127.0.0.1:1883'}
+            - {name: MQTT_USERNAME, value: grid}
+            - name: MQTT_PASSWORD
+              valueFrom: {secretKeyRef: {name: grid-secrets, key: mqtt-password}}
+            - name: API_TOKEN
+              valueFrom: {secretKeyRef: {name: grid-secrets, key: api-token}}
+          securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: [ALL]}}
+          resources: {requests: {cpu: 100m, memory: 256Mi}, limits: {cpu: '2', memory: 1Gi}}
+          volumeMounts: [{name: data, mountPath: /data}]
+          readinessProbe: {httpGet: {path: /api/health, port: 3001}, initialDelaySeconds: 5, periodSeconds: 5}
+          livenessProbe: {httpGet: {path: /api/health, port: 3001}, initialDelaySeconds: 30, periodSeconds: 15}
+        - name: mqtt
+          image: eclipse-mosquitto:2@sha256:6f8d8a947c506f8a2290ec65cd4bd2bc7cb4d43fb5f6271f861cb013e2ef9797
+          command: [mosquitto, -c, /mosquitto/config/mosquitto.conf]
+          securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: [ALL]}}
+          resources: {requests: {cpu: 50m, memory: 32Mi}, limits: {cpu: '1', memory: 128Mi}}
+          volumeMounts:
+            - {name: mqtt-config, mountPath: /mosquitto/config}
+            - {name: secrets, mountPath: /mosquitto/secrets, readOnly: true}
+            - {name: data, mountPath: /mosquitto/data}
+          readinessProbe: {tcpSocket: {port: 1883}, initialDelaySeconds: 3, periodSeconds: 5}
+      volumes:
+        - {name: data, persistentVolumeClaim: {claimName: grid-data}}
+        - {name: mqtt-config, configMap: {name: grid-mqtt}}
+        - {name: secrets, secret: {secretName: grid-secrets, defaultMode: 288}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: grid, namespace: gs-plai-5h}
+spec:
+  selector: {app: grid}
+  ports: [{name: http, port: 3001, targetPort: 3001}]
+  type: ClusterIP
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: grid-private, namespace: gs-plai-5h}
+spec:
+  podSelector: {matchLabels: {app: grid}}
+  policyTypes: [Ingress]
+  ingress: []

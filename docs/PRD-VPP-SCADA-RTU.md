@@ -1,6 +1,6 @@
 # GRID — VPP·SCADA·RTU 통합 에뮬레이터 PRD
 
-문서 버전: 1.5 · 기준일: 2026-09-21 · 제품 기준: SCADA Emulation Engine v2 / MQTT 계약 v2
+문서 버전: 1.7 · 기준일: 2026-09-21 · 제품 기준: SCADA Emulation Engine v2 / MQTT 계약 v2
 
 ## 문서의 목적과 사용법
 
@@ -32,7 +32,7 @@
 20. 인수 시험
 21. 구현 순서와 완료 정의
 22. 소개·시연 영상 및 발표자료
-23. 현재 산출물과 검증 상태
+23. 과거 구현 기록과 신규 검증 경계
 24. 외부 연동 전 필요한 입력
 25. 변경 관리와 후속 범위
 부록 A. 완전한 MQTT 계약 및 연동 절차
@@ -450,8 +450,9 @@ PUBACK 지연은 발행 요청부터 callback 확인까지의 시간이며 제�
 
 ## 16. HTTP 관리 API
 
-기본 /api, JSON. 관리 API는 VPP MQTT 연동의 필수 경로가 아니다. API_TOKEN 사용 시 health 외에 Authorization: Bearer가 필요하다. 공통 검증 오류는 기준 구현에서 400과 {error:string}; 인증 실패 401. 자원별 정상 응답은 아래를 따른다. 새 구현은 오류 코드 세분화를 별도 버전 변경 없이 클라이언트와 합의한다.
+기본 /api, JSON. 관리 API는 VPP MQTT 연동의 필수 경로가 아니다. API_TOKEN 사용 시 `/api/health`와 `/api/config` 외에 Authorization: Bearer가 필요하다. 공통 검증 오류는 기준 구현에서 400과 {error:string}; 인증 실패 401. 자원별 정상 응답은 아래를 따른다. 새 구현은 오류 코드 세분화를 별도 버전 변경 없이 클라이언트와 합의한다.
 
+- GET /config: 인증 불필요. `{authRequired:boolean,version:string}`만 제공하며 토큰·설정 비밀을 반환하지 않는다.
 - GET /health: 프로세스와 브로커 상태를 확인하는 경량 응답. 브로커 단절이 곧 HTTP 서버 중단은 아니다.
 - GET /state: mqtt, gateway, plants[], events 등 화면 상태. plants에는 dataset 원문 대신 행 수·보간법·단위·시작/끝을 제공. 각 plant에는 공개 모델, connection, rtuMetrics, outbox, controlRuns 포함.
 - GET /events: text/event-stream, 연결 초기 및 약 1초마다 `data: <state JSON>\n\n`. 끊어진 클라이언트 정리. 느린 클라이언트에는 화면 스냅샷을 건너뛰되 데이터 엔진을 멈추지 않는다.
@@ -460,10 +461,10 @@ PUBACK 지연은 발행 요청부터 callback 확인까지의 시간이며 제�
 - GET /plants/{id}/commands: 최근 200개 명령 배열.
 - PATCH /plants/{id}/weather: {mode:"csv"|"weather", wind_speed_ms?, wind_direction_deg?, irradiance_wm2?, temperature?}; 공개 plant 반환.
 - POST /plants/{id}/weather/refresh: KMA 수동 조회 및 weather 모드 활성화; 관측 결과 반환.
-- POST /plants/{id}/replay: {seconds?,paused?,speed?,seed?,noisePct?,freezeLiveWeather?}; {seconds,replay} 반환.
-- PATCH /plants/{id}/faults: 13장 부분 장애 JSON; 적용 장애 반환.
-- PATCH /plants/{id}/generators/{generatorId}: 7장 모델 부분 JSON; 변경 generator 반환, 활성 명령 추적 취소.
-- PATCH /plants/{id}/station: {station:정수}; 관측소 반환 및 이전 관측 캐시 제거.
+- POST /plants/{id}/replay: {seconds?,paused?,speed?,seed?,noisePct?,freezeLiveWeather?}; 공개 plant 반환.
+- PATCH /plants/{id}/faults: 13장 부분 장애 JSON; 공개 plant 반환.
+- PATCH /plants/{id}/generators/{generatorId}: 7장 모델 부분 JSON; 공개 plant 반환, 활성 명령 추적 취소.
+- PATCH /plants/{id}/station: {station:정수}; 공개 plant 반환 및 이전 관측 캐시 제거.
 - POST /plants/{id}/irradiance: {csv:문자열|null}; {rows:개수}.
 - GET /plants/{id}/samples: 최근 출력 샘플 3600개.
 - GET /plants/{id}/scada: 최근 전체 frame 120개.
@@ -493,13 +494,15 @@ PUBACK 지연은 발행 요청부터 callback 확인까지의 시간이며 제�
 
 ## 17. 설정·보안·외부 VPP 연결
 
+설정 생략 시 런타임 기본은 앱 3001 / MQTT 1883이다. 신규 작업 폴더의 `.env.example`과 로컬 Compose는 기존 서비스 충돌을 피하기 위한 예제 포트 3101 / 18883을 사용한다. 실제 실행에서는 적용한 환경변수와 주소를 기록하고 아래 기본 포트 예제도 함께 치환한다.
+
 필수 설정은 부록 B .env.example에 포함한다. PORT=3001, HOST=127.0.0.1, MQTT_URL, MQTT_PREFIX, TELEMETRY_SECONDS=60, KMA_AUTH_KEY, RETENTION_DAYS=30. 선택은 DB_PATH, SEED_DEMO, API_TOKEN, MQTT_CLIENT_ID, MQTT_USERNAME/PASSWORD, MQTT_CA/CERT/KEY, MQTT_DEVICE_CONFIG다.
 
 로컬 브로커는 루프백 바인딩·anonymous를 사용한다. 이는 외부 운영 브로커 설정이 아니다. 외부 통신은 접근 가능한 공통 브로커와 TLS 인증을 설정한다. TLS 검증을 끄지 않는다. RTU별 인증 JSON은 공통 설정 위에 clientId/인증서 값을 덮어쓰되 MQTT 브로커 주소는 현재 버전에서 공통이다.
 
 AWS는 ATS endpoint:8883, CA, 디바이스 인증서, 개인키와 clientId·토픽 권한을 공급받는다. RTU의 publish/subscribe/receive뿐 아니라 gateway 상태 연결도 허용하거나 환경에 맞게 설계한다. 실제 계정의 권한 정책과 인증서를 검증하기 전 AWS 연결 완료라고 표시하지 않는다.
 
-API 기본은 로컬 접근이다. 토큰 설정 시 내장 UI에 로그인 기능이 없으므로 별도 인증 프록시/클라이언트가 필요하다. 다중 사용자 원격 운영은 후속 인증·인가 설계가 필요하다. .env, certs/, data/와 백업 DB는 저장소에 올리지 않는다. 개발 편의를 위해 인증서를 프런트엔드 번들에 포함하지 않는다.
+API 기본은 로컬 접근이다. 토큰 설정 시 내장 UI는 401에 토큰 입력을 표시하고 sessionStorage에 탭 세션 동안만 저장한다. REST·SSE·다운로드 모두 Authorization 헤더를 사용하며 URL query나 로그로 토큰을 전달하지 않는다. SSE는 fetch 스트림으로 수신하고 인증 실패 시 재로그인을 안내한다. 다중 사용자 원격 운영은 후속 인증·인가 설계가 필요하다. .env, certs/, data/와 백업 DB는 저장소에 올리지 않는다. 개발 편의를 위해 인증서를 프런트엔드 번들에 포함하지 않는다.
 
 ### 실제 VPP 연결 순서
 
@@ -524,9 +527,9 @@ API 기본은 로컬 접근이다. 토큰 설정 시 내장 UI에 로그인 기�
 - API 서버가 보고한 버전: `v1.33.4+k3s1`, API 서버 플랫폼: `linux/amd64`. 이는 연결 시험 당시의 값이며 전체 노드 아키텍처를 확인한 결과는 아니다.
 - 계정 권한: 사용자는 admin 계정이라고 제공했다. 배포 권한이 있을 것으로 예상하지만 실제 RBAC/리소스 생성 권한을 검증한 사실과 구분한다.
 
-이번 문서 업데이트는 저장소·배포 대상 정보를 반영하는 요청이며 push, 원격 리소스 생성, 배포 또는 중단된 자율 개발 재개를 승인하는 실행 요청이 아니다.
+현재 실행은 사용자의 신규 개발 시작 및 k3s 배포 완료 지시에 따른다. 기존 구현을 재사용하지 않으며 새 소스·새 시험 증거로 완료를 입증한다. 과거 문서 갱신만 승인했던 시점의 실행 제한은 현재 사용자 지시를 대신하지 않는다.
 
-### DEPLOY-01 — 추후 k3s 배포 준비 기준
+### DEPLOY-01 — 필수 k3s 배포 수락 기준
 
 실제 배포 작업을 시작할 때 저장소 원격 설정·기준 브랜치·배포 커밋을 확인한다. 배포 context는 `charles-k3s`, namespace는 `gs-plai-5h`로 고정한다. 네임스페이스 범위의 원격 명령에는 `--context=charles-k3s --namespace=gs-plai-5h`를 명시하고 해당 리소스 매니페스트의 `metadata.namespace`도 일치시킨다. 이미지 레지스트리/이미지명, 서비스 공개 방식(Ingress/도메인/TLS), 저장소(StorageClass/PVC), MQTT 브로커 위치·노출·인증 방식은 아직 미정이다. 기존 클러스터 자원과 운영 정책을 확인한 뒤 결정·기록하며 현재 존재하거나 구성 완료된 것으로 가정하지 않는다.
 
@@ -534,7 +537,7 @@ API 기본은 로컬 접근이다. 토큰 설정 시 내장 UI에 로그인 기�
 
 KMA 키·MQTT 인증서·계정·관리 API 토큰·kubeconfig·SSH 개인키는 저장소나 이미지에 포함하지 않는다. 클러스터 Secret 등 배포 환경의 비밀정보 전달 수단을 사용한다. 컨테이너 내 API 바인딩을 외부 접근 가능한 주소로 설정하는 경우 관리 API 인증 및 프런트엔드 인증 흐름을 함께 검증한다. 로컬 익명 MQTT 구성을 원격 공개용 보안 구성으로 간주하지 않는다.
 
-배포 완료는 Pod 기동만으로 판단하지 않는다. 지정 context/namespace의 실행 버전, readiness, UI 접근, 실제 MQTT 전체 데이터·목표값 왕복, 재시작 후 DB/outbox 복원과 이전 정상 버전 복구를 검증한다. 이미지·매니페스트·커밋·검증 증거를 배포 기록에 연결한다. 이 항목은 향후 배포 수락 기준이며 현재 배포 완료 기록이 아니다.
+배포 완료는 Pod 기동만으로 판단하지 않는다. 지정 context/namespace의 실행 버전, readiness, UI 접근, 실제 MQTT 전체 데이터·목표값 왕복, 재시작 후 DB/outbox 복원과 이전 정상 버전 복구를 검증한다. 이미지·매니페스트·커밋·검증 증거를 배포 기록에 연결한다. 이 항목은 이번 실행의 필수 완료 조건이며 배포 완료 기록 자체가 아니다.
 
 ### 기준 기술 스택
 
@@ -726,23 +729,23 @@ RTU별 장애 → 개별 모델 → 시나리오 → 재시작/보존 → 고급
 - **AT-PPT-02:** 모든 슬라이드를 렌더링하고 잘림·겹침·폰트 대체·글자 및 캡처 가독성을 확인한다. 결함 수정 후 영향 슬라이드를 다시 렌더링한다. 검수 이미지 또는 기록을 보관한다.
 - **AT-PPT-03:** PPT, 제작 소스·필요 자산·검수 기록과 영상의 전달 경로를 인도 목록에 기록한다. 영상 안내·링크가 제공 파일과 일치한다. 파일 존재만으로 검수 통과를 선언하지 않는다.
 
-## 23. 현재 산출물과 검증 상태
+## 23. 과거 구현 기록과 신규 검증 경계
 
 v1.1 주의: 아래는 기존 산출물의 과거 검증 기록이다. 이번 14시간 실행의 baseline/stable 검증이나 신규 영상 완료를 뜻하지 않는다. 이번 실행의 실제 단계·stable 커밋은 `docs/operations/run.json`, 새 검증 증거는 메인의 검증 기록으로 판단한다. 문서 버전, npm 버전, 제품 버전, MQTT schemaVersion은 별도로 관리한다.
 
-2026-09-21 기준 현재 프로젝트에는 서버, UI 5개 메뉴, 로컬 브로커 설정, 샘플, MQTT 계약, 자동 시험, 영상이 구현되어 있다. 프로젝트 npm 메타데이터 버전은 1.0.0이나 제품/프로토콜은 v2이므로 버전 표기의 대상이 다르다.
+과거 구현에 대한 2026-09-21 기록에는 서버, UI 5개 메뉴, 로컬 브로커 설정, 샘플, MQTT 계약, 자동 시험, 영상이 구현되어 있다. 프로젝트 npm 메타데이터 버전은 1.0.0이나 제품/프로토콜은 v2이므로 버전 표기의 대상이 다르다.
 
 기존 기록의 최신 결과: 단위 시험 18개 통과, 실제 Mosquitto 기본·고급 통합 시험 통과, 프로덕션 빌드 성공. v1 당시 메트릭이 세션 기준이었다는 기록은 v2에서 누적 영속 복원으로 대체되었다. 초기 텔레메트리의 작은 요약 payload 크기는 v2 전체 SCADA의 크기 기준이 아니다.
 
 실행 중 서버와 MQTT 전용 VPP 클라이언트에서 목표125kW, actualKw=125, errorKw=0을 확인했다. UI에서는 목표100kW, 시나리오 저장, 가이드 렌더링을 확인했다. 별도 촬영에서도 MQTT125kW 결과를 재확인했다. KMA 실제 관측 조회 성공 이력이 있으나 외부 서비스는 일시적으로 timeout이 발생할 수 있다.
 
-현재 영상은 전체 디코딩 성공, H.264/AAC,1920×1080, 길이242.20초를 확인했다. 영상은 `artifacts/video/GRID-VPP-demo-ko.mp4`, 원고는 `script-ko.md`, 자막은 `narration-ko.srt`다.
+과거 구현의 영상 기록은 전체 디코딩 성공, H.264/AAC,1920×1080, 길이242.20초를 확인했다. 영상은 `artifacts/video/GRID-VPP-demo-ko.mp4`, 원고는 `script-ko.md`, 자막은 `narration-ko.srt`다.
 
 미검증: 실제 외부 VPP 운영 브로커, AWS IoT 계정 연결, 실물 SCADA, 제조사 동특성 정확도, 다수 RTU 부하·장기 운영. 3D 번들 크기 경고가 남아 있다. 이번 PRD 작성은 기존 시험 기록과 코드를 대조한 문서화이며 모든 시험을 새로 실행했다는 뜻이 아니다.
 
 ### Git 및 k3s 읽기 연결 시험 기록
 
-이번 대화에서 다음 읽기 전용 연결 시험을 수행했다.
+과거 문서 작성 당시 다음 읽기 전용 연결 시험을 수행했다고 기록했다. 신규 실행의 증거로 재사용하지 않는다.
 
 ```bash
 git -c core.sshCommand='ssh -o BatchMode=yes -o ConnectTimeout=10 -o StrictHostKeyChecking=yes' ls-remote git@github.com:jckoh-gs/gs-plai-5th.git
@@ -777,23 +780,41 @@ k3s 명령은 종료 코드 0이고 `gitVersion=v1.33.4+k3s1`, `platform=linux/a
 
 ### FR-VPP-REPORT-01 선택적 MQTT 시험 결과 파일 (IDEA-001, 작업본 구현·검증 대기)
 
-제품 v2.1.0 목표로 기존 MQTT dispatch 클라이언트에 선택적 JSON 결과 파일 출력을 추가한다. 제어 P1 수정 제품 v2.0.1을 먼저 진행한다. 이 요구의 채택은 구현 완료나 stable 승격을 뜻하지 않는다. MQTT schemaVersion 2와 기존 기본 실행/콘솔 출력을 유지하며 UI·서버 API 변경은 요구하지 않는다. 결과 파일은 dispatch 실행에서 `VPP_REPORT_FILE=/absolute/result.json`으로 지정한다. 미지정 시 기존 콘솔 실행을 유지하며 monitor에서 지정하면 입력 오류로 종료한다. `VPP_CONNECT_TIMEOUT_MS`는 연결 제한시간(ms)이며 기본 10000, 허용 범위 100~60000이다. `COMMAND_TIMEOUT_SECONDS`는 명령 제한시간(기본 120초, 1~3600)이며 클라이언트 결과 대기는 그 값+45초다. 연결 제한시간을 구독 응답이나 전체 시험의 제한시간으로 설명하지 않는다. 실제 옵션·사용 예·실패 의미를 연동 가이드와 클라이언트 사용 설명에 함께 제공한다.
+IDEA-001의 선택적 JSON 결과 파일 요구는 신규 MQTT dispatch 클라이언트에도 유지한다. 과거 구현의 v2.0.1/v2.1.0 개발 순서·검증 상태를 신규 제품의 완료 상태로 승계하지 않는다. 신규 프로젝트 package 버전은 1.0.0이며 보고서 기능도 이번 필수 인수 범위다. 선택적이라는 표현은 실행 시 결과 파일 옵션이 선택이라는 뜻이며 기능 구현·인수 자체를 생략할 수 있다는 뜻이 아니다. 신규 릴리스 버전과 stable 승격은 실제 변경 및 검증 기록에서 확정한다. 이 요구의 채택은 구현 완료나 stable 승격을 뜻하지 않는다. MQTT schemaVersion 2와 기존 기본 실행/콘솔 출력을 유지하며 UI·서버 API 변경은 요구하지 않는다. 결과 파일은 dispatch 실행에서 `VPP_REPORT_FILE=/absolute/result.json`으로 지정한다. 미지정 시 기존 콘솔 실행을 유지하며 monitor에서 지정하면 입력 오류로 종료한다. `VPP_CONNECT_TIMEOUT_MS`는 연결 제한시간(ms)이며 기본 10000, 허용 범위 100~60000이다. `COMMAND_TIMEOUT_SECONDS`는 명령 제한시간(기본 120초, 1~3600)이며 클라이언트 결과 대기는 그 값+45초다. 연결 제한시간을 구독 응답이나 전체 시험의 제한시간으로 설명하지 않는다. 실제 옵션·사용 예·실패 의미를 연동 가이드와 클라이언트 사용 설명에 함께 제공한다.
 
 결과 파일은 UTF-8 JSON이며 독립적인 `reportSchemaVersion: 1`을 둔다. 필수 정보는 실행 클라이언트 제품 버전, MQTT 계약 버전, RTU ID, commandId, 시작/종료 UTC, 요청 목표 kW, 실제 수신한 해당 명령의 상태 이벤트 목록(수신 UTC 포함), 마지막 관측 상태, 실제 출력 kW/오차 kW, 종료 원인, exitCode다. 서버 제품 버전과 해당 명령에 연관된 runId는 관측하지 못하면 null로 기록하며 클라이언트 버전이나 무관한 최신 telemetry로 대신하지 않는다. 미관측 출력/오차도 null이고 미수신 accepted/executing 전이를 합성하지 않는다. 결과 파일은 시험 증거이며 새로운 MQTT 메시지 계약이 아니다.
 
 해당 commandId의 completed를 실제 수신하고 요청된 파일 저장까지 성공하면 exit 0이다. 명령 실패·미도달·명령 결과 대기 timeout·연결/구독/발행 실패·파일 저장 실패는 exit 1이다. 명령 결과와 클라이언트 실행 실패를 구분해 기록하며 PUBACK만으로 completed를 생성하지 않는다. 연결 실패도 유한한 시간 안에 종료한다. 파일 저장이 가능한 실패 경로에서는 실패 결과를 남기고, 저장 자체가 실패하면 stderr와 exit 1로 알리며 결과 파일이 있다고 주장하지 않는다. 명령 전송 뒤 파일 저장 실패가 발생해도 같은 시험을 자동 재발행하지 않는다. 자격증명·키·인증서 본문·인증정보 포함 브로커 URL은 결과 파일과 오류 출력에서 제외한다.
 
-### AT-VPP-REPORT 제품 v2.1.0 수락 조건 (전체 검증 대기)
+### AT-VPP-REPORT 신규 제품 보고서 수락 조건 (최종 릴리스 검증 대기)
 
 1. 격리 DB/포트/MQTT prefix와 실제 로컬 브로커에서 충분한 가용 출력의 목표 요청을 실행한다. JSON의 commandId·실제 관측 전이·최종 출력/오차를 수신 증거와 대조하고 completed 및 exit 0을 확인한다.
 2. 가용량보다 높은 목표의 미도달 사례는 관측한 timed_out과 exit 1을 기록한다. 클라이언트 대기 timeout은 명령에서 수신한 timed_out과 다른 종료 원인으로 기록한다.
 3. 브로커 불가 사례가 유한한 시간 내 실패 결과와 exit 1로 끝나며, 미관측 상태/출력/runId를 성공값으로 채우지 않는다.
 4. 쓰기 불가 결과 경로는 명확한 저장 실패와 exit 1을 반환한다. 파일 저장 실패 때문에 명령을 자동 재전송하지 않는다. JSON/오류 출력에 시험용 자격증명이 노출되지 않는다.
-5. 결과 파일 옵션 없이 기존 monitor/dispatch가 동작하고 MQTT schemaVersion 2가 유지된다. 관련 단위 시험, 기본·고급 MQTT 통합 시험, build 및 실행 확인을 통과한 뒤에만 v2.1.0 stable 태그와 증거를 기록한다.
+5. 결과 파일 옵션 없이 기존 monitor/dispatch가 동작하고 MQTT schemaVersion 2가 유지된다. 관련 단위 시험, 기본·고급 MQTT 통합 시험, build 및 실행 확인을 통과한 뒤에만 신규 제품 릴리스에 맞는 stable 태그와 증거를 기록한다.
+
+### FR-AUTH-01 원격 관리 UI 인증 (IDEA-002, 채택·검증 대기)
+
+API_TOKEN이 있는 환경에서 UI는 401 후 비밀번호형 토큰 입력을 제공한다. 올바른 토큰으로 상태·SSE·명령·가이드/시나리오 다운로드가 모두 동작해야 한다. 잘못된 토큰은 성공 상태를 만들지 않는다. `/api/config`는 authRequired와 version만 공개한다. URL·내보내기·이벤트 로그·시연 영상에 토큰을 남기지 않는다. 공개 네트워크 접근 시 HTTPS 또는 인증된 터널을 사용한다. 단일 공유 관리 토큰은 사용자별 권한 관리가 아니다.
+
+AT-AUTH-01: 무인증 state 401, config 비밀 없음, 잘못된 토큰 재입력, 올바른 토큰 REST/SSE/다운로드, 새 탭 세션 경계 및 토큰 비노출을 실제 브라우저와 API에서 확인한다.
+
+### UI-07 화면 데이터 최신성 (IDEA-003, 채택·검증 대기)
+
+UI는 마지막으로 정상 상태 스냅샷을 수신한 시각과 연결 상태를 표시한다. 상태를 5초 이상 받지 못하면 “오래된 데이터” 표시로 마지막 관측값과 실시간 상태를 구분한다. 브라우저 로컬 시각 기준 경과시간이며 서버·원본 CSV 시각과 혼동하지 않는다. SSE 연결 자체가 열려 있어도 데이터가 멈추면 오래된 상태가 된다. 정상 상태 스냅샷이 다시 도착하면 표시를 해제한다. 연결 복구나 HTTP 접수만으로 제어 completed를 합성하지 않는다.
+
+AT-FRESH-01: 정상 수신 → 스트림 무수신 5초 → 오래된 데이터 표시 → 정상 스냅샷 수신 → 해제를 실제 UI 또는 브라우저 시험에서 확인한다. 처음 상태를 받기 전에는 수신 대기 상태를 표시하며 기존 관측값을 최신인 것처럼 표시하지 않는다.
+
+### OPS-05 릴리스 증거 manifest (IDEA-004, 채택·검증 대기)
+
+복원 가능한 각 릴리스는 기계 판독 가능한 JSON manifest를 제공한다. runId, 제품 버전, 소스 commit, PRD 버전과 SHA-256, 이미지 참조와 digest, SQLite backup API로 생성한 snapshot 경로·SHA-256, 시험 로그 경로·SHA-256·실행 revision·종료 코드, k3s context/namespace와 배포·복원 증거 경로를 기록한다. source commit이 없는 작업본은 dirty 여부와 관련 파일 해시를 명시하고 commit만으로 재현 가능한 릴리스라고 주장하지 않는다. 아직 생성되지 않거나 검증되지 않은 필드는 null 또는 pending으로 기록한다. 전체 필수 게이트를 통과하기 전에는 stable로 표시하지 않는다. 자격증명·토큰·개인키·DB 본문을 manifest에 포함하지 않는다.
+
+AT-RELEASE-01: manifest가 JSON으로 파싱되고 기록된 파일의 실제 SHA-256 및 배포 이미지 digest가 일치하는지 확인한다. 로그는 해당 릴리스 revision의 실행 결과여야 한다. 기록된 snapshot과 릴리스로 별도 복원 실행하고 UI/실제 MQTT 왕복·DB/outbox 복구 증거를 연결한다. 파일 존재나 과거 시험 로그만으로 복원 통과를 판정하지 않는다.
 
 ### OPS-01 시간 제한과 역할 (채택, 실행 검증 대기)
 
-이번 자율 개발은 2026-09-21 14:38:52 KST부터 2026-09-22 04:38:52 KST까지다. 기능 동결은 종료 30분 전인 04:08:52 KST다. 기계 판독 기준은 `docs/operations/run.json`의 UTC 시각이며 재개 시 실제 UTC와 비교한다. 동결 이후 새 기능 개발을 시작하지 않고, 마감 이후에는 상태 보고와 예약 정리만 수행한다. 중단·지연 실행을 정상적인 연속 실행으로 보고하지 않는다.
+이전 계획(2026-09-21 14:38:52 KST 시작, 2026-09-22 04:38:52 KST 종료)은 취소된 이력이다. 현재 run `grid-new-20260921T080733Z`는 2026-09-21 17:07:33 KST 시작, 2026-09-22 06:37:33 KST 기능 동결, 07:07:33 KST 종료다(UTC: 08:07:33 / 21:37:33 / 22:07:33). 기계 판독 기준은 `docs/operations/run.json`의 UTC 시각이며 재개 시 실제 UTC와 비교한다. 동결 이후 새 기능 개발을 시작하지 않고, 마감 이후에는 상태 보고와 예약 정리만 수행한다. 중단·지연 실행을 정상적인 연속 실행으로 보고하지 않는다.
 
 메인은 소스·시험·커밋·릴리스·run.json·최종 영상을 담당한다. 제품 담당은 PRD와 docs/product, 보안 담당은 docs/security, 이슈 담당은 docs/issues만 수정한다. 모니터는 한 회차 결과를 메인에게 보내고 완료하며 메인이 다음 회차를 호출한다. 별도 무한 대기나 자동화는 만들지 않는다. 메인은 작업 단위 완료 또는 약 10분마다 결과와 질문을 확인한다. 앱/컴퓨터 중단 중 예약 실행을 보장하지 않는다.
 
@@ -1031,7 +1052,7 @@ RTU_ID=YOUR_RTU_UUID npm run vpp:monitor
 RTU_ID=YOUR_RTU_UUID TARGET_KW=500 npm run vpp:dispatch
 ```
 
-v2.1.0 작업본의 선택적 보고서 실행 예(전체 검증·stable 승격 대기):
+신규 제품 1.0.0의 보고서 실행 예(최종 릴리스 검증·stable 승격 대기):
 
 ```bash
 RTU_ID=YOUR_RTU_UUID TARGET_KW=500 VPP_REPORT_FILE=/absolute/result.json VPP_CONNECT_TIMEOUT_MS=10000 npm run vpp:dispatch
@@ -1054,7 +1075,7 @@ RTU_ID=YOUR_RTU_UUID TARGET_KW=500 VPP_REPORT_FILE=/absolute/result.json VPP_CON
 
 ### A-10. 관리 API
 
-HTTP 관리 API는 MQTT 연동에 필수는 아니며 로컬 개발 UI에서 사용합니다. 기본 127.0.0.1 바인딩입니다. API_TOKEN을 설정하면 `/api/health` 외 API에 `Authorization: Bearer ...`가 필요합니다. 내장 UI에는 토큰 로그인 기능이 없으므로 원격 관리 시 인증 프록시 또는 별도 클라이언트를 사용합니다.
+HTTP 관리 API는 MQTT 연동에 필수는 아니며 로컬 개발 UI에서 사용합니다. 기본 127.0.0.1 바인딩입니다. API_TOKEN을 설정하면 `/api/health`와 `/api/config` 외 API에 `Authorization: Bearer ...`가 필요합니다. 내장 UI는 401 응답 후 토큰 로그인을 지원합니다. 토큰은 탭 sessionStorage에 보관하며 REST·SSE·다운로드 Authorization 헤더로만 전달합니다.
 
 - GET /api/state, /api/events(SSE), /api/health.
 - POST /api/plants: 기존 CSV 등록 규격.
@@ -1081,7 +1102,7 @@ npm run test:advanced
 
 ## 부록 B. 파일별 실행 설정과 MQTT 시험 클라이언트
 
-아래 설정과 코드는 재구현 프로젝트에 그대로 저장해 사용할 수 있는 기준이다. 부록 B의 vpp-client.js는 기존 최소 예제로, v2.1.0 작업본의 선택적 보고서 구현은 포함하지 않는다. 보고서 구현 시 FR-VPP-REPORT-01 및 부록 A-9 옵션을 추가해야 하며 이 예제만으로 해당 기능이 완료되었다고 판단하지 않는다. 서버·UI는 본문의 요구사항에 따라 구현한다. 인증 값은 빈 값 또는 placeholder이며 실제 비밀정보를 포함하지 않는다.
+아래 설정과 코드는 재구현 프로젝트에 그대로 저장해 사용할 수 있는 기준이다. 부록 B의 vpp-client.js는 기존 최소 예제로, 신규 제품의 보고서 요구 구현은 포함하지 않는다. 보고서 구현 시 FR-VPP-REPORT-01 및 부록 A-9 옵션을 추가해야 하며 이 예제만으로 해당 기능이 완료되었다고 판단하지 않는다. 서버·UI는 본문의 요구사항에 따라 구현한다. 인증 값은 빈 값 또는 placeholder이며 실제 비밀정보를 포함하지 않는다.
 
 ### B. `package.json`
 
@@ -1141,7 +1162,7 @@ KMA_AUTH_KEY=
 # Optional per-RTU client certificate mapping file (keep under certs/)
 # MQTT_DEVICE_CONFIG=certs/rtu-connections.json
 RETENTION_DAYS=30
-# Optional management API bearer token; built-in UI does not implement token login.
+# Management API bearer token; built-in UI supports tab-session token login.
 # API_TOKEN=
 ```
 

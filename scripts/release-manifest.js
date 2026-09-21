@@ -1,0 +1,12 @@
+import {readFileSync,writeFileSync,readdirSync,existsSync,mkdirSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+import {join,dirname} from 'node:path';
+const hash=p=>createHash('sha256').update(readFileSync(p)).digest('hex');
+const walk=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(join(dir,e.name)):[join(dir,e.name)]);
+const sourceFiles=['package.json','package-lock.json','vite.config.js','Dockerfile',...walk('server'),...walk('web'),...walk('samples')];
+const sourceHashes=Object.fromEntries(sourceFiles.sort().map(p=>[p,hash(p)]));
+const evidenceFiles=existsSync('artifacts/checkpoints')?walk('artifacts/checkpoints').filter(p=>/\.(log|json)$/.test(p)):[];
+const current=JSON.parse(readFileSync('docs/operations/run.json'));
+const manifest={schemaVersion:1,createdAt:new Date().toISOString(),runId:current.runId,productVersion:JSON.parse(readFileSync('package.json')).version,contractVersion:2,source:{commit:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),workingTreeStatus:execFileSync('git',['status','--porcelain'],{encoding:'utf8'}).trim(),hashes:sourceHashes},prd:{path:'docs/PRD-VPP-SCADA-RTU.md',sha256:hash('docs/PRD-VPP-SCADA-RTU.md')},deployment:current.deployment||{status:'pending'},backup:current.backup||{status:'pending'},evidence:evidenceFiles.map(path=>({path,sha256:hash(path),meaning:'Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json'})),acceptance:{path:'docs/product/acceptance.json',sha256:hash('docs/product/acceptance.json')},completion:'Not implied by manifest existence; require independent acceptance audit'};
+const output=process.argv[2]||'artifacts/releases/current.json';mkdirSync(dirname(output),{recursive:true});writeFileSync(output,JSON.stringify(manifest,null,2)+'\n');console.log(output);

@@ -1,0 +1,9 @@
+user grid
+topic readwrite vpp/#
+user vpp-client
+topic read vpp/rtu/+/telemetry
+topic read vpp/rtu/+/ack
+topic read vpp/rtu/+/command-status
+topic read vpp/rtu/+/status
+topic write vpp/rtu/+/command
+topic write vpp/rtu/+/setpoint
