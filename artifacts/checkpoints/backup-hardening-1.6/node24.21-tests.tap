@@ -1,0 +1,24 @@
+✔ fixed read snapshot remains atomic with independent continuous WAL writer, and writer commits continue (1152.628251ms)
+ℹ {"writerCommits":257,"maxCommitMs":3.2560000000000286,"backupSteps":12306}
+✔ mid-copy cooperative deadline finalizes backup, releases read transaction and leaves no published final (589.401209ms)
+✔ supervisor terminates own worker blocked inside synchronous work; SIGTERM-resistant worker is killed and read lock released (988.994917ms)
+✔ supervisor refuses verified-looking IPC without successful worker exit and preserves existing final (752.146626ms)
+✔ parent SIGTERM cancels its child, confirms exit and never publishes final (627.614167ms)
+✔ non-WAL database fails closed and leaves private unpublished partial (518.463833ms)
+✔ stalled child is killed within command budget, without printing sensitive stdout (171.346542ms)
+✔ original deadline and total budget reject subsequent launch instead of resetting on retry (6.222917ms)
+✔ expired remote snapshot never creates a partial or final file (281.084417ms)
+✔ snapshot failure leaves only private partial; existing verified final is preserved (845.034083ms)
+✔ successful online snapshot publishes complete private SQLite then compression preserves bytes (907.401792ms)
+✔ one MiB encoded chunk and final short chunk flush completely with matching byte hashes (546.795292ms)
+✔ verified IPC followed by worker failure never promotes partial or reveals worker diagnostics (562.882667ms)
+✔ existing immutable final is preserved and prevents worker work (285.762792ms)
+✔ noncooperative synchronous worker is killed without final publication (649.662791ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5098.500919

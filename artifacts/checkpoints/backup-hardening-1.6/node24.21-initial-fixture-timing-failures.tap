@@ -1,0 +1,59 @@
+✔ fixed read snapshot remains atomic with independent continuous WAL writer, and writer commits continue (1137.599418ms)
+ℹ {"writerCommits":243,"maxCommitMs":2.9861250000000155,"backupSteps":12306}
+✖ mid-copy cooperative deadline finalizes backup, releases read transaction and leaves no published final (314.61675ms)
+✔ supervisor terminates own worker blocked inside synchronous work; SIGTERM-resistant worker is killed and read lock released (1006.879084ms)
+✔ supervisor refuses verified-looking IPC without successful worker exit and preserves existing final (766.191709ms)
+✖ parent SIGTERM cancels its child, confirms exit and never publishes final (219.289167ms)
+✔ non-WAL database fails closed and leaves private unpublished partial (513.827625ms)
+✔ stalled child is killed within command budget, without printing sensitive stdout (188.358875ms)
+✔ original deadline and total budget reject subsequent launch instead of resetting on retry (7.21425ms)
+✔ expired remote snapshot never creates a partial or final file (282.997208ms)
+✔ snapshot failure leaves only private partial; existing verified final is preserved (833.418667ms)
+✔ successful online snapshot publishes complete private SQLite then compression preserves bytes (906.181876ms)
+✔ one MiB encoded chunk and final short chunk flush completely with matching byte hashes (563.530084ms)
+✔ verified IPC followed by worker failure never promotes partial or reveals worker diagnostics (558.961208ms)
+✔ existing immutable final is preserved and prevents worker work (282.783584ms)
+✔ noncooperative synchronous worker is killed without final publication (657.660208ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 13
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4421.762669
+
+✖ failing tests:
+
+test at ../test/tests/backup-concurrency.test.js:49:1
+✖ mid-copy cooperative deadline finalizes backup, releases read transaction and leaves no published final (314.61675ms)
+  AssertionError [ERR_ASSERTION]: deadline must expire after copying starts
+      at TestContext.<anonymous> (file:///test/tests/backup-concurrency.test.js:55:58)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at ../test/tests/backup-concurrency.test.js:75:1
+✖ parent SIGTERM cancels its child, confirms exit and never publishes final (219.289167ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  null !== 1
+  
+      at TestContext.<anonymous> (file:///test/tests/backup-concurrency.test.js:80:37)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

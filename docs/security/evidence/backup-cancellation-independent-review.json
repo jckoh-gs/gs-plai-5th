@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-09-21T15:42:47.273130+00:00",
+  "sha256": {
+    "scripts/remote-backup-helpers.mjs": "3f2d8bf22bcca68234f25ffb1d0eeeacf9ca35467bd1d87b77e0cac3b74476d1",
+    "scripts/remote-backup.mjs": "697f38c1ee4d5e25896f692306ac29f5b40a4700a6f66a28bb0b9c72cbc138b5",
+    "tests/security-backup-cancellation.test.js": "3b9a085fd4d97bc8f9e73744c9464b57769705fbaf072ccc28819cbc7c4cf8e3"
+  },
+  "independentTests": 3,
+  "passed": 3,
+  "scope": "Local synthetic worker processes only; no remote/database backup created",
+  "pending": "Parent final wait/child error cleanup boundary reported to owner",
+  "finalReview": {
+    "checkedAt": "2026-09-21T15:45:51.242599+00:00",
+    "status": "Source gate passed with documented remote/OS/metadata limits; no remote retry authorized",
+    "sha256": {
+      "scripts/remote-backup-helpers.mjs": "73ace68aee69462f0c6eac06ad0445363bcb2143f1cfcff85a28eaf6c85d30fb",
+      "scripts/remote-backup.mjs": "2172449bf7161983062d1fe06b00f198060ede37cb5cea1062e701572d961c18",
+      "tests/security-backup-cancellation.test.js": "3b9a085fd4d97bc8f9e73744c9464b57769705fbaf072ccc28819cbc7c4cf8e3",
+      "tests/backup-concurrency.test.js": "b6604e845b53d621c11735edd14e40f8f3e3f506bb7f8144b980a7d129fa1b59",
+      "artifacts/checkpoints/backup-hardening-1.6/receipt.json": "1c2522c0c9192dd1856eec5bc698031f1ed5c6b3959ddb2c2d00ac2bb5d44c1f"
+    },
+    "independentOwnFixtures": {
+      "passed": 3,
+      "log": "backup-cancellation-independent-final-tests.log"
+    },
+    "selectedOwnerFixturesIndependentlyRerun": {
+      "passed": 2,
+      "scope": "parentSIGTERM and nonWAL",
+      "log": "backup-cancellation-signal-final-tests.log"
+    },
+    "entryValidation": "Requires snapshot.result PASS, workerExitConfirmed true, integrity ok before private journal recording and metadata stage",
+    "postSuiteEntryWording": {
+      "sourceSha256": "2172449bf7161983062d1fe06b00f198060ede37cb5cea1062e701572d961c18",
+      "review": "Retransfer existing final has snapshot null, existing-final-retransfer and no re-established capture-method claim; newly supervised snapshot separately identified. Source read only; helper unchanged."
+    }
+  }
+}

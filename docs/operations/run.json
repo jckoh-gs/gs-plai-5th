@@ -126,7 +126,7 @@
     "idea": "IDEA-010",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T15:11:02.306411+00:00",
-    "status": "1.6 imagegates complete; operationalbackup incident recovered but freshbackup fix pending, no1.6 rollout",
+    "status": "Image4af gates and updatedbackupoperational290tests/securityPASS; controllednewpreupgradebackup pending, actualmain1.5recovered",
     "fallbackTag": "stable-v1.5.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.5.0.json",
     "beforeEvidence": "artifacts/checkpoints/event-time-before/result.json",
@@ -157,7 +157,8 @@
       "imageRemoteRestore": "pending",
       "authRegression": "PASS auth/SSE/stale/reconnect/narrow",
       "formReceipt": "PASS44form/14receipt cases, ownedbaselinecleanup; later201guard executionpendingrestore",
-      "independentAcceptance": "REVIEW030:AT01-03 local,UI04/AT04partialuntilremoteproof"
+      "independentAcceptance": "REVIEW030:AT01-03 local,UI04/AT04partialuntilremoteproof",
+      "operationalBackup": "PASS290fullunit round3; local15/exactNode24.21 15 subsets overlap; source securityPASS; actualremote retry pending"
     },
     "localAcceptance": "artifacts/checkpoints/candidate-1.6-local-summary.json",
     "independentLocalReview": "docs/product/REVIEW-030.md",
@@ -166,7 +167,8 @@
     "evidenceDirectory": "deploy/verification/candidate-331ab9a",
     "appImage": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
     "imageSecurity": "docs/security/evidence/app-candidate-331ab9a-findings.json",
-    "imageReview": "deploy/verification/candidate-331ab9a/pre-deployment-review.json"
+    "imageReview": "deploy/verification/candidate-331ab9a/pre-deployment-review.json",
+    "backupHardeningEvidence": "artifacts/checkpoints/backup-hardening-1.6/summary.json"
   },
   "previousStableCheckpoints": [
     {
@@ -281,7 +283,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T15:39:03.277250+00:00",
+  "updatedAt": "2026-09-21T15:50:45.806575+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",

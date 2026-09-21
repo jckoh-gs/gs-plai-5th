@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "runId": "grid-new-20260921T080733Z",
+  "checkedAt": "2026-09-21T15:42:27.324Z",
+  "nextAction": "resume-first-incomplete-checkpoint",
+  "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "head": "7d941dd865a284854305b2434823393d3d9214ac",
+  "remoteMain": "7d941dd865a284854305b2434823393d3d9214ac",
+  "remoteGitReachable": true,
+  "clusterReachable": true,
+  "api": {
+    "ok": true,
+    "version": "1.5.0",
+    "plantCount": 5
+  },
+  "identity": {
+    "ok": true,
+    "pod": {
+      "name": "grid-79fdb78bf8-6rbjz",
+      "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901",
+      "image": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+      "imageID": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f"
+    },
+    "broker": {
+      "name": "grid-79fdb78bf8-6rbjz",
+      "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901",
+      "image": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  },
+  "workingMilestone": {
+    "productVersion": "1.6.0",
+    "prdVersion": "1.13",
+    "idea": "IDEA-010",
+    "state": "Actualmain1.5 Ready reconnected15:37:26Z afterlivenessrestart; improvebackup beforefreshattempt/1.6upgrade"
+  },
+  "remainingInOrder": [
+    "Resolve bounded onlinebackup ISSUE024 locally with independentreview beforeanynewremote snapshot. Main1.5 recovered automatically; failedpartial retained, knownad34verifiedbackup unchanged. Existingobservers/supervisor remainrunning. Onlythen resume controlled1.6upgrade.",
+    "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
+    "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
+    "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
+  ],
+  "mutationsPerformed": false
+}

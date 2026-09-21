@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-09-21T15:44:57.762003+00:00",
+  "scope": "Local-only synthetic WAL tests. No remote DB, PVC, Pod, snapshot or backup files accessed or modified. No promotion evidence.",
+  "image": "sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
+  "imageRuntime": {
+    "node": "v24.21.0",
+    "sqlite": "3.53.4",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "nodeSourceUrl": "https://github.com/nodejs/node/blob/v24.21.0/src/node_sqlite.cc",
+  "nodeSourceSha256": "573b8842327addc0f8636ed77df04f00c16a3583cfac1048711a8528d7e47544",
+  "progressThrowExcerpt": "if (try_catch.HasCaught()) {\n          Local<Value> exception = try_catch.Exception();\n          Finalize();\n          resolver->Reject(env()->context(), exception).ToChecked();\n          delete this;\n          return;\n        }\n      }\n\n      // There's still work to do\n      this->ScheduleWork();\n      retu",
+  "tests": {
+    "local": "local-tests.tap",
+    "image": "node24.21-tests.tap",
+    "initialFixtureFailure": "node24.21-initial-fixture-timing-failures.tap"
+  },
+  "limitations": [
+    "SIGKILL of supervisor or host shutdown can prevent cleanup; no absolute guarantee.",
+    "Uninterruptible worker kernel I/O may survive kill requests; parent exits with cleanup-unconfirmed and never publishes final.",
+    "Read snapshot pins WAL; monitor disk capacity/time, no claim of eliminating resource pressure.",
+    "METADATA_SOURCE remains outside snapshot supervisor; synchronous integrity stage is not fixed by this change.",
+    "Hardlink deadline check and publication have a small unavoidable scheduling race.",
+    "Synthetic tmpfs/host tests do not prove production I/O behavior or root cause of previous stall."
+  ],
+  "sourceHashes": {
+    "scripts/remote-backup-helpers.mjs": "73ace68aee69462f0c6eac06ad0445363bcb2143f1cfcff85a28eaf6c85d30fb",
+    "scripts/remote-backup.mjs": "2172449bf7161983062d1fe06b00f198060ede37cb5cea1062e701572d961c18",
+    "tests/backup-concurrency.test.js": "b6604e845b53d621c11735edd14e40f8f3e3f506bb7f8144b980a7d129fa1b59",
+    "tests/remote-backup.test.js": "f81c00491f62182faa2444f770ba09605a0efbb77b3c6b972e45cf58e1a5b164",
+    "tests/security-backup-cancellation.test.js": "3b9a085fd4d97bc8f9e73744c9464b57769705fbaf072ccc28819cbc7c4cf8e3"
+  },
+  "postSuiteFocusedCheck": {
+    "checkedAt": "2026-09-21T15:45:47.546205+00:00",
+    "change": "Result provenance distinguishes newly supervised capture from existing-final retransfer; existing snapshot remains null.",
+    "checks": [
+      "node --check scripts/remote-backup.mjs",
+      "Evaluated actual result provenance expression for new and existing branches; PASS"
+    ],
+    "fullSuiteRerun": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T15:41:50.822393+00:00",
+  "pod": "grid-79fdb78bf8-6rbjz",
+  "sameUID": "62d0d7fd-915d-41e4-990b-5714fc7a6901",
+  "containers": [
+    {
+      "name": "app",
+      "ready": true,
+      "restartCount": 1,
+      "imageID": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f"
+    },
+    {
+      "name": "mqtt",
+      "ready": true,
+      "restartCount": 0,
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  ]
+}

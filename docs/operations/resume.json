@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T15:41:26.589513+00:00",
+  "updatedAt": "2026-09-21T15:50:45.806575+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -27,7 +27,7 @@
     "productVersion": "1.6.0",
     "prdVersion": "1.13",
     "idea": "IDEA-010",
-    "state": "Actualmain1.5 Ready reconnected15:37:26Z afterlivenessrestart; improvebackup beforefreshattempt/1.6upgrade"
+    "state": "Operationalbackup fix local/full290/exactNode24.21/source-security gates done; onecontrolledremote retry next, main1.5unchanged"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -39,7 +39,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Resolve bounded onlinebackup ISSUE024 locally with independentreview beforeanynewremote snapshot. Main1.5 recovered automatically; failedpartial retained, knownad34verifiedbackup unchanged. Existingobservers/supervisor remainrunning. Onlythen resume controlled1.6upgrade.",
+    "Commitupdatedoperationalbackup helper/evidence, then onecontrolledpreupgradebackup round2 with currentReady/storage/oldoperation reconciliation and monitoring. Oldfailedpartial retained. Onlyafterverifiednewbackup archiveactual1.5observers andupgrade1.6; no currentoperationsshouldberestarted.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -423,7 +423,7 @@
     "productVersion": "1.6.0",
     "prdVersion": "1.13",
     "idea": "IDEA-010",
-    "phase": "Actualmain1.5 Ready reconnected15:37:26Z afterlivenessrestart; improvebackup beforefreshattempt/1.6upgrade",
+    "phase": "Operationalbackup fix local/full290/exactNode24.21/source-security gates done; onecontrolledremote retry next, main1.5unchanged",
     "uiOwner": "/root/ui",
     "browserOwner": "/root/issues",
     "fallback": "artifacts/releases/checkpoint-1.5.0.json",
@@ -433,26 +433,7 @@
     "unitEvidence": "artifacts/checkpoints/candidate-1.6-unit-round2.log",
     "eventBrowserEvidence": "artifacts/checkpoints/candidate-1.6-event-time-round1/result.json",
     "securityReview": "docs/security/EVENT-TIME-REVIEW.md",
-    "activeOperations": [
-      {
-        "owner": "/root/model",
-        "scope": "Implementlocaloperationalbackup read-snapshot/progressdeadline/ownworkerwatchdog; syntheticWAL/concurrency/failuretests. No remote mutations.",
-        "files": [
-          "scripts/remote-backup-helpers.mjs",
-          "scripts/remote-backup.mjs",
-          "tests/remote-backup.test.js",
-          "tests/backup-concurrency.test.js"
-        ]
-      },
-      {
-        "owner": "/root/security",
-        "scope": "Independentbackupcancellation/file/credential/deadline/ownership review; no remote changes"
-      },
-      {
-        "owner": "/root/deployment",
-        "scope": "Read-onlypostincidentactual1.5 image/Ready/settings/data/UIrecovery check usingexisting3104; no newbackup/rollout"
-      }
-    ],
+    "activeOperations": [],
     "completedLocalHandles": {
       "unit": 51459,
       "integrationAdvanced": 14079,
@@ -460,7 +441,10 @@
       "formRound1Owner": 33083,
       "receiptOwner": 69060,
       "unitRound2": 76826,
-      "formRound2Owner": 63348
+      "formRound2Owner": 63348,
+      "backupFullRound1": 16771,
+      "backupFullRound2": 6973,
+      "backupFullRound3": 35423
     },
     "allCompletedHandleExitCodes": 0,
     "localSummary": "artifacts/checkpoints/candidate-1.6-local-summary.json",
@@ -495,7 +479,13 @@
     },
     "backupFailureEvidence": "deploy/verification/candidate-331ab9a/pre-upgrade-backup-summary.json",
     "backupIncidentRootEvidence": "artifacts/checkpoints/backup-incident-20260921T1534/recovery-summary.json",
-    "operationalChangesScope": "Backuphelpers are notshipped in candidate4af appimage; keep exact331app provenance and separate operationalcommit/testing evidence"
+    "operationalChangesScope": "Backuphelpers are notshipped in candidate4af appimage; keep exact331app provenance and separate operationalcommit/testing evidence",
+    "backupHardeningEvidence": "artifacts/checkpoints/backup-hardening-1.6/summary.json",
+    "backupFullExitCodes": {
+      "16771": 1,
+      "6973": 1,
+      "35423": 0
+    }
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
   "previousCandidateFixture": {

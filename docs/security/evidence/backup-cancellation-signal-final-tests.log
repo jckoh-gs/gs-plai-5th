@@ -1,0 +1,10 @@
+✔ parent SIGTERM cancels its child, confirms exit and never publishes final (151.041541ms)
+✔ non-WAL database fails closed and leaves private unpublished partial (58.230417ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 239.035458

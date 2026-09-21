@@ -1,0 +1,124 @@
+{
+  "reviewedAt": "2026-09-21T15:50:45.806575+00:00",
+  "result": "PASS_LOCAL_OPERATIONAL_GATE",
+  "scope": "Operational snapshot cancellation/consistent WAL read protection; app runtime331/image4af unchanged. No revised remote snapshot executed yet.",
+  "unit": {
+    "passed": 290,
+    "failed": 0,
+    "evidence": "full-unit-round3.log",
+    "durationMs": 36955.353709
+  },
+  "priorFullFailures": [
+    {
+      "file": "full-unit-round1.log",
+      "passed": 289,
+      "failed": 1,
+      "cause": "Old independent test expected raw stderr instead of new fixed JSON. Updated contract retains no-final/no-part checks."
+    },
+    {
+      "file": "full-unit-round2.log",
+      "passed": 289,
+      "failed": 1,
+      "cause": "Hung-discovery fixture marker absent at814ms with800ms setup-inclusive deadline; startup budget exhaustion possible. Raised fixture deadline2500ms, retained actual launch/output/privacy/journal/deadline assertions."
+    }
+  ],
+  "focusedTests": {
+    "local": 15,
+    "actualNode24_21Image": 15,
+    "independentInitialAndFinal": 3,
+    "independentSignalNonWalSubset": 2,
+    "independentBackupFile": 4,
+    "countsOverlap": true
+  },
+  "securityReview": "docs/security/BACKUP-CANCELLATION-REVIEW.md",
+  "functionalMeaning": [
+    "Source fixed at read transaction; actual independent writer progresses and snapshot preserves atomic initial generation",
+    "Cooperative mid-copy cancellation releases transaction; separate parent terminates only own worker and finalizes only verified successful exit",
+    "Parent signal/stalledworker/non-WAL/existingfile/adversarialIPC failure contracts verified",
+    "Newcapture and existingfinal-retransfer provenance separated"
+  ],
+  "limits": [
+    "Synthetic tmpfs/host tests do not establish original production stall root cause or guarantee no production I/O contention.",
+    "Fixed read snapshot retains WAL until released; monitor space and actual main health.",
+    "METADATA_SOURCE integrity/compression remains outside snapshot worker supervisor.",
+    "External parent SIGKILL/host shutdown/uninterruptible kernel IO cannot guarantee worker cleanup; unconfirmed exit never PASS.",
+    "Deadline check and finalhardlink are separate operations."
+  ],
+  "nextAction": "One reconciled controlledpreupgradebackup with exactupdatedhelpers and actualmainhealth monitoring; neverreusefailedpartial or overwrite existingverifiedbackup.",
+  "sources": [
+    {
+      "file": "scripts/remote-backup-helpers.mjs",
+      "sha256": "73ace68aee69462f0c6eac06ad0445363bcb2143f1cfcff85a28eaf6c85d30fb"
+    },
+    {
+      "file": "scripts/remote-backup.mjs",
+      "sha256": "2172449bf7161983062d1fe06b00f198060ede37cb5cea1062e701572d961c18"
+    },
+    {
+      "file": "tests/backup-concurrency.test.js",
+      "sha256": "b6604e845b53d621c11735edd14e40f8f3e3f506bb7f8144b980a7d129fa1b59"
+    },
+    {
+      "file": "tests/security-backup-cancellation.test.js",
+      "sha256": "3b9a085fd4d97bc8f9e73744c9464b57769705fbaf072ccc28819cbc7c4cf8e3"
+    },
+    {
+      "file": "tests/review-backup.test.js",
+      "sha256": "797ffa7af4dec2d28bb19a6bb2cd882bf6e01ffdd52cf7ccaae7728b9666ed9d"
+    }
+  ],
+  "evidence": [
+    {
+      "file": "full-unit-round1.log",
+      "sha256": "d57c288d3d86b6a40ef12613ee56b0abf6c679402894188c2b02182d320be46e"
+    },
+    {
+      "file": "full-unit-round2.log",
+      "sha256": "458484c645fc3934029249ce9ae5c96189eabfea83be204fc879d9df55152175"
+    },
+    {
+      "file": "full-unit-round3.log",
+      "sha256": "296364421f0984f2ded8a3f0591e785794f58bd99990f9dca54010afd76852a6"
+    },
+    {
+      "file": "image-runtime.json",
+      "sha256": "9fb426385557c4569d510c7309f58ebf265ad4aff32455f9d094c8cc09c6d699"
+    },
+    {
+      "file": "local-tests.tap",
+      "sha256": "9e18ee02168731d3983d50e8d856661faefcd451355ee7c232db36e9baebc2b1"
+    },
+    {
+      "file": "node24.21-initial-fixture-timing-failures.tap",
+      "sha256": "9b1d15fbf5b3c2c2a1c2491f4f369f2b95c09a8be0fa3d4e08f9bbea315d1965"
+    },
+    {
+      "file": "node24.21-tests.tap",
+      "sha256": "ce656ddde3c265bfa80699f5b0f5e6d6e72aee9a078d6631719dd4f4b5d7940c"
+    },
+    {
+      "file": "receipt.json",
+      "sha256": "1c2522c0c9192dd1856eec5bc698031f1ed5c6b3959ddb2c2d00ac2bb5d44c1f"
+    },
+    {
+      "file": "source-final/backup-concurrency.test.js",
+      "sha256": "b6604e845b53d621c11735edd14e40f8f3e3f506bb7f8144b980a7d129fa1b59"
+    },
+    {
+      "file": "source-final/remote-backup-helpers.mjs",
+      "sha256": "73ace68aee69462f0c6eac06ad0445363bcb2143f1cfcff85a28eaf6c85d30fb"
+    },
+    {
+      "file": "source-final/remote-backup.mjs",
+      "sha256": "2172449bf7161983062d1fe06b00f198060ede37cb5cea1062e701572d961c18"
+    },
+    {
+      "file": "source-final/review-backup.test.js",
+      "sha256": "797ffa7af4dec2d28bb19a6bb2cd882bf6e01ffdd52cf7ccaae7728b9666ed9d"
+    },
+    {
+      "file": "source-final/security-backup-cancellation.test.js",
+      "sha256": "3b9a085fd4d97bc8f9e73744c9464b57769705fbaf072ccc28819cbc7c4cf8e3"
+    }
+  ]
+}

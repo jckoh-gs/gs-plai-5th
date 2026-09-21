@@ -1,0 +1,11 @@
+✔ verified IPC followed by worker failure never promotes partial or reveals worker diagnostics (40.970792ms)
+✔ existing immutable final is preserved and prevents worker work (20.22025ms)
+✔ noncooperative synchronous worker is killed without final publication (373.640792ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 465.5235
