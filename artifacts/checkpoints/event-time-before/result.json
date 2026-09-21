@@ -1,0 +1,464 @@
+{
+  "result": "REPRODUCED",
+  "observedAt": "2026-09-21T15:08:27.758Z",
+  "version": "1.5.0",
+  "scope": "Actual authenticated main1.5 browser and GET/state only; no event or control creation",
+  "comparisons": [
+    {
+      "id": 55,
+      "created": "2026-09-21T14:54:29.342Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 54,
+      "created": "2026-09-21T14:54:27.118Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 53,
+      "created": "2026-09-21T14:54:16.067Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 52,
+      "created": "2026-09-21T14:54:13.912Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 51,
+      "created": "2026-09-21T14:53:25.318Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 50,
+      "created": "2026-09-21T14:51:06.816Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 49,
+      "created": "2026-09-21T14:51:03.650Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 48,
+      "created": "2026-09-21T13:48:59.607Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 47,
+      "created": "2026-09-21T13:48:57.219Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 46,
+      "created": "2026-09-21T13:48:48.342Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 45,
+      "created": "2026-09-21T13:48:45.733Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 44,
+      "created": "2026-09-21T13:48:30.107Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 43,
+      "created": "2026-09-21T13:45:41.110Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 42,
+      "created": "2026-09-21T13:45:38.163Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 41,
+      "created": "2026-09-21T12:20:07.611Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 40,
+      "created": "2026-09-21T12:20:05.087Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 39,
+      "created": "2026-09-21T12:19:54.480Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 38,
+      "created": "2026-09-21T12:19:51.026Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 37,
+      "created": "2026-09-21T12:19:13.547Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 36,
+      "created": "2026-09-21T12:14:45.651Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 35,
+      "created": "2026-09-21T12:14:42.880Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 34,
+      "created": "2026-09-21T10:07:44.380Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 33,
+      "created": "2026-09-21T10:07:42.748Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 32,
+      "created": "2026-09-21T10:07:32.131Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 31,
+      "created": "2026-09-21T10:07:29.913Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 30,
+      "created": "2026-09-21T10:06:39.988Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 29,
+      "created": "2026-09-21T10:05:26.023Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 28,
+      "created": "2026-09-21T10:05:22.907Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 27,
+      "created": "2026-09-21T09:33:36.780Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 26,
+      "created": "2026-09-21T09:33:35.051Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 25,
+      "created": "2026-09-21T09:33:23.629Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 24,
+      "created": "2026-09-21T09:33:21.123Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 23,
+      "created": "2026-09-21T09:32:47.929Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 22,
+      "created": "2026-09-21T09:31:17.589Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 21,
+      "created": "2026-09-21T09:31:14.784Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 20,
+      "created": "2026-09-21T09:04:42.650Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 19,
+      "created": "2026-09-21T09:04:40.466Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 18,
+      "created": "2026-09-21T09:04:31.587Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 17,
+      "created": "2026-09-21T09:04:29.486Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 16,
+      "created": "2026-09-21T09:04:09.005Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 15,
+      "created": "2026-09-21T08:59:26.118Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 14,
+      "created": "2026-09-21T08:59:21.831Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 13,
+      "created": "2026-09-21T08:51:44.056Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 12,
+      "created": "2026-09-21T08:49:10.638Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 11,
+      "created": "2026-09-21T08:49:03.985Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 10,
+      "created": "2026-09-21T08:40:03.067Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 9,
+      "created": "2026-09-21T08:37:04.149Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 8,
+      "created": "2026-09-21T08:37:02.267Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 7,
+      "created": "2026-09-21T08:36:50.254Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 6,
+      "created": "2026-09-21T08:35:33.677Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 5,
+      "created": "2026-09-21T08:35:32.472Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 4,
+      "created": "2026-09-21T08:34:50.456Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 3,
+      "created": "2026-09-21T08:34:49.248Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 2,
+      "created": "2026-09-21T08:33:40.134Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    },
+    {
+      "id": 1,
+      "created": "2026-09-21T08:33:40.088Z",
+      "legacyTimestamp": null,
+      "legacyCreatedAt": null,
+      "legacyTime": null,
+      "renderedTime": "—"
+    }
+  ],
+  "rowsCount": 55,
+  "distinctCreatedCount": 55,
+  "assets": [
+    {
+      "path": "/assets/index-CyjJuK5n.js",
+      "sha256": "b6c1288921d9fa2e67e284cdbf9596f3b81abeae6625f9500acd07970f2e1dda"
+    }
+  ],
+  "filters": {
+    "rtuSelectorCount": 0,
+    "scope": "Existing logs page is global with no RTU selector or filter"
+  },
+  "source": {
+    "webSha256": "e4fa5c0a31fcc534f9ab04d6e73d08054dd0a313d1a6c08565f08943a31c111c",
+    "storeSha256": "5b497e48f84e0a918a6d565e5dc9c741c4e68fc69c8141d813e7921e96a73969"
+  }
+}

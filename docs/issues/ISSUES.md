@@ -453,3 +453,24 @@ IDEA009 browser harness 재사용 준비: isolated-restore 명시모드는 정�
 ### ISSUE022 원격 인수 완료
 
 6d165d1/2fd3f21의 main UI·실제MQTT·outbox 재시작과 동일719527936바이트/ad34 백업의 현재1.5·하위1.4 복원19근거를 REVIEW027에서 독립 대조했다. 현재1.5 복원본에서 receipt14case와 원래 RTU 설정불변 복구를 확인하여 ISSUE022를 해결로 전환한다. 앞의 FIX_PENDING 문장은 각 시점의 이력이다. 복원 receipt 첫 실행은 EXPECTED_WEB_SHA 누락으로 파일·API 변경 전 실패했고, 원본로그를 보존한 별도round2가 통과했다. 이는 앱 결함이나 명령 중복 수신이 아니다. 최종미디어/전체시간/인도는 별도 미완료다.
+
+
+## ISSUE-023 — 저장된 운영 이벤트 시각이 실제 화면에서 누락
+
+P2 진단 표시, 상태 OPEN/수정미착수. REVIEW029의 소스가설을 실제 인증된 main1.5 UI와GET/state로 독립 재현했다. artifacts/checkpoints/event-time-before/result.json은 서로다른created UTC값55개를 가진55행 모두 화면시각 “—”임을 대조한다. 해당 이벤트에는 timestamp/createdAt/time 필드가없다. 서버 Store.events()가 created를반환하는데 UI가다른세필드만time()에전달하는계약불일치가확정원인이다. 실제served index-CyjJuK5n SHA b6c12889… 확인, rendered HTML/PNG/소스복사/sha256보존. 현재로그화면은글로벌이며RTU선택/필터없음도기록했다.
+
+읽기만수행하여새이벤트/RTU/제어/시나리오/배포/관측기변경은없다. 토큰은브라우저session에만주입하고출력/HTML/이미지본문비노출을확인했다. 기존소스검토는가설이었고이번은실제표시누락재현이며1.5불변checkpoint를수정하지않았다.
+
+안전한최소수락: 기존created를우선사용하고명시적시간대+원본ISO접근정보를표시한다. 임의현재시각대입금지,누락/잘못된값은대시유지. 실제서로다른2개이상과날짜경계격리fixture를비교하고메시지/level/id내림차순/80개계약을유지한다. 새서버API/DB마이그레이션/필터기능은필요없다. 좁은화면/접근성/비밀비노출및정확한수정이미지의원격읽기대조가필요하며아직수정/채택/최종수락으로주장하지않는다.
+
+
+ISSUE023 후보1.6 독립 읽기회귀: artifacts/checkpoints/candidate-1.6-event-time-round1/result.json PASS. 승인web5e638f9e… 및 실제servedbundle2bcc3c1b…를확인했다. root가준비한4기존event의created를독립UTC+9h 계산한 YYYY-MM-DD HH:mm:ss.SSS와화면에서정확대조하고id순서/message/level/KST헤더/원본UTC datetime·title·aria를검사했다. 실제값도UTC날짜에서다음KST날짜로넘어가며정확히표시됐다.
+
+합성GET/state·SSE fixture5행은윤일→다음날자정/23:59:59/잘못된문자열/누락/무효달력일을검사했고alternate timestamp/createdAt로대체하지않음을확인했다. UTC와America/Los_Angeles context의표시가동일하고pageErrors0/nonGET요청0이다. 데스크톱과390px이미지를직접검토했다. 좁은표는기존table영역가로스크롤구조로첫viewport에서메시지열일부만보이며documentoverflow없음검사를통과했다.합성SSE스트림은유한응답이라스크린샷연결표시가다시연결중일수있으며운영연결실패의증거가아니다.
+
+이실행은rootlocalserver95785/3110에기존데이터읽기만수행했고새이벤트/서버/RTU/명령을생성하지않았다. 실제main수정이미지·복원게이트는아직별도이므로ISSUE023전체종결은보류한다. source복사/hash/HTML/3PNG와원본로그를보존했다.
+
+
+운영 harness 정리 후속: candidate1.6 form round1은44검증PASS였으나 기존finally가latency만해제하여owned목표200kW를남겼다. 당시소유ID한정기본controls복구를별도owned-settings-cleanup.json에기록했고그원본은유지한다. 이번 browser-command-form.cjs는실제201응답projection을등록즉시wx0600 baseline-UUID.json으로보존하고setup/case예외에도outerfinally에서소유faults/발전기on·limitPct·targetLimitKw를그기준으로복구한다. 기존RTU와전체ownedprojection을재조회비교한다. PATCHguard는capturedplant/generator ID만허용하고command/weather/replay/타RTU쓰기거절focused1test PASS. 실패진단은정제고정문구,cleanup실패는nonzero+cleanup-failure.json이며성공result는정리후에만발행한다.
+
+실제local3110 fresh candidate-1.6-command-form-round2-cleanup은원래deadline/300초wrapper하에서44checks/5UI POST 및actual201BaselinesRestored=true/preExistingUnchanged=true로종료0. 기존root3RTU와다른시험RTU도변경하지않았다. 소스/기준/cleanup/hash/이미지/로그를별도보존했다. 제품기능변경이아니며이변경때문에필요한한번의회귀만실행했다. 기존round1/1.5근거는수정하지않았다.

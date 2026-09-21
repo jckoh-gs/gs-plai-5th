@@ -114,3 +114,13 @@ IDEA008 개정3 기능·배포·복원 완료: 실제 fdd0491/c19d 이미지에�
 
 
 IDEA009 기능·배포·복원 완료: runtime6d165d1/image2fd3f21의 실제 main UI/MQTT/outbox 재시작과 동일719527936바이트/ad34 스냅샷 fresh1.5·하위1.4 복원19개 근거를 REVIEW027에서 독립 대조했다. 신규 receipt14case는1.5에서만, 기존form44는 양 버전에서 검증했다. 원래5단지 데이터/설정 보존과 양rig0/noPods/소유터널 종료를 확인했다. 새 stable 태그/immutablemanifest 출처 검증은 메인 후속이며 최종 미디어·시간·인도는 미완료다. 앞선 제안/로컬대기 문구는 당시 이력이다.
+
+## IDEA-010 · 운영 이벤트의 실제 시각 표시 — 제안 v1
+
+미채택·미구현. REVIEW029의 소스 관찰: 서버 audit_events는 created를 반환하지만 로그 UI는 timestamp/createdAt/time만 읽어 실제 저장시각을 누락한다. 기존 로그 시험은 메시지와 Invalid Date 부재까지만 검증한다. 최소 범위는 created 표시·시간대 안내·누락/잘못된 시각의 비추정이며 새검색/export/API/DB는 제외한다. 실제 읽기 재현 뒤 채택 여부를 판단한다. stable1.5 및 원래 일정·최종미디어 게이트는 변경하지 않는다.
+
+
+IDEA010 개정1 채택: 실제1.5 이벤트55개 유효created가 모두 대시인 ISSUE023을 메인이 확인하여 PRD1.13/제품1.6.0 후보로 채택했다. UI04/AT-EVENT-TIME01 4개 계약은 canonical created 검증·명시적KST·접근가능UTC·invalid대시 및 기존읽기계약 불변이다. 기존1.5 fallback과 불변manifest는 보존하되 알려진 결함을 숨기지 않는다. 위 미채택 문구는 제안 당시 이력이며 현재 구현·검증 대기다.
+
+
+IDEA010 로컬검증완료: REVIEW030에서 실제4개created→KST/접근가능UTC,5개경계fixture·TZ/좁은화면·읽기불변·281전체시험 및 기존회귀를 대조했다. 신규AT01~03 verified_local, UI04/AT04 partial 유지. 운영1.5의ISSUE023은 정확1.6원격/복원승격 전까지 알려진 결함이다. 최종미디어·시간게이트별도.

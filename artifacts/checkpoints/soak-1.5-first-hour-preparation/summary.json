@@ -1,0 +1,14 @@
+{
+  "preparedAt": "2026-09-21T15:07:39.597912+00:00",
+  "script": "artifacts/checkpoints/soak-1.5-first-hour-preparation/capture-first-hour.py",
+  "sha256": "029642f5f8ccd195fbbd4228d00fe710ac3fdfef6959dccfa54e4bc0b3267dec",
+  "notBefore": "2026-09-21T15:56:58.686Z",
+  "expectedOutput": "artifacts/checkpoints/soak-1.5.0-first-hour",
+  "scope": "Preparation only; liveprocessidentity/actualReady gates run atcapture. Prefix refuses less thanonehour before remotequeries orcheckpointcreation; no remotequeries occurred innegativecheck.",
+  "guardCheck": {
+    "result": "PASS",
+    "prematureExitCode": 1,
+    "message": "First hour not yet observed; do not create checkpoint"
+  },
+  "state": "Prepared; not yetobserved orcaptured"
+}

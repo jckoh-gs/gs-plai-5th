@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T15:06:25.779067+00:00",
+  "updatedAt": "2026-09-21T15:28:04.162054+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -24,10 +24,10 @@
     "historicalFallback": "artifacts/releases/checkpoint-1.4.0.json"
   },
   "workingMilestone": {
-    "productVersion": "1.5.0",
-    "prdVersion": "1.12",
-    "idea": "IDEA-009",
-    "state": "Completed1.5 functionalstable/checkpoint verification andruntime tagpush; observationcontinues originalfreeze, finalmedia/time pending"
+    "productVersion": "1.6.0",
+    "prdVersion": "1.13",
+    "idea": "IDEA-010",
+    "state": "Local281/build/actualbroker/auth/form44/receipt14/eventtime and independentREVIEW030 PASS; exactimage/security/remote/restore pending"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -39,7 +39,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Continue current1.5 observation withroot71300/98957/24851; no duplicateprocess orcompletedmutations. Check latestactualstate/counterincrements andpreserve firsthour after15:56:58.686Z. Review nextusefulidea with productrole beforeanyadoption; stable1.5 immutablefallback remains.",
+    "Commit reviewedcandidate1.6 runtime andlocalproof; build exactcommit amd64OCI and app-onlytests/actualbrokerintegration/advanced; security exactimage audit, then controlledremoteupgrade and sameexactbackup current1.6/backward1.5 restore. Preserve1.5fallback and knownISSUE023 scope.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -342,10 +342,10 @@
     "instruction": "Use FINAL-RESTORE-PLAN bounded direct commands and media watchdog; inspect uncertain remote outcome before retry; immutable1.3 checkpoint unchanged"
   },
   "nextProductProposal": {
-    "state": "IDEA009 complete1.5; nextboundedproductproposal may be reviewed, noIDEA010 adoption/version change yet",
-    "currentCompletedIdea": "IDEA-009",
-    "independentReview": "docs/product/REVIEW-028.md",
-    "gate": "Evaluate utility/risk/time and1.5observation; versionPRD/product before newimplementation."
+    "id": "IDEA-010",
+    "revision": 1,
+    "state": "Adoptedcandidate1.6/PRD1.13 afteractual55rowread-onlyproof",
+    "review": "docs/product/REVIEW-029.md"
   },
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
@@ -395,6 +395,49 @@
     "evidence": "artifacts/checkpoints/host-power-guard-20260921T1333/activation.json"
   },
   "candidateFixture": {
+    "productVersion": "1.6.0",
+    "url": "http://127.0.0.1:3110",
+    "handle": 95785,
+    "pid": 8719,
+    "processIdentity": "Tue Sep 22 00:14:46 2026",
+    "privateDirectory": "artifacts/private/candidate-1.6",
+    "mqttPrefix": "candidate16",
+    "seedDemo": false,
+    "state": "Running;3root-owned plus6browser-ownedRTUs; formround2 ownedbaseline/preexisting cleanupPASS, no mainwrites",
+    "fixtureEvidence": "artifacts/checkpoints/candidate-1.6-fixture/creation.json",
+    "bundleSha256": "2bcc3c1bc75a178acf7dac51bd91436b6f5e30bd1c8e3f1a176980900417be06"
+  },
+  "candidateOperations": {
+    "productVersion": "1.6.0",
+    "prdVersion": "1.13",
+    "idea": "IDEA-010",
+    "phase": "Local281/build/actualbroker/auth/form44/receipt14/eventtime and independentREVIEW030 PASS; exactimage/security/remote/restore pending",
+    "uiOwner": "/root/ui",
+    "browserOwner": "/root/issues",
+    "fallback": "artifacts/releases/checkpoint-1.5.0.json",
+    "beforeEvidence": "artifacts/checkpoints/event-time-before/result.json",
+    "policy": "Keep verified existing3110/95785 fixture and source hashes; donotstartduplicates. Main1.5 observation remainsunchanged. Originalfreeze/deadline unchanged.",
+    "fixtureHandle": 95785,
+    "unitEvidence": "artifacts/checkpoints/candidate-1.6-unit-round2.log",
+    "eventBrowserEvidence": "artifacts/checkpoints/candidate-1.6-event-time-round1/result.json",
+    "securityReview": "docs/security/EVENT-TIME-REVIEW.md",
+    "activeOperations": [],
+    "completedLocalHandles": {
+      "unit": 51459,
+      "integrationAdvanced": 14079,
+      "authBrowser": 31240,
+      "formRound1Owner": 33083,
+      "receiptOwner": 69060,
+      "unitRound2": 76826,
+      "formRound2Owner": 63348
+    },
+    "allCompletedHandleExitCodes": 0,
+    "localSummary": "artifacts/checkpoints/candidate-1.6-local-summary.json",
+    "independentReview": "docs/product/REVIEW-030.md",
+    "form201Clarification": "artifacts/checkpoints/candidate-1.6-command-form-status-clarification.json"
+  },
+  "handoffConsistencyReview": "docs/product/REVIEW-023.md",
+  "previousCandidateFixture": {
     "productVersion": "1.5.0",
     "url": "http://127.0.0.1:3109",
     "handle": 84859,
@@ -407,7 +450,7 @@
     "state": "Stoppedgracefully afteralllocalproofs; rootoriginalhandleexit0,3109closed, privateDBretained",
     "retirementEvidence": "artifacts/checkpoints/local-fixture-1.5-retirement/summary.json"
   },
-  "candidateOperations": {
+  "previousCandidateOperations": {
     "adoptionCommit": "b9c10ae",
     "productVersion": "1.5.0",
     "prdVersion": "1.12",
@@ -455,84 +498,6 @@
     "restoreSummary": "deploy/verification/candidate-6d165d1/restore-summary.json",
     "rootCleanupReview": "deploy/verification/candidate-6d165d1/root-recovery-review/summary.json"
   },
-  "handoffConsistencyReview": "docs/product/REVIEW-023.md",
-  "previousCandidateFixture": {
-    "productVersion": "1.4.0",
-    "url": "http://127.0.0.1:3107",
-    "handle": 33055,
-    "privateDirectory": "artifacts/private/candidate-1.4",
-    "mqttPrefix": "candidate14",
-    "seedDemo": false,
-    "scope": "Local isolated UI acceptance; never mix1.3API3106 with1.4dist; no primary cluster writes",
-    "status": "stopped after verified1.5 localacceptance",
-    "endedEvidence": "artifacts/checkpoints/local-fixture-retirement-20260921T1431/summary.json",
-    "handleExitCode": 0
-  },
-  "previousCandidateOperations": {
-    "sourceCommit": "fdd0491a5c08901962f46ac845f8582921150d45",
-    "buildOwner": "/root/deployment",
-    "evidenceDirectory": "deploy/verification/candidate-fdd0491",
-    "phase": "complete and verified; no repeat upgrade/restore needed",
-    "retry": "Inspect existing handles and evidence before any repeat build/push/registration; content/source/digest must match.",
-    "localRegressionHandleTerminal": 79493,
-    "localBrowserEvidence": [
-      "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
-      "artifacts/checkpoints/command-form-1.4-correction-delta/result.json",
-      "artifacts/checkpoints/candidate-1.4-browser-regression/summary.json"
-    ],
-    "backupMetadata": "deploy/verification/pre-1.4.0-backup.json",
-    "backupJournalDirectory": "artifacts/operations/backups",
-    "exactImageEvidence": "deploy/verification/candidate-fdd0491/provenance.json",
-    "backupHandleTerminal": 95193,
-    "intendedImage": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4",
-    "plannedStopAt": "2026-09-21T13:45:08.353307+00:00",
-    "resumeDuringTransition": "Inspect actual deployment/Ready image and process identities first. If new image already active, validate then update run.deployment before starting supervisor. If old image remains and rollout not performed, resume from preserved preupgrade backup without duplicating a completed action. Never report candidate active based solely on intendedImage.",
-    "endedObservationHandles": {
-      "supervisor": 7353,
-      "primary": 40339,
-      "supplementary": 30644
-    },
-    "priorObservationArchive": "artifacts/checkpoints/soak-1.3.0/summary.json",
-    "rolloutLog": "deploy/verification/candidate-fdd0491/rollout.log",
-    "rolloutHandleTerminal": 1231,
-    "remoteMqttRtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
-    "remoteMqttEvidence": "deploy/verification/candidate-fdd0491/mqtt.json",
-    "remoteCommandRetry": "On uncertainty inspect original commandId/report and targetRTU recentcommands. Never blindly rerun script with a new UUID.",
-    "remoteMqttHandleTerminal": 42908,
-    "outboxRtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
-    "outboxOriginalOffline": false,
-    "outboxRecoveryPorts": [
-      3108,
-      18888
-    ],
-    "outboxSourceSha256": "6d8bfb2839b5476961bc288e55f4659fcd31ea8d22c1409ae0123ee195f4a70d",
-    "outboxEvidence": "deploy/verification/candidate-fdd0491/outbox-restart.json",
-    "outboxRetry": "Inspect actual Pod UID, this RTU offline flag and original persisted outbox before retry. Recovery uses owned3108/18888 ports; local1.4fixture3107 preserved. Restore original offline=false on any uncertain result.",
-    "outboxHandleTerminal": 81784,
-    "stableBackupMetadata": "deploy/verification/stable-backup-fdd0491.json",
-    "stableBackupHandleTerminal": 8789,
-    "restoreOwner": "/root/deployment",
-    "restoreDeployment": "grid-restore-fdd0491",
-    "backwardRestoreDeployment": "grid-restore-back-fdd0491",
-    "restorePorts": [
-      3105,
-      18885
-    ],
-    "snapshotSha256": "be09a5f5e1721970ec7f25197fcf4f3db504f6f6ad4765080ba301a0c7fd760a",
-    "restoreRetry": "Ask current owner for in-flight handles; inspect exact deployment/PVC/initSHA and originaldata before retry. Never create another rigname on uncertain response; preserve original main5RTUs.",
-    "mainBrowserHandleTerminal": 79528,
-    "restoreProgress": {
-      "stage": "complete",
-      "summary": "deploy/verification/candidate-fdd0491/restore-summary.json",
-      "allRestoreHandlesTerminal": true,
-      "replicasAndPods": 0,
-      "ownedTunnelClosed": true
-    },
-    "registryForwardHandleTerminal": 29782,
-    "registryForwardCleanup": "deploy/verification/candidate-fdd0491/registry-forward-cleanup.json",
-    "registryFutureRule": "Local15050closed; open newownedforward only for future explicitimagework afterlistenercheck; remote registry retained.",
-    "deploymentChange": "Planned1.4 rollout and actual outbox restart completed and verified; no further runtime mutation during checkpoint/handoff documentation."
-  },
   "retiredLocalFixtures": {
     "evidence": "artifacts/checkpoints/local-fixture-retirement-20260921T1431/summary.json",
     "versions": [
@@ -546,12 +511,18 @@
     "databasesPreserved": true
   },
   "firstHourCapturePreparation": {
-    "script": "artifacts/operations/capture-first-hour-1.4.py",
-    "sha256": "9e319aed4969d54f3572cbc05c111e3a40b00b9ccdf17c3acf9a87e81f4c3883",
-    "notBefore": "2026-09-21T14:49:42.893Z",
-    "expectedOutput": "artifacts/checkpoints/soak-1.4.0-first-hour",
-    "scope": "Prepared only; script refuses incompletehour/existingcheckpoint and preserves firstboundaryprefix. Confirm live handles/actualstate before execution.",
-    "state": "Captured andverified; old1.4observers nowendedforplannedupgrade, do notrepeat"
+    "preparedAt": "2026-09-21T15:07:39.597912+00:00",
+    "script": "artifacts/checkpoints/soak-1.5-first-hour-preparation/capture-first-hour.py",
+    "sha256": "029642f5f8ccd195fbbd4228d00fe710ac3fdfef6959dccfa54e4bc0b3267dec",
+    "notBefore": "2026-09-21T15:56:58.686Z",
+    "expectedOutput": "artifacts/checkpoints/soak-1.5.0-first-hour",
+    "scope": "Preparation only; liveprocessidentity/actualReady gates run atcapture. Prefix refuses less thanonehour before remotequeries orcheckpointcreation; no remotequeries occurred innegativecheck.",
+    "guardCheck": {
+      "result": "PASS",
+      "prematureExitCode": 1,
+      "message": "First hour not yet observed; do not create checkpoint"
+    },
+    "state": "Prepared; not yetobserved orcaptured"
   },
   "activeMediaRehearsal": {
     "productVersion": "1.5.0",
@@ -624,5 +595,13 @@
       "observedPerRtuSampleDiscontinuities": 0,
       "scope": "Captured received sample deltas equal simulation advance for5RTUs; no universal subscriber delivery guarantee; no remote mutations or outbox query."
     }
-  ]
+  ],
+  "previousFirstHourCapturePreparation": {
+    "script": "artifacts/operations/capture-first-hour-1.4.py",
+    "sha256": "9e319aed4969d54f3572cbc05c111e3a40b00b9ccdf17c3acf9a87e81f4c3883",
+    "notBefore": "2026-09-21T14:49:42.893Z",
+    "expectedOutput": "artifacts/checkpoints/soak-1.4.0-first-hour",
+    "scope": "Prepared only; script refuses incompletehour/existingcheckpoint and preserves firstboundaryprefix. Confirm live handles/actualstate before execution.",
+    "state": "Captured andverified; old1.4observers nowendedforplannedupgrade, do notrepeat"
+  }
 }

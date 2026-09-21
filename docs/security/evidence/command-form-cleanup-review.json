@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-09-21T15:23:11.073948+00:00",
+  "sourceSha256": {
+    "scripts/browser-command-form.cjs": "52c6e6621dbada2a361aa580c5cde6de9b35ef1ce52d87bd9fdb72b5a2b97332",
+    "tests/review-form-cleanup-guard.test.js": "38604a33784e73a6e2adada9982b349b7047964e150e314610ded425a834f862",
+    "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/result.json": "8482e8fdf9ce67daf7c888e1bf7cfb995d6003a79dcf1b0a6cdb57bf9ec5a1fc",
+    "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/cleanup.json": "3c064bc9ffee258ca457b44f63ac4d09b2ddc610a010c74db21c5ec5ce981b6c",
+    "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/sha256.json": "62b937b1cfa3d5ba7ebadb9168adaca721537d6d48eb6550c388047e6873c3d3"
+  },
+  "guardTestsPassed": 1,
+  "reviewedActualProof": {
+    "cases": 44,
+    "commandPosts": 5,
+    "cleanup": "PASS",
+    "preExistingUnchanged": true,
+    "allRecordedArtifactHashesMatch": true
+  },
+  "openSourceFollowup": "Require explicit201 for registration; current helper accepts any2xx. Actual44 browser cases not rerun.",
+  "followup": {
+    "checkedAt": "2026-09-21T15:24:17.559982+00:00",
+    "status": "Explicit201 source assertion and missing-page screenshot guard verified; prior finding resolved",
+    "sourceSha256": "51452dcca4c9a64d433581d347a9b3f84b86a0ec52089725108752031759fd31",
+    "clarificationSha256": "ec680aaeca114c2a35071ce5838affe5fe57bf035ea92b8be8ce6db9a905da00",
+    "validation": "Source inspection only; no rerun44cases or new actual201 response claim"
+  }
+}

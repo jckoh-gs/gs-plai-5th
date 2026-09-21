@@ -1,0 +1,403 @@
+{
+  "schemaVersion": 1,
+  "productVersion": "1.6.0",
+  "prdVersion": "1.13",
+  "idea": "IDEA-010",
+  "observedAt": "2026-09-21T15:28:04.162054+00:00",
+  "result": "PASS_LOCAL_ONLY",
+  "scope": "Event-log canonical created UTC to explicit KST display; backend/DB/API unchanged; image/main/restore/stable gates pending. Main remains 1.5.0 with ISSUE023 open.",
+  "runtimeParentCommit": "a09cd42762d1f13e7940a28af333950029872f66",
+  "bundle": {
+    "path": "/assets/index-v7p0JZRW.js",
+    "sha256": "2bcc3c1bc75a178acf7dac51bd91436b6f5e30bd1c8e3f1a176980900417be06"
+  },
+  "checks": {
+    "unit": {
+      "passed": 281,
+      "failed": 0,
+      "evidence": "artifacts/checkpoints/candidate-1.6-unit-round2.log",
+      "scope": "Unique workstation tests before subsequent operational HTTP201/page guards; round1 and focused subsets overlap, not additive."
+    },
+    "integration": "Actual local broker 125kW/error0/all samples/dedup/three phases/scenario/restart PASS",
+    "advanced": "Actual local broker faults/immutable outbox/100 generators PASS",
+    "authBrowser": "Auth/session/SSE/stale/reconnect/narrow PASS",
+    "eventTime": "Actual4stored event rows plus5synthetic boundary/malformed fixtures, UTC and Los_Angeles hosts, read-only API; source and8proof hashes independently verified REVIEW030",
+    "form": "44 checks/5 actual command POST, actual returned owned baselines restored and preexisting settings unchanged in round2",
+    "receipt": "14 cases; explicitly labeled intercepted fixtures are not actual network failures or server acceptance",
+    "sourceSecurity": "Independent event-time and form cleanup review PASS; no exact1.6image scan yet",
+    "media": "Explicit1.6 allowlist compatibility preparation only; selected facts template remains1.5 and finalvideo/PPT pending"
+  },
+  "operationalLimitations": [
+    "Form round2 checked r.ok, not explicit201. Later HTTP201/page guard source/syntax reviewed, not re-run44. See command-form-status-clarification.json; next actual restore form exercises exactnewsource.",
+    "Response-lost registration before owner capture remains uncertain: reconcile unique request name and actual state before any new registration.",
+    "Raw historical fixtures retained; known credential scan is not a guarantee of general PII sanitization."
+  ],
+  "independentReview": "docs/product/REVIEW-030.md",
+  "evidence": [
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-advanced-round1.log",
+      "bytes": 460,
+      "sha256": "6a4fb156ba79b9227df7bcd9137a4fd8600bf02dda055015181699804f6bdfe2"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-auth-browser-round1/authenticated-dashboard.png",
+      "bytes": 348056,
+      "sha256": "3abd8056c7b3bd0981ffc36a60ea4b35eb1a2034256a2c6360e4f62bbcb75d52"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-auth-browser-round1/devices.png",
+      "bytes": 196851,
+      "sha256": "40dfd52bb9a5771de522ac6cb9ef25e2b3f10f424f5597375956c75bd1ce7346"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-auth-browser-round1/guide-download.md",
+      "bytes": 21105,
+      "sha256": "5ae2df13b852466556ef6bad4a5c840aa8f0ef93e12bb12397b7cf4e03295ac1"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-auth-browser-round1/narrow-devices.png",
+      "bytes": 200677,
+      "sha256": "ebf3ef1e5363c49d2e3557528936e258cbbef09b9e71e9842caa6b36f3c42b2f"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-auth-browser-round1/result.json",
+      "bytes": 420,
+      "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-auth-browser-round1/stale-stream.png",
+      "bytes": 207699,
+      "sha256": "8ad91c316e83f0a27e358b107231ecee2329f57865db3389b40538b5a6c0ad98"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-auth-browser-round1.log",
+      "bytes": 363,
+      "sha256": "8624b3c66c0ee836ea10107c924d22db2808c87ddb0d62cd3a1bde820542c006"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-build.log",
+      "bytes": 805,
+      "sha256": "98f5130fad8534894e2c69d4ee51179920c069f02b16395a945ecabca595c137"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round1/narrow-expiry-error.png",
+      "bytes": 125414,
+      "sha256": "e8d9f08c52508d4cf1781966e54646e61467dfe7ec1361fbab6c414b11e73300"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round1/normal-commands.png",
+      "bytes": 191959,
+      "sha256": "eb41fa5278bfa6bb7567e2eb8d3de4e1f1b8c736b7671091054b225abf291a42"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round1/owned-settings-cleanup.json",
+      "bytes": 1320,
+      "sha256": "245638d3f685f879d48998363b550875739547eb80a429efb15ab6f8d325e758"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round1/result.json",
+      "bytes": 14988,
+      "sha256": "41d77c9c222cb0254f45d315461167bc6e616eeddadfc1bceb96c64a7013fa62"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round1/sha256.json",
+      "bytes": 853,
+      "sha256": "25626449f59d8775defbaa46480e6ab122e02be8c2ec53d7b23aa342842c6ee5"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round1/source/browser-command-form.cjs",
+      "bytes": 14485,
+      "sha256": "6632f18ada5077d3fe9fa24852fe40e9ffd98add70f76136893bc8308f3536b5"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round1/source/command-form.js",
+      "bytes": 1764,
+      "sha256": "ba71bfda52cb154ab15765f5ebc99f8cab8e3ae80aed3d90543e5228e4d3b67e"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round1/source/command-receipts.js",
+      "bytes": 5746,
+      "sha256": "576b56a4799aef06ec70ff3b0db124744bd4d4d865cbdc08801a5c6262665122"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round1/source/event-time.js",
+      "bytes": 792,
+      "sha256": "251c71e39967b05c99ca054c093385a71728200db5f407d8cd6dc667972a7c28"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round1/source/hashes.json",
+      "bytes": 474,
+      "sha256": "99a48d4c6cc557dff8c5198e8df493ad7650c32590ed24df51a71ec09dac1fe4"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round1/source/src.jsx",
+      "bytes": 58723,
+      "sha256": "5e638f9e8c50d69f18175ee0bbcc8eeaae94b07d52f0aaeffbf6c57d6d4e53fd"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round1.log",
+      "bytes": 114,
+      "sha256": "fadb21c083f2a53f74a565e2aa525bafb324e30ad9e99df0f5d9f1be2a860c16"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/baseline-0b9dfd59-d72a-4479-aac9-d8f0d5e34412.json",
+      "bytes": 1139,
+      "sha256": "a411fde78193203f7ff4186f73fd9907ad6de1e7d79dcb698fe241d53930e20d"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/baseline-e1bd3c3d-415d-479f-8fff-bfa7cde1f57f.json",
+      "bytes": 1139,
+      "sha256": "53f92fc1be30dc65c3009e87e6790abb8dbc36cb83e05bdf98913bc4a09535b9"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/cleanup.json",
+      "bytes": 243,
+      "sha256": "3c064bc9ffee258ca457b44f63ac4d09b2ddc610a010c74db21c5ec5ce981b6c"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/narrow-expiry-error.png",
+      "bytes": 125753,
+      "sha256": "d9c97cc6ad11721c1568e2dd9310990c65091cbb7465513c2048cb39ea584f01"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/normal-commands.png",
+      "bytes": 191496,
+      "sha256": "f269c7f8d31a0be962c01b432011331a19ab472b993bbfb7860d8eb318a98bc7"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/result.json",
+      "bytes": 15193,
+      "sha256": "8482e8fdf9ce67daf7c888e1bf7cfb995d6003a79dcf1b0a6cdb57bf9ec5a1fc"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/sha256.json",
+      "bytes": 1187,
+      "sha256": "62b937b1cfa3d5ba7ebadb9168adaca721537d6d48eb6550c388047e6873c3d3"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/source/browser-command-form.cjs",
+      "bytes": 16443,
+      "sha256": "52c6e6621dbada2a361aa580c5cde6de9b35ef1ce52d87bd9fdb72b5a2b97332"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/source/command-form.js",
+      "bytes": 1764,
+      "sha256": "ba71bfda52cb154ab15765f5ebc99f8cab8e3ae80aed3d90543e5228e4d3b67e"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/source/command-receipts.js",
+      "bytes": 5746,
+      "sha256": "576b56a4799aef06ec70ff3b0db124744bd4d4d865cbdc08801a5c6262665122"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/source/event-time.js",
+      "bytes": 792,
+      "sha256": "251c71e39967b05c99ca054c093385a71728200db5f407d8cd6dc667972a7c28"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/source/hashes.json",
+      "bytes": 474,
+      "sha256": "718711679cdf0200f0b0c3c59ac9b1fe5c295dbb08eae08f0588c3c210a61940"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/source/src.jsx",
+      "bytes": 58723,
+      "sha256": "5e638f9e8c50d69f18175ee0bbcc8eeaae94b07d52f0aaeffbf6c57d6d4e53fd"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup.log",
+      "bytes": 122,
+      "sha256": "2d5fa740d28169c4d2f8fa85a397c3281e3af19c71f495c637d6c91544454b37"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-form-status-clarification.json",
+      "bytes": 1192,
+      "sha256": "ec680aaeca114c2a35071ce5838affe5fe57bf035ea92b8be8ce6db9a905da00"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-receipts-round1/cleanup.json",
+      "bytes": 1439,
+      "sha256": "f6b8557f828b20346e1c142d662f767484a81e91e67b029da9e4e25ccc80e4e0"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-receipts-round1/history-narrow.png",
+      "bytes": 54880,
+      "sha256": "c9bd68954c14341b329217e9de5a5ba154cd96b1e22bcba84c4c4ce4ff1fa4ff"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-receipts-round1/owned-baselines.json",
+      "bytes": 9853,
+      "sha256": "b1aa98f64d62161de91737b14015d1cd4fdbaff084dbede0e89f71287b93e29e"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-receipts-round1/real-statuses.png",
+      "bytes": 113242,
+      "sha256": "2bcc748f28ff79a8fb8857e61a65fd926184ee52b0bab9914e473d1f434e3cc4"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-receipts-round1/result.json",
+      "bytes": 13212,
+      "sha256": "42c4d4208e428175d937538d71f324606a34d7f73229bb305cdd976d46b15e4a"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-receipts-round1/sha256.json",
+      "bytes": 844,
+      "sha256": "ccaf99c0ac24ed396d0fbcd79be1ea4915cf894321949b3eb1584b3a29ea685b"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-receipts-round1/source/browser-command-receipts.cjs",
+      "bytes": 17498,
+      "sha256": "5224434f7e91c92b3600d14a1568e73b8e2e82d281697a49766c331486a9736e"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-receipts-round1/source/command-form.js",
+      "bytes": 1764,
+      "sha256": "ba71bfda52cb154ab15765f5ebc99f8cab8e3ae80aed3d90543e5228e4d3b67e"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-receipts-round1/source/command-receipts.js",
+      "bytes": 5746,
+      "sha256": "576b56a4799aef06ec70ff3b0db124744bd4d4d865cbdc08801a5c6262665122"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-receipts-round1/source/src.jsx",
+      "bytes": 58723,
+      "sha256": "5e638f9e8c50d69f18175ee0bbcc8eeaae94b07d52f0aaeffbf6c57d6d4e53fd"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-command-receipts-round1.log",
+      "bytes": 98,
+      "sha256": "5daa8e336fe11e4a43c132b49ac06d60e350ec04714d1696e4c7f50c7ca73a82"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/actual-desktop.png",
+      "bytes": 76455,
+      "sha256": "155500242cf49e70e73f4dd8081c45474d020ff9619e32a26c8f742425206f85"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/actual-rendered.html",
+      "bytes": 2130,
+      "sha256": "57c391a671106f536f3437d945b07db23a16267bc923b9b5a25f13c075d419cc"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/result.json",
+      "bytes": 3863,
+      "sha256": "9b703aaa037e7a4b89de32696b04a0a0f21ef50907c4d720224b63c3e74f4dfd"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/sha256.json",
+      "bytes": 757,
+      "sha256": "8788a70f8711854a35dab342cbd84c913b56503a73b2060255e110f3341e8d0d"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/source/browser-event-time.cjs",
+      "bytes": 8147,
+      "sha256": "dc4309cb4651036967acab2bb6954551c609f99620ba9d5876a9878cdc734743"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/source/event-time.js",
+      "bytes": 792,
+      "sha256": "251c71e39967b05c99ca054c093385a71728200db5f407d8cd6dc667972a7c28"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/source/src.jsx",
+      "bytes": 58723,
+      "sha256": "5e638f9e8c50d69f18175ee0bbcc8eeaae94b07d52f0aaeffbf6c57d6d4e53fd"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/synthetic-America-Los_Angeles.png",
+      "bytes": 30220,
+      "sha256": "7c19bb3b6a084063251beb1717fc8045b84b62c4b94408647dab11a1cad1dbd7"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/synthetic-UTC.png",
+      "bytes": 30220,
+      "sha256": "7c19bb3b6a084063251beb1717fc8045b84b62c4b94408647dab11a1cad1dbd7"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-event-time-round1.log",
+      "bytes": 80,
+      "sha256": "29fc34cf4ae2e1176fb91eafbe7df4b935f397b2be0bbc9bb75f2c41c30b203e"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-fixture/creation.json",
+      "bytes": 1534,
+      "sha256": "49e3ff3ce80c18e8ddd7bb2b5354601ed752b126a53805d7c3890e5c859d1121"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-integration-round1.log",
+      "bytes": 458,
+      "sha256": "819cd3eb26c954ac2a5e1eb952754cd9b608037cd8a5b1c887735d5f94c76a13"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-unit-round1.log",
+      "bytes": 24985,
+      "sha256": "dc401a28430573ad4d0eef0b15d99224d50eabd76efd6aa3c8a359100faa2e33"
+    },
+    {
+      "path": "artifacts/checkpoints/candidate-1.6-unit-round2.log",
+      "bytes": 25088,
+      "sha256": "454f487cc57395e5c3952840c5d94258d0fc211b2ad3cacd52bdf6b0ac456ebd"
+    },
+    {
+      "path": "docs/operations/MEDIA-1.6-COMPATIBILITY.md",
+      "bytes": 2134,
+      "sha256": "4f1c31ae3d14f9c2729b0b7f4f25623386fbf58803eddd51556843a3f3ab3d50"
+    },
+    {
+      "path": "docs/product/REVIEW-030.md",
+      "bytes": 2827,
+      "sha256": "add6762f9c6bc296a107359c3b213100afe79e7bae037c25f91321cb2bd725be"
+    },
+    {
+      "path": "docs/security/EVENT-TIME-REVIEW.md",
+      "bytes": 2831,
+      "sha256": "4fc58497756f208077a928603df93e10e5cb51a3e81fd20411448101a71671a5"
+    },
+    {
+      "path": "docs/security/evidence/command-form-cleanup-review.json",
+      "bytes": 1544,
+      "sha256": "a022653066ae1f8fdf6202f80c4640f5a439a7371d9e354ee629dbf37e97a7e4"
+    },
+    {
+      "path": "docs/security/evidence/event-time-security-review.json",
+      "bytes": 1190,
+      "sha256": "867ec37a4c06338fdf28f67227a4a599ee4cf54c714cccf219ed258d83662593"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 111205,
+      "sha256": "6b7716596c96397d5942de976258f35a545976b323fa74a376a16284d915d0e4"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1107,
+      "sha256": "95966b96c2c7cfb2e146bdba7456f7a46864e93534a3500cdfd7f931283cb5db"
+    },
+    {
+      "path": "scripts/browser-command-form.cjs",
+      "bytes": 16559,
+      "sha256": "51452dcca4c9a64d433581d347a9b3f84b86a0ec52089725108752031759fd31"
+    },
+    {
+      "path": "scripts/browser-command-receipts.cjs",
+      "bytes": 17498,
+      "sha256": "5224434f7e91c92b3600d14a1568e73b8e2e82d281697a49766c331486a9736e"
+    },
+    {
+      "path": "scripts/browser-event-time.cjs",
+      "bytes": 8147,
+      "sha256": "dc4309cb4651036967acab2bb6954551c609f99620ba9d5876a9878cdc734743"
+    },
+    {
+      "path": "web/event-time.js",
+      "bytes": 792,
+      "sha256": "251c71e39967b05c99ca054c093385a71728200db5f407d8cd6dc667972a7c28"
+    },
+    {
+      "path": "web/src.jsx",
+      "bytes": 58723,
+      "sha256": "5e638f9e8c50d69f18175ee0bbcc8eeaae94b07d52f0aaeffbf6c57d6d4e53fd"
+    }
+  ]
+}

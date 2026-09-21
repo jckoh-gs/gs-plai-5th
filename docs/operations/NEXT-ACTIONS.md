@@ -1,15 +1,15 @@
 # 자율 실행 인계
 
-현재 **제품1.5.0 / PRD1.12 / IDEA009**를 기능상 안정 버전으로 선택했다. 전체 목표는 아직 완료되지 않았다. 같은 runId와 원래 마감을 유지하고, 아래 첫 미완료 단계부터 이어간다.
+실제 배포와 복구 기준은 **제품1.5.0 / PRD1.12 / IDEA009**다. 이후 실제 읽기 검증에서 이벤트 시각55행이 대시로 보이는 ISSUE023을 발견했다. 현재 **제품1.6.0 / PRD1.13 / IDEA010** 후보로 이 표시 결함을 수정 중이며, UI04 현재 인수는 partial로 정정했다. 불변1.5 체크포인트는 당시 증거 그대로 보존한다. 전체 목표는 아직 완료되지 않았다. 같은 runId와 원래 마감을 유지하고 첫 미완료 단계부터 이어간다.
 
-## 현재 안정 버전과 첫 미완료 단계
+## 현재 배포·복구 기준과 완료한 검증
 
 - runtime `6d165d1e8f3214a50ee66d2b13947f64d86658f5`, app digest `sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f`.
 - k3s `charles-k3s` / namespace `gs-plai-5h` / deployment `grid`. 현재 Pod UID `62d0d7fd-915d-41e4-990b-5714fc7a6901`; 재개 때 실제 Ready 이미지를 다시 읽는다.
 - [REVIEW027](../product/REVIEW-027.md): main UI/API/MQTT·실제 Pod 교체 outbox 및 정확한 동일 백업의 현재1.5/이전1.4 복원19근거 PASS. 신규 receipt8요구 기능 인수 완료.
 - 선택 백업: [stable-backup-6d165d1.json](../../deploy/verification/stable-backup-6d165d1.json), 719527936바이트, SHA `ad34a074276243fb1b83d7fe081aa7631c9d2d51d0697e9d0dca5d7e5f349b24`. private0600 로컬 파일도 메인이 스트리밍 해시 검증했다.
 - 두 복원 rig는 replicas0/Pods0, 소유3105/18885 터널 종료, 네 PVC와 백업 보존. [복원 집계](../../deploy/verification/candidate-6d165d1/restore-summary.json)와 [메인 실제 정리 확인](../../deploy/verification/candidate-6d165d1/root-recovery-review/summary.json)을 참조한다. 배포 담당의 실행 핸들은 모두 종료됐다.
-- `stable-v1.5.0` 및 `stable-runtime-v1.5.0-6d165d1`은 정확한 runtime을 가리키며 두 태그와 근거 커밋을 push했다. [checkpoint-1.5.0.json](../../artifacts/releases/checkpoint-1.5.0.json): source `19e0c3a21e49e081be3cc1625fea403890932723`, SHA `6b3940ed7190530c046594186febff54d2e0ee93b0a0856e314c5c3ca3762ff7`. [REVIEW028](../product/REVIEW-028.md)의1177해시·실제Ready·백업 독립 검증 PASS. 이 파일을 덮어쓰지 않는다. **다음은 현재1.5 관찰과 유용한 후속 아이디어 검토이며, 최종 미디어·시간·인도는 원래 일정에 남아 있다.** 실제 Git에서 후속 문서·manifest 커밋의 push 여부를 확인한다.
+- `stable-v1.5.0` 및 `stable-runtime-v1.5.0-6d165d1`은 정확한 runtime을 가리키며 두 태그와 근거 커밋을 push했다. [checkpoint-1.5.0.json](../../artifacts/releases/checkpoint-1.5.0.json): source `19e0c3a21e49e081be3cc1625fea403890932723`, SHA `6b3940ed7190530c046594186febff54d2e0ee93b0a0856e314c5c3ca3762ff7`. [REVIEW028](../product/REVIEW-028.md)의1177해시·실제Ready·백업 독립 검증 PASS. 이 파일을 덮어쓰지 않는다. **현재 후속 작업은 아래1.6 후보의 로컬 구현·검증이며, 최종 미디어·시간·인도는 원래 일정에 남아 있다.** 실제 Git에서 후속 문서·manifest 커밋의 push 여부를 확인한다.
 - 이전 [checkpoint-1.4.0.json](../../artifacts/releases/checkpoint-1.4.0.json)은 불변 유지: source `bcc010c677196c1010b5e5a6c9b9bb1a8362bcdb`, SHA `df7865319ac1e97ecbf6b70f206f29b7b7747312d2e8a355f5dea2d765c377be`, 백업594944000바이트/be09. REVIEW022의962해시는 역사적 source에 `--at-commit`으로 확인한다.
 
 ## 고정 일정
@@ -44,6 +44,12 @@ native heartbeat `grid`가10분마다 재개 절차를 호출한다. Mac과 Code
 이전1.4 primary36193/audit92936/supervisor81174는 계획 교체로 모두 종료0을 확인했다. [첫1시간](../../artifacts/checkpoints/soak-1.4.0-first-hour/summary.json), [전체 종료 구간](../../artifacts/checkpoints/soak-1.4.0/summary.json), [14:01 사건](../../artifacts/checkpoints/reconnect-20260921T1401/summary.json)을 보존했다. 과거1.4 APIerrors1/audit connectionErrors1을 새1.5 카운터에 적용하지 않으며 구간들을 합쳐 무중단·보편적 무손실로 주장하지 않는다.
 
 로컬1.5 fixture3109/handle84859는 모든 시험·리허설 뒤 정상 종료0/포트 닫힘을 확인했다. private DB를 보존하며 시험 필요 없이 재기동하지 않는다. 이전3106/3107도 종료 상태다.
+
+## 진행 중인1.6 후보
+
+IDEA010/ISSUE023: 실제1.5에서55개의created UTC가 모두 화면대시로 표시됨을 읽기만 하여 재현했다. [REVIEW029](../product/REVIEW-029.md)와 [수정 전 근거](../../artifacts/checkpoints/event-time-before/result.json)를 참조한다. PRD1.13은 기존created의 엄격한 canonical UTC 검사, 명시적Asia/Seoul·KST와 접근 가능한 원본UTC, 잘못된값/누락의 대시 표시만 요구한다. 서버·DB·API·순서·최근80개·메시지·제어는 바꾸지 않는다.
+
+web/helper 구현·build·전체281검사·실제broker 통합/고급·인증/SSE/좁은화면·form44/receipt14·이벤트 브라우저 및 소스보안 검토를 통과했다. [로컬 집계](../../artifacts/checkpoints/candidate-1.6-local-summary.json)와 [REVIEW030](../product/REVIEW-030.md)을 참조한다. 신규AT01~03은 로컬검증, UI04/AT04는 원격 대기로 partial이다. form의 실제 반환 baseline 복구를 검증했으며, 후속HTTP201/pageguard의 실행 증명은 다음 복원시험에서 확보한다. 로컬3110/handle95785/PID8719/`Tue Sep 22 00:14:46 2026`가 별도privatecandidate1.6 DB와MQTTprefixcandidate16을 사용한다. 실제4개 이벤트와 날짜경계/잘못된값의 브라우저 대조를 마쳤다. 이 fixture를 중복 기동하지 않는다. 다음은 정확 커밋 이미지·이미지 보안·원격·동일 백업 복원 게이트다. 아직1.6 원격배포는 없다. 실제main1.5 관찰기와3104/18884 supervisor를 그대로 유지한다.1.6 로컬·보안·정확이미지·원격·동일스냅샷복원을 완료하기 전 기존 복구 기준을 교체하지 않는다.
 
 ## 남은 작업
 

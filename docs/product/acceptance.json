@@ -1,5 +1,5 @@
 {
-  "prdVersion": "1.12",
+  "prdVersion": "1.13",
   "runId": "grid-new-20260921T080733Z",
   "scope": "greenfield, mandatory k3s",
   "policy": "pending until new-run direct evidence covers complete requirement; code presence/legacy reports are not pass",
@@ -1238,7 +1238,7 @@
     {
       "id": "UI-04",
       "description": "이벤트 로그 / #logs",
-      "status": "verified_functional",
+      "status": "partial",
       "evidence": [
         {
           "path": "artifacts/checkpoints/unit-round5.log",
@@ -1259,11 +1259,34 @@
         {
           "path": "scripts/browser-guide-log.cjs",
           "sha256": "f58a2b53be7449ac2069c2aa1c76d8e01c1803138886cc224e391e6803f9409d"
+        },
+        {
+          "path": "artifacts/checkpoints/event-time-before/result.json",
+          "sha256": "51da03ff133719af89bfabbe395f0972e2b6bcfca38955b943c2e9ecafbb757e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/result.json",
+          "sha256": "9b703aaa037e7a4b89de32696b04a0a0f21ef50907c4d720224b63c3e74f4dfd"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/sha256.json",
+          "sha256": "8788a70f8711854a35dab342cbd84c913b56503a73b2060255e110f3341e8d0d"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-unit-round2.log",
+          "sha256": "454f487cc57395e5c3952840c5d94258d0fc211b2ad3cacd52bdf6b0ac456ebd"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-command-form-status-clarification.json",
+          "sha256": "ec680aaeca114c2a35071ce5838affe5fe57bf035ea92b8be8ce6db9a905da00"
+        },
+        {
+          "path": "docs/product/REVIEW-030.md",
+          "sha256": "add6762f9c6bc296a107359c3b213100afe79e7bae037c25f91321cb2bd725be"
         }
       ],
-      "assessment": "Final deployed5guide tabs requiredsemantics/topic content and15persistedaudit rows/columns, token absent, pageerrorsnone; previous clipboard/keyboard/RTUselection evidence supplements.",
-      "auditRound": "005",
-      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
+      "assessment": "REVIEW030: actual4stored events KST/accessibleUTC/order/message matched; synthetic5 invalid/missing/leap/midnight and browserTZ/narrow checks, mutation0. Canonicalhelper/calendar validation and unchangedserver80/global/order source inspected. Local281tests+auth/receipt/form regressions PASS; no actual80row newfixture claim. Main1.5 ISSUE023 remains until exact1.6 remote/current-backwardrestore gates; form201guard followup onlysyntaxchecked so nextrestore must exercise. Finalmedia/time separate.",
+      "auditRound": "005"
     },
     {
       "id": "UI-05",
@@ -7488,6 +7511,118 @@
         }
       ],
       "assessment": "REVIEW027 independently read all19 terminal restore proofs: same719527936B/ad34 snapshot fresh1.5 and backward1.4, original5plants/1scenario beforefixtures, actualservedassets/currentreceipt14/current+backwardform44/UI/MQTT, bothrigs0/noPods and ownedtunnelclosed. Main1.5 exact6d165d1/2fd image auth/preview/export/MQTT125,error0,60samples,dedup and actualoutboxPodreplacement samebody/PUBACK verified. Local REVIEW025 scope retained; controlled response fixtures are not natural outages, GET15s uses shared-helper unit proof. Functional deployment/recovery complete; stable tag/immutablemanifest provenance and finalmedia/time/wholegoal remain separate."
+    },
+    {
+      "id": "AT-EVENT-TIME-01-01",
+      "description": "실제 최소2시각·KST 날짜경계·원본UTC",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/result.json",
+          "sha256": "9b703aaa037e7a4b89de32696b04a0a0f21ef50907c4d720224b63c3e74f4dfd"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/sha256.json",
+          "sha256": "8788a70f8711854a35dab342cbd84c913b56503a73b2060255e110f3341e8d0d"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-unit-round2.log",
+          "sha256": "454f487cc57395e5c3952840c5d94258d0fc211b2ad3cacd52bdf6b0ac456ebd"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-command-form-status-clarification.json",
+          "sha256": "ec680aaeca114c2a35071ce5838affe5fe57bf035ea92b8be8ce6db9a905da00"
+        },
+        {
+          "path": "docs/product/REVIEW-030.md",
+          "sha256": "add6762f9c6bc296a107359c3b213100afe79e7bae037c25f91321cb2bd725be"
+        }
+      ],
+      "assessment": "REVIEW030: actual4stored events KST/accessibleUTC/order/message matched; synthetic5 invalid/missing/leap/midnight and browserTZ/narrow checks, mutation0. Canonicalhelper/calendar validation and unchangedserver80/global/order source inspected. Local281tests+auth/receipt/form regressions PASS; no actual80row newfixture claim. Main1.5 ISSUE023 remains until exact1.6 remote/current-backwardrestore gates; form201guard followup onlysyntaxchecked so nextrestore must exercise. Finalmedia/time separate."
+    },
+    {
+      "id": "AT-EVENT-TIME-01-02",
+      "description": "canonical 시각 검증·누락/오류 대시·비추정",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/result.json",
+          "sha256": "9b703aaa037e7a4b89de32696b04a0a0f21ef50907c4d720224b63c3e74f4dfd"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/sha256.json",
+          "sha256": "8788a70f8711854a35dab342cbd84c913b56503a73b2060255e110f3341e8d0d"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-unit-round2.log",
+          "sha256": "454f487cc57395e5c3952840c5d94258d0fc211b2ad3cacd52bdf6b0ac456ebd"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-command-form-status-clarification.json",
+          "sha256": "ec680aaeca114c2a35071ce5838affe5fe57bf035ea92b8be8ce6db9a905da00"
+        },
+        {
+          "path": "docs/product/REVIEW-030.md",
+          "sha256": "add6762f9c6bc296a107359c3b213100afe79e7bae037c25f91321cb2bd725be"
+        }
+      ],
+      "assessment": "REVIEW030: actual4stored events KST/accessibleUTC/order/message matched; synthetic5 invalid/missing/leap/midnight and browserTZ/narrow checks, mutation0. Canonicalhelper/calendar validation and unchangedserver80/global/order source inspected. Local281tests+auth/receipt/form regressions PASS; no actual80row newfixture claim. Main1.5 ISSUE023 remains until exact1.6 remote/current-backwardrestore gates; form201guard followup onlysyntaxchecked so nextrestore must exercise. Finalmedia/time separate."
+    },
+    {
+      "id": "AT-EVENT-TIME-01-03",
+      "description": "순서/80개/전역/메시지·읽기불변·접근성/안전",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/result.json",
+          "sha256": "9b703aaa037e7a4b89de32696b04a0a0f21ef50907c4d720224b63c3e74f4dfd"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/sha256.json",
+          "sha256": "8788a70f8711854a35dab342cbd84c913b56503a73b2060255e110f3341e8d0d"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-unit-round2.log",
+          "sha256": "454f487cc57395e5c3952840c5d94258d0fc211b2ad3cacd52bdf6b0ac456ebd"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-command-form-status-clarification.json",
+          "sha256": "ec680aaeca114c2a35071ce5838affe5fe57bf035ea92b8be8ce6db9a905da00"
+        },
+        {
+          "path": "docs/product/REVIEW-030.md",
+          "sha256": "add6762f9c6bc296a107359c3b213100afe79e7bae037c25f91321cb2bd725be"
+        }
+      ],
+      "assessment": "REVIEW030: actual4stored events KST/accessibleUTC/order/message matched; synthetic5 invalid/missing/leap/midnight and browserTZ/narrow checks, mutation0. Canonicalhelper/calendar validation and unchangedserver80/global/order source inspected. Local281tests+auth/receipt/form regressions PASS; no actual80row newfixture claim. Main1.5 ISSUE023 remains until exact1.6 remote/current-backwardrestore gates; form201guard followup onlysyntaxchecked so nextrestore must exercise. Finalmedia/time separate."
+    },
+    {
+      "id": "AT-EVENT-TIME-01-04",
+      "description": "브라우저/좁은화면·정확k3s·현재/하위복원",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/result.json",
+          "sha256": "9b703aaa037e7a4b89de32696b04a0a0f21ef50907c4d720224b63c3e74f4dfd"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/sha256.json",
+          "sha256": "8788a70f8711854a35dab342cbd84c913b56503a73b2060255e110f3341e8d0d"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-unit-round2.log",
+          "sha256": "454f487cc57395e5c3952840c5d94258d0fc211b2ad3cacd52bdf6b0ac456ebd"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.6-command-form-status-clarification.json",
+          "sha256": "ec680aaeca114c2a35071ce5838affe5fe57bf035ea92b8be8ce6db9a905da00"
+        },
+        {
+          "path": "docs/product/REVIEW-030.md",
+          "sha256": "add6762f9c6bc296a107359c3b213100afe79e7bae037c25f91321cb2bd725be"
+        }
+      ],
+      "assessment": "REVIEW030: actual4stored events KST/accessibleUTC/order/message matched; synthetic5 invalid/missing/leap/midnight and browserTZ/narrow checks, mutation0. Canonicalhelper/calendar validation and unchangedserver80/global/order source inspected. Local281tests+auth/receipt/form regressions PASS; no actual80row newfixture claim. Main1.5 ISSUE023 remains until exact1.6 remote/current-backwardrestore gates; form201guard followup onlysyntaxchecked so nextrestore must exercise. Finalmedia/time separate."
     }
   ],
   "reviewedSource": {

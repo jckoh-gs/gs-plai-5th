@@ -1,0 +1,61 @@
+{
+  "at": "2026-09-21T15:19:15.777Z",
+  "result": "PASS",
+  "basis": "Form fixture actual createPlant defaults on=true/limitPct100/targetLimitKwnull; no captured201 baseline claim",
+  "records": [
+    {
+      "id": "f50cd376-3ec8-489d-8773-176f69a96b05",
+      "before": [
+        {
+          "id": "WT-01",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": 200
+        }
+      ],
+      "after": [
+        {
+          "id": "WT-01",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null
+        }
+      ],
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      }
+    },
+    {
+      "id": "88aab8f2-a8c4-4acd-b166-1ab4e42b9ac1",
+      "before": [
+        {
+          "id": "WT-01",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null
+        }
+      ],
+      "after": [
+        {
+          "id": "WT-01",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null
+        }
+      ],
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      }
+    }
+  ]
+}

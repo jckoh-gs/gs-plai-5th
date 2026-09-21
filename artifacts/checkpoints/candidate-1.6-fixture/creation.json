@@ -1,0 +1,53 @@
+{
+  "startedAt": "2026-09-21T15:15:25.661Z",
+  "scope": "Root-owned isolated1.6 candidate fixtures, no mainwrites",
+  "base": "http://127.0.0.1:3110",
+  "version": "1.6.0",
+  "requests": [
+    {
+      "name": "Candidate1.6 wind 9e488718-1c65-4697-bd1e-39f0fd2365b0",
+      "type": "wind",
+      "csvPath": "samples/wind.csv",
+      "csvSha256": "9003d6a7cec7ab4bc029a8aa02085a3c6e6c8aeb7da5004a012b6037e90d2891",
+      "state": "created",
+      "id": "51914627-090e-4fb5-9e7e-625c77bfd903"
+    },
+    {
+      "name": "Candidate1.6 solar f4df7ec3-a43a-4a53-8e91-34166e4141cf",
+      "type": "solar",
+      "csvPath": "samples/solar.csv",
+      "csvSha256": "ca636abde604fef9efa9ef005baefdddc2faf82bfa41be1b573d2b4d514114b4",
+      "state": "created",
+      "id": "041fef49-0547-45dd-9831-41545cf73dd3"
+    },
+    {
+      "name": "Candidate1.6 hybrid 1816f246-ca06-46b6-9009-1aa13a200524",
+      "type": "hybrid",
+      "csvPath": "samples/hybrid.csv",
+      "csvSha256": "c400918bb97a7fd173e2401f88db04cbb3edcfd9f62bb9c603a62d3527bf12bb",
+      "state": "created",
+      "id": "42e7e2c1-2294-4666-8468-912c0e806438"
+    }
+  ],
+  "completedAt": "2026-09-21T15:15:25.681Z",
+  "existingEvents": [
+    {
+      "id": 4,
+      "created": "2026-09-21T15:15:25.679Z"
+    },
+    {
+      "id": 3,
+      "created": "2026-09-21T15:15:25.676Z"
+    },
+    {
+      "id": 2,
+      "created": "2026-09-21T15:15:25.672Z"
+    },
+    {
+      "id": 1,
+      "created": "2026-09-21T15:14:46.570Z"
+    }
+  ],
+  "gatewayConnected": true,
+  "result": "PASS"
+}

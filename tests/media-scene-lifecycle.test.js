@@ -24,14 +24,14 @@ test('actual registration request fingerprint must exactly match intent before r
 });
 
 import features from '../scripts/media/release-features.cjs';
-test('receipt demonstration is exact1.5 gated and wide RTU metrics are never cropped',()=>{
- for(const version of ['1.4.0','1.5.0','1.5.1','1.6.0']){
+test('receipt demonstration is exact1.5/1.6 gated and wide RTU metrics are never cropped',()=>{
+ for(const version of ['1.4.0','1.5.0','1.5.1','1.6.0','1.6.1','1.6.0-rc.1','1.7.0']){
   const c=plan({...options,...features(version)});
   const receipt=c.scenes[2].actions.filter(a=>a.name==='저장 상태 확인');
-  assert.equal(receipt.length,version==='1.5.0'?1:0);
+  assert.equal(receipt.length,['1.5.0','1.6.0'].includes(version)?1:0);
   assert.equal(c.scenes[3].zoom,undefined);
   assert.ok(c.scenes[1].zoom.scale>1);
-  assert.equal(c.scenes[2].actions.some(a=>a.name==='rest-receipt-stored-status'),version==='1.5.0');
+  assert.equal(c.scenes[2].actions.some(a=>a.name==='rest-receipt-stored-status'),['1.5.0','1.6.0'].includes(version));
   assert.equal(c.scenes[4].actions.filter(a=>a.type==='dispatch').length,1);
  }
  const c=plan({...options,...features('1.5.0')});

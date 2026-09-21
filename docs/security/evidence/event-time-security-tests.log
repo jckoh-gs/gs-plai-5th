@@ -1,0 +1,14 @@
+✔ canonical audit created uses explicitKST across midnight, leap day and year boundary (0.710208ms)
+✔ missing, nonstring, invalid calendar and noncanonical input never become visible times (0.075417ms)
+✔ alternate timestamps cannot fill absent or malformed created and cannot override valid created (0.059666ms)
+✔ formatting is identical across host time zones (82.536959ms)
+✔ malicious timestamp and fallback contents are never returned or coerced (0.311417ms)
+✔ fixture requires exact explicit read target version hash and private token path (0.171584ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 122.41625

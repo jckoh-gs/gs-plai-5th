@@ -1,0 +1,11 @@
+{
+  "recordedAt": "2026-09-21T15:23:54.741905+00:00",
+  "scope": "Clarifies priorround2 registrationstatus evidence without modifying originalfiles",
+  "priorResult": "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/result.json",
+  "priorCleanup": "artifacts/checkpoints/candidate-1.6-command-form-round2-cleanup/cleanup.json",
+  "clarification": "Priorharness accepted HTTP2xx via r.ok; its actual201BaselinesRestored label means actualreturnednewfixture settings were restored, but201was notexplicitlyasserted byclient. HTTP201 matchesknown servercontract, not separatelyrecordedresponse evidence. OwnednewIDs/existingexclusion and actualbaselinecomparison remain verified.",
+  "futureSource": "scripts/browser-command-form.cjs",
+  "futureSourceSha256": "51452dcca4c9a64d433581d347a9b3f84b86a0ec52089725108752031759fd31",
+  "futurePolicy": "POST/plants nowmustbe201 before readingregistration body and capturingownership. Unknownregistrationresponse mustbe reconciled by uniquerequestname/actualstate; do notautoretry registration.",
+  "validation": "Syntaxcheck/sourceinspection; nofull44repeat solelyforthis boundaryassert. Nextactualrestoreform exercisesupdatedguard."
+}
