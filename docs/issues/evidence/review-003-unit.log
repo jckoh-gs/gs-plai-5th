@@ -1,0 +1,19 @@
+✔ canonical global dedup, validation atomicity, priority intersections (7.125417ms)
+✔ expiry before dispatch; sensor freeze cannot complete; restart deadline real time (1.208ms)
+✔ target checks every allocated device and signed actual error, then completion (0.455667ms)
+✔ stop clears pending startup and completed requires a post-dispatch model sample (0.370958ms)
+✔ failed durable dispatch rolls back model, command cache and outbox together (0.5455ms)
+✔ setpoint action validation applies even to known duplicate IDs (0.245625ms)
+✔ outer model transaction rollback also restores nested command cancellation cache (0.277292ms)
+✔ expiresAt accepts explicit ISO zones/fractions and rejects permissive Date.parse calendar normalization (3.898208ms)
+✔ expiresAt-only body change conflicts; equal priority supersedes overlapping but disjoint remains active (1.061458ms)
+✔ physical database reopen restores unfinished deadline; timeout retains setting until explicit stop makes power zero (5.629375ms)
+✔ prune deletes old acknowledged frames/outbox while preserving old pending/unbatched data, command IDs and scenarios (2.501417ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 52.64675

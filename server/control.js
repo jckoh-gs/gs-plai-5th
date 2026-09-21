@@ -1,7 +1,14 @@
+import {parseTimestamp} from './model.js';
 export const canonicalize=x=>JSON.stringify(sort(x));
 function sort(x){if(Array.isArray(x))return x.map(sort);if(x&&typeof x==='object')return Object.fromEntries(Object.keys(x).sort().map(k=>[k,sort(x[k])]));return x;}
 const active=c=>['accepted','executing'].includes(c.status);
 const iso=t=>new Date(t).toISOString();
+function expiry(value,now){
+ if(value===undefined)return now+30000;
+ if(typeof value!=='string'||!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?(?:Z|[+-]\d{2}:\d{2})$/.test(value))throw Error('expiresAt must be an ISO timestamp');
+ try{parseTimestamp(value.replace(/\.\d{1,3}(?=Z|[+-])/,''));}catch{throw Error('expiresAt must be an ISO timestamp');}
+ const time=Date.parse(value);if(!Number.isFinite(time))throw Error('expiresAt must be an ISO timestamp');return time;
+}
 function number(v,min,max,name){if(typeof v!=='number'||!Number.isFinite(v)||v<min||v>max)throw Error(`${name} must be ${min}..${max}`);return v;}
 export class Controller {
  constructor(store,plants,{onEvent=()=>{}}={}){this.store=store;this.plants=plants;this.onEvent=onEvent;this.commands=new Map(store.loadCommands().map(c=>[c.commandId,c]));}
@@ -21,7 +28,7 @@ export class Controller {
   const gs=request.generatorId===undefined?p.generators:p.generators.filter(g=>g.id===request.generatorId);if(!gs.length)throw Error('Unknown generator');
   const rated=gs.reduce((s,g)=>s+g.ratedKw,0);const toleranceKw=number(request.toleranceKw??1,.01,10000,'toleranceKw');const timeoutSeconds=number(request.timeoutSeconds??120,1,3600,'timeoutSeconds');const priority=number(request.priority??50,0,100,'priority');
   if(request.action==='set_target')number(request.targetKw,0,rated,'targetKw');if(request.action==='set_limit')number(request.limitPct,0,100,'limitPct');
-  const expires= request.expiresAt===undefined?now+30000:Date.parse(request.expiresAt);if(!Number.isFinite(expires)||request.expiresAt!==undefined&&typeof request.expiresAt!=='string')throw Error('expiresAt must be an ISO timestamp');
+  const expires=expiry(request.expiresAt,now);
   c={...base,request:structuredClone(request),canonical,runId:p.runId,status:expires<=now?'expired':'accepted',acceptedAt:iso(now),expiresAt:iso(expires),timeoutSeconds,toleranceKw,priority,targets:gs.map(g=>({id:g.id,targetKw:request.action==='set_target'?request.targetKw*g.ratedKw/rated:request.action==='stop'?0:null}))};
   if(c.status==='accepted'&&[...this.commands.values()].some(old=>active(old)&&old.plantId===plantId&&old.priority>priority&&old.targets.some(t=>gs.some(g=>g.id===t.id))))throw Error('Higher priority active command overlaps targets');
  }catch(e){c={...base,request:structuredClone(request),canonical,status:'rejected',reason:e.message};}

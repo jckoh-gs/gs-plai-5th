@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "suite": "independent-control-MQTT",
+  "invalidCases": 8,
+  "expiresAtBodyConflict": true,
+  "sensorFreeze": {
+    "durationMs": 2301,
+    "framesDuringFreeze": 0,
+    "noBackfill": true
+  }
+}

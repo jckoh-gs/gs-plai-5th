@@ -1,0 +1,14 @@
+{
+  "reviewedAt": "2026-09-21T08:28:26.304392+00:00",
+  "commit": "94f415103ae0ad7950afce2721b38d560ff350db",
+  "workingTree": true,
+  "files": {
+    "server/control.js": "ceabb746658b7bb3af35b767457ea81129da1ddf4f142850dc11a4fff467b9ac",
+    "server/store.js": "5b497e48f84e0a918a6d565e5dc9c741c4e68fc69c8141d813e7921e96a73969",
+    "server/model.js": "ab20a7f7f7b64f8dc9be152b74f617647860524ef0a06577f160d2a3be522f47",
+    "tests/review-control.test.js": "7bd1d3cf301aaf4e9a0cef730a69cc7ef20d99995fe5ef6d772f25042a9e875c",
+    "tests/review-retention.test.js": "ea7d9d96ec37f5a0ccc0dda6a53238e5363db743ca67eea47f9f2d6e2dfa0bc0",
+    "scripts/review-control-integration.js": "963470b166705690b36b87e1e47d184b46ea92002cb944342ff548e84cbac228",
+    "scripts/test-harness.js": "4610d56889bad1a0722c3df01779ce56325ef9ba5716472460dded2671fa5e34"
+  }
+}

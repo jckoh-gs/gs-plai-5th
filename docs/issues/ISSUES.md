@@ -78,3 +78,23 @@
 - 담당: 메인. 상태: 작업본 회귀 검증 완료; 릴리스 commit 대기.
 - 회귀: `tests/model.test.js`의 `loop count records actual dataset wraps, not seeks, and survives scenario JSON snapshots` 독립 재실행. 1199→0 증가, seek 비증가, structured JSON snapshot 복원, pause 비증가를 검증. 이 시험은 실제 UI나 SQLite 재시작까지 증명하지 않음.
 - 증거: `evidence/review-002-unit.log`, 19/19 pass. 샘플 생성/기상 경합 독립 regression도 함께 통과. 해당 source와 검사한 로그 SHA는 `evidence/review-002-source.json`.
+
+## ISSUE-007 — expiresAt의 비 ISO/존재하지 않는 날짜 허용
+
+- 중요도 P2, 확인된 입력 검증 결함. 상태: 수정 및 독립 회귀 완료, 최종 배포 revision 대기. 담당/수정자: `/root/issues` (메인에 변경 전 통보).
+- 원인: `Date.parse` 성공 여부만 검사하면 `'1'`을 날짜로 해석하고 `2099-02-30T00:00:00Z`를 3월로 정규화한다. 전자는 rejected 대신 expired, 후자는 accepted가 될 수 있다.
+- 수정: `server/control.js`에서 T·초·명시적 timezone을 요구하는 ISO 형식과 달력 유효성을 검사한다. 정상 UTC/offset 및 소수초 1~3자리, expiresAt 생략 기본값은 유지한다.
+- 회귀: `tests/review-control.test.js`에서 숫자/비 ISO/없는 날짜/24시/잘못된 월 거절 및 정상 offset·millisecond 허용. 실제 broker의 impossible-date 명령도 rejected 수신.
+- 증거: `evidence/review-003-unit.log` 11/11, `evidence/review-003-mqtt.log` PASS. 최종 commit과 배포 매핑은 메인이 릴리스 기록에 연결해야 한다.
+
+## Round 3 — 독립 제어·보존 검증
+
+- **expiresAt 본문 변경:** 같은 commandId에서 expiresAt만 바꾼 요청 거절을 단위 및 실제 MQTT 양쪽 검증. AT-CONTROL-05의 이 경계 보완.
+- **잘못된 명령:** 실제 Mosquitto 경로에서 schemaVersion1, setpoint에 stop action, 없는 generator, 문자열/음수 target, 없는 날짜, 깨진 JSON, 8192바이트 초과 입력 8종 rejected 수신. oversized/malformed는 commandId=null ack임을 명시적으로 검사. AT-CONTROL-06 보완; 모든 가능한 잘못된 수치 조합을 전수 검증했다고 주장하지 않음.
+- **우선순위:** 동일 priority의 겹치는 새 명령은 기존 superseded, 다른 generator 대상은 accepted 유지. 기존 높은/낮은 우선순위 검증과 함께 AT-CONTROL-08 보완.
+- **실제 SQLite 재개:** DB를 닫고 새 Store/Controller로 미완료 executing command를 읽고 원래 deadlineAt 보존, deadline 경과시 timed_out 확인. 서버 프로세스 전체 재기동은 별도 통합 증거와 결합한다.
+- **timeout 후 stop:** timeout 시 targetLimitKw=250 및 on=true 유지, 후속 stop→모델 step으로 on=false와 실제 powerKw=0 및 completed 확인. stop은 저장된 targetLimitKw 숫자를 삭제한다는 의미가 아니라 발전기 정지 동작이다. PRD §6.5 의미에 맞춰 검사했다.
+- **보존기간:** 오래된 ACK 완료 outbox 및 연결 frame 삭제, 오래된 미확인 outbox의 body 동일 유지, pending/unbatched frame 유지, 명령 ID 및 scenario 유지. `tests/review-retention.test.js`. 차트용 samples는 독립 보존기간 정리되며 미전송 원본은 scada_frames/outbox에 남는다.
+- **센서 누락:** 실제 broker/runtime에서 freeze 2301ms 동안 frame 수 불변, 재개 frame timestamp는 해제 이후, freeze 구간 timestamp 존재하지 않음, 양쪽 관측 간격≥2300ms. AT-MQTT-08의 no-backfill 직접 증거.
+
+ISSUE-005의 배포/브라우저/복원/미디어 등 다른 게이트는 이 검증으로 닫지 않는다.

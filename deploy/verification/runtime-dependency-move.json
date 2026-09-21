@@ -1,0 +1,10 @@
+{
+  "sourceBefore": "94f4151",
+  "packagesCompared": 238,
+  "versionChanges": [],
+  "runtimeDependencies": {
+    "csv-parse": "^7.0.2",
+    "express": "^5.1.0",
+    "mqtt": "^5.14.0"
+  }
+}
