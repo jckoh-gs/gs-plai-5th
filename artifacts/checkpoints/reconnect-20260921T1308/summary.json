@@ -1,0 +1,30 @@
+{
+  "capturedAt": "2026-09-21T13:14:10.379917+00:00",
+  "scope": "Local observer/supervisor evidence only; no new remote SQLite query or runtime mutation",
+  "outageAt": "2026-09-21T13:08:35.250Z",
+  "recoveredAt": "2026-09-21T13:08:36.513Z",
+  "laterApiFailureAt": "2026-09-21T13:09:26.630Z",
+  "current": {
+    "supervisorState": "ready",
+    "apiReady": true,
+    "mqttConnected": true,
+    "auditConnected": true,
+    "verifiedPodUid": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73"
+  },
+  "cumulativeCounters": {
+    "primaryApiErrors": 4,
+    "primaryConnectionErrors": 0,
+    "auditConnectionErrors": 3,
+    "sampleDiscontinuitiesPerRtu": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "primaryInvalid": 0,
+    "auditInvalid": 0
+  },
+  "interpretation": "Additional local verification failure automatically recovered; later API poll failed without a new recorded disconnect. Earlier fiveRTU gap counters remain1 each, no newly counted sample discontinuity in this captured prefix. Not proof of universal no-loss. Underlying cause unknown.",
+  "nextStep": "At first-hour1.3 checkpoint assess cumulative observation, and improve sanitized local verification failure categorization before attributing root cause. Preserve existing supervisor until planned validated replacement."
+}

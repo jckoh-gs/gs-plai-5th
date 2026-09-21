@@ -55,3 +55,6 @@ IDEA-008은 제안 v2이며 아직 미채택이다. 실제 로컬 일반폼 범�
 
 
 1.3 관찰에서12:58:27Z와13:03:17Z에 로컬 검증 실패 후 같은 supervisor가 각각12:58:29Z/13:03:18Z 재연결했다. Pod UID/이미지/재시작 횟수는 유지됐다. 현재 알려진 누적값은 main APIerrors2/connectionErrors0, 추가관측 connectionErrors2 및각RTU sampleDiscontinuities1이다.9배치/300샘플의 수신관측 공백은 동일 원격outbox의 연속샘플·PUBACK로 대조했으며 생성누락은 확인되지 않았다. 누락배치의 서버 기록시각은 단절 로그보다 이르고 과거 두 host시계 동기화도 독립 증명하지 않았으므로 단절시각과 발행시각의 인과를 단정하지 않는다. 원인은 미확정이다. artifacts/checkpoints/reconnect-20260921T1303/summary.json 및 resume.currentObservationBaselines를 사용하고 이누적값을새장애로반복보고하지 않는다.
+
+
+13:08:35Z 추가 local_verification_failed도13:08:36Z 자동복귀했다.13:09:26Z에는 새단절로그 없이 API 관측1회가 추가 실패했다. artifacts/checkpoints/reconnect-20260921T1308/summary.json의 최종 캡처 시점에서 API/MQTT는 다시정상이며 누적 mainAPI4/connection0, 추가connection3/sampleDiscontinuities각1이다. 이후증가분은 최신resume기준과비교한다. 이회차는 추가 원격SQLite조회가 아닌 로컬원문보존이다. 첫1시간 관찰에서 오류분류가 부족한 supervisor진단을 검토하되 원인을 추정하거나 정상관측프로세스를 임의중복시작하지 않는다.

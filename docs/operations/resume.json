@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T13:12:32.289183+00:00",
+  "updatedAt": "2026-09-21T13:14:10.379917+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": "stable-v1.3.0",
@@ -173,12 +173,12 @@
     "supplementary": 30644
   },
   "currentObservationBaselines": {
-    "primaryApiErrors": 2,
+    "primaryApiErrors": 4,
     "primaryConnectionErrors": 0,
-    "supplementaryConnectionErrors": 2,
+    "supplementaryConnectionErrors": 3,
     "supplementarySampleDiscontinuitiesPerRTU": 1,
-    "evidence": "artifacts/checkpoints/reconnect-20260921T1303/summary.json",
-    "scope": "Known cumulative1.3 counters after12:58/13:03 reconnects; compare increases/current readiness, do not reset or repeat as new incidents. Old1.2 separatearchive retained."
+    "evidence": "artifacts/checkpoints/reconnect-20260921T1308/summary.json",
+    "scope": "Known cumulative1.3 counters through captured prefix; earlier9batch/300sample outbox proof remains1303 checkpoint. Do not reset or repeat as new incidents."
   },
   "completedOperations": [
     {
@@ -267,6 +267,15 @@
       "observedMissingBatches": 9,
       "persistedSamplesInMissingBatches": 300,
       "scope": "Publisher persistence/PUBACK verified; not proof of every subscriber receipt. Missing batch timestamps precede logged disconnect; historical host/server clock synchronization not independently verified."
+    },
+    {
+      "evidence": "artifacts/checkpoints/reconnect-20260921T1308/summary.json",
+      "outageAt": "2026-09-21T13:08:35.250Z",
+      "recoveredAt": "2026-09-21T13:08:36.513Z",
+      "laterApiFailureAt": "2026-09-21T13:09:26.630Z",
+      "cause": "unknown; local_verification_failed and state poll unavailable",
+      "runtimeMutation": false
     }
-  ]
+  ],
+  "nextOperationalReview": "At first-hour1.3 observation checkpoint, assess13:08/13:09 additional API failures. Inspect finite sanitized local failure categories before changing recovery policy; no presumed rootcause or unbounded retries."
 }
