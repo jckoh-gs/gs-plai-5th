@@ -1,0 +1,140 @@
+{
+  "state": "RECOVERED_CAUSE_UNKNOWN",
+  "capturedAt": "2026-09-21T20:24:52.747756+00:00",
+  "sourceHead": "98383f3fd5d7fad9f4361db42bdd02c164c52672",
+  "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "appImage": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "supervisorOutageAt": "2026-09-21T20:19:56.637Z",
+  "supervisorReadyAt": "2026-09-21T20:20:00.099Z",
+  "observedSupervisorRecoveryMilliseconds": 3462,
+  "reportedReason": "kubernetes_unavailable",
+  "reasonBoundary": "Supervisor categorizes bounded kubectl command or JSON parse failures; this does not prove whole-cluster outage or root cause.",
+  "primaryBefore": {
+    "checkedAt": "2026-09-21T20:19:04.354Z",
+    "sessionId": "0ea34e34-e199-4b14-84ab-40ff75fa5d96",
+    "messages": 1336,
+    "connectionErrors": 0,
+    "apiErrors": 1,
+    "connectionEvents": 2,
+    "disconnectionEvents": 1
+  },
+  "primaryAfter": {
+    "checkedAt": "2026-09-21T20:20:57.391Z",
+    "sessionId": "0ea34e34-e199-4b14-84ab-40ff75fa5d96",
+    "messages": 1356,
+    "connectionErrors": 0,
+    "apiErrors": 1,
+    "connectionEvents": 3,
+    "disconnectionEvents": 2
+  },
+  "auditBefore": {
+    "checkedAt": "2026-09-21T20:19:07.492Z",
+    "sessionId": "1e38bd3c-002a-49f4-9aa8-9039887b7889",
+    "received": 1336,
+    "connectionErrors": 1,
+    "connections": 2,
+    "disconnections": 1
+  },
+  "auditAfter": {
+    "checkedAt": "2026-09-21T20:20:57.522Z",
+    "sessionId": "1e38bd3c-002a-49f4-9aa8-9039887b7889",
+    "received": 1356,
+    "connectionErrors": 2,
+    "connections": 3,
+    "disconnections": 2
+  },
+  "perRtuObservedDeltas": [
+    {
+      "rtuId": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+      "sampleDiscontinuities": 0,
+      "sequenceForwardJumps": 0,
+      "sequenceNonIncreasing": 0,
+      "baselineDriftMessages": 0,
+      "runTransitions": 0,
+      "invalidMessages": 0,
+      "duplicateMessages": 0,
+      "maxReceiptGapMsBefore": 61924,
+      "maxReceiptGapMsAfter": 61924
+    },
+    {
+      "rtuId": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+      "sampleDiscontinuities": 0,
+      "sequenceForwardJumps": 0,
+      "sequenceNonIncreasing": 0,
+      "baselineDriftMessages": 0,
+      "runTransitions": 0,
+      "invalidMessages": 0,
+      "duplicateMessages": 0,
+      "maxReceiptGapMsBefore": 65474,
+      "maxReceiptGapMsAfter": 65474
+    },
+    {
+      "rtuId": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+      "sampleDiscontinuities": 0,
+      "sequenceForwardJumps": 0,
+      "sequenceNonIncreasing": 0,
+      "baselineDriftMessages": 0,
+      "runTransitions": 0,
+      "invalidMessages": 0,
+      "duplicateMessages": 0,
+      "maxReceiptGapMsBefore": 66115,
+      "maxReceiptGapMsAfter": 66115
+    },
+    {
+      "rtuId": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+      "sampleDiscontinuities": 0,
+      "sequenceForwardJumps": 0,
+      "sequenceNonIncreasing": 0,
+      "baselineDriftMessages": 0,
+      "runTransitions": 0,
+      "invalidMessages": 0,
+      "duplicateMessages": 0,
+      "maxReceiptGapMsBefore": 66469,
+      "maxReceiptGapMsAfter": 66469
+    },
+    {
+      "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "sampleDiscontinuities": 0,
+      "sequenceForwardJumps": 0,
+      "sequenceNonIncreasing": 0,
+      "baselineDriftMessages": 0,
+      "runTransitions": 0,
+      "invalidMessages": 0,
+      "duplicateMessages": 0,
+      "maxReceiptGapMsBefore": 113013,
+      "maxReceiptGapMsAfter": 113013
+    }
+  ],
+  "podIdentity": {
+    "observedAt": "2026-09-21T20:24:52.891361+00:00",
+    "name": "grid-69d8766f7-zmfq8",
+    "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+    "node": "charleskoh-nucbox-g3",
+    "containers": [
+      {
+        "name": "app",
+        "ready": true,
+        "restarts": 0,
+        "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876"
+      },
+      {
+        "name": "mqtt",
+        "ready": true,
+        "restarts": 0,
+        "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+      }
+    ]
+  },
+  "capturedSupervisorState": "ready",
+  "historicalIssue030Preserved": true,
+  "newSampleDiscontinuitiesObserved": false,
+  "claimBoundary": "Comparison of received observation windows only. No universal delivery or external VPP receipt claim; no inferred root cause. No new DB query, restart, deployment, reset or counter clearing. Original deadline unchanged.",
+  "sourcePaths": {
+    "soak-monitor.mjs": "artifacts/checkpoints/observer-1.7.1-activation/source/primary/soak-monitor.mjs",
+    "soak-diagnostics.mjs": "artifacts/checkpoints/observer-1.7.1-activation/source/primary/soak-diagnostics.mjs",
+    "telemetry-audit-monitor.mjs": "artifacts/soak/telemetry-audit/v1.7.1-20260921T1800/source/telemetry-audit-monitor.mjs",
+    "telemetry-audit.mjs": "artifacts/soak/telemetry-audit/v1.7.1-20260921T1800/source/telemetry-audit.mjs",
+    "connection-supervisor.mjs": "scripts/connection-supervisor.mjs"
+  },
+  "originalReadCommandExitReceiptRequired": true
+}

@@ -25,6 +25,8 @@
 
 - ISSUE031: **RESOLVED_TOOLING — 데모 기상 복원 baseline의 effective CSV 값 오인**. 최초 recorder77008 실패와20시험 근거를 보존하고, 실제2차 focused 녹화·후속125kW 명령·양복구 PASS로 좁은 결함을 종결했다. 최종창 새8장면 영상은 별도다.
 
+- ISSUE032: **RECOVERED_CAUSE_UNKNOWN — 20:19 별도 관측 재연결**. audit 연결오류1→2, 양구독 재연결 및감독기3.462초회복; 새표본불연속 미검출이나 무손실 증명은 아니다. ISSUE030 이력·원인미확정은 유지한다.
+
 번호가 없는 IDEA011 명령 목록 실패 가시성 기록도 현재 기능 인수 완료로 정리한다. 로컬8검증군의 합성503·header/body timeout·전환/해제 시험과 실제 main/현재1.7 복원 읽기, REVIEW037/038를 근거로 한다. 이전1.6에 신규 안내가 있다고 주장하지 않는다.
 
 계속 남는 경계: 오디오의 실제 청취 미검증, 최종창 신규 미디어·동일 영상 PPT 검수, 실제 KMA/AWS/운영 VPP 외부 연동 미검증, 단일노드 k3s의 노드 HA 미검증은 해결로 바꾸지 않는다. SEC006의 현재 이미지 OS4매치/2CVE와 인증 사용자 자원 소모 잔여 위험은 보안 원장에 계속 연결한다. npm audit0/전체시험 PASS가 이를 해소하지 않는다. 원래 freeze21:37:33Z/deadline22:07:33Z를 유지하며 역할·전체목표는 아직 종료하지 않는다.
@@ -697,3 +699,18 @@ ISSUE031 종결 대조: `artifacts/checkpoints/media-weather-r2/inventory.json`�
 실제 round2 demo-recovery 및 post-command-recovery는 같은 새 소유RTU c2bccd06에 settings/weatherConfigurationMatched=true, baselineHash=actualHash, 기존3 RTU unchanged를 기록한다. 기상14/90/300/22에서 출력651.8kW, CSV500kW·입력8/240/650/22 복귀를 기록했고 provenance는 default→manual로 정직하게 남겼다. 후속 실제 MQTT 명령은 accepted→executing→completed/125kW/error0/exit0이며 이후2쓰기 복구도 PASS다. 일반 복구 writes0은 화면 조작이 이미 복구한 상태에서 재쓰기하지 않았다는 범위다.
 
 이상으로 잘못된 effective CSV baseline 신뢰 결함은20개 helper 회귀와 실제2차 준비 녹화/복구를 결합하여 RESOLVED_TOOLING으로 종결한다. 최초 attempt1 실패 raw영상/journal·이전16시험 누락범위·20시험 로그는 그대로 보존한다. 영상131.13초/3 focused scenes는 준비 범위이며 최종창 새8장면 영상·동일영상PPT·직접청취·전체목표 인수를 대신하지 않는다. verification의 rehearsal/pending visualReview 및 placeholder imageDigest도 최종 release media receipt로 승격하지 않는다. 원래freeze21:37:33Z/deadline22:07:33Z 불변. 독립 receipt는 evidence/issue031-after-review.json이다.
+
+
+## ISSUE-032 — 20:19 별도 관측 연결 재생성과 회복
+
+P2 관측 연속성, 상태 RECOVERED_CAUSE_UNKNOWN. 메인이20:22:47Z 누적 audit connectionErrors1→2를 발견했고 issues는 실제 local observations와 supervisor 소스를 독립 읽기 대조했다. 새 근거 `artifacts/checkpoints/connection-1.7.1-20260921T2019/`의 원문 window·source·현재Pod/PID·summary와 해시를 연결한다. 18:43의 ISSUE030과 별도 사건이며 같은 원인이라고 확정하지 않는다.
+
+감독기20:19:56.637Z disconnected/kubernetes_unavailable →20:19:57.745Z forward_started→20:20:00.099Z verified Ready로3.462초간 회복을 기록했다. 양 구독자는20:19:56.638Z close 후 primary20:19:58.182Z/audit58.188Z connect다. primary session0ea34…/audit1e38…는 동일하며 연결횟수2→3·해제횟수1→2다. primary apiErrors1/connectionErrors0은 유지됐고 audit connectionErrors1→2다. API poll 성공만으로 중간 연결 단절이 없었다고 판단하지 않는다.
+
+선택된20:19~20:20 원문에서 다섯RTU sampleDiscontinuities·sequenceForwardJumps·비증가sequence·baseline drift·run transition·invalid·duplicate 증가가 모두0이다. 기존 gap/jump[1,1,1,0,1]과 ISSUE030의144표본 위치 이력은 그대로 유지된다. 이는 이번 관측 비교에서 새 불연속을 검출하지 않았다는 의미이며 추정 손실0·모든subscriber전달·외부VPP도달을 증명하지 않는다. 이번 사건의 DB 재조회는 수행하지 않았다.
+
+supervisor verifyRemote는 유한 kubectl deployment/pod 명령 실패 및 반환JSON 파싱 실패를 kubernetes_unavailable로 분류한다. 따라서 reason 문자열은 전체클러스터 outage나 근본원인을 확정하지 않는다. 이후20:24:52 보존 Pod UID75f4…/app234…/app·broker Ready 및재시작0·0, 기존 PID·시작identity는 회복 이후의 확인이며 사건 내내 원격정상의 증명이 아니다. 새 재시작·배포·오류카운터 초기화·관측 교체 없이 기존 프로세스가 계속된다.
+
+독립 receipt는 evidence/issue032-connection-review.json이다. 원문보존/읽기 검토만 수행했으며 원장·소스·인수·원래freeze21:37:33Z/deadline22:07:33Z는 변경하지 않았다. 후속 최종 관측종료 집계는 audit오류2와이번재연결을 포함해야 하며 이전 준비 검토의audit1은 당시 snapshot 이력으로 남긴다.
+
+ISSUE032 원문 수집 종료 확인: root execution.json의 실제 동기 exec chunk ff2dbf/exit0/session없음과 summary SHA1efaf633…를 대조했다.17개 payload 해시 검증과 별도로 실제 수집 명령 종료 근거를 연결했으며 이를 네트워크 원인 또는 보편적 전달 성공으로 확대하지 않는다.

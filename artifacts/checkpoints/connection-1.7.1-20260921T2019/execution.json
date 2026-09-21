@@ -1,0 +1,13 @@
+{
+  "state": "READ_ONLY_CAPTURE_COMPLETED",
+  "owner": "root",
+  "tool": "exec_command",
+  "chunkId": "ff2dbf",
+  "sessionId": null,
+  "exitCode": 0,
+  "wallTimeSeconds": 0.17565325,
+  "timeoutSeconds": 45,
+  "summarySha256": "1efaf63366bf459aa3112309125ac2deb53c5e1393c26385a1986578ae709828",
+  "savedPayloadFiles": 15,
+  "claimBoundary": "Successful evidence capture and live Pod identity read, not root-cause proof or universal message-delivery proof."
+}

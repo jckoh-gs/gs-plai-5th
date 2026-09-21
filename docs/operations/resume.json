@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T20:16:39.649685+00:00",
+  "updatedAt": "2026-09-21T20:26:36.368969+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -485,9 +485,29 @@
       "persistedFollowupEvidence": "artifacts/checkpoints/connection-1.7.1-20260921T1842-persisted-proof/summary.json",
       "persistedGeneratedAndBrokerAckedPositions": 144,
       "persistedIndependentReview": "docs/issues/evidence/issue030-persisted-review.json"
+    },
+    {
+      "runtime": "1.7.1",
+      "issue": "ISSUE032",
+      "state": "RECOVERED_CAUSE_UNKNOWN",
+      "evidence": "artifacts/checkpoints/connection-1.7.1-20260921T2019/summary.json",
+      "execution": "artifacts/checkpoints/connection-1.7.1-20260921T2019/execution.json",
+      "independentReview": "docs/issues/evidence/issue032-connection-review.json",
+      "supervisorOutageAt": "2026-09-21T20:19:56.637Z",
+      "supervisorReconnectAt": "2026-09-21T20:20:00.099Z",
+      "supervisorDetectedToReadyMilliseconds": 3462,
+      "reportedReason": "kubernetes_unavailable",
+      "primaryApiErrorsAfter": 1,
+      "primaryConnectionErrorsAfter": 0,
+      "auditConnectionErrorsAfter": 2,
+      "connectionsAfter": 3,
+      "disconnectionsAfter": 2,
+      "newSampleDiscontinuitiesObserved": false,
+      "rootCause": "unknown",
+      "scope": "Bounded kubectl execution or JSON parse failure category, not proven whole-cluster outage. Same processes/sessions and observed Pod/image; added local subscriber disconnection/reconnection. Five-RTU window comparisons found no added discontinuities; not universal loss-free or external VPP delivery proof. ISSUE030 and its144-position persisted/PUBACK evidence remain historical."
     }
   ],
-  "nextOperationalReview": "Maintain the existing 1.7.1 primary72957/audit8133/supervisor48590 sessions and preserve their counters and ISSUE030 history. The actual first-hour capture and REVIEW051 are complete; do not repeat them. At 2026-09-21T21:27:33.079009Z collect product/security/issues selected-version reviews and refresh actual Ready/image/capacity. At the original 21:37:33.079009Z freeze follow FINAL-RESTORE-PLAN and the new video, same-video PPT and delivery gates. Original deadline 22:07:33.079009Z is unchanged.",
+  "nextOperationalReview": "Maintain the existing 1.7.1 primary72957/audit8133/supervisor48590 sessions and preserve their counters and ISSUE030/ISSUE032 history. The actual first-hour capture and REVIEW051 are complete; do not repeat them. At 2026-09-21T21:27:33.079009Z collect product/security/issues selected-version reviews and refresh actual Ready/image/capacity. At the original 21:37:33.079009Z freeze follow FINAL-RESTORE-PLAN and the new video, same-video PPT and delivery gates. Original deadline 22:07:33.079009Z is unchanged.",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.7.1",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
@@ -1663,6 +1683,6 @@
     "auditHandle": 8133,
     "primaryFinalFile": "artifacts/soak/v1.7.1/session-0ea34e34-e199-4b14-84ab-40ff75fa5d96.json",
     "auditFinalFile": "artifacts/soak/telemetry-audit/v1.7.1-20260921T1800/result.json",
-    "requirement": "Confirm original handles terminal and actual exit/endReason/times, preserve full logs and exact launched sources with hashes, retain ISSUE030 counters and distinguish planned client close from new outage. Keep supervisor and main forwards for final video. No acceptance promotion from file existence."
+    "requirement": "Confirm original handles terminal and actual exit/endReason/times, preserve full logs and exact launched sources with hashes, retain ISSUE030/ISSUE032 counters and distinguish planned client close from new outage. Keep supervisor and main forwards for final video. No acceptance promotion from file existence."
   }
 }

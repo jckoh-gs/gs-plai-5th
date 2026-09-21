@@ -1,0 +1,19 @@
+{
+  "README.md": "faaf68085e7643001df14af1f4b9bfe0bd896d9acc10fb6a4aabe29a87afff5d",
+  "audit-at-capture.json": "18fbc17db6597a2c9edc639bb0e86fb76b9ee415a6e73d31c1a7df6b7eb647f5",
+  "audit-observations.jsonl": "a3bec745140d1fb3bf229004cdb2b7f99c8c59e15b159b2397123838f564cd02",
+  "execution.json": "6fdcad08b535ffa774e21a06fca0338960093ae52ba0661f39b3045686ac8bfa",
+  "pod-identity.json": "5de126ea9d41d7b43354039622995b880c098a8015bdcd77cbd16ab02d7fa88c",
+  "primary-at-capture.json": "eef3ff0cd0ef7ab7b92b3dba5983efd469308c31609886594c03ec34770610f1",
+  "primary-observations.jsonl": "30d64b8a0a395638c069b0ae642802bbecdecabd603301071c955c6530366aad",
+  "process-identities.txt": "f719687a29493ed8a78057a1e12c9647fd383d851610b7a941b3e360a18fe12b",
+  "selection-provenance.json": "d794f785d6f116b10ba1b004fc3bf5672bcf512f26dfb197d140ebca84de7226",
+  "source/connection-supervisor.mjs": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
+  "source/soak-diagnostics.mjs": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c",
+  "source/soak-monitor.mjs": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3",
+  "source/telemetry-audit-monitor.mjs": "6c4bbb0b77c03e8a49d9d17c8f7e743c10765ab05b0d94f6b1a736f6a60c4617",
+  "source/telemetry-audit.mjs": "ba6c2c1c9ac39e4a1666d7ad0b6468271a1eda163f2653df9e6bac842bb48486",
+  "summary.json": "1efaf63366bf459aa3112309125ac2deb53c5e1393c26385a1986578ae709828",
+  "supervisor-events.jsonl": "a285f7b574b6fc575b2504112b889214db66599ebd052018e42890f6f7619981",
+  "supervisor-status.json": "d077e6baf88e13394b9fb73fe0827914b37861a222c64b024ed155d85693a5b7"
+}

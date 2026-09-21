@@ -485,7 +485,7 @@
       "scope": "Current read-only service and actual process identities, saved heartbeat configuration and existing isolated tests. No forced real network outage or AI restart guarantee."
     }
   },
-  "updatedAt": "2026-09-21T20:16:39.648078+00:00",
+  "updatedAt": "2026-09-21T20:26:36.367853+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
@@ -842,19 +842,23 @@
   },
   "latestObservationIncident": {
     "runtime": "1.7.1",
-    "issue": "ISSUE030",
+    "issue": "ISSUE032",
     "state": "RECOVERED_CAUSE_UNKNOWN",
-    "evidence": "artifacts/checkpoints/connection-1.7.1-20260921T1842/summary.json",
-    "independentReview": "docs/issues/evidence/issue030-observation-review.json",
-    "primaryApiErrorAt": "2026-09-21T18:42:23.566Z",
-    "supervisorReconnectAt": "2026-09-21T18:43:24.433Z",
-    "observerUnreceivedSimulationSamples": 144,
-    "observerAffectedRtus": 4,
+    "evidence": "artifacts/checkpoints/connection-1.7.1-20260921T2019/summary.json",
+    "execution": "artifacts/checkpoints/connection-1.7.1-20260921T2019/execution.json",
+    "independentReview": "docs/issues/evidence/issue032-connection-review.json",
+    "supervisorOutageAt": "2026-09-21T20:19:56.637Z",
+    "supervisorReconnectAt": "2026-09-21T20:20:00.099Z",
+    "supervisorDetectedToReadyMilliseconds": 3462,
+    "reportedReason": "kubernetes_unavailable",
+    "primaryApiErrorsAfter": 1,
+    "primaryConnectionErrorsAfter": 0,
+    "auditConnectionErrorsAfter": 2,
+    "connectionsAfter": 3,
+    "disconnectionsAfter": 2,
+    "newSampleDiscontinuitiesObserved": false,
     "rootCause": "unknown",
-    "scope": "Observer receive gaps retained. Separate narrowed read-only query exit0 found the 144 inferred missing simulation positions persisted with broker ACK records and continuous same-run windows. No every-subscriber receipt or permanent external VPP receipt claim; connection root cause unknown. Prior6410 failed diagnostics retained.",
-    "persistedFollowupEvidence": "artifacts/checkpoints/connection-1.7.1-20260921T1842-persisted-proof/summary.json",
-    "persistedGeneratedAndBrokerAckedPositions": 144,
-    "persistedIndependentReview": "docs/issues/evidence/issue030-persisted-review.json"
+    "scope": "Bounded kubectl execution or JSON parse failure category, not proven whole-cluster outage. Same processes/sessions and observed Pod/image; added local subscriber disconnection/reconnection. Five-RTU window comparisons found no added discontinuities; not universal loss-free or external VPP delivery proof. ISSUE030 and its144-position persisted/PUBACK evidence remain historical."
   },
   "firstHourObservation171": {
     "evidence": "artifacts/checkpoints/soak-1.7.1-first-hour/summary.json",
@@ -1089,6 +1093,44 @@
     "auditHandle": 8133,
     "primaryFinalFile": "artifacts/soak/v1.7.1/session-0ea34e34-e199-4b14-84ab-40ff75fa5d96.json",
     "auditFinalFile": "artifacts/soak/telemetry-audit/v1.7.1-20260921T1800/result.json",
-    "requirement": "Confirm original handles terminal and actual exit/endReason/times, preserve full logs and exact launched sources with hashes, retain ISSUE030 counters and distinguish planned client close from new outage. Keep supervisor and main forwards for final video. No acceptance promotion from file existence."
-  }
+    "requirement": "Confirm original handles terminal and actual exit/endReason/times, preserve full logs and exact launched sources with hashes, retain ISSUE030/ISSUE032 counters and distinguish planned client close from new outage. Keep supervisor and main forwards for final video. No acceptance promotion from file existence."
+  },
+  "observationIncidentHistory": [
+    {
+      "runtime": "1.7.1",
+      "issue": "ISSUE030",
+      "state": "RECOVERED_CAUSE_UNKNOWN",
+      "evidence": "artifacts/checkpoints/connection-1.7.1-20260921T1842/summary.json",
+      "independentReview": "docs/issues/evidence/issue030-observation-review.json",
+      "primaryApiErrorAt": "2026-09-21T18:42:23.566Z",
+      "supervisorReconnectAt": "2026-09-21T18:43:24.433Z",
+      "observerUnreceivedSimulationSamples": 144,
+      "observerAffectedRtus": 4,
+      "rootCause": "unknown",
+      "scope": "Observer receive gaps retained. Separate narrowed read-only query exit0 found the 144 inferred missing simulation positions persisted with broker ACK records and continuous same-run windows. No every-subscriber receipt or permanent external VPP receipt claim; connection root cause unknown. Prior6410 failed diagnostics retained.",
+      "persistedFollowupEvidence": "artifacts/checkpoints/connection-1.7.1-20260921T1842-persisted-proof/summary.json",
+      "persistedGeneratedAndBrokerAckedPositions": 144,
+      "persistedIndependentReview": "docs/issues/evidence/issue030-persisted-review.json"
+    },
+    {
+      "runtime": "1.7.1",
+      "issue": "ISSUE032",
+      "state": "RECOVERED_CAUSE_UNKNOWN",
+      "evidence": "artifacts/checkpoints/connection-1.7.1-20260921T2019/summary.json",
+      "execution": "artifacts/checkpoints/connection-1.7.1-20260921T2019/execution.json",
+      "independentReview": "docs/issues/evidence/issue032-connection-review.json",
+      "supervisorOutageAt": "2026-09-21T20:19:56.637Z",
+      "supervisorReconnectAt": "2026-09-21T20:20:00.099Z",
+      "supervisorDetectedToReadyMilliseconds": 3462,
+      "reportedReason": "kubernetes_unavailable",
+      "primaryApiErrorsAfter": 1,
+      "primaryConnectionErrorsAfter": 0,
+      "auditConnectionErrorsAfter": 2,
+      "connectionsAfter": 3,
+      "disconnectionsAfter": 2,
+      "newSampleDiscontinuitiesObserved": false,
+      "rootCause": "unknown",
+      "scope": "Bounded kubectl execution or JSON parse failure category, not proven whole-cluster outage. Same processes/sessions and observed Pod/image; added local subscriber disconnection/reconnection. Five-RTU window comparisons found no added discontinuities; not universal loss-free or external VPP delivery proof. ISSUE030 and its144-position persisted/PUBACK evidence remain historical."
+    }
+  ]
 }
