@@ -1,0 +1,32 @@
+[
+  {
+    "file": "analysis-attempt1.json",
+    "sha256": "bf30bf92d7e301dd920e0037569b3f0589c6437a55a84d40541709ffa88da953",
+    "bytes": 318
+  },
+  {
+    "file": "persisted.json",
+    "sha256": "4641913365f14c57e5188d6b321d6c476fee988b6ccbb46ee2d42da5951cf81c",
+    "bytes": 95504
+  },
+  {
+    "file": "query.cjs",
+    "sha256": "01d9276eea5001a74bb10d0923a0df7b51dfa626b6f7465bb43a576f074af7c2",
+    "bytes": 1312
+  },
+  {
+    "file": "selection.json",
+    "sha256": "0f456112577f96ce620e22be665a1df3fa170b4e90d4f1995514e39896eeabff",
+    "bytes": 9135
+  },
+  {
+    "file": "summary.json",
+    "sha256": "7b95bb47b50ee4da764299e3fdc3ca865349f57a5bc5649bb6f85ae5869d3eca",
+    "bytes": 3234
+  },
+  {
+    "file": "terminal.json",
+    "sha256": "8c0e2b8e8fa213d540f83fa703659a97cab3adc9e9fdadef9e2a32132526d11a",
+    "bytes": 327
+  }
+]

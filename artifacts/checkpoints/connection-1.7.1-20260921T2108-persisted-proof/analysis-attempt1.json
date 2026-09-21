@@ -1,0 +1,7 @@
+{
+  "state": "LOCAL_ANALYSIS_TYPE_ERROR",
+  "chunkId": "5a1372",
+  "exitCode": 1,
+  "reason": "The analysis compared an ISO string acked value with integer zero; no database query or runtime operation was repeated.",
+  "nextAction": "Parse actual acked ISO timestamps and reanalyze the same preserved query output."
+}

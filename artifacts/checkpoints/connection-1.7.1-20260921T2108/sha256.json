@@ -1,0 +1,87 @@
+[
+  {
+    "file": "README.md",
+    "sha256": "a316edf71aeb2ca1926c7d28109a63d8859acbcaf24d0274451aee10c77770cb",
+    "bytes": 844
+  },
+  {
+    "file": "audit-at-capture.json",
+    "sha256": "3903f11a988c7bfd2dad89101ec6c8b722f58274422b9bafd5aff09e25479b01",
+    "bytes": 5868
+  },
+  {
+    "file": "audit-observations.jsonl",
+    "sha256": "331ed0112d1b4ad2309ad6d783ccca8a3a9a6fbadcdc9163c4bac781d52c6324",
+    "bytes": 109614
+  },
+  {
+    "file": "execution.json",
+    "sha256": "cccc0ee8f10017fbdf2564aa17f5dd936af1a2d679725ab85908fb6282914062",
+    "bytes": 441
+  },
+  {
+    "file": "pod-identity.json",
+    "sha256": "bf975cef6be0c1467ab896793aebe42f4f1dff4d0d804e0a6199af59e30e92e6",
+    "bytes": 576
+  },
+  {
+    "file": "primary-at-capture.json",
+    "sha256": "c2a24d93c37d0f202df014950b899ae3d3f8aec48a2f26df22e831be8d960e90",
+    "bytes": 1778
+  },
+  {
+    "file": "primary-observations.jsonl",
+    "sha256": "3cb5cb403a38bb6e0570bf1e489d06941df1cefe1356866415d77fbffcc7a286",
+    "bytes": 27585
+  },
+  {
+    "file": "process-identities.txt",
+    "sha256": "415922c856ef9649c023f1a4ffd64edc98fafe3e5511ce380fa1ed238bc5afb9",
+    "bytes": 331
+  },
+  {
+    "file": "selection-provenance.json",
+    "sha256": "061c0d7a0b69fb4c476d8928a07f437d090d991bb545f4b77b3a22a5d6f15ce5",
+    "bytes": 1873
+  },
+  {
+    "file": "source/connection-supervisor.mjs",
+    "sha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
+    "bytes": 13581
+  },
+  {
+    "file": "source/soak-diagnostics.mjs",
+    "sha256": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c",
+    "bytes": 1221
+  },
+  {
+    "file": "source/soak-monitor.mjs",
+    "sha256": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3",
+    "bytes": 3421
+  },
+  {
+    "file": "source/telemetry-audit-monitor.mjs",
+    "sha256": "6c4bbb0b77c03e8a49d9d17c8f7e743c10765ab05b0d94f6b1a736f6a60c4617",
+    "bytes": 4894
+  },
+  {
+    "file": "source/telemetry-audit.mjs",
+    "sha256": "ba6c2c1c9ac39e4a1666d7ad0b6468271a1eda163f2653df9e6bac842bb48486",
+    "bytes": 10180
+  },
+  {
+    "file": "summary.json",
+    "sha256": "47c5da7fa67ef974c4e64c194a7c373b5febc279423f0a0fdf55d7930dee35ec",
+    "bytes": 5821
+  },
+  {
+    "file": "supervisor-events.jsonl",
+    "sha256": "488a7894a0594d5df03ad93f60c1dafa3edc933958f30cf2aae9015fd2cbecd3",
+    "bytes": 2439
+  },
+  {
+    "file": "supervisor-status.json",
+    "sha256": "c1fd6a59db8382857bc62a31ce832a213b4afe5851d3b310f5f316437c994f39",
+    "bytes": 923
+  }
+]

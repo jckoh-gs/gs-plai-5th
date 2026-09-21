@@ -1,0 +1,107 @@
+{
+  "state": "INCIDENT_WINDOW_PERSISTENCE_VERIFIED",
+  "verifiedAt": "2026-09-21T21:14:27.440787+00:00",
+  "queryReadOnly": true,
+  "totalRows": 23,
+  "observedUnreceivedPositions": 300,
+  "allObservedMissingPositionsPersisted": true,
+  "perRtu": [
+    {
+      "rtuId": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+      "runId": "c83f35c0-23b7-45c5-b567-0dbf1fb3e1a0",
+      "unreceivedFrom": 45086,
+      "unreceivedThrough": 45145,
+      "unreceivedPositions": 60,
+      "allPositionsPersisted": true,
+      "selectedRowsContinuous": true,
+      "sameRun": true,
+      "persistedSequences": [
+        1505,
+        1506
+      ],
+      "allRelevantRowsBrokerAcked": true,
+      "selectedSequenceRange": [
+        1504,
+        1508
+      ]
+    },
+    {
+      "rtuId": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+      "runId": "1ad54156-ba54-4fc0-8bbb-ec7595e25a80",
+      "unreceivedFrom": 45086,
+      "unreceivedThrough": 45145,
+      "unreceivedPositions": 60,
+      "allPositionsPersisted": true,
+      "selectedRowsContinuous": true,
+      "sameRun": true,
+      "persistedSequences": [
+        1822,
+        1823
+      ],
+      "allRelevantRowsBrokerAcked": true,
+      "selectedSequenceRange": [
+        1821,
+        1825
+      ]
+    },
+    {
+      "rtuId": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+      "runId": "0c51962b-d6a3-4513-8118-c54f0bbefb3b",
+      "unreceivedFrom": 45086,
+      "unreceivedThrough": 45145,
+      "unreceivedPositions": 60,
+      "allPositionsPersisted": true,
+      "selectedRowsContinuous": true,
+      "sameRun": true,
+      "persistedSequences": [
+        2039,
+        2040,
+        2041
+      ],
+      "allRelevantRowsBrokerAcked": true,
+      "selectedSequenceRange": [
+        2038,
+        2044
+      ]
+    },
+    {
+      "rtuId": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+      "runId": "efdcb3c8-851b-42ea-8501-61907552b932",
+      "unreceivedFrom": 44712,
+      "unreceivedThrough": 44771,
+      "unreceivedPositions": 60,
+      "allPositionsPersisted": true,
+      "selectedRowsContinuous": true,
+      "sameRun": true,
+      "persistedSequences": [
+        766
+      ],
+      "allRelevantRowsBrokerAcked": true,
+      "selectedSequenceRange": [
+        765,
+        767
+      ]
+    },
+    {
+      "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "runId": "26d2830a-4774-4f97-996d-a36dc227a62c",
+      "unreceivedFrom": 44020,
+      "unreceivedThrough": 44079,
+      "unreceivedPositions": 60,
+      "allPositionsPersisted": true,
+      "selectedRowsContinuous": true,
+      "sameRun": true,
+      "persistedSequences": [
+        790
+      ],
+      "allRelevantRowsBrokerAcked": true,
+      "selectedSequenceRange": [
+        789,
+        791
+      ]
+    }
+  ],
+  "selectionSha256": "0f456112577f96ce620e22be665a1df3fa170b4e90d4f1995514e39896eeabff",
+  "persistedSha256": "4641913365f14c57e5188d6b321d6c476fee988b6ccbb46ee2d42da5951cf81c",
+  "claimBoundary": "These incident-specific 300 unreceived sample positions exist in same-run continuous persisted outbox windows and have broker acknowledgments. This does not prove subscriber replay, external VPP receipt, end-to-end exactly-once delivery, or incident root cause. No DB writes, PRAGMA, configuration change or runtime restart."
+}

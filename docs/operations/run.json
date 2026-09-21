@@ -485,7 +485,7 @@
       "scope": "Current read-only service and actual process identities, saved heartbeat configuration and existing isolated tests. No forced real network outage or AI restart guarantee."
     }
   },
-  "updatedAt": "2026-09-21T20:26:36.367853+00:00",
+  "updatedAt": "2026-09-21T21:15:26.963581+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
@@ -842,23 +842,27 @@
   },
   "latestObservationIncident": {
     "runtime": "1.7.1",
-    "issue": "ISSUE032",
+    "issue": "ISSUE033",
     "state": "RECOVERED_CAUSE_UNKNOWN",
-    "evidence": "artifacts/checkpoints/connection-1.7.1-20260921T2019/summary.json",
-    "execution": "artifacts/checkpoints/connection-1.7.1-20260921T2019/execution.json",
-    "independentReview": "docs/issues/evidence/issue032-connection-review.json",
-    "supervisorOutageAt": "2026-09-21T20:19:56.637Z",
-    "supervisorReconnectAt": "2026-09-21T20:20:00.099Z",
-    "supervisorDetectedToReadyMilliseconds": 3462,
+    "evidence": "artifacts/checkpoints/connection-1.7.1-20260921T2108/summary.json",
+    "execution": "artifacts/checkpoints/connection-1.7.1-20260921T2108/execution.json",
+    "independentReview": "docs/issues/evidence/issue033-connection-review.json",
+    "supervisorOutageAt": "2026-09-21T21:08:33.752Z",
+    "supervisorReconnectAt": "2026-09-21T21:10:38.589Z",
+    "supervisorDetectedToReadyMilliseconds": 124837,
     "reportedReason": "kubernetes_unavailable",
-    "primaryApiErrorsAfter": 1,
-    "primaryConnectionErrorsAfter": 0,
-    "auditConnectionErrorsAfter": 2,
-    "connectionsAfter": 3,
-    "disconnectionsAfter": 2,
-    "newSampleDiscontinuitiesObserved": false,
+    "primaryApiErrorsAfter": 10,
+    "primaryConnectionErrorsAfter": 61,
+    "auditConnectionErrorsAfter": 64,
+    "connectionsAfter": 4,
+    "disconnectionsAfter": 3,
+    "newSampleDiscontinuitiesObserved": true,
+    "observerUnreceivedSimulationSamples": 300,
+    "observerAffectedRtus": 5,
+    "persistedFollowupEvidence": "artifacts/checkpoints/connection-1.7.1-20260921T2108-persisted-proof/summary.json",
+    "persistedGeneratedAndBrokerAckedPositions": 300,
     "rootCause": "unknown",
-    "scope": "Bounded kubectl execution or JSON parse failure category, not proven whole-cluster outage. Same processes/sessions and observed Pod/image; added local subscriber disconnection/reconnection. Five-RTU window comparisons found no added discontinuities; not universal loss-free or external VPP delivery proof. ISSUE030 and its144-position persisted/PUBACK evidence remain historical."
+    "scope": "The original sessions and observed Pod/image were retained. Each RTU gained one received-sample discontinuity; a single narrow read-only query found all300 corresponding positions in continuous same-run persisted outbox windows with broker acknowledgments. Repeated connection error events are not separate outages. No universal subscriber replay, external VPP receipt, continuous service availability or root-cause claim. ISSUE030/032 history remains intact."
   },
   "firstHourObservation171": {
     "evidence": "artifacts/checkpoints/soak-1.7.1-first-hour/summary.json",
@@ -1131,6 +1135,30 @@
       "newSampleDiscontinuitiesObserved": false,
       "rootCause": "unknown",
       "scope": "Bounded kubectl execution or JSON parse failure category, not proven whole-cluster outage. Same processes/sessions and observed Pod/image; added local subscriber disconnection/reconnection. Five-RTU window comparisons found no added discontinuities; not universal loss-free or external VPP delivery proof. ISSUE030 and its144-position persisted/PUBACK evidence remain historical."
+    },
+    {
+      "runtime": "1.7.1",
+      "issue": "ISSUE033",
+      "state": "RECOVERED_CAUSE_UNKNOWN",
+      "evidence": "artifacts/checkpoints/connection-1.7.1-20260921T2108/summary.json",
+      "execution": "artifacts/checkpoints/connection-1.7.1-20260921T2108/execution.json",
+      "independentReview": "docs/issues/evidence/issue033-connection-review.json",
+      "supervisorOutageAt": "2026-09-21T21:08:33.752Z",
+      "supervisorReconnectAt": "2026-09-21T21:10:38.589Z",
+      "supervisorDetectedToReadyMilliseconds": 124837,
+      "reportedReason": "kubernetes_unavailable",
+      "primaryApiErrorsAfter": 10,
+      "primaryConnectionErrorsAfter": 61,
+      "auditConnectionErrorsAfter": 64,
+      "connectionsAfter": 4,
+      "disconnectionsAfter": 3,
+      "newSampleDiscontinuitiesObserved": true,
+      "observerUnreceivedSimulationSamples": 300,
+      "observerAffectedRtus": 5,
+      "persistedFollowupEvidence": "artifacts/checkpoints/connection-1.7.1-20260921T2108-persisted-proof/summary.json",
+      "persistedGeneratedAndBrokerAckedPositions": 300,
+      "rootCause": "unknown",
+      "scope": "The original sessions and observed Pod/image were retained. Each RTU gained one received-sample discontinuity; a single narrow read-only query found all300 corresponding positions in continuous same-run persisted outbox windows with broker acknowledgments. Repeated connection error events are not separate outages. No universal subscriber replay, external VPP receipt, continuous service availability or root-cause claim. ISSUE030/032 history remains intact."
     }
   ]
 }

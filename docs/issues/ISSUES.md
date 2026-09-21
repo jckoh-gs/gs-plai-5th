@@ -27,6 +27,8 @@
 
 - ISSUE032: **RECOVERED_CAUSE_UNKNOWN — 20:19 별도 관측 재연결**. audit 연결오류1→2, 양구독 재연결 및감독기3.462초회복; 새표본불연속 미검출이나 무손실 증명은 아니다. ISSUE030 이력·원인미확정은 유지한다.
 
+- ISSUE033: **RECOVERED_CAUSE_UNKNOWN — 21:08 관측 단절**. API오류10/primary연결오류61/audit64로 증가하고 새5RTU 공백이 검출됐다. 실제 ready21:10:38.589Z, 원인미확정; 보존bundle17해시·실제수집exit0 독립대조 완료.
+
 번호가 없는 IDEA011 명령 목록 실패 가시성 기록도 현재 기능 인수 완료로 정리한다. 로컬8검증군의 합성503·header/body timeout·전환/해제 시험과 실제 main/현재1.7 복원 읽기, REVIEW037/038를 근거로 한다. 이전1.6에 신규 안내가 있다고 주장하지 않는다.
 
 계속 남는 경계: 오디오의 실제 청취 미검증, 최종창 신규 미디어·동일 영상 PPT 검수, 실제 KMA/AWS/운영 VPP 외부 연동 미검증, 단일노드 k3s의 노드 HA 미검증은 해결로 바꾸지 않는다. SEC006의 현재 이미지 OS4매치/2CVE와 인증 사용자 자원 소모 잔여 위험은 보안 원장에 계속 연결한다. npm audit0/전체시험 PASS가 이를 해소하지 않는다. 원래 freeze21:37:33Z/deadline22:07:33Z를 유지하며 역할·전체목표는 아직 종료하지 않는다.
@@ -714,3 +716,23 @@ supervisor verifyRemote는 유한 kubectl deployment/pod 명령 실패 및 반�
 독립 receipt는 evidence/issue032-connection-review.json이다. 원문보존/읽기 검토만 수행했으며 원장·소스·인수·원래freeze21:37:33Z/deadline22:07:33Z는 변경하지 않았다. 후속 최종 관측종료 집계는 audit오류2와이번재연결을 포함해야 하며 이전 준비 검토의audit1은 당시 snapshot 이력으로 남긴다.
 
 ISSUE032 원문 수집 종료 확인: root execution.json의 실제 동기 exec chunk ff2dbf/exit0/session없음과 summary SHA1efaf633…를 대조했다.17개 payload 해시 검증과 별도로 실제 수집 명령 종료 근거를 연결했으며 이를 네트워크 원인 또는 보편적 전달 성공으로 확대하지 않는다.
+
+
+## ISSUE-033 — 21:08 관측 연결 단절과 다섯 RTU 표본 공백
+
+P2 관측 연속성. 상태 RECOVERED_CAUSE_UNKNOWN/원문·메인 불변bundle 대조 완료. 최초 초안은bundle 대기 상태였다. 메인이21:11:44Z 무렵 자동복구 상태와 누적 오류 증가를 발견했다. 독립 유한20초 wrapper의 로컬 읽기(chunk8dafe3/실제exit0/session없음)에서 supervisor 원문 events의 실제 ready는21:10:38.589Z임을 확인했다. 최초outage21:08:33.752Z/kubernetes_unavailable→forward_started21:10:05.412Z→ready까지124.837초다. 양 구독자의 마지막close21:08:33.752Z→connect21:10:07.034Z는 감독기의 최종Ready보다 먼저다. 후속 확인 시각을 실제 회복 시각으로 대신하지 않는다.
+
+primary API오류1→10(+9), 연결오류0→61(+61), audit 연결오류2→64(+62)이며 연결횟수3→4/해제횟수2→3이다. 오류횟수는 재연결 과정의 누적 이벤트이며61/62개의 독립 장애 발생으로 계산하지 않는다. 기존 primary0ea34…/audit1e38… 세션이 유지되고 카운터는 초기화하지 않았다.
+
+audit21:10:08.401→21:10:48.414 snapshot의 각RTU 같은run에서 simulation 위치는120 진행했으나 새수신samples는60이었다. 각60개, 합계300개 위치가 수신 이력에서 관측되지 않았으며 다섯RTU sampleDiscontinuities는 각각1증가해 누적[2,2,2,1,2]다. 이는 원격생성 손실 확정이나 정확한 누락본문 재구성이 아니다. 이 최초 독립 관측 검토에서는 DB 조회·MQTT/제어 변경을 수행하지 않았다. ISSUE030의144개와 ISSUE032의새공백미검출은 별도 사건 이력으로 보존한다.
+
+kubernetes_unavailable는 제한된kubectl 명령 또는 JSON파싱 실패 범주이며 전체클러스터 중단·호스트절전·네트워크 근본원인을 확정하지 않는다. 초안 이후 메인이 보존한 실제Pod/PID·원문prefix·receipt의 대조를 완료했다. 독립근거 evidence/issue033-connection-review.json. runtime·관측기·터널·DB·원장·설정을 변경하지 않았고 원래freeze21:37:33Z/deadline22:07:33Z는 그대로다.
+
+ISSUE033 불변 근거 대조 완료: connection-1.7.1-20260921T2108의17payload 바이트·SHA 및 inventory d1e9bcf4…/summary47c5da7f…를 독립 확인했다. root수집 dd6b45 실제동기exit0/session없음·45초제한 기록과 일치한다. 더넓은21:08~21:12 보존 window에서도 각RTU simulation+240/samples+180으로 새60씩 총300을 확인하며 짧은 독립비교와 일치한다.21:12:44 보존Pod는 같은UID75f4/app234/broker a75 Ready/재시작0이며 기존프로세스identity를 보존한다. 이는 회복후상태로 사건내내 가용성 증명은 아니다. 원격저장 표본/ACK 확인은 메인의 별도후속이며 이번 읽기검토가 대체하지 않는다.
+
+
+ISSUE033 영속 후속 독립대조: connection-1.7.1-20260921T2108-persisted-proof의6payload 해시, readOnly/noORDER/PRAGMA 없는1회 제한조회3498a7 실제exit0/session없음·65초wrapper/내부55초와 persisted SHA46419133…를 확인했다.23행/최대32의 실제 samples를 직접 계산하여 다섯run의 조회창 연속성과 미수신 위치60씩 총300의 보존·유효한 ISO broker ACK를 확인했다. 대응 sequence는 c81f4573=1505·1506, ed0ac897=1822·1823, adb56898=2039·2040·2041, 90528620=766, f49684af=790이다.
+
+정확한 최초 gap증가 poll은21:10:28.407Z이며 바로전21:10:18.404Z다. 앞선 독립비교21:10:08→48은 증가를 포함하는 비교창이었고 최초증가시각이 아니다. 기존 raw비교는 보존하고 이 시각을 보완한다. 메인 최초분석5a1372 exit1은 acked ISO문자열을 숫자0과 비교한 분석오류이며 analysis-attempt1.json에 보존됐다. 같은 저장결과 재분석e8d1b3 exit0으로 수정했고 원격 재조회가 없었다.
+
+이 후속으로 해당300위치의 생성·영속보존·broker ACK 범위는 확인됐지만, 관측자의 과거 수신 공백이 사라지거나 모든subscriber/외부VPP 도달·exactly-once·근본원인이 증명된 것은 아니다. RECOVERED_CAUSE_UNKNOWN 및 기존 누적오류/공백 이력을 유지한다. 독립검토는 로컬저장근거만 읽었으며 실행중runtime·DB·관측기·원래시간을 변경하지 않았다. 새결과는 issue033-connection-review.json의 persistenceFollowup에 연결한다.

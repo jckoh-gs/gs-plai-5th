@@ -1,0 +1,13 @@
+{
+  "state": "READ_ONLY_CAPTURE_COMPLETED",
+  "owner": "root",
+  "tool": "exec_command",
+  "chunkId": "dd6b45",
+  "sessionId": null,
+  "exitCode": 0,
+  "wallTimeSeconds": 0.403465542,
+  "timeoutSeconds": 45,
+  "summarySha256": "47c5da7fa67ef974c4e64c194a7c373b5febc279423f0a0fdf55d7930dee35ec",
+  "savedPayloadFiles": 15,
+  "claimBoundary": "Successful observation capture and live Pod read; not root-cause or database persistence proof."
+}

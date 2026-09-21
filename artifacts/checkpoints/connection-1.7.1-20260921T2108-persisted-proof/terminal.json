@@ -1,0 +1,12 @@
+{
+  "state": "READ_ONLY_QUERY_COMPLETED",
+  "owner": "root",
+  "tool": "exec_command",
+  "chunkId": "3498a7",
+  "sessionId": null,
+  "exitCode": 0,
+  "wallTimeSeconds": 0.502123292,
+  "timeoutSeconds": 65,
+  "kubectlTimeoutSeconds": 55,
+  "persistedSha256": "4641913365f14c57e5188d6b321d6c476fee988b6ccbb46ee2d42da5951cf81c"
+}

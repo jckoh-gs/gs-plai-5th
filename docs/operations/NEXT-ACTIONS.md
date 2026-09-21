@@ -27,6 +27,8 @@ revision3 보존 커밋9c90808 전달 뒤 [19:24Z 읽기 점검](../../artifacts
 
 [ISSUE032 원문과 실제 복구](../../artifacts/checkpoints/connection-1.7.1-20260921T2019/summary.json)에서20:19:56.637Z 감독기의 `kubernetes_unavailable` 감지→20:20:00.099Z Ready를 확인했다. 동일 세션/Pod/이미지를 유지했고 audit 연결오류는1→2, 양쪽 연결/해제는2/1→3/2가 됐다. primary API1/연결0과 기존5 RTU 불연속 수는 유지됐다. 이 분류는 bounded kubectl 실행이나 JSON 파싱 실패를 포함하며 근본 원인·전체 클러스터 장애·모든 수신자의 무손실을 증명하지 않는다. [독립 이슈 검토](../issues/evidence/issue032-connection-review.json)는17해시와 실제 수집 종료0을 대조했다. 기존 ISSUE030/144표본 위치 근거를 보존하며 프로세스를 재시작하거나 카운터를 초기화하지 않았다.
 
+[ISSUE033의 추가 자동 복구](../../artifacts/checkpoints/connection-1.7.1-20260921T2108/summary.json)는21:08:33.752Z 감지→21:10:38.589Z Ready(124837ms)였다. 같은 원래 세션과 Pod/이미지를 유지했으며 누적 API오류10·primary 연결오류61·audit 연결오류64·양쪽 연결4/해제3이다. 반복 연결오류 횟수를 독립 장애 건수로 세지 않는다. 각 RTU에서 새 미수신60표본 위치(총300)를 관찰했고 [별도 읽기 영속 대조](../../artifacts/checkpoints/connection-1.7.1-20260921T2108-persisted-proof/summary.json)의23행에서 모두 같은 run의 연속 표본 및 broker ACK를 확인했다. [독립 이슈 검토](../issues/evidence/issue033-connection-review.json)가 원문17해시와 영속증명6해시·실제 종료0을 대조했다. 구독자 재전송·외부 VPP 수신·근본 원인은 증명하지 않는다. 과거030/032와 원래 초기 카운터를 보존하고 현재 카운터를 초기화하지 않는다.
+
 ## 완료된 1.7.1 체크포인트
 
 - 로컬317시험·실제 broker통합/고급·CLI online/LWT·정확 OCI79시험·보안 검사·registry 전달을 완료했다. 서버/web/DB/OSS 변경 없이 공급 monitor의 strict boolean online과 안내 계약을 정정했다. [로컬](../../artifacts/checkpoints/candidate-1.7.1-local/summary.json), [정확 이미지](../../deploy/verification/candidate-40b9ed8/pre-deployment-review.json), REVIEW040/041을 참조한다.

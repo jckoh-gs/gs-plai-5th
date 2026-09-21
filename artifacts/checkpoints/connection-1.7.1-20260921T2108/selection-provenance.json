@@ -1,0 +1,82 @@
+{
+  "primary": {
+    "path": "artifacts/soak/v1.7.1/observations.jsonl",
+    "capturedCompletePrefixBytes": 1563769,
+    "capturedCompletePrefixSha256": "64273077370f41432fc44f6a913eb4d12028176438a52820f1eb46fb97ddb6f8",
+    "selectedLineNumbers1Based": [
+      1093,
+      1094,
+      1095,
+      1096,
+      1097,
+      1098,
+      1099,
+      1100,
+      1101,
+      1102,
+      1103,
+      1104,
+      1105,
+      1106,
+      1107,
+      1108,
+      1109,
+      1110,
+      1111,
+      1112,
+      1113,
+      1114,
+      1115
+    ],
+    "selectionStart": "2026-09-21T21:08:00.000Z",
+    "selectionEnd": "2026-09-21T21:12:00.000Z",
+    "lastCompleteRecordAt": "2026-09-21T21:12:34.148Z"
+  },
+  "audit": {
+    "path": "artifacts/soak/telemetry-audit/v1.7.1-20260921T1800/observations.jsonl",
+    "capturedCompletePrefixBytes": 5262320,
+    "capturedCompletePrefixSha256": "c8dfd5403e05526d1fa144f6ba786e3d8a44e35c97f7f893c2f1c585bcf15000",
+    "selectedLineNumbers1Based": [
+      1130,
+      1131,
+      1132,
+      1133,
+      1134,
+      1135,
+      1136,
+      1137,
+      1138,
+      1139,
+      1140,
+      1141,
+      1142,
+      1143,
+      1144,
+      1145,
+      1146,
+      1147,
+      1148,
+      1149,
+      1150,
+      1151,
+      1152,
+      1153
+    ],
+    "selectionStart": "2026-09-21T21:08:00.000Z",
+    "selectionEnd": "2026-09-21T21:12:00.000Z",
+    "lastCompleteRecordAt": "2026-09-21T21:12:38.448Z"
+  },
+  "supervisor": {
+    "path": "artifacts/operations/events.jsonl",
+    "capturedCompletePrefixBytes": 67186,
+    "capturedCompletePrefixSha256": "518d98fed2eb5977dd02a7a26a4a34fa048ef850db505130cd381fbd01cf1291",
+    "selectedLineNumbers1Based": [
+      89,
+      90,
+      91
+    ],
+    "selectionStart": "2026-09-21T21:08:00.000Z",
+    "selectionEnd": "2026-09-21T21:12:00.000Z",
+    "lastCompleteRecordAt": "2026-09-21T21:10:38.589Z"
+  }
+}

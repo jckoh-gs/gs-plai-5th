@@ -1,0 +1,97 @@
+{
+  "at": "2026-09-21T21:12:37.070368+00:00",
+  "issue": "ISSUE033",
+  "state": "RECOVERED_CAUSE_UNKNOWN",
+  "independentReadExecution": {
+    "chunkId": "8dafe3",
+    "exitCode": 0,
+    "sessionId": null,
+    "boundedSeconds": 20
+  },
+  "timeline": {
+    "outageAt": "2026-09-21T21:08:33.752Z",
+    "mqttReconnectedAt": "2026-09-21T21:10:07.034Z",
+    "forwardStartedAt": "2026-09-21T21:10:05.412Z",
+    "supervisorReadyAt": "2026-09-21T21:10:38.589Z",
+    "supervisorRecoveryMs": 124837
+  },
+  "sampleComparison": {
+    "beforeAt": "2026-09-21T21:10:08.401Z",
+    "afterAt": "2026-09-21T21:10:48.414Z",
+    "rtus": [
+      {
+        "rtuId": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+        "sameRun": true,
+        "simulationAdvance": 120,
+        "observedSamplesAdvance": 60,
+        "unobservedPositions": 60,
+        "newSampleDiscontinuities": 1
+      },
+      {
+        "rtuId": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+        "sameRun": true,
+        "simulationAdvance": 120,
+        "observedSamplesAdvance": 60,
+        "unobservedPositions": 60,
+        "newSampleDiscontinuities": 1
+      },
+      {
+        "rtuId": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+        "sameRun": true,
+        "simulationAdvance": 120,
+        "observedSamplesAdvance": 60,
+        "unobservedPositions": 60,
+        "newSampleDiscontinuities": 1
+      },
+      {
+        "rtuId": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+        "sameRun": true,
+        "simulationAdvance": 120,
+        "observedSamplesAdvance": 60,
+        "unobservedPositions": 60,
+        "newSampleDiscontinuities": 1
+      },
+      {
+        "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+        "sameRun": true,
+        "simulationAdvance": 120,
+        "observedSamplesAdvance": 60,
+        "unobservedPositions": 60,
+        "newSampleDiscontinuities": 1
+      }
+    ]
+  },
+  "observedNewUnreceivedPositions": 300,
+  "limits": [
+    "Snapshot quantity comparison, not exact missing message body proof",
+    "No DB read or permanent subscriber delivery proof",
+    "kubernetes_unavailable is bounded command or parse failure category, not cluster-wide outage proof",
+    "Incident persistence separately verified by stored query evidence; no universal delivery proof"
+  ],
+  "remoteActions": false,
+  "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
+  "immutableBundle": {
+    "path": "artifacts/checkpoints/connection-1.7.1-20260921T2108",
+    "payloadHashesVerified": 17,
+    "summarySha256": "47c5da7fa67ef974c4e64c194a7c373b5febc279423f0a0fdf55d7930dee35ec",
+    "inventorySha256": "d1e9bcf474e48940da91cdd5aa17660128a18d08143449e9514e22fdab79a64c",
+    "rootCaptureChunkId": "dd6b45",
+    "rootCaptureExit": 0
+  },
+  "reviewAttemptNote": "First inventory-check command d863e4 exited125 because reviewer assumed object inventory; actual inventory is an array. No files mutated; corrected array validation passed.",
+  "persistenceFollowup": {
+    "checkedAt": "2026-09-21T21:15:03.652735+00:00",
+    "directory": "artifacts/checkpoints/connection-1.7.1-20260921T2108-persisted-proof",
+    "payloadHashesVerified": 6,
+    "rowsVerified": 23,
+    "originalQueryChunkId": "3498a7",
+    "originalQueryExit": 0,
+    "summarySha256": "7b95bb47b50ee4da764299e3fdc3ca865349f57a5bc5649bb6f85ae5869d3eca",
+    "allFiveWindowsSameRunContinuous": true,
+    "all300PositionsPresentInBrokerAckedRows": true,
+    "firstIncreasedGapPoll": "2026-09-21T21:10:28.407Z",
+    "noNewReviewerRemoteQuery": true,
+    "rootAnalysisFailurePreserved": "5a1372 exit1: ISO acked string compared to numeric0; same saved output reanalyzed, no remote retry",
+    "claimBoundary": "Generated and persisted samples with broker ACK; not universal subscriber/externalVPP delivery or root-cause proof"
+  }
+}

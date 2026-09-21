@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T20:26:36.368969+00:00",
+  "updatedAt": "2026-09-21T21:15:26.963581+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -505,9 +505,33 @@
       "newSampleDiscontinuitiesObserved": false,
       "rootCause": "unknown",
       "scope": "Bounded kubectl execution or JSON parse failure category, not proven whole-cluster outage. Same processes/sessions and observed Pod/image; added local subscriber disconnection/reconnection. Five-RTU window comparisons found no added discontinuities; not universal loss-free or external VPP delivery proof. ISSUE030 and its144-position persisted/PUBACK evidence remain historical."
+    },
+    {
+      "runtime": "1.7.1",
+      "issue": "ISSUE033",
+      "state": "RECOVERED_CAUSE_UNKNOWN",
+      "evidence": "artifacts/checkpoints/connection-1.7.1-20260921T2108/summary.json",
+      "execution": "artifacts/checkpoints/connection-1.7.1-20260921T2108/execution.json",
+      "independentReview": "docs/issues/evidence/issue033-connection-review.json",
+      "supervisorOutageAt": "2026-09-21T21:08:33.752Z",
+      "supervisorReconnectAt": "2026-09-21T21:10:38.589Z",
+      "supervisorDetectedToReadyMilliseconds": 124837,
+      "reportedReason": "kubernetes_unavailable",
+      "primaryApiErrorsAfter": 10,
+      "primaryConnectionErrorsAfter": 61,
+      "auditConnectionErrorsAfter": 64,
+      "connectionsAfter": 4,
+      "disconnectionsAfter": 3,
+      "newSampleDiscontinuitiesObserved": true,
+      "observerUnreceivedSimulationSamples": 300,
+      "observerAffectedRtus": 5,
+      "persistedFollowupEvidence": "artifacts/checkpoints/connection-1.7.1-20260921T2108-persisted-proof/summary.json",
+      "persistedGeneratedAndBrokerAckedPositions": 300,
+      "rootCause": "unknown",
+      "scope": "The original sessions and observed Pod/image were retained. Each RTU gained one received-sample discontinuity; a single narrow read-only query found all300 corresponding positions in continuous same-run persisted outbox windows with broker acknowledgments. Repeated connection error events are not separate outages. No universal subscriber replay, external VPP receipt, continuous service availability or root-cause claim. ISSUE030/032 history remains intact."
     }
   ],
-  "nextOperationalReview": "Maintain the existing 1.7.1 primary72957/audit8133/supervisor48590 sessions and preserve their counters and ISSUE030/ISSUE032 history. The actual first-hour capture and REVIEW051 are complete; do not repeat them. At 2026-09-21T21:27:33.079009Z collect product/security/issues selected-version reviews and refresh actual Ready/image/capacity. At the original 21:37:33.079009Z freeze follow FINAL-RESTORE-PLAN and the new video, same-video PPT and delivery gates. Original deadline 22:07:33.079009Z is unchanged.",
+  "nextOperationalReview": "Maintain the existing 1.7.1 primary72957/audit8133/supervisor48590 sessions and preserve their counters and ISSUE030/ISSUE032/ISSUE033 history. The actual first-hour capture and REVIEW051 are complete; do not repeat them. At 2026-09-21T21:27:33.079009Z collect product/security/issues selected-version reviews and refresh actual Ready/image/capacity. At the original 21:37:33.079009Z freeze follow FINAL-RESTORE-PLAN and the new video, same-video PPT and delivery gates. Original deadline 22:07:33.079009Z is unchanged.",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.7.1",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
