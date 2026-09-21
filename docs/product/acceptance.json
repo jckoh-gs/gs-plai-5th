@@ -1760,8 +1760,18 @@
     {
       "id": "NFR-02",
       "description": "정상 조건에서 모델은 1초 가상 간격, UI는 약 1초 갱신. 브라우저나 SSE의 느린 소비 때문에 수집 데이터를 잃지 않는다.",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "docs/issues/evidence/review-009-sse-demo.log",
+          "sha256": "e30f9403d8114a9afa4ea25a0d6cec8c0df12aeb1ced4637adbadaac9dc9d0e6"
+        },
+        {
+          "path": "docs/issues/evidence/review-009-source.json",
+          "sha256": "83e5e363fd9e26c1d870f0156499eacb912ba62e924159032ce2626052dd33c1"
+        }
+      ],
+      "assessment": "Actual pausedTCPclient triggers writableNeedDrain,20skipped UI snapshots while20framespersist and simulation continuous; bounded explicit ticks not sustainedload. Realdemo runtime restart3→3 sameIDs/datasets/types, direct evidence fills prior gaps."
     },
     {
       "id": "NFR-03",
@@ -2711,26 +2721,18 @@
     {
       "id": "AT-UI-01",
       "description": "빈 DB 데모 3개, 재시작 후 중복 생성 없음.",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
-          "path": "web/QA.md",
-          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+          "path": "docs/issues/evidence/review-009-sse-demo.log",
+          "sha256": "e30f9403d8114a9afa4ea25a0d6cec8c0df12aeb1ced4637adbadaac9dc9d0e6"
         },
         {
-          "path": "artifacts/checkpoints/unit-round1.log",
-          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
-        },
-        {
-          "path": "artifacts/checkpoints/integration-first.log",
-          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
-        },
-        {
-          "path": "tests/weather.test.js",
-          "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+          "path": "docs/issues/evidence/review-009-source.json",
+          "sha256": "83e5e363fd9e26c1d870f0156499eacb912ba62e924159032ce2626052dd33c1"
         }
       ],
-      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
+      "assessment": "Actual pausedTCPclient triggers writableNeedDrain,20skipped UI snapshots while20framespersist and simulation continuous; bounded explicit ticks not sustainedload. Realdemo runtime restart3→3 sameIDs/datasets/types, direct evidence fills prior gaps.",
       "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
     },
     {
@@ -4095,44 +4097,156 @@
     {
       "id": "FR-COMMAND-EXPORT-01",
       "description": "읽기전용최근20개허용목록스냅샷",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/export-1.2.0-unit.log",
+          "sha256": "4995ebcc7b5ed64cafd6a4b7bcfca0a0c0421b60ae256c683b7005e6f392da09"
+        },
+        {
+          "path": "artifacts/checkpoints/export-browser/result.json",
+          "sha256": "990f9dd6b5ed44981c5fbe858c5335eb1c9f876a10e2709cdc979722cbc77f07"
+        },
+        {
+          "path": "tests/command-export.test.js",
+          "sha256": "10beeffa76da53b2b5390536bf44b2a95f614def3e089fb21718d3f4fe5a44e5"
+        },
+        {
+          "path": "tests/command-export-security.test.js",
+          "sha256": "6cb6c7f08a13f8992949bac47c4d31638125066071e18e66db851190a3173abe"
+        },
+        {
+          "path": "tests/review-command-export.test.js",
+          "sha256": "bff4a958cbc567b165b8014613f1a1cf7e6f854bbc19fd1181b1633566197d9a"
+        }
+      ],
+      "assessment": "Local88unit plus independent export/security and actualbrowser4command/empty/authfailure/RTUisolation PASS.83d10ce candidate not deployed; no currentremote orrestore claim."
     },
     {
       "id": "UI-09",
       "description": "선택RTU명령상태다운로드",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/export-1.2.0-unit.log",
+          "sha256": "4995ebcc7b5ed64cafd6a4b7bcfca0a0c0421b60ae256c683b7005e6f392da09"
+        },
+        {
+          "path": "artifacts/checkpoints/export-browser/result.json",
+          "sha256": "990f9dd6b5ed44981c5fbe858c5335eb1c9f876a10e2709cdc979722cbc77f07"
+        },
+        {
+          "path": "tests/command-export.test.js",
+          "sha256": "10beeffa76da53b2b5390536bf44b2a95f614def3e089fb21718d3f4fe5a44e5"
+        },
+        {
+          "path": "tests/command-export-security.test.js",
+          "sha256": "6cb6c7f08a13f8992949bac47c4d31638125066071e18e66db851190a3173abe"
+        },
+        {
+          "path": "tests/review-command-export.test.js",
+          "sha256": "bff4a958cbc567b165b8014613f1a1cf7e6f854bbc19fd1181b1633566197d9a"
+        }
+      ],
+      "assessment": "Local88unit plus independent export/security and actualbrowser4command/empty/authfailure/RTUisolation PASS.83d10ce candidate not deployed; no currentremote orrestore claim."
     },
     {
       "id": "AT-COMMAND-EXPORT-01",
       "description": "명령상태내보내기전체인수",
-      "status": "pending",
-      "evidence": []
+      "status": "partial",
+      "evidence": [],
+      "assessment": "Localexport verified; exact1.2imagebuild/suites/scan/remoteUIexport+MQTT/podrestart/backuprestore/backward1.1/stable outstanding.1.1verifiedfallback remains."
     },
     {
       "id": "AT-COMMAND-EXPORT-01-01",
       "description": "계약정렬인증분리",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/export-1.2.0-unit.log",
+          "sha256": "4995ebcc7b5ed64cafd6a4b7bcfca0a0c0421b60ae256c683b7005e6f392da09"
+        },
+        {
+          "path": "artifacts/checkpoints/export-browser/result.json",
+          "sha256": "990f9dd6b5ed44981c5fbe858c5335eb1c9f876a10e2709cdc979722cbc77f07"
+        },
+        {
+          "path": "tests/command-export.test.js",
+          "sha256": "10beeffa76da53b2b5390536bf44b2a95f614def3e089fb21718d3f4fe5a44e5"
+        },
+        {
+          "path": "tests/command-export-security.test.js",
+          "sha256": "6cb6c7f08a13f8992949bac47c4d31638125066071e18e66db851190a3173abe"
+        },
+        {
+          "path": "tests/review-command-export.test.js",
+          "sha256": "bff4a958cbc567b165b8014613f1a1cf7e6f854bbc19fd1181b1633566197d9a"
+        }
+      ],
+      "assessment": "Local88unit plus independent export/security and actualbrowser4command/empty/authfailure/RTUisolation PASS.83d10ce candidate not deployed; no currentremote orrestore claim."
     },
     {
       "id": "AT-COMMAND-EXPORT-01-02",
       "description": "runId/목표/시각null",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/export-1.2.0-unit.log",
+          "sha256": "4995ebcc7b5ed64cafd6a4b7bcfca0a0c0421b60ae256c683b7005e6f392da09"
+        },
+        {
+          "path": "artifacts/checkpoints/export-browser/result.json",
+          "sha256": "990f9dd6b5ed44981c5fbe858c5335eb1c9f876a10e2709cdc979722cbc77f07"
+        },
+        {
+          "path": "tests/command-export.test.js",
+          "sha256": "10beeffa76da53b2b5390536bf44b2a95f614def3e089fb21718d3f4fe5a44e5"
+        },
+        {
+          "path": "tests/command-export-security.test.js",
+          "sha256": "6cb6c7f08a13f8992949bac47c4d31638125066071e18e66db851190a3173abe"
+        },
+        {
+          "path": "tests/review-command-export.test.js",
+          "sha256": "bff4a958cbc567b165b8014613f1a1cf7e6f854bbc19fd1181b1633566197d9a"
+        }
+      ],
+      "assessment": "Local88unit plus independent export/security and actualbrowser4command/empty/authfailure/RTUisolation PASS.83d10ce candidate not deployed; no currentremote orrestore claim."
     },
     {
       "id": "AT-COMMAND-EXPORT-01-03",
       "description": "정제/부작용없음",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/export-1.2.0-unit.log",
+          "sha256": "4995ebcc7b5ed64cafd6a4b7bcfca0a0c0421b60ae256c683b7005e6f392da09"
+        },
+        {
+          "path": "artifacts/checkpoints/export-browser/result.json",
+          "sha256": "990f9dd6b5ed44981c5fbe858c5335eb1c9f876a10e2709cdc979722cbc77f07"
+        },
+        {
+          "path": "tests/command-export.test.js",
+          "sha256": "10beeffa76da53b2b5390536bf44b2a95f614def3e089fb21718d3f4fe5a44e5"
+        },
+        {
+          "path": "tests/command-export-security.test.js",
+          "sha256": "6cb6c7f08a13f8992949bac47c4d31638125066071e18e66db851190a3173abe"
+        },
+        {
+          "path": "tests/review-command-export.test.js",
+          "sha256": "bff4a958cbc567b165b8014613f1a1cf7e6f854bbc19fd1181b1633566197d9a"
+        }
+      ],
+      "assessment": "Local88unit plus independent export/security and actualbrowser4command/empty/authfailure/RTUisolation PASS.83d10ce candidate not deployed; no currentremote orrestore claim."
     },
     {
       "id": "AT-COMMAND-EXPORT-01-04",
       "description": "브라우저회귀배포복원stable",
-      "status": "pending",
-      "evidence": []
+      "status": "partial",
+      "evidence": [],
+      "assessment": "Localexport verified; exact1.2imagebuild/suites/scan/remoteUIexport+MQTT/podrestart/backuprestore/backward1.1/stable outstanding.1.1verifiedfallback remains."
     },
     {
       "id": "OPS-06",

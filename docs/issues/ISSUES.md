@@ -202,3 +202,11 @@ ISSUE-005의 배포/브라우저/복원/미디어 등 다른 게이트는 이 �
 기존 시험을 독립 재실행해 갱신순최대20, 정확한 반환필드 allowlist, 잘못된시각/null/합계overflow 처리, credential URL/host+override+explicitbroker 비밀번호 정제, 긴ID128자 제한/정제flag를 확인했다. unknown 개인정보를 완전히 제거하거나 replay 가능한 식별자라고 주장하지 않는 DTO 메타데이터도 확인했다.
 
 UI 소스는 클릭 당시 p.id로 URL/파일명을 함께 만든다. 메인 실제 브라우저 `export-browser/result.json`은 두 RTU4개/0개 저장상태 비교·401시파일없음·선택격리·credential비노출·좁은화면PASS이며 해당 script/source와 대조했다. 이번 독립 검토자는 브라우저를 다시 실행하지 않았다. 새로운1.2.0 배포/복원/최종 릴리스 게이트는 별도이며 기존1.1stable 및 soak는 변경하지 않았다.
+
+## ISSUE-014 — 로컬 관측 터널 중단과 soak gap 의미
+
+중요도 P2 운영 관측, 상태: 로컬 forward 복구 확인·관측 진단 개선 완료. 원격 앱 실패로 분류하지 않는다. 메인 확인으로 원격은 동일pod2/2Ready/restart0을 유지했으나 로컬 API/MQTT port-forward가 사라졌다. v1.1.0 observations의 최초 실패 poll09:47:50.699Z, 마지막09:55:59.633Z, 총44 API 실패. 09:56:09.795Z poll은 apiReady=true로 복귀했으며 당시connectionErrors245/apiErrors44를 그대로 보존했다. 당시 lastMessageAt은09:47:26.193Z여서 API 복귀만으로 MQTT 복귀를 주장하지 않는다. 이후10:04:51.205Z 관측은messages198/lastMessage10:04:24.025Z/API정상으로 MQTT 재수신을 증명하며 connectionErrors는246으로 유지된다. 해당 숫자는 누적 시점 차이이며 실패를 숨기거나 초기화하지 않았다.
+
+기존 maxGapMs=18005는 **poll 시작 간격**이며 MQTT 무수신 간격이 아니다. 차후 실행용 `soak-diagnostics.mjs`는 maxPollGapMs를 명시하고 maxGapMs를 동일 의미의 호환 alias로 유지한다. maxTelemetryGapMs는 전체RTU에서 관측한 연속메시지 간 최대간격, telemetrySilenceMs는 마지막 수신 이후 현재경과이며 단일RTU의 유실 증명이 아니다. 연결/단절 전이 횟수와 마지막 연결/단절 시각도 별도 기록한다. 첫 연결 전 반복 실패와 중복close를 단절전이로 중복 집계하지 않는다.
+
+집중시험2/2 PASS(`review-011-diagnostics.log`), 기존 network-recovery/tests.log8/8PASS 확인. 새로운 진단은 **현재 soak에 소급 적용되지 않으며 실행중 프로세스를 중단/재시작하지 않았다.** 역사적 observations 원문도 수정하지 않았다. 메인의 supervisor가 소유한 터널 복구·상태 검증과 결합해 관측 중단과 실제 앱 장애를 구별한다.

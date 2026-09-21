@@ -1,0 +1,13 @@
+{
+  "reviewedAt": "2026-09-21T10:05:22.326729+00:00",
+  "commit": "83d10cebcd7cab2b1f889c970011a463bad09099",
+  "workingTree": true,
+  "files": {
+    "scripts/soak-monitor.mjs": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3",
+    "scripts/soak-diagnostics.mjs": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c",
+    "tests/review-soak-diagnostics.test.js": "b545c9ca0c579920e1691d85d70a04a86dfd972d51f5fba32257354a22aa5ade",
+    "docs/issues/evidence/review-011-diagnostics.log": "b6a9afe388e3c83904ea98d971ba55f81320c8ad68ea16dec1bf13bdaeeeef4d",
+    "docs/issues/evidence/review-011-soak-excerpts.json": "f8306b088fd20e27c04ff31b84401dab2a19c4a9556b79e3000b6f1d2308d419",
+    "artifacts/checkpoints/network-recovery/tests.log": "9e19a2b23f998e84eb1e18b9bbe30798c17e13267fa84f9dde4bd429873b0c04"
+  }
+}

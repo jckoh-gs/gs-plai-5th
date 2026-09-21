@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync,writeFileSync} from 'node:fs';
 const base=process.env.REMOTE_API||'http://127.0.0.1:3104',token=readFileSync('artifacts/private/deploy/api-token','utf8').trim();
 async function request(path,body,auth=true,raw=false){return fetch(base+path,{method:body===undefined?'GET':'POST',headers:{'Content-Type':'application/json',...(auth?{Authorization:`Bearer ${token}`}:{})},body:body===undefined?undefined:raw?body:JSON.stringify(body)});}
-const before=await (await request('/api/state')).json();assert.equal(before.version,'1.1.0');
+const before=await (await request('/api/state')).json();assert.equal(before.version,process.env.EXPECTED_VERSION||'1.1.0');
 const csv='timestamp,wind_power_kw,solar_power_kw\n2026-01-01 00:00:00,10,20\n2026-01-01 00:10:00,30,40';
 const body={type:'hybrid',unit:'kwh',csv};
 assert.equal((await request('/api/datasets/preview',body,false)).status,401);

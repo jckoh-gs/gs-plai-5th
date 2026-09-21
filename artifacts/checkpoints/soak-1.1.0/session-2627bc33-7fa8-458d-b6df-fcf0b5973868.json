@@ -1,0 +1,18 @@
+{
+  "sessionId": "2627bc33-7fa8-458d-b6df-fcf0b5973868",
+  "startedAt": "2026-09-21T09:34:52.786Z",
+  "checkedAt": "2026-09-21T10:05:21.835Z",
+  "plannedStopAt": "2026-09-21T21:37:33.079Z",
+  "polls": 171,
+  "messages": 198,
+  "duplicates": 0,
+  "invalid": 0,
+  "maxPayloadBytes": 119765,
+  "lastMessageAt": "2026-09-21T10:04:24.025Z",
+  "connectionErrors": 246,
+  "apiErrors": 44,
+  "maxGapMs": 18005,
+  "dedupWindowLimit": 10000,
+  "endedAt": "2026-09-21T10:05:21.835Z",
+  "endReason": "signal"
+}

@@ -1,0 +1,10 @@
+✔ poll cadence and telemetry gaps remain distinct; legacy alias remains poll gap (0.299958ms)
+✔ connection transition counts survive retry errors without double-counting close before first connect (0.724625ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 34.0105
