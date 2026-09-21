@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:04:53.703548+00:00",
+  "metadata": "deploy/verification/stable-backup-331ab9a.json",
+  "bytes": 851673088,
+  "sha256": "9bd8becb4211ee0edd9217db99e05b63d8fa3f5437a8e4cc7be2ace449cb3137",
+  "privateMode": "0600",
+  "scope": "Independent root full local snapshot SHA/size/mode; exactsame snapshot restore pending"
+}

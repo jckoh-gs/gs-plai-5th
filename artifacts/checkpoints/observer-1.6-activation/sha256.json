@@ -1,0 +1,6 @@
+{
+  "artifacts/checkpoints/observer-1.6-activation/activation.json": "5fcee19c22c74d3a91cfee621caeea182ee3fce1764dcf22f2c99421f1e68e70",
+  "artifacts/checkpoints/observer-1.6-activation/supervisor.json": "dc040f711b4ba778e03da94fdd6924a0da2c43e78920444fbc81240a10bea6a4",
+  "artifacts/checkpoints/observer-1.6-activation/primary-initial.json": "4628ebbe74da517afbe7e72dcae1a73b046084c94afe15a149daca0d24bd0f26",
+  "artifacts/checkpoints/observer-1.6-activation/audit-initial.json": "775325f6491029283efcfa7b0cf7272b6bce00b380113340f911875bcab953ba"
+}

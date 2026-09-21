@@ -1,0 +1,79 @@
+{
+  "checkedAt": "2026-09-21T16:02:24.884Z",
+  "version": "1.6.0",
+  "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+  "originalOffline": false,
+  "plantIds": [
+    "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+    "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+    "adb56898-ae8d-4628-9db1-6d33df5417b5",
+    "90528620-2d53-4a06-8945-aa7a37e0eaee",
+    "f49684af-b7dd-47b2-b360-8e7d28ef751b"
+  ],
+  "faults": [
+    {
+      "id": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      }
+    },
+    {
+      "id": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      }
+    },
+    {
+      "id": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      }
+    },
+    {
+      "id": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      }
+    },
+    {
+      "id": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      }
+    }
+  ],
+  "plannedRecoveryPorts": [
+    3107,
+    18887
+  ],
+  "scriptHashes": {
+    "scripts/remote-outbox-restart.mjs": "d1952d85ce39ccc6d30edd6b8e44319edc9507512666bf94760cfe096c7c3f64",
+    "scripts/remote-backup-helpers.mjs": "73ace68aee69462f0c6eac06ad0445363bcb2143f1cfcff85a28eaf6c85d30fb"
+  },
+  "policy": "One actualrestart; reuse persisted command/message on ambiguous response; originaldeadline unchanged; do not claim PASS until terminal0 and postnormal"
+}

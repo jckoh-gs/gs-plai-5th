@@ -1,6 +1,6 @@
 # 자율 실행 인계
 
-실제 배포는 **제품1.6.0 / PRD1.13 / IDEA010**, 검증 완료된 복구 기준은 아직 **제품1.5.0 / PRD1.12**다. 1.6의 원격 UI·API 확인은 완료했고, MQTT·Pod 교체 outbox·동일 스냅샷 복원·독립 인수가 남아 있다. 전체 목표는 미완료다. 같은 runId와 원래 마감으로 첫 미완료 단계부터 이어간다.
+실제 배포는 **제품1.6.0 / PRD1.13 / IDEA010**, 검증 완료된 복구 기준은 아직 **제품1.5.0 / PRD1.12**다. 1.6의 원격 UI·API·MQTT·실제 Pod 교체 outbox 확인은 완료했고, 새 선택 스냅샷·동일 스냅샷 복원·독립 인수가 남아 있다. 전체 목표는 미완료다. 같은 runId와 원래 마감으로 첫 미완료 단계부터 이어간다.
 
 ## 현재 배포와 보존된 복구 기준
 
@@ -32,7 +32,7 @@ native heartbeat `grid`는10분마다 재개 절차를 호출한다. Mac과 Code
 
 ## 현재 프로세스 소유권
 
-- 단일1.6 supervisor: root handle72380 / PID19942 / `Tue Sep 22 00:58:48 2026`, 소유3104/18884. [활성화 증거](../../deploy/verification/candidate-331ab9a/connection-activation/proof.json). 새 primary/audit는 계획 outbox 재시작 뒤 시작한다.
+- 단일1.6 supervisor: root handle72380 / PID19942 / `Tue Sep 22 00:58:48 2026`, 소유3104/18884. [활성화 증거](../../deploy/verification/candidate-331ab9a/connection-activation/proof.json). 새 primary8363·audit4110은 계획 outbox 재시작과 원래설정 복구 뒤16:03:59Z 시작했다. 실제PID·시작identity와 경로는 resume.currentObservationProcesses 및 [활성화 기록](../../artifacts/checkpoints/observer-1.6-activation/activation.json)을 읽는다.
 - 임시 전원 보호: handle11821 / PID80946 / `Mon Sep 21 22:33:11 2026`, `caffeinate -i -s -t 30861`. 원래 마감까지 AC 전원에서 idle/system sleep을 억제한다. 지속 설정은 변경하지 않았다. 수동 절전·종료를 방지한다고 보장하지 않는다.
 - 이전1.5 supervisor24851/PID2061, primary71300/PID2883, audit98957/PID2888은 모두 정상종료0. [전체 구간 보존](../../artifacts/checkpoints/soak-1.5.0/summary.json):3452/3451초,533개 수신, 알려진 사건의 누적 오류 보존. **1시간 또는 무중단 관찰이 아니다.** 준비된1.5 첫1시간 도구를 닫힌 구간에 실행하지 않는다.
 - 로컬1.6 fixture3110/95785 및 이전3109/3107/3106은 종료·포트 닫힘 확인, private DB 보존. 시험 필요 없이 재기동하지 않는다.
@@ -43,13 +43,13 @@ IDEA010/ISSUE023은 저장된 이벤트created UTC가 화면에서 대시로 보
 
 [로컬 집계](../../artifacts/checkpoints/candidate-1.6-local-summary.json)·[REVIEW030](../product/REVIEW-030.md)의 로컬281검사·실제broker 통합/고급·form44/receipt14·인증/브라우저·독립보안을 완료했다. 이후 운영백업 전체290검사는 별도이며 두 수치를 합치지 않는다. 정확331 이미지4af의77 app검사·MQTT·실제HTTP 파일·SBOM/보안도 완료했다. 이미지에 미해결OS 취약점4matches/2CVEs가 남아 있으며0개라고 주장하지 않는다.
 
-실제main [이벤트 시각](../../deploy/verification/candidate-331ab9a/main-event-time/result.json)은59행 KST/UTC·접근성·순서·메시지·번들 일치, API쓰기0·합성시험 미실행을 증명했다. 원격 회귀 시험 핸들은 resume에 기록한다. 다음은 실제MQTT125/error0 → 현재 안전백업 helper를 사용한 실제Pod 교체 outbox 증명 → 새1.6 선택백업 → 정확히 같은 스냅샷 current1.6/backward1.5 독립PVC 복원이다. form44/receipt14 양쪽 및1.6 이벤트 시각 복원을 확인하고 독립 제품 인수 후 stable1.6으로 승격한다. 이전1.5의 이벤트 시각 표시 한계는 그대로 구분한다.
+실제main [이벤트 시각](../../deploy/verification/candidate-331ab9a/main-event-time/result.json)은59행 KST/UTC·접근성·순서·메시지·번들 일치, API쓰기0·합성시험 미실행을 증명했다. 원격 회귀 시험 핸들은 resume에 기록한다. 실제MQTT125/error0과 Pod 교체 outbox 증명은 완료했다. [종료 후 정상 확인](../../deploy/verification/candidate-331ab9a/outbox-post-normal.json): root46862 exit0, 원래5설정 동일, 감독기16:03:24Z 재접속, 새UID581d826a. 다음은 새1.6 선택백업 → 정확히 같은 스냅샷 current1.6/backward1.5 독립PVC 복원이다. form44/receipt14 양쪽 및1.6 이벤트 시각 복원을 확인하고 독립 제품 인수 후 stable1.6으로 승격한다. 이전1.5의 이벤트 시각 표시 한계는 그대로 구분한다.
 
 ## 실제 백업 사건과 개선
 
 이전 백업은90초에서 미완료되어 최종파일 없이439500800B partial을 남겼다. 같은 기간 app liveness 실패로 Kubernetes가 컨테이너를 재시작했다. root/담당이 재시작한 것이 아니며 내부 인과관계는 미확정이다.15:36:55 내부health,15:37:26 감독기 재연결로1.5가 회복됐다. [사건](../../artifacts/checkpoints/backup-incident-20260921T1534/recovery-summary.json)에 오류·실제복구·부분파일을 보존했다.
 
-operational commit `3c418081bf4b9f07d5bd4ff2de9e4c41873f7a19`의 새 helper는 WAL 읽기 스냅샷·자식worker시간 제한·소유worker 취소·확인된 성공 후 최종파일 발행을 적용한다. [검증](../../artifacts/checkpoints/backup-hardening-1.6/summary.json): 전체290검사, 실제Node24.21 선택15검사 및 독립보안. [실제 round2](../../deploy/verification/candidate-331ab9a/pre-upgrade-round2/summary.json): snapshot9938ms/worker종료 확인,12개 health표본 실패0·추가재시작0. 이한번의 관측으로 원인 확정이나 무영향을 보장하지 않는다. pending-outbox 보조백업도 이 helper로 통일한 뒤 재시작 시험을 수행한다. 백업 partial·기존 정상백업을 삭제하지 않는다.
+operational commit `3c418081bf4b9f07d5bd4ff2de9e4c41873f7a19`의 새 helper는 WAL 읽기 스냅샷·자식worker시간 제한·소유worker 취소·확인된 성공 후 최종파일 발행을 적용한다. [검증](../../artifacts/checkpoints/backup-hardening-1.6/summary.json): 전체290검사, 실제Node24.21 선택15검사 및 독립보안. [실제 round2](../../deploy/verification/candidate-331ab9a/pre-upgrade-round2/summary.json): snapshot9938ms/worker종료 확인,12개 health표본 실패0·추가재시작0. 이한번의 관측으로 원인 확정이나 무영향을 보장하지 않는다. pending-outbox 보조백업도 operational3659d6e에서 같은 helper로 통일했고 실제5148ms 완료·worker종료·동일 메시지 재전송/PUBACK를 확인했다. 백업 partial·기존 정상백업을 삭제하지 않는다.
 
 ## 이후와 최종 인도
 

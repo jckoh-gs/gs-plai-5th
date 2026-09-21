@@ -1,0 +1,33 @@
+{
+  "result": "PASS",
+  "metadata": "deploy/verification/stable-backup-331ab9a.json",
+  "bytes": 851673088,
+  "sha256": "9bd8becb4211ee0edd9217db99e05b63d8fa3f5437a8e4cc7be2ace449cb3137",
+  "remotePath": "/data/stable-331ab9a-20260921T160352142Z.sqlite",
+  "localMode": "0600",
+  "snapshot": {
+    "result": "PASS",
+    "workerExitConfirmed": true,
+    "integrity": "ok",
+    "stage": "verified",
+    "steps": 2079,
+    "totalPages": 207928,
+    "remainingPages": 0,
+    "elapsedMs": 2652,
+    "snapshotAt": 1790006633671,
+    "supervisorMaxMs": 80000,
+    "hostCommandMaxMs": 90000
+  },
+  "healthObservations": 10,
+  "healthFailures": 0,
+  "maxHealthElapsedMs": 446,
+  "allReady": true,
+  "appBrokerRestarts": [
+    0,
+    0
+  ],
+  "ownedRemoteProcessesRemaining": 0,
+  "previousFailedPartialAndVerifiedBackupsPreserved": true,
+  "terminalExit": 0,
+  "restoreStarted": false
+}

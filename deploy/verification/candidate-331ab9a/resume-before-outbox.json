@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "runId": "grid-new-20260921T080733Z",
+  "checkedAt": "2026-09-21T16:02:12.863Z",
+  "nextAction": "resume-first-incomplete-checkpoint",
+  "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "head": "3659d6e6459c803b3c0dc735dbe5647f29a2e9d2",
+  "workingTree": [
+    "?? .idea/",
+    "?? artifacts/media-preparation/deck-binding-packaging-rehearsal/",
+    "?? artifacts/media-preparation/full-candidate15-20260921/",
+    "?? artifacts/media-preparation/full-candidate15-receipts-20260921/",
+    "?? artifacts/media-preparation/media-lifecycle-local-round1-retry1/",
+    "?? artifacts/media-preparation/media-lifecycle-local-round1/",
+    "?? artifacts/releases/current.json",
+    "?? deploy/verification/candidate-1197ab5/",
+    "?? deploy/verification/candidate-331ab9a/main-mqtt.json",
+    "?? deploy/verification/candidate-331ab9a/main-mqtt.log",
+    "?? deploy/verification/candidate-331ab9a/resume-before-outbox.json",
+    "?? deploy/verification/candidate-8599ab9/operational-baseline.json"
+  ],
+  "remoteMain": "3659d6e6459c803b3c0dc735dbe5647f29a2e9d2",
+  "remoteGitReachable": true,
+  "clusterReachable": true,
+  "api": {
+    "ok": true,
+    "version": "1.6.0",
+    "plantCount": 5
+  },
+  "identity": {
+    "ok": true,
+    "pod": {
+      "name": "grid-84568548d5-2j8gw",
+      "uid": "7998ec33-5627-46a7-9458-e503445bde35",
+      "image": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
+      "imageID": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70"
+    },
+    "broker": {
+      "name": "grid-84568548d5-2j8gw",
+      "uid": "7998ec33-5627-46a7-9458-e503445bde35",
+      "image": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  },
+  "workingMilestone": {
+    "productVersion": "1.6.0",
+    "prdVersion": "1.13",
+    "idea": "IDEA-010",
+    "state": "Actual1.6 Ready; remote functional/outbox/exact snapshot restore gates pending"
+  },
+  "remainingInOrder": [
+    "Actual1.6 Ready4af verified; root activates one supervisor and verifies mainAPI/UI/MQTT, actualoutboxrestart, then selectedsnapshot current1.6/backward1.5 restore. Keep1.5stable fallback until allgates.",
+    "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
+    "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
+    "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
+  ],
+  "mutationsPerformed": false
+}

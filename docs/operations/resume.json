@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T16:01:22.987100+00:00",
+  "updatedAt": "2026-09-21T16:05:34.325635+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -27,7 +27,7 @@
     "productVersion": "1.6.0",
     "prdVersion": "1.13",
     "idea": "IDEA-010",
-    "state": "Actual1.6 Ready; remote functional/outbox/exact snapshot restore gates pending"
+    "state": "Actualmain1.6 UI/API/MQTT/outbox PASS; freshselectedsnapshot andsamecurrent/backwardrestore next"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -39,7 +39,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Actual1.6 Ready4af verified; root activates one supervisor and verifies mainAPI/UI/MQTT, actualoutboxrestart, then selectedsnapshot current1.6/backward1.5 restore. Keep1.5stable fallback until allgates.",
+    "Actualmain1.6 UI/API/MQTT/outbox verified, root supervisor active. Fresh selected1.6snapshot then current1.6/backward1.5 exactsame snapshotrestore andindependent acceptance; stable1.5fallback unchanged until allgates.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -64,18 +64,15 @@
   ],
   "supplementaryObservation": {
     "kind": "read-only per-RTU full SCADA auditor v1",
-    "sessionId": "820d9a15-c7e6-413e-9c52-a5b180b85309",
-    "directory": "artifacts/soak/telemetry-audit/2026-09-21T14-56-58-686Z-820d9a15",
-    "startedAt": "2026-09-21T14:56:58.686Z",
-    "expectedStopAt": "2026-09-21T21:37:33.079009+00:00",
+    "sessionId": "6e2228e4-badd-4f86-a812-694a2bac907a",
+    "directory": "artifacts/soak/telemetry-audit/2026-09-21T16-03-59-292Z-6e2228e4",
+    "startedAt": "2026-09-21T16:03:59.292Z",
+    "expectedStopAt": "2026-09-21T21:37:33.079Z",
     "instructions": "docs/operations/TELEMETRY-AUDIT.md",
-    "scope": "New1.5 session afterplannedrestart; old1.4 archived; notuninterrupteduptime proof",
-    "pid": 2888,
-    "handle": 98957,
-    "processIdentity": "Mon Sep 21 23:56:58 2026",
-    "endedAt": "2026-09-21T15:54:29.712Z",
-    "state": "Ended forplanned1.6upgrade; historicalonly",
-    "archive": "artifacts/checkpoints/soak-1.5.0/summary.json"
+    "handle": 4110,
+    "pid": 21357,
+    "processIdentity": "Tue Sep 22 01:03:59 2026",
+    "scope": "New readonly epoch afterplannedupgrade/outboxrestart; earlier1.5period/errors retainedseparately; no uninterrupted/universalreceiptclaim"
   },
   "observationCheckpoints": [
     {
@@ -307,16 +304,17 @@
     }
   ],
   "currentObservationHandles": {
+    "primary": 8363,
+    "audit": 4110,
     "supervisor": 72380
   },
   "currentObservationBaselines": {
-    "observedAt": "2026-09-21T15:39:03.277250+00:00",
-    "primaryApiErrors": 7,
-    "primaryConnectionErrors": 30,
-    "auditConnectionErrors": 33,
-    "receivedSampleDiscontinuities": 0,
-    "evidence": "artifacts/checkpoints/backup-incident-20260921T1534/recovery-summary.json",
-    "scope": "Postincident cumulativecounters; notreset; initialzero baseline preserved in observer1.5activation and rawlogs"
+    "observedAt": "2026-09-21T16:04:30.199613+00:00",
+    "primaryApiErrors": 0,
+    "primaryConnectionErrors": 0,
+    "auditConnectionErrors": 0,
+    "evidence": "artifacts/checkpoints/observer-1.6-activation/activation.json",
+    "scope": "New1.6 epoch baseline; compare subsequentincrements without resetting andpreserve earliererrors"
   },
   "completedOperations": [
     {
@@ -343,12 +341,20 @@
     }
   ],
   "currentObservationProcesses": {
+    "primary": {
+      "handle": 8363,
+      "pid": 21356,
+      "processIdentity": "Tue Sep 22 01:03:59 2026"
+    },
+    "audit": {
+      "handle": 4110,
+      "pid": 21357,
+      "processIdentity": "Tue Sep 22 01:03:59 2026"
+    },
     "supervisor": {
       "handle": 72380,
       "pid": 19942,
-      "processIdentity": "Tue Sep 22 00:58:48 2026",
-      "state": "verified1.6-active",
-      "evidence": "deploy/verification/candidate-331ab9a/connection-activation/proof.json"
+      "processIdentity": "Tue Sep 22 00:58:48 2026"
     }
   },
   "operationalDeadlineHardening": {
@@ -389,7 +395,7 @@
       "issue": "ISSUE024"
     }
   ],
-  "nextOperationalReview": "Main1.6 remote functional/outbox/restore gates; old1.5 observation period is archived and shorterthan1hour.",
+  "nextOperationalReview": "Complete exactsame9bd current1.6/backward1.5 restore andindependentfunctionalacceptance; preserve active1.6observers",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.6",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
@@ -439,7 +445,7 @@
     "productVersion": "1.6.0",
     "prdVersion": "1.13",
     "idea": "IDEA-010",
-    "phase": "Actual1.6 Ready; remote functional/outbox/exact snapshot restore gates pending",
+    "phase": "Actualmain1.6 UI/API/MQTT/outbox PASS; freshselectedsnapshot andsamecurrent/backwardrestore next",
     "uiOwner": "/root/ui",
     "browserOwner": "/root/issues",
     "fallback": "artifacts/releases/checkpoint-1.5.0.json",
@@ -451,17 +457,23 @@
     "securityReview": "docs/security/EVENT-TIME-REVIEW.md",
     "activeOperations": [
       {
-        "owner": "/root",
-        "kind": "actual-main-MQTT125",
-        "handle": 1709,
-        "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
-        "baselineTargetKw": 125,
-        "evidence": "deploy/verification/candidate-331ab9a/main-mqtt.json"
+        "owner": "/root/deployment",
+        "kind": "isolated-exactsnapshotrestore",
+        "currentDeployment": "grid-restore-331ab9a",
+        "backwardDeployment": "grid-restore-back-331ab9a",
+        "snapshotMetadata": "deploy/verification/stable-backup-331ab9a.json",
+        "expectedSHA256": "9bd8becb4211ee0edd9217db99e05b63d8fa3f5437a8e4cc7be2ace449cb3137",
+        "ownedPorts": [
+          3105,
+          18885
+        ],
+        "state": "authorizedpreflight/currentfirst",
+        "retry": "Inspect ownerhandle and exactdeployment/PVC/Pod beforeanyapplyretry; preserve same snapshot; no mainwrites"
       },
       {
-        "owner": "/root/security",
-        "kind": "independent-outbox-helper-review",
-        "scope": "localonly no remoteexecution"
+        "owner": "/root/issues",
+        "kind": "isolatedrestore-form-receipt-event",
+        "state": "awaitdeploymentready andoriginaldataproof"
       }
     ],
     "completedLocalHandles": {
@@ -533,6 +545,27 @@
       "rollout": "deploy/verification/candidate-331ab9a/post-rollout/summary.json",
       "eventTime": "deploy/verification/candidate-331ab9a/main-event-time/result.json",
       "regression": "deploy/verification/candidate-331ab9a/main-regression/summary.json"
+    },
+    "completedMainMQTT": {
+      "handle": 1709,
+      "exit": 0,
+      "evidence": "deploy/verification/candidate-331ab9a/main-mqtt.json",
+      "actualKw": 125,
+      "errorKw": 0
+    },
+    "completedOutbox": {
+      "owner": "/root",
+      "handle": 46862,
+      "exit": 0,
+      "proof": "deploy/verification/candidate-331ab9a/outbox-restart.json",
+      "postNormal": "deploy/verification/candidate-331ab9a/outbox-post-normal.json"
+    },
+    "completedNormalBackup": {
+      "owner": "/root/deployment",
+      "handle": 68674,
+      "exit": 0,
+      "metadata": "deploy/verification/stable-backup-331ab9a.json",
+      "rootReview": "deploy/verification/candidate-331ab9a/normal-backup/root-backup-review.json"
     }
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
@@ -680,6 +713,15 @@
       "supplementarySampleDiscontinuitiesPerRTU": 0,
       "evidence": "artifacts/checkpoints/reconnect-20260921T1401/summary.json",
       "scope": "Cumulative1.4 counters after14:01 natural reconnect; compare later increments without resetting observer counters. Historical1.3 counts remain separate."
+    },
+    {
+      "observedAt": "2026-09-21T15:39:03.277250+00:00",
+      "primaryApiErrors": 7,
+      "primaryConnectionErrors": 30,
+      "auditConnectionErrors": 33,
+      "receivedSampleDiscontinuities": 0,
+      "evidence": "artifacts/checkpoints/backup-incident-20260921T1534/recovery-summary.json",
+      "scope": "Postincident cumulativecounters; notreset; initialzero baseline preserved in observer1.5activation and rawlogs"
     }
   ],
   "historicalObservationIncidents": [

@@ -1,0 +1,2 @@
+/Users/charleskoh/research/20260921-RALPTON/artifacts/private/normal-backup-331-monitor.py:12: SyntaxWarning: invalid decimal literal
+  a=pods();assert all(c['ready'] and c['restartCount']==0for c in a['containers']);r=remote('/data/not-created-round2');assert not any(x.get('oldArgument')for x in r['processes']);assert not r['files'][0]['exists'] and r['files'][1]['exists'];assert r['diskAvailableBytes']>3000000000

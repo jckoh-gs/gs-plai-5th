@@ -1,0 +1,29 @@
+{
+  "result": "PASS",
+  "capturedAt": "2026-09-21T16:04:30.199613+00:00",
+  "runtimeCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+  "productVersion": "1.6.0",
+  "podUid": "581d826a-8a9f-4adb-8c3c-8229a2ba151a",
+  "processes": {
+    "primary": {
+      "handle": 8363,
+      "pid": 21356,
+      "processIdentity": "Tue Sep 22 01:03:59 2026"
+    },
+    "audit": {
+      "handle": 4110,
+      "pid": 21357,
+      "processIdentity": "Tue Sep 22 01:03:59 2026"
+    },
+    "supervisor": {
+      "handle": 72380,
+      "pid": 19942,
+      "processIdentity": "Tue Sep 22 00:58:48 2026"
+    }
+  },
+  "primaryDirectory": "artifacts/soak/v1.6.0",
+  "auditDirectory": "artifacts/soak/telemetry-audit/2026-09-21T16-03-59-292Z-6e2228e4",
+  "scope": "New readonly epoch afterplannedupgrade/outboxrestart; earlier1.5period/errors retainedseparately; no uninterrupted/universalreceiptclaim",
+  "plannedPriorRestart": "deploy/verification/candidate-331ab9a/outbox-restart.json",
+  "originalFreezeAt": "2026-09-21T21:37:33.079009+00:00"
+}

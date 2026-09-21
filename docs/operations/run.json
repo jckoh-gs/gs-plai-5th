@@ -44,8 +44,8 @@
   "requestedModel": "Codex Astra",
   "modelVerification": "Agents inherited main session model; exact runtime model identifier not exposed by available goal tools.",
   "deployment": {
-    "observedAt": "2026-09-21T15:56:49.832284+00:00",
-    "status": "Actual1.6 Ready; root connection activation and remote functional/restore gates pending",
+    "observedAt": "2026-09-21T16:03:28.920Z",
+    "status": "Actual1.6Ready afterplannedoutboxrestart, original5settingsnormal, supervisorreconnected",
     "sourceCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
     "prdVersion": "1.13",
     "context": "charles-k3s",
@@ -61,9 +61,9 @@
     "name": "grid",
     "mqttImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
     "productVersion": "1.6.0",
-    "podUid": "7998ec33-5627-46a7-9458-e503445bde35",
+    "podUid": "581d826a-8a9f-4adb-8c3c-8229a2ba151a",
     "appContainerRestarts": 0,
-    "podName": "grid-84568548d5-2j8gw"
+    "podName": "grid-5c4f47d7fd-pskhb"
   },
   "backup": {
     "result": "PASS",
@@ -127,7 +127,7 @@
     "idea": "IDEA-010",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T15:11:02.306411+00:00",
-    "status": "Actual1.6 Ready; remote functional/outbox/exact snapshot restore gates pending",
+    "status": "Actualmain1.6 UI/API/MQTT/outbox PASS; freshselectedsnapshot andsamecurrent/backwardrestore next",
     "fallbackTag": "stable-v1.5.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.5.0.json",
     "beforeEvidence": "artifacts/checkpoints/event-time-before/result.json",
@@ -172,7 +172,16 @@
     "backupHardeningEvidence": "artifacts/checkpoints/backup-hardening-1.6/summary.json",
     "backupOperationalCommit": "3c418081bf4b9f07d5bd4ff2de9e4c41873f7a19",
     "preUpgradeBackup": "deploy/verification/pre-1.6.0-backup-round2.json",
-    "rolloutEvidence": "deploy/verification/candidate-331ab9a/rollout/proof.json"
+    "rolloutEvidence": "deploy/verification/candidate-331ab9a/rollout/proof.json",
+    "mainOutboxProof": "deploy/verification/candidate-331ab9a/outbox-restart.json",
+    "mainPostNormal": "deploy/verification/candidate-331ab9a/outbox-post-normal.json",
+    "selectedSnapshot": {
+      "metadata": "deploy/verification/stable-backup-331ab9a.json",
+      "sha256": "9bd8becb4211ee0edd9217db99e05b63d8fa3f5437a8e4cc7be2ace449cb3137",
+      "bytes": 851673088,
+      "rootReview": "deploy/verification/candidate-331ab9a/normal-backup/root-backup-review.json",
+      "state": "wholeSHA/integrityverified; samecurrent/backwardrestore inprogress; notyetstable"
+    }
   },
   "previousStableCheckpoints": [
     {
@@ -265,17 +274,14 @@
     }
   ],
   "soak": {
-    "directory": "artifacts/soak/v1.5.0",
-    "sessionId": "ec27aaff-35cf-415b-9f37-0ea33933aff0",
-    "startedAt": "2026-09-21T14:56:57.365Z",
+    "directory": "artifacts/soak/v1.6.0",
+    "sessionId": "71b30fed-fd5d-4de8-ba09-cb7423798b66",
+    "startedAt": "2026-09-21T16:03:59.093Z",
     "readOnly": true,
     "expectedStopAt": "2026-09-21T21:37:33.079009+00:00",
-    "priorEvidence": "artifacts/checkpoints/soak-1.4.0/summary.json",
-    "gapReason": "Planned1.5upgrade and actualoutboxrestart, thennormalstate verified before newepoch",
-    "activationEvidence": "artifacts/checkpoints/observer-1.5-activation/activation.json",
-    "endedAt": "2026-09-21T15:54:29.707Z",
-    "endReason": "planned1.6upgrade",
-    "archive": "artifacts/checkpoints/soak-1.5.0/summary.json"
+    "priorEvidence": "artifacts/checkpoints/soak-1.5.0/summary.json",
+    "gapReason": "Planned1.6upgrade/outbox restart; originalsettings restored before newepoch",
+    "activationEvidence": "artifacts/checkpoints/observer-1.6-activation/activation.json"
   },
   "networkRecovery": {
     "supervisorCommand": "node scripts/connection-supervisor.mjs",
@@ -290,7 +296,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T15:58:48.338373+00:00",
+  "updatedAt": "2026-09-21T16:05:34.325635+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",

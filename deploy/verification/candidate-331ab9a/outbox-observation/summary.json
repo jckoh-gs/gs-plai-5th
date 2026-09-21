@@ -1,0 +1,13 @@
+{
+  "result": "OBSERVED",
+  "readOnly": true,
+  "startedAt": "2026-09-21T16:02:55.040969+00:00",
+  "endedAt": "2026-09-21T16:03:18.551280+00:00",
+  "samples": 8,
+  "podUIDs": [
+    "581d826a-8a9f-4adb-8c3c-8229a2ba151a"
+  ],
+  "localHealthErrors": 5,
+  "stopReason": "root-confirmed-terminal",
+  "limitation": "Observation begins after delegation; may miss earlier planned replacement. Root operation proof establishes full transition."
+}
