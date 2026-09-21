@@ -36,3 +36,8 @@ Evidence: `artifacts/checkpoints/final-window-boundaries/summary.json` (38 selec
 
 
 추가 실제1.3 관찰:12:58/13:03 로컬 검증 실패 뒤 자동재연결과 동일Pod 유지가 확인됐다. artifacts/checkpoints/reconnect-20260921T1303/summary.json은9배치/300샘플의 관측 공백을 원격 연속 저장/PUBACK와 대조한다. clean-session QoS1 구독자에게 모든 과거메시지 재수신을 보장하는 기능은 아니며 연결오류 근본원인은 미확정이다. 누락배치 서버시각이 단절로그보다 이르므로 '기록된 단절 중 발행된 배치'라고 단정하지 않는다. 누적오류 기준은 resume.json에 갱신했고 관측기를 재시작하거나 카운터를 지우지 않았다.
+
+
+진단 보강 후보: scripts/connection-supervisor.mjs는 마지막 실제 로컬 검사 lastLocalVerification에 health/config/credential_file/state/mqtt_tcp 단계, 고정 실패 분류, HTTP상태 숫자, checkedAt 및 단조시계 durationMs만 저장한다. 응답 본문/오류 원문/토큰/헤더/인증파일 경로는 기록하지 않는다. broker_disconnected는 API 보고값이며 전송오류 역시 관측 증상이다. 과거 단절 원인을 새 분류로 소급하지 않는다. 원격 검증 실패 때문에 새 로컬 검사가 없으면 마지막 검사 시각을 유지하므로 status.at과 구별한다. 같은 실패는 중복 이벤트를 만들지 않고 단계/종류/HTTP값이 달라지면 남긴다.
+
+코드·격리시험 근거는 artifacts/checkpoints/supervisor-diagnostics/summary.json과 docs/security/SUPERVISOR-DIAGNOSTICS-REVIEW.md다. 현재 기존 감시 프로세스는 유지하며1.3 첫1시간 관찰을 보존한 뒤 검증된 새 프로세스로 계획 교체한다. 교체는 원격 앱 재시작이 아니지만 소유 로컬 forward 재연결이 발생하므로 자연장애와 구분해 기록한다. 원래 마감과 실제 배포는 변경하지 않는다.

@@ -405,3 +405,10 @@ REVIEW022 round2: 계획된 시나리오 복원만 prepareScenarioRestore(scenar
 
 
 REVIEW022 최종 통합 후속: 실제로 시간대가 다른 서버의 createdAt을 로컬 intent 시각과 순서 비교하면1ms 시계 지연만으로도 정상201 소유권 기록을 거절했다(보안 독립 fixture). 생성시각은 불변 identity로 보존하되 서로 다른 시계의 순서 비교를 제거했다. 관측된201·원래 POST 다섯 설정값·기존에 없는 ID/run·fingerprint를 확인한다. 응답 유실은 후보가 하나여도 초기 기준을 추정하지 않고 자동쓰기하지 않는다. 독립수명주기11개와 실제POST본문 거절검사3개 통과. 로컬 UI 실패/catch복구 및 성공 리허설은 artifacts/checkpoints/media-lifecycle-local-round1/result.json, 최종 준비65+11시험/덱패키징은 artifacts/checkpoints/final-media-lifecycle/summary.json에 연결한다. 실제영상 성공 후 추가한 두 방어는 fixture 결과이며 원격 시연 성공으로 확대하지 않는다.
+
+
+### REVIEW023 — 로컬 연결 실패의 진단 구분
+
+반복 local_verification_failed 기록은 HTTP 응답/JSON/인증파일/버전/API브로커보고/MQTT TCP의 어느 단계가 실패했는지 알 수 없었다. 실제 과거원인 추정 없이, 새 supervisor에 고정 단계·종류·상태 숫자·시간만 보존하는 진단을 추가했다. 토큰/본문/오류message/URL/헤더는 노출하지 않는다. bool API·기존재시도/forward교체정책은 유지하며 정상계약의 connected=true를 엄격히 확인하고 health실패때불필요한config요청을생략한다.
+
+초기25개중24개 통과/1개 fixture실패를 보존했다. 닫힌 keepalive소켓이 connection_reset을 반환하는 정상가능성을 test가 무조건 refused로 기대했던 문제이며 새 미사용포트에서refused를 별도시험했다. 수정후25/25, 독립보안27/27PASS. null/array/악성오류메타데이터/본문스트림리셋/HTTP401/503/시간초과/인증파일/중복이벤트/원격실패시과거검사시각을 포함한다. exactsource/log는 artifacts/checkpoints/supervisor-diagnostics, 독립검토는 docs/security/SUPERVISOR-DIAGNOSTICS-REVIEW.md. 현재코드준비단계이며 실제감시교체는첫1시간관찰뒤별도증거로검증한다.

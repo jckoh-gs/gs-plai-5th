@@ -1,0 +1,35 @@
+✔ untrusted error metadata never becomes a diagnostic category or raw text (6.624125ms)
+✔ JSON null arrays and hostile object keys remain sanitized failures (3.468584ms)
+✔ non-2xx body is never parsed; remote failure retains explicitly historical local proof (2.912584ms)
+✔ successful local proof records bounded categories and normal read sequence (19.37675ms)
+✔ local diagnosis health health_not_ok does not publish raw data (5.782666ms)
+✔ local diagnosis health version_mismatch does not publish raw data (4.681958ms)
+✔ local diagnosis health broker_disconnected does not publish raw data (4.022ms)
+✔ local diagnosis config version_mismatch does not publish raw data (4.425917ms)
+✔ local diagnosis config authentication_not_required does not publish raw data (4.069209ms)
+✔ local diagnosis state version_mismatch does not publish raw data (4.981917ms)
+✔ local diagnosis state invalid_state does not publish raw data (3.623666ms)
+✔ local diagnosis state broker_disconnected does not publish raw data (4.203917ms)
+✔ local diagnosis state http_status does not publish raw data (3.565208ms)
+✔ local diagnosis config invalid_json does not publish raw data (3.75825ms)
+✔ local diagnosis state timeout does not publish raw data (1006.657667ms)
+✔ interrupted HTTP response body is a transport failure, not invalid JSON (18.837875ms)
+✔ credential, TCP and HTTP listener failures have distinct sanitized phases (7.085042ms)
+✔ changed failure category is recorded while equivalent repeated failures stay deduplicated (5.559583ms)
+✔ controlled kubectl outage retries with cap and recovers read-only with exact image/auth (750.26625ms)
+✔ wrong remote image blocks forwarding and does not replay writes (391.790333ms)
+✔ occupied unrelated ports are neither killed nor replaced (1051.01675ms)
+✔ existing healthy external forward survives supervisor freeze, deadline and stop (408.864209ms)
+✔ singleton excludes same-process duplicate, replaces verified stale PID identity, refuses incomplete lock (14.754833ms)
+✔ invalid startup configuration fails closed and does not spawn commands (4.89575ms)
+✔ deadline stops only owned forward; expected-image update is revalidated (593.067959ms)
+✔ local-only owned forward loss records a new outage and recovery without remote failure (665.435083ms)
+✔ unhealthy still-running owned forward records outage before replacement (678.817125ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5607.518834

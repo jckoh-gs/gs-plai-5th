@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdtempSync,readFileSync,rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {ConnectionSupervisor} from '../scripts/connection-supervisor.mjs';
+const marker='Bearer adversarial-fixture-only https://user:private@invalid.example/secret';
+const run={freeze:Date.now()+60000,deployment:{productVersion:'1.3.0'}};
+async function fixture(fn){const directory=mkdtempSync(join(tmpdir(),'security-supervisor-'));const original=globalThis.fetch;const supervisor=new ConnectionSupervisor({directory});try{await fn(supervisor,directory);}finally{globalThis.fetch=original;rmSync(directory,{recursive:true,force:true});}}
+function safe(s,dir){s.publish('disconnected','local_verification_failed',run);for(const file of ['status.json','events.jsonl']){const raw=readFileSync(join(dir,file),'utf8');assert(!raw.includes(marker));assert(!raw.includes('invalid.example'));assert(!raw.includes('adversarial-fixture'));}assert.deepEqual(Object.keys(s.lastLocalVerification).sort(),['checkedAt','durationMs','kind','phase','result'].sort());}
+test('untrusted error metadata never becomes a diagnostic category or raw text',async()=>fixture(async(s,dir)=>{for(const err of [Object.assign(new Error(marker),{code:marker,cause:{code:marker},diagnosticKind:marker}),Object.assign(new Error(marker),{cause:{code:'ECONNRESET'}}),Object.assign(new Error(marker),{name:'TimeoutError'})]){globalThis.fetch=async()=>{throw err;};assert.equal(await s.verifyLocal(run),false);assert(['request_failed','connection_reset','timeout'].includes(s.lastLocalVerification.kind));safe(s,dir);}}));
+test('JSON null arrays and hostile object keys remain sanitized failures',async()=>fixture(async(s,dir)=>{for(const value of [null,[],marker,{status:marker,version:marker,mqtt:{connected:true}}]){globalThis.fetch=async()=>({ok:true,json:async()=>value});assert.equal(await s.verifyLocal(run),false);assert.equal(s.lastLocalVerification.kind,'health_not_ok');safe(s,dir);}}));
+test('non-2xx body is never parsed; remote failure retains explicitly historical local proof',async()=>fixture(async(s,dir)=>{let reads=0;globalThis.fetch=async()=>({ok:false,status:401,json:async()=>{reads++;throw Error(marker);}});assert.equal(await s.verifyLocal(run),false);assert.equal(reads,0);assert.equal(s.lastLocalVerification.httpStatus,401);const previous=structuredClone(s.lastLocalVerification);const published=s.publish('disconnected','kubernetes_unavailable',run);assert.deepEqual(published.lastLocalVerification,previous);assert(!readFileSync(join(dir,'status.json'),'utf8').includes(marker));}));

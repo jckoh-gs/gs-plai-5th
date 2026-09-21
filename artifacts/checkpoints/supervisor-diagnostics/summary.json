@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-09-21T13:20:21.624717+00:00",
+  "result": "SOURCE_AND_ISOLATED_TESTS_PASSED",
+  "liveActivation": "Pending first-hour1.3 observation checkpoint; current supervisor PID54951/handle25872 remains old source",
+  "scope": "Fixed-category read-only local probe diagnostics; existing retry and owned-forward teardown policy unchanged",
+  "rootTests": {
+    "passed": 25,
+    "total": 25,
+    "log": "supervisor-diagnostics-round2.log"
+  },
+  "initialFailure": "First24/25 log preserved: fixture incorrectly assumed closed keepalive socket always reports connection_refused; actual connection_reset is valid. Fresh unused port tests refusal separately. No diagnostic source change for this failure.",
+  "independentTests": {
+    "passed": 27,
+    "total": 27,
+    "receipt": "docs/security/evidence/supervisor-diagnostics-independent-review.json"
+  },
+  "sources": {
+    "scripts/connection-supervisor.mjs": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
+    "tests/supervisor-diagnostics.test.js": "636b269683a138e17015c482aeb1a7b4659e30a8ed612d6a86e14a6a43f30ab7",
+    "tests/security-supervisor-diagnostics.test.js": "d9b9e0cce5b4894115dd82b7c2d5360a34c337aaaceed4705fabaa524e111b62",
+    "tests/supervisor.test.js": "8ca40722fe38ddb3862e43916bae249c9b8d9265098d25bbeb8e81e0c6c69b64",
+    "tests/resume-policy.test.js": "21e3553c31064df53677da857954b5619d29e5dedbda2949827644a11c015875"
+  },
+  "knownMinorValidationChanges": [
+    "API connection fields require boolean true, consistent with server contract.",
+    "Invalid health result stops before config request."
+  ],
+  "limits": [
+    "Categories describe observed failures, not established root causes.",
+    "Historical outages cannot be backfilled with a newly available category.",
+    "lastLocalVerification is timestamped previous probe when remote verification prevents a new local probe.",
+    "No new response-size limit; same trusted loopback application target."
+  ]
+}

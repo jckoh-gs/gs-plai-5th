@@ -1,0 +1,55 @@
+✔ network recovery resumes from evidence while freeze and deadline remain authoritative (0.471125ms)
+✔ successful local proof records bounded categories and normal read sequence (18.297125ms)
+✔ local diagnosis health health_not_ok does not publish raw data (6.030333ms)
+✔ local diagnosis health version_mismatch does not publish raw data (5.415542ms)
+✔ local diagnosis health broker_disconnected does not publish raw data (4.3065ms)
+✔ local diagnosis config version_mismatch does not publish raw data (4.377208ms)
+✔ local diagnosis config authentication_not_required does not publish raw data (5.083833ms)
+✔ local diagnosis state version_mismatch does not publish raw data (5.360167ms)
+✔ local diagnosis state invalid_state does not publish raw data (4.070917ms)
+✔ local diagnosis state broker_disconnected does not publish raw data (3.944125ms)
+✔ local diagnosis state http_status does not publish raw data (4.305333ms)
+✔ local diagnosis config invalid_json does not publish raw data (4.701292ms)
+✔ local diagnosis state timeout does not publish raw data (1005.495791ms)
+✔ interrupted HTTP response body is a transport failure, not invalid JSON (18.752959ms)
+✖ credential, TCP and HTTP listener failures have distinct sanitized phases (7.556917ms)
+✔ changed failure category is recorded while equivalent repeated failures stay deduplicated (8.021459ms)
+✔ controlled kubectl outage retries with cap and recovers read-only with exact image/auth (2469.4505ms)
+✔ wrong remote image blocks forwarding and does not replay writes (388.620083ms)
+✔ occupied unrelated ports are neither killed nor replaced (420.593958ms)
+✔ existing healthy external forward survives supervisor freeze, deadline and stop (401.48325ms)
+✔ singleton excludes same-process duplicate, replaces verified stale PID identity, refuses incomplete lock (14.803417ms)
+✔ invalid startup configuration fails closed and does not spawn commands (5.471291ms)
+✔ deadline stops only owned forward; expected-image update is revalidated (575.09625ms)
+✔ local-only owned forward loss records a new outage and recovery without remote failure (595.852292ms)
+✔ unhealthy still-running owned forward records outage before replacement (497.295666ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 24
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7586.057584
+
+✖ failing tests:
+
+test at tests/supervisor-diagnostics.test.js:51:1
+✖ credential, TCP and HTTP listener failures have distinct sanitized phases (7.556917ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'connection_reset'
+  - 'connection_refused'
+                  ^
+  
+      at TestContext.<anonymous> (file:///Users/charleskoh/research/20260921-RALPTON/tests/supervisor-diagnostics.test.js:51:864)
+      at async Test.run (node:internal/test_runner/test:1313:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'connection_reset',
+    expected: 'connection_refused',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

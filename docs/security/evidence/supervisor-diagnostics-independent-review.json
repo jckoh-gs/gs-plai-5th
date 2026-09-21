@@ -1,0 +1,14 @@
+{
+  "reviewedAt": "2026-09-21T13:18:36.352628+00:00",
+  "scope": "Local supervisor diagnostics only; no live processes or cluster changed",
+  "command": "node --test tests/supervisor.test.js tests/supervisor-diagnostics.test.js tests/security-supervisor-diagnostics.test.js",
+  "tests": 27,
+  "pass": 27,
+  "fail": 0,
+  "sourceSha256": {
+    "scripts/connection-supervisor.mjs": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
+    "tests/supervisor.test.js": "8ca40722fe38ddb3862e43916bae249c9b8d9265098d25bbeb8e81e0c6c69b64",
+    "tests/supervisor-diagnostics.test.js": "636b269683a138e17015c482aeb1a7b4659e30a8ed612d6a86e14a6a43f30ab7",
+    "tests/security-supervisor-diagnostics.test.js": "d9b9e0cce5b4894115dd82b7c2d5360a34c337aaaceed4705fabaa524e111b62"
+  }
+}

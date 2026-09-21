@@ -1,0 +1,33 @@
+✔ network recovery resumes from evidence while freeze and deadline remain authoritative (0.350709ms)
+✔ successful local proof records bounded categories and normal read sequence (18.546125ms)
+✔ local diagnosis health health_not_ok does not publish raw data (6.508834ms)
+✔ local diagnosis health version_mismatch does not publish raw data (5.584625ms)
+✔ local diagnosis health broker_disconnected does not publish raw data (4.596417ms)
+✔ local diagnosis config version_mismatch does not publish raw data (4.720084ms)
+✔ local diagnosis config authentication_not_required does not publish raw data (4.921334ms)
+✔ local diagnosis state version_mismatch does not publish raw data (5.271791ms)
+✔ local diagnosis state invalid_state does not publish raw data (4.228875ms)
+✔ local diagnosis state broker_disconnected does not publish raw data (4.160209ms)
+✔ local diagnosis state http_status does not publish raw data (3.927333ms)
+✔ local diagnosis config invalid_json does not publish raw data (3.659959ms)
+✔ local diagnosis state timeout does not publish raw data (1004.900208ms)
+✔ interrupted HTTP response body is a transport failure, not invalid JSON (19.885708ms)
+✔ credential, TCP and HTTP listener failures have distinct sanitized phases (9.131541ms)
+✔ changed failure category is recorded while equivalent repeated failures stay deduplicated (7.453416ms)
+✔ controlled kubectl outage retries with cap and recovers read-only with exact image/auth (834.007792ms)
+✔ wrong remote image blocks forwarding and does not replay writes (573.084042ms)
+✔ occupied unrelated ports are neither killed nor replaced (436.514916ms)
+✔ existing healthy external forward survives supervisor freeze, deadline and stop (585.90525ms)
+✔ singleton excludes same-process duplicate, replaces verified stale PID identity, refuses incomplete lock (15.027708ms)
+✔ invalid startup configuration fails closed and does not spawn commands (5.156458ms)
+✔ deadline stops only owned forward; expected-image update is revalidated (785.175209ms)
+✔ local-only owned forward loss records a new outage and recovery without remote failure (811.836875ms)
+✔ unhealthy still-running owned forward records outage before replacement (1248.391666ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7516.208834

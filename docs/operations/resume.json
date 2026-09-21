@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T13:14:10.379917+00:00",
+  "updatedAt": "2026-09-21T13:20:21.625854+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": "stable-v1.3.0",
@@ -277,5 +277,14 @@
       "runtimeMutation": false
     }
   ],
-  "nextOperationalReview": "At first-hour1.3 observation checkpoint, assess13:08/13:09 additional API failures. Inspect finite sanitized local failure categories before changing recovery policy; no presumed rootcause or unbounded retries."
+  "nextOperationalReview": "At first-hour1.3 observation checkpoint, assess13:08/13:09 additional API failures. Inspect finite sanitized local failure categories before changing recovery policy; no presumed rootcause or unbounded retries.",
+  "supervisorDiagnosticUpgrade": {
+    "state": "source/tests/review ready; not active yet",
+    "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
+    "evidence": "artifacts/checkpoints/supervisor-diagnostics/summary.json",
+    "currentPid": 54951,
+    "currentHandle": 25872,
+    "currentIdentity": "Mon Sep 21 20:19:20 2026",
+    "nextStep": "After actual first-hour1.3 observation prefix is preserved, verify old PID birth, stop old owned supervisor gracefully and wait for its handle to terminate, then start exactly one new supervisor; record planned local forwarding gap and new identity. Never restart primary/auditor merely for this upgrade."
+  }
 }
