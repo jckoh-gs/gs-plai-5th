@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-09-21T13:58:55.399787+00:00",
+  "ownedExecSession": 29782,
+  "pid": 84045,
+  "processStartIdentity": "Mon Sep 21 22:40:53 2026",
+  "args": "kubectl --context charles-k3s -n gs-plai-5h port-forward --address=127.0.0.1 deployment/grid-registry 15050:15050",
+  "ownershipEvidence": "Same still-running exec handle29782; listener PID and exact context/namespace/registry-forward arguments verified before SIGTERM",
+  "signal": "SIGTERM",
+  "remoteRegistryChanged": false,
+  "otherForwardsTouched": false,
+  "terminalConfirmed": true,
+  "result": "PASS",
+  "terminalExitCode": 143,
+  "listenerAbsent": true,
+  "completedAt": "2026-09-21T13:59:02.757619+00:00",
+  "futureUse": "Start a new explicitly authorized owned forward when image work requires it"
+}

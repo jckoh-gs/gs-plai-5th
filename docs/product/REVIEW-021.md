@@ -1,0 +1,13 @@
+# 제품 검토021 —1.4 원격 기능·복원 인수
+
+판정: AT-CONTROL-FORM01-06의기능·배포·복원범위승격가능.13:55:09Z terminal restore-summary가생성된뒤참조17JSON과main-acceptance의7JSON을각각읽어PASS를확인했다.이전main-acceptance의“restore pending”은당시이력이며후속완료summary로보완됐다. 태그/immutablemanifest는메인의다음승격단계이고전체목표완료가아니다.
+
+생산 fdd0491a5c08901962f46ac845f8582921150d45/imagec19d550f…b4f4:readonly폼19검사,auth/SSE/preview/export,실제MQTT125/error0/60/dedup,outbox실제Pod교체동일본문/PUBACK,후속5normal모두기록됐다.기존local240/독립input/실제broker범위는REVIEW020과구분한다.
+
+복원:594944000byte snapshotSHAbe09a5f5e1721970ec7f25197fcf4f3db504f6f6ad4765080ba301a0c7fd760a를fresh1.4와freshbackward1.3의독립PVC로각각복제했다.기동전source/destination/expectedSHA동일과existingDestination=false/integrityok를init증거에서확인했다.원래5plants/1scenario는fixture변경전에대조했고각버전UI/MQTT/preview/export/scenario는PASS다.
+
+새폼은isolated-restore의새소유RTU만사용한44검사다.result는existingIds5와existingSettingsUnchanged=true를기록하고pageerror/unhandledrejection없음,실제brokerreceipts를보존한다.원래5단지전체운동상태를정지시키거나생산DB에그폼시험을실행한것으로해석하지않는다.
+
+asset경계:scenarioharness의localdist메타데이터만으로원격실행을증명하지않았다. 별도restore-1.4-served-assets는실제HTTP JS258811bytes/SHA37a5224b…d5bce와CSS를immutableimage파일과대조한다. backward-served-assets는그버전의bundle을별도로대조한다. restoredcommandform result의servedJS도동일이다.
+
+정리:summary는두rig각0replica/0pod,소유터널종료,4PVC보존,생산DB/runJson변경없음을기록한다. 아직진행중인작업을완료로미리판정하지않았다.이번검토는REVIEW021만작성하며acceptance/run/PRD/버전/git를변경하지않는다.1.3fallback은메인의승격전까지유지하며최종영상/PPT·동결·시간·인도는계속미완료다.

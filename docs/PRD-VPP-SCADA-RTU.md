@@ -775,9 +775,9 @@ k3s 명령은 종료 코드 0이고 `gitVersion=v1.33.4+k3s1`, `platform=linux/a
 
 ## 25. 변경 관리와 후속 범위
 
-개발 후보: **1.4.0 / IDEA-008 채택 개정3**. 일반 목표 입력 범위 안내와 ISSUE-021 만료일 예외 처리를 채택했다. 아래 현재 배포·복원 기준1.3.0은 후보의 실제 브라우저·회귀·k3s·백업/복원 인수 전까지 유지한다. 첫1시간 관찰에 로컬 연결 공백이 있었으며 원격 저장/PUBACK 증거와 구분해 보존했다. 이를 무중단 성공으로 간주하지 않는다. 원래 동결·마감과 최종 영상/PPT 조건은 유지한다.
+현재 채택 기능 기준: **1.4.0 / IDEA-008 개정3**. 일반 목표 입력 범위 안내와 ISSUE-021 만료일 처리를 구현하고 실제 k3s·MQTT·재시작·동일 백업의1.4 및 하위1.3 복원을 검증했다. REVIEW-021과 인수 추적이 근거다. runtime `fdd0491a5c08901962f46ac845f8582921150d45`, 이미지 `c19d550f…b4f4`를 안정 기준으로 고정한다. 태그·immutable manifest 검증은 운영 기록에서 별도로 확인한다. 이전1.3 checkpoint는 복원 이력으로 보존하며 원래 동결·마감과 최종 영상/PPT 조건은 유지한다.
 
-### FR-CONTROL-FORM-01 일반 목표 입력 검증 (IDEA-008, 제품1.4.0 후보·인수 대기)
+### FR-CONTROL-FORM-01 일반 목표 입력 검증 (IDEA-008, 제품1.4.0 기능·배포·복원 검증 완료)
 
 일반 목표 폼은 기존 서버 범위인 toleranceKw 0.01~10000, timeoutSeconds 1~3600, priority 0~100에 입력 min/max를 맞추고 단위와 범위를 표시한다. 소수를 허용하며 clamp·반올림·조용한 기본값 대체를 하지 않는다. target0, 정격 이내이지만 가용량을 넘는 목표 및 서버 측 검증은 유지한다. 클라이언트 검증은 편의 기능이며 보안 경계가 아니다.
 
@@ -787,7 +787,7 @@ validSeconds는 제출 시 한 번 읽은 현재 시각으로 만료일을 계�
 
 날짜 오류를 해당 필드 가까이에 표시하고 접근 가능한 alert·필드 연결·포커스를 제공한다. 잘못된 값을 고친 뒤 버튼 또는 Enter로 다시 제출할 수 있어야 한다. 좁은 화면에서도 범위와 오류를 읽을 수 있고, 선택 RTU 전환 시 이전 폼 오류가 다른 RTU의 결과로 남지 않아야 한다. 다른 폼 전체나 서버/MQTT 계약을 변경하지 않는다.
 
-### AT-CONTROL-FORM-01 인수 (대기)
+### AT-CONTROL-FORM-01 인수 (기능 검증 완료, 최종 인도 게이트 별도)
 
 1. 실제 브라우저에서 tolerance0/10001, timeout0/3601, priority−1/101을 버튼과 Enter로 각각 제출한다. command POST0, pageerror0, unhandledrejection0과 해당 입력 안내를 확인한다. native validity 속성만으로 제출 차단을 증명하지 않는다.
 2. 각 min/max 및 정상 소수·빈칸·비유한 값을 검사한다. 유효 입력과 실제 요청 숫자를 대조하며 자동 보정이 없어야 한다. 경계 검증과 실제 명령 완료 증거를 구분한다.
@@ -796,7 +796,7 @@ validSeconds는 제출 시 한 번 읽은 현재 시각으로 만료일을 계�
 5. 별도 소유 로컬 RTU에서 accepted/executing/completed, target0과stop 구분, 가용량 초과·정격 이내 목표의 timed_out, 소수 요청 보존을 확인한다. 정격 초과 서버 거절과 기존 REST/MQTT 검증도 유지한다.
 6. 기존 preview/export/시나리오·전체 시험/빌드·실제 MQTT·정확한 후보 이미지의 k3s 배포·백업/복원을 검증한 뒤 승격한다. 수정 전 증거를 보존하고 새 증거를 소스/번들/환경에 연결한다. 최종 미디어·시간·인도 게이트는 별도다.
 
-현재 상태: 제품 **1.3.0**, runtime `3fa3ba0a6984dc752a8968d1788e72a3069b1267`, `stable-v1.3.0`이다. IDEA-001~007의 채택 기능과 1.3.0 배포·복원을 검증했다. [기능 검토015](product/REVIEW-015.md), [688개 해시·실제 Ready 이미지 독립 검토016](product/REVIEW-016.md), [1.3.0 checkpoint](../artifacts/releases/checkpoint-1.3.0.json), [인수 추적](product/acceptance.json)이 현재 근거다. 이전 [1.1.0 checkpoint](../artifacts/releases/checkpoint-1.1.0.json)와 [1.2.0 checkpoint](../artifacts/releases/checkpoint-1.2.0.json)는 과거 검증·복원 근거로 보존한다. 아래 수락 절차는 요구사항으로 유지하며 과거 후보 승격 표현은 당시 수행 절차의 기준이다. **최종 동결 점검·영상·PPT·운영시간·역할 마감 및 최종 정리는 아직 완료되지 않았다.** 기능 checkpoint를 전체 목표 완료로 해석하지 않는다.
+현재 상태: 제품 **1.4.0**, runtime `fdd0491a5c08901962f46ac845f8582921150d45`이다. IDEA-001~008의 채택 기능을 검증했다. [검토021](product/REVIEW-021.md), [동일594944000바이트 백업 복원](../deploy/verification/candidate-fdd0491/restore-summary.json), [인수 추적](product/acceptance.json)이 근거다. 이전 [1.3 checkpoint](../artifacts/releases/checkpoint-1.3.0.json) 및1.0~1.2 검증·복원 근거도 보존한다. 아래 과거 후보·승격 표현은 당시 절차의 기준이다. **최종 동결 점검·영상·PPT·운영시간·역할 마감 및 인도는 아직 완료되지 않았다.** 기능 checkpoint를 전체 목표 완료로 해석하지 않는다.
 
 프로토콜 변경 시 schemaVersion, 가이드, 클라이언트, 통합 시험을 함께 변경한다. 등록 시 단위 정책이나 time 의미는 기존 데이터 마이그레이션 계획 없이 바꾸지 않는다. 제조사 모델·실물 프로토콜·대규모 부하·사용자 권한·브로커 업무 ACK·미래 제어 타임라인 재생은 별도 요구사항으로 설계한다.
 

@@ -1,0 +1,8 @@
+{
+  "observedAt": "2026-09-21T13:53:06.560Z",
+  "filesystemAvailableBytes": 78692749312,
+  "databaseBytes": 601919488,
+  "walBytes": 4338392,
+  "dataFileBytes": 5031428043,
+  "scope": "Read-only main1.4 resource observation. Filesystem available bytes are shared host filesystem availability, not reserved PVC capacity."
+}

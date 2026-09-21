@@ -1,0 +1,35 @@
+{
+  "result": "PASS",
+  "capturedAt": "2026-09-21T13:44:16.674Z",
+  "verifiedAt": "2026-09-21T13:44:43.521Z",
+  "sourceCommit": "3fa3ba0a6984dc752a8968d1788e72a3069b1267",
+  "appImage": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+  "verifiedTransferPod": {
+    "name": "grid-76f9968b4-dgf2w",
+    "uid": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73",
+    "image": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+    "imageID": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d"
+  },
+  "podVerificationStage": "transfer",
+  "remotePath": "/data/stable-3fa3ba0-20260921T134414539Z.sqlite",
+  "localPath": "artifacts/private/backups/stable-3fa3ba0-20260921T134414539Z.sqlite",
+  "bytes": 585441280,
+  "sha256": "a373c3b0fdf41e3bcd2c492824401e69f5e6750c358e88c34837c96bba5ef2ac",
+  "compressedBytes": 19674474,
+  "verifiedChunks": 19,
+  "transferChunkBytes": 1048576,
+  "remoteCompressionPeakRssBytes": 127156224,
+  "localPeakRssBytes": 255983616,
+  "integrity": "ok",
+  "plants": 5,
+  "pending": 0,
+  "method": "online node:sqlite backup; streaming gzip and disk-backed chunk+whole SHA256 verification; private0600 copy",
+  "timePolicy": {
+    "startedAt": "2026-09-21T13:44:14.539Z",
+    "stopAt": "2026-09-21T13:47:14.539Z",
+    "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+    "remoteCancellationGuaranteed": false
+  },
+  "metadataPath": "deploy/verification/pre-1.4.0-backup.json",
+  "operationJournal": "artifacts/operations/backups/20260921T134414539Z.json"
+}

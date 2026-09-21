@@ -1,0 +1,27 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T13:51:41.726061+00:00",
+  "runtimeCommit": "fdd0491a5c08901962f46ac845f8582921150d45",
+  "appImage": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4",
+  "scope": "Actual primaryk3s UIreadonly19checks+auth/SSE/narrow/export/preview, MQTT125/error0/60samples/dedup, actualPodreplacement preserving identicaloutboxbody and receivedMQTTbody/PUBACK. Freshbackup produced; isolatedrestore/stablepromotion pending.",
+  "evidence": [
+    "command-form-readonly/result.json",
+    "browser/result.json",
+    "export/result.json",
+    "preview.json",
+    "mqtt.json",
+    "outbox-restart.json",
+    "post-outbox-normal.json"
+  ],
+  "outboxRecoveryPorts": [
+    3108,
+    18888
+  ],
+  "operationalScriptHashes": {
+    "browser-command-export.cjs": "d0496cd8a6f526bdddf61701272b1c9cf9d792d2dfbc489596eda87543a8a278",
+    "browser-check.cjs": "9844dbf9fe8d30ce08465c70c373798cd510ec4156737f8ce721f052d356c7c8",
+    "remote-integration.mjs": "ff594af40f686fb7a7258ee6c862f1faa4bc612b2b1c4682de8d721b91e8d523",
+    "remote-outbox-restart.mjs": "6d8bfb2839b5476961bc288e55f4659fcd31ea8d22c1409ae0123ee195f4a70d",
+    "remote-preview.mjs": "fd00c96113a8b805502961a15ed3287ee1dbce1643be59c52d7978ad1a17a0cb"
+  }
+}

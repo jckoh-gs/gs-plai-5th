@@ -1,0 +1,45 @@
+{
+  "sourceCommit": "fdd0491a5c08901962f46ac845f8582921150d45",
+  "archive": "artifacts/private/grid-fdd0491.oci.tar",
+  "context": "isolated git archive",
+  "imageManifest": "sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4",
+  "image": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4",
+  "labels": {
+    "grid.prd.version": "1.11",
+    "grid.runtime.variant": "alpine",
+    "org.opencontainers.image.revision": "fdd0491a5c08901962f46ac845f8582921150d45",
+    "org.opencontainers.image.version": "1.4.0"
+  },
+  "architecture": "amd64",
+  "os": "linux",
+  "deployed": false,
+  "checkedAt": "2026-09-21T13:43:28.964583+00:00",
+  "runtimeAppTests": {
+    "pass": 77,
+    "fail": 0,
+    "files": 21,
+    "concurrency": 1,
+    "mounts": "tests only read-only; server/packages/shippedclient scripts are immutable image contents"
+  },
+  "testSelection": "test-selection.json",
+  "separateSourceBuildWorkstationTests": "Root local full suite240PASS; UI-source/media/operations not counted as image app tests",
+  "actualBrokerIntegration": "PASS",
+  "advancedIntegration": "PASS",
+  "registryPushed": true,
+  "servedAssets": "served-assets.json",
+  "security": {
+    "sbom": "docs/security/evidence/app-candidate-fdd0491-sbom.json",
+    "findings": "docs/security/evidence/app-candidate-fdd0491-findings.json",
+    "packages": 130,
+    "residualKnownMatches": 4,
+    "newFindings": 0
+  },
+  "retainedFailedHarnessAttempt": {
+    "log": "unit-app-serial.log",
+    "tests": 78,
+    "pass": 77,
+    "fail": 1,
+    "cause": "Selection erroneously included unshipped demo-lifecycle fixture; no app test failure; fixed selection without changing source or image"
+  },
+  "runtimeFixtureNote": "Initial isolated HTTP container refused missing API_TOKEN as configured; recreated with random private fixture token; live secrets not used"
+}

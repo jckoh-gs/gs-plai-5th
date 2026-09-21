@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T13:46:47.627672+00:00",
+  "updatedAt": "2026-09-21T13:59:40.910008+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
-  "stableRuntime": "stable-v1.3.0",
-  "stableManifest": "artifacts/releases/checkpoint-1.3.0.json",
+  "stableRuntime": "stable-v1.4.0",
+  "stableManifest": "artifacts/releases/checkpoint-1.4.0.json",
   "workingMilestone": {
     "productVersion": "1.4.0",
     "prdVersion": "1.11",
     "idea": "IDEA-008",
-    "state": "ActualReady1.4candidate fdd0491/c19d deployed; local and exactimage gates PASS, remoteacceptance/restart/backuprestore and stablepromotion pending. Stablefallback1.3. Finalmedia/timepending."
+    "state": "1.4functional/main/exactbackup-current andbackwardrestore independentlyverified. Stabletag/manifest generation inprogress; original finalmedia/time/deliverypending."
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -21,7 +21,7 @@
     "1.3 selectedRTUscenarios and correctedKMAfeedback, exactsourceimage118selectedtests/local136, k3s UI/export/preview/MQTT, actualoutboxrestart, exact420MB snapshot1.3 and backward1.2 restore13checks PASS; overallmedia/timegatepending"
   ],
   "remainingInOrder": [
-    "Implement and verify adopted1.4 candidate in isolation, independent reviews, exactimage/k3s/backup/restore before stable promotion. Preserve1.3 fallback. Continue observations until original freeze and follow FINAL-RESTORE-PLAN.md.",
+    "Verify new immutable1.4checkpoint and pushedstabletags, then continue existing observers until originalfreeze. Furtherideas require versioned adoption; preserve verified1.4fallback. Atfreeze select normalverifiedruntime and follow FINAL-RESTORE-PLAN for same-snapshot restore/newmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
   ],
@@ -45,14 +45,14 @@
   ],
   "supplementaryObservation": {
     "kind": "read-only per-RTU full SCADA auditor v1",
-    "sessionId": "9a9f5e31-eff9-4836-8d46-351ddb7b0d7b",
-    "directory": "artifacts/soak/telemetry-audit/2026-09-21T12-22-05-577Z-9a9f5e31",
-    "startedAt": "2026-09-21T12:22:05.577Z",
-    "expectedStopAt": "2026-09-21T21:37:33.079Z",
+    "sessionId": "9fe9c0ec-3f8d-4f85-9b63-38f57cd8fc07",
+    "directory": "artifacts/soak/telemetry-audit/2026-09-21T13-49-42-893Z-9fe9c0ec",
+    "startedAt": "2026-09-21T13:49:42.893Z",
+    "expectedStopAt": "2026-09-21T21:37:33.079009+00:00",
     "instructions": "docs/operations/TELEMETRY-AUDIT.md",
-    "scope": "New1.3 observation session;1.2 archived separately; not uninterrupted uptime proof",
-    "handle": 30644,
-    "pid": 66465
+    "scope": "New1.4 session;1.3 archived separately; not uninterrupted uptime proof",
+    "handle": 92936,
+    "pid": 85652
   },
   "observationCheckpoints": [
     {
@@ -172,18 +172,74 @@
           }
         ]
       }
+    },
+    {
+      "primary": "artifacts/checkpoints/soak-1.3.0/primary",
+      "supplementary": {
+        "kind": "read-only per-RTU full SCADA auditor v1",
+        "sessionId": "9a9f5e31-eff9-4836-8d46-351ddb7b0d7b",
+        "directory": "artifacts/soak/telemetry-audit/2026-09-21T12-22-05-577Z-9a9f5e31",
+        "startedAt": "2026-09-21T12:22:05.577Z",
+        "expectedStopAt": "2026-09-21T21:37:33.079Z",
+        "instructions": "docs/operations/TELEMETRY-AUDIT.md",
+        "scope": "New1.3 observation session;1.2 archived separately; not uninterrupted uptime proof",
+        "handle": 30644,
+        "pid": 66465
+      },
+      "incidents": [
+        {
+          "evidence": "artifacts/checkpoints/reconnect-20260921T1303/summary.json",
+          "runtime": "1.3.0",
+          "outages": [
+            "2026-09-21T12:58:27.922Z",
+            "2026-09-21T13:03:17.005Z"
+          ],
+          "recoveries": [
+            "2026-09-21T12:58:29.170Z",
+            "2026-09-21T13:03:18.529Z"
+          ],
+          "cause": "local_verification_failed; underlying cause unknown",
+          "forcedInterruption": false,
+          "podUidUnchanged": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73",
+          "observedMissingBatches": 9,
+          "persistedSamplesInMissingBatches": 300,
+          "scope": "Publisher persistence/PUBACK verified; not proof of every subscriber receipt. Missing batch timestamps precede logged disconnect; historical host/server clock synchronization not independently verified."
+        },
+        {
+          "evidence": "artifacts/checkpoints/reconnect-20260921T1308/summary.json",
+          "outageAt": "2026-09-21T13:08:35.250Z",
+          "recoveredAt": "2026-09-21T13:08:36.513Z",
+          "laterApiFailureAt": "2026-09-21T13:09:26.630Z",
+          "cause": "unknown; local_verification_failed and state poll unavailable",
+          "runtimeMutation": false
+        },
+        {
+          "evidence": "artifacts/checkpoints/reconnect-20260921T1325/summary.json",
+          "outageAt": "2026-09-21T13:25:53.396Z",
+          "recoveredAt": "2026-09-21T13:25:54.682Z",
+          "symptom": "health timeout5004ms",
+          "observedMissingBatches": 8,
+          "persistedSamplesInMissingBatches": 300,
+          "podUidUnchanged": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73",
+          "hostPowerEvidence": "artifacts/checkpoints/host-pause-20260921T1325/evidence.json",
+          "scope": "Publisher continuity/PUBACK confirmed; subscriber receipt not guaranteed. Local75.418s cadence gap overlaps recorded host sleep/wake; sole cause and exact stopped interval not established."
+        }
+      ],
+      "ended": "planned1.4upgrade; all three previous handles terminal0",
+      "archive": "artifacts/checkpoints/soak-1.3.0/summary.json"
     }
   ],
   "currentObservationHandles": {
+    "primary": 36193,
+    "supplementary": 92936,
     "supervisor": 81174
   },
   "currentObservationBaselines": {
-    "primaryApiErrors": 6,
-    "primaryConnectionErrors": 3,
-    "supplementaryConnectionErrors": 8,
-    "supplementarySampleDiscontinuitiesPerRTU": 2,
-    "evidence": "artifacts/checkpoints/reconnect-20260921T1325/summary.json",
-    "scope": "Cumulative1.3 counts through13:27; preserve earlier plannedhandoff and naturalincident history. Compare new increments only."
+    "primaryApiErrors": 0,
+    "primaryConnectionErrors": 0,
+    "supplementaryConnectionErrors": 0,
+    "supplementarySampleDiscontinuitiesPerRTU": 0,
+    "scope": "New1.4sessions baseline only; prior1.3counts preserved in immutablearchive, not reset in place."
   },
   "completedOperations": [
     {
@@ -210,6 +266,16 @@
     }
   ],
   "currentObservationProcesses": {
+    "primary": {
+      "pid": 85649,
+      "handle": 36193,
+      "processIdentity": "Mon Sep 21 22:49:41 2026"
+    },
+    "supplementary": {
+      "pid": 85652,
+      "handle": 92936,
+      "processIdentity": "Mon Sep 21 22:49:42 2026"
+    },
     "supervisor": {
       "pid": 84952,
       "handle": 81174,
@@ -225,8 +291,8 @@
   "nextProductProposal": {
     "id": "IDEA-008",
     "revision": 3,
-    "state": "adopted; implementation pending",
-    "review": "docs/product/REVIEW-019.md"
+    "state": "implemented and functionally verified1.4",
+    "review": "docs/product/REVIEW-021.md"
   },
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
@@ -242,46 +308,8 @@
     "lastLocalRehearsal": "artifacts/checkpoints/media-lifecycle-local-round1/result.json",
     "localFixtureOnly": true
   },
-  "currentObservationIncidents": [
-    {
-      "evidence": "artifacts/checkpoints/reconnect-20260921T1303/summary.json",
-      "runtime": "1.3.0",
-      "outages": [
-        "2026-09-21T12:58:27.922Z",
-        "2026-09-21T13:03:17.005Z"
-      ],
-      "recoveries": [
-        "2026-09-21T12:58:29.170Z",
-        "2026-09-21T13:03:18.529Z"
-      ],
-      "cause": "local_verification_failed; underlying cause unknown",
-      "forcedInterruption": false,
-      "podUidUnchanged": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73",
-      "observedMissingBatches": 9,
-      "persistedSamplesInMissingBatches": 300,
-      "scope": "Publisher persistence/PUBACK verified; not proof of every subscriber receipt. Missing batch timestamps precede logged disconnect; historical host/server clock synchronization not independently verified."
-    },
-    {
-      "evidence": "artifacts/checkpoints/reconnect-20260921T1308/summary.json",
-      "outageAt": "2026-09-21T13:08:35.250Z",
-      "recoveredAt": "2026-09-21T13:08:36.513Z",
-      "laterApiFailureAt": "2026-09-21T13:09:26.630Z",
-      "cause": "unknown; local_verification_failed and state poll unavailable",
-      "runtimeMutation": false
-    },
-    {
-      "evidence": "artifacts/checkpoints/reconnect-20260921T1325/summary.json",
-      "outageAt": "2026-09-21T13:25:53.396Z",
-      "recoveredAt": "2026-09-21T13:25:54.682Z",
-      "symptom": "health timeout5004ms",
-      "observedMissingBatches": 8,
-      "persistedSamplesInMissingBatches": 300,
-      "podUidUnchanged": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73",
-      "hostPowerEvidence": "artifacts/checkpoints/host-pause-20260921T1325/evidence.json",
-      "scope": "Publisher continuity/PUBACK confirmed; subscriber receipt not guaranteed. Local75.418s cadence gap overlaps recorded host sleep/wake; sole cause and exact stopped interval not established."
-    }
-  ],
-  "nextOperationalReview": "Continue existing observers/supervisor, check freshness and counter increases without resets. Temporary power guard verified; do not attribute all failures to sleep. Implement1.4candidate in isolation; deployed1.3 remains fallback.",
+  "currentObservationIncidents": [],
+  "nextOperationalReview": "Finalize1.4manifest; keep existing healthy supervisor81174 andobservers36193/92936. First-hour1.4prefix becomes available after14:49:42UTC. Recheck host/data/local capacity before finalsnapshot; no automatic deletion. No duplicate rollouts or completedrestore repetitions.",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.4",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
@@ -320,7 +348,7 @@
     "sourceCommit": "fdd0491a5c08901962f46ac845f8582921150d45",
     "buildOwner": "/root/deployment",
     "evidenceDirectory": "deploy/verification/candidate-fdd0491",
-    "phase": "1.4supervisor Ready; primary/auditnotyetrestarted pending planned outboxrestartproof",
+    "phase": "Allcandidate17restore/7mainproofs PASS, bothrigs0/noPods/owned3105/18885closed; stableprovenance finalization",
     "mainRuntimeUnchanged": true,
     "retry": "Inspect existing handles and evidence before any repeat build/push/registration; content/source/digest must match.",
     "localRegressionHandleTerminal": 79493,
@@ -331,7 +359,6 @@
     ],
     "backupMetadata": "deploy/verification/pre-1.4.0-backup.json",
     "backupJournalDirectory": "artifacts/operations/backups",
-    "registryForwardHandle": 29782,
     "exactImageEvidence": "deploy/verification/candidate-fdd0491/provenance.json",
     "backupHandleTerminal": 95193,
     "intendedImage": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4",
@@ -345,9 +372,41 @@
     "priorObservationArchive": "artifacts/checkpoints/soak-1.3.0/summary.json",
     "rolloutLog": "deploy/verification/candidate-fdd0491/rollout.log",
     "rolloutHandleTerminal": 1231,
-    "remoteMqttHandle": 42908,
     "remoteMqttRtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
     "remoteMqttEvidence": "deploy/verification/candidate-fdd0491/mqtt.json",
-    "remoteCommandRetry": "On uncertainty inspect original commandId/report and targetRTU recentcommands. Never blindly rerun script with a new UUID."
+    "remoteCommandRetry": "On uncertainty inspect original commandId/report and targetRTU recentcommands. Never blindly rerun script with a new UUID.",
+    "remoteMqttHandleTerminal": 42908,
+    "outboxRtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+    "outboxOriginalOffline": false,
+    "outboxRecoveryPorts": [
+      3108,
+      18888
+    ],
+    "outboxSourceSha256": "6d8bfb2839b5476961bc288e55f4659fcd31ea8d22c1409ae0123ee195f4a70d",
+    "outboxEvidence": "deploy/verification/candidate-fdd0491/outbox-restart.json",
+    "outboxRetry": "Inspect actual Pod UID, this RTU offline flag and original persisted outbox before retry. Recovery uses owned3108/18888 ports; local1.4fixture3107 preserved. Restore original offline=false on any uncertain result.",
+    "outboxHandleTerminal": 81784,
+    "stableBackupMetadata": "deploy/verification/stable-backup-fdd0491.json",
+    "stableBackupHandleTerminal": 8789,
+    "restoreOwner": "/root/deployment",
+    "restoreDeployment": "grid-restore-fdd0491",
+    "backwardRestoreDeployment": "grid-restore-back-fdd0491",
+    "restorePorts": [
+      3105,
+      18885
+    ],
+    "snapshotSha256": "be09a5f5e1721970ec7f25197fcf4f3db504f6f6ad4765080ba301a0c7fd760a",
+    "restoreRetry": "Ask current owner for in-flight handles; inspect exact deployment/PVC/initSHA and originaldata before retry. Never create another rigname on uncertain response; preserve original main5RTUs.",
+    "mainBrowserHandleTerminal": 79528,
+    "restoreProgress": {
+      "stage": "complete",
+      "summary": "deploy/verification/candidate-fdd0491/restore-summary.json",
+      "allRestoreHandlesTerminal": true,
+      "replicasAndPods": 0,
+      "ownedTunnelClosed": true
+    },
+    "registryForwardHandleTerminal": 29782,
+    "registryForwardCleanup": "deploy/verification/candidate-fdd0491/registry-forward-cleanup.json",
+    "registryFutureRule": "Local15050closed; open newownedforward only for future explicitimagework afterlistenercheck; remote registry retained."
   }
 }

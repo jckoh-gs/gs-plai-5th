@@ -1,10 +1,10 @@
 # 최종 30분: 동일 스냅샷 복원과 릴리스 연결
 
-준비 문서이며 실행 증거가 아니다. 2026-09-21 검토 기준, 런타임3fa3ba0 / 제품1.3.0 / PRD1.10을 기준으로 한다. 동결21:37:33Z, 종료22:07:33Z는 변경하지 않는다. 현재420466688바이트/12:17 백업(b515ef26…)은 별도 PVC에서1.3 및 하위1.2 복원·UI·MQTT 검증까지 완료되었다. 이전169MB/335MB 백업은 별도 이력이며 새 최종 백업의 복원 증거로 대체하지 않는다.
+준비 문서이며 실행 증거가 아니다. 현재 기능상 안정 기준은 제품1.4.0 / PRD1.11 / runtimefdd0491 / imagec19d550f다. 독립 복원17개 및 main proof7개 검증 후 stable-v1.4.0과 stable-runtime-v1.4.0-fdd0491 태그를 로컬 생성했다. 선택한 정확한 백업은594944000바이트/be09a5f5이며1.4 및 하위1.3 복원을 검증했다. run.json의 backup/stableCheckpoint가 선택 기준이며 불변 매니페스트 생성·검증은 별도 후속 게이트다. 동결21:37:33Z, 종료22:07:33Z는 변경하지 않는다. 역사적 fallback420466688바이트/12:17 백업(b515ef26…)은 별도 PVC에서1.3 및 하위1.2 복원·UI·MQTT 검증까지 완료되었다. 이전169MB/335MB 백업은 별도 이력이며 새 최종 백업의 복원 증거로 대체하지 않는다.
 
 ## 선행 준비와 한계
 
-프로젝트 루트에서 Node24+, Python3, kubectl charles-k3s 접근, Chrome/Playwright 런타임, 기존 비밀 파일 `artifacts/private/deploy/{api-token,client-password}`가 필요하다. 비밀을 명령행/로그/공개 Git에 넣지 않는다. 실제 클러스터의 여유 디스크를 동결 전에 확인한다. 원본PVC의 새 SQLite 및 압축본, 별도 복원PVC, 로컬 전송본을 모두 보관할 공간이 필요하며 현재 파일 크기로 밤의 크기를 보장하지 않는다. 이미지가 이미 노드에 있더라도 레지스트리와 PVC 상태를 읽기 점검한다.
+프로젝트 루트에서 Node24+, Python3, kubectl charles-k3s 접근, Chrome/Playwright 런타임, 기존 비밀 파일 `artifacts/private/deploy/{api-token,client-password}`가 필요하다. 비밀을 명령행/로그/공개 Git에 넣지 않는다. 실제 클러스터의 여유 디스크를 동결 전에 다시 확인한다. 최근 관측 /data 전체파일5031428043바이트는 단일594944000바이트 snapshot 크기와 다르다. available78692749312바이트는 공유 host 파일시스템 여유이며 PVC 전용 예약량이 아니다. 최종 snapshot·압축파일·로컬복사·복원PVC의 중복 공간과 이후 성장량을 함께 계산하며 자동삭제하지 않는다. 원본PVC의 새 SQLite 및 압축본, 별도 복원PVC, 로컬 전송본을 모두 보관할 공간이 필요하며 현재 파일 크기로 밤의 크기를 보장하지 않는다. 이미지가 이미 노드에 있더라도 레지스트리와 PVC 상태를 읽기 점검한다.
 
 `deploy-restore-rig.py`는 기존 DB가 있으면 복사를 건너뛴다. 새 검증에는 새 고유 이름/PVC를 사용한다. `grid-restore-final-20260921`이 존재하면 먼저 실제 상태와 이번 시도의 기록을 대조한다. 다른 검증에서 사용한 리소스임이 확인된 경우에만 별도 이름을 선택한다. 이번 apply의 응답을 잃은 경우에는 새 이름으로 중복 실행하지 않는다. 원본PVC는 복원 init에 읽기 전용으로만 연결되고 운영DB는 수정하지 않는다.
 
@@ -15,11 +15,11 @@
 ## 시간 배분과 병행
 
 - 0~3분: 최종 건강상태/실행 이미지 확인, 새 정상 백업과 전송·해시 검증. 목표는90초 이내, 네트워크/전송 예산180초다. NETWORK-RECOVERY.md에 기록한 동기I/O 중간취소 한계는 유지한다. 영상 원고/덱 배치 준비는 병행 가능하지만 매니페스트 고정 전에 최종 렌더를 시작하지 않는다.
-- 3~6분: 새로운 격리PVC 복원, 실제 이미지ID 확인, 원본 데이터 비교. UI 검증과 MQTT 검증은 같은 복원앱에서 병행 가능하다. MQTT는 최대75초 telemetry 대기+제어/재연결 여유가 필요하다. 이전1.2 복원 전체는 약3분30초(하위1.1 검증 포함)였다. 이번은 현 버전 복원을 필수로 하고 이미 증거가 있는 하위1.2 반복은 마지막30분 필수경로에서 제외한다.
+- 3~6분: 새로운 격리PVC 복원, 실제 이미지ID 확인, 원본 데이터 비교. UI 검증과 MQTT 검증은 같은 복원앱에서 병행 가능하다. MQTT는 최대75초 telemetry 대기+제어/재연결 여유가 필요하다. 이전1.2 복원 전체는 약3분30초(하위1.1 검증 포함)였다. 이번은 현 버전 복원을 필수로 하고 이미 검증된 이전 버전 반복은 마지막30분 필수경로에서 제외한다.
 - 6~7분: 복원 결과9개가 아닌 이번 실제 실행 결과만 요약, 복원배포0/Pod0/터널종료, acceptance와run 백업 연결, 증거커밋, 매니페스트 및 원격검증. 약1분 예상.
 - 7~15분: 새 최종 영상 녹화·음성·합성·전체디코딩·내용/화면검수. 준비된 장면 기준이며 실패 시 남은 시간으로 재시도 여부를 판단한다.
 - 15~23분: 검수된 동일 영상의 실제 캡처와 타임코드로 PPT 생성/재수입/전장렌더, 슬라이드 검수.
-- 23~30분: 인도 해시/상대링크/소스/검수영수증 검사 및 제한 사항 기록. 이는 예상 예산이지30분 완료 보장이 아니다. 7분까지 새 백업 복원 증명이 끝나지 않으면 이미 전체 복원 검증된420466688바이트1.3 체크포인트를 계속 선택하고 새 백업은 추가 백업으로만 기록하는 대안을 메인이 판단한다. 최종 매니페스트의 backup은 반드시 실제 증명된 선택 스냅샷이어야 한다.
+- 23~30분: 인도 해시/상대링크/소스/검수영수증 검사 및 제한 사항 기록. 이는 예상 예산이지30분 완료 보장이 아니다. 7분까지 새 백업 복원 증명이 끝나지 않으면 그 시점의 검증된 stable 체크포인트(현재594944000바이트/be09a5f5의1.4)를 선택하고 새 백업은 추가 백업으로만 기록하는 대안을 메인이 판단한다. 최종 매니페스트의 backup은 반드시 실제 증명된 선택 스냅샷이어야 한다. 해당 stable의 정확한 snapshot 복원 근거가 없으면 버전명이나 파일 존재로 검증을 추론하지 않는다. 이전1.3/b515ef26 백업은 별도 역사적 fallback이며1.4 증거와 혼합하지 않는다.
 
 ## 실행 명령: 백업부터 복원
 
@@ -32,6 +32,12 @@ set -e
 FINAL_EVIDENCE=deploy/verification/final-restore-20260921
 FINAL_BACKUP=deploy/verification/final-backup-20260921.json
 FINAL_RIG=grid-restore-final-20260921
+FINAL_VERSION=$(node -p 'JSON.parse(require("fs").readFileSync("docs/operations/run.json")).deployment.productVersion')
+RESTORE_HTTP_PORT=3105
+RESTORE_MQTT_PORT=18885
+export FINAL_EVIDENCE FINAL_BACKUP FINAL_RIG FINAL_VERSION RESTORE_HTTP_PORT RESTORE_MQTT_PORT
+export RESTORE_API="http://127.0.0.1:$RESTORE_HTTP_PORT"
+export RESTORE_MQTT="mqtt://127.0.0.1:$RESTORE_MQTT_PORT"
 mkdir -p "$FINAL_EVIDENCE"
 final_command() {
   final_command_limit="$1"
@@ -43,35 +49,40 @@ FINAL_IMAGE=$(node -p 'JSON.parse(require("fs").readFileSync(process.argv[1])).a
 FINAL_BASENAME=$(node -p 'require("path").basename(JSON.parse(require("fs").readFileSync(process.argv[1])).remotePath)' "$FINAL_BACKUP")
 FINAL_SHA=$(node -p 'JSON.parse(require("fs").readFileSync(process.argv[1])).sha256' "$FINAL_BACKUP")
 FINAL_LOCAL=$(node -p 'JSON.parse(require("fs").readFileSync(process.argv[1])).localPath' "$FINAL_BACKUP")
+export FINAL_IMAGE FINAL_BASENAME FINAL_SHA FINAL_LOCAL
 python3 scripts/deploy-restore-rig.py --name "$FINAL_RIG" --image "$FINAL_IMAGE" --backup "$FINAL_BASENAME" --expected-sha256 "$FINAL_SHA" > "$FINAL_EVIDENCE/create.log" 2>&1
 final_command 20 kubectl --context charles-k3s -n gs-plai-5h get pods -l "app=$FINAL_RIG" -o json > "$FINAL_EVIDENCE/pods.json"
 node --input-type=module -e 'import{readFileSync}from"node:fs";import{verifiedAppPod}from"./scripts/pod-identity.mjs";console.log(JSON.stringify(verifiedAppPod(JSON.parse(readFileSync(process.argv[1])),process.argv[2])))' "$FINAL_EVIDENCE/pods.json" "$FINAL_IMAGE" > "$FINAL_EVIDENCE/runtime-identity.json"
 final_command 20 kubectl --context charles-k3s -n gs-plai-5h logs deployment/"$FINAL_RIG" -c restore-database > "$FINAL_EVIDENCE/restore-init.log"
 ```
 
-별도 세션에서 다음 터널을 시작하고 세션ID/PID를 기록한다. 이후 명령은 원래 전용 셸에서 같은 변수를 유지한다.
+다음 터널은 위 변수를 export한 전용 셸의 자식 세션에서 시작하고 세션ID/PID를 기록한다. 별도 독립 셸은 부모 변수를 상속하지 않으므로 위 설정 블록의 선택값만 동일하게 다시 설정한 후 실행한다(백업 생성 명령은 다시 실행하지 않는다). 이하 병행 작업도 같은 export값을 상속하거나 명시적으로 동일값을 설정한다. final_command 셸 함수는 독립 셸에 자동 전달되지 않으므로 이 함수를 쓰는 후속 단계는 원래 전용 셸에서 실행하거나 함수 정의를 다시 읽는다. 후속 명령 전 변수 누락은 아래 guard로 실패시킨다.
 
 ```sh
-kubectl --context charles-k3s -n gs-plai-5h port-forward --address=127.0.0.1 deployment/grid-restore-final-20260921 3105:3001 18885:1883
+: "${FINAL_RIG:?}" "${RESTORE_HTTP_PORT:?}" "${RESTORE_MQTT_PORT:?}"
+kubectl --context charles-k3s -n gs-plai-5h port-forward --address=127.0.0.1 "deployment/$FINAL_RIG" "$RESTORE_HTTP_PORT:3001" "$RESTORE_MQTT_PORT:1883"
 ```
 
 ```sh
-RESTORE_API=http://127.0.0.1:3105 RESTORE_BACKUP_FILE="$FINAL_LOCAL" RESTORE_EVIDENCE_FILE="$FINAL_EVIDENCE/data.json" node scripts/remote-restore-check.mjs > "$FINAL_EVIDENCE/data.log" 2>&1
-REMOTE_API=http://127.0.0.1:3105 EXPECTED_VERSION=1.3.0 REMOTE_EVIDENCE_FILE="$FINAL_EVIDENCE/preview.json" node scripts/remote-preview.mjs > "$FINAL_EVIDENCE/preview.log" 2>&1
+: "${RESTORE_API:?}" "${FINAL_LOCAL:?}" "${FINAL_EVIDENCE:?}" "${FINAL_VERSION:?}"
+RESTORE_BACKUP_FILE="$FINAL_LOCAL" RESTORE_EVIDENCE_FILE="$FINAL_EVIDENCE/data.json" node scripts/remote-restore-check.mjs > "$FINAL_EVIDENCE/data.log" 2>&1
+REMOTE_API="$RESTORE_API" EXPECTED_VERSION="$FINAL_VERSION" REMOTE_EVIDENCE_FILE="$FINAL_EVIDENCE/preview.json" node scripts/remote-preview.mjs > "$FINAL_EVIDENCE/preview.log" 2>&1
 ```
 
 다음 두 가지는 별도 세션으로 병행한다. 원본 데이터 비교를 먼저 완료한다. 테스트 RTU는 현 백업에서 해당ID·풍력·2기·rated1000을 확인하고 fault 없음/125kW 도달 가능을 점검한다. 조건이 바뀌었으면 `REMOTE_PLANT_ID`를 생략하여 복원본에만 새 테스트RTU를 생성한다. 운영 앱에 테스트를 보내지 않는다.
 
 ```sh
-REMOTE_API=http://127.0.0.1:3105 REMOTE_MQTT=mqtt://127.0.0.1:18885 REMOTE_PLANT_ID=f49684af-b7dd-47b2-b360-8e7d28ef751b REMOTE_EVIDENCE_FILE=deploy/verification/final-restore-20260921/mqtt.json node scripts/remote-integration.mjs > deploy/verification/final-restore-20260921/mqtt.log 2>&1
+: "${RESTORE_API:?}" "${RESTORE_MQTT:?}" "${FINAL_EVIDENCE:?}"
+REMOTE_API="$RESTORE_API" REMOTE_MQTT="$RESTORE_MQTT" REMOTE_PLANT_ID=f49684af-b7dd-47b2-b360-8e7d28ef751b REMOTE_EVIDENCE_FILE="$FINAL_EVIDENCE/mqtt.json" node scripts/remote-integration.mjs > "$FINAL_EVIDENCE/mqtt.log" 2>&1
 ```
 
 ```sh
 export PLAYWRIGHT_NODE_MODULES=/Users/charleskoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules
 export API_TOKEN_FILE=artifacts/private/deploy/api-token
-export GRID_URL=http://127.0.0.1:3105
-QA_DIRECTORY=deploy/verification/final-restore-20260921/browser node scripts/browser-check.cjs > deploy/verification/final-restore-20260921/browser.log 2>&1
-QA_DIRECTORY=deploy/verification/final-restore-20260921/export node scripts/browser-command-export.cjs > deploy/verification/final-restore-20260921/export.log 2>&1
+: "${RESTORE_API:?}" "${FINAL_EVIDENCE:?}"
+export GRID_URL="$RESTORE_API"
+QA_DIRECTORY="$FINAL_EVIDENCE/browser" node scripts/browser-check.cjs > "$FINAL_EVIDENCE/browser.log" 2>&1
+QA_DIRECTORY="$FINAL_EVIDENCE/export" node scripts/browser-command-export.cjs > "$FINAL_EVIDENCE/export.log" 2>&1
 ```
 
 모든 프로세스 exit0 및 각 result PASS를 확인한 후 summary.json에 백업 메타데이터 경로/remotePath/localPath/sha256/bytes, 복원deployment, imageID/UID, 각각의 결과 파일, 운영DB 미수정 여부를 기록한다. FAIL/누락은 PASS로 바꾸지 않는다. 메타데이터의 해시를 이전 백업 기록에서 복사하지 않는다.

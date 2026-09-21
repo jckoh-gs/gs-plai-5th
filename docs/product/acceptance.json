@@ -5380,7 +5380,7 @@
     {
       "id": "FR-CONTROL-FORM-01",
       "description": "일반 목표의 서버 범위·표현 가능한 만료일",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
@@ -5413,14 +5413,98 @@
         {
           "path": "artifacts/checkpoints/candidate-1.4-advanced.log",
           "sha256": "4c11f003d246eb898488bf7a3b72e81510a87314e30bbfd894c589501f3325df"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/main-acceptance.json",
+          "sha256": "faf548ad9926b1234b237eb75d60cbd4afef3c7ad9820ae0bba353b05dba8416"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-summary.json",
+          "sha256": "f53dbbbb85e2255bc1c0ce5997a95bc63ba19de084a122c4d62c51fc31479558"
+        },
+        {
+          "path": "deploy/verification/stable-backup-fdd0491.json",
+          "sha256": "a122d8b72e58c891ac26aa13016dd1c07d221ff82023ac902b015fceabeef109"
+        },
+        {
+          "path": "docs/product/REVIEW-021.md",
+          "sha256": "f20ea1114180b36b5a17a42f6fd673e1e73baa959b49826da1508b6a3de70fee"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-init.json",
+          "sha256": "7bab8ec340dfe003188985065e02579cf891f252a45a84543cf1093e732184cc"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-preview.json",
+          "sha256": "ab6240303e49a4737d8091dbb7fba1eb5e40b81737d57e6ffde0b99ae632bb99"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-mqtt.json",
+          "sha256": "0a6407317991b5f6b78cb5f481904958c7d33fb9f3901821fab95d89a1cf0061"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-export/result.json",
+          "sha256": "b0d0095285bd68651b7276a19395d5973ebb4188b65acd8e3c04dfbff307ed23"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-scenarios/result.json",
+          "sha256": "c1391bb10b4a99b417f7b1729c8b9383fd17d72cef9b9ad3b9d87e5f41f87ed8"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-served-assets.json",
+          "sha256": "c862ec4dcc72d0a4aace5cc982bf4c67420b804ee836a493283ae0f9955c6a37"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-init.json",
+          "sha256": "7bab8ec340dfe003188985065e02579cf891f252a45a84543cf1093e732184cc"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-preview.json",
+          "sha256": "e42e55bf941befffd266abb20feafc75fa92966091d3139a6f61fb1a73026147"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-mqtt.json",
+          "sha256": "4feff61061d63a66c6bb4990a2256e0c7f170916b649d7bbad3ea38402c7d2f5"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-export/result.json",
+          "sha256": "1ca1057b26befafaab0a47520f328380075751cf2413d97b4148e3d0bcff5536"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-scenarios/result.json",
+          "sha256": "80ee4486697b4445b64513be9cdd64f1421dda284ee2a45cecb3e6265d526fb6"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-served-assets.json",
+          "sha256": "f51bd3bc5f24901e6a3c28d2ca3cf79cb1ed4f370c412f87ef2f08f83cf84189"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restored-command-form/result.json",
+          "sha256": "44be146ef2c9fe4108f04c0f49d084f18d2ea5d8a750303783fceb38cb767929"
         }
       ],
-      "assessment": "fdd0491 local1.4 input/date/ARIA/RTU-switch and actual MQTT command evidence reviewed independently.43browserchecks plus direct-correction delta,240workstation tests+3independent input tests and existing4browserregressions. Boundary-only checks are not all endpoint commands. Exactimage77app tests and security completed separately; remote1.4 rollout/backup/restore/stable pending. Finalmedia/time gates distinct."
+      "assessment": "REVIEW021 independently verified actual1.4 main7proofs and17restore proofs. Exact594944000byte/be09snapshot restored to fresh1.4 and separate1.3 with original5RTUs preserved beforefixtures; actualservedbundle, auth/UI/preview/export/scenario/MQTT and1.4form44checks PASS. Bothrigs0/noPods/ownedtunnelsclosed. Manifest/tag provenance and finalmedia/time gates remain separately checked."
     },
     {
       "id": "UI-11",
       "description": "범위·날짜 오류 접근성과 RTU 격리",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
@@ -5453,14 +5537,98 @@
         {
           "path": "artifacts/checkpoints/candidate-1.4-advanced.log",
           "sha256": "4c11f003d246eb898488bf7a3b72e81510a87314e30bbfd894c589501f3325df"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/main-acceptance.json",
+          "sha256": "faf548ad9926b1234b237eb75d60cbd4afef3c7ad9820ae0bba353b05dba8416"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-summary.json",
+          "sha256": "f53dbbbb85e2255bc1c0ce5997a95bc63ba19de084a122c4d62c51fc31479558"
+        },
+        {
+          "path": "deploy/verification/stable-backup-fdd0491.json",
+          "sha256": "a122d8b72e58c891ac26aa13016dd1c07d221ff82023ac902b015fceabeef109"
+        },
+        {
+          "path": "docs/product/REVIEW-021.md",
+          "sha256": "f20ea1114180b36b5a17a42f6fd673e1e73baa959b49826da1508b6a3de70fee"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-init.json",
+          "sha256": "7bab8ec340dfe003188985065e02579cf891f252a45a84543cf1093e732184cc"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-preview.json",
+          "sha256": "ab6240303e49a4737d8091dbb7fba1eb5e40b81737d57e6ffde0b99ae632bb99"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-mqtt.json",
+          "sha256": "0a6407317991b5f6b78cb5f481904958c7d33fb9f3901821fab95d89a1cf0061"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-export/result.json",
+          "sha256": "b0d0095285bd68651b7276a19395d5973ebb4188b65acd8e3c04dfbff307ed23"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-scenarios/result.json",
+          "sha256": "c1391bb10b4a99b417f7b1729c8b9383fd17d72cef9b9ad3b9d87e5f41f87ed8"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-served-assets.json",
+          "sha256": "c862ec4dcc72d0a4aace5cc982bf4c67420b804ee836a493283ae0f9955c6a37"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-init.json",
+          "sha256": "7bab8ec340dfe003188985065e02579cf891f252a45a84543cf1093e732184cc"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-preview.json",
+          "sha256": "e42e55bf941befffd266abb20feafc75fa92966091d3139a6f61fb1a73026147"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-mqtt.json",
+          "sha256": "4feff61061d63a66c6bb4990a2256e0c7f170916b649d7bbad3ea38402c7d2f5"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-export/result.json",
+          "sha256": "1ca1057b26befafaab0a47520f328380075751cf2413d97b4148e3d0bcff5536"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-scenarios/result.json",
+          "sha256": "80ee4486697b4445b64513be9cdd64f1421dda284ee2a45cecb3e6265d526fb6"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-served-assets.json",
+          "sha256": "f51bd3bc5f24901e6a3c28d2ca3cf79cb1ed4f370c412f87ef2f08f83cf84189"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restored-command-form/result.json",
+          "sha256": "44be146ef2c9fe4108f04c0f49d084f18d2ea5d8a750303783fceb38cb767929"
         }
       ],
-      "assessment": "fdd0491 local1.4 input/date/ARIA/RTU-switch and actual MQTT command evidence reviewed independently.43browserchecks plus direct-correction delta,240workstation tests+3independent input tests and existing4browserregressions. Boundary-only checks are not all endpoint commands. Exactimage77app tests and security completed separately; remote1.4 rollout/backup/restore/stable pending. Finalmedia/time gates distinct."
+      "assessment": "REVIEW021 independently verified actual1.4 main7proofs and17restore proofs. Exact594944000byte/be09snapshot restored to fresh1.4 and separate1.3 with original5RTUs preserved beforefixtures; actualservedbundle, auth/UI/preview/export/scenario/MQTT and1.4form44checks PASS. Bothrigs0/noPods/ownedtunnelsclosed. Manifest/tag provenance and finalmedia/time gates remain separately checked."
     },
     {
       "id": "AT-CONTROL-FORM-01-01",
       "description": "범위 밖 버튼·Enter 제출 차단",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
@@ -5493,14 +5661,98 @@
         {
           "path": "artifacts/checkpoints/candidate-1.4-advanced.log",
           "sha256": "4c11f003d246eb898488bf7a3b72e81510a87314e30bbfd894c589501f3325df"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/main-acceptance.json",
+          "sha256": "faf548ad9926b1234b237eb75d60cbd4afef3c7ad9820ae0bba353b05dba8416"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-summary.json",
+          "sha256": "f53dbbbb85e2255bc1c0ce5997a95bc63ba19de084a122c4d62c51fc31479558"
+        },
+        {
+          "path": "deploy/verification/stable-backup-fdd0491.json",
+          "sha256": "a122d8b72e58c891ac26aa13016dd1c07d221ff82023ac902b015fceabeef109"
+        },
+        {
+          "path": "docs/product/REVIEW-021.md",
+          "sha256": "f20ea1114180b36b5a17a42f6fd673e1e73baa959b49826da1508b6a3de70fee"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-init.json",
+          "sha256": "7bab8ec340dfe003188985065e02579cf891f252a45a84543cf1093e732184cc"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-preview.json",
+          "sha256": "ab6240303e49a4737d8091dbb7fba1eb5e40b81737d57e6ffde0b99ae632bb99"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-mqtt.json",
+          "sha256": "0a6407317991b5f6b78cb5f481904958c7d33fb9f3901821fab95d89a1cf0061"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-export/result.json",
+          "sha256": "b0d0095285bd68651b7276a19395d5973ebb4188b65acd8e3c04dfbff307ed23"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-scenarios/result.json",
+          "sha256": "c1391bb10b4a99b417f7b1729c8b9383fd17d72cef9b9ad3b9d87e5f41f87ed8"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-served-assets.json",
+          "sha256": "c862ec4dcc72d0a4aace5cc982bf4c67420b804ee836a493283ae0f9955c6a37"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-init.json",
+          "sha256": "7bab8ec340dfe003188985065e02579cf891f252a45a84543cf1093e732184cc"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-preview.json",
+          "sha256": "e42e55bf941befffd266abb20feafc75fa92966091d3139a6f61fb1a73026147"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-mqtt.json",
+          "sha256": "4feff61061d63a66c6bb4990a2256e0c7f170916b649d7bbad3ea38402c7d2f5"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-export/result.json",
+          "sha256": "1ca1057b26befafaab0a47520f328380075751cf2413d97b4148e3d0bcff5536"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-scenarios/result.json",
+          "sha256": "80ee4486697b4445b64513be9cdd64f1421dda284ee2a45cecb3e6265d526fb6"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-served-assets.json",
+          "sha256": "f51bd3bc5f24901e6a3c28d2ca3cf79cb1ed4f370c412f87ef2f08f83cf84189"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restored-command-form/result.json",
+          "sha256": "44be146ef2c9fe4108f04c0f49d084f18d2ea5d8a750303783fceb38cb767929"
         }
       ],
-      "assessment": "fdd0491 local1.4 input/date/ARIA/RTU-switch and actual MQTT command evidence reviewed independently.43browserchecks plus direct-correction delta,240workstation tests+3independent input tests and existing4browserregressions. Boundary-only checks are not all endpoint commands. Exactimage77app tests and security completed separately; remote1.4 rollout/backup/restore/stable pending. Finalmedia/time gates distinct."
+      "assessment": "REVIEW021 independently verified actual1.4 main7proofs and17restore proofs. Exact594944000byte/be09snapshot restored to fresh1.4 and separate1.3 with original5RTUs preserved beforefixtures; actualservedbundle, auth/UI/preview/export/scenario/MQTT and1.4form44checks PASS. Bothrigs0/noPods/ownedtunnelsclosed. Manifest/tag provenance and finalmedia/time gates remain separately checked."
     },
     {
       "id": "AT-CONTROL-FORM-01-02",
       "description": "경계·소수·비유한 입력",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
@@ -5533,14 +5785,98 @@
         {
           "path": "artifacts/checkpoints/candidate-1.4-advanced.log",
           "sha256": "4c11f003d246eb898488bf7a3b72e81510a87314e30bbfd894c589501f3325df"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/main-acceptance.json",
+          "sha256": "faf548ad9926b1234b237eb75d60cbd4afef3c7ad9820ae0bba353b05dba8416"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-summary.json",
+          "sha256": "f53dbbbb85e2255bc1c0ce5997a95bc63ba19de084a122c4d62c51fc31479558"
+        },
+        {
+          "path": "deploy/verification/stable-backup-fdd0491.json",
+          "sha256": "a122d8b72e58c891ac26aa13016dd1c07d221ff82023ac902b015fceabeef109"
+        },
+        {
+          "path": "docs/product/REVIEW-021.md",
+          "sha256": "f20ea1114180b36b5a17a42f6fd673e1e73baa959b49826da1508b6a3de70fee"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-init.json",
+          "sha256": "7bab8ec340dfe003188985065e02579cf891f252a45a84543cf1093e732184cc"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-preview.json",
+          "sha256": "ab6240303e49a4737d8091dbb7fba1eb5e40b81737d57e6ffde0b99ae632bb99"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-mqtt.json",
+          "sha256": "0a6407317991b5f6b78cb5f481904958c7d33fb9f3901821fab95d89a1cf0061"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-export/result.json",
+          "sha256": "b0d0095285bd68651b7276a19395d5973ebb4188b65acd8e3c04dfbff307ed23"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-scenarios/result.json",
+          "sha256": "c1391bb10b4a99b417f7b1729c8b9383fd17d72cef9b9ad3b9d87e5f41f87ed8"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-served-assets.json",
+          "sha256": "c862ec4dcc72d0a4aace5cc982bf4c67420b804ee836a493283ae0f9955c6a37"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-init.json",
+          "sha256": "7bab8ec340dfe003188985065e02579cf891f252a45a84543cf1093e732184cc"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-preview.json",
+          "sha256": "e42e55bf941befffd266abb20feafc75fa92966091d3139a6f61fb1a73026147"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-mqtt.json",
+          "sha256": "4feff61061d63a66c6bb4990a2256e0c7f170916b649d7bbad3ea38402c7d2f5"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-export/result.json",
+          "sha256": "1ca1057b26befafaab0a47520f328380075751cf2413d97b4148e3d0bcff5536"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-scenarios/result.json",
+          "sha256": "80ee4486697b4445b64513be9cdd64f1421dda284ee2a45cecb3e6265d526fb6"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-served-assets.json",
+          "sha256": "f51bd3bc5f24901e6a3c28d2ca3cf79cb1ed4f370c412f87ef2f08f83cf84189"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restored-command-form/result.json",
+          "sha256": "44be146ef2c9fe4108f04c0f49d084f18d2ea5d8a750303783fceb38cb767929"
         }
       ],
-      "assessment": "fdd0491 local1.4 input/date/ARIA/RTU-switch and actual MQTT command evidence reviewed independently.43browserchecks plus direct-correction delta,240workstation tests+3independent input tests and existing4browserregressions. Boundary-only checks are not all endpoint commands. Exactimage77app tests and security completed separately; remote1.4 rollout/backup/restore/stable pending. Finalmedia/time gates distinct."
+      "assessment": "REVIEW021 independently verified actual1.4 main7proofs and17restore proofs. Exact594944000byte/be09snapshot restored to fresh1.4 and separate1.3 with original5RTUs preserved beforefixtures; actualservedbundle, auth/UI/preview/export/scenario/MQTT and1.4form44checks PASS. Bothrigs0/noPods/ownedtunnelsclosed. Manifest/tag provenance and finalmedia/time gates remain separately checked."
     },
     {
       "id": "AT-CONTROL-FORM-01-03",
       "description": "Date·서버 ISO 호환성",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
@@ -5573,14 +5909,98 @@
         {
           "path": "artifacts/checkpoints/candidate-1.4-advanced.log",
           "sha256": "4c11f003d246eb898488bf7a3b72e81510a87314e30bbfd894c589501f3325df"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/main-acceptance.json",
+          "sha256": "faf548ad9926b1234b237eb75d60cbd4afef3c7ad9820ae0bba353b05dba8416"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-summary.json",
+          "sha256": "f53dbbbb85e2255bc1c0ce5997a95bc63ba19de084a122c4d62c51fc31479558"
+        },
+        {
+          "path": "deploy/verification/stable-backup-fdd0491.json",
+          "sha256": "a122d8b72e58c891ac26aa13016dd1c07d221ff82023ac902b015fceabeef109"
+        },
+        {
+          "path": "docs/product/REVIEW-021.md",
+          "sha256": "f20ea1114180b36b5a17a42f6fd673e1e73baa959b49826da1508b6a3de70fee"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-init.json",
+          "sha256": "7bab8ec340dfe003188985065e02579cf891f252a45a84543cf1093e732184cc"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-preview.json",
+          "sha256": "ab6240303e49a4737d8091dbb7fba1eb5e40b81737d57e6ffde0b99ae632bb99"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-mqtt.json",
+          "sha256": "0a6407317991b5f6b78cb5f481904958c7d33fb9f3901821fab95d89a1cf0061"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-export/result.json",
+          "sha256": "b0d0095285bd68651b7276a19395d5973ebb4188b65acd8e3c04dfbff307ed23"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-scenarios/result.json",
+          "sha256": "c1391bb10b4a99b417f7b1729c8b9383fd17d72cef9b9ad3b9d87e5f41f87ed8"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-served-assets.json",
+          "sha256": "c862ec4dcc72d0a4aace5cc982bf4c67420b804ee836a493283ae0f9955c6a37"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-init.json",
+          "sha256": "7bab8ec340dfe003188985065e02579cf891f252a45a84543cf1093e732184cc"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-preview.json",
+          "sha256": "e42e55bf941befffd266abb20feafc75fa92966091d3139a6f61fb1a73026147"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-mqtt.json",
+          "sha256": "4feff61061d63a66c6bb4990a2256e0c7f170916b649d7bbad3ea38402c7d2f5"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-export/result.json",
+          "sha256": "1ca1057b26befafaab0a47520f328380075751cf2413d97b4148e3d0bcff5536"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-scenarios/result.json",
+          "sha256": "80ee4486697b4445b64513be9cdd64f1421dda284ee2a45cecb3e6265d526fb6"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-served-assets.json",
+          "sha256": "f51bd3bc5f24901e6a3c28d2ca3cf79cb1ed4f370c412f87ef2f08f83cf84189"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restored-command-form/result.json",
+          "sha256": "44be146ef2c9fe4108f04c0f49d084f18d2ea5d8a750303783fceb38cb767929"
         }
       ],
-      "assessment": "fdd0491 local1.4 input/date/ARIA/RTU-switch and actual MQTT command evidence reviewed independently.43browserchecks plus direct-correction delta,240workstation tests+3independent input tests and existing4browserregressions. Boundary-only checks are not all endpoint commands. Exactimage77app tests and security completed separately; remote1.4 rollout/backup/restore/stable pending. Finalmedia/time gates distinct."
+      "assessment": "REVIEW021 independently verified actual1.4 main7proofs and17restore proofs. Exact594944000byte/be09snapshot restored to fresh1.4 and separate1.3 with original5RTUs preserved beforefixtures; actualservedbundle, auth/UI/preview/export/scenario/MQTT and1.4form44checks PASS. Bothrigs0/noPods/ownedtunnelsclosed. Manifest/tag provenance and finalmedia/time gates remain separately checked."
     },
     {
       "id": "AT-CONTROL-FORM-01-04",
       "description": "오류 수정·좁은 화면·RTU 전환",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
@@ -5613,14 +6033,98 @@
         {
           "path": "artifacts/checkpoints/candidate-1.4-advanced.log",
           "sha256": "4c11f003d246eb898488bf7a3b72e81510a87314e30bbfd894c589501f3325df"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/main-acceptance.json",
+          "sha256": "faf548ad9926b1234b237eb75d60cbd4afef3c7ad9820ae0bba353b05dba8416"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-summary.json",
+          "sha256": "f53dbbbb85e2255bc1c0ce5997a95bc63ba19de084a122c4d62c51fc31479558"
+        },
+        {
+          "path": "deploy/verification/stable-backup-fdd0491.json",
+          "sha256": "a122d8b72e58c891ac26aa13016dd1c07d221ff82023ac902b015fceabeef109"
+        },
+        {
+          "path": "docs/product/REVIEW-021.md",
+          "sha256": "f20ea1114180b36b5a17a42f6fd673e1e73baa959b49826da1508b6a3de70fee"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-init.json",
+          "sha256": "7bab8ec340dfe003188985065e02579cf891f252a45a84543cf1093e732184cc"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-preview.json",
+          "sha256": "ab6240303e49a4737d8091dbb7fba1eb5e40b81737d57e6ffde0b99ae632bb99"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-mqtt.json",
+          "sha256": "0a6407317991b5f6b78cb5f481904958c7d33fb9f3901821fab95d89a1cf0061"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-export/result.json",
+          "sha256": "b0d0095285bd68651b7276a19395d5973ebb4188b65acd8e3c04dfbff307ed23"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-scenarios/result.json",
+          "sha256": "c1391bb10b4a99b417f7b1729c8b9383fd17d72cef9b9ad3b9d87e5f41f87ed8"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-served-assets.json",
+          "sha256": "c862ec4dcc72d0a4aace5cc982bf4c67420b804ee836a493283ae0f9955c6a37"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-init.json",
+          "sha256": "7bab8ec340dfe003188985065e02579cf891f252a45a84543cf1093e732184cc"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-preview.json",
+          "sha256": "e42e55bf941befffd266abb20feafc75fa92966091d3139a6f61fb1a73026147"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-mqtt.json",
+          "sha256": "4feff61061d63a66c6bb4990a2256e0c7f170916b649d7bbad3ea38402c7d2f5"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-export/result.json",
+          "sha256": "1ca1057b26befafaab0a47520f328380075751cf2413d97b4148e3d0bcff5536"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-scenarios/result.json",
+          "sha256": "80ee4486697b4445b64513be9cdd64f1421dda284ee2a45cecb3e6265d526fb6"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-served-assets.json",
+          "sha256": "f51bd3bc5f24901e6a3c28d2ca3cf79cb1ed4f370c412f87ef2f08f83cf84189"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restored-command-form/result.json",
+          "sha256": "44be146ef2c9fe4108f04c0f49d084f18d2ea5d8a750303783fceb38cb767929"
         }
       ],
-      "assessment": "fdd0491 local1.4 input/date/ARIA/RTU-switch and actual MQTT command evidence reviewed independently.43browserchecks plus direct-correction delta,240workstation tests+3independent input tests and existing4browserregressions. Boundary-only checks are not all endpoint commands. Exactimage77app tests and security completed separately; remote1.4 rollout/backup/restore/stable pending. Finalmedia/time gates distinct."
+      "assessment": "REVIEW021 independently verified actual1.4 main7proofs and17restore proofs. Exact594944000byte/be09snapshot restored to fresh1.4 and separate1.3 with original5RTUs preserved beforefixtures; actualservedbundle, auth/UI/preview/export/scenario/MQTT and1.4form44checks PASS. Bothrigs0/noPods/ownedtunnelsclosed. Manifest/tag provenance and finalmedia/time gates remain separately checked."
     },
     {
       "id": "AT-CONTROL-FORM-01-05",
       "description": "의도된 제어 의미 보존",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
@@ -5653,14 +6157,98 @@
         {
           "path": "artifacts/checkpoints/candidate-1.4-advanced.log",
           "sha256": "4c11f003d246eb898488bf7a3b72e81510a87314e30bbfd894c589501f3325df"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/main-acceptance.json",
+          "sha256": "faf548ad9926b1234b237eb75d60cbd4afef3c7ad9820ae0bba353b05dba8416"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-summary.json",
+          "sha256": "f53dbbbb85e2255bc1c0ce5997a95bc63ba19de084a122c4d62c51fc31479558"
+        },
+        {
+          "path": "deploy/verification/stable-backup-fdd0491.json",
+          "sha256": "a122d8b72e58c891ac26aa13016dd1c07d221ff82023ac902b015fceabeef109"
+        },
+        {
+          "path": "docs/product/REVIEW-021.md",
+          "sha256": "f20ea1114180b36b5a17a42f6fd673e1e73baa959b49826da1508b6a3de70fee"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-init.json",
+          "sha256": "7bab8ec340dfe003188985065e02579cf891f252a45a84543cf1093e732184cc"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-preview.json",
+          "sha256": "ab6240303e49a4737d8091dbb7fba1eb5e40b81737d57e6ffde0b99ae632bb99"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-mqtt.json",
+          "sha256": "0a6407317991b5f6b78cb5f481904958c7d33fb9f3901821fab95d89a1cf0061"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-export/result.json",
+          "sha256": "b0d0095285bd68651b7276a19395d5973ebb4188b65acd8e3c04dfbff307ed23"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-scenarios/result.json",
+          "sha256": "c1391bb10b4a99b417f7b1729c8b9383fd17d72cef9b9ad3b9d87e5f41f87ed8"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-served-assets.json",
+          "sha256": "c862ec4dcc72d0a4aace5cc982bf4c67420b804ee836a493283ae0f9955c6a37"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-init.json",
+          "sha256": "7bab8ec340dfe003188985065e02579cf891f252a45a84543cf1093e732184cc"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-preview.json",
+          "sha256": "e42e55bf941befffd266abb20feafc75fa92966091d3139a6f61fb1a73026147"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-mqtt.json",
+          "sha256": "4feff61061d63a66c6bb4990a2256e0c7f170916b649d7bbad3ea38402c7d2f5"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-export/result.json",
+          "sha256": "1ca1057b26befafaab0a47520f328380075751cf2413d97b4148e3d0bcff5536"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-scenarios/result.json",
+          "sha256": "80ee4486697b4445b64513be9cdd64f1421dda284ee2a45cecb3e6265d526fb6"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-served-assets.json",
+          "sha256": "f51bd3bc5f24901e6a3c28d2ca3cf79cb1ed4f370c412f87ef2f08f83cf84189"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restored-command-form/result.json",
+          "sha256": "44be146ef2c9fe4108f04c0f49d084f18d2ea5d8a750303783fceb38cb767929"
         }
       ],
-      "assessment": "fdd0491 local1.4 input/date/ARIA/RTU-switch and actual MQTT command evidence reviewed independently.43browserchecks plus direct-correction delta,240workstation tests+3independent input tests and existing4browserregressions. Boundary-only checks are not all endpoint commands. Exactimage77app tests and security completed separately; remote1.4 rollout/backup/restore/stable pending. Finalmedia/time gates distinct."
+      "assessment": "REVIEW021 independently verified actual1.4 main7proofs and17restore proofs. Exact594944000byte/be09snapshot restored to fresh1.4 and separate1.3 with original5RTUs preserved beforefixtures; actualservedbundle, auth/UI/preview/export/scenario/MQTT and1.4form44checks PASS. Bothrigs0/noPods/ownedtunnelsclosed. Manifest/tag provenance and finalmedia/time gates remain separately checked."
     },
     {
       "id": "AT-CONTROL-FORM-01-06",
       "description": "회귀·정확한 이미지·배포·복원",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
@@ -5693,9 +6281,93 @@
         {
           "path": "artifacts/checkpoints/candidate-1.4-advanced.log",
           "sha256": "4c11f003d246eb898488bf7a3b72e81510a87314e30bbfd894c589501f3325df"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/main-acceptance.json",
+          "sha256": "faf548ad9926b1234b237eb75d60cbd4afef3c7ad9820ae0bba353b05dba8416"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-summary.json",
+          "sha256": "f53dbbbb85e2255bc1c0ce5997a95bc63ba19de084a122c4d62c51fc31479558"
+        },
+        {
+          "path": "deploy/verification/stable-backup-fdd0491.json",
+          "sha256": "a122d8b72e58c891ac26aa13016dd1c07d221ff82023ac902b015fceabeef109"
+        },
+        {
+          "path": "docs/product/REVIEW-021.md",
+          "sha256": "f20ea1114180b36b5a17a42f6fd673e1e73baa959b49826da1508b6a3de70fee"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-init.json",
+          "sha256": "7bab8ec340dfe003188985065e02579cf891f252a45a84543cf1093e732184cc"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-preview.json",
+          "sha256": "ab6240303e49a4737d8091dbb7fba1eb5e40b81737d57e6ffde0b99ae632bb99"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-mqtt.json",
+          "sha256": "0a6407317991b5f6b78cb5f481904958c7d33fb9f3901821fab95d89a1cf0061"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-export/result.json",
+          "sha256": "b0d0095285bd68651b7276a19395d5973ebb4188b65acd8e3c04dfbff307ed23"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-scenarios/result.json",
+          "sha256": "c1391bb10b4a99b417f7b1729c8b9383fd17d72cef9b9ad3b9d87e5f41f87ed8"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-1.4-served-assets.json",
+          "sha256": "c862ec4dcc72d0a4aace5cc982bf4c67420b804ee836a493283ae0f9955c6a37"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-init.json",
+          "sha256": "7bab8ec340dfe003188985065e02579cf891f252a45a84543cf1093e732184cc"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-preview.json",
+          "sha256": "e42e55bf941befffd266abb20feafc75fa92966091d3139a6f61fb1a73026147"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-mqtt.json",
+          "sha256": "4feff61061d63a66c6bb4990a2256e0c7f170916b649d7bbad3ea38402c7d2f5"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-export/result.json",
+          "sha256": "1ca1057b26befafaab0a47520f328380075751cf2413d97b4148e3d0bcff5536"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-scenarios/result.json",
+          "sha256": "80ee4486697b4445b64513be9cdd64f1421dda284ee2a45cecb3e6265d526fb6"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restore-backward-served-assets.json",
+          "sha256": "f51bd3bc5f24901e6a3c28d2ca3cf79cb1ed4f370c412f87ef2f08f83cf84189"
+        },
+        {
+          "path": "deploy/verification/candidate-fdd0491/restored-command-form/result.json",
+          "sha256": "44be146ef2c9fe4108f04c0f49d084f18d2ea5d8a750303783fceb38cb767929"
         }
       ],
-      "assessment": "fdd0491 local1.4 input/date/ARIA/RTU-switch and actual MQTT command evidence reviewed independently.43browserchecks plus direct-correction delta,240workstation tests+3independent input tests and existing4browserregressions. Boundary-only checks are not all endpoint commands. Exactimage77app tests and security completed separately; remote1.4 rollout/backup/restore/stable pending. Finalmedia/time gates distinct."
+      "assessment": "REVIEW021 independently verified actual1.4 main7proofs and17restore proofs. Exact594944000byte/be09snapshot restored to fresh1.4 and separate1.3 with original5RTUs preserved beforefixtures; actualservedbundle, auth/UI/preview/export/scenario/MQTT and1.4form44checks PASS. Bothrigs0/noPods/ownedtunnelsclosed. Manifest/tag provenance and finalmedia/time gates remain separately checked."
     }
   ],
   "reviewedSource": {

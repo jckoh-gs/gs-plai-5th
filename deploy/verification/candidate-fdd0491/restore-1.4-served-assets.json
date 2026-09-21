@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T13:53:03.721970+00:00",
+  "scope": "Actual isolated k3s restore HTTP responses match immutableimage servedfile hashes; scenario harness localdist metadata alone is not remoteasset proof",
+  "assets": [
+    {
+      "path": "/assets/index-BndL-kls.js",
+      "sha256": "37a5224ba233be5966d02ac96fc91c7eddc0adad70e8d4783df6b5b4068d5bce",
+      "bytes": 258811
+    },
+    {
+      "path": "/assets/index-IyMLkOKk.css",
+      "sha256": "e51a1f3c9ce76be93a9579cc86cb7af7eefb84049bda3ebfca0a5f0ca3632816",
+      "bytes": 19364
+    }
+  ]
+}

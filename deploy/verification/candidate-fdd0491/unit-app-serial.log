@@ -1,0 +1,114 @@
+✔ malformed, null, array, oversized, retained and cross-RTU statuses rejected (14.328083ms)
+✔ only allowlisted fields survive; raw credentials and controls are removed from reason (2.075208ms)
+✔ command export authenticates, omits raw fields and scrubs secrets from all configuration layers (260.812209ms)
+✔ export DTO keeps only typed snapshots, records redaction, and makes no de-identification/replay promise (7.390709ms)
+✔ explicit broker URL password is treated as known credential in informational IDs (1.854708ms)
+✔ control normalization cannot expose known secrets or create empty replacement patterns (1.578291ms)
+✔ control characters cannot split a credential URL to bypass export redaction (9.416ms)
+✔ export target and observed values preserve real accepted, executing and completed command semantics (50.163292ms)
+✔ HTTP export has latest20 only, original run IDs, RTU isolation and no persistent or control side effects (230.580125ms)
+✔ remote management fails closed without strong token (8.238084ms)
+✔ exact bearer token required and topic wildcards forbidden (0.77925ms)
+✔ configuration bounds and credential redaction (3.161166ms)
+✔ zero available power does not complete start while fractional startup remains (53.023208ms)
+✔ already expired and latency-expired requests leave SCADA settings unchanged (18.68125ms)
+✔ canonical global dedup, validation atomicity, priority intersections (50.694583ms)
+✔ expiry before dispatch; sensor freeze cannot complete; restart deadline real time (6.748541ms)
+✔ target checks every allocated device and signed actual error, then completion (1.720125ms)
+✔ stop clears pending startup and completed requires a post-dispatch model sample (1.1325ms)
+✔ failed durable dispatch rolls back model, command cache and outbox together (3.734541ms)
+✔ setpoint action validation applies even to known duplicate IDs (0.674416ms)
+✔ outer model transaction rollback also restores nested command cancellation cache (0.646125ms)
+✔ parser diagnostics never echo malformed CSV field contents (18.71675ms)
+✔ prototype names remain unknown columns and never enter normalized DTOs (15.090833ms)
+✔ 100000 rows are accepted; excessive rows abort before parsing trailing malformed input (699.857ms)
+✔ HTTP preview returns bounded diagnostics and authenticates before malformed input (283.372208ms)
+✔ preflight caps columns before allocation and preserves quoted commas, escapes and newlines (18.354833ms)
+✔ preview agrees with registration units, interpolation and time zones (27.939916ms)
+✔ preview bounds output and preserves TSV electrical fields without emitting unknown CSV columns (11.414958ms)
+✔ hybrid preview follows combined-total precedence and split sum exactly (0.932834ms)
+✔ preview uses existing row validation and rejects invalid request shapes (2.197917ms)
+✔ authenticated preview has no database, controller, RTU or transport side effects (282.973709ms)
+✔ health precedence and exact real-time boundaries (19.709917ms)
+✔ CSV/TSV BOM and Korean aliases, unit and missing weather (29.705209ms)
+✔ linear 300/599/600 boundaries and last interval hold, no wrapping interpolation (2.138625ms)
+✔ mean/kWh energy holds original interval without claiming ramp-adjusted energy (6.179458ms)
+✔ direction shortest arc and optional missing data never backwards-filled (3.033042ms)
+✔ strict actual dates, offsets, seconds, leap years (9.790417ms)
+✔ invalid CSV errors identify original row/field; duplicate, reverse, gap, NaN, empty (14.942458ms)
+✔ registration validates whole input and generates correct hybrid IDs and virtual coordinates (9.902041ms)
+✔ CSV total allocation and hybrid separate allocation, voltage/current provenance (20.225333ms)
+✔ weather wind power cubic/rated/cut-out and custom interpolation (7.514167ms)
+✔ solar temperature correction, saturation, efficiency and manual night irradiance (12.478042ms)
+✔ ramp, stopping, fractional startup and actuator freeze (6.522167ms)
+✔ percentage limit and rated reductions, unchanged CSV power on weather-only edit (1.112875ms)
+✔ all PATCH validators are atomic including RNG and source metadata (3.839958ms)
+✔ LCG common noise, independent fault RNG, snapshot deterministic replay and pause (1.190833ms)
+✔ separate irradiance CSV aligns source timestamp and falls back outside range (0.52975ms)
+✔ frame includes complete state and excludes custom curve data; API retains curve (1.405125ms)
+✔ loop count records actual dataset wraps, not seeks, and survives scenario JSON snapshots (3.623ms)
+✔ independent HTTP command export preserves persisted observations across old run, absent fields, auth and RTU selection without writes (213.62375ms)
+✔ expiresAt accepts explicit ISO zones/fractions and rejects permissive Date.parse calendar normalization (54.484ms)
+✔ expiresAt-only body change conflicts; equal priority supersedes overlapping but disjoint remains active (4.230333ms)
+✔ physical database reopen restores unfinished deadline; timeout retains setting until explicit stop makes power zero (32.15175ms)
+node:internal/modules/cjs/loader:1564
+  const err = new Error(message);
+              ^
+
+Error: Cannot find module '../scripts/media/demo-lifecycle.cjs'
+Require stack:
+- /app/tests/review-demo-lifecycle.test.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1564:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1118:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1142:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1169:12)
+    at Module._load (node:internal/modules/cjs/loader:1341:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.require (node:internal/modules/cjs/loader:1674:12)
+    at require (node:internal/modules/helpers:157:16)
+    at file:///app/tests/review-demo-lifecycle.test.js:2:55
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/app/tests/review-demo-lifecycle.test.js' ]
+}
+
+Node.js v24.21.0
+✖ tests/review-demo-lifecycle.test.js (420.517709ms)
+✔ independent preview: summaries scan beyond display rows; hidden invalid row is rejected by preview and registration (53.019042ms)
+✔ independent preview HTTP: existing model and every persistent table unchanged, no MQTT connection path invoked (202.608667ms)
+✔ prune deletes old acknowledged frames/outbox while preserving old pending/unbatched data, command IDs and scenarios (40.20675ms)
+✔ per-device identity/auth overrides are separate from common defaults and LWT topics are exact (30.805167ms)
+✔ runtime keeps tick/prune/shutdown alive when audit and storage both fail (179.530125ms)
+✔ shutdown closes HTTP and SQLite even if transport stop rejects (6.791667ms)
+✔ unauthenticated health/config contain no configured credentials; protected state requires token (29.790917ms)
+✔ public config exact allowlist and authenticated downloads never echo the credential (33.220083ms)
+✔ durable atomic model/frame, immutable sequence and byte/run/count batches (205.622125ms)
+✔ retention keeps unacknowledged messages, unbatched frames, command IDs and scenarios (4.601875ms)
+✔ storage failure during pump keeps row retryable and other event errors never escape (56.754375ms)
+✔ delayed storage failure and PUBACK ack failure retain original queue row for retry (66.086875ms)
+✔ per RTU independent inflight; only PUBACK removes immutable row; malformed and retained rejected (81.113375ms)
+✔ connection client IDs remain caller-specific with common auth configuration (1.180042ms)
+✔ delayed pump reads latest model object and REST receipts persist (23.133125ms)
+✔ provided 55-row wind TSV preserves voltage and proportional original-current estimate (58.681459ms)
+✔ hybrid combined total distributes by rated capacity without inferring fuel from power shape (6.082958ms)
+✔ KMA SFCTM2 field fixture uses index11 temperature, 10 degree wind and KST time (13.87325ms)
+✔ KMA malformed/stale/future/out-of-range/wrong-station responses fail (3.388834ms)
+✔ live refresh preserves irradiance; request has current observation parameters and no old tm (10.002417ms)
+✔ automatic manual/frozen skips; explicit lookup enters weather mode and releases freeze (2.140416ms)
+✔ failed live observations retain all last-valid values, source and timestamp without auth leaks (3.815042ms)
+✔ missing direction preserves previous direction; SI never interpreted as irradiance (1.067041ms)
+✔ manual edit during in-flight request is protected, including explicit request (3.1255ms)
+ℹ tests 78
+ℹ suites 0
+ℹ pass 77
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 14043.59759
+
+✖ failing tests:
+
+test at tests/review-demo-lifecycle.test.js:1:1
+✖ tests/review-demo-lifecycle.test.js (420.517709ms)
+  'test failed'

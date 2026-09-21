@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T13:43:17.158748+00:00",
+  "scope": "Isolated exactimage container HTTP assets compared with files inside same immutable image; no workingtree dist mount",
+  "image": "sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4",
+  "version": "1.4.0",
+  "indexSha256": "15df33e39451dcd9ce72714ee33f56733dd549066b22206c8a13db211d337372",
+  "assets": [
+    {
+      "path": "/assets/index-BndL-kls.js",
+      "sha256": "37a5224ba233be5966d02ac96fc91c7eddc0adad70e8d4783df6b5b4068d5bce",
+      "bytes": 258811,
+      "matchesImageFile": true
+    },
+    {
+      "path": "/assets/index-IyMLkOKk.css",
+      "sha256": "e51a1f3c9ce76be93a9579cc86cb7af7eefb84049bda3ebfca0a5f0ca3632816",
+      "bytes": 19364,
+      "matchesImageFile": true
+    }
+  ]
+}

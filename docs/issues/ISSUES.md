@@ -396,12 +396,12 @@ REVIEW022 round2: 계획된 시나리오 복원만 prepareScenarioRestore(scenar
 
 ## ISSUE-021 — 큰 명령 유효시간 입력에서 브라우저 날짜 예외
 
-- 중요도 P2. 상태 FIXED_LOCAL(1.4.0 후보 배포·복원 검증 대기), 담당 메인/UI, IDEA-008 채택 개정3 / PRD1.11에 연결.
+- 중요도 P2. 상태 RESOLVED_FUNCTIONAL(1.4.0 실제 배포·동일 백업 복원 검증 완료), 담당 메인/UI, IDEA-008 채택 개정3 / PRD1.11에 연결.
 - 실제 로컬1.3 브라우저의 유효시간에100000000000000000000을 넣으면 native validity=true이나 명령 클릭 시 Invalid time value 예외가 발생한다. POST는0회이며 원격 k3s나 실제 제어에는 영향을 주지 않았다.
 - 원인: 입력 숫자를 Date로 변환하고 toISOString을 호출하기 전에 유효 날짜 여부를 확인하지 않는다. 서버범위 정합성 문제와 구분되는 UI 오류 처리 누락이다.
 - 수정 전 증거: artifacts/checkpoints/command-expiry-before/result.json, 실행 소스/로그/화면. 일반 입력 범위의 별도 재현은 artifacts/checkpoints/command-form-before/.
 - 기대: 유효하지 않은 날짜는 전송 전 사용자에게 안내하고 예외를 발생시키지 않는다. 정상 만료일/소수 허용/target0/의도한 가용초과 시험 및 서버 검증은 유지한다. 임의 업무상 상한은 추가하지 않는다.
-- fdd0491에서 수정했다. 로컬 실제 브라우저1e20/확장연도 오류 안내·POST0·예외0, 동일 폼 수정 후 Enter 재전송과 실제25.25kW 완료를 확인했다. command-form-1.4-browser-round2 및 correction-delta, REVIEW020에 연결한다. 원격1.4 배포·복원은 대기이며 전체 출시 해결로 아직 닫지 않는다.
+- fdd0491에서 수정했다. 로컬 실제 브라우저1e20/확장연도 오류 안내·POST0·예외0, 동일 폼 수정 후 Enter 재전송과 실제25.25kW 완료를 확인했다. command-form-1.4-browser-round2 및 correction-delta, REVIEW020에 연결한다. 원격1.4 및 동일 백업의 격리 복원본에서도 입력·날짜 검증이 통과해 기능 해결로 닫는다. 최종 미디어·시간·인도 게이트는 별도다.
 
 
 REVIEW022 최종 통합 후속: 실제로 시간대가 다른 서버의 createdAt을 로컬 intent 시각과 순서 비교하면1ms 시계 지연만으로도 정상201 소유권 기록을 거절했다(보안 독립 fixture). 생성시각은 불변 identity로 보존하되 서로 다른 시계의 순서 비교를 제거했다. 관측된201·원래 POST 다섯 설정값·기존에 없는 ID/run·fingerprint를 확인한다. 응답 유실은 후보가 하나여도 초기 기준을 추정하지 않고 자동쓰기하지 않는다. 독립수명주기11개와 실제POST본문 거절검사3개 통과. 로컬 UI 실패/catch복구 및 성공 리허설은 artifacts/checkpoints/media-lifecycle-local-round1/result.json, 최종 준비65+11시험/덱패키징은 artifacts/checkpoints/final-media-lifecycle/summary.json에 연결한다. 실제영상 성공 후 추가한 두 방어는 fixture 결과이며 원격 시연 성공으로 확대하지 않는다.

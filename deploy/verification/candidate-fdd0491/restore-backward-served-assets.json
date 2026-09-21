@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T13:54:33.918918+00:00",
+  "scope": "Actual1.3 isolated k3s restore HTTP responses match image files in verified5563Pod; scenario localdist metadata is not remoteasset proof",
+  "assets": [
+    {
+      "path": "/assets/index-Bq6rJvbB.js",
+      "sha256": "8d61e59d833af0cea234ed17c6d61300e4b564708cfeb78f51f8a0ab2e6a5a3c",
+      "bytes": 256876
+    },
+    {
+      "path": "/assets/index-IyMLkOKk.css",
+      "sha256": "e51a1f3c9ce76be93a9579cc86cb7af7eefb84049bda3ebfca0a5f0ca3632816",
+      "bytes": 19364
+    }
+  ]
+}

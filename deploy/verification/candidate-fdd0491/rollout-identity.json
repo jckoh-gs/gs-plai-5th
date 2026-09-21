@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-09-21T13:46:07.542Z",
+  "app": {
+    "name": "grid-5d6ffb7698-x4rb5",
+    "uid": "6e89b319-3a25-407c-bbde-3b9f93bb9f9f",
+    "image": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4",
+    "imageID": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4"
+  },
+  "broker": {
+    "name": "grid-5d6ffb7698-x4rb5",
+    "uid": "6e89b319-3a25-407c-bbde-3b9f93bb9f9f",
+    "image": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+    "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+  }
+}

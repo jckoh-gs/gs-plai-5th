@@ -1,0 +1,174 @@
+{
+  "result": "PASS",
+  "observedAt": "2026-09-21T13:47:31.669Z",
+  "scope": "Deployed1.4 remote negative form checks only; all mutation attempts would be blocked, none occurred",
+  "apiVersion": "1.4.0",
+  "servedAsset": {
+    "path": "/assets/index-BndL-kls.js",
+    "sha256": "37a5224ba233be5966d02ac96fc91c7eddc0adad70e8d4783df6b5b4068d5bce"
+  },
+  "selected": {
+    "id": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+    "name": "대관령 바람 정원"
+  },
+  "alternateId": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+  "originalIds": [
+    "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+    "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+    "adb56898-ae8d-4628-9db1-6d33df5417b5",
+    "90528620-2d53-4a06-8945-aa7a37e0eaee",
+    "f49684af-b7dd-47b2-b360-8e7d28ef751b"
+  ],
+  "originalIdsUnchanged": true,
+  "selectedSettingsUnchanged": true,
+  "selectedSettingsBeforeHash": "65786ec48bb27587d88b67dffc21ede996e9b3fa64c286f7e193fb4fb04aaa0e",
+  "selectedSettingsAfterHash": "65786ec48bb27587d88b67dffc21ede996e9b3fa64c286f7e193fb4fb04aaa0e",
+  "selectedCommandIdsBefore": [
+    "89e8ff6f-4e22-4ae5-9330-29dfb53f4164"
+  ],
+  "selectedCommandIdsAfter": [
+    "89e8ff6f-4e22-4ae5-9330-29dfb53f4164"
+  ],
+  "selectedFullCommandListUnchanged": true,
+  "excludedConcurrentTarget": "f496 prefix RTU: root independent positiveMQTT; its settings/commands not compared",
+  "checks": [
+    {
+      "key": "toleranceKw",
+      "value": "0",
+      "method": "button",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "key": "toleranceKw",
+      "value": "0",
+      "method": "enter",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "key": "toleranceKw",
+      "value": "10001",
+      "method": "button",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "key": "toleranceKw",
+      "value": "10001",
+      "method": "enter",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "key": "timeoutSeconds",
+      "value": "0",
+      "method": "button",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "key": "timeoutSeconds",
+      "value": "0",
+      "method": "enter",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "key": "timeoutSeconds",
+      "value": "3601",
+      "method": "button",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "key": "timeoutSeconds",
+      "value": "3601",
+      "method": "enter",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "key": "priority",
+      "value": "-1",
+      "method": "button",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "key": "priority",
+      "value": "-1",
+      "method": "enter",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "key": "priority",
+      "value": "101",
+      "method": "button",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "key": "priority",
+      "value": "101",
+      "method": "enter",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "key": "validSeconds",
+      "value": "1e20",
+      "method": "button",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "key": "validSeconds",
+      "value": "1e20",
+      "method": "enter",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "key": "validSeconds",
+      "value": "300000000000",
+      "method": "button",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "key": "validSeconds",
+      "value": "300000000000",
+      "method": "enter",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "key": "validSeconds",
+      "value": "",
+      "method": "button",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "key": "validSeconds",
+      "value": "",
+      "method": "enter",
+      "requestCount": 0,
+      "focused": true
+    },
+    {
+      "kind": "corrected-input-clears-error-without-submit"
+    }
+  ],
+  "mutationRequests": [],
+  "pageErrors": [],
+  "unhandledrejections": [],
+  "sourceSha256": "0f556f629051bca58e1ce072b99fb350c6a3a21c0bb630566255d913c865dcef",
+  "limitations": [
+    "No valid form submission or registration",
+    "Positive command evidence remains local/browser + separate root MQTT",
+    "No assertion that other RTUs command lists stayed unchanged during concurrent root test"
+  ]
+}
