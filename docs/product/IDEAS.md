@@ -85,3 +85,5 @@ IDEA006계약확정: root redaction={policy:"known-secrets-credential-urls-contr
 KMA피드백소스관찰: 키없음/timeout에서HTTP200+weatherError일때일반act가성공뉘앙스notice를보일가능성을메인이확인중이다. 기존UX오류의재현·수정검토이며IDEA007의채택기능이나별도채택된새기능으로간주하지않는다. 브라우저재현전완료/확정결함주장없음.
 
 IDEA007 후속:3fa3ba0실제1.3배포/격리시나리오UI/원래단지불변/지연응답/servedJS일치,동일420466688bytebackup의1.3·역방향1.2복원13검사PASS. 기능완료;태그/manifest승격은메인후속. REVIEW015참조.
+
+IDEA007 checkpoint확정: [REVIEW016](REVIEW-016.md)에서immutable1.3manifest688hash/실제Readyimage/backupSHA를독립확인. stable-v1.3.0 및stable-runtime-v1.3.0-3fa3ba0는모두runtime3fa3ba0. 현재기능checkpoint완료이며remoteGitpush/최종동결·미디어·시간완료를이검증으로추론하지않는다.

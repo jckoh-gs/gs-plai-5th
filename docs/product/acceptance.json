@@ -3827,7 +3827,7 @@
     {
       "id": "OPS-05",
       "description": "릴리스 manifest에 commit/dirty 파일 해시/PRD/image/backup/tests/deploy/restore 기록",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "deploy/verification/post-restart.json",
@@ -3884,15 +3884,23 @@
         {
           "path": "docs/product/review-011-manifest.log",
           "sha256": "ff7897a00bc72a51888a0d62348170c32685b29aa28ac2fe3d2b4cc228116e59"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.3.0.json",
+          "sha256": "18c80c0828852d8661be42edc7db69a176949574e6e88ec060cb5f720e607715"
+        },
+        {
+          "path": "docs/product/review-016-manifest.log",
+          "sha256": "533bc21e80a7998760cb1c7df2facf51d0877495ab0c9f7614723248cc9ccc47"
         }
       ],
-      "assessment": "Previous1.2immutablemanifest remains verified. Current1.3functional+restore evidence complete; rootstabletag/currentimmutablemanifest and independent hash verification pending.",
+      "assessment": "Current1.3checkpoint independentlyverified --at-commit --remote:688hashes/source d077120/runtime3fa3ba0/backupSHA/actualReadyapp+broker match. Bothlocalstabletags peel3fa3ba0. Prioractualrestore acceptance retained. This establishes functionalcheckpoint provenance, not finalfreeze/media/time/remoteGitpush.",
       "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
       "id": "AT-RELEASE-01",
       "description": "manifest 파싱, 실제 hash/digest 일치, 해당 revision 로그, 별도 복원 UI/MQTT/DB/outbox 검증",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "deploy/verification/post-restart.json",
@@ -3949,9 +3957,17 @@
         {
           "path": "docs/product/review-011-manifest.log",
           "sha256": "ff7897a00bc72a51888a0d62348170c32685b29aa28ac2fe3d2b4cc228116e59"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.3.0.json",
+          "sha256": "18c80c0828852d8661be42edc7db69a176949574e6e88ec060cb5f720e607715"
+        },
+        {
+          "path": "docs/product/review-016-manifest.log",
+          "sha256": "533bc21e80a7998760cb1c7df2facf51d0877495ab0c9f7614723248cc9ccc47"
         }
       ],
-      "assessment": "Previous1.2immutablemanifest remains verified. Current1.3functional+restore evidence complete; rootstabletag/currentimmutablemanifest and independent hash verification pending.",
+      "assessment": "Current1.3checkpoint independentlyverified --at-commit --remote:688hashes/source d077120/runtime3fa3ba0/backupSHA/actualReadyapp+broker match. Bothlocalstabletags peel3fa3ba0. Prioractualrestore acceptance retained. This establishes functionalcheckpoint provenance, not finalfreeze/media/time/remoteGitpush.",
       "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
@@ -4922,9 +4938,17 @@
         {
           "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/result.json",
           "sha256": "2a1393ea4caeea52f48ab151c9f6446ae7310b9fe7b1c94842adadfa2a8c79b0"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.3.0.json",
+          "sha256": "18c80c0828852d8661be42edc7db69a176949574e6e88ec060cb5f720e607715"
+        },
+        {
+          "path": "docs/product/review-016-manifest.log",
+          "sha256": "533bc21e80a7998760cb1c7df2facf51d0877495ab0c9f7614723248cc9ccc47"
         }
       ],
-      "assessment": "3fa3ba0 actual1.3 image5563acc..ba5d rollout/browser/MQTT/outboxrestart; 13restorefiles individuallyPASS on fresh1.3 and backward1.2PVC from same420466688backupSHAb515ef..ce40. IsolatedactualscenarioA/B/late races/exports PASS with separately servedJS hash matched. Main5HEALTHY/faultfalse/pending0. Stabletag/immutablemanifest not yet asserted; media/time distinct."
+      "assessment": "Current1.3checkpoint independentlyverified --at-commit --remote:688hashes/source d077120/runtime3fa3ba0/backupSHA/actualReadyapp+broker match. Bothlocalstabletags peel3fa3ba0. Prioractualrestore acceptance retained. This establishes functionalcheckpoint provenance, not finalfreeze/media/time/remoteGitpush."
     },
     {
       "id": "AT-SCENE-SELECT-01-01",
@@ -5338,9 +5362,17 @@
         {
           "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/result.json",
           "sha256": "2a1393ea4caeea52f48ab151c9f6446ae7310b9fe7b1c94842adadfa2a8c79b0"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.3.0.json",
+          "sha256": "18c80c0828852d8661be42edc7db69a176949574e6e88ec060cb5f720e607715"
+        },
+        {
+          "path": "docs/product/review-016-manifest.log",
+          "sha256": "533bc21e80a7998760cb1c7df2facf51d0877495ab0c9f7614723248cc9ccc47"
         }
       ],
-      "assessment": "3fa3ba0 actual1.3 image5563acc..ba5d rollout/browser/MQTT/outboxrestart; 13restorefiles individuallyPASS on fresh1.3 and backward1.2PVC from same420466688backupSHAb515ef..ce40. IsolatedactualscenarioA/B/late races/exports PASS with separately servedJS hash matched. Main5HEALTHY/faultfalse/pending0. Stabletag/immutablemanifest not yet asserted; media/time distinct."
+      "assessment": "Current1.3checkpoint independentlyverified --at-commit --remote:688hashes/source d077120/runtime3fa3ba0/backupSHA/actualReadyapp+broker match. Bothlocalstabletags peel3fa3ba0. Prioractualrestore acceptance retained. This establishes functionalcheckpoint provenance, not finalfreeze/media/time/remoteGitpush."
     }
   ],
   "reviewedSource": {
