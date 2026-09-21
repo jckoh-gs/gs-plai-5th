@@ -52,3 +52,6 @@ After interruption, read `resume.json`, run `node scripts/resume-status.mjs`, an
 최종 제작 준비 보완은 artifacts/checkpoints/final-media-lifecycle/summary.json에 보존했다. 실제 로컬 UI 시연 중단 후 소유RTU 정리, 재시험 등록/시나리오 전이/정리/영상디코딩,14장 PPT와 portable 재생성을 확인했다.76개 관련 시험과 독립보안 검토는 준비 증거이며 최종창 미디어를 대신하지 않는다. 최종녹화 실패 시 해당 핸들 종료 확인 후 private lifecycle journal을 읽고 recover-demo CLI를 사용한다. 초기baseline/실제응답이 없는 경우 메인이 실제상태를 대조하고 기존RTU 일괄초기화나 재등록을 반복하지 않는다. 최종facts는 same-video binder를 통과한 뒤 PPT 소스 묶음에 보존한다.
 
 IDEA-008은 제안 v2이며 아직 미채택이다. 실제 로컬 일반폼 범위 재현 및 극단 validSeconds의 날짜 예외(ISSUE-021)를 REVIEW-017에 기록했다.1.3 관찰 첫1시간 이후 메인이 범위/효용/안정성을 판단하고 채택 시 PRD/제품버전을 먼저 갱신한다. 새버전을 채택하면 release-features/final-deck-binding의 지원버전과 실제시연 문구도 함께 검토하며 기존1.3 안정복원 기준을 보존한다.
+
+
+1.3 관찰에서12:58:27Z와13:03:17Z에 로컬 검증 실패 후 같은 supervisor가 각각12:58:29Z/13:03:18Z 재연결했다. Pod UID/이미지/재시작 횟수는 유지됐다. 현재 알려진 누적값은 main APIerrors2/connectionErrors0, 추가관측 connectionErrors2 및각RTU sampleDiscontinuities1이다.9배치/300샘플의 수신관측 공백은 동일 원격outbox의 연속샘플·PUBACK로 대조했으며 생성누락은 확인되지 않았다. 누락배치의 서버 기록시각은 단절 로그보다 이르고 과거 두 host시계 동기화도 독립 증명하지 않았으므로 단절시각과 발행시각의 인과를 단정하지 않는다. 원인은 미확정이다. artifacts/checkpoints/reconnect-20260921T1303/summary.json 및 resume.currentObservationBaselines를 사용하고 이누적값을새장애로반복보고하지 않는다.

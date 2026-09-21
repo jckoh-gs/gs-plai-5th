@@ -196,11 +196,31 @@
     "constraints": "Mac and Codex app must remain running; no offline AI work guarantee; original deadline unchanged",
     "deadlineHardening": "artifacts/checkpoints/final-window-boundaries/summary.json"
   },
-  "updatedAt": "2026-09-21T13:09:13.550157+00:00",
+  "updatedAt": "2026-09-21T13:12:32.289183+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
     "scope": "Private ownership journal, interrupted-demo settings recovery, same-video reviewed-facts binder and portable deck packaging; no runtime change",
     "originalWindowUnchanged": true
-  }
+  },
+  "operationalObservations": [
+    {
+      "evidence": "artifacts/checkpoints/reconnect-20260921T1303/summary.json",
+      "runtime": "1.3.0",
+      "outages": [
+        "2026-09-21T12:58:27.922Z",
+        "2026-09-21T13:03:17.005Z"
+      ],
+      "recoveries": [
+        "2026-09-21T12:58:29.170Z",
+        "2026-09-21T13:03:18.529Z"
+      ],
+      "cause": "local_verification_failed; underlying cause unknown",
+      "forcedInterruption": false,
+      "podUidUnchanged": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73",
+      "observedMissingBatches": 9,
+      "persistedSamplesInMissingBatches": 300,
+      "scope": "Publisher persistence/PUBACK verified; not proof of every subscriber receipt. Missing batch timestamps precede logged disconnect; historical host/server clock synchronization not independently verified."
+    }
+  ]
 }

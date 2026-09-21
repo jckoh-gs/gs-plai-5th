@@ -1,0 +1,269 @@
+{
+  "capturedAt": "2026-09-21T13:10:58.904416+00:00",
+  "rangeStart": "2026-09-21T12:56:00Z",
+  "rangeEndExclusive": "2026-09-21T13:06:00Z",
+  "investigation": "Read-only remote SQLite and local evidence snapshot; no runtime/observer/tunnel mutations",
+  "pod": {
+    "name": "grid-76f9968b4-dgf2w",
+    "uid": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73",
+    "containers": [
+      {
+        "name": "app",
+        "ready": true,
+        "restartCount": 0,
+        "imageID": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d"
+      },
+      {
+        "name": "mqtt",
+        "ready": true,
+        "restartCount": 0,
+        "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+      }
+    ]
+  },
+  "supervisorEvents": [
+    {
+      "at": "2026-09-21T12:58:27.922Z",
+      "state": "disconnected",
+      "reason": "local_verification_failed",
+      "podUID": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73"
+    },
+    {
+      "at": "2026-09-21T12:58:27.926Z",
+      "state": "connecting",
+      "reason": "forward_started",
+      "podUID": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73"
+    },
+    {
+      "at": "2026-09-21T12:58:29.170Z",
+      "state": "ready",
+      "reason": "verified",
+      "podUID": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73"
+    },
+    {
+      "at": "2026-09-21T13:03:17.005Z",
+      "state": "disconnected",
+      "reason": "local_verification_failed",
+      "podUID": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73"
+    },
+    {
+      "at": "2026-09-21T13:03:17.285Z",
+      "state": "connecting",
+      "reason": "forward_started",
+      "podUID": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73"
+    },
+    {
+      "at": "2026-09-21T13:03:18.529Z",
+      "state": "ready",
+      "reason": "verified",
+      "podUID": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73"
+    }
+  ],
+  "counterDelta": {
+    "primaryApiErrors": [
+      0,
+      2
+    ],
+    "primaryConnectionErrors": [
+      0,
+      0
+    ],
+    "auditConnectionErrors": [
+      0,
+      2
+    ],
+    "auditConnections": [
+      1,
+      3
+    ],
+    "auditDisconnections": [
+      0,
+      2
+    ]
+  },
+  "findings": {
+    "persistedWindowTelemetryRows": 89,
+    "persistedWindowSamples": 3000,
+    "allWindowRowsPubackRecorded": true,
+    "missingObservedBatches": 9,
+    "persistedSamplesInMissingBatches": 300,
+    "observerCleanSession": true,
+    "observerProtocolVersion": 4,
+    "publisherQos": 1,
+    "observerRequestedQos": 1,
+    "rootCause": "Unknown: local_verification_failed does not identify underlying HTTP/network/host failure",
+    "timingCaveat": "Missing batches were created and PUBACK recorded at13:02:54-55, before the logged13:03:17 subscriber disconnect. Do not claim they were published during the recorded disconnect; channel impairment may precede health detection but this is unproven. Timestamps come from remote publisher and local observer clocks; historical synchronization was not independently established.",
+    "interpretation": "Observed gap, not generated-sample loss in these persisted sequences. Clean-session observer has no requested durable offline replay. Publisher PUBACK is not proof of receipt by every subscriber.",
+    "limits": "No raw observer payload capture, packet capture or broker per-subscriber trace. Missing sequences reconstructed from cumulative snapshots and sample endpoints; no universal zero-loss or root-cause claim.",
+    "queryNote": "Initial full-body ORDER BY query returned SQLite error; unsorted read-only SELECT succeeded; only metadata sorted locally. No database settings changed.",
+    "queryFailureMetadata": {
+      "errorName": "Error",
+      "errorCode": "ERR_SQLITE_ERROR",
+      "reason": "Unclassified; raw error text withheld. ORDER BY full-body read failed, unsorted read-only query succeeded. No additional remote reproduction performed.",
+      "classificationChecked": [
+        "database is locked",
+        "no such column",
+        "no such table",
+        "out of memory",
+        "database schema is locked"
+      ],
+      "classificationResult": "none matched",
+      "databaseSettingsChanged": false
+    }
+  },
+  "rtus": [
+    {
+      "rtuId": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+      "beforeAt": "2026-09-21T13:03:47.312Z",
+      "afterAt": "2026-09-21T13:03:57.314Z",
+      "beforeSequence": 537,
+      "afterSequence": 541,
+      "beforeSimulationSeconds": 16026,
+      "afterSimulationSeconds": 16146,
+      "observedSampleDelta": 60,
+      "inferredMissingSampleRange": [
+        16027,
+        16086
+      ],
+      "persistedMissingSamples": 60,
+      "missedObservedSequences": [
+        538,
+        539
+      ],
+      "missedRowsCreatedAt": [
+        "2026-09-21T13:02:54.675Z",
+        "2026-09-21T13:02:54.682Z"
+      ],
+      "missedRowsAckedAt": [
+        "2026-09-21T13:02:54.837Z",
+        "2026-09-21T13:02:54.944Z"
+      ],
+      "persistedWindowSamples": 600,
+      "persistedWindowSimulationContinuous": true,
+      "missedRowsPubackRecorded": true,
+      "maxReceiptGapMs": 120070
+    },
+    {
+      "rtuId": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+      "beforeAt": "2026-09-21T13:03:47.312Z",
+      "afterAt": "2026-09-21T13:03:57.314Z",
+      "beforeSequence": 537,
+      "afterSequence": 541,
+      "beforeSimulationSeconds": 16026,
+      "afterSimulationSeconds": 16146,
+      "observedSampleDelta": 60,
+      "inferredMissingSampleRange": [
+        16027,
+        16086
+      ],
+      "persistedMissingSamples": 60,
+      "missedObservedSequences": [
+        538,
+        539
+      ],
+      "missedRowsCreatedAt": [
+        "2026-09-21T13:02:54.699Z",
+        "2026-09-21T13:02:54.711Z"
+      ],
+      "missedRowsAckedAt": [
+        "2026-09-21T13:02:54.841Z",
+        "2026-09-21T13:02:54.949Z"
+      ],
+      "persistedWindowSamples": 600,
+      "persistedWindowSimulationContinuous": true,
+      "missedRowsPubackRecorded": true,
+      "maxReceiptGapMs": 120056
+    },
+    {
+      "rtuId": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+      "beforeAt": "2026-09-21T13:03:47.312Z",
+      "afterAt": "2026-09-21T13:03:57.314Z",
+      "beforeSequence": 710,
+      "afterSequence": 716,
+      "beforeSimulationSeconds": 16026,
+      "afterSimulationSeconds": 16146,
+      "observedSampleDelta": 60,
+      "inferredMissingSampleRange": [
+        16027,
+        16086
+      ],
+      "persistedMissingSamples": 60,
+      "missedObservedSequences": [
+        711,
+        712,
+        713
+      ],
+      "missedRowsCreatedAt": [
+        "2026-09-21T13:02:54.733Z",
+        "2026-09-21T13:02:54.748Z",
+        "2026-09-21T13:02:54.750Z"
+      ],
+      "missedRowsAckedAt": [
+        "2026-09-21T13:02:54.846Z",
+        "2026-09-21T13:02:54.954Z",
+        "2026-09-21T13:02:55.020Z"
+      ],
+      "persistedWindowSamples": 600,
+      "persistedWindowSimulationContinuous": true,
+      "missedRowsPubackRecorded": true,
+      "maxReceiptGapMs": 120152
+    },
+    {
+      "rtuId": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+      "beforeAt": "2026-09-21T13:03:47.312Z",
+      "afterAt": "2026-09-21T13:03:57.314Z",
+      "beforeSequence": 272,
+      "afterSequence": 274,
+      "beforeSimulationSeconds": 15652,
+      "afterSimulationSeconds": 15772,
+      "observedSampleDelta": 60,
+      "inferredMissingSampleRange": [
+        15653,
+        15712
+      ],
+      "persistedMissingSamples": 60,
+      "missedObservedSequences": [
+        273
+      ],
+      "missedRowsCreatedAt": [
+        "2026-09-21T13:02:54.778Z"
+      ],
+      "missedRowsAckedAt": [
+        "2026-09-21T13:02:54.852Z"
+      ],
+      "persistedWindowSamples": 600,
+      "persistedWindowSimulationContinuous": true,
+      "missedRowsPubackRecorded": true,
+      "maxReceiptGapMs": 120505
+    },
+    {
+      "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "beforeAt": "2026-09-21T13:03:47.312Z",
+      "afterAt": "2026-09-21T13:03:57.314Z",
+      "beforeSequence": 276,
+      "afterSequence": 278,
+      "beforeSimulationSeconds": 14960,
+      "afterSimulationSeconds": 15080,
+      "observedSampleDelta": 60,
+      "inferredMissingSampleRange": [
+        14961,
+        15020
+      ],
+      "persistedMissingSamples": 60,
+      "missedObservedSequences": [
+        277
+      ],
+      "missedRowsCreatedAt": [
+        "2026-09-21T13:02:54.803Z"
+      ],
+      "missedRowsAckedAt": [
+        "2026-09-21T13:02:54.858Z"
+      ],
+      "persistedWindowSamples": 600,
+      "persistedWindowSimulationContinuous": true,
+      "missedRowsPubackRecorded": true,
+      "maxReceiptGapMs": 120885
+    }
+  ],
+  "sourceScope": "Audit sources from session-start snapshots; store/transport exact3fa3ba0 git; primary/supervisor inspected current source copies, not independent process-byte attestation. Installed MQTT.js defaults hash verified against previous proof."
+}

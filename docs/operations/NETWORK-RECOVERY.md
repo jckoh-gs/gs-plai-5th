@@ -33,3 +33,6 @@ The final restoration plan now invokes short direct kubectl reads, cleanup write
 `verify-release.mjs --remote` separately bounds its remote calls and rejects an observed deadline overrun. The outer wrapper also covers local git/file stalls. Recording and deck creation use `media-deadline.cjs` with an independent watchdog and final receipt checks; copied source inventories now require that helper. A partial recording/deck remains incomplete. Human visual and claim review is still required. The explicit rehearsal mode remains available for future source reproduction, is always labelled rehearsal, and does not extend this autonomous run.
 
 Evidence: `artifacts/checkpoints/final-window-boundaries/summary.json` (38 selected boundary tests and actual688-hash/Ready-image check) and `docs/security/OPERATING-DEADLINE-REVIEW.md`. These are operational-tool checks, not new application acceptance or final-media evidence.
+
+
+추가 실제1.3 관찰:12:58/13:03 로컬 검증 실패 뒤 자동재연결과 동일Pod 유지가 확인됐다. artifacts/checkpoints/reconnect-20260921T1303/summary.json은9배치/300샘플의 관측 공백을 원격 연속 저장/PUBACK와 대조한다. clean-session QoS1 구독자에게 모든 과거메시지 재수신을 보장하는 기능은 아니며 연결오류 근본원인은 미확정이다. 누락배치 서버시각이 단절로그보다 이르므로 '기록된 단절 중 발행된 배치'라고 단정하지 않는다. 누적오류 기준은 resume.json에 갱신했고 관측기를 재시작하거나 카운터를 지우지 않았다.
