@@ -1,0 +1,11 @@
+{
+  "result": "NOT_ELIGIBLE",
+  "checkedAt": "2026-09-21T17:33:54.195561+00:00",
+  "actualVersion": "1.7.0",
+  "podUID": "79784e51-f961-4e34-86d8-196827a8e26c",
+  "imageID": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+  "ready": true,
+  "monitorSpawned": false,
+  "mainMutations": false,
+  "expectedVersion": "1.7.1"
+}

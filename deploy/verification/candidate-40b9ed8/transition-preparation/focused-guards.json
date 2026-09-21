@@ -1,0 +1,67 @@
+{
+  "result": "PASS",
+  "scope": "AST extracts exact prepared helper functions; local data and fake getter only; zero kubectl calls",
+  "checks": [
+    {
+      "name": "unchanged canonical nested list passes",
+      "result": "PASS"
+    },
+    {
+      "name": "extra RTU rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "extra generator rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "missing generator rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "duplicate same-length IDs rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "different same-length scenario IDs rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "stop capped at freeze",
+      "result": "PASS"
+    },
+    {
+      "name": "exact freeze rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "after freeze rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "210 second cap before freeze",
+      "result": "PASS"
+    },
+    {
+      "name": "age zero accepted",
+      "result": "PASS"
+    },
+    {
+      "name": "age1799 accepted",
+      "result": "PASS"
+    },
+    {
+      "name": "future backup rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "age1800 rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "uncertain read timeout emits fixed receipt and preserves original error",
+      "result": "PASS"
+    }
+  ],
+  "count": 15
+}

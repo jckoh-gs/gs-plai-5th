@@ -30,6 +30,7 @@
 ## 소프트웨어·운영·근거 연결
 
 - 실행 가능한 소스/커밋/태그/실행 절차: [README](../../README.md), 최종 선택된 [릴리스 폴더](../../artifacts/releases/), Git 전달 상태. 작업 트리와 이미지가 같은 최종 소스를 가리키는지 확인한다.
+- 소프트웨어 전달은 미디어 inventory와 별도로 확인한다. 선택 manifest의 `source.commit`·`source.hashes`에서 `samples/wind.csv`, `samples/solar.csv`, `samples/hybrid.csv`, `package.json`, `package-lock.json`, `tests/`와 `scripts/`를 실제 Git 객체/전달본과 대조한다. 정확한 runtime commit과 이후 운영·근거 commit을 구분하고, 원격 branch/tag가 그 커밋을 포함한다는 근거 및 파일 수·해시 결과를 최종 인도 기록에 넣는다.
 - charles-k3s 배포/이미지/접속/PVC: [배포 절차](../../deploy/README.md), [배포 매니페스트](../../deploy/app.yaml), [배포 검증](../../deploy/verification/). 매니페스트의 확정 이미지 digest와 현재 실행 중 이미지, API 버전, 최종 미디어를 대조한다.
 - 백업/복원: 확정 릴리스의 backup 필드, `deploy/verification/`의 해당 버전 백업·복구 기록, [체크포인트](CHECKPOINT-3.md). 백업 실파일 위치/해시·DB와 소스 호환·복구 후 기능 검증을 연결하고 공개 묶음에 비밀 백업을 무조건 포함하지 않는다.
 - 요구사항/변경/아이디어: [PRD](../PRD-VPP-SCADA-RTU.md), [PRD 변경 이력](../product/PRD-CHANGELOG.md), [아이디어](../product/IDEAS.md).
@@ -38,6 +39,10 @@
 - 보안: [취약점 관리](../security/VULNERABILITY-MANAGEMENT.md) 및 연결된 스캔·패치·미해결 근거.
 - 이슈/해결/회귀: [이슈 목록](../issues/ISSUES.md) 및 연결 근거. 미완료 이슈를 없던 것으로 표시하지 않는다.
 - 실제 시간/한계: [실행 시간](run.json), 실제 동결·종료 기록, [미디어 계획](MEDIA-PLAN.md). 마감까지 미완료이면 부분 완료와 누락을 명시한다.
+
+## 동결 전 역할 판정 수집
+
+원래 동결 10분 전인 **2026-09-21T21:27:33.079009Z**부터 선택할 정상 릴리스에 대한 제품·보안·이슈 역할의 마지막 검토를 수집한다. 제품은 채택·보류 아이디어와 요구별 잔여 판정, 보안은 정확 lock/image 및 미적용 취약점의 담당·완화·재검토 조건, 이슈는 미해결 사항·원인 미확정·후속 조치를 확인한다. 이는 준비 시각이며 원래 동결/마감을 바꾸지 않는다. 실제 종료 시 변경분과 담당의 종료 판정을 다시 연결하고 OPS02/AT-OPS03 근거로 남긴다. 기존 문서 링크의 존재나 이 계획 자체를 역할 종료 증거로 취급하지 않는다. [REVIEW042](../product/REVIEW-042.md)의 인도 공백 점검을 따른다.
 
 ## 최종 인벤토리 검증 순서
 

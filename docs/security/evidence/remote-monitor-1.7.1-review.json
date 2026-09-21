@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-09-21T17:36:51.642817+00:00",
+  "sourceSha256": {
+    "artifacts/checkpoints/candidate-1.7.1-remote-preparation/monitor.py": "2601d0aeeace9356ae8cf56f8f5397864f48b84f787dfca97dc158ffa18fae0d",
+    "artifacts/checkpoints/candidate-1.7.1-remote-preparation/plan.json": "242571ca44d573941f58d0e240a625f9bc4db9c197fb60844d7ec9a09bbe5d9c",
+    "artifacts/checkpoints/candidate-1.7.1-remote-preparation/monitor-preflight.json": "0ffdd08f5f915ee78c84eb3c8b7d07407c985e29dc588c1a779abb0c6227db47"
+  },
+  "scope": "Read-only source/existing preflight review; monitor and remote commands not executed",
+  "conditions": [
+    "Use documented40second deadline wrapper; raw failed output suppressed by wrapper",
+    "Observed online status does not itself prove retained delivery flag"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "artifacts/private/transition-40b9ed8/config.json": "393660deec5f1fc4aa153a7efc3c986eab7bb2fb8741a732c6b0362a4c2c2737",
+  "artifacts/private/transition-40b9ed8/transition.py": "393f22d22b06108b796cfb14f711b62db0972631e8e0007e84a3d51f29293825",
+  "artifacts/private/transition-40b9ed8/bin/kubectl": "c306c82de4fc6d34d68a76205a1dc3048b3c2b211b2f6427be3949657c7c4fe9",
+  "scripts/deploy-image.sh": "e5dce49c9933d671ba8a9cc9d9da93eddcec4cbaec4fe5032b3b03294c5b3a79",
+  "scripts/render-deployment.mjs": "e5af236919d9ab2e6e34a88fb183adba1878cdd893a1af1d8f30537d1db3912c",
+  "deploy/app.yaml": "4957e26268687c1e66c57ea0ef74ec8487de652ff71602e09ec0a0833374dd45",
+  "artifacts/private/transition-40b9ed8/verify-guards.py": "3ead67ddd4f54114893e7aabe4164491eb3328df6671d11bfe95e4bd23c94789"
+}

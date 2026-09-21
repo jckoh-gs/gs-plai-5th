@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T17:30:41.999723+00:00",
+  "updatedAt": "2026-09-21T17:37:36.953589+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -456,7 +456,7 @@
     "idea": "IDEA-012",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T17:16:40.505705+00:00",
-    "status": "Local full317, actual integration/advanced/report/client-security, retained online/LWT monitor and fresh private quickstart passed; independent local review and exact image gates pending",
+    "status": "Exact candidate image/local/independent security/registry complete; no mainwrite before actual1.7 firsthour capture",
     "fallbackTag": "stable-v1.7.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.7.0.json",
     "beforeEvidence": "docs/operations/NFR08-CONTRACT-FIXTURES-20260922.json",
@@ -542,6 +542,15 @@
       "forwardExitCode": 143,
       "proof": "deploy/verification/candidate-40b9ed8/registry-push-proof.json",
       "port15050Closed": true
+    },
+    "remoteMonitorPreparation": "artifacts/checkpoints/candidate-1.7.1-remote-preparation/plan.json",
+    "transitionPreparation": {
+      "state": "Prepared only; zero remote calls",
+      "plan": "deploy/verification/candidate-40b9ed8/transition-preparation/plan.json",
+      "sourceInventory": "deploy/verification/candidate-40b9ed8/transition-preparation/public-source-inventory.json",
+      "guards": "deploy/verification/candidate-40b9ed8/transition-preparation/focused-guards.json",
+      "guardChecks": 15,
+      "requires": "Root captures actualfirsthour and verifies freshsamecurrentprebackup before explicit release. Stop/archive currentobserver epoch andsingle supervisor onlyafterthosechecks."
     }
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
@@ -1083,5 +1092,17 @@
     "evidence": "artifacts/checkpoints/resume-1.7-audit-binding/guard-summary.json",
     "noActiveHandles": true,
     "policy": "Metadata agreement is not process liveness. Still verifyactualPID/startidentity, completed artifacts and immutabledeadline beforeaction."
+  },
+  "preFreezeRoleReview": {
+    "notBefore": "2026-09-21T21:27:33.079009Z",
+    "state": "Planned, not executed",
+    "plan": "docs/operations/DELIVERY-PLAN.md",
+    "preparationAudit": "docs/product/REVIEW-042.md",
+    "roles": [
+      "product",
+      "security",
+      "issues"
+    ],
+    "requirement": "Actual selectedversion endverdicts and endchanges required; links/plansalone arenotcompletion"
   }
 }

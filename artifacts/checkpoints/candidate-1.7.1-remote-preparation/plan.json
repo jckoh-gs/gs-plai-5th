@@ -1,0 +1,18 @@
+{
+  "preparedAt": "2026-09-21T17:35:51.411876+00:00",
+  "state": "PREPARED_NOT_EXECUTED",
+  "source": "artifacts/checkpoints/candidate-1.7.1-remote-preparation/monitor.py",
+  "sourceSha256": "8a419162f624d3597fd23aa66d2e41fadbe09c38dc02883efb4b15b0018953d6",
+  "negativeEligibility": "monitor-preflight.json",
+  "scope": "Preflight observed actual1.7 and Ready d1e4, refused eligibility before any monitor spawn. Actual1.7.1 monitor execution pending. Usernamevpp-client matches deployedbootstrap/remoteintegration.",
+  "actualCommand": "python3 scripts/deadline-command.py --timeout-seconds 40 -- python3 artifacts/checkpoints/candidate-1.7.1-remote-preparation/monitor.py",
+  "preconditions": [
+    "Actual API1.7.1 and exact Ready234 image",
+    "Root supervisor single3104/18884 active",
+    "Source40b9ed8 client byteequality",
+    "Use new resultpath afteractualrollout, preservepreflight"
+  ],
+  "cleanup": "Own localmonitor SIGTERM then boundedkill/wait onlyifneeded; no deployedRTUdisconnection/controlcommand",
+  "limitation": "Remote online status only; shipped client output does not expose packet retain flag. Actual offline/LWT and late subscription were separately verified in isolated exact image. Online is not a current-health guarantee.",
+  "requiredWrapper": "Always use the listed deadline-command40s invocation; socket timeout alone does not bound entire HTTP body or hide raw Python exception diagnostics."
+}

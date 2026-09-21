@@ -151,7 +151,7 @@
     "idea": "IDEA-012",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T17:16:40.505705+00:00",
-    "status": "Local implementation and full317/real broker/quickstart/build passed; independent REVIEW041 accepts AT01-03 locally, AT04 partial pending exact image/k3s/pairedrestore/manifest",
+    "status": "Exact candidate image/local/independent security/registry complete; no mainwrite before actual1.7 firsthour capture",
     "fallbackTag": "stable-v1.7.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.7.0.json",
     "beforeEvidence": "docs/operations/NFR08-CONTRACT-FIXTURES-20260922.json",
@@ -193,6 +193,15 @@
       "forwardExitCode": 143,
       "proof": "deploy/verification/candidate-40b9ed8/registry-push-proof.json",
       "port15050Closed": true
+    },
+    "remoteMonitorPreparation": "artifacts/checkpoints/candidate-1.7.1-remote-preparation/plan.json",
+    "transitionPreparation": {
+      "state": "Prepared only; zero remote calls",
+      "plan": "deploy/verification/candidate-40b9ed8/transition-preparation/plan.json",
+      "sourceInventory": "deploy/verification/candidate-40b9ed8/transition-preparation/public-source-inventory.json",
+      "guards": "deploy/verification/candidate-40b9ed8/transition-preparation/focused-guards.json",
+      "guardChecks": 15,
+      "requires": "Root captures actualfirsthour and verifies freshsamecurrentprebackup before explicit release. Stop/archive currentobserver epoch andsingle supervisor onlyafterthosechecks."
     }
   },
   "previousStableCheckpoints": [
@@ -362,7 +371,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T17:30:41.999723+00:00",
+  "updatedAt": "2026-09-21T17:37:36.954102+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",

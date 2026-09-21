@@ -1,0 +1,54 @@
+{
+  "state": "PREPARED_NOT_EXECUTED",
+  "preparedAt": "2026-09-21T17:34:07.860910+00:00",
+  "source": "artifacts/private/transition-40b9ed8/transition.py",
+  "config": "artifacts/private/transition-40b9ed8/config.json",
+  "localChecks": [
+    "local-render-check.json",
+    "premature-guard.json",
+    "focused-guards.json"
+  ],
+  "requiredRootRelease": true,
+  "notBefore": "2026-09-21T17:45:54.307Z",
+  "firstHourCheckpoint": "artifacts/checkpoints/soak-1.7.0-first-hour",
+  "guards": [
+    "Supplied SHA256 of actual checkpoint sha256.json, every listed file hash, runtime d98 source/image, both duration>=3600 and boundary>=notBefore",
+    "Explicit execute-after-root-release flag and exact prebackup metadata SHA; complete localbackup bytes/hash, expectedprior UID/image/source, verification<30min",
+    "Expected prior actual d1e4 Ready UID79784; complete canonical5settings/scenarios before apply; evidence directory refuses overwrite",
+    "Exact ID-set and length/duplicate checks for canonical id-keyed arrays before projection",
+    "Reject at/after freezeAt before remote operations; no transition under final rollback exception",
+    "Verified prebackup age must be 0<=age<1800 seconds",
+    "Uncertain-read timeout records queryFailure and preserves original deployment exception"
+  ],
+  "commandAfterExplicitRootRelease": "python3 scripts/deadline-command.py --timeout-seconds 230 -- python3 artifacts/private/transition-40b9ed8/transition.py --execute-after-root-release --first-hour-index-sha256 <actual_sha256_json_hash> --pre-backup <verified_preupgrade_metadata_path> --pre-backup-metadata-sha256 <actual_metadata_hash>",
+  "mutationCommand": [
+    "sh",
+    "scripts/deploy-image.sh",
+    "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+    "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+  ],
+  "bounds": {
+    "hostReadSeconds": 20,
+    "hostApplySeconds": 30,
+    "hostRolloutSeconds": 180,
+    "wholeTransitionSeconds": 210,
+    "originalDeadlineRequired": true,
+    "freezeAtRequired": true,
+    "wholeStop": "min(now+210s, original freezeAt, original deadlineAt)"
+  },
+  "kubectlWrapper": "Owned PATH shim calls actual kubectl with perstage finite timeout; no kubectl command has run during preparation",
+  "afterApply": [
+    "Actual Ready exactnewimage/newUID",
+    "Complete Deployment.spec equality except app image",
+    "Direct localhost API canonical before/after, version1.7.1",
+    "Actual HTTP /api/guide body SHA equals exact runtime source docs and includes strict boolean online guidance"
+  ],
+  "failurePolicy": "On any uncertain apply inspect same deployment/pods; never blind repeat or create another rollout evidence path. No rollback or database overwrite in this helper.",
+  "rootResponsibilities": [
+    "Actual firsthour capture and hash review",
+    "New prebackup and verification",
+    "Stop/archive own observers and supervisor intentionally before release",
+    "Update run/resume afteractualReady and restart single supervisor"
+  ],
+  "postAcceptanceNote": "This preparation does not replace later root browser/MQTT/outbox/backup/isolatedrestore gates. Current/backward restore must preserve exactsnapshot and separate current operational harness from compiled source."
+}

@@ -1,0 +1,13 @@
+{
+ "runtimeCommit":"40b9ed898f32037e7a87259d12d145457575a4a8",
+ "productVersion":"1.7.1",
+ "priorRuntimeCommit":"d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
+ "priorImage":"127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+ "newImage":"127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+ "brokerImage":"127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+ "priorPodUID":"79784e51-f961-4e34-86d8-196827a8e26c",
+ "firstHourDirectory":"artifacts/checkpoints/soak-1.7.0-first-hour",
+ "notBefore":"2026-09-21T17:45:54.307Z",
+ "baseline":"deploy/verification/candidate-d98d3c4/pre-upgrade/baseline.json",
+ "candidate":"deploy/verification/candidate-40b9ed8"
+}

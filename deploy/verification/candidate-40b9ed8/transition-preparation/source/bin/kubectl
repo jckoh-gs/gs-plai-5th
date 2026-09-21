@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+import subprocess,os,sys,time
+args=sys.argv[1:];remaining=float(os.environ['TRANSITION_STOP_AT'])-time.time()
+limit=180 if 'rollout'in args else 30 if 'apply'in args else 20
+if remaining<=0:raise SystemExit('Transition deadline expired; inspect existing deployment before retry')
+try:r=subprocess.run([os.environ['TRANSITION_REAL_KUBECTL'],*args],timeout=min(limit,remaining),capture_output=True)
+except subprocess.TimeoutExpired:raise SystemExit('kubectl host timeout; remote outcome uncertain, inspect before retry')
+if r.returncode:raise SystemExit('kubectl failed; raw output withheld; inspect existing deployment')
+sys.stdout.buffer.write(r.stdout)

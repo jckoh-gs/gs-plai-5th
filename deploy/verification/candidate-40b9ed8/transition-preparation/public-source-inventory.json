@@ -1,0 +1,21 @@
+{
+  "scope": "Reviewable exact preparation sources, not rollout execution proof. Private environment credentials are only referenced, never copied.",
+  "copies": {
+    "deploy/verification/candidate-40b9ed8/transition-preparation/source/config.json": {
+      "executedOrPreparedSource": "artifacts/private/transition-40b9ed8/config.json",
+      "sha256": "393660deec5f1fc4aa153a7efc3c986eab7bb2fb8741a732c6b0362a4c2c2737"
+    },
+    "deploy/verification/candidate-40b9ed8/transition-preparation/source/transition.py": {
+      "executedOrPreparedSource": "artifacts/private/transition-40b9ed8/transition.py",
+      "sha256": "393f22d22b06108b796cfb14f711b62db0972631e8e0007e84a3d51f29293825"
+    },
+    "deploy/verification/candidate-40b9ed8/transition-preparation/source/bin/kubectl": {
+      "executedOrPreparedSource": "artifacts/private/transition-40b9ed8/bin/kubectl",
+      "sha256": "c306c82de4fc6d34d68a76205a1dc3048b3c2b211b2f6427be3949657c7c4fe9"
+    },
+    "deploy/verification/candidate-40b9ed8/transition-preparation/source/verify-guards.py": {
+      "executedOrPreparedSource": "artifacts/private/transition-40b9ed8/verify-guards.py",
+      "sha256": "3ead67ddd4f54114893e7aabe4164491eb3328df6671d11bfe95e4bd23c94789"
+    }
+  }
+}

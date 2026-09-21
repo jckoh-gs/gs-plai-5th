@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-09-21T17:37:36.953130+00:00",
+  "scope": "Root clarification after independent source review; no execution or control behavior change",
+  "sourceSha256": "8a419162f624d3597fd23aa66d2e41fadbe09c38dc02883efb4b15b0018953d6",
+  "changes": [
+    "Require documented40s deadline wrapper for wholeHTTPbody bound and failure redaction",
+    "Call observed payload online status; explicitly do not claim retain flag was inspected"
+  ],
+  "independentReview": "docs/security/REMOTE-MONITOR-1.7.1-REVIEW.md",
+  "astParse": "PASS"
+}

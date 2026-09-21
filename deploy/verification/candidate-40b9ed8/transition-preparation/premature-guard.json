@@ -1,0 +1,6 @@
+{
+  "result": "PASS",
+  "exitCode": 1,
+  "reason": "Actual first-hour checkpoint absent; rejected before any remote command",
+  "remoteCalls": 0
+}
