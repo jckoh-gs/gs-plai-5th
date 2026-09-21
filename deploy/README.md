@@ -6,7 +6,7 @@ The image registry binds only node loopback `127.0.0.1:15050`. k3s/containerd us
 
 ## Current run and access
 
-The actual deployment is **1.6.0 / PRD1.13 / runtime331ab9a / image4af99e7b**. Independent functional acceptance includes the exact851673088-byte9bd snapshot restored on fresh current1.6 and backward1.5 PVCs. The new immutable manifest/tag connection is being finalized. Retain historical **1.5.0 / runtime6d165d1** with its719527936-byte ad34 snapshot and immutable checkpoint1.5; missing event timestamps remain a limitation of that older runtime. Do not combine current images with historical backup evidence.
+The actual deployment is **1.7.0 / PRD1.14 / runtime d98d3c4 / image d1e4b1d8**. Independent functional acceptance includes the exact931876864-byte1cab snapshot restored on fresh current1.7 and backward1.6 PVCs:23 reports plus2 actual Pod identities. Both recovery rigs are scaled to zero, their owned tunnels ended, and four PVCs retained. The immutable checkpoint-1.7.0 manifest passed1,731 hash/actual Ready/backup checks; stable-v1.7.0 points to full operational/evidence commit e5bd056, while stable-runtime-v1.7.0-d98d3c4 points to the exact app build source. Both tags are remotely verified. See [release proof](../artifacts/checkpoints/release-1.7/tags.json) and [paired recovery](verification/candidate-d98d3c4/restore-summary.json). Preserve historical1.6/9bd and1.5/ad34 checkpoints; do not combine current images with their backup evidence. The original final media/time/delivery gates remain pending.
 
 Use [run.json](../docs/operations/run.json) for the current deployment and selected backup, [resume.json](../docs/operations/resume.json) for owned processes and unfinished operations, and [NEXT-ACTIONS](../docs/operations/NEXT-ACTIONS.md) for the next step. These records supersede historical checkpoint descriptions below. Reconcile actual image/Ready/API and pending operation outcomes before changing anything; a lost local connection is not authorization to repeat rollout, control or restore writes.
 
@@ -45,7 +45,7 @@ Select an image and matching verified snapshot from the authoritative run record
 
 ## Historical checkpoints
 
-The following paragraphs describe completed past evidence, not current recovery instructions. Immutable1.0–1.5 manifests are retained in [artifacts/releases](../artifacts/releases/); the selected fallback and any candidate remain explicit in run.json.
+The following paragraphs describe completed past evidence, not current recovery instructions. Immutable1.0–1.7 manifests are retained in [artifacts/releases](../artifacts/releases/); the selected fallback and any candidate remain explicit in run.json.
 
 Initial verified deployment checkpoint: source `0b23c41`, image digest `sha256:1dd9be395d7fe324b20216f2db7162da51851cf01edc212bd2334a6a12bc7223`. Evidence is in `deploy/verification/`. MQTT access, remote VPP dispatch, pod replacement persistence, and direct pod ingress denial passed. This checkpoint is not the final PRD acceptance release.
 
