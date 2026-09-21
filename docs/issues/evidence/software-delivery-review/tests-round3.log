@@ -1,0 +1,67 @@
+✔ historical Git source/runtime and real annotated local-bare advertisement pass without completion claim (469.400916ms)
+✔ omitted scripts inventory cannot pass (385.249666ms)
+✔ omitted tests inventory cannot pass (401.37575ms)
+✔ mismatched Git blob rejects (373.424333ms)
+✔ source symlink is not regular delivery (364.291125ms)
+✔ unsafe inventory traversal rejects (331.713ms)
+✔ source runtime byte divergence rejects (391.143709ms)
+✔ runtime annotated tag must bind exact runtime (426.957166ms)
+✔ main ancestry must include historical commits (505.413292ms)
+✔ changed main manifest rejects (512.094125ms)
+✔ main runtime change cannot claim historical runtime (523.864166ms)
+✔ missing advertised annotated runtime tag rejects (484.095708ms)
+✔ unapproved origin rejects before transport (415.25025ms)
+✔ original deadline expiration refuses (313.593167ms)
+✔ manifest symlink refuses before reading payload (315.039125ms)
+✔ CLI preserves existing result bytes and writes new success privately with false completion (633.567833ms)
+✖ entire absent test suite must not satisfy required software delivery (451.498ms)
+✖ deadline crossing during final fsync must not leave a success receipt (476.047792ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 16
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7809.733583
+
+✖ failing tests:
+
+test at tests/review-software-delivery.test.js:35:41
+✖ entire absent test suite must not satisfy required software delivery (451.498ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///Users/charleskoh/research/20260921-RALPTON/tests/review-software-delivery.test.js:35:112)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/review-software-delivery.test.js:55:1
+✖ deadline crossing during final fsync must not leave a success receipt (476.047792ms)
+  AssertionError [ERR_ASSERTION]: nonzero late-deadline command left a falsely successful artifact
+      at TestContext.<anonymous> (file:///Users/charleskoh/research/20260921-RALPTON/tests/review-software-delivery.test.js:57:404)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'SOFTWARE_GIT_DELIVERY_CHECKS_PASSED',
+    expected: 'SOFTWARE_GIT_DELIVERY_CHECKS_PASSED',
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }

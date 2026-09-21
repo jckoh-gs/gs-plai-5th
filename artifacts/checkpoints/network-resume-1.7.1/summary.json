@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "result": "PASS",
+  "checkedAt": "2026-09-21T18:28:08.853945+00:00",
+  "runId": "grid-new-20260921T080733Z",
+  "originalSchedule": {
+    "startedAt": "2026-09-21T08:07:33.079009+00:00",
+    "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+    "deadlineAt": "2026-09-21T22:07:33.079009+00:00"
+  },
+  "resumeCommandExit": {
+    "handle": 60761,
+    "exitCode": 0
+  },
+  "processes": {
+    "primary": {
+      "handle": 72957,
+      "pid": 57533,
+      "processIdentity": "Tue Sep 22 02:59:54 2026",
+      "actualCommand": "node artifacts/checkpoints/observer-1.7.1-activation/source/primary/soak-monitor.mjs",
+      "actualIdentityMatched": true
+    },
+    "audit": {
+      "handle": 8133,
+      "pid": 57534,
+      "processIdentity": "Tue Sep 22 02:59:54 2026",
+      "actualCommand": "node scripts/telemetry-audit-monitor.mjs",
+      "actualIdentityMatched": true
+    },
+    "supervisor": {
+      "handle": 48590,
+      "pid": 56137,
+      "processIdentity": "Tue Sep 22 02:52:15 2026",
+      "actualCommand": "node scripts/connection-supervisor.mjs",
+      "actualIdentityMatched": true
+    }
+  },
+  "automation": {
+    "id": "grid",
+    "status": "ACTIVE",
+    "intervalMinutes": 10,
+    "sameThread": true,
+    "configurationSha256": "2934ae39053ba7dcef3fdf53e407a41dcee92f89f39367591ddb264ec3d48685",
+    "scope": "Read-only actual saved configuration; no scheduler availability or uninterrupted execution guarantee"
+  },
+  "independentReview": "docs/security/NETWORK-RESUME-20260922-REVIEW.md",
+  "policy": "Reconcile original journal/resource/identity/outcome before an uncertain mutation. Preserve original deadline, counters and completed operations.",
+  "remoteMutationsPerformed": false,
+  "firstHourClaim": false,
+  "completionClaim": false,
+  "scope": "Current read-only service and actual process identities, saved heartbeat configuration and existing isolated tests. No forced real network outage or AI restart guarantee."
+}

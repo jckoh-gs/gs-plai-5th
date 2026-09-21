@@ -1,0 +1,53 @@
+{
+  "result": "PASS_INDEPENDENT_FIXTURES",
+  "checkedAt": "2026-09-21T18:30:26.911284+00:00",
+  "finalTests": {
+    "passed": 18,
+    "failed": 0,
+    "handle": 46430,
+    "log": "docs/issues/evidence/software-delivery-review/tests-round4.log"
+  },
+  "fixtureScope": "Temporary actual Git repository and annotated tags, real local bare refs, approved origin URL unmodified. Process-scoped GIT_SSH_COMMAND invokes only local git upload-pack; no production origin network or mutation. All temporary repos removed in finally.",
+  "covered": [
+    "historicalsource/runtime/latercheckpoint positive",
+    "omittedscripts/testshashes",
+    "wrongGitblob",
+    "sourceandmanifestsymlinks",
+    "unsafepath",
+    "source-runtime divergence",
+    "wrongruntimeannotatedtag",
+    "unrelatedmainancestry",
+    "changedmanifestatmain",
+    "mainruntime divergence",
+    "missingadvertisedtag",
+    "unapprovedorigin",
+    "expireddeadline",
+    "existingoutputpreservation",
+    "mode0600 and stdout hash binding",
+    "entiretestsdirectoryabsence",
+    "deadlinecrossing afterrealfsync"
+  ],
+  "discoveredAndFixed": [
+    {
+      "finding": "Entire missing tests tree passed empty completeness loop",
+      "before": "round2 16pass1fail",
+      "fix": "Root requires nonempty every completePrefixes tree; finalnegative rejects"
+    },
+    {
+      "finding": "Post-fsync deadlinefailure left PASS JSON despite exit1",
+      "before": "round3 16pass2fail",
+      "fix": "Root saves RECORDED/requiresSuccessfulExitReceipt:true; only postdeadline stdout plus exit0/exacthash carries PASS; finalnegative ensures no PASS file"
+    }
+  ],
+  "claimBoundary": "Pure helper return is checks result; CLI saved report alone is not PASS. Must consume exit0 + stdout exact saved SHA. This fixture run is not actual remote delivery, secret scan, runtime/backup verification or finalmedia/goal completion.",
+  "sourceHashes": {
+    "scripts/verify-software-delivery.mjs": "2b13af5bdc2c53d48994984af04490060b74e081a90864b13e59d41c9be617fc",
+    "tests/review-software-delivery.test.js": "f4fc4cdb73f3ea3c6074baba3edebed987fd35113f5ded6b1bedf1858a1ce15e"
+  },
+  "logHashes": {
+    "docs/issues/evidence/software-delivery-review/tests-round1.log": "13591f93e631ef36882eb2f9c8c5fff7bac384d7d6c685af42899ac3e9e9a7fd",
+    "docs/issues/evidence/software-delivery-review/tests-round2.log": "0af4b95e0f5e41398e807a3ffd850096475c5887ba9fc8cd78792ea9651f2960",
+    "docs/issues/evidence/software-delivery-review/tests-round3.log": "e9a40159bfd63ac9c5b8cb1193c0a73806a4d82892809ea2be7a4aedff36821b",
+    "docs/issues/evidence/software-delivery-review/tests-round4.log": "955cda65ef1f02c4e755d47e0ca0f3e1a9450e0fe7e61792cdea33e40e20e2d5"
+  }
+}

@@ -1,0 +1,48 @@
+✔ historical Git source/runtime and real annotated local-bare advertisement pass without completion claim (477.583084ms)
+✔ omitted scripts inventory cannot pass (391.751375ms)
+✔ omitted tests inventory cannot pass (384.565542ms)
+✔ mismatched Git blob rejects (365.560167ms)
+✔ source symlink is not regular delivery (365.937083ms)
+✔ unsafe inventory traversal rejects (336.000625ms)
+✔ source runtime byte divergence rejects (410.047667ms)
+✔ runtime annotated tag must bind exact runtime (432.898167ms)
+✔ main ancestry must include historical commits (483.386209ms)
+✔ changed main manifest rejects (486.573167ms)
+✔ main runtime change cannot claim historical runtime (489.302833ms)
+✔ missing advertised annotated runtime tag rejects (420.146583ms)
+✔ unapproved origin rejects before transport (398.854625ms)
+✔ original deadline expiration refuses (308.204875ms)
+✔ manifest symlink refuses before reading payload (314.223041ms)
+✔ CLI preserves existing result bytes and writes new success privately with false completion (635.922833ms)
+✖ entire absent test suite must not satisfy required software delivery (450.0755ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 16
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7185.19875
+
+✖ failing tests:
+
+test at tests/review-software-delivery.test.js:35:41
+✖ entire absent test suite must not satisfy required software delivery (450.0755ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///Users/charleskoh/research/20260921-RALPTON/tests/review-software-delivery.test.js:35:112)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

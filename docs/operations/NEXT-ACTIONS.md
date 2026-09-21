@@ -6,6 +6,8 @@
 
 `node scripts/resume-status.mjs`는 원격 Git·실제 이미지/Ready·인증 API·현재 관측 원장의 정합성을 읽기 전용으로 검사한다. 응답을 잃은 작업은 기존 journal·고유 리소스·담당의 원래 핸들·종료 영수증을 확인한다. 완료된 제어·배포·복원을 반복하거나 새 commandId를 발행하지 않는다. 보조 담당의 핸들이 메인 도구에서 보이지 않는 것만으로 종료를 추론하지 않는다. [네트워크 복구 절차](NETWORK-RECOVERY.md)를 따른다.
 
+[18:27Z 이후 추가 점검](../../artifacts/checkpoints/network-resume-1.7.1/summary.json)은 현재 실제 세 프로세스·Ready/API·원격 Git·기존 heartbeat 설정을 확인했다. 독립 격리32시험을 포함하며 실제 전체 네트워크 차단 시험은 아니다. 재연결 당시의 상태를 새로 확인해야 한다.
+
 현재 root 소유 상주 프로세스는 다음과 같다. PID와 시작 identity를 함께 확인한 뒤 유지한다.
 
 - supervisor48590 / PID56137 / `Tue Sep 22 02:52:15 2026`: 단일3104/18884 연결 감독기.

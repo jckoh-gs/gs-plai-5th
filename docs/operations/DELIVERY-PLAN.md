@@ -40,6 +40,18 @@
 - 이슈/해결/회귀: [이슈 목록](../issues/ISSUES.md) 및 연결 근거. 미완료 이슈를 없던 것으로 표시하지 않는다.
 - 실제 시간/한계: [실행 시간](run.json), 실제 동결·종료 기록, [미디어 계획](MEDIA-PLAN.md). 마감까지 미완료이면 부분 완료와 누락을 명시한다.
 
+`scripts/verify-software-delivery.mjs`는 선택된 과거 source/runtime Git 객체와 새로 조회한 승인된 origin의 main·두 annotated tag를 대조한다. source의 server/web/samples/scripts/tests 전체 목록은 빠짐없이 존재해야 하고 비어 있을 수 없다. 필수 샘플3종·package/lock, runtime 전체 파일, 추가 README·`.env.example`·Compose·로컬 Mosquitto 설정4종도 실제 regular blob으로 해시한다. 이4종은 기존 불변 manifest를 수정하지 않고 supplemental inventory로 구분한다. 이후 main의 운영 파일은 별도 목록이며 과거 source와 같다고 주장하지 않는다. runtime 파일만 main에서도 동일해야 한다.
+
+호출 시 manifest와 두 태그 및 새 출력 파일을 명시한다. 출력 부모는 이미 존재하는 별도 근거 폴더여야 한다. 예를 들어 현재 안정 체크포인트 확인은 다음과 같다.
+
+```sh
+python3 scripts/deadline-command.py --timeout-seconds 70 -- node scripts/verify-software-delivery.mjs --manifest artifacts/releases/checkpoint-1.7.1.json --checkpoint-tag stable-v1.7.1 --runtime-tag stable-runtime-v1.7.1-40b9ed8 --output artifacts/checkpoints/software-delivery-1.7.1/checks.json
+```
+
+완료 판정은 원래 실행의 **exit0 + stdout 영수증 + outputSha256와 실제 checks.json 일치**를 함께 요구한다. 중단 또는 fsync 중 마감 초과 뒤 파일이 남을 수 있으므로 파일 자체는 `SOFTWARE_GIT_CHECKS_RECORDED` 및 `requiresSuccessfulExitReceipt=true`로 기록한다. 파일 존재만으로 PASS로 취급하지 않는다. 원격 Git 읽기 실패·누락 객체·다른 manifest·비정상 경로는 거절하며 fetch/push/원격 변경이나 전체 목표 완료 선언은 수행하지 않는다. 실제 시험 실행·비밀값 검사·배포·미디어 검수는 기존 별도 증거가 필요하다.
+
+최종창에서는 최종 선택 manifest를 포함한 커밋을 원격 main과 새 불변 checkpoint 태그에 전달한 뒤 같은 검사를 새 출력 경로로 수행한다. 이미 존재하는 stable 태그를 이동하거나 과거 source/runtime 커밋을 덮어쓰지 않는다. 준비 단계의 검사 결과를 이후 최종 refs 관측으로 재사용하지 않는다.
+
 ## 동결 전 역할 판정 수집
 
 원래 동결 10분 전인 **2026-09-21T21:27:33.079009Z**부터 선택할 정상 릴리스에 대한 제품·보안·이슈 역할의 마지막 검토를 수집한다. 제품은 채택·보류 아이디어와 요구별 잔여 판정, 보안은 정확 lock/image 및 미적용 취약점의 담당·완화·재검토 조건, 이슈는 미해결 사항·원인 미확정·후속 조치를 확인한다. 이는 준비 시각이며 원래 동결/마감을 바꾸지 않는다. 실제 종료 시 변경분과 담당의 종료 판정을 다시 연결하고 OPS02/AT-OPS03 근거로 남긴다. 기존 문서 링크의 존재나 이 계획 자체를 역할 종료 증거로 취급하지 않는다. [REVIEW042](../product/REVIEW-042.md)의 인도 공백 점검을 따른다.

@@ -829,7 +829,7 @@ validSeconds는 제출 시 한 번 읽은 현재 시각으로 만료일을 계�
 5. 별도 소유 로컬 RTU에서 accepted/executing/completed, target0과stop 구분, 가용량 초과·정격 이내 목표의 timed_out, 소수 요청 보존을 확인한다. 정격 초과 서버 거절과 기존 REST/MQTT 검증도 유지한다.
 6. 기존 preview/export/시나리오·전체 시험/빌드·실제 MQTT·정확한 후보 이미지의 k3s 배포·백업/복원을 검증한 뒤 승격한다. 수정 전 증거를 보존하고 새 증거를 소스/번들/환경에 연결한다. 최종 미디어·시간·인도 게이트는 별도다.
 
-현재 상태: 제품 **1.4.0**, runtime `fdd0491a5c08901962f46ac845f8582921150d45`이다. IDEA-001~008의 채택 기능을 검증했다. [검토021](product/REVIEW-021.md), [동일594944000바이트 백업 복원](../deploy/verification/candidate-fdd0491/restore-summary.json), [인수 추적](product/acceptance.json)이 근거다. 이전 [1.3 checkpoint](../artifacts/releases/checkpoint-1.3.0.json) 및1.0~1.2 검증·복원 근거도 보존한다. 아래 과거 후보·승격 표현은 당시 절차의 기준이다. **최종 동결 점검·영상·PPT·운영시간·역할 마감 및 인도는 아직 완료되지 않았다.** 기능 checkpoint를 전체 목표 완료로 해석하지 않는다.
+현재 상태: 제품 **1.7.1 / PRD1.15**, runtime `40b9ed898f32037e7a87259d12d145457575a4a8`이다. IDEA-001~012의 채택 기능을 검증했다. [기능·동일1075081216바이트/5ff 백업 복원 검토045](product/REVIEW-045.md), [2033해시·실제Ready 출처 검토046](product/REVIEW-046.md), [불변1.7.1 checkpoint](../artifacts/releases/checkpoint-1.7.1.json), [원격 태그 확인](../artifacts/checkpoints/release-1.7.1/tags.json), [인수 추적](product/acceptance.json)이 근거다. `stable-v1.7.1`은 완료 운영·근거 커밋 `c9b43bd`이고 `stable-runtime-v1.7.1-40b9ed8`은 정확 런타임을 가리킨다. 과거1.4.0/runtime fdd0491의 [검토021](product/REVIEW-021.md)·[594944000바이트 복원](../deploy/verification/candidate-fdd0491/restore-summary.json),1.7/1cab 및 이전 불변 체크포인트는 역사적 검증·fallback으로 보존한다. 아래 과거 후보·승격 표현은 당시 절차의 기준이다. **최종 동결 점검·영상·PPT·운영시간·역할 마감 및 인도는 아직 완료되지 않았다.** 기능 checkpoint를 전체 목표 완료로 해석하지 않는다.
 
 프로토콜 변경 시 schemaVersion, 가이드, 클라이언트, 통합 시험을 함께 변경한다. 등록 시 단위 정책이나 time 의미는 기존 데이터 마이그레이션 계획 없이 바꾸지 않는다. 제조사 모델·실물 프로토콜·대규모 부하·사용자 권한·브로커 업무 ACK·미래 제어 타임라인 재생은 별도 요구사항으로 설계한다.
 
@@ -1684,7 +1684,7 @@ RTU 변경 시 행·시각·오류를 초기화하고 늦은 A 응답은 B에 �
 4. 관련단위/실제브라우저와기존auth/SSE/form/receipt/export회귀,정확후보이미지의k3s읽기검증 및동일백업현재1.7/하위1.6복원후기능안정승격한다. 하위버전에새목록안내가있다고추정하지않는다. 최종미디어·시간·인도는별도다.
 
 
-### FR-VPP-STATUS-01 연동 시작과 RTU 상태 관측 (IDEA012 개정1 / 제품1.7.1 후보)
+### FR-VPP-STATUS-01 연동 시작과 RTU 상태 관측 (IDEA012 개정1 / 제품1.7.1 기능 검증 완료)
 
 배포되는 연동 가이드와 부록 A의 빠른 시작은 기존 `.env`를 덮어쓰지 않고 예제를 준비한다. 예제 앱3101/Compose MQTT18883과 bare runtime 기본3001/1883을 구분하며 부록 B의 예제 설정도 일치시킨다. 기존 사용자 설정은 자동 교체하지 않는다.
 
@@ -1692,7 +1692,9 @@ RTU 변경 시 행·시각·오류를 초기화하고 늦은 A 응답은 B에 �
 
 이전 별도 v1 구현 DB의 마이그레이션은 사용자 지시의 새 구현 범위 밖이다. legacy_accepted 지원을 약속하는 부록 문구만 정정한다. 이번 구현의 명령 ID·본문 중복방지, 재시작 복원, 실제시간 만료 및 현재/이전 검증 버전의 동일 스냅샷 복원 요구를 제거하지 않는다. 새 OSS·서버·DB·제어·UI·MQTT wire schema 변경은 없다.
 
-### AT-VPP-STATUS-01 인수 — 구현·검증 대기
+### AT-VPP-STATUS-01 인수 — 기능·배포·복원·체크포인트 검증 완료
+
+현재 판정은 [REVIEW045](product/REVIEW-045.md)와 [REVIEW046](product/REVIEW-046.md)을 따른다. 아래 수락 조건은 변경하지 않는다. 불변 manifest의 생성 당시 partial 판정은 역사적으로 보존하며 `--at-commit`으로 검증한다. 최종 미디어·시간·인도는 별도 미완료다.
 
 1. status parser에서 true/false와 retained 상태를 보존하고 누락/null/문자열/숫자는 null임을 확인한다. 다른 RTU/topic, 크기 제한, 비밀 제거, retained ack/command-status 거부 및 기존 명령 상태 의미를 보존한다.
 2. 격리된 실제 로컬 브로커와 실제 monitor stdout에서 online true와 비정상 RTU 연결 종료의 LWT offline false를 구분한다. 다른 RTU 연결과 monitor의 무명령발행·정상 종료도 확인한다. 순수 또는 수동 발행 fixture를 실제 LWT로 표현하지 않는다.

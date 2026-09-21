@@ -1,0 +1,24 @@
+✔ historical Git source/runtime and real annotated local-bare advertisement pass without completion claim (476.973791ms)
+✔ omitted scripts inventory cannot pass (378.359667ms)
+✔ omitted tests inventory cannot pass (387.32125ms)
+✔ mismatched Git blob rejects (366.688042ms)
+✔ source symlink is not regular delivery (361.405584ms)
+✔ unsafe inventory traversal rejects (327.956625ms)
+✔ source runtime byte divergence rejects (402.3235ms)
+✔ runtime annotated tag must bind exact runtime (433.342375ms)
+✔ main ancestry must include historical commits (477.899958ms)
+✔ changed main manifest rejects (478.126333ms)
+✔ main runtime change cannot claim historical runtime (478.523708ms)
+✔ missing advertised annotated runtime tag rejects (470.297292ms)
+✔ unapproved origin rejects before transport (402.364708ms)
+✔ original deadline expiration refuses (312.6725ms)
+✔ manifest symlink refuses before reading payload (318.03425ms)
+✔ CLI preserves existing result bytes and writes new success privately with false completion (652.638ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6758.061

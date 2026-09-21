@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T18:18:59.744061+00:00",
+  "updatedAt": "2026-09-21T18:28:08.853945+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -1342,5 +1342,12 @@
       "currentPortOwner": "supervisor77410 owns3104/18884; do not treat historical freedports as currentlyfree"
     }
   ],
-  "currentObservationState": "Actual1.7.1 observers72957/8133 andsupervisor48590 verified. All older1.7 processes ended."
+  "currentObservationState": "Actual1.7.1 observers72957/8133 andsupervisor48590 verified. All older1.7 processes ended.",
+  "networkResumeReview": {
+    "checkedAt": "2026-09-21T18:28:08.853945+00:00",
+    "evidence": "artifacts/checkpoints/network-resume-1.7.1/summary.json",
+    "independentReview": "docs/security/NETWORK-RESUME-20260922-REVIEW.md",
+    "result": "PASS",
+    "scope": "Current read-only service and actual process identities, saved heartbeat configuration and existing isolated tests. No forced real network outage or AI restart guarantee."
+  }
 }

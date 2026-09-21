@@ -110,6 +110,8 @@ final_command 70 node scripts/verify-release.mjs artifacts/releases/final-202609
 
 미디어 입력의 releaseManifest를 위 경로로, approvedReleaseCommit을 manifest.source.commit으로, approvedImageDigest를 manifest.deployment.appImage의 digest로 설정한다. 실제 baseUrl은 운영3104, mqtt.url은18884여야 한다. 복원3105/18885를 최종시연 입력으로 남기지 않는다. 원고/장면/소스는 사전 준비를 재사용할 수 있지만 최종 캡처/영상/PPT는 동결 후 같은 매니페스트로 새로 생성한다.
 
+최종 소프트웨어 Git 인도에는 이 매니페스트를 포함한 커밋과 새 `stable-final-20260921` annotated 태그를 승인 origin에 전달하고 실제 refs를 대조한다. 먼저 동일 이름이 이미 존재하는지 확인하고, 응답 유실 시 같은 커밋·태그 상태를 조회하며 기존 태그를 이동하지 않는다. 정확 runtime 태그는 선택한 앱 커밋을 그대로 사용한다. [DELIVERY-PLAN](DELIVERY-PLAN.md)의 `verify-software-delivery.mjs`를 최종 manifest/태그/새 출력에 실행하여 전체 source/runtime·샘플·시험 목록 및 원격 포함 관계를 확인한다. exit0/출력 영수증/파일 SHA가 함께 있어야 하며 이 준비 절차만으로 Git 인도 완료를 주장하지 않는다.
+
 ```sh
 node scripts/media/prepare-final-scenes.cjs artifacts/media-preparation/final-input.json
 node scripts/media/record-demo.cjs artifacts/media-preparation/final-scenes.json

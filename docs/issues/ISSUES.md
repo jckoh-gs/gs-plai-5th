@@ -19,6 +19,8 @@
 
 - ISSUE028: **RESOLVED_PREPARATION**. 첫1시간 준비의 존재하지 않는 source경로를 수정하고 원격조회·출력생성 전 소스검증을 확인했다. 실제 첫1시간 capture/전체완료를 뜻하지 않는다.
 
+- ISSUE029: **RESOLVED_TOOLING**. 인도 검증기의 전체tests 부재·마감 후 PASS파일 잔존 경계를 실제 격리 fixture로 재현하고 수정 후18시험 통과. 실제 원격 Git 인도 증명과 별개다.
+
 번호가 없는 IDEA011 명령 목록 실패 가시성 기록도 현재 기능 인수 완료로 정리한다. 로컬8검증군의 합성503·header/body timeout·전환/해제 시험과 실제 main/현재1.7 복원 읽기, REVIEW037/038를 근거로 한다. 이전1.6에 신규 안내가 있다고 주장하지 않는다.
 
 계속 남는 경계: 오디오의 실제 청취 미검증, 최종창 신규 미디어·동일 영상 PPT 검수, 실제 KMA/AWS/운영 VPP 외부 연동 미검증, 단일노드 k3s의 노드 HA 미검증은 해결로 바꾸지 않는다. SEC006의 현재 이미지 OS4매치/2CVE와 인증 사용자 자원 소모 잔여 위험은 보안 원장에 계속 연결한다. npm audit0/전체시험 PASS가 이를 해소하지 않는다. 원래 freeze21:37:33Z/deadline22:07:33Z를 유지하며 역할·전체목표는 아직 종료하지 않는다.
@@ -634,3 +636,17 @@ REVIEW045의 실제 동일5ff 복원26보고서+2Pod identity와 root-recovery-r
 새 artifacts/releases/checkpoint-1.7.1.json SHA0c9e5bec0a0ef506884b70374aae791e2cb2e38321dcdcd841c10a02c6962ebf, 운영근거 sourceb6c3cbc5742b095bedb32b5f4dea598e685412f5의 독립 --at-commit --remote 결과는2033해시PASS/Ready이미지일치다. REVIEW046이 실제전체backup SHA도 대조했다. 이는 앞의 기능복원 인수와 별개인 출처 게이트이며 숫자를 시험개수에 합산하지 않는다. 태그 생성·원격 전달은 이 기록 시점 메인의 후속 작업으로 남기고 완료를 추정하지 않는다.
 
 최초3101점유 거절·macOS cp-n 실패와 모든 이전 실패/부분snapshot은 보존한다. ISSUE024 최초원인 미확정·자원 위험, 보안 원장의 OS CVE, 실제 외부 KMA/AWS/VPP·노드HA·오디오청취·원래 최종 미디어/시간 게이트는 이 이슈 종결과 무관하게 남는다. 독립검토 receipt는 evidence/issue026-closeout-1.7.1.json이며 runtime·acceptance·run/resume는 수정하지 않았다.
+
+## ISSUE-029 — 소프트웨어 Git 인도 검증기의 두 오인 성공 경계
+
+P2 운영 증거 정확성, 상태 RESOLVED_TOOLING. 메인이 새 scripts/verify-software-delivery.mjs를 작성한 뒤 issues 독립 fixture와 security 소스 검토에서 발견했다. 실제 인도 파일 누락이나 실제 마감 초과 사건이 아니라 격리 fixture로 재현한 검증기 결함이다.
+
+029-A: historical source의 tests/ 디렉터리 자체와 그 해시가 모두 없으면 기존 completeness 루프가 공집합으로 끝나 testsAtSource0인데도 SOFTWARE_GIT_DELIVERY_CHECKS_PASSED를 반환했다. scripts/tests 중 일부 해시 누락 거절은 이미 통과했지만 전체 tests 부재를 잡지 못했다. 독립17번째 부정시험이 오인 성공을 재현했다. 메인은 각 필수 completePrefixes에 실제 Git entry가 하나 이상 있어야 한다는 조건을 추가했다.
+
+029-B: CLI가 PASS JSON을 저장·fsync한 뒤 원래 deadline을 재검사하여, 이 마지막 검사에서 실패하면 exit1인데 PASS 파일이 남았다. security가 읽기로 발견했고 issues는 실제 fsync 직후 Date.now를120초 진행시키는 격리 preload로 재현했다. 메인은 저장파일을 SOFTWARE_GIT_CHECKS_RECORDED/requiresSuccessfulExitReceipt=true로 바꾸고 fsync·마감 재검사 후에만 stdout PASS와 정확한 저장파일 SHA를 내보낸다. 따라서 성공은 exit0+stdout의 SHA와 실제 파일 바이트가 함께 일치해야 하며 저장파일만으로 PASS를 주장할 수 없다. 순수 읽기 함수의 반환 결과와 CLI 공개 파일 계약을 구분한다.
+
+회귀 근거는 `evidence/software-delivery-review.json` 및 하위 software-delivery-review/tests-round1~4.log다. 최초16시험 PASS, 추가 전체tests 부재로 round2는16PASS/1FAIL, late-write 부정을 더한 round3는16PASS/2FAIL이었다. 메인 수정 후 round4는18/18PASS(handle46430). 이전 실패를 삭제하거나 별개 시험수에 합산하지 않는다. 정상 CLI는0600·기존출력불변·RECORDED/stdoutSHA/exit0를 검사하고 마감 경계는 exit1/PASS파일 부재를 확인했다. 다른 회귀는 Git blob/인벤토리 누락·symlink/경로·runtime/source/main 일치·annotated tag/ancestry/승인origin·deadline을 포함한다.
+
+fixture는 실제 임시 Git repository/annotated tags/local bare refs이며 승인 origin URL을 그대로 두고 process-scope GIT_SSH_COMMAND가 로컬 upload-pack만 호출한다. 실제 운영 origin 네트워크·원격 변경은 없고 임시 저장소는 finally에서 제거했다. helper 수정은 메인, 독립 tests/실패·최종 근거는 issues 소유였다. 실제 승인 origin 인도 증명은 메인 후속 별도 게이트이며18fixture PASS가 이를 대신하지 않는다.
+
+ISSUE024 최초 원인 미확정·자원 위험, 보안 원장의 잔여 CVE, 오디오청취/외부연동/HA 및 최종 미디어·원래 시간·전체목표 미완료는 유지한다.
