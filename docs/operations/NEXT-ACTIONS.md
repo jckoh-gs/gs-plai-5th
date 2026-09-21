@@ -1,6 +1,6 @@
 # 자율 실행 인계
 
-이 기록은 전체 목표 완료 선언이 아니다. 현재 기능상 stable 기준은 제품1.4.0 / PRD1.11 / runtimefdd0491 / imagec19d550f다. run.json의 backup/stableCheckpoint는 정확한594944000바이트/be09a5f5 snapshot을 선택했다. stable-v1.4.0 및 stable-runtime-v1.4.0-fdd0491 로컬 태그 생성 후 불변 매니페스트 생성·검증은 별도 후속 중이다. 이전1.0~1.3 및1.3/b515ef26 역사적 fallback을 보존한다.
+이 기록은 전체 목표 완료 선언이 아니다. 현재 기능상 stable 기준은 제품1.4.0 / PRD1.11 / runtimefdd0491 / imagec19d550f다. run.json의 backup/stableCheckpoint는 정확한594944000바이트/be09a5f5 snapshot을 선택했다. stable-v1.4.0 및 stable-runtime-v1.4.0-fdd0491 태그는runtimefdd0491을가리키며, 불변 checkpoint-1.4.0.json의962해시·실제Ready이미지·백업SHA는 REVIEW022에서 독립 확인했다. 이전1.0~1.3 및1.3/b515ef26 역사적 fallback을 보존한다.
 
 - 실제 시작: 2026-09-21 17:07:33 KST.
 - 기능 동결/복원 판단/최종 미디어 시작: 2026-09-22 06:37:33 KST.
@@ -78,3 +78,6 @@ Mac 전원기록의13:24:40 Sleep/13:24:42 Wake/13:25:48 DarkWake·WakeTime은 �
 현재 supervisor handle81174/PID84952/`Mon Sep 21 22:46:07 2026`, primary36193/PID85649/`Mon Sep 21 22:49:41 2026`, audit92936/PID85652/`Mon Sep 21 22:49:42 2026`이다. 위7353/40339/30644 등은 과거1.3 운영 이력이다. 최신run/resume 및 실제process identity를 대조하고 새세션과 과거오류카운터를 합쳐 무중단으로 표현하지 않는다.
 
 최종백업 전 용량을 재조회한다. 최근 /data 전체5031428043바이트와 단일snapshot594944000바이트를 구분하며 공유hostFS available78692749312바이트는 PVC예약량이 아니다. snapshot/압축본/로컬전송본/격리복원PVC 중복공간 및 종료까지 성장량을 고려한다. 자동삭제나 임의quota보장을 추가하지 않는다. 최종복원 계획은 선택된 run.deployment.productVersion 및 rig/포트/근거경로 변수를 사용하며 다른셸에는 선택값을 명시적으로 전달한다. 원래21:37:33Z~22:07:33Z 창은 불변이다.
+
+
+1.4 checkpoint 확정: artifacts/releases/checkpoint-1.4.0.json(SHA256 df7865319ac1e97ecbf6b70f206f29b7b7747312d2e8a355f5dea2d765c377be)은 sourcebcc010c/runtimefdd0491에 연결되고 REVIEW022에서962개해시·실제Ready app/broker·백업SHA 및 두로컬stable태그를 독립 확인했다. 과거 생성/검증대기 문장은 당시이력이다. 현재슈퍼바이저81174와1.4관측36193/92936을 유지한다. 첫1시간 보존은14:49:42UTC 이후이며 새세션 관측을 과거무중단증거와 합치지 않는다. 전체목표는 최종동결/영상/PPT/시간/인도완료전 active다.

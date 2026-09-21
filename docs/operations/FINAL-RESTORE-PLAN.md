@@ -1,6 +1,6 @@
 # 최종 30분: 동일 스냅샷 복원과 릴리스 연결
 
-준비 문서이며 실행 증거가 아니다. 현재 기능상 안정 기준은 제품1.4.0 / PRD1.11 / runtimefdd0491 / imagec19d550f다. 독립 복원17개 및 main proof7개 검증 후 stable-v1.4.0과 stable-runtime-v1.4.0-fdd0491 태그를 로컬 생성했다. 선택한 정확한 백업은594944000바이트/be09a5f5이며1.4 및 하위1.3 복원을 검증했다. run.json의 backup/stableCheckpoint가 선택 기준이며 불변 매니페스트 생성·검증은 별도 후속 게이트다. 동결21:37:33Z, 종료22:07:33Z는 변경하지 않는다. 역사적 fallback420466688바이트/12:17 백업(b515ef26…)은 별도 PVC에서1.3 및 하위1.2 복원·UI·MQTT 검증까지 완료되었다. 이전169MB/335MB 백업은 별도 이력이며 새 최종 백업의 복원 증거로 대체하지 않는다.
+준비 문서이며 실행 증거가 아니다. 현재 기능상 안정 기준은 제품1.4.0 / PRD1.11 / runtimefdd0491 / imagec19d550f다. 독립 복원17개 및 main proof7개 검증 후 stable-v1.4.0과 stable-runtime-v1.4.0-fdd0491 태그를 로컬 생성했다. 선택한 정확한 백업은594944000바이트/be09a5f5이며1.4 및 하위1.3 복원을 검증했다. run.json의 backup/stableCheckpoint가 선택 기준이며 checkpoint-1.4.0.json의962개해시·실제Ready 이미지·백업SHA를 REVIEW022에서 독립 확인했다. 동결21:37:33Z, 종료22:07:33Z는 변경하지 않는다. 역사적 fallback420466688바이트/12:17 백업(b515ef26…)은 별도 PVC에서1.3 및 하위1.2 복원·UI·MQTT 검증까지 완료되었다. 이전169MB/335MB 백업은 별도 이력이며 새 최종 백업의 복원 증거로 대체하지 않는다.
 
 ## 선행 준비와 한계
 
@@ -125,3 +125,6 @@ node scripts/media/build-deck.mjs artifacts/media-preparation/final-deck.json
 `prepare-final-scenes`는 고유 UUID 시험 RTU 이름과 private lifecycle journal을 만들고 기존 RTU 설정 기준을 저장한다. 등록 실제201 응답을 보존하기 전에는 제어를 진행하지 않는다. 같은 출력 설정 파일을 덮어쓰지 않으며 중단 후 기존 파일/journal/실제 상태를 먼저 읽는다. 정상 녹화와 catch 경로는 소유 시험 RTU만 초기 모델·제어·재생·장애 설정으로 복구하고 기존 RTU의 불변을 확인한다. 프로세스 강제종료는 finally를 보장하지 않으므로, 종료한 녹화 핸들을 확인한 다음 `node scripts/media/recover-demo.cjs ABSOLUTE_PRIVATE_JOURNAL ABSOLUTE_TOKEN_FILE`로 원래 마감 내 독립 복구한다. 명령 응답 유실/복원 run 전이 미확인은 자동으로 추정하지 않으며 메인이 저장된 intent와 실제 상태를 대조한다. 기존 RTU에 일괄 reset을 보내지 않는다.
 
 `final-deck-input.json`은 releaseManifest/videoDir/factsFile/outputConfig/presentationDir의 공개 저장소 상대 경로만 담는다. facts.template.json을 새 파일로 복사하고 실제 영상/장면/MQTT/복구/캡처 해시·선택 RTU·시나리오 run 전이·슬라이드 근거를 직접 검수한 뒤 reviewed=true, preparationTemplate=false로 표시한다. 바인더는 실제 원장 시각의 UTC 마이크로초 형식을 읽으며 원장을 다시 쓰지 않는다. 준비 template을 최종 검수 사실로 대체하지 않는다.
+
+
+현재1.4 checkpoint의962해시·실제Ready app/broker와594944000바이트/be09 백업 연결은 REVIEW022에서 검증했다. 이 준비문서는 새 최종창 백업·복원·영상·PPT 실행을 대신하지 않는다. 최종창의 실제 선택은 당시 run.json과검증된snapshot을 다시대조한다.

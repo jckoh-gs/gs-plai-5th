@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T13:59:40.910008+00:00",
+  "updatedAt": "2026-09-21T14:01:19.088448+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": "stable-v1.4.0",
@@ -10,7 +10,7 @@
     "productVersion": "1.4.0",
     "prdVersion": "1.11",
     "idea": "IDEA-008",
-    "state": "1.4functional/main/exactbackup-current andbackwardrestore independentlyverified. Stabletag/manifest generation inprogress; original finalmedia/time/deliverypending."
+    "state": "Stable1.4.0 / PRD1.11 / runtimefdd0491 / immutablecheckpoint962hashes andactualReadyimages independentlyverified. Exact594944000Bbe09backup1.4 andbackward1.3restorePASS. Finalfreeze/media/time/deliverypending."
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -18,10 +18,11 @@
     "Final video and editable deck tooling rehearsed; final media must be newly generated in freeze window",
     "Network recovery: 8 policy/supervisor tests passed; live supervisor owns verified forwarding; native grid heartbeat updated",
     "1.2.0 exact-image79 runtime tests, local88 tests, image security scan, k3s UI/export/preview/MQTT, actual outbox pod replacement, fresh backup restore and backward1.1 all PASS",
-    "1.3 selectedRTUscenarios and correctedKMAfeedback, exactsourceimage118selectedtests/local136, k3s UI/export/preview/MQTT, actualoutboxrestart, exact420MB snapshot1.3 and backward1.2 restore13checks PASS; overallmedia/timegatepending"
+    "1.3 selectedRTUscenarios and correctedKMAfeedback, exactsourceimage118selectedtests/local136, k3s UI/export/preview/MQTT, actualoutboxrestart, exact420MB snapshot1.3 and backward1.2 restore13checks PASS; overallmedia/timegatepending",
+    "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Verify new immutable1.4checkpoint and pushedstabletags, then continue existing observers until originalfreeze. Furtherideas require versioned adoption; preserve verified1.4fallback. Atfreeze select normalverifiedruntime and follow FINAL-RESTORE-PLAN for same-snapshot restore/newmanifest.",
+    "Continue existing1.4observers until originalfreeze; preserve first-hour prefix after14:49:42UTC and periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
   ],
@@ -309,7 +310,7 @@
     "localFixtureOnly": true
   },
   "currentObservationIncidents": [],
-  "nextOperationalReview": "Finalize1.4manifest; keep existing healthy supervisor81174 andobservers36193/92936. First-hour1.4prefix becomes available after14:49:42UTC. Recheck host/data/local capacity before finalsnapshot; no automatic deletion. No duplicate rollouts or completedrestore repetitions.",
+  "nextOperationalReview": "1.4firsthour prefix after14:49:42UTC. Check livefreshness/counterincrements andstorage/headroom/hostpower without changing deadlines or replaying completedwrites. Finalmedia preparation stillneeds1.4actualfacts atfreeze; no final artifacts yet.",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.4",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
@@ -348,7 +349,7 @@
     "sourceCommit": "fdd0491a5c08901962f46ac845f8582921150d45",
     "buildOwner": "/root/deployment",
     "evidenceDirectory": "deploy/verification/candidate-fdd0491",
-    "phase": "Allcandidate17restore/7mainproofs PASS, bothrigs0/noPods/owned3105/18885closed; stableprovenance finalization",
+    "phase": "complete and verified; no repeat upgrade/restore needed",
     "mainRuntimeUnchanged": true,
     "retry": "Inspect existing handles and evidence before any repeat build/push/registration; content/source/digest must match.",
     "localRegressionHandleTerminal": 79493,
