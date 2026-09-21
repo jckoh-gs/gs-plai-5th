@@ -1,0 +1,10 @@
+{
+  "source-hashes.json": "274d7d8d23d11fb96b8f05feeb05656f95f078d5ecd6fdb537dbb02dd1cab501",
+  "result.json": "7bd59dcbb12516e57a6918151394722d899723a48571e387e101010d3bb513f0",
+  "actual-list.html": "67a8f0823cbbe6191977750a5664c673d3eb7cfa640df2dcd7cbfa944d0a7aeb",
+  "terminal.json": "e8c9c41a06cecea23a61eb5f16b941ca2a47fe74b91f2769f458e3a40d2cb6e2",
+  "actual-list.png": "0b3c4eba7215b6d46dbde487470f63b612cc64d86031e8bc0dd7b9626c78e92f",
+  "source/check-command-list-freshness.cjs": "7084aaa0b8e44be54651d46df8ea6c0b726f062d50e0be2dc12deb2c05b846b6",
+  "source/command-list.js": "18e353fb7119f39724209f662458bab82e5737e827ad1013529cdfff3011f026",
+  "source/src.jsx": "ffbb204d9275fc14ebfdd9ea3ea488494ca2c0c97271f6af69f69993ddbfa592"
+}

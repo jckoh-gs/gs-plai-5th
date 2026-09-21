@@ -1,0 +1,7 @@
+{
+  "session": 19658,
+  "pid": 35210,
+  "identity": "35210 Tue Sep 22 01:48:21 2026     kubectl --context charles-k3s -n gs-plai-5h port-forward deployment/grid-restore-d98d3c4 3105:3001 18885:1883 --address 127.0.0.1",
+  "terminalExit": 143,
+  "listenersAbsent": true
+}

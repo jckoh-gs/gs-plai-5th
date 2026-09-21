@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "actualResponseBaselineSettingsRestored": true,
+  "preExistingUnchanged": true,
+  "ownedRTUs": 2,
+  "http201AssertedByReceiptHarness": false,
+  "scope": "Independent comparison of captured registration response baseline against postcleanup GET projection; no runtime writes"
+}

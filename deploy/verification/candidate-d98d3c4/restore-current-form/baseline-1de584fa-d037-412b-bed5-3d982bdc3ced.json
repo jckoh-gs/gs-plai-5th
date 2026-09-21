@@ -1,0 +1,50 @@
+{
+  "id": "1de584fa-d037-412b-bed5-3d982bdc3ced",
+  "runId": "e2cff0a0-bde2-44ff-a928-d179fe2aa5e0",
+  "name": "Command form 2c694c5c-ce80-4efd-937c-f344bcd08ef3 A",
+  "type": "wind",
+  "mode": "csv",
+  "station": 100,
+  "dataset": {
+    "unit": "kw",
+    "semantics": "sample",
+    "interpolation": "linear",
+    "rowCount": 2,
+    "durationSeconds": 1200,
+    "firstTimestamp": "2026-01-01T00:00:00.000Z",
+    "lastTimestamp": "2026-01-01T00:10:00.000Z"
+  },
+  "irradianceDataset": null,
+  "generators": [
+    {
+      "id": "WT-01",
+      "ratedKw": 1000,
+      "rampKwPerSec": 1000,
+      "on": true,
+      "limitPct": 100,
+      "targetLimitKw": null,
+      "startupDelaySeconds": 0,
+      "cutInMs": 3,
+      "ratedWindMs": 12,
+      "cutOutMs": 25,
+      "windCurve": null,
+      "temperatureCoefficient": -0.004,
+      "solarEfficiency": 1
+    }
+  ],
+  "replay": {
+    "speed": 1,
+    "paused": false,
+    "seed": 42,
+    "noisePct": 0,
+    "freezeLiveWeather": false
+  },
+  "faults": {
+    "offline": false,
+    "latencyMs": 0,
+    "dropPct": 0,
+    "sensorFreeze": false,
+    "scadaReject": false,
+    "actuatorStuck": false
+  }
+}

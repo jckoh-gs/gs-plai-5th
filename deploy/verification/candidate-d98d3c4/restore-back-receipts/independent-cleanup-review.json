@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "actualResponseBaselineSettingsRestored": true,
+  "preExistingUnchanged": true,
+  "ownedRTUs": 2,
+  "http201AssertedByReceiptHarness": false,
+  "scope": "Captured registration response baseline compared with postcleanup GET projection; workspace source is harness input, not1.6 compiledsource"
+}

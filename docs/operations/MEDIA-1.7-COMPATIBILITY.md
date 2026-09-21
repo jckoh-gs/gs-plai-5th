@@ -17,3 +17,15 @@ IDEA011/PRD1.14, runtime d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9의 미디어 �
 영상255.33초, 전체 제작279.911초,1080pH264/AAC 전체 디코딩 성공, 페이지 오류0이다.8개 인코딩 대표 장면과 접수·MQTT완료·새목록설명 자막 프레임을 직접 확인했다. 새목록 조회 안내/브라우저 확인 시각·REST접수 패널·MQTT125/125 completed·내보내기 버튼이 함께 보이며 최상단 목표값 행은 자막에 가리지 않는다. 실제 MQTT accepted/executing/completed 및 실제125kW/오차0, 동일RTU5개 상태내보내기를 검증했다.32개SRT 문장·시각은 원고/타임라인과 반올림 범위 내 일치한다. -19.2dB 음성은 기술 신호 확인이며 청취·발음 검수가 아니다.
 
 준비 증거는 `artifacts/checkpoints/media-candidate17/`, 원본 영상/오디오는 `artifacts/media-preparation/full-candidate17-20260921/`에 있다. MP4 SHA-256은 `ccb890aa150f918d43cd8610147d5bd6a139c4b1664d1b71c82ef1adfc3acace`다. 정지 명령은 뒤 기동에 대체됐고 명령목록HTTP 실패를 시연한 것은 아니다. 외부KMA/AWS/운영VPP는 미검증이며 최종 영상으로 재사용하지 않는다. 최종 동결 이후 선택 릴리스로 새 녹화·검수·PPT가 필요하다.
+
+## 기능·동일 백업 복원 검증 후1.7 준비 원고 갱신
+
+메인의 REVIEW037 및 복원·정리 PASS 통지 후 준비 템플릿 선택을1.7.0/PRD1.14로 갱신했다. 위의1.6 선택 기록은 이 갱신 전 이력이다. reviewed:false/preparationTemplate:true와 실제 최종영상·보고서·캡처 해시 자리표시는 유지한다. 새 최종 매니페스트는 메인이 작성 중이며 해당 경로/해시가 이미 검증됐다고 선언하지 않는다.
+
+실제 파일을 읽어 확인한 이벤트 시각 근거는 main-event-time/result.json의1.7 이벤트66개, restore-current-event/result.json의1.7 이벤트80개, restore-back-event/result.json의1.6 이벤트80개다. 이전59/79는 과거1.6 체크포인트 값이므로 현재 원고에서 교체했다. 기존8장면은 이벤트 로그를 방문하지 않으며 이 숫자는 별도 실제 API/UI 읽기 검증이다.
+
+현재 증거 기준 경로는 deploy/verification/candidate-d98d3c4다. 일반 목표 폼·접수는 restore-current-form/result.json 및 restore-current-receipts/result.json, 명령 목록은 main-command-list/result.json 및 restore-current-list/result.json에 연결한다. 두 명령목록 결과는 actualOnly:true이며 정상 조회 상태·순서·확인 시각의 근거다. 실패·지연·취소 경계는 artifacts/checkpoints/candidate-1.7-command-list-round1의 result.json/supplement-result.json이라는 별도 공개 설명 출처로 연결했다. 이를 실제 원격 장애나 새 최종영상 시연으로 표현하지 않는다.
+
+백업은 stable-backup-d98d3c4.json의931876864바이트, SHA-256 1cab74e110d172307ffd3605543da2db4261c27f009b97871a21bd1bf665827c다. restore-summary.json에서 같은 불변 백업의 현재1.7/하위호환1.6 복원과 보고서23개+실제Pod 신원2개, 총25개 근거를 확인했다. 과거1.5의 이벤트 시각 제한을 현재1.6 복원본의 제한으로 옮기지 않는다.1.6에는1.7의 명령목록 상태 안내가 없는 차이가 남는다.
+
+원고는 접수/완료 구분·정지 superseded·정상목록 확인 시각 의미를 유지하고 현재8장면의 MQTT 장면에 추가한6초 설명과 연결한다. 시간표는 미래 실제 최종 scenes.json에서 계산한다.14장·모든 공개 출처 존재·미검수 보호값을 검사했으며 신규 녹화·런타임·harness 변경은 없다. 최종영상·음성청취·한시간 관찰 완료 주장을 추가하지 않았다. 새 매니페스트 생성 뒤 manifestEvidence의 경로·해시 포함 여부를 다시 검사해야 한다.

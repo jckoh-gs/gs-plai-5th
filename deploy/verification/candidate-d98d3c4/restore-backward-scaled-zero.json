@@ -1,0 +1,8 @@
+{
+  "replicas": 0,
+  "pods": 0,
+  "retainedPVCs": [
+    "grid-restore-back-d98d3c4-data",
+    "grid-restore-back-d98d3c4-mqtt-data"
+  ]
+}

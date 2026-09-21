@@ -1,0 +1,30 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:58:35.615984+00:00",
+  "actualReportProofsChecked": 23,
+  "actualPodIdentityProofs": 2,
+  "sameSnapshotSha256": "1cab74e110d172307ffd3605543da2db4261c27f009b97871a21bd1bf665827c",
+  "bothFreshInitMatched": true,
+  "bothRestoreDeploymentsReplicas": 0,
+  "restorePods": 0,
+  "ports3105And18885Absent": true,
+  "retainedBoundPVCs": 4,
+  "mainPodUid": "79784e51-f961-4e34-86d8-196827a8e26c",
+  "mainContainers": [
+    {
+      "name": "app",
+      "ready": true,
+      "restartCount": 0,
+      "imageID": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692"
+    },
+    {
+      "name": "mqtt",
+      "ready": true,
+      "restartCount": 0,
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  ],
+  "mainNormalEvidence": "deploy/verification/candidate-d98d3c4/root-recovery-review/main-api-normal.json",
+  "verificationScriptCorrection": "First rootread assumed Pod instead of actualPodList and stopped before live calls; corrected observed schema, no product failure or mutation",
+  "scope": "Root independent paired cleanup/exact snapshot/source image records and currentmain sanity; localwholehash verified normal-backup/root-backup-review.json; finalmedia/time pending"
+}

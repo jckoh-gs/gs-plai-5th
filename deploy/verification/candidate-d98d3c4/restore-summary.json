@@ -1,0 +1,149 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:55:43.167490+00:00",
+  "backupMetadata": "deploy/verification/stable-backup-d98d3c4.json",
+  "sameImmutableSnapshot": {
+    "bytes": 931876864,
+    "sha256": "1cab74e110d172307ffd3605543da2db4261c27f009b97871a21bd1bf665827c",
+    "remotePath": "/data/stable-d98d3c4-20260921T164546561Z.sqlite"
+  },
+  "currentVersion": "1.7.0",
+  "backwardVersion": "1.6.0",
+  "reportProofCount": 23,
+  "actualPodIdentityProofCount": 2,
+  "totalEvidenceChecks": 25,
+  "checks": [
+    {
+      "path": "restore-1.7-init.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-1.7-canonical-data.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-1.7-data.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-1.7-preview.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-1.7-mqtt.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-1.7-browser/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-1.7-export/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-1.7-served-assets.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-backward-init.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-backward-canonical-data.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-backward-data.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-backward-preview.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-backward-mqtt.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-backward-browser/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-backward-export/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-backward-served-assets.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-current-form/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-current-receipts/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-current-list/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-current-event/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-back-form/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-back-receipts/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-back-event/result.json",
+      "result": "PASS"
+    }
+  ],
+  "actualPodIdentityChecks": [
+    {
+      "path": "restore-1.7-pod.json",
+      "uid": "6013d300-46e0-4970-b6c9-14bb12dbc907",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-backward-pod.json",
+      "uid": "e84dedb5-18c1-448f-9512-6eaf03057853",
+      "result": "PASS"
+    }
+  ],
+  "originalCanonicalSettingsVerifiedBeforeMutations": true,
+  "canonicalGeneratorOnLimitPctIncluded": true,
+  "originalPlants": 5,
+  "originalScenarios": 1,
+  "formChecksPerVersion": 44,
+  "receiptChecksPerVersion": 14,
+  "eventTime": "Actual-only checked on both versions",
+  "listStatus": "Actual-only1.7 checked;1.6 not asserted",
+  "scenarioScope": "Existing scenario identity preserved; no additional scenario or live KMA functional claim in this restoration round",
+  "runtimeAndOperationalHarnessSourcesSeparated": true,
+  "cleanup": {
+    "bothDeploymentReplicas": 0,
+    "remainingPods": 0,
+    "ownedForwardsTerminal": [
+      19658,
+      54676
+    ],
+    "ports3105And18885Absent": true,
+    "retainedPVCs": [
+      "grid-restore-d98d3c4-data",
+      "grid-restore-d98d3c4-mqtt-data",
+      "grid-restore-back-d98d3c4-data",
+      "grid-restore-back-d98d3c4-mqtt-data"
+    ],
+    "backupsAndOldIncompletePartialPreserved": true
+  },
+  "mainMutationsFromRestoreTests": false,
+  "harnessFailures": []
+}

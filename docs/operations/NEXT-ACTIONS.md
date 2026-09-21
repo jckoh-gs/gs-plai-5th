@@ -1,13 +1,13 @@
 # 자율 실행 인계
 
-현재 실제 배포는 **제품 1.7.0 / PRD 1.14 / IDEA011 v1**이다. 소스 `d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9`, 이미지 `sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692`를 사용한다. 전체 목표는 미완료이며, 복구 인수와 불변 체크포인트가 완료되기 전 정상 복구 기준은 검증된 1.6/9bd를 유지한다. 재개 시 현재 시각·최신 사용자 지시·[run.json](run.json)·[resume.json](resume.json)부터 읽는다.
+현재 실제 배포는 **제품 1.7.0 / PRD 1.14 / IDEA011 v1**이다. 소스 `d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9`, 이미지 `sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692`를 사용한다. 전체 목표는 미완료이며, 1.7/1cab의 기능·동일 스냅샷 복구 인수를 완료했다. 새 불변 매니페스트와 태그 발행이 남아 있으며 이전 검증된 1.6/9bd 체크포인트도 보존한다. 재개 시 현재 시각·최신 사용자 지시·[run.json](run.json)·[resume.json](resume.json)부터 읽는다.
 
 ## 지금 이어갈 단계
 
 1. 1.7 main UI·API·원래 5 RTU 전체 설정/실행/데이터/시나리오·실제 MQTT 125kW/error0·인증/SSE/preview/export 회귀를 완료했다. [배포 증거](../../deploy/verification/candidate-d98d3c4/rollout/proof.json), [배포 후 확인](../../deploy/verification/candidate-d98d3c4/post-rollout/summary.json), [실제 MQTT](../../deploy/verification/candidate-d98d3c4/main-mqtt.json), [회귀](../../deploy/verification/candidate-d98d3c4/main-regression/summary.json)를 재사용하며 완료한 제어를 반복하지 않는다.
 2. pending-outbox 실제 Pod 교체 검증을 완료했다. root17841과 독립관찰79945는 종료0. [동일 메시지 복구](../../deploy/verification/candidate-d98d3c4/outbox-restart.json)와 [원래5설정·fault·임시포트 종료·supervisor 재연결](../../deploy/verification/candidate-d98d3c4/outbox-post-normal.json)을 확인했다. 전환 중 health 오류5회는 독립 관찰에 보존했다. 재시작을 반복하지 않는다.
-3. 새 정상1.7 백업931876864B/SHA1cab74e110d172307ffd3605543da2db4261c27f009b97871a21bd1bf665827c의 생성·전송·전체SHA·worker종료를 root24866 종료0으로 확인했다. **그 정확한 스냅샷**의 현재1.7 복원 기능 검증·정리를 완료했고 하위1.6 복원 검증이 진행 중이다. 관련 form/receipt 및 1.7 목록 상태·이벤트 시간, 실제 MQTT와 원본 데이터 비교를 포함한다. 기존 다른 백업의 복원 근거를 재사용하지 않는다. 완료 후 rig0/Pod0/터널 종료·PVC 보존을 실제 확인한다.
-4. 독립 인수 → 근거 커밋 → 새 불변 1.7 매니페스트 → 독립 해시/실제Ready/백업 검증 → 새 stable/runtime 태그·원격 전달 순서다. 이후에도 원래 일정과 최종 미디어 인수는 남아 있다.
+3. 새 정상1.7 백업931876864B/SHA1cab74e110d172307ffd3605543da2db4261c27f009b97871a21bd1bf665827c의 생성·전송·전체SHA·worker종료를 root24866 종료0으로 확인했다. **그 정확한 스냅샷**의 현재1.7/하위1.6 복원 기능 검증·정리를 완료했다. [23보고서+2Pod identity](../../deploy/verification/candidate-d98d3c4/restore-summary.json), [root의 실제 양쪽0/Pod0/4BoundPVC/포트종료·main설정 확인](../../deploy/verification/candidate-d98d3c4/root-recovery-review/summary.json), [독립 REVIEW037](../product/REVIEW-037.md)을 재사용한다. form44/receipt14·실제MQTT·원본 데이터·이벤트는 양버전, 새 목록은1.7에서만 확인했다. 완료한 복원을 반복하지 않는다.
+4. 독립 기능 인수는 완료했다. 근거 커밋 → 새 불변 1.7 매니페스트 → 독립 해시/실제Ready/백업 검증 → 새 stable/runtime 태그·원격 전달 순서다. 운영 배포 인자가 무시될 수 있던 ISSUE025는4b6009d에서 수정했고 [전체312검사·client-only dry-run](../../artifacts/checkpoints/deployment-renderer/summary.json)을 통과했다. 실제 재배포를 실행한 검증은 아니다. 이후에도 원래 일정과 최종 미디어 인수는 남아 있다.
 
 ## 재접속과 현재 소유 프로세스
 
@@ -20,6 +20,8 @@
 - 불확실한 쓰기는 commandId·이미지·백업 remotePath·복원 rig·시연 journal로 대조한다. 새 ID/등록/apply/복원을 무조건 반복하지 않는다. [NETWORK-RECOVERY.md](NETWORK-RECOVERY.md)를 따른다.
 
 ## 검증된 복구 기준과 현재 추가 백업
+
+현재 선택은1.7/runtime d98d3c4와 [1cab 백업](../../deploy/verification/stable-backup-d98d3c4.json)이다. 동일 스냅샷의 현재/하위 복원과 기능 인수는 통과했으며, 새 매니페스트·태그는 아직 발행 전이다. run.json.stableCheckpoint의 manifestState/tagState를 실제 파일·Git과 함께 확인한다. 아래1.6는 이전 검증된 불변 체크포인트다.
 
 1.6 runtime331ab9a / image4af99e7b와 [checkpoint-1.6.0.json](../../artifacts/releases/checkpoint-1.6.0.json)을 보존한다. manifest source는 `b729f4287cf6a5a5527fa37f105e61bd41e135b7`, SHA는 `fd3fedc9dffb6bdc8d6e69982554dabde24bf3054113f02dc8370385bc238ae5`이며1466해시와 실제Ready/백업을 [REVIEW033](../product/REVIEW-033.md)에서 검증했다. 역사 소스는 `--at-commit`으로 대조하고 불변 파일·기존 태그를 덮어쓰지 않는다.
 
@@ -37,6 +39,6 @@
 
 동결 때 정상 버전을 선택하고 **선택 백업 → 정확 스냅샷 복원 → 근거 커밋 → 새 최종 매니페스트 → 신규 실제 UI 영상·복구·검수 → 같은 영상의 facts → 편집 가능한 PPT·전장 검수 → 인도**를 실행한다. 상세 컷오프는 [FINAL-RESTORE-PLAN.md](FINAL-RESTORE-PLAN.md), [MEDIA-PLAN.md](MEDIA-PLAN.md), [DELIVERY-PLAN.md](DELIVERY-PLAN.md)를 따른다. 새복원 cutoff를 넘기면 이미 검증된 stable 선택을 검토하고 미검증 백업을 승격하지 않는다.
 
-미디어 facts는 아직 검수전1.6 템플릿이며 1.7 호환/리허설은 준비 자료다. 원래 최종창에 새 영상이 필요하다. pointer/click/zoom/한국어자막·음성·1080p H264/AAC를 검수하며 기술적 오디오검사를 청취로 표현하지 않는다. 실제KMA/AWS/운영VPP 성공은 미검증이다. untracked `artifacts/releases/current.json`은 과거 리허설용이므로 최종 입력에 쓰지 않는다.
+미디어 facts의1.7 갱신과 호환/리허설은 준비 자료이며 reviewed=false/preparationTemplate=true를 유지한다. 원래 최종창에 새 영상이 필요하다. pointer/click/zoom/한국어자막·음성·1080p H264/AAC를 검수하며 기술적 오디오검사를 청취로 표현하지 않는다. 실제KMA/AWS/운영VPP 성공은 미검증이다. untracked `artifacts/releases/current.json`은 과거 리허설용이므로 최종 입력에 쓰지 않는다.
 
 최종 백업 전 snapshot/압축/전송/복원PVC/성장량의 실제 공간을 확인한다. 공유hostFS 여유는 PVC 예약량이 아니다. 검증된 백업은 자동삭제하지 않는다. 녹화 중단 시 담당 종료 후 private journal로 복구하며 기존 RTU를 일괄 초기화하지 않는다. 최종 인도와 정상상태를 확인한 뒤 이 실행의 heartbeat·소유터널을 종료하고 원격 앱/PVC를 보존한다.
