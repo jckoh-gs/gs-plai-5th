@@ -24,7 +24,7 @@ module.exports=function bind(input,{root=process.cwd(),now=Date.now()}={}){
  if(iso(video.createdAt)<freeze||iso(video.createdAt)>now)throw Error('Video completion outside window');
  if(facts.preparationTemplate===true||facts.reviewed!==true||facts.productVersion!==manifest.productVersion||facts.videoSha256!==video.videoSha256||facts.scenesSha256!==hash(sp)||!facts.prdVersion)throw Error('Reviewed facts must bind actual video, scenes and product');
  if(/POPULATE/.test(JSON.stringify(facts)))throw Error('Unresolved reviewed facts placeholder');
- if(!/^1\.[0-3]\.\d+$/.test(manifest.productVersion)&&!['1.4.0','1.5.0','1.6.0'].includes(manifest.productVersion))throw Error('Unsupported product version; explicitly review binder before adding future features');
+ if(!/^1\.[0-3]\.\d+$/.test(manifest.productVersion)&&!['1.4.0','1.5.0','1.6.0','1.7.0'].includes(manifest.productVersion))throw Error('Unsupported product version; explicitly review binder before adding future features');
  for(const k of ['KMA','AWS','operationalVPP'])if(facts.externalVerification?.[k]!=='unverified')throw Error('Explicit external verification limitations required');
  if(!Number.isFinite(video.duration)||video.duration<=0||video.duration>1800)throw Error('Finite bounded video duration required');
  const recordingAt=iso(timeline.recordingStartedAt);if(recordingAt<freeze||recordingAt+timeline.scenes?.at(-1)?.end*1000>iso(video.createdAt))throw Error('Recording timestamps outside verified window');

@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:37:31.776004+00:00",
+  "metadata": "deploy/verification/pre-1.7.0-backup.json",
+  "bytes": 912310272,
+  "sha256": "7353d0d00dbbbd304d5361716b9913e02e0ead1b095b5bd133b4fb9db387338b",
+  "privateMode": "0600",
+  "workerExitConfirmed": true,
+  "snapshotMs": 11511,
+  "terminalHandle": 53201,
+  "exitCode": 0,
+  "healthSamples": 16,
+  "healthFailures": 0,
+  "maxHealthElapsedMs": 859,
+  "samePodUid": "581d826a-8a9f-4adb-8c3c-8229a2ba151a",
+  "restartCounts": [
+    0,
+    0
+  ],
+  "scope": "Preupgrade additional1.6 backup; exactsnapshot current/backwardrestore NOT yetproven. Existing9bd stablebackup proof remainsindependent."
+}

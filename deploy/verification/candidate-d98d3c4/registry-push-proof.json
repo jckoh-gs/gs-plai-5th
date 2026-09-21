@@ -1,0 +1,23 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:37:58.727803+00:00",
+  "image": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+  "pushHandle": 75268,
+  "terminalExit": 0,
+  "checks": [
+    {
+      "ref": "candidate-d98d3c4",
+      "headerDigest": "sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+      "bodyDigest": "sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+      "bytes": 2759,
+      "exactLocalManifestBytes": true
+    },
+    {
+      "ref": "sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+      "headerDigest": "sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+      "bodyDigest": "sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+      "bytes": 2759,
+      "exactLocalManifestBytes": true
+    }
+  ]
+}

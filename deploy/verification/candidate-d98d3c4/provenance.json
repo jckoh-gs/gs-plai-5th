@@ -1,0 +1,46 @@
+{
+  "sourceCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
+  "archive": "artifacts/private/grid-d98d3c4.oci.tar",
+  "archiveSha256": "7cd1601ae8297233bae1cd3bbbd4a525ea6413eaea825212cba8a2a58f616fdc",
+  "sourceArchiveSha256": "2a55acc58a4bce479638036e3d39397c26dae44c5325844b41674004323c3d62",
+  "imageManifest": "sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+  "labels": {
+    "grid.prd.version": "1.14",
+    "grid.runtime.variant": "alpine",
+    "org.opencontainers.image.revision": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
+    "org.opencontainers.image.version": "1.7.0"
+  },
+  "architecture": "amd64",
+  "os": "linux",
+  "deployed": false,
+  "registryPushed": true,
+  "checkedAt": "2026-09-21T16:36:40.430475+00:00",
+  "runtimeAppTests": {
+    "pass": 77,
+    "fail": 0,
+    "files": 21,
+    "concurrency": 1,
+    "mounts": "exact source tests only; runtime server/packages/client scripts remain image-owned"
+  },
+  "actualBrokerIntegration": "PASS",
+  "advancedIntegration": "PASS",
+  "runtimeFileEquality": "runtime-files.json",
+  "servedAssets": "served-assets.json",
+  "fileCounts": {
+    "sourceFiles": 15,
+    "servedIndex": 1,
+    "servedAssets": 2
+  },
+  "harnessFailures": [],
+  "security": {
+    "findings": "docs/security/evidence/app-candidate-d98d3c4-findings.json",
+    "packages": 130,
+    "residualMatches": 4,
+    "distinctCVEs": 2,
+    "newFindings": 0
+  },
+  "localQaCleanup": "All owned grid-d98 containers/network removed; no registry forward created",
+  "secretOutputCheck": "secret-output-check.json",
+  "verificationTerminalExit": 0,
+  "registryPushProof": "registry-push-proof.json"
+}

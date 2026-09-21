@@ -1,0 +1,10 @@
+{
+  "context": "desktop-linux",
+  "DOCKER_HOST": null,
+  "DOCKER_CONTEXT": null,
+  "buildSession": 43018,
+  "verificationSession": 8918,
+  "verificationProcessIdentity": [
+    "31724 Tue Sep 22 01:35:38 2026     /opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python scripts/deadline-command.py --timeout-seconds 600 -- python3 artifacts/private/verify-d98d3c4.py sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692"
+  ]
+}

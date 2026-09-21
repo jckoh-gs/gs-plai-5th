@@ -149,7 +149,7 @@
     "idea": "IDEA-011",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T16:24:46.061882+00:00",
-    "status": "Localgates PASS; sourcecommit/image/security pending",
+    "status": "Exactimage/security/privatepush/preupgradebackup PASS; mainupgrade next",
     "fallbackTag": "stable-v1.6.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.6.0.json",
     "beforeEvidence": "artifacts/checkpoints/command-list-readonly-before/result.json",
@@ -157,7 +157,10 @@
     "implementationOwner": "/root/ui",
     "browserOwner": "/root/issues",
     "scope": "List loading/empty/failure/recovery/lastbrowser-success, single boundedpoll/RTUisolation. No serverDBAPI/control/exportchanges/newdependencies.",
-    "localSummary": "artifacts/checkpoints/candidate-1.7-local-summary.json"
+    "localSummary": "artifacts/checkpoints/candidate-1.7-local-summary.json",
+    "runtimeCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
+    "candidateImage": "sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+    "provenance": "deploy/verification/candidate-d98d3c4/provenance.json"
   },
   "previousStableCheckpoints": [
     {
@@ -295,7 +298,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T16:34:07.028477+00:00",
+  "updatedAt": "2026-09-21T16:38:48.981862+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",

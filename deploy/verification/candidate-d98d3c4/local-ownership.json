@@ -1,0 +1,11 @@
+{
+  "network": "grid-d98-qa",
+  "containers": [
+    "grid-d98-unit",
+    "grid-d98-broker",
+    "grid-d98-integration",
+    "grid-d98-advanced",
+    "grid-d98-http"
+  ],
+  "scope": "isolated local Docker only; broker has no published ports"
+}

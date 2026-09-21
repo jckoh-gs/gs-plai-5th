@@ -1,0 +1,9 @@
+{
+  "ownedResourcesRemoved": [
+    "grid-d98-qa",
+    "grid-d98-broker",
+    "grid-d98-http"
+  ],
+  "checkedAt": "2026-09-21T16:36:23.659658+00:00",
+  "mainOrRegistryChanged": false
+}

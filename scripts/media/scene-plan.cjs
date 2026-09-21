@@ -1,5 +1,5 @@
 const fs=require('node:fs');
-module.exports=function({baseUrl,tokenFile,mqtt,names,csvFile,rehearsal=true,preview=false,commandExport=false,commandReceipt=false,lifecycle}){
+module.exports=function({baseUrl,tokenFile,mqtt,names,csvFile,rehearsal=true,preview=false,commandExport=false,commandReceipt=false,commandListStatus=false,lifecycle}){
 const c=JSON.parse(fs.readFileSync('scripts/media/scenes-template.json'));c.baseUrl=baseUrl;if(tokenFile)c.tokenFile=tokenFile;else delete c.tokenFile;c.mqtt=mqtt;
 const click=name=>({type:'click',role:'button',name}),nav=name=>({type:'click',role:'link',name}),fill=(label,value)=>({type:'fill',label,value}),select=(label,value)=>({type:'select',label,value}),wait=ms=>({type:'wait',ms});
 const deploymentNarration=[c.scenes[0].narration,c.scenes[4].narration,c.scenes[7].narration];
@@ -19,6 +19,7 @@ c.scenes[7].actions=[nav('통합 대시보드'),{type:'focus',selector:'.scene c
 
 if(!rehearsal){c.scenes[0].narration=deploymentNarration[0];c.scenes[4].narration=c.scenes[4].narration.replace('실제 로컬 브로커','실제 배포 브로커');c.scenes[7].narration=deploymentNarration[2];}
 if(preview){const at=c.scenes[1].actions.findIndex(a=>a.type==='capture');c.scenes[1].actions.splice(at,0,click('CSV 해석 미리보기'),{type:'assert',label:'CSV 해석 미리보기 결과'},{type:'focus',label:'CSV 해석 미리보기 결과'},wait(2500),{type:'capture',name:'csv-preview'});c.scenes[1].narration='CSV 또는 TSV를 넣고 해석 미리보기로 시각과 단위, 정규화 출력을 먼저 확인합니다. 미리보기는 RTU를 만들지 않습니다. 실제 등록 때 다시 검증하고 일 초 단위 수집을 시작합니다. 원본 전류와 추정 전류도 구분합니다.';}
+if(commandListStatus){const focus=c.scenes[4].actions.find(a=>a.type==='focus'&&a.text==='명령 처리 결과');delete focus.text;focus.selector='.command-list-state';c.scenes[4].seconds+=6;c.scenes[4].narration+=' 목록의 마지막 확인 시각은 브라우저 조회 시각이며 명령 완료 시각과 다릅니다.';}
 if(commandReceipt){c.scenes[2].actions.push(wait(1500),click('저장 상태 확인'),wait(1500),{type:'capture',name:'rest-receipt-stored-status'});c.scenes[2].seconds+=8;c.scenes[2].narration+=' 명령 접수는 완료와 다릅니다. 접수 패널은 마지막 관측값이며 저장 상태 확인으로 서버 상태를 다시 조회합니다.';}
 if(commandExport){delete c.scenes[4].zoom;c.scenes[4].actions.push({type:'download',role:'button',name:'최근 명령 상태 JSON 내보내기',file:'recent-command-states.json',validate:'command-states',rtuId:'selected'},wait(1500),{type:'capture',name:'command-export'});c.scenes[4].narration+=' 최근 저장 상태를 최대 스무 개까지 JSON으로 내보냅니다. 이 파일은 외부 VPP 수신 증거나 전체 감사 이력이 아닙니다.';}
 if(lifecycle){
