@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-09-21T16:01:29.668508+00:00",
+  "status": "Source integration gate passed; no remote execution",
+  "sha256": {
+    "scripts/remote-outbox-restart.mjs": "d1952d85ce39ccc6d30edd6b8e44319edc9507512666bf94760cfe096c7c3f64",
+    "scripts/remote-backup-helpers.mjs": "73ace68aee69462f0c6eac06ad0445363bcb2143f1cfcff85a28eaf6c85d30fb",
+    "tests/remote-outbox-backup.test.js": "0c781420d76829f50ea299800b4a598c4e144e8510e121a1b6a337bc31d0ae5e",
+    "tests/security-backup-cancellation.test.js": "3b9a085fd4d97bc8f9e73744c9464b57769705fbaf072ccc28819cbc7c4cf8e3"
+  },
+  "focusedTests": 5,
+  "passed": 5,
+  "scope": "Exact shared snapshot-source reuse, original deadline and verified pod, bad snapshot blocks restart; isolated worker invariants"
+}

@@ -1,0 +1,13 @@
+✔ outbox capture uses identical hardened source, exact verified pod and unchanged original deadline (1.530917ms)
+✔ incomplete, unverified or failed snapshot cannot advance into restart proof (2.657834ms)
+✔ verified IPC followed by worker failure never promotes partial or reveals worker diagnostics (42.091584ms)
+✔ existing immutable final is preserved and prevents worker work (20.814791ms)
+✔ noncooperative synchronous worker is killed without final publication (373.679916ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 470.40675
