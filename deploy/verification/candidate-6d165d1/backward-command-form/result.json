@@ -1,0 +1,493 @@
+{
+  "result": "PASS",
+  "observedAt": "2026-09-21T14:59:35.775Z",
+  "scope": "Dedicated isolated-restore fixture RTUs only; primary deployment untouched",
+  "fixtureTarget": "isolated-restore",
+  "baseUrl": "http://127.0.0.1:3105",
+  "apiVersion": "1.4.0",
+  "existingIds": [
+    "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+    "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+    "adb56898-ae8d-4628-9db1-6d33df5417b5",
+    "90528620-2d53-4a06-8945-aa7a37e0eaee",
+    "f49684af-b7dd-47b2-b360-8e7d28ef751b"
+  ],
+  "existingSettingsUnchanged": true,
+  "plants": [
+    {
+      "id": "09f5dba1-9586-4a4b-9dd7-62336dabc010",
+      "name": "Command form cb560f0b-7f55-4313-8515-8186bd655108 A"
+    },
+    {
+      "id": "4299a426-67a3-48fd-9569-617a28d03aab",
+      "name": "Command form cb560f0b-7f55-4313-8515-8186bd655108 B"
+    }
+  ],
+  "checks": [
+    {
+      "kind": "blocked-submission",
+      "key": "toleranceKw",
+      "value": "0",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "toleranceKw",
+      "message": "허용 오차 (kW): 0.01–10000 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "toleranceKw",
+      "value": "0",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "toleranceKw",
+      "message": "허용 오차 (kW): 0.01–10000 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "toleranceKw",
+      "value": "10001",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "toleranceKw",
+      "message": "허용 오차 (kW): 0.01–10000 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "toleranceKw",
+      "value": "10001",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "toleranceKw",
+      "message": "허용 오차 (kW): 0.01–10000 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "timeoutSeconds",
+      "value": "0",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "timeoutSeconds",
+      "message": "실행 timeout (초): 1–3600 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "timeoutSeconds",
+      "value": "0",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "timeoutSeconds",
+      "message": "실행 timeout (초): 1–3600 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "timeoutSeconds",
+      "value": "3601",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "timeoutSeconds",
+      "message": "실행 timeout (초): 1–3600 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "timeoutSeconds",
+      "value": "3601",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "timeoutSeconds",
+      "message": "실행 timeout (초): 1–3600 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "priority",
+      "value": "-1",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "priority",
+      "message": "우선순위 (0–100): 0–100 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "priority",
+      "value": "-1",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "priority",
+      "message": "우선순위 (0–100): 0–100 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "priority",
+      "value": "101",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "priority",
+      "message": "우선순위 (0–100): 0–100 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "priority",
+      "value": "101",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "priority",
+      "message": "우선순위 (0–100): 0–100 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "toleranceKw",
+      "value": "",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "toleranceKw",
+      "message": "허용 오차 (kW): 0.01–10000 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "toleranceKw",
+      "value": "",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "toleranceKw",
+      "message": "허용 오차 (kW): 0.01–10000 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "validSeconds",
+      "value": "1e20",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "validSeconds",
+      "message": "전달 유효기간으로 유효한 만료일을 만들 수 없습니다. 값을 확인하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "validSeconds",
+      "value": "1e20",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "validSeconds",
+      "message": "전달 유효기간으로 유효한 만료일을 만들 수 없습니다. 값을 확인하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "validSeconds",
+      "value": "300000000000",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "validSeconds",
+      "message": "만료일이 서버에서 지원하는 네 자리 연도 범위를 벗어납니다. 전달 유효기간을 확인하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "validSeconds",
+      "value": "300000000000",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "validSeconds",
+      "message": "만료일이 서버에서 지원하는 네 자리 연도 범위를 벗어납니다. 전달 유효기간을 확인하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "targetKw",
+      "value": "",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "targetKw",
+      "message": "목표 출력 (kW): 0 이상의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "targetKw",
+      "value": "1e309",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "targetKw",
+      "message": "목표 출력 (kW): 0 이상의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "toleranceKw",
+      "value": "",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "toleranceKw",
+      "message": "허용 오차 (kW): 0.01–10000 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "toleranceKw",
+      "value": "1e309",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "toleranceKw",
+      "message": "허용 오차 (kW): 0.01–10000 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "timeoutSeconds",
+      "value": "",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "timeoutSeconds",
+      "message": "실행 timeout (초): 1–3600 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "timeoutSeconds",
+      "value": "1e309",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "timeoutSeconds",
+      "message": "실행 timeout (초): 1–3600 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "validSeconds",
+      "value": "",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "validSeconds",
+      "message": "전달 유효기간 (초): 0 이상의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "validSeconds",
+      "value": "1e309",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "validSeconds",
+      "message": "전달 유효기간 (초): 0 이상의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "priority",
+      "value": "",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "priority",
+      "message": "우선순위 (0–100): 0–100 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "priority",
+      "value": "1e309",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "priority",
+      "message": "우선순위 (0–100): 0–100 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "boundary-only",
+      "key": "toleranceKw",
+      "value": 0.01,
+      "step": "any"
+    },
+    {
+      "kind": "boundary-only",
+      "key": "toleranceKw",
+      "value": 10000,
+      "step": "any"
+    },
+    {
+      "kind": "boundary-only",
+      "key": "toleranceKw",
+      "value": 0.125,
+      "step": "any"
+    },
+    {
+      "kind": "boundary-only",
+      "key": "timeoutSeconds",
+      "value": 1,
+      "step": "any"
+    },
+    {
+      "kind": "boundary-only",
+      "key": "timeoutSeconds",
+      "value": 3600,
+      "step": "any"
+    },
+    {
+      "kind": "boundary-only",
+      "key": "timeoutSeconds",
+      "value": 1.25,
+      "step": "any"
+    },
+    {
+      "kind": "boundary-only",
+      "key": "priority",
+      "value": 0,
+      "step": "any"
+    },
+    {
+      "kind": "boundary-only",
+      "key": "priority",
+      "value": 100,
+      "step": "any"
+    },
+    {
+      "kind": "boundary-only",
+      "key": "priority",
+      "value": 50.5,
+      "step": "any"
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "validSeconds",
+      "value": "1e20",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "validSeconds",
+      "message": "전달 유효기간으로 유효한 만료일을 만들 수 없습니다. 값을 확인하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "validSeconds",
+      "value": "1e20",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "validSeconds",
+      "message": "전달 유효기간으로 유효한 만료일을 만들 수 없습니다. 값을 확인하세요."
+    },
+    {
+      "kind": "normal-fractional-command",
+      "payload": {
+        "targetKw": 25.5,
+        "toleranceKw": 0.125,
+        "timeoutSeconds": 3.25,
+        "priority": 50.5,
+        "action": "set_target",
+        "commandId": "8aa67ead-691f-4793-bdf3-82dbdeb66bc8",
+        "expiresAt": "2026-09-21T14:59:57.408Z"
+      },
+      "statuses": [
+        "accepted",
+        "completed"
+      ],
+      "brokerPhases": [
+        "accepted",
+        "executing",
+        "completed"
+      ],
+      "actualKw": 25.5
+    },
+    {
+      "kind": "zero-target",
+      "commandId": "f0d78c66-0241-4087-8c5d-771484a60ad2",
+      "status": "completed",
+      "generatorsRemainOn": true
+    },
+    {
+      "kind": "availability-exceeded-within-rating",
+      "payload": {
+        "targetKw": 200,
+        "toleranceKw": 0.1,
+        "timeoutSeconds": 1.25,
+        "priority": 50,
+        "action": "set_target",
+        "commandId": "c0df88b8-ad3c-48b4-9fe9-013ce60cee84",
+        "expiresAt": "2026-09-21T15:00:02.680Z"
+      },
+      "status": "timed_out",
+      "actualKw": 100
+    },
+    {
+      "kind": "zero-expiry",
+      "payload": {
+        "targetKw": 25,
+        "toleranceKw": 1,
+        "timeoutSeconds": 120,
+        "priority": 50,
+        "action": "set_target",
+        "commandId": "5d4e030d-62c6-4a80-9bd5-293b33138521",
+        "expiresAt": "2026-09-21T14:59:35.530Z"
+      },
+      "status": "expired"
+    },
+    {
+      "kind": "rated-exceeded-server-check",
+      "status": "rejected",
+      "reason": "targetKw must be 0..1000"
+    }
+  ],
+  "commandPosts": 5,
+  "brokerConnected": true,
+  "brokerReceipts": [
+    {
+      "topic": "vpp/rtu/09f5dba1-9586-4a4b-9dd7-62336dabc010/ack",
+      "commandId": "8aa67ead-691f-4793-bdf3-82dbdeb66bc8",
+      "status": "accepted",
+      "receivedAt": "2026-09-21T14:59:27.984Z"
+    },
+    {
+      "topic": "vpp/rtu/09f5dba1-9586-4a4b-9dd7-62336dabc010/command-status",
+      "commandId": "8aa67ead-691f-4793-bdf3-82dbdeb66bc8",
+      "status": "executing",
+      "receivedAt": "2026-09-21T14:59:29.676Z"
+    },
+    {
+      "topic": "vpp/rtu/09f5dba1-9586-4a4b-9dd7-62336dabc010/command-status",
+      "commandId": "8aa67ead-691f-4793-bdf3-82dbdeb66bc8",
+      "status": "completed",
+      "receivedAt": "2026-09-21T14:59:30.701Z"
+    },
+    {
+      "topic": "vpp/rtu/09f5dba1-9586-4a4b-9dd7-62336dabc010/ack",
+      "commandId": "f0d78c66-0241-4087-8c5d-771484a60ad2",
+      "status": "accepted",
+      "receivedAt": "2026-09-21T14:59:31.891Z"
+    },
+    {
+      "topic": "vpp/rtu/09f5dba1-9586-4a4b-9dd7-62336dabc010/command-status",
+      "commandId": "f0d78c66-0241-4087-8c5d-771484a60ad2",
+      "status": "executing",
+      "receivedAt": "2026-09-21T14:59:33.499Z"
+    },
+    {
+      "topic": "vpp/rtu/09f5dba1-9586-4a4b-9dd7-62336dabc010/command-status",
+      "commandId": "f0d78c66-0241-4087-8c5d-771484a60ad2",
+      "status": "completed",
+      "receivedAt": "2026-09-21T14:59:33.577Z"
+    },
+    {
+      "topic": "vpp/rtu/09f5dba1-9586-4a4b-9dd7-62336dabc010/ack",
+      "commandId": "c0df88b8-ad3c-48b4-9fe9-013ce60cee84",
+      "status": "accepted",
+      "receivedAt": "2026-09-21T14:59:33.674Z"
+    },
+    {
+      "topic": "vpp/rtu/09f5dba1-9586-4a4b-9dd7-62336dabc010/command-status",
+      "commandId": "c0df88b8-ad3c-48b4-9fe9-013ce60cee84",
+      "status": "executing",
+      "receivedAt": "2026-09-21T14:59:33.774Z"
+    },
+    {
+      "topic": "vpp/rtu/09f5dba1-9586-4a4b-9dd7-62336dabc010/command-status",
+      "commandId": "c0df88b8-ad3c-48b4-9fe9-013ce60cee84",
+      "status": "timed_out",
+      "receivedAt": "2026-09-21T14:59:35.480Z"
+    },
+    {
+      "topic": "vpp/rtu/09f5dba1-9586-4a4b-9dd7-62336dabc010/command-status",
+      "commandId": "5d4e030d-62c6-4a80-9bd5-293b33138521",
+      "status": "expired",
+      "receivedAt": "2026-09-21T14:59:35.617Z"
+    },
+    {
+      "topic": "vpp/rtu/09f5dba1-9586-4a4b-9dd7-62336dabc010/ack",
+      "commandId": "7e13a108-d8f9-415b-82fb-43db92797f85",
+      "status": "rejected",
+      "receivedAt": "2026-09-21T14:59:35.700Z"
+    }
+  ],
+  "pageErrors": [],
+  "unhandledrejections": [],
+  "servedAsset": {
+    "path": "/assets/index-BndL-kls.js",
+    "sha256": "37a5224ba233be5966d02ac96fc91c7eddc0adad70e8d4783df6b5b4068d5bce"
+  },
+  "sourceHashes": {
+    "scripts/browser-command-form.cjs": "fe9dce4959fd780b999a6ac9695808aefca2c390016b6e36ee6fa223b4e31d0b",
+    "web/src.jsx": "e4fa5c0a31fcc534f9ab04d6e73d08054dd0a313d1a6c08565f08943a31c111c",
+    "web/command-form.js": "ba71bfda52cb154ab15765f5ebc99f8cab8e3ae80aed3d90543e5228e4d3b67e"
+  }
+}

@@ -1,16 +1,29 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T14:59:04.402653+00:00",
+  "updatedAt": "2026-09-21T15:03:00.340778+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
-  "stableRuntime": "stable-v1.4.0",
-  "stableManifest": "artifacts/releases/checkpoint-1.4.0.json",
+  "stableRuntime": {
+    "productVersion": "1.5.0",
+    "prdVersion": "1.12",
+    "commit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+    "tag": "stable-v1.5.0",
+    "alias": "stable-runtime-v1.5.0-6d165d1",
+    "appImage": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+    "backupEvidence": "deploy/verification/stable-backup-6d165d1.json",
+    "recoveryEvidence": "deploy/verification/candidate-6d165d1/restore-summary.json"
+  },
+  "stableManifest": {
+    "path": "artifacts/releases/checkpoint-1.5.0.json",
+    "state": "pending generation/verification; do notuse nonexistentmanifest ascompleted",
+    "previousImmutableFallback": "artifacts/releases/checkpoint-1.4.0.json"
+  },
   "workingMilestone": {
     "productVersion": "1.5.0",
     "prdVersion": "1.12",
     "idea": "IDEA-009",
-    "state": "Main1.5 acceptance/outbox and exactbackupPASS; current1.5/backward1.4 isolatedrestore ongoing, stable1.4 fallback unchanged"
+    "state": "Functionalstable1.5 promoted; tagslocal; nextsource/evidencecommit thenimmutablemanifest generation/verification/push"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -22,7 +35,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Deploymentowner completes exactcurrent1.5/backward1.4 isolatedrestore andcleanup; product REVIEW027 independentlychecks evidence; root promotesstable1.5 onlyafter allgates thencreatesimmutablecheckpoint. Main1.5 observation continues; stable1.4 fallback preserved.",
+    "Commit completed1.5 evidence/docs aftersecretcheck, generate immutablecheckpoint-1.5.0.json fromcommittedsource, verifyallhashes/backupexactSHA/actualReady and independentreview, pushmain+twostabletags. No rerun deployment/control/backups/restores.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -327,7 +340,7 @@
   "nextProductProposal": {
     "id": "IDEA-009",
     "revision": 1,
-    "state": "IDEA009 implementedandmain1.5deployed; fullrestore/independentacceptance pending beforestablepromotion",
+    "state": "IDEA009 functionalstable1.5 promoted afterREVIEW027; immutablemanifestpending, finalmedia/time stillpending",
     "review": "docs/product/REVIEW-024.md"
   },
   "finalMediaPreparation": {
@@ -394,7 +407,7 @@
     "adoptionCommit": "b9c10ae",
     "productVersion": "1.5.0",
     "prdVersion": "1.12",
-    "phase": "Main1.5 acceptance/outbox and exactbackupPASS; current1.5/backward1.4 isolatedrestore ongoing, stable1.4 fallback unchanged",
+    "phase": "Functionalstable1.5 promoted; tagslocal; nextsource/evidencecommit thenimmutablemanifest generation/verification/push",
     "uiOwner": "/root/ui",
     "browserOwner": "/root/issues",
     "securityOwner": "/root/security",
@@ -433,8 +446,10 @@
     "normalBackup": "deploy/verification/stable-backup-6d165d1.json",
     "outboxProof": "deploy/verification/candidate-6d165d1/outbox-restart.json",
     "restoreOwner": "/root/deployment",
-    "restoreState": "Exact1.5 restore allgatesPASS/scaled0/noPods/forwardclosed; backwardfresh1.4 samead34 creation4363 inprogress",
-    "fixtureHandleState": "84859 terminal0; do notreuse aslivefixture"
+    "restoreState": "PASS19 current1.5+backward1.4samead34; both0replicas/noPods/4PVCretained/tunnelsclosed; noactive restorehandles",
+    "fixtureHandleState": "84859 terminal0; do notreuse aslivefixture",
+    "restoreSummary": "deploy/verification/candidate-6d165d1/restore-summary.json",
+    "rootCleanupReview": "deploy/verification/candidate-6d165d1/root-recovery-review/summary.json"
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
   "previousCandidateFixture": {

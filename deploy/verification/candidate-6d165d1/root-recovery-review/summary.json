@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T15:01:55.784742+00:00",
+  "mainReady": true,
+  "restoreReplicasEach": 0,
+  "restorePodsEach": 0,
+  "retainedPVCsBound": 4,
+  "ownedRestoreListenersClosed": true,
+  "scope": "Independent live read-only cleanup/Ready check; separate19acceptanceproofs andbackupSHA reviewed independently. No mutations."
+}

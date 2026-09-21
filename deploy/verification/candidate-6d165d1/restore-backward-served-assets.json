@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T14:59:26.623646+00:00",
+  "scope": "Actualisolatedk3s1.4 HTTP bytes equalverifiedc19imagefiles; currentlocalweb/sourcecopy is operationalharnesscontext not assertionofdeployedUI source",
+  "assets": [
+    {
+      "path": "/assets/index-BndL-kls.js",
+      "sha256": "37a5224ba233be5966d02ac96fc91c7eddc0adad70e8d4783df6b5b4068d5bce"
+    },
+    {
+      "path": "/assets/index-IyMLkOKk.css",
+      "sha256": "e51a1f3c9ce76be93a9579cc86cb7af7eefb84049bda3ebfca0a5f0ca3632816"
+    }
+  ]
+}

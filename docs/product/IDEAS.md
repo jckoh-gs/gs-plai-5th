@@ -111,3 +111,6 @@ IDEA008 개정3 기능·배포·복원 완료: 실제 fdd0491/c19d 이미지에�
 ### IDEA009 채택 결정 — 개정1
 
 메인은 실제 local1.4 beforeproof의 rejected 성공알림, accepted 후 상태GET 오류, 서로다른ID의 중복POST를 확인하고 REVIEW024 범위를 PRD1.12/제품1.5.0 후보로 채택했다. 각 HTTP대기15초, RTU별 단일 pending POST 및 앱메모리 최근20개 확인, 명시적 원래ID 읽기 확인을 계약에 고정한다. 구현/시험/stable 승격은 대기이며 실제원격1.4와 immutable checkpoint/백업을 보존한다. 위 미채택 표현은 채택 전 이력이다.
+
+
+IDEA009 기능·배포·복원 완료: runtime6d165d1/image2fd3f21의 실제 main UI/MQTT/outbox 재시작과 동일719527936바이트/ad34 스냅샷 fresh1.5·하위1.4 복원19개 근거를 REVIEW027에서 독립 대조했다. 신규 receipt14case는1.5에서만, 기존form44는 양 버전에서 검증했다. 원래5단지 데이터/설정 보존과 양rig0/noPods/소유터널 종료를 확인했다. 새 stable 태그/immutablemanifest 출처 검증은 메인 후속이며 최종 미디어·시간·인도는 미완료다. 앞선 제안/로컬대기 문구는 당시 이력이다.

@@ -1,0 +1,17 @@
+{
+  "scripts/remote-outbox-restart.mjs": "6d8bfb2839b5476961bc288e55f4659fcd31ea8d22c1409ae0123ee195f4a70d",
+  "scripts/remote-integration.mjs": "ff594af40f686fb7a7258ee6c862f1faa4bc612b2b1c4682de8d721b91e8d523",
+  "scripts/remote-preview.mjs": "fd00c96113a8b805502961a15ed3287ee1dbce1643be59c52d7978ad1a17a0cb",
+  "scripts/remote-restore-check.mjs": "dab036666df4d2000dc6a0ed1bdc41e86a048fac61ccad1e6d543ae44841f61a",
+  "scripts/remote-backup.mjs": "29b37278cac24199101fdd35502ccf4dabb9a1418911791c82e8eba425a6faef",
+  "scripts/remote-backup-helpers.mjs": "499c3bb3caa37b22bb8653da7c140d56e981506c0281948195b84e8352e74390",
+  "scripts/deploy-restore-rig.py": "1a6b530055f8c86f73f77c40bd6ef6f60d8bf471567aafaafcabc79240a8e8a9",
+  "scripts/deadline-command.py": "62151573380ca2586e54bea709c33691c3c303e3192094470b5b7078606f37cc",
+  "scripts/pod-identity.mjs": "2e985af6a16219e34d39c11dd6c78eed6e62cdd161c1b13515e6252176b2a3e8",
+  "scripts/browser-check.cjs": "9844dbf9fe8d30ce08465c70c373798cd510ec4156737f8ce721f052d356c7c8",
+  "scripts/browser-command-export.cjs": "d0496cd8a6f526bdddf61701272b1c9cf9d792d2dfbc489596eda87543a8a278",
+  "scripts/browser-command-form.cjs": "fe9dce4959fd780b999a6ac9695808aefca2c390016b6e36ee6fa223b4e31d0b",
+  "scripts/browser-command-receipts.cjs": "056fe3d2ecf1b94c21e837ca21d05486d79315cbbab32820f77b0fe6049a4f9d",
+  "scripts/browser-scenario-scope.cjs": "3d1304ad908a80c6972f6a69b99069f5a77e7beee7cf14b0dbc4b010db617db5",
+  "scripts/media/demo-lifecycle.cjs": "56367d9ab90c70e1617aef9923c76e31195eb0869580882967831b78cb90a92b"
+}

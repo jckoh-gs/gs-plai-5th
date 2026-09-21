@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T14:57:52.446609+00:00",
+  "scope": "Actualisolatedk3s HTTP bytes equalverifiedimagefiles",
+  "assets": [
+    {
+      "path": "/assets/index-CyjJuK5n.js",
+      "sha256": "b6c1288921d9fa2e67e284cdbf9596f3b81abeae6625f9500acd07970f2e1dda"
+    },
+    {
+      "path": "/assets/index-DEfqZjZ9.css",
+      "sha256": "51137c1c0da56706d8cbe87f873b7ace2b530ccdc07673e1fccf2b8cf93166db"
+    }
+  ]
+}

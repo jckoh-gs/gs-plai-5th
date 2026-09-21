@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "sourceSnapshot": "/backup/stable-6d165d1-20260921T145446277Z.sqlite",
+  "sourceSha256": "ad34a074276243fb1b83d7fe081aa7631c9d2d51d0697e9d0dca5d7e5f349b24",
+  "destinationSha256": "ad34a074276243fb1b83d7fe081aa7631c9d2d51d0697e9d0dca5d7e5f349b24",
+  "expectedSha256": "ad34a074276243fb1b83d7fe081aa7631c9d2d51d0697e9d0dca5d7e5f349b24",
+  "exactSnapshotVerified": true,
+  "existingDestination": false,
+  "integrity": "ok"
+}

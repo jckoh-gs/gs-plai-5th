@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-09-21T15:01:43.111145+00:00",
+  "scope": "Tracked receipt cross-check only; no new cluster query or repeated scan",
+  "runtimePathsChangedSinceCandidate": [],
+  "sourceCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+  "image": "sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+  "rolloutPass": true,
+  "outboxPass": true,
+  "normalStatePass": true,
+  "currentRestoreReceiptsPass": true,
+  "backwardMqttReceiptNowPass": true,
+  "stablePromotion": "Not asserted; parent acceptance and promotion pending",
+  "security": "4 unchanged matches /2 CVEs; audit0; same artifact scan retained",
+  "reviewedSha256": {
+    "deploy/verification/candidate-6d165d1/rollout/proof.json": "6bc314d9d1d3133d366370f161dd26f81712b30a0212490cafddeb2be80a5eba",
+    "deploy/verification/candidate-6d165d1/outbox-restart.json": "db5a88ef5f2282ce2ff5627765b9266273bf3e59b4aa66358ee079256822f467",
+    "deploy/verification/candidate-6d165d1/post-outbox-normal.json": "6ff82df3b937957232536b2f836f4bc4bfe369df3226994d99b439929a53de26",
+    "deploy/verification/candidate-6d165d1/restore-1.5-init.json": "f61517e623fe342c779894072cb05d4aadaba15a7b6ce4fd688f0489e03a61d0",
+    "deploy/verification/candidate-6d165d1/restore-1.5-data.json": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274",
+    "deploy/verification/candidate-6d165d1/restore-1.5-mqtt.json": "09172ea950bec7054dc75a0ef667276d420b2ce4fc739ccf94be81cde2f18796",
+    "deploy/verification/candidate-6d165d1/restore-backward-mqtt.json": "5c9ec9d4dea1f9aeea804dedf30b6e12f7f93c023e53b912f48800f0a5d3edbc",
+    "docs/security/evidence/app-candidate-6d165d1-findings.json": "6de68225cc19e56111d12e5b108c7d1d1e953a3dd9ce06b87551c1118a2478b3",
+    "docs/security/evidence/app-candidate-6d165d1-npm-audit-metadata.json": "493863a476e93906eb18855faae03bafedfc5099d4d892ed44ecec80a7b885d9"
+  }
+}

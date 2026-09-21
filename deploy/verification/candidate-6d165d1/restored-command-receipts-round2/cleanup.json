@@ -1,0 +1,64 @@
+{
+  "at": "2026-09-21T14:57:23.619Z",
+  "preExistingUnchanged": true,
+  "owned": [
+    {
+      "id": "2e121755-461f-4f88-9bbe-e594ba2cafb0",
+      "runId": "a3b8f5b8-fb28-4624-b5e2-c217e881569c",
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      },
+      "replay": {
+        "speed": 1,
+        "paused": false,
+        "seed": 42,
+        "noisePct": 0,
+        "freezeLiveWeather": false
+      },
+      "generators": [
+        {
+          "id": "WT-01",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null,
+          "ratedKw": 1000,
+          "rampKwPerSec": 1000
+        }
+      ]
+    },
+    {
+      "id": "450202d0-ee26-4fd9-a594-e6c6b66383f5",
+      "runId": "20f895cd-faff-4424-abca-9383ede06e97",
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      },
+      "replay": {
+        "speed": 1,
+        "paused": false,
+        "seed": 42,
+        "noisePct": 0,
+        "freezeLiveWeather": false
+      },
+      "generators": [
+        {
+          "id": "WT-01",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null,
+          "ratedKw": 1000,
+          "rampKwPerSec": 1000
+        }
+      ]
+    }
+  ]
+}

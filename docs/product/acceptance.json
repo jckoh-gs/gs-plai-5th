@@ -6372,7 +6372,7 @@
     {
       "id": "FR-COMMAND-RECEIPT-01",
       "description": "REST 명령 접수 결과·응답 유실 및 읽기 확인",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/result.json",
@@ -6405,14 +6405,114 @@
         {
           "path": "docs/product/REVIEW-025.md",
           "sha256": "16f75c5bf2997bebbee4c9d109d09b9582f31fb2caa968f18ee6bdeabee26712"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-summary.json",
+          "sha256": "6ab5d3b000b0790887a34ba4df946bec44115d1b2cd71cec9a875cd08026e38e"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/outbox-restart.json",
+          "sha256": "db5a88ef5f2282ce2ff5627765b9266273bf3e59b4aa66358ee079256822f467"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/post-outbox-normal.json",
+          "sha256": "6ff82df3b937957232536b2f836f4bc4bfe369df3226994d99b439929a53de26"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/mqtt.json",
+          "sha256": "564a7343e27096c1f6cbe8666b7e597e86e7909c867747011fba9b9791c91821"
+        },
+        {
+          "path": "deploy/verification/stable-backup-6d165d1.json",
+          "sha256": "0c29254c3aeb87dfd4f4d6d4177c0191f0b3e7eff1c08eb1a22948e51d6be376"
+        },
+        {
+          "path": "docs/product/REVIEW-027.md",
+          "sha256": "9237ab5f01cc06e67f808649bcc795338752a6926f2908c66aee3b13d668c0c5"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-init.json",
+          "sha256": "f61517e623fe342c779894072cb05d4aadaba15a7b6ce4fd688f0489e03a61d0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-preview.json",
+          "sha256": "f72376410d08935afa07d2250d7feba33c0a2c2b971b1a76a6a25a9761a19c73"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-mqtt.json",
+          "sha256": "09172ea950bec7054dc75a0ef667276d420b2ce4fc739ccf94be81cde2f18796"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-export/result.json",
+          "sha256": "6100c4b7fbfac92534cc73d02afebc6198fb2d755a40cf0442df25760ab1c87c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-scenarios/result.json",
+          "sha256": "bb7ceaf064e4a72572979e408af994d60352be2d52695cee85f905864fee79c0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-served-assets.json",
+          "sha256": "854e7bc394a8e6e200b481b44fe3913035b3e21a900149044b10000ffd5f9d7b"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-init.json",
+          "sha256": "f61517e623fe342c779894072cb05d4aadaba15a7b6ce4fd688f0489e03a61d0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-preview.json",
+          "sha256": "7039060c78f3d26d5c56457b4a90b27a434822dcca7def3de4e561bfed90318c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-mqtt.json",
+          "sha256": "5c9ec9d4dea1f9aeea804dedf30b6e12f7f93c023e53b912f48800f0a5d3edbc"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-export/result.json",
+          "sha256": "db405b145d2f4e526b50164c1db2aab94fb6cf8ae09e88951edc144f1943bd6f"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-scenarios/result.json",
+          "sha256": "760efa336c1316489998bca5102032a0a21551c46d8c0b6a3910a8c9440aa024"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-served-assets.json",
+          "sha256": "71df94b68f54d89923b76a9b932671d687d5ae49f74fc4cab535391bd602661c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restored-command-form/result.json",
+          "sha256": "d44ae5a852d223a4269285ea0dfedece959d16f1df145afd3b5757e9a2254e3d"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/backward-command-form/result.json",
+          "sha256": "62be3e668a0dfda524bfeeec1b3328307748981f2a1a462c6d7eb01d34376f4a"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restored-command-receipts-round2/result.json",
+          "sha256": "808e7091c2d96b8cbb1bd5f7e46b3617b0c06c9e06c98e6b7aee7bfe1c1641ab"
         }
       ],
-      "assessment": "REVIEW025: Local1.5 served bundle/source matched;14 receipt cases with38 observed POST attempts (including synthetic undelivered),44 form checks/5POST+actualbroker phases,4 completed browser regressions and263 unique unit tests PASS. Existing RTU settings preserved; memory history20/reload/late-response attribution verified. POST actual15045ms; GET timeout shared helper injected-unit boundary only. Exact candidate k3s/image, immutable backup and current/backward restore/stable evidence remain pending; no remote or whole-goal completion claim."
+      "assessment": "REVIEW027 independently read all19 terminal restore proofs: same719527936B/ad34 snapshot fresh1.5 and backward1.4, original5plants/1scenario beforefixtures, actualservedassets/currentreceipt14/current+backwardform44/UI/MQTT, bothrigs0/noPods and ownedtunnelclosed. Main1.5 exact6d165d1/2fd image auth/preview/export/MQTT125,error0,60samples,dedup and actualoutboxPodreplacement samebody/PUBACK verified. Local REVIEW025 scope retained; controlled response fixtures are not natural outages, GET15s uses shared-helper unit proof. Functional deployment/recovery complete; stable tag/immutablemanifest provenance and finalmedia/time/wholegoal remain separate."
     },
     {
       "id": "UI-12",
       "description": "RTU별 이 탭의 최근20개 명령 전송 확인",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/result.json",
@@ -6445,14 +6545,114 @@
         {
           "path": "docs/product/REVIEW-025.md",
           "sha256": "16f75c5bf2997bebbee4c9d109d09b9582f31fb2caa968f18ee6bdeabee26712"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-summary.json",
+          "sha256": "6ab5d3b000b0790887a34ba4df946bec44115d1b2cd71cec9a875cd08026e38e"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/outbox-restart.json",
+          "sha256": "db5a88ef5f2282ce2ff5627765b9266273bf3e59b4aa66358ee079256822f467"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/post-outbox-normal.json",
+          "sha256": "6ff82df3b937957232536b2f836f4bc4bfe369df3226994d99b439929a53de26"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/mqtt.json",
+          "sha256": "564a7343e27096c1f6cbe8666b7e597e86e7909c867747011fba9b9791c91821"
+        },
+        {
+          "path": "deploy/verification/stable-backup-6d165d1.json",
+          "sha256": "0c29254c3aeb87dfd4f4d6d4177c0191f0b3e7eff1c08eb1a22948e51d6be376"
+        },
+        {
+          "path": "docs/product/REVIEW-027.md",
+          "sha256": "9237ab5f01cc06e67f808649bcc795338752a6926f2908c66aee3b13d668c0c5"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-init.json",
+          "sha256": "f61517e623fe342c779894072cb05d4aadaba15a7b6ce4fd688f0489e03a61d0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-preview.json",
+          "sha256": "f72376410d08935afa07d2250d7feba33c0a2c2b971b1a76a6a25a9761a19c73"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-mqtt.json",
+          "sha256": "09172ea950bec7054dc75a0ef667276d420b2ce4fc739ccf94be81cde2f18796"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-export/result.json",
+          "sha256": "6100c4b7fbfac92534cc73d02afebc6198fb2d755a40cf0442df25760ab1c87c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-scenarios/result.json",
+          "sha256": "bb7ceaf064e4a72572979e408af994d60352be2d52695cee85f905864fee79c0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-served-assets.json",
+          "sha256": "854e7bc394a8e6e200b481b44fe3913035b3e21a900149044b10000ffd5f9d7b"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-init.json",
+          "sha256": "f61517e623fe342c779894072cb05d4aadaba15a7b6ce4fd688f0489e03a61d0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-preview.json",
+          "sha256": "7039060c78f3d26d5c56457b4a90b27a434822dcca7def3de4e561bfed90318c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-mqtt.json",
+          "sha256": "5c9ec9d4dea1f9aeea804dedf30b6e12f7f93c023e53b912f48800f0a5d3edbc"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-export/result.json",
+          "sha256": "db405b145d2f4e526b50164c1db2aab94fb6cf8ae09e88951edc144f1943bd6f"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-scenarios/result.json",
+          "sha256": "760efa336c1316489998bca5102032a0a21551c46d8c0b6a3910a8c9440aa024"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-served-assets.json",
+          "sha256": "71df94b68f54d89923b76a9b932671d687d5ae49f74fc4cab535391bd602661c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restored-command-form/result.json",
+          "sha256": "d44ae5a852d223a4269285ea0dfedece959d16f1df145afd3b5757e9a2254e3d"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/backward-command-form/result.json",
+          "sha256": "62be3e668a0dfda524bfeeec1b3328307748981f2a1a462c6d7eb01d34376f4a"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restored-command-receipts-round2/result.json",
+          "sha256": "808e7091c2d96b8cbb1bd5f7e46b3617b0c06c9e06c98e6b7aee7bfe1c1641ab"
         }
       ],
-      "assessment": "REVIEW025: Local1.5 served bundle/source matched;14 receipt cases with38 observed POST attempts (including synthetic undelivered),44 form checks/5POST+actualbroker phases,4 completed browser regressions and263 unique unit tests PASS. Existing RTU settings preserved; memory history20/reload/late-response attribution verified. POST actual15045ms; GET timeout shared helper injected-unit boundary only. Local acceptance only; remote release/recovery and final media/time gates remain separate."
+      "assessment": "REVIEW027 independently read all19 terminal restore proofs: same719527936B/ad34 snapshot fresh1.5 and backward1.4, original5plants/1scenario beforefixtures, actualservedassets/currentreceipt14/current+backwardform44/UI/MQTT, bothrigs0/noPods and ownedtunnelclosed. Main1.5 exact6d165d1/2fd image auth/preview/export/MQTT125,error0,60samples,dedup and actualoutboxPodreplacement samebody/PUBACK verified. Local REVIEW025 scope retained; controlled response fixtures are not natural outages, GET15s uses shared-helper unit proof. Functional deployment/recovery complete; stable tag/immutablemanifest provenance and finalmedia/time/wholegoal remain separate."
     },
     {
       "id": "AT-COMMAND-RECEIPT-01-01",
       "description": "실제 접수/거절/만료 상태와 ID 귀속",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/result.json",
@@ -6485,14 +6685,114 @@
         {
           "path": "docs/product/REVIEW-025.md",
           "sha256": "16f75c5bf2997bebbee4c9d109d09b9582f31fb2caa968f18ee6bdeabee26712"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-summary.json",
+          "sha256": "6ab5d3b000b0790887a34ba4df946bec44115d1b2cd71cec9a875cd08026e38e"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/outbox-restart.json",
+          "sha256": "db5a88ef5f2282ce2ff5627765b9266273bf3e59b4aa66358ee079256822f467"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/post-outbox-normal.json",
+          "sha256": "6ff82df3b937957232536b2f836f4bc4bfe369df3226994d99b439929a53de26"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/mqtt.json",
+          "sha256": "564a7343e27096c1f6cbe8666b7e597e86e7909c867747011fba9b9791c91821"
+        },
+        {
+          "path": "deploy/verification/stable-backup-6d165d1.json",
+          "sha256": "0c29254c3aeb87dfd4f4d6d4177c0191f0b3e7eff1c08eb1a22948e51d6be376"
+        },
+        {
+          "path": "docs/product/REVIEW-027.md",
+          "sha256": "9237ab5f01cc06e67f808649bcc795338752a6926f2908c66aee3b13d668c0c5"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-init.json",
+          "sha256": "f61517e623fe342c779894072cb05d4aadaba15a7b6ce4fd688f0489e03a61d0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-preview.json",
+          "sha256": "f72376410d08935afa07d2250d7feba33c0a2c2b971b1a76a6a25a9761a19c73"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-mqtt.json",
+          "sha256": "09172ea950bec7054dc75a0ef667276d420b2ce4fc739ccf94be81cde2f18796"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-export/result.json",
+          "sha256": "6100c4b7fbfac92534cc73d02afebc6198fb2d755a40cf0442df25760ab1c87c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-scenarios/result.json",
+          "sha256": "bb7ceaf064e4a72572979e408af994d60352be2d52695cee85f905864fee79c0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-served-assets.json",
+          "sha256": "854e7bc394a8e6e200b481b44fe3913035b3e21a900149044b10000ffd5f9d7b"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-init.json",
+          "sha256": "f61517e623fe342c779894072cb05d4aadaba15a7b6ce4fd688f0489e03a61d0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-preview.json",
+          "sha256": "7039060c78f3d26d5c56457b4a90b27a434822dcca7def3de4e561bfed90318c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-mqtt.json",
+          "sha256": "5c9ec9d4dea1f9aeea804dedf30b6e12f7f93c023e53b912f48800f0a5d3edbc"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-export/result.json",
+          "sha256": "db405b145d2f4e526b50164c1db2aab94fb6cf8ae09e88951edc144f1943bd6f"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-scenarios/result.json",
+          "sha256": "760efa336c1316489998bca5102032a0a21551c46d8c0b6a3910a8c9440aa024"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-served-assets.json",
+          "sha256": "71df94b68f54d89923b76a9b932671d687d5ae49f74fc4cab535391bd602661c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restored-command-form/result.json",
+          "sha256": "d44ae5a852d223a4269285ea0dfedece959d16f1df145afd3b5757e9a2254e3d"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/backward-command-form/result.json",
+          "sha256": "62be3e668a0dfda524bfeeec1b3328307748981f2a1a462c6d7eb01d34376f4a"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restored-command-receipts-round2/result.json",
+          "sha256": "808e7091c2d96b8cbb1bd5f7e46b3617b0c06c9e06c98e6b7aee7bfe1c1641ab"
         }
       ],
-      "assessment": "REVIEW025: Local1.5 served bundle/source matched;14 receipt cases with38 observed POST attempts (including synthetic undelivered),44 form checks/5POST+actualbroker phases,4 completed browser regressions and263 unique unit tests PASS. Existing RTU settings preserved; memory history20/reload/late-response attribution verified. POST actual15045ms; GET timeout shared helper injected-unit boundary only. Local acceptance only; remote release/recovery and final media/time gates remain separate."
+      "assessment": "REVIEW027 independently read all19 terminal restore proofs: same719527936B/ad34 snapshot fresh1.5 and backward1.4, original5plants/1scenario beforefixtures, actualservedassets/currentreceipt14/current+backwardform44/UI/MQTT, bothrigs0/noPods and ownedtunnelclosed. Main1.5 exact6d165d1/2fd image auth/preview/export/MQTT125,error0,60samples,dedup and actualoutboxPodreplacement samebody/PUBACK verified. Local REVIEW025 scope retained; controlled response fixtures are not natural outages, GET15s uses shared-helper unit proof. Functional deployment/recovery complete; stable tag/immutablemanifest provenance and finalmedia/time/wholegoal remain separate."
     },
     {
       "id": "AT-COMMAND-RECEIPT-01-02",
       "description": "POST 확정과 화면 갱신 실패 분리",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/result.json",
@@ -6525,14 +6825,114 @@
         {
           "path": "docs/product/REVIEW-025.md",
           "sha256": "16f75c5bf2997bebbee4c9d109d09b9582f31fb2caa968f18ee6bdeabee26712"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-summary.json",
+          "sha256": "6ab5d3b000b0790887a34ba4df946bec44115d1b2cd71cec9a875cd08026e38e"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/outbox-restart.json",
+          "sha256": "db5a88ef5f2282ce2ff5627765b9266273bf3e59b4aa66358ee079256822f467"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/post-outbox-normal.json",
+          "sha256": "6ff82df3b937957232536b2f836f4bc4bfe369df3226994d99b439929a53de26"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/mqtt.json",
+          "sha256": "564a7343e27096c1f6cbe8666b7e597e86e7909c867747011fba9b9791c91821"
+        },
+        {
+          "path": "deploy/verification/stable-backup-6d165d1.json",
+          "sha256": "0c29254c3aeb87dfd4f4d6d4177c0191f0b3e7eff1c08eb1a22948e51d6be376"
+        },
+        {
+          "path": "docs/product/REVIEW-027.md",
+          "sha256": "9237ab5f01cc06e67f808649bcc795338752a6926f2908c66aee3b13d668c0c5"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-init.json",
+          "sha256": "f61517e623fe342c779894072cb05d4aadaba15a7b6ce4fd688f0489e03a61d0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-preview.json",
+          "sha256": "f72376410d08935afa07d2250d7feba33c0a2c2b971b1a76a6a25a9761a19c73"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-mqtt.json",
+          "sha256": "09172ea950bec7054dc75a0ef667276d420b2ce4fc739ccf94be81cde2f18796"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-export/result.json",
+          "sha256": "6100c4b7fbfac92534cc73d02afebc6198fb2d755a40cf0442df25760ab1c87c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-scenarios/result.json",
+          "sha256": "bb7ceaf064e4a72572979e408af994d60352be2d52695cee85f905864fee79c0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-served-assets.json",
+          "sha256": "854e7bc394a8e6e200b481b44fe3913035b3e21a900149044b10000ffd5f9d7b"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-init.json",
+          "sha256": "f61517e623fe342c779894072cb05d4aadaba15a7b6ce4fd688f0489e03a61d0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-preview.json",
+          "sha256": "7039060c78f3d26d5c56457b4a90b27a434822dcca7def3de4e561bfed90318c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-mqtt.json",
+          "sha256": "5c9ec9d4dea1f9aeea804dedf30b6e12f7f93c023e53b912f48800f0a5d3edbc"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-export/result.json",
+          "sha256": "db405b145d2f4e526b50164c1db2aab94fb6cf8ae09e88951edc144f1943bd6f"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-scenarios/result.json",
+          "sha256": "760efa336c1316489998bca5102032a0a21551c46d8c0b6a3910a8c9440aa024"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-served-assets.json",
+          "sha256": "71df94b68f54d89923b76a9b932671d687d5ae49f74fc4cab535391bd602661c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restored-command-form/result.json",
+          "sha256": "d44ae5a852d223a4269285ea0dfedece959d16f1df145afd3b5757e9a2254e3d"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/backward-command-form/result.json",
+          "sha256": "62be3e668a0dfda524bfeeec1b3328307748981f2a1a462c6d7eb01d34376f4a"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restored-command-receipts-round2/result.json",
+          "sha256": "808e7091c2d96b8cbb1bd5f7e46b3617b0c06c9e06c98e6b7aee7bfe1c1641ab"
         }
       ],
-      "assessment": "REVIEW025: Local1.5 served bundle/source matched;14 receipt cases with38 observed POST attempts (including synthetic undelivered),44 form checks/5POST+actualbroker phases,4 completed browser regressions and263 unique unit tests PASS. Existing RTU settings preserved; memory history20/reload/late-response attribution verified. POST actual15045ms; GET timeout shared helper injected-unit boundary only. Local acceptance only; remote release/recovery and final media/time gates remain separate."
+      "assessment": "REVIEW027 independently read all19 terminal restore proofs: same719527936B/ad34 snapshot fresh1.5 and backward1.4, original5plants/1scenario beforefixtures, actualservedassets/currentreceipt14/current+backwardform44/UI/MQTT, bothrigs0/noPods and ownedtunnelclosed. Main1.5 exact6d165d1/2fd image auth/preview/export/MQTT125,error0,60samples,dedup and actualoutboxPodreplacement samebody/PUBACK verified. Local REVIEW025 scope retained; controlled response fixtures are not natural outages, GET15s uses shared-helper unit proof. Functional deployment/recovery complete; stable tag/immutablemanifest provenance and finalmedia/time/wholegoal remain separate."
     },
     {
       "id": "AT-COMMAND-RECEIPT-01-03",
       "description": "응답 유실·미도달·읽기 확인·15초 경계",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/result.json",
@@ -6565,14 +6965,114 @@
         {
           "path": "docs/product/REVIEW-025.md",
           "sha256": "16f75c5bf2997bebbee4c9d109d09b9582f31fb2caa968f18ee6bdeabee26712"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-summary.json",
+          "sha256": "6ab5d3b000b0790887a34ba4df946bec44115d1b2cd71cec9a875cd08026e38e"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/outbox-restart.json",
+          "sha256": "db5a88ef5f2282ce2ff5627765b9266273bf3e59b4aa66358ee079256822f467"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/post-outbox-normal.json",
+          "sha256": "6ff82df3b937957232536b2f836f4bc4bfe369df3226994d99b439929a53de26"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/mqtt.json",
+          "sha256": "564a7343e27096c1f6cbe8666b7e597e86e7909c867747011fba9b9791c91821"
+        },
+        {
+          "path": "deploy/verification/stable-backup-6d165d1.json",
+          "sha256": "0c29254c3aeb87dfd4f4d6d4177c0191f0b3e7eff1c08eb1a22948e51d6be376"
+        },
+        {
+          "path": "docs/product/REVIEW-027.md",
+          "sha256": "9237ab5f01cc06e67f808649bcc795338752a6926f2908c66aee3b13d668c0c5"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-init.json",
+          "sha256": "f61517e623fe342c779894072cb05d4aadaba15a7b6ce4fd688f0489e03a61d0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-preview.json",
+          "sha256": "f72376410d08935afa07d2250d7feba33c0a2c2b971b1a76a6a25a9761a19c73"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-mqtt.json",
+          "sha256": "09172ea950bec7054dc75a0ef667276d420b2ce4fc739ccf94be81cde2f18796"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-export/result.json",
+          "sha256": "6100c4b7fbfac92534cc73d02afebc6198fb2d755a40cf0442df25760ab1c87c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-scenarios/result.json",
+          "sha256": "bb7ceaf064e4a72572979e408af994d60352be2d52695cee85f905864fee79c0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-served-assets.json",
+          "sha256": "854e7bc394a8e6e200b481b44fe3913035b3e21a900149044b10000ffd5f9d7b"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-init.json",
+          "sha256": "f61517e623fe342c779894072cb05d4aadaba15a7b6ce4fd688f0489e03a61d0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-preview.json",
+          "sha256": "7039060c78f3d26d5c56457b4a90b27a434822dcca7def3de4e561bfed90318c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-mqtt.json",
+          "sha256": "5c9ec9d4dea1f9aeea804dedf30b6e12f7f93c023e53b912f48800f0a5d3edbc"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-export/result.json",
+          "sha256": "db405b145d2f4e526b50164c1db2aab94fb6cf8ae09e88951edc144f1943bd6f"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-scenarios/result.json",
+          "sha256": "760efa336c1316489998bca5102032a0a21551c46d8c0b6a3910a8c9440aa024"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-served-assets.json",
+          "sha256": "71df94b68f54d89923b76a9b932671d687d5ae49f74fc4cab535391bd602661c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restored-command-form/result.json",
+          "sha256": "d44ae5a852d223a4269285ea0dfedece959d16f1df145afd3b5757e9a2254e3d"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/backward-command-form/result.json",
+          "sha256": "62be3e668a0dfda524bfeeec1b3328307748981f2a1a462c6d7eb01d34376f4a"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restored-command-receipts-round2/result.json",
+          "sha256": "808e7091c2d96b8cbb1bd5f7e46b3617b0c06c9e06c98e6b7aee7bfe1c1641ab"
         }
       ],
-      "assessment": "REVIEW025: Local1.5 served bundle/source matched;14 receipt cases with38 observed POST attempts (including synthetic undelivered),44 form checks/5POST+actualbroker phases,4 completed browser regressions and263 unique unit tests PASS. Existing RTU settings preserved; memory history20/reload/late-response attribution verified. POST actual15045ms; GET timeout shared helper injected-unit boundary only. Local acceptance only; remote release/recovery and final media/time gates remain separate."
+      "assessment": "REVIEW027 independently read all19 terminal restore proofs: same719527936B/ad34 snapshot fresh1.5 and backward1.4, original5plants/1scenario beforefixtures, actualservedassets/currentreceipt14/current+backwardform44/UI/MQTT, bothrigs0/noPods and ownedtunnelclosed. Main1.5 exact6d165d1/2fd image auth/preview/export/MQTT125,error0,60samples,dedup and actualoutboxPodreplacement samebody/PUBACK verified. Local REVIEW025 scope retained; controlled response fixtures are not natural outages, GET15s uses shared-helper unit proof. Functional deployment/recovery complete; stable tag/immutablemanifest provenance and finalmedia/time/wholegoal remain separate."
     },
     {
       "id": "AT-COMMAND-RECEIPT-01-04",
       "description": "중복 제출과 RTU/탭 전환 경합",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/result.json",
@@ -6605,14 +7105,114 @@
         {
           "path": "docs/product/REVIEW-025.md",
           "sha256": "16f75c5bf2997bebbee4c9d109d09b9582f31fb2caa968f18ee6bdeabee26712"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-summary.json",
+          "sha256": "6ab5d3b000b0790887a34ba4df946bec44115d1b2cd71cec9a875cd08026e38e"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/outbox-restart.json",
+          "sha256": "db5a88ef5f2282ce2ff5627765b9266273bf3e59b4aa66358ee079256822f467"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/post-outbox-normal.json",
+          "sha256": "6ff82df3b937957232536b2f836f4bc4bfe369df3226994d99b439929a53de26"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/mqtt.json",
+          "sha256": "564a7343e27096c1f6cbe8666b7e597e86e7909c867747011fba9b9791c91821"
+        },
+        {
+          "path": "deploy/verification/stable-backup-6d165d1.json",
+          "sha256": "0c29254c3aeb87dfd4f4d6d4177c0191f0b3e7eff1c08eb1a22948e51d6be376"
+        },
+        {
+          "path": "docs/product/REVIEW-027.md",
+          "sha256": "9237ab5f01cc06e67f808649bcc795338752a6926f2908c66aee3b13d668c0c5"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-init.json",
+          "sha256": "f61517e623fe342c779894072cb05d4aadaba15a7b6ce4fd688f0489e03a61d0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-preview.json",
+          "sha256": "f72376410d08935afa07d2250d7feba33c0a2c2b971b1a76a6a25a9761a19c73"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-mqtt.json",
+          "sha256": "09172ea950bec7054dc75a0ef667276d420b2ce4fc739ccf94be81cde2f18796"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-export/result.json",
+          "sha256": "6100c4b7fbfac92534cc73d02afebc6198fb2d755a40cf0442df25760ab1c87c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-scenarios/result.json",
+          "sha256": "bb7ceaf064e4a72572979e408af994d60352be2d52695cee85f905864fee79c0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-served-assets.json",
+          "sha256": "854e7bc394a8e6e200b481b44fe3913035b3e21a900149044b10000ffd5f9d7b"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-init.json",
+          "sha256": "f61517e623fe342c779894072cb05d4aadaba15a7b6ce4fd688f0489e03a61d0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-preview.json",
+          "sha256": "7039060c78f3d26d5c56457b4a90b27a434822dcca7def3de4e561bfed90318c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-mqtt.json",
+          "sha256": "5c9ec9d4dea1f9aeea804dedf30b6e12f7f93c023e53b912f48800f0a5d3edbc"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-export/result.json",
+          "sha256": "db405b145d2f4e526b50164c1db2aab94fb6cf8ae09e88951edc144f1943bd6f"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-scenarios/result.json",
+          "sha256": "760efa336c1316489998bca5102032a0a21551c46d8c0b6a3910a8c9440aa024"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-served-assets.json",
+          "sha256": "71df94b68f54d89923b76a9b932671d687d5ae49f74fc4cab535391bd602661c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restored-command-form/result.json",
+          "sha256": "d44ae5a852d223a4269285ea0dfedece959d16f1df145afd3b5757e9a2254e3d"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/backward-command-form/result.json",
+          "sha256": "62be3e668a0dfda524bfeeec1b3328307748981f2a1a462c6d7eb01d34376f4a"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restored-command-receipts-round2/result.json",
+          "sha256": "808e7091c2d96b8cbb1bd5f7e46b3617b0c06c9e06c98e6b7aee7bfe1c1641ab"
         }
       ],
-      "assessment": "REVIEW025: Local1.5 served bundle/source matched;14 receipt cases with38 observed POST attempts (including synthetic undelivered),44 form checks/5POST+actualbroker phases,4 completed browser regressions and263 unique unit tests PASS. Existing RTU settings preserved; memory history20/reload/late-response attribution verified. POST actual15045ms; GET timeout shared helper injected-unit boundary only. Local acceptance only; remote release/recovery and final media/time gates remain separate."
+      "assessment": "REVIEW027 independently read all19 terminal restore proofs: same719527936B/ad34 snapshot fresh1.5 and backward1.4, original5plants/1scenario beforefixtures, actualservedassets/currentreceipt14/current+backwardform44/UI/MQTT, bothrigs0/noPods and ownedtunnelclosed. Main1.5 exact6d165d1/2fd image auth/preview/export/MQTT125,error0,60samples,dedup and actualoutboxPodreplacement samebody/PUBACK verified. Local REVIEW025 scope retained; controlled response fixtures are not natural outages, GET15s uses shared-helper unit proof. Functional deployment/recovery complete; stable tag/immutablemanifest provenance and finalmedia/time/wholegoal remain separate."
     },
     {
       "id": "AT-COMMAND-RECEIPT-01-05",
       "description": "모든 REST 제어·기존 의미·접근성·보존 범위",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/result.json",
@@ -6645,14 +7245,114 @@
         {
           "path": "docs/product/REVIEW-025.md",
           "sha256": "16f75c5bf2997bebbee4c9d109d09b9582f31fb2caa968f18ee6bdeabee26712"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-summary.json",
+          "sha256": "6ab5d3b000b0790887a34ba4df946bec44115d1b2cd71cec9a875cd08026e38e"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/outbox-restart.json",
+          "sha256": "db5a88ef5f2282ce2ff5627765b9266273bf3e59b4aa66358ee079256822f467"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/post-outbox-normal.json",
+          "sha256": "6ff82df3b937957232536b2f836f4bc4bfe369df3226994d99b439929a53de26"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/mqtt.json",
+          "sha256": "564a7343e27096c1f6cbe8666b7e597e86e7909c867747011fba9b9791c91821"
+        },
+        {
+          "path": "deploy/verification/stable-backup-6d165d1.json",
+          "sha256": "0c29254c3aeb87dfd4f4d6d4177c0191f0b3e7eff1c08eb1a22948e51d6be376"
+        },
+        {
+          "path": "docs/product/REVIEW-027.md",
+          "sha256": "9237ab5f01cc06e67f808649bcc795338752a6926f2908c66aee3b13d668c0c5"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-init.json",
+          "sha256": "f61517e623fe342c779894072cb05d4aadaba15a7b6ce4fd688f0489e03a61d0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-preview.json",
+          "sha256": "f72376410d08935afa07d2250d7feba33c0a2c2b971b1a76a6a25a9761a19c73"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-mqtt.json",
+          "sha256": "09172ea950bec7054dc75a0ef667276d420b2ce4fc739ccf94be81cde2f18796"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-export/result.json",
+          "sha256": "6100c4b7fbfac92534cc73d02afebc6198fb2d755a40cf0442df25760ab1c87c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-scenarios/result.json",
+          "sha256": "bb7ceaf064e4a72572979e408af994d60352be2d52695cee85f905864fee79c0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-served-assets.json",
+          "sha256": "854e7bc394a8e6e200b481b44fe3913035b3e21a900149044b10000ffd5f9d7b"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-init.json",
+          "sha256": "f61517e623fe342c779894072cb05d4aadaba15a7b6ce4fd688f0489e03a61d0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-preview.json",
+          "sha256": "7039060c78f3d26d5c56457b4a90b27a434822dcca7def3de4e561bfed90318c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-mqtt.json",
+          "sha256": "5c9ec9d4dea1f9aeea804dedf30b6e12f7f93c023e53b912f48800f0a5d3edbc"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-export/result.json",
+          "sha256": "db405b145d2f4e526b50164c1db2aab94fb6cf8ae09e88951edc144f1943bd6f"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-scenarios/result.json",
+          "sha256": "760efa336c1316489998bca5102032a0a21551c46d8c0b6a3910a8c9440aa024"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-served-assets.json",
+          "sha256": "71df94b68f54d89923b76a9b932671d687d5ae49f74fc4cab535391bd602661c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restored-command-form/result.json",
+          "sha256": "d44ae5a852d223a4269285ea0dfedece959d16f1df145afd3b5757e9a2254e3d"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/backward-command-form/result.json",
+          "sha256": "62be3e668a0dfda524bfeeec1b3328307748981f2a1a462c6d7eb01d34376f4a"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restored-command-receipts-round2/result.json",
+          "sha256": "808e7091c2d96b8cbb1bd5f7e46b3617b0c06c9e06c98e6b7aee7bfe1c1641ab"
         }
       ],
-      "assessment": "REVIEW025: Local1.5 served bundle/source matched;14 receipt cases with38 observed POST attempts (including synthetic undelivered),44 form checks/5POST+actualbroker phases,4 completed browser regressions and263 unique unit tests PASS. Existing RTU settings preserved; memory history20/reload/late-response attribution verified. POST actual15045ms; GET timeout shared helper injected-unit boundary only. Local acceptance only; remote release/recovery and final media/time gates remain separate."
+      "assessment": "REVIEW027 independently read all19 terminal restore proofs: same719527936B/ad34 snapshot fresh1.5 and backward1.4, original5plants/1scenario beforefixtures, actualservedassets/currentreceipt14/current+backwardform44/UI/MQTT, bothrigs0/noPods and ownedtunnelclosed. Main1.5 exact6d165d1/2fd image auth/preview/export/MQTT125,error0,60samples,dedup and actualoutboxPodreplacement samebody/PUBACK verified. Local REVIEW025 scope retained; controlled response fixtures are not natural outages, GET15s uses shared-helper unit proof. Functional deployment/recovery complete; stable tag/immutablemanifest provenance and finalmedia/time/wholegoal remain separate."
     },
     {
       "id": "AT-COMMAND-RECEIPT-01-06",
       "description": "실제 후보 k3s·MQTT·회귀·백업/복원",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/result.json",
@@ -6685,9 +7385,109 @@
         {
           "path": "docs/product/REVIEW-025.md",
           "sha256": "16f75c5bf2997bebbee4c9d109d09b9582f31fb2caa968f18ee6bdeabee26712"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-summary.json",
+          "sha256": "6ab5d3b000b0790887a34ba4df946bec44115d1b2cd71cec9a875cd08026e38e"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/outbox-restart.json",
+          "sha256": "db5a88ef5f2282ce2ff5627765b9266273bf3e59b4aa66358ee079256822f467"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/post-outbox-normal.json",
+          "sha256": "6ff82df3b937957232536b2f836f4bc4bfe369df3226994d99b439929a53de26"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/mqtt.json",
+          "sha256": "564a7343e27096c1f6cbe8666b7e597e86e7909c867747011fba9b9791c91821"
+        },
+        {
+          "path": "deploy/verification/stable-backup-6d165d1.json",
+          "sha256": "0c29254c3aeb87dfd4f4d6d4177c0191f0b3e7eff1c08eb1a22948e51d6be376"
+        },
+        {
+          "path": "docs/product/REVIEW-027.md",
+          "sha256": "9237ab5f01cc06e67f808649bcc795338752a6926f2908c66aee3b13d668c0c5"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-init.json",
+          "sha256": "f61517e623fe342c779894072cb05d4aadaba15a7b6ce4fd688f0489e03a61d0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-preview.json",
+          "sha256": "f72376410d08935afa07d2250d7feba33c0a2c2b971b1a76a6a25a9761a19c73"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-mqtt.json",
+          "sha256": "09172ea950bec7054dc75a0ef667276d420b2ce4fc739ccf94be81cde2f18796"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-export/result.json",
+          "sha256": "6100c4b7fbfac92534cc73d02afebc6198fb2d755a40cf0442df25760ab1c87c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-scenarios/result.json",
+          "sha256": "bb7ceaf064e4a72572979e408af994d60352be2d52695cee85f905864fee79c0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-1.5-served-assets.json",
+          "sha256": "854e7bc394a8e6e200b481b44fe3913035b3e21a900149044b10000ffd5f9d7b"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-init.json",
+          "sha256": "f61517e623fe342c779894072cb05d4aadaba15a7b6ce4fd688f0489e03a61d0"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-preview.json",
+          "sha256": "7039060c78f3d26d5c56457b4a90b27a434822dcca7def3de4e561bfed90318c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-mqtt.json",
+          "sha256": "5c9ec9d4dea1f9aeea804dedf30b6e12f7f93c023e53b912f48800f0a5d3edbc"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-export/result.json",
+          "sha256": "db405b145d2f4e526b50164c1db2aab94fb6cf8ae09e88951edc144f1943bd6f"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-scenarios/result.json",
+          "sha256": "760efa336c1316489998bca5102032a0a21551c46d8c0b6a3910a8c9440aa024"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restore-backward-served-assets.json",
+          "sha256": "71df94b68f54d89923b76a9b932671d687d5ae49f74fc4cab535391bd602661c"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restored-command-form/result.json",
+          "sha256": "d44ae5a852d223a4269285ea0dfedece959d16f1df145afd3b5757e9a2254e3d"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/backward-command-form/result.json",
+          "sha256": "62be3e668a0dfda524bfeeec1b3328307748981f2a1a462c6d7eb01d34376f4a"
+        },
+        {
+          "path": "deploy/verification/candidate-6d165d1/restored-command-receipts-round2/result.json",
+          "sha256": "808e7091c2d96b8cbb1bd5f7e46b3617b0c06c9e06c98e6b7aee7bfe1c1641ab"
         }
       ],
-      "assessment": "REVIEW025: Local1.5 served bundle/source matched;14 receipt cases with38 observed POST attempts (including synthetic undelivered),44 form checks/5POST+actualbroker phases,4 completed browser regressions and263 unique unit tests PASS. Existing RTU settings preserved; memory history20/reload/late-response attribution verified. POST actual15045ms; GET timeout shared helper injected-unit boundary only. Exact candidate k3s/image, immutable backup and current/backward restore/stable evidence remain pending; no remote or whole-goal completion claim."
+      "assessment": "REVIEW027 independently read all19 terminal restore proofs: same719527936B/ad34 snapshot fresh1.5 and backward1.4, original5plants/1scenario beforefixtures, actualservedassets/currentreceipt14/current+backwardform44/UI/MQTT, bothrigs0/noPods and ownedtunnelclosed. Main1.5 exact6d165d1/2fd image auth/preview/export/MQTT125,error0,60samples,dedup and actualoutboxPodreplacement samebody/PUBACK verified. Local REVIEW025 scope retained; controlled response fixtures are not natural outages, GET15s uses shared-helper unit proof. Functional deployment/recovery complete; stable tag/immutablemanifest provenance and finalmedia/time/wholegoal remain separate."
     }
   ],
   "reviewedSource": {

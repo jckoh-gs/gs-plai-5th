@@ -430,7 +430,7 @@ REVIEW022 최종 통합 후속: 실제로 시간대가 다른 서버의 createdA
 
 ## ISSUE-022 — REST 명령 응답과 전송 확인의 혼동
 
-상태: REPRODUCED / FIX_PENDING (IDEA009, PRD1.12/제품1.5.0 후보). 위 command-receipt-before A/B/C는 각각 HTTP200 명령 거절의 성공알림, 명령 접수와 후속 상태조회 실패의 혼동, 응답 대기 중 다른UUID 반복제출을 보여준다. 수정 전 실제1.4 증거를 보존하며 서버 검증이나 같은ID 멱등성의 실패라고 확대하지 않는다. 실제 수정·독립 인수·원격 배포/복원 후에만 해결로 바꾼다.
+상태: RESOLVED (IDEA009, PRD1.12/제품1.5.0, REVIEW027). 위 command-receipt-before A/B/C는 각각 HTTP200 명령 거절의 성공알림, 명령 접수와 후속 상태조회 실패의 혼동, 응답 대기 중 다른UUID 반복제출을 보여준다. 수정 전 실제1.4 증거를 보존하며 서버 검증이나 같은ID 멱등성의 실패라고 확대하지 않는다. 실제 수정·독립 인수·원격 배포/복원 후에만 해결로 바꾼다.
 
 
 ### IDEA009 후보1.5 독립 실제브라우저 round1
@@ -448,3 +448,8 @@ pageErrors=[]; 고유A/B만생성했고끝에fault/on/limit/targetLimit을생성
 
 
 IDEA009 browser harness 재사용 준비: isolated-restore 명시모드는 정확한 http://127.0.0.1:3105만 허용하고 제품1.5/64자리소문자expected bundleSHA/명시적artifacts/private하위token파일을 요구한다. main3104/외부/URLuserinfo/모드불일치는파일읽기·Playwright로드·API요청전에거절한다. 복원served bundle은expectedSHA와직접비교하며현재localdist로대체하지않는다. local3109/defaulttoken/freshoutdir/기존설정불변·고유RTU정리는유지한다. import만하는preflight3tests PASS/node--check; 실제복원브라우저는아직실행하지않았다. 기존round1성공소스/증거불변.
+
+
+### ISSUE022 원격 인수 완료
+
+6d165d1/2fd3f21의 main UI·실제MQTT·outbox 재시작과 동일719527936바이트/ad34 백업의 현재1.5·하위1.4 복원19근거를 REVIEW027에서 독립 대조했다. 현재1.5 복원본에서 receipt14case와 원래 RTU 설정불변 복구를 확인하여 ISSUE022를 해결로 전환한다. 앞의 FIX_PENDING 문장은 각 시점의 이력이다. 복원 receipt 첫 실행은 EXPECTED_WEB_SHA 누락으로 파일·API 변경 전 실패했고, 원본로그를 보존한 별도round2가 통과했다. 이는 앱 결함이나 명령 중복 수신이 아니다. 최종미디어/전체시간/인도는 별도 미완료다.

@@ -1,0 +1,23 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T14:58:03.294Z",
+  "version": "1.5.0",
+  "checks": [
+    {
+      "plantId": "2e121755-461f-4f88-9bbe-e594ba2cafb0",
+      "commands": 20,
+      "matchedSavedStates": true
+    },
+    {
+      "plantId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "commands": 8,
+      "matchedSavedStates": true
+    }
+  ],
+  "downloadCount": 2,
+  "authFailureNoDownload": true,
+  "selectedRTUIsolation": true,
+  "noCredentialInFiles": true,
+  "narrowNoPageOverflow": true,
+  "pageErrors": []
+}

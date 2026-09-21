@@ -775,9 +775,9 @@ k3s 명령은 종료 코드 0이고 `gitVersion=v1.33.4+k3s1`, `platform=linux/a
 
 ## 25. 변경 관리와 후속 범위
 
-현재 기능상 안정 기준: **1.4.0 / IDEA-008 개정3**. 신규 채택 후보는 **1.5.0 / IDEA-009 / PRD1.12**이며 로컬·정확이미지·보안 검증을 통과했고 원격 배포·동일 백업 복원 인수를 기다린다. 일반 목표 입력 범위 안내와 ISSUE-021 만료일 처리를 구현하고 실제 k3s·MQTT·재시작·동일 백업의1.4 및 하위1.3 복원을 검증했다. REVIEW-021과 인수 추적이 근거다. runtime `fdd0491a5c08901962f46ac845f8582921150d45`, 이미지 `c19d550f…b4f4`를 안정 기준으로 고정한다. 태그·immutable manifest 검증은 운영 기록에서 별도로 확인한다. 이전1.3 checkpoint는 복원 이력으로 보존하며 원래 동결·마감과 최종 영상/PPT 조건은 유지한다.
+현재 기능상 안정 기준: **1.5.0 / IDEA-009 개정1 / PRD1.12**. REST 명령의 접수·거절·만료·응답 미확정과 원래 명령 ID의 저장 상태 확인을 구현했다. runtime `6d165d1e8f3214a50ee66d2b13947f64d86658f5`, 이미지 `2fd3f21c…8d5a0f`에서 실제 k3s UI·MQTT·outbox 재시작, 동일 719527936바이트/ad34 백업의 현재1.5 및 하위1.4 복원 19개 근거를 REVIEW-027과 인수 추적에서 확인했다. 태그·불변 매니페스트 검증은 운영 기록에서 별도로 확인한다. 이전1.4 체크포인트도 보존하며 원래 동결·마감과 최종 영상/PPT 조건은 유지한다.
 
-### FR-COMMAND-RECEIPT-01 REST 명령의 접수 결과와 응답 유실 안내 (IDEA-009, 제품1.5.0 후보)
+### FR-COMMAND-RECEIPT-01 REST 명령의 접수 결과와 응답 유실 안내 (IDEA-009, 제품1.5.0)
 
 Target의 set_target과 대시보드의 set_limit/start/stop 및 발전기별 start/stop을 같은 REST 명령 제출 경로로 처리한다. 제출 순간 RTU ID/이름·대상 발전기·action·commandId를 고정해 표시한다. 반환 commandId/plantId/action/source와 알려진 상태를 확인하며 accepted는 접수, executing은 전달, completed는 실제 피드백 완료로 구분한다. rejected/expired/failed/timed_out/superseded/cancelled에 접수 성공 문구나 성공 색상을 표시하지 않는다. reason은 텍스트로만 표시하고 raw HTML이나 오류 응답 본문을 삽입하지 않는다.
 

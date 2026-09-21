@@ -1,0 +1,10 @@
+{
+  "result": "FAIL",
+  "stage": "preflight",
+  "reason": "Invocation omitted required EXPECTED_WEB_SHA; assertion occurs before evidence directory creation and before any fixture API writes",
+  "log": "restored-command-receipts.log",
+  "sourceSha256": "e4fa5c0a31fcc534f9ab04d6e73d08054dd0a313d1a6c08565f08943a31c111c",
+  "evidenceDirectoryAbsent": true,
+  "nextAttempt": "restored-command-receipts-round2",
+  "sourceUnchanged": true
+}
