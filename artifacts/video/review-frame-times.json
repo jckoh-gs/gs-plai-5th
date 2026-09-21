@@ -1,0 +1,111 @@
+{
+  "videoSha256": "44e7290268c280989d70425f676d66f534ce6cc99223b7afc3372367b88b812c",
+  "frames": [
+    [
+      "review-scene-1",
+      9.67900000000003
+    ],
+    [
+      "review-scene-2",
+      42.75200000000003
+    ],
+    [
+      "review-scene-3",
+      87.80000000000004
+    ],
+    [
+      "review-scene-4",
+      141.84500000000003
+    ],
+    [
+      "review-scene-5",
+      182.88700000000003
+    ],
+    [
+      "review-scene-6",
+      216.93400000000003
+    ],
+    [
+      "review-scene-7",
+      260.98
+    ],
+    [
+      "review-scene-8",
+      276.00500000000005
+    ],
+    [
+      "review-weather-6518",
+      88.5542000331879
+    ],
+    [
+      "review-csv-500",
+      102.3577569522858
+    ]
+  ],
+  "weatherEvidence": {
+    "observedAt": "2026-09-21T21:53:55.348200+00:00",
+    "kind": "sample",
+    "ownedId": "8201415e-11b5-4223-97f4-5f470ce9db3d",
+    "runId": "65be5342-32f0-4cc9-810c-a5a7db890dca",
+    "journalSha256": "c52e5ce835c547d1ade7bb8fa8ff5b02c6a39a6c8101c853cd6a18e2199bb231",
+    "mode": "weather",
+    "weather": {
+      "wind_speed_ms": 14,
+      "wind_direction_deg": 90,
+      "irradiance_wm2": 300,
+      "temperature": 22
+    },
+    "weatherSource": "manual",
+    "powerKw": 651.8,
+    "availableKw": 651.8,
+    "generators": [
+      {
+        "position": 1,
+        "powerKw": 500,
+        "availableKw": 500
+      },
+      {
+        "position": 2,
+        "powerKw": 151.79999999999998,
+        "availableKw": 151.79999999999998
+      }
+    ],
+    "latestHistory": {
+      "powerKw": 651.8,
+      "availableKw": 651.8
+    }
+  },
+  "csvReturnEvidence": {
+    "observedAt": "2026-09-21T21:54:09.151757+00:00",
+    "kind": "sample",
+    "ownedId": "8201415e-11b5-4223-97f4-5f470ce9db3d",
+    "runId": "65be5342-32f0-4cc9-810c-a5a7db890dca",
+    "journalSha256": "c52e5ce835c547d1ade7bb8fa8ff5b02c6a39a6c8101c853cd6a18e2199bb231",
+    "mode": "csv",
+    "weather": {
+      "wind_speed_ms": 8,
+      "wind_direction_deg": 240,
+      "irradiance_wm2": 650,
+      "temperature": 22
+    },
+    "weatherSource": "manual",
+    "powerKw": 500,
+    "availableKw": 500,
+    "generators": [
+      {
+        "position": 1,
+        "powerKw": 250,
+        "availableKw": 250
+      },
+      {
+        "position": 2,
+        "powerKw": 250,
+        "availableKw": 250
+      }
+    ],
+    "latestHistory": {
+      "powerKw": 500,
+      "availableKw": 500
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "runId": "grid-new-20260921T080733Z",
+  "checkedAt": "2026-09-21T22:01:10.560Z",
+  "nextAction": "freeze-verify-stable-and-produce-media",
+  "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "head": "44899b9b40a82d6b08d0ac16efeb01c0d2c9ba34",
+  "workingTree": [
+    "M docs/issues/ISSUES.md",
+    " M docs/operations/NETWORK-RECOVERY.md",
+    " M docs/operations/NEXT-ACTIONS.md",
+    " M docs/operations/final-closeout.json",
+    " M docs/operations/resume.json",
+    " M docs/operations/run.json",
+    " M docs/product/acceptance.json",
+    "?? .idea/",
+    "?? artifacts/checkpoints/final-audio-asr/",
+    "?? artifacts/checkpoints/network-resume-final/",
+    "?? artifacts/delivery/",
+    "?? artifacts/media-preparation/candidate17-layout/",
+    "?? artifacts/media-preparation/deck-binding-packaging-rehearsal/",
+    "?? artifacts/media-preparation/deck-candidate17-rehearsal/",
+    "?? artifacts/media-preparation/final-deck-input.json",
+    "?? artifacts/media-preparation/final-deck.json",
+    "?? artifacts/media-preparation/final-facts.json",
+    "?? artifacts/media-preparation/final-input.json",
+    "?? artifacts/media-preparation/final-scenes.json",
+    "?? artifacts/media-preparation/full-candidate15-20260921/",
+    "?? artifacts/media-preparation/full-candidate15-receipts-20260921/",
+    "?? artifacts/media-preparation/full-candidate17-20260921/",
+    "?? artifacts/media-preparation/media-lifecycle-local-round1-retry1/",
+    "?? artifacts/media-preparation/media-lifecycle-local-round1/",
+    "?? artifacts/media-preparation/weather-r2-focused/",
+    "?? artifacts/media-preparation/weather-r2-round2/",
+    "?? artifacts/presentation/",
+    "?? artifacts/releases/current.json",
+    "?? artifacts/video/",
+    "?? deploy/verification/candidate-1197ab5/",
+    "?? deploy/verification/candidate-8599ab9/operational-baseline.json",
+    "?? docs/issues/evidence/issue034-final-restore-review.json",
+    "?? docs/issues/evidence/issue034-supervisor-followup.json",
+    "?? docs/issues/evidence/issue034-supervisor-window.jsonl",
+    "?? docs/product/FINAL-REQUIREMENT-REVIEW.json",
+    "?? docs/product/FINAL-REQUIREMENT-REVIEW.md",
+    "?? docs/product/final-role-closeout.json",
+    "?? docs/security/final-role-closeout.json",
+    "?? docs/security/final-role-closeout.md"
+  ],
+  "remoteMain": "44899b9b40a82d6b08d0ac16efeb01c0d2c9ba34",
+  "remoteGitReachable": true,
+  "clusterReachable": true,
+  "api": {
+    "ok": true,
+    "version": "1.7.1",
+    "plantCount": 6
+  },
+  "identity": {
+    "ok": true,
+    "pod": {
+      "name": "grid-69d8766f7-zmfq8",
+      "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+      "image": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+      "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876"
+    },
+    "broker": {
+      "name": "grid-69d8766f7-zmfq8",
+      "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+      "image": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  },
+  "observationLedger": {
+    "ok": true,
+    "issues": [],
+    "scope": "Metadata consistency only; verify actual PID/start identity and observation files before acting"
+  },
+  "workingMilestone": {
+    "productVersion": "1.7.1",
+    "prdVersion": "1.15",
+    "idea": "IDEA-012",
+    "state": "Completefunctional1.7.1checkpoint+tags. Maintaincurrentobservers and originalfinalwindow; overallgoalpending"
+  },
+  "remainingInOrder": [
+    "Finish and review actual same-video14slide PPT",
+    "Verify final artifact inventory and all requirement evidence",
+    "Commit and push public evidence; retain private backups/credentials",
+    "Stop only this run owned supervisor/power guard and disable grid heartbeat by original deadline",
+    "Record truthful completion/incompletion without extending22:07:33Z"
+  ],
+  "mutationsPerformed": false
+}

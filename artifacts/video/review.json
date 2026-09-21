@@ -1,0 +1,21 @@
+{
+  "reviewedAt": "2026-09-21T21:59:33.720440+00:00",
+  "videoSha256": "44e7290268c280989d70425f676d66f534ce6cc99223b7afc3372367b88b812c",
+  "reviewers": [
+    "root",
+    "media"
+  ],
+  "encodedScenesReviewed": 8,
+  "weatherFrameLimitation": "review-weather-6518 captures transition to CSV; source/weather-model-output.png and encoded scene3 show weather model output.",
+  "claims": [
+    "actual MQTT125 actual125 error0 accepted/executing/completed",
+    "owned settings/weather restored; existing5 unchanged",
+    "stop superseded, not completed",
+    "restart retransmission separate evidence"
+  ],
+  "visualReview": "passed",
+  "claimsReview": "passed",
+  "directListening": false,
+  "ASR": "Local ko no-prompt transcription; not listening or pronunciation certification",
+  "asrReceiptSha256": "9101bacd2492a6474549ac8c2509bc01ec665dcec2d213cb9395d79b5f2cfc4f"
+}

@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-09-21T22:03:17.145802+00:00",
+  "ownedPidsAbsent": true,
+  "portsClosed": {
+    "3104": true,
+    "18884": true,
+    "3105": true,
+    "18885": true
+  },
+  "automationId": "grid",
+  "automationStatus": "PAUSED",
+  "supervisorOriginalHandle": 48590,
+  "supervisorExitCode": 0,
+  "powerOriginalHandle": 11821,
+  "powerExitCode": 143,
+  "powerTermination": "Intentional SIGTERM to owned temporarycaffeinate",
+  "remoteDeploymentAndPVCsPreserved": true,
+  "unrelatedProcessesUntouched": true,
+  "result": "PASS"
+}

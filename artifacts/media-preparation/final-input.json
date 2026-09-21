@@ -1,0 +1,15 @@
+{
+  "baseUrl": "http://127.0.0.1:3104",
+  "tokenFile": "artifacts/private/deploy/api-token",
+  "releaseManifest": "artifacts/releases/final-20260921.json",
+  "approvedReleaseCommit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
+  "approvedImageDigest": "sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "csvFile": "artifacts/media-preparation/demo-synthetic-weather-control.csv",
+  "mqtt": {
+    "url": "mqtt://127.0.0.1:18884",
+    "prefix": "vpp",
+    "username": "vpp-client",
+    "passwordFile": "artifacts/private/deploy/client-password"
+  },
+  "outputDir": "artifacts/video"
+}

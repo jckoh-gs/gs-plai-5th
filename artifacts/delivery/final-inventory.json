@@ -1,0 +1,1884 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-21T22:00:51.197Z",
+  "result": "ARTIFACT_CHECKS_PASSED",
+  "completionClaim": false,
+  "claimBoundary": "Checks recorded evidence, file identity and packaging only. Functional acceptance, actual decoding, each-slide visual/claims review, live deployment and final operation gates must be assessed separately.",
+  "runId": "grid-new-20260921T080733Z",
+  "productVersion": "1.7.1",
+  "releaseCommit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
+  "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "manifestSha256": "10e4e035587166263dfba9d91e2350b84b43c44d15222d561dba84852e51f024",
+  "backup": {
+    "path": "artifacts/private/backups/stable-40b9ed8-20260921T180009013Z.sqlite",
+    "sha256": "5ff34f3e5dbc52f07b899f0c8013db130e5fd13c3d315e92aa512d474ea1f782",
+    "excludedFromPublicFiles": true
+  },
+  "checks": [
+    {
+      "name": "Nonempty file: artifacts/releases/final-20260921.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/operations/run.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: README.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/GOAL-VPP-AUTONOMOUS.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/PRD-VPP-SCADA-RTU.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/product/PRD-CHANGELOG.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/product/IDEAS.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/product/acceptance.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/protocol.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: scripts/vpp-client.js",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: scripts/client-message.js",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: deploy/README.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: deploy/app.yaml",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/security/VULNERABILITY-MANAGEMENT.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/issues/ISSUES.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: docs/operations/DELIVERY-PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "Manifest belongs to current run",
+      "passed": true
+    },
+    {
+      "name": "Manifest matches recorded runtime",
+      "passed": true
+    },
+    {
+      "name": "Private backup hash matches manifest",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/verification.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/verification.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/GRID-VPP-demo-ko.mp4",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/GRID-VPP-demo-ko.srt",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/narration-ko.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/scenes.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/demo-recovery.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/vpp-command-4.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/recording-config.original.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/reproduction.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/release-binding-proof.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/GRID-VPP-presentation-ko.pptx",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/speaker-notes.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/validation.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/reproduction-manifest.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/config.original.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/config.portable.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/build-deck.mjs",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/media-deadline.cjs",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/REGENERATE.md",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/facts.original.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/deck-binding-input.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/prepare-final-deck.cjs",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/final-deck-binding.cjs",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/release-features.cjs",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/validate-command-download.cjs",
+      "passed": true
+    },
+    {
+      "name": "Release has a valid immutable image digest",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/release-manifest.json",
+      "passed": true
+    },
+    {
+      "name": "Video source manifest is the selected release",
+      "passed": true
+    },
+    {
+      "name": "Video is final and reviewed",
+      "passed": true
+    },
+    {
+      "name": "Video uses same release and image",
+      "passed": true
+    },
+    {
+      "name": "Actual MP4 matches reviewed hash",
+      "passed": true
+    },
+    {
+      "name": "Video was completed during final window",
+      "passed": true
+    },
+    {
+      "name": "Video declares required format and audible track",
+      "passed": true
+    },
+    {
+      "name": "Video preserves the same demo recovery receipt",
+      "passed": true
+    },
+    {
+      "name": "Demo settings and preexisting RTUs were verified after recording",
+      "passed": true
+    },
+    {
+      "name": "Demo registration and scenario transition match recorded command RTU",
+      "passed": true
+    },
+    {
+      "name": "Recording timeline belongs to final window",
+      "passed": true
+    },
+    {
+      "name": "Representative frames recorded",
+      "passed": true
+    },
+    {
+      "name": "Frame stays in video package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/frame-1.png",
+      "passed": true
+    },
+    {
+      "name": "Frame stays in video package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/frame-2.png",
+      "passed": true
+    },
+    {
+      "name": "Frame stays in video package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/frame-3.png",
+      "passed": true
+    },
+    {
+      "name": "Frame stays in video package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/frame-4.png",
+      "passed": true
+    },
+    {
+      "name": "Frame stays in video package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/frame-5.png",
+      "passed": true
+    },
+    {
+      "name": "Frame stays in video package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/frame-6.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/release-manifest.json",
+      "passed": true
+    },
+    {
+      "name": "Deck source manifest is the selected release",
+      "passed": true
+    },
+    {
+      "name": "Deck is final, editable, fully rendered and reviewed",
+      "passed": true
+    },
+    {
+      "name": "Deck uses same release",
+      "passed": true
+    },
+    {
+      "name": "Deck follows video within final window",
+      "passed": true
+    },
+    {
+      "name": "Deck has 12 to 15 slides",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/slide-01.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/slide-02.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/slide-03.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/slide-04.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/slide-05.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/slide-06.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/slide-07.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/slide-08.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/slide-09.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/slide-10.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/slide-11.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/slide-12.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/slide-13.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/slide-14.png",
+      "passed": true
+    },
+    {
+      "name": "Actual PPTX matches validated package",
+      "passed": true
+    },
+    {
+      "name": "PPT package, layout, font and reimport checks passed",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/video-verification.json",
+      "passed": true
+    },
+    {
+      "name": "Deck was made from this exact reviewed video",
+      "passed": true
+    },
+    {
+      "name": "Portable notes video link targets actual MP4",
+      "passed": true
+    },
+    {
+      "name": "Reviewed deck facts and binder inputs are preserved",
+      "passed": true
+    },
+    {
+      "name": "Deck binding identifies the exact delivered evidence",
+      "passed": true
+    },
+    {
+      "name": "Reviewed facts match release and observed scenario recovery",
+      "passed": true
+    },
+    {
+      "name": "Reproduction inventory is nonempty: reproduction-manifest.json",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/config.original.json",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/config.portable.json",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/build-deck.mjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/media-deadline.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/release-manifest.json",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/docs/operations/run.json",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: docs/operations/run.json",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: validation.json",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/facts.original.json",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/deck-binding-input.json",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/prepare-final-deck.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/final-deck-binding.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/release-features.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/validate-command-download.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/assets/slide-01.png",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/assets/slide-01.png",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/assets/slide-05.png",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/assets/slide-05.png",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/assets/slide-06.png",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/assets/slide-06.png",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/assets/slide-07.png",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/assets/slide-07.png",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/assets/slide-08.png",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/assets/slide-08.png",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/assets/slide-09.png",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/assets/slide-09.png",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/presentation/source/assets/slide-10.png",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/assets/slide-10.png",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/video-verification.json",
+      "passed": true
+    },
+    {
+      "name": "Exact deck configuration hash",
+      "passed": true
+    },
+    {
+      "name": "All required deck regeneration sources are inventoried",
+      "passed": true
+    },
+    {
+      "name": "Reproduction inventory is nonempty: source/reproduction.json",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/code/scripts/media/demo-lifecycle.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/code/scripts/media/demo-lifecycle.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/code/scripts/media/recover-demo.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/code/scripts/media/recover-demo.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/code/scripts/media/observe-demo-state.py",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/code/scripts/media/observe-demo-state.py",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/code/scripts/media/media-deadline.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/code/scripts/media/media-deadline.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/code/scripts/media/record-demo.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/code/scripts/media/record-demo.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/code/scripts/media/recording-sources.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/code/scripts/media/recording-sources.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/code/scripts/media/release-binding.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/code/scripts/media/release-binding.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/code/scripts/media/release-features.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/code/scripts/media/release-features.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/code/scripts/media/validate-command-download.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/code/scripts/media/validate-command-download.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/code/scripts/media/scene-plan.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/code/scripts/media/scene-plan.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/code/scripts/media/prepare-final-scenes.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/code/scripts/media/prepare-final-scenes.cjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/code/scripts/verify-release.mjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/code/scripts/verify-release.mjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/code/scripts/pod-identity.mjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/code/scripts/pod-identity.mjs",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/code/scripts/vpp-client.js",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/code/scripts/vpp-client.js",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/code/scripts/client-message.js",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/code/scripts/client-message.js",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/code/package.json",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/code/package.json",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/code/package-lock.json",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/code/package-lock.json",
+      "passed": true
+    },
+    {
+      "name": "Reproduction asset stays in package",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/input-1-demo-synthetic-weather-control.csv",
+      "passed": true
+    },
+    {
+      "name": "Reproduction hash: source/input-1-demo-synthetic-weather-control.csv",
+      "passed": true
+    },
+    {
+      "name": "Exact recording configuration hash",
+      "passed": true
+    },
+    {
+      "name": "All required recorder sources are inventoried",
+      "passed": true
+    },
+    {
+      "name": "All used recording input assets are inventoried",
+      "passed": true
+    },
+    {
+      "name": "Recorder observed verified remote image identity",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/command-export.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/csv-preview.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/csv-registration.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/encoded.mp4",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/hybrid-camera.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/page@ab5badbca07c4c57934a004f8fcabd65.webm",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/recent-command-states.json",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/rest-receipt-stored-status.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/scene-1.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/scene-2.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/scene-3.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/scene-4.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/scene-5.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/scene-6.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/scene-7.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/scene-8.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-0-0.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-0-1.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-0-2.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-0.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-1-0.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-1-1.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-1-2.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-1-3.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-1.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-2-0.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-2-1.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-2-2.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-2-3.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-2-4.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-2-5.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-2-6.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-2.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-3-0.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-3-1.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-3-2.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-3.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-4-0.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-4-1.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-4-2.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-4-3.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-4-4.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-4-5.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-4-6.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-4.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-5-0.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-5-1.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-5-2.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-5.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-6-0.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-6-1.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-6-2.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-6-3.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-6.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-7-0.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-7-1.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-7-2.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/voice-7.aiff",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/vpp-command-4.log",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/weather-before.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/weather-csv-restored.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/weather-model-output.png",
+      "passed": true
+    },
+    {
+      "name": "Nonempty file: artifacts/video/source/weather-observations.jsonl",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "files": [
+    {
+      "path": "artifacts/releases/final-20260921.json",
+      "bytes": 615352,
+      "sha256": "10e4e035587166263dfba9d91e2350b84b43c44d15222d561dba84852e51f024"
+    },
+    {
+      "path": "docs/operations/run.json",
+      "bytes": 68284,
+      "sha256": "598cfbbc8e35972d8d8f975ef8900384ff4df27f8187c1fae6406d9d628b553c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8192,
+      "sha256": "3845a70ac99206c2a5363286bb06a1238e2392de5a9b15e1620254468e68d67a"
+    },
+    {
+      "path": "docs/GOAL-VPP-AUTONOMOUS.md",
+      "bytes": 33930,
+      "sha256": "f391e5fab594f02cb4953c52055cf4b01f3817343144a9d89df8b64fe8fd11f2"
+    },
+    {
+      "path": "docs/PRD-VPP-SCADA-RTU.md",
+      "bytes": 146854,
+      "sha256": "b1a9f317d66ce88262822a88063a82f9d5f2a0d4d13a006bed3659237d4a2bed"
+    },
+    {
+      "path": "docs/product/PRD-CHANGELOG.md",
+      "bytes": 7764,
+      "sha256": "b10c340e81f65ae1b3267898c1d05828ea25bd53ad5fb73a844a044e52ee714f"
+    },
+    {
+      "path": "docs/product/IDEAS.md",
+      "bytes": 24484,
+      "sha256": "4447992648aeee8f36ce721b526c4b6e2be26e46836590a5426902b1492a969e"
+    },
+    {
+      "path": "docs/product/acceptance.json",
+      "bytes": 455029,
+      "sha256": "b8155c5d0e3bf98987f8d88cb0ce041afc85e5ba13da2cabc100e0c6cbb9bef5"
+    },
+    {
+      "path": "docs/protocol.md",
+      "bytes": 22437,
+      "sha256": "07295bdbc14613aa87a3890ee32439e715009ca2310859ad2dc18259d4734709"
+    },
+    {
+      "path": "scripts/vpp-client.js",
+      "bytes": 5596,
+      "sha256": "762cb18072e5db77b48199681a266b520ee08b12986efd8795356e4b877911cd"
+    },
+    {
+      "path": "scripts/client-message.js",
+      "bytes": 2215,
+      "sha256": "ecb5f3b3fcdf74fa5a3d352da33856b47116eb27b4eb91b039fa58b39e12b53f"
+    },
+    {
+      "path": "deploy/README.md",
+      "bytes": 12037,
+      "sha256": "6aab2033ed0950a96df37ee25c6f865f09242bf3fbc0fd31f5bfdc7186cee067"
+    },
+    {
+      "path": "deploy/app.yaml",
+      "bytes": 4267,
+      "sha256": "3ad2cd97ea546635e484520e9967889fda71994f3a598f277648301bb0b0bc39"
+    },
+    {
+      "path": "docs/security/VULNERABILITY-MANAGEMENT.md",
+      "bytes": 58784,
+      "sha256": "9f8393a0a43f59f0786312b9ad0452244935a7a8d34c32cf89a8dd83cdc80fe7"
+    },
+    {
+      "path": "docs/issues/ISSUES.md",
+      "bytes": 145526,
+      "sha256": "5c36c07bb7e1b2e3369c5027076e945a19b94131839021b8120da29f755e2c5f"
+    },
+    {
+      "path": "docs/operations/DELIVERY-PLAN.md",
+      "bytes": 15992,
+      "sha256": "64542a18cd9843abe5b9a12a045a8b18158256126d281672eb70cb18a90a3400"
+    },
+    {
+      "path": "artifacts/video/verification.json",
+      "bytes": 4446,
+      "sha256": "14f5719b32349e08fc957704eeced52de8db5dfafcb0e4ce477942a85ae4c5f5"
+    },
+    {
+      "path": "artifacts/presentation/verification.json",
+      "bytes": 547,
+      "sha256": "f2b7bde984ce9bb431f680d2fbc82b75ca64f69ce2a32e7e119b89189ef13447"
+    },
+    {
+      "path": "artifacts/video/GRID-VPP-demo-ko.mp4",
+      "bytes": 14520082,
+      "sha256": "44e7290268c280989d70425f676d66f534ce6cc99223b7afc3372367b88b812c"
+    },
+    {
+      "path": "artifacts/video/GRID-VPP-demo-ko.srt",
+      "bytes": 4121,
+      "sha256": "b04f906334bb94c3bb9d16ff1a996e5d3e4562fca9fe49c747e2f106f69044b1"
+    },
+    {
+      "path": "artifacts/video/narration-ko.md",
+      "bytes": 3287,
+      "sha256": "2d4f93e77f17a1ef872340c132b7e33b3739833bce8c0349c3cc852c25cb523f"
+    },
+    {
+      "path": "artifacts/video/scenes.json",
+      "bytes": 28851,
+      "sha256": "6a2be10a0def4ebb118d55d5b6a32e5e2085afdb4b8d24615f77ff8f89afab91"
+    },
+    {
+      "path": "artifacts/video/source/demo-recovery.json",
+      "bytes": 2767,
+      "sha256": "db5938a44e27bfa47404f79c930141c7c487c2906f1a9233283c1df46bff7401"
+    },
+    {
+      "path": "artifacts/video/source/vpp-command-4.json",
+      "bytes": 1213,
+      "sha256": "febf598f72c80e535a117eab07bcb52b2e0550d938928d62cc652b84baa8ef7d"
+    },
+    {
+      "path": "artifacts/video/source/recording-config.original.json",
+      "bytes": 17476,
+      "sha256": "b1f9ae6c7089d3e0ca9ec669f4318b3973b65edc38ff0d6a082db4c40460845f"
+    },
+    {
+      "path": "artifacts/video/source/reproduction.json",
+      "bytes": 4239,
+      "sha256": "03b9bf534826e7937f5445bafe468b97f48e0406aa4a4690402d4688f70d8430"
+    },
+    {
+      "path": "artifacts/video/source/release-binding-proof.json",
+      "bytes": 258,
+      "sha256": "a6a5117210d42b87f378c401caae7b38143519c3afc9c48f04cef5d796c4c091"
+    },
+    {
+      "path": "artifacts/presentation/GRID-VPP-presentation-ko.pptx",
+      "bytes": 1154467,
+      "sha256": "c1d0e285a6b67c204bc506d81e98b9b4072e0a6a325777f996bb263de0eba538"
+    },
+    {
+      "path": "artifacts/presentation/speaker-notes.md",
+      "bytes": 15944,
+      "sha256": "fd11019736b5b07ae1691a8fae8e851d35210f6dd3a9fcca200d9dfc49bf3e40"
+    },
+    {
+      "path": "artifacts/presentation/validation.json",
+      "bytes": 3757,
+      "sha256": "dee716e8cdad5cff9575777b5804c4072f84575f0d3192a5df289ad4ac1be12f"
+    },
+    {
+      "path": "artifacts/presentation/reproduction-manifest.json",
+      "bytes": 3542,
+      "sha256": "1676d29fd866fa3ab9affd609cb2ecdab4adc936437e84caccf4bc47a847e03e"
+    },
+    {
+      "path": "artifacts/presentation/source/config.original.json",
+      "bytes": 21294,
+      "sha256": "4e7dbeffa43f86864b463b7a8150a3d398e189bd032d874b4536fd035388a242"
+    },
+    {
+      "path": "artifacts/presentation/source/config.portable.json",
+      "bytes": 21180,
+      "sha256": "369d71351959c5f76ad6246b100eba182f6cca192aaca91307df7c82410daedc"
+    },
+    {
+      "path": "artifacts/presentation/source/build-deck.mjs",
+      "bytes": 14224,
+      "sha256": "529899c6ba2eab70e9dac58549bad6a26ac36d8629c330ba1aa75e4bfffba9d3"
+    },
+    {
+      "path": "artifacts/presentation/source/media-deadline.cjs",
+      "bytes": 4313,
+      "sha256": "fdac80297e5938d921e7090c82e7934c5afececc5bce6cc2e70bfe7dae808721"
+    },
+    {
+      "path": "artifacts/presentation/source/REGENERATE.md",
+      "bytes": 1090,
+      "sha256": "4166bc85db8b90666d6b8c64307925b1afb3b17f4bf50911df0f6a5e59d878e5"
+    },
+    {
+      "path": "artifacts/presentation/source/facts.original.json",
+      "bytes": 16710,
+      "sha256": "20ec694a4ba759999f4a70f963ee4f7f4e35643144c31c7c1ab01a81b360cec6"
+    },
+    {
+      "path": "artifacts/presentation/source/deck-binding-input.json",
+      "bytes": 274,
+      "sha256": "8abc85a89ad6d5b278efeae080c752760406cffc39bcdf1ca05cd56eb76e757f"
+    },
+    {
+      "path": "artifacts/presentation/source/prepare-final-deck.cjs",
+      "bytes": 756,
+      "sha256": "993b41ee7eae315e7554822a348e5ef5dc5e77ddc87388e221fb3700eb253b7b"
+    },
+    {
+      "path": "artifacts/presentation/source/final-deck-binding.cjs",
+      "bytes": 12395,
+      "sha256": "b105931fcfde888e607e867845ea0b32c1dee26869e759584f4e1dbeb6225371"
+    },
+    {
+      "path": "artifacts/presentation/source/release-features.cjs",
+      "bytes": 510,
+      "sha256": "52c5bd8f280f4344ec12da7347eee2265d12db1b673b19a807ec46df9266eb58"
+    },
+    {
+      "path": "artifacts/presentation/source/validate-command-download.cjs",
+      "bytes": 1711,
+      "sha256": "baa22eb3c4528805818928a386b37e34a83e153ee8258c3fe7af356933011c11"
+    },
+    {
+      "path": "artifacts/video/source/release-manifest.json",
+      "bytes": 615352,
+      "sha256": "10e4e035587166263dfba9d91e2350b84b43c44d15222d561dba84852e51f024"
+    },
+    {
+      "path": "artifacts/video/frame-1.png",
+      "bytes": 398720,
+      "sha256": "ee063bd3c54d75846da7ff6c164355be2e1c4f1611c70c67291cb767eefd6e90"
+    },
+    {
+      "path": "artifacts/video/frame-2.png",
+      "bytes": 332902,
+      "sha256": "6fb9dbab32858da3e0bb1b80c57fa95f3a284b224e402691263829be5d21e1f5"
+    },
+    {
+      "path": "artifacts/video/frame-3.png",
+      "bytes": 372413,
+      "sha256": "1662ac4e80ef8b79c5fb7a216125ba5d599333ffc6ccd422ebd9abd8e384eadb"
+    },
+    {
+      "path": "artifacts/video/frame-4.png",
+      "bytes": 400770,
+      "sha256": "95035b22fa2eb65183dfba3dd3abff437769f4bf6ce97fd502a6cbc72137abaf"
+    },
+    {
+      "path": "artifacts/video/frame-5.png",
+      "bytes": 402491,
+      "sha256": "d8b42c7a0f71b8ff563c06047b3efd35bc0654af21c63fc2fe0ef8db25b4727e"
+    },
+    {
+      "path": "artifacts/video/frame-6.png",
+      "bytes": 325843,
+      "sha256": "45391d8e21433e2addb7b92e15dc4b6466ad0cb5735623b51d6b63bbe89a6ee0"
+    },
+    {
+      "path": "artifacts/presentation/source/release-manifest.json",
+      "bytes": 615352,
+      "sha256": "10e4e035587166263dfba9d91e2350b84b43c44d15222d561dba84852e51f024"
+    },
+    {
+      "path": "artifacts/presentation/slide-01.png",
+      "bytes": 107782,
+      "sha256": "6d0f20746d1a859ab2dd56ef579711c7bf531eb551587d785e979844a77fb760"
+    },
+    {
+      "path": "artifacts/presentation/slide-02.png",
+      "bytes": 29479,
+      "sha256": "883000414d63064238a1aa007e505f6272bc0c7452c704c966aa421a5fad481e"
+    },
+    {
+      "path": "artifacts/presentation/slide-03.png",
+      "bytes": 26826,
+      "sha256": "3d764326537c48833bdad2f0bf055927ee3de96f3375049f8cc1593bcd5114f6"
+    },
+    {
+      "path": "artifacts/presentation/slide-04.png",
+      "bytes": 54564,
+      "sha256": "2e7a97226eb38f9090876df74336ad15b2f7a705947ff2c99b773c0a4d486cea"
+    },
+    {
+      "path": "artifacts/presentation/slide-05.png",
+      "bytes": 103742,
+      "sha256": "2de4269a85d92894517b32366c370e992e5b416d1fe441bacb91e95e457361d5"
+    },
+    {
+      "path": "artifacts/presentation/slide-06.png",
+      "bytes": 74188,
+      "sha256": "a858af6318e7ae7afb0e19d9c06654a72aa3159011813064dc2d7939e4bc040f"
+    },
+    {
+      "path": "artifacts/presentation/slide-07.png",
+      "bytes": 97114,
+      "sha256": "d4fd21f10763a7888df25c5891ff2ff0b30a1411d7b0bdd5525e1fec9f6e14b9"
+    },
+    {
+      "path": "artifacts/presentation/slide-08.png",
+      "bytes": 69380,
+      "sha256": "9372bb0b113bf72331085208f82db12c44d5bc2d89126401f36842f30d4788b3"
+    },
+    {
+      "path": "artifacts/presentation/slide-09.png",
+      "bytes": 67689,
+      "sha256": "e689817f7aa1c6e841ef54e326b96d1062eba4513b32f3a6b975f57100ef6c4a"
+    },
+    {
+      "path": "artifacts/presentation/slide-10.png",
+      "bytes": 66639,
+      "sha256": "f8a266889480dc4cc068ef0667b9285c5ca7e57d3e58166fe09d5ecc570a1cfb"
+    },
+    {
+      "path": "artifacts/presentation/slide-11.png",
+      "bytes": 26943,
+      "sha256": "dc394a458fe75b5d15f0208649d2104da379ddcfc265cde36af98825aa55688b"
+    },
+    {
+      "path": "artifacts/presentation/slide-12.png",
+      "bytes": 23306,
+      "sha256": "1748daed0ad2686e3e60956a6f26317bb121df7e90e6dbfcf9675c5a42ae3be0"
+    },
+    {
+      "path": "artifacts/presentation/slide-13.png",
+      "bytes": 26927,
+      "sha256": "09b4efeb4bcc872449916098be4e464cb3adbc3fb248c8bf9e18128e23aec19c"
+    },
+    {
+      "path": "artifacts/presentation/slide-14.png",
+      "bytes": 42099,
+      "sha256": "12a411dea244e170f30aaf1726f18e34f5fa19e9f1b0b9524f9139e792a5713b"
+    },
+    {
+      "path": "artifacts/presentation/source/video-verification.json",
+      "bytes": 4446,
+      "sha256": "14f5719b32349e08fc957704eeced52de8db5dfafcb0e4ce477942a85ae4c5f5"
+    },
+    {
+      "path": "artifacts/presentation/docs/operations/run.json",
+      "bytes": 68118,
+      "sha256": "7e6fb41824f06ad27fcc0e544d8ec7ade0b82b6c3d3cd70c7a6223f4ca788a22"
+    },
+    {
+      "path": "artifacts/presentation/source/assets/slide-01.png",
+      "bytes": 262585,
+      "sha256": "83bb6d765c0590a21dbe034ff75eee8ed376c2af66762851454f34beade0c6d2"
+    },
+    {
+      "path": "artifacts/presentation/source/assets/slide-05.png",
+      "bytes": 187896,
+      "sha256": "d22acbe29d927bb87db8a786bc0e3b65d4d1f5362ee9754771089fa983995239"
+    },
+    {
+      "path": "artifacts/presentation/source/assets/slide-06.png",
+      "bytes": 146059,
+      "sha256": "8112585fd0e5826d0641d55e4433502f5454986902d1833465b48919adc993ce"
+    },
+    {
+      "path": "artifacts/presentation/source/assets/slide-07.png",
+      "bytes": 188438,
+      "sha256": "bb36ebfca26e239f3ecaa245c68883180280391a88435d8d5df66f45f6337961"
+    },
+    {
+      "path": "artifacts/presentation/source/assets/slide-08.png",
+      "bytes": 128005,
+      "sha256": "5d952b0f50d2a1ca41bd4979844d26c75ba99e734f1c09fd6caae78b38d2ed7e"
+    },
+    {
+      "path": "artifacts/presentation/source/assets/slide-09.png",
+      "bytes": 113766,
+      "sha256": "a3f4947bdfdcee5c3c1e45ffc9178c56f9caa249ac09a8abf0c6a60bb2e04717"
+    },
+    {
+      "path": "artifacts/presentation/source/assets/slide-10.png",
+      "bytes": 120983,
+      "sha256": "722f6d94cd2e346f24235e7f616c6dad1a03c15c5e8b8b6e8bbd2b342d285c4c"
+    },
+    {
+      "path": "artifacts/video/source/code/scripts/media/demo-lifecycle.cjs",
+      "bytes": 12691,
+      "sha256": "7674e060ea3cc85805100060810904ac6b29de1d99b8936e7dd6c9103a1a625c"
+    },
+    {
+      "path": "artifacts/video/source/code/scripts/media/recover-demo.cjs",
+      "bytes": 1435,
+      "sha256": "803558acb145447b45c1ff9e4c98178c130a4120d9d398fda16e6568c0c02762"
+    },
+    {
+      "path": "artifacts/video/source/code/scripts/media/observe-demo-state.py",
+      "bytes": 11643,
+      "sha256": "7f9e3656821859d77a2c9cb42c1f3f428221119a28d39c56509b1638fd6b78cc"
+    },
+    {
+      "path": "artifacts/video/source/code/scripts/media/media-deadline.cjs",
+      "bytes": 4313,
+      "sha256": "fdac80297e5938d921e7090c82e7934c5afececc5bce6cc2e70bfe7dae808721"
+    },
+    {
+      "path": "artifacts/video/source/code/scripts/media/record-demo.cjs",
+      "bytes": 20186,
+      "sha256": "dc01e9f9a4337b3de81842e2fd322a5c5bcf11fc834a44002874c1cb9d9794b0"
+    },
+    {
+      "path": "artifacts/video/source/code/scripts/media/recording-sources.cjs",
+      "bytes": 4149,
+      "sha256": "bec110421857da912e768a4835dd254fcb383e480ca7d04660da643db55d0be0"
+    },
+    {
+      "path": "artifacts/video/source/code/scripts/media/release-binding.cjs",
+      "bytes": 1947,
+      "sha256": "46fd7620f0bbc0890bd40b98b68093ccdedb0c24c77e9f2be3bb75402cf8f656"
+    },
+    {
+      "path": "artifacts/video/source/code/scripts/media/release-features.cjs",
+      "bytes": 510,
+      "sha256": "52c5bd8f280f4344ec12da7347eee2265d12db1b673b19a807ec46df9266eb58"
+    },
+    {
+      "path": "artifacts/video/source/code/scripts/media/validate-command-download.cjs",
+      "bytes": 1711,
+      "sha256": "baa22eb3c4528805818928a386b37e34a83e153ee8258c3fe7af356933011c11"
+    },
+    {
+      "path": "artifacts/video/source/code/scripts/media/scene-plan.cjs",
+      "bytes": 8522,
+      "sha256": "d69f58893e36ed3c2bae1402a1b919ef983afa62cecc62d2a6e414465b46eb7e"
+    },
+    {
+      "path": "artifacts/video/source/code/scripts/media/prepare-final-scenes.cjs",
+      "bytes": 3048,
+      "sha256": "e89c70ed3fa96d8eb9c330d72b862185952905b5b436d6c421fa5074ba9ea0ae"
+    },
+    {
+      "path": "artifacts/video/source/code/scripts/verify-release.mjs",
+      "bytes": 3515,
+      "sha256": "a8e0cd4ac4db8989e544236602d0be7fa8fd0c2e6524ef905eab6840cff195f5"
+    },
+    {
+      "path": "artifacts/video/source/code/scripts/pod-identity.mjs",
+      "bytes": 924,
+      "sha256": "2e985af6a16219e34d39c11dd6c78eed6e62cdd161c1b13515e6252176b2a3e8"
+    },
+    {
+      "path": "artifacts/video/source/code/scripts/vpp-client.js",
+      "bytes": 5596,
+      "sha256": "762cb18072e5db77b48199681a266b520ee08b12986efd8795356e4b877911cd"
+    },
+    {
+      "path": "artifacts/video/source/code/scripts/client-message.js",
+      "bytes": 2215,
+      "sha256": "ecb5f3b3fcdf74fa5a3d352da33856b47116eb27b4eb91b039fa58b39e12b53f"
+    },
+    {
+      "path": "artifacts/video/source/code/package.json",
+      "bytes": 1107,
+      "sha256": "8560c180daec6b576feb057395d6ee692e5f77a4f851e3398dad54719f2db304"
+    },
+    {
+      "path": "artifacts/video/source/code/package-lock.json",
+      "bytes": 111205,
+      "sha256": "7fc8d323eb98ed41aa1c5387168068695793c70aa006c9190c51f3cbe421f563"
+    },
+    {
+      "path": "artifacts/video/source/input-1-demo-synthetic-weather-control.csv",
+      "bytes": 111,
+      "sha256": "9b763c3be810349c80535c59ad0dd065620dc444c517828e594150b0b15b8dea"
+    },
+    {
+      "path": "artifacts/video/source/command-export.png",
+      "bytes": 146059,
+      "sha256": "8112585fd0e5826d0641d55e4433502f5454986902d1833465b48919adc993ce"
+    },
+    {
+      "path": "artifacts/video/source/csv-preview.png",
+      "bytes": 187896,
+      "sha256": "d22acbe29d927bb87db8a786bc0e3b65d4d1f5362ee9754771089fa983995239"
+    },
+    {
+      "path": "artifacts/video/source/csv-registration.png",
+      "bytes": 187896,
+      "sha256": "d22acbe29d927bb87db8a786bc0e3b65d4d1f5362ee9754771089fa983995239"
+    },
+    {
+      "path": "artifacts/video/source/encoded.mp4",
+      "bytes": 14492879,
+      "sha256": "97f988699165f6712d7afc34d99742f6c5bed564e80869e0d5b8b393d5320928"
+    },
+    {
+      "path": "artifacts/video/source/hybrid-camera.png",
+      "bytes": 196996,
+      "sha256": "4df3e94b25c23ae244a29f0f07793f1f1d8071288fb954fc756f0ec3a3085f17"
+    },
+    {
+      "path": "artifacts/video/source/page@ab5badbca07c4c57934a004f8fcabd65.webm",
+      "bytes": 30402260,
+      "sha256": "8b82ef35a5d35164ea4d95e57e9e8c5c3e38483bc2d77a0086ab154afe98b9f6"
+    },
+    {
+      "path": "artifacts/video/source/recent-command-states.json",
+      "bytes": 2494,
+      "sha256": "4b07ed6330f2f2d5f1019f38c766df616bfd56b0c2c4eca0a40a669702df95b8"
+    },
+    {
+      "path": "artifacts/video/source/rest-receipt-stored-status.png",
+      "bytes": 147389,
+      "sha256": "1168df5c82eb40a29f83004ef098eb392c797adeaebfa2d6245ea34640599f46"
+    },
+    {
+      "path": "artifacts/video/source/scene-1.png",
+      "bytes": 262585,
+      "sha256": "83bb6d765c0590a21dbe034ff75eee8ed376c2af66762851454f34beade0c6d2"
+    },
+    {
+      "path": "artifacts/video/source/scene-2.png",
+      "bytes": 259707,
+      "sha256": "66b913c9c835a266dbf0c07eb9981ac6dbdf528062d90e55ad4dbd51270b310d"
+    },
+    {
+      "path": "artifacts/video/source/scene-3.png",
+      "bytes": 146662,
+      "sha256": "90617b66f0d3ef0c147ae14a20374e017812d731773523e521161f23d2e60898"
+    },
+    {
+      "path": "artifacts/video/source/scene-4.png",
+      "bytes": 128005,
+      "sha256": "5d952b0f50d2a1ca41bd4979844d26c75ba99e734f1c09fd6caae78b38d2ed7e"
+    },
+    {
+      "path": "artifacts/video/source/scene-5.png",
+      "bytes": 145990,
+      "sha256": "3da57d37ebbadbbb06207e6f28f8dd157ab408c3d2213e76bb89f329ceb10042"
+    },
+    {
+      "path": "artifacts/video/source/scene-6.png",
+      "bytes": 113766,
+      "sha256": "a3f4947bdfdcee5c3c1e45ffc9178c56f9caa249ac09a8abf0c6a60bb2e04717"
+    },
+    {
+      "path": "artifacts/video/source/scene-7.png",
+      "bytes": 120983,
+      "sha256": "722f6d94cd2e346f24235e7f616c6dad1a03c15c5e8b8b6e8bbd2b342d285c4c"
+    },
+    {
+      "path": "artifacts/video/source/scene-8.png",
+      "bytes": 184707,
+      "sha256": "8adca29369b131b5c863ac062f0a0197589d771d07cd993fa0e12adda698c2a3"
+    },
+    {
+      "path": "artifacts/video/source/voice-0-0.aiff",
+      "bytes": 243884,
+      "sha256": "c69f30cff945e99a013069cddaab973fbe26512daca945364fb87bd765fb8d6a"
+    },
+    {
+      "path": "artifacts/video/source/voice-0-1.aiff",
+      "bytes": 141030,
+      "sha256": "83533d8cec5fd5bfa18058aba4ea4dc4e85de26d8db261ebedccc435297bcfe9"
+    },
+    {
+      "path": "artifacts/video/source/voice-0-2.aiff",
+      "bytes": 154994,
+      "sha256": "4640fd17be065470c229dda8e8f28b542f8f5e343e01bf63aa78984ee38efb99"
+    },
+    {
+      "path": "artifacts/video/source/voice-0.aiff",
+      "bytes": 527674,
+      "sha256": "7a22adf54f804d5db98b6f11b76217c9c33d8df9294d61571005b11bb6bbbc53"
+    },
+    {
+      "path": "artifacts/video/source/voice-1-0.aiff",
+      "bytes": 311132,
+      "sha256": "861542ac24f36ecbf84de0fc541583991482668dd0e64c8188d6e620abb2bba9"
+    },
+    {
+      "path": "artifacts/video/source/voice-1-1.aiff",
+      "bytes": 124308,
+      "sha256": "d5b57e852ed14d7c4b84dae1a275807ba4b2838a5a3db475abbb1c918a308e97"
+    },
+    {
+      "path": "artifacts/video/source/voice-1-2.aiff",
+      "bytes": 205170,
+      "sha256": "5b928098e9547ad46af6cc670122e3ba26523694c029c6ed3ece38230cad126f"
+    },
+    {
+      "path": "artifacts/video/source/voice-1-3.aiff",
+      "bytes": 120202,
+      "sha256": "77c396335e5607526f0184753a6b0f241715216a6923ac2312d79a44f80f499e"
+    },
+    {
+      "path": "artifacts/video/source/voice-1.aiff",
+      "bytes": 744482,
+      "sha256": "0a512b4d668d9b4460048d802b07bc3057df808d4aa626b1ca8633cce23345d9"
+    },
+    {
+      "path": "artifacts/video/source/voice-2-0.aiff",
+      "bytes": 208644,
+      "sha256": "86ed9a5c30c298e8782132364f014983c67b41691a0ac7aa334e9ec133c0b2de"
+    },
+    {
+      "path": "artifacts/video/source/voice-2-1.aiff",
+      "bytes": 248696,
+      "sha256": "371c129ecfb2dd781616d4c95c4f9e3fdf3cec2ae87c2582f588007cea0cfbe8"
+    },
+    {
+      "path": "artifacts/video/source/voice-2-2.aiff",
+      "bytes": 202712,
+      "sha256": "bc33d3aa3ba1b28a10a5e6be67707be27c709b8e6d5ae8d85b2a9334286ae82c"
+    },
+    {
+      "path": "artifacts/video/source/voice-2-3.aiff",
+      "bytes": 354666,
+      "sha256": "29f96256a37ccd64c4a8fbf30943fd068f4ff2c151a487bdbe220471847d513a"
+    },
+    {
+      "path": "artifacts/video/source/voice-2-4.aiff",
+      "bytes": 162666,
+      "sha256": "0d35934aa0cc83746c206a36f9a392b4d5ff9fafe44b4f03450ea2686ddb1b85"
+    },
+    {
+      "path": "artifacts/video/source/voice-2-5.aiff",
+      "bytes": 97670,
+      "sha256": "2b8a4cfabd78e7c6883ccda93cb9954384cabeba11066c5a5487503a8145426a"
+    },
+    {
+      "path": "artifacts/video/source/voice-2-6.aiff",
+      "bytes": 303438,
+      "sha256": "0c291cf321dd34dacf64bb8641020b5b9ee91efd1ad56ab9e7df7be8c18cbbd4"
+    },
+    {
+      "path": "artifacts/video/source/voice-2.aiff",
+      "bytes": 1549874,
+      "sha256": "bc936546f234567cf83d5824d946de945733f9bf78b4dbd020d6c0027a78fc01"
+    },
+    {
+      "path": "artifacts/video/source/voice-3-0.aiff",
+      "bytes": 188528,
+      "sha256": "9affff938d04d51b8fb67e22e7213cc44b391ec8d22f46cec812b95a55166d1d"
+    },
+    {
+      "path": "artifacts/video/source/voice-3-1.aiff",
+      "bytes": 253774,
+      "sha256": "af392fb15a7ad7af117abef5fcc3cbda4c2640eeff50fd702ea8f273695ed93b"
+    },
+    {
+      "path": "artifacts/video/source/voice-3-2.aiff",
+      "bytes": 269060,
+      "sha256": "787622ddffbee5630977575bb3cc4141fd30b4fce3c2c2d97455b3e460d8bcbe"
+    },
+    {
+      "path": "artifacts/video/source/voice-3.aiff",
+      "bytes": 699128,
+      "sha256": "5c23aea560ff039ccebd12bf6938bc8e44ed7c3df238f7b659d5da4197162dc9"
+    },
+    {
+      "path": "artifacts/video/source/voice-4-0.aiff",
+      "bytes": 199242,
+      "sha256": "fcdb2f8edd5260c04d86514a5f260d22340cb7590c0d0f01d55d579409476754"
+    },
+    {
+      "path": "artifacts/video/source/voice-4-1.aiff",
+      "bytes": 227690,
+      "sha256": "39a6b8a48a5a8a49d6f3f601fbe2288e4b7ef7a502f2c9e4ef7959ad7f7ea204"
+    },
+    {
+      "path": "artifacts/video/source/voice-4-2.aiff",
+      "bytes": 187622,
+      "sha256": "ea99c1e4b37b8813f78c1a490f68c1b938ccd3a78b7ca925984d773a31453de3"
+    },
+    {
+      "path": "artifacts/video/source/voice-4-3.aiff",
+      "bytes": 162704,
+      "sha256": "1272427e2d8955e52b3464990323849c12b274ce76fb8629d3f49b2d1e316dcd"
+    },
+    {
+      "path": "artifacts/video/source/voice-4-4.aiff",
+      "bytes": 241032,
+      "sha256": "c4b6a889d1d09eec5bf846b8ca7e60c1098ef3295ca511625b77c73187822196"
+    },
+    {
+      "path": "artifacts/video/source/voice-4-5.aiff",
+      "bytes": 195200,
+      "sha256": "0a731667d9f9082ea36afab3f68f12e4e258b50fc434dbf4f47887f0156842d2"
+    },
+    {
+      "path": "artifacts/video/source/voice-4-6.aiff",
+      "bytes": 199056,
+      "sha256": "c1ec15e89e0fd709c91b1d3e59e61c1863492936ec40833e974c94bda743bec5"
+    },
+    {
+      "path": "artifacts/video/source/voice-4.aiff",
+      "bytes": 1383928,
+      "sha256": "491c7068fdda7c7b5ede87f69d9d4db66f987a650cdf1794fbf3a9c1732fa89e"
+    },
+    {
+      "path": "artifacts/video/source/voice-5-0.aiff",
+      "bytes": 179972,
+      "sha256": "e46d33a06bd76d27541958037b81e13b9a3caaba14bf964298a2fe29e84361d8"
+    },
+    {
+      "path": "artifacts/video/source/voice-5-1.aiff",
+      "bytes": 136062,
+      "sha256": "ba6c21052ee67d55aba7b2eb1cf28ede4b0ea0e2a106d69d870f11f0fe238752"
+    },
+    {
+      "path": "artifacts/video/source/voice-5-2.aiff",
+      "bytes": 322962,
+      "sha256": "f9fcd14682f1e5a9e88235e788c28d16f263b277469fde765c1a259d6d8cc2df"
+    },
+    {
+      "path": "artifacts/video/source/voice-5.aiff",
+      "bytes": 626762,
+      "sha256": "2a834d827fca417950a651d05acff40a2067ee180ac0d5df3c305d8a836423f1"
+    },
+    {
+      "path": "artifacts/video/source/voice-6-0.aiff",
+      "bytes": 251390,
+      "sha256": "049f397eb5cbc059249f21706fe51c6de0f158613691fe476447258fabe59d0f"
+    },
+    {
+      "path": "artifacts/video/source/voice-6-1.aiff",
+      "bytes": 243576,
+      "sha256": "91a84db33d25ba89deb8d605182bf8eaf636458ab201e21519da7ae2008853bd"
+    },
+    {
+      "path": "artifacts/video/source/voice-6-2.aiff",
+      "bytes": 204174,
+      "sha256": "2d8fed4947166dc37e2d98aad6e81cad4d6839e6f8c063a32b4aee6e320b036b"
+    },
+    {
+      "path": "artifacts/video/source/voice-6-3.aiff",
+      "bytes": 183408,
+      "sha256": "a8c55dbeb7dd212f33eb02198969ac8f70fb026d33bc8dbac2f3d2c1aec1ccb7"
+    },
+    {
+      "path": "artifacts/video/source/voice-6.aiff",
+      "bytes": 866218,
+      "sha256": "9bacf100a67925ad7f75a2c30bd05e4a3be9aba77a06776506ef5587aae3843d"
+    },
+    {
+      "path": "artifacts/video/source/voice-7-0.aiff",
+      "bytes": 265344,
+      "sha256": "09ccd2301462e8e2dc0810dfdffa52271561a89ee14d36457d8f5de368a28a90"
+    },
+    {
+      "path": "artifacts/video/source/voice-7-1.aiff",
+      "bytes": 247666,
+      "sha256": "4d0ec1cc16d0405427b3de4123263c928e1c7772474c6c00dda8253056af3711"
+    },
+    {
+      "path": "artifacts/video/source/voice-7-2.aiff",
+      "bytes": 229752,
+      "sha256": "778cc06108f243e40b0a37106efa0c53bf617d23cfed825837731a9617a7e7e1"
+    },
+    {
+      "path": "artifacts/video/source/voice-7.aiff",
+      "bytes": 730528,
+      "sha256": "cff7bfae2ec2c6499cb5493d9aaab41b31613b5f4448d5972bb1d1a53fa88898"
+    },
+    {
+      "path": "artifacts/video/source/vpp-command-4.log",
+      "bytes": 2136,
+      "sha256": "67f1a2d85cdd71228a40b9355434a85b63995f59370dfe295ae88a9343e95168"
+    },
+    {
+      "path": "artifacts/video/source/weather-before.png",
+      "bytes": 262266,
+      "sha256": "d5dc3b9d0658dcf45878ad3c0b9b926b52e7d37af030384649991d511be329ec"
+    },
+    {
+      "path": "artifacts/video/source/weather-csv-restored.png",
+      "bytes": 188137,
+      "sha256": "4b3df0662885a7724bc463866a36b6a8b7182202274c13f88b02711907a3762f"
+    },
+    {
+      "path": "artifacts/video/source/weather-model-output.png",
+      "bytes": 188438,
+      "sha256": "bb36ebfca26e239f3ecaa245c68883180280391a88435d8d5df66f45f6337961"
+    },
+    {
+      "path": "artifacts/video/source/weather-observations.jsonl",
+      "bytes": 258809,
+      "sha256": "62aa7ae34e9831833079178d480cb2619770d5c2162db842452ff4f0628ac0ce"
+    }
+  ]
+}

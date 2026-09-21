@@ -1,0 +1,88 @@
+{
+  "checkedAt": "2026-09-21T22:01:23.179921+00:00",
+  "productVersion": "1.7.1",
+  "plantCount": 6,
+  "plants": [
+    {
+      "id": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+      "runId": "c83f35c0-23b7-45c5-b567-0dbf1fb3e1a0",
+      "state": null,
+      "rtu": {
+        "status": null,
+        "connected": null,
+        "pendingMessages": null
+      }
+    },
+    {
+      "id": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+      "runId": "1ad54156-ba54-4fc0-8bbb-ec7595e25a80",
+      "state": null,
+      "rtu": {
+        "status": null,
+        "connected": null,
+        "pendingMessages": null
+      }
+    },
+    {
+      "id": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+      "runId": "0c51962b-d6a3-4513-8118-c54f0bbefb3b",
+      "state": null,
+      "rtu": {
+        "status": null,
+        "connected": null,
+        "pendingMessages": null
+      }
+    },
+    {
+      "id": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+      "runId": "efdcb3c8-851b-42ea-8501-61907552b932",
+      "state": null,
+      "rtu": {
+        "status": null,
+        "connected": null,
+        "pendingMessages": null
+      }
+    },
+    {
+      "id": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "runId": "26d2830a-4774-4f97-996d-a36dc227a62c",
+      "state": null,
+      "rtu": {
+        "status": null,
+        "connected": null,
+        "pendingMessages": null
+      }
+    },
+    {
+      "id": "8201415e-11b5-4223-97f4-5f470ce9db3d",
+      "runId": "ea26448c-1362-4c31-b4e7-ad87b4df24bd",
+      "state": null,
+      "rtu": {
+        "status": null,
+        "connected": null,
+        "pendingMessages": null
+      }
+    }
+  ],
+  "podName": "grid-69d8766f7-zmfq8",
+  "podUid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+  "containers": [
+    {
+      "name": "app",
+      "ready": true,
+      "restartCount": 0,
+      "image": "sha256:a8ce2e16aee54327ac470d37bd4b27e4a75def216cda4001e981c6902246ad55",
+      "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876"
+    },
+    {
+      "name": "mqtt",
+      "ready": true,
+      "restartCount": 0,
+      "image": "sha256:9576aaa2787f4e9225c35a97f3c610d60bdd6edc481cf8ebc1bf66a006a5f6fe",
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  ],
+  "demoRecoveryEvidence": "artifacts/video/source/demo-recovery.json",
+  "mutationsPerformed": false,
+  "result": "PASS"
+}

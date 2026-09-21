@@ -1,0 +1,1100 @@
+{
+  "rehearsal": false,
+  "recordingStartedAt": "2026-09-21T21:52:31.973Z",
+  "lead": 4.6790000000000305,
+  "scenes": [
+    {
+      "title": "VPP 시험 목적과 시스템 경계",
+      "seconds": 24,
+      "narration": "GRID는 가상 발전 현장에서 외부 VPP 연동을 시험하는 에뮬레이터입니다. 화면은 검증한 케이쓰리에스 배포 버전입니다. 실물 설비를 조작하거나 시장에 입찰하지 않습니다.",
+      "actions": [
+        {
+          "type": "click",
+          "role": "link",
+          "name": "통합 대시보드"
+        },
+        {
+          "type": "click",
+          "selector": ".plant-card:has(h3:text-is(\"대관령 바람 정원\"))"
+        },
+        {
+          "type": "wait",
+          "ms": 1500
+        }
+      ],
+      "voice": "/Users/charleskoh/research/20260921-RALPTON/artifacts/video/source/voice-0.aiff",
+      "cues": [
+        {
+          "start": 0,
+          "end": 5.44,
+          "text": "GRID는 가상 발전 현장에서 외부 VPP 연동을 시험하는 에뮬레이터입니다."
+        },
+        {
+          "start": 5.44,
+          "end": 8.55,
+          "text": "화면은 검증한 케이쓰리에스 배포 버전입니다."
+        },
+        {
+          "start": 8.55,
+          "end": 11.97,
+          "text": "실물 설비를 조작하거나 시장에 입찰하지 않습니다."
+        }
+      ],
+      "duration": 24,
+      "start": 0,
+      "end": 24.073
+    },
+    {
+      "title": "CSV 등록과 가상 현장",
+      "seconds": 34,
+      "narration": "CSV 또는 TSV를 넣고 해석 미리보기로 시각과 단위, 정규화 출력을 먼저 확인합니다. 미리보기는 RTU를 만들지 않습니다. 실제 등록 때 다시 검증하고 일 초 단위 수집을 시작합니다. 원본 전류와 추정 전류도 구분합니다.",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "header button"
+        },
+        {
+          "type": "fill",
+          "label": "단지명",
+          "value": "최종 시연 2026-09-21T21-51-42-441Z b6889dcb 복합"
+        },
+        {
+          "type": "select",
+          "label": "발전 유형",
+          "value": "hybrid"
+        },
+        {
+          "type": "fill",
+          "label": "발전기 수 (기)",
+          "value": 2
+        },
+        {
+          "type": "fill",
+          "label": "1기 정격 (kW)",
+          "value": 500
+        },
+        {
+          "type": "fill",
+          "label": "램프 (kW/s)",
+          "value": 25
+        },
+        {
+          "type": "upload",
+          "label": "발전 CSV / TSV 파일",
+          "file": "artifacts/media-preparation/demo-synthetic-weather-control.csv"
+        },
+        {
+          "type": "wait",
+          "ms": 2000
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "CSV 해석 미리보기"
+        },
+        {
+          "type": "assert",
+          "label": "CSV 해석 미리보기 결과"
+        },
+        {
+          "type": "focus",
+          "label": "CSV 해석 미리보기 결과"
+        },
+        {
+          "type": "wait",
+          "ms": 2500
+        },
+        {
+          "type": "capture",
+          "name": "csv-preview"
+        },
+        {
+          "type": "capture",
+          "name": "csv-registration"
+        },
+        {
+          "type": "register",
+          "role": "button",
+          "name": "RTU 등록 · 수집 시작"
+        },
+        {
+          "type": "wait",
+          "ms": 2500
+        }
+      ],
+      "zoom": {
+        "scale": 1.1
+      },
+      "voice": "/Users/charleskoh/research/20260921-RALPTON/artifacts/video/source/voice-1.aiff",
+      "cues": [
+        {
+          "start": 0,
+          "end": 6.96,
+          "text": "CSV 또는 TSV를 넣고 해석 미리보기로 시각과 단위, 정규화 출력을 먼저 확인합니다."
+        },
+        {
+          "start": 6.96,
+          "end": 9.69,
+          "text": "미리보기는 RTU를 만들지 않습니다."
+        },
+        {
+          "start": 9.69,
+          "end": 14.25,
+          "text": "실제 등록 때 다시 검증하고 일 초 단위 수집을 시작합니다."
+        },
+        {
+          "start": 14.25,
+          "end": 16.88,
+          "text": "원본 전류와 추정 전류도 구분합니다."
+        }
+      ],
+      "duration": 34,
+      "start": 24.073,
+      "end": 58.121
+    },
+    {
+      "title": "풍력 태양광 복합 UI",
+      "seconds": 72,
+      "narration": "풍력과 태양광, 복합 단지를 같은 대시보드에서 선택합니다. 삼차원 장면에서 풍향과 회전을 확인하고 드래그와 휠로 시점을 조절합니다. 측정한 값은 현재 선택한 단지와 발전기 상태를 보여줍니다. 수동 기상으로 풍속과 풍향, 일사 입력을 바꾸고 출력 변화를 확인한 뒤 CSV 원본 출력으로 돌아옵니다. 수동으로 적용한 기상 출처는 수동 상태로 남습니다. 명령 접수는 완료와 다릅니다. 접수 패널은 마지막으로 받은 결과를 보여주며, 저장 상태 확인으로 서버 상태를 다시 조회합니다.",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": ".scene canvas"
+        },
+        {
+          "type": "drag",
+          "selector": ".scene canvas",
+          "from": [
+            0.4,
+            0.5
+          ],
+          "to": [
+            0.65,
+            0.55
+          ]
+        },
+        {
+          "type": "scroll",
+          "y": -140
+        },
+        {
+          "type": "wait",
+          "ms": 1500
+        },
+        {
+          "type": "capture",
+          "name": "hybrid-camera"
+        },
+        {
+          "type": "click",
+          "selector": ".plant-card:has(h3:text-is(\"대관령 바람 정원\"))"
+        },
+        {
+          "type": "wait",
+          "ms": 2000
+        },
+        {
+          "type": "click",
+          "selector": ".plant-card:has(h3:text-is(\"신안 햇빛 정원\"))"
+        },
+        {
+          "type": "wait",
+          "ms": 2000
+        },
+        {
+          "type": "click",
+          "selector": ".plant-card:has(h3:text-is(\"최종 시연 2026-09-21T21-51-42-441Z b6889dcb 복합\"))"
+        },
+        {
+          "type": "focus",
+          "label": "발전 입력 모드"
+        },
+        {
+          "type": "capture",
+          "name": "weather-before"
+        },
+        {
+          "type": "select",
+          "label": "발전 입력 모드",
+          "value": "weather"
+        },
+        {
+          "type": "fill",
+          "label": "풍속 (m/s)",
+          "value": 14
+        },
+        {
+          "type": "fill",
+          "label": "풍향 (°)",
+          "value": 90
+        },
+        {
+          "type": "fill",
+          "label": "일사 (W/m²)",
+          "value": 300
+        },
+        {
+          "type": "fill",
+          "label": "온도 (°C)",
+          "value": 22
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "기상 적용",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 10000
+        },
+        {
+          "type": "focus",
+          "selector": ".scene canvas"
+        },
+        {
+          "type": "capture",
+          "name": "weather-model-output"
+        },
+        {
+          "type": "select",
+          "label": "발전 입력 모드",
+          "value": "csv"
+        },
+        {
+          "type": "fill",
+          "label": "풍속 (m/s)",
+          "value": 8
+        },
+        {
+          "type": "fill",
+          "label": "풍향 (°)",
+          "value": 240
+        },
+        {
+          "type": "fill",
+          "label": "일사 (W/m²)",
+          "value": 650
+        },
+        {
+          "type": "fill",
+          "label": "온도 (°C)",
+          "value": 22
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "기상 적용",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 12000
+        },
+        {
+          "type": "focus",
+          "selector": ".scene canvas"
+        },
+        {
+          "type": "capture",
+          "name": "weather-csv-restored"
+        },
+        {
+          "type": "range",
+          "selector": "#limit",
+          "value": 80
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "출력 상한 적용",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 2000
+        },
+        {
+          "type": "click",
+          "selector": ".dashboard-bottom .button.danger",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 2000
+        },
+        {
+          "type": "click",
+          "selector": ".dashboard-bottom .button-row button:first-child",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 3000
+        },
+        {
+          "type": "range",
+          "selector": "#limit",
+          "value": 100
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "출력 상한 적용",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 1500
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "저장 상태 확인"
+        },
+        {
+          "type": "wait",
+          "ms": 1500
+        },
+        {
+          "type": "capture",
+          "name": "rest-receipt-stored-status"
+        }
+      ],
+      "voice": "/Users/charleskoh/research/20260921-RALPTON/artifacts/video/source/voice-2.aiff",
+      "cues": [
+        {
+          "start": 0,
+          "end": 4.64,
+          "text": "풍력과 태양광, 복합 단지를 같은 대시보드에서 선택합니다."
+        },
+        {
+          "start": 4.64,
+          "end": 10.19,
+          "text": "삼차원 장면에서 풍향과 회전을 확인하고 드래그와 휠로 시점을 조절합니다."
+        },
+        {
+          "start": 10.19,
+          "end": 14.69,
+          "text": "측정한 값은 현재 선택한 단지와 발전기 상태를 보여줍니다."
+        },
+        {
+          "start": 14.69,
+          "end": 22.64,
+          "text": "수동 기상으로 풍속과 풍향, 일사 입력을 바꾸고 출력 변화를 확인한 뒤 CSV 원본 출력으로 돌아옵니다."
+        },
+        {
+          "start": 22.64,
+          "end": 26.240000000000002,
+          "text": "수동으로 적용한 기상 출처는 수동 상태로 남습니다."
+        },
+        {
+          "start": 26.240000000000002,
+          "end": 28.360000000000003,
+          "text": "명령 접수는 완료와 다릅니다."
+        },
+        {
+          "start": 28.360000000000003,
+          "end": 35.150000000000006,
+          "text": "접수 패널은 마지막으로 받은 결과를 보여주며, 저장 상태 확인으로 서버 상태를 다시 조회합니다."
+        }
+      ],
+      "duration": 72,
+      "start": 58.121,
+      "end": 130.165
+    },
+    {
+      "title": "RTU와 전체 SCADA 데이터",
+      "seconds": 28,
+      "narration": "각 RTU는 연결과 건강 상태를 독립적으로 관리합니다. 전체 발전기의 샘플을 수집하고 기본 육십 초마다 MQTT로 전송합니다. 큐오에스 일은 전달 과정에서 중복이 생길 수 있으므로 메시지 아이디로 중복을 처리합니다.",
+      "actions": [
+        {
+          "type": "click",
+          "role": "link",
+          "name": "RTU 디바이스"
+        },
+        {
+          "type": "fill",
+          "label": "RTU 이름 또는 ID 검색",
+          "value": "최종 시연 2026-09-21T21-51-42-441Z b6889dcb 복합"
+        },
+        {
+          "type": "focus",
+          "text": "연결 · 전송"
+        },
+        {
+          "type": "scroll",
+          "y": 350
+        },
+        {
+          "type": "wait",
+          "ms": 2500
+        }
+      ],
+      "voice": "/Users/charleskoh/research/20260921-RALPTON/artifacts/video/source/voice-3.aiff",
+      "cues": [
+        {
+          "start": 0,
+          "end": 4.18,
+          "text": "각 RTU는 연결과 건강 상태를 독립적으로 관리합니다."
+        },
+        {
+          "start": 4.18,
+          "end": 9.84,
+          "text": "전체 발전기의 샘플을 수집하고 기본 육십 초마다 MQTT로 전송합니다."
+        },
+        {
+          "start": 9.84,
+          "end": 15.85,
+          "text": "큐오에스 일은 전달 과정에서 중복이 생길 수 있으므로 메시지 아이디로 중복을 처리합니다."
+        }
+      ],
+      "duration": 28,
+      "start": 130.166,
+      "end": 158.208
+    },
+    {
+      "title": "외부 VPP 목표 출력 제어",
+      "seconds": 46,
+      "narration": "별도 MQTT 클라이언트로 백이십오 킬로와트를 요청합니다. 수락과 실행을 거쳐 실제 출력이 목표에 도달하면 완료 상태를 받습니다. 화면의 MQTT 출처와 목표 및 실제 값을 확인합니다. 이 결과는 실제 배포 브로커에서 관측한 값입니다. 목록의 마지막 확인 시각은 브라우저 조회 시각이며 명령 완료 시각과 다릅니다. 최근 저장 상태를 최대 스무 개까지 제이슨 파일로 내보냅니다. 이 파일은 외부 VPP 수신 증거나 전체 감사 이력이 아닙니다.",
+      "actions": [
+        {
+          "type": "click",
+          "role": "link",
+          "name": "시험 시나리오"
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "재생·장애 시험"
+        },
+        {
+          "type": "fill",
+          "label": "지연 (ms)",
+          "value": 1500
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "장애 적용",
+          "requiresOwned": true
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "목표값·처리 결과"
+        },
+        {
+          "type": "focus",
+          "selector": ".command-list-state"
+        },
+        {
+          "type": "dispatch",
+          "rtuId": "selected",
+          "targetKw": 125,
+          "timeoutSeconds": 20,
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 2500
+        },
+        {
+          "type": "assert",
+          "text": "125 / 125"
+        },
+        {
+          "type": "download",
+          "role": "button",
+          "name": "최근 명령 상태 JSON 내보내기",
+          "file": "recent-command-states.json",
+          "validate": "command-states",
+          "rtuId": "selected"
+        },
+        {
+          "type": "wait",
+          "ms": 1500
+        },
+        {
+          "type": "capture",
+          "name": "command-export"
+        }
+      ],
+      "voice": "/Users/charleskoh/research/20260921-RALPTON/artifacts/video/source/voice-4.aiff",
+      "cues": [
+        {
+          "start": 0,
+          "end": 4.43,
+          "text": "별도 MQTT 클라이언트로 백이십오 킬로와트를 요청합니다."
+        },
+        {
+          "start": 4.43,
+          "end": 9.5,
+          "text": "수락과 실행을 거쳐 실제 출력이 목표에 도달하면 완료 상태를 받습니다."
+        },
+        {
+          "start": 9.5,
+          "end": 13.66,
+          "text": "화면의 MQTT 출처와 목표 및 실제 값을 확인합니다."
+        },
+        {
+          "start": 13.66,
+          "end": 17.26,
+          "text": "이 결과는 실제 배포 브로커에서 관측한 값입니다."
+        },
+        {
+          "start": 17.26,
+          "end": 22.630000000000003,
+          "text": "목록의 마지막 확인 시각은 브라우저 조회 시각이며 명령 완료 시각과 다릅니다."
+        },
+        {
+          "start": 22.630000000000003,
+          "end": 26.96,
+          "text": "최근 저장 상태를 최대 스무 개까지 제이슨 파일로 내보냅니다."
+        },
+        {
+          "start": 26.96,
+          "end": 31.380000000000003,
+          "text": "이 파일은 외부 VPP 수신 증거나 전체 감사 이력이 아닙니다."
+        }
+      ],
+      "duration": 46,
+      "start": 158.208,
+      "end": 204.255
+    },
+    {
+      "title": "장애 주입과 복구",
+      "seconds": 32,
+      "narration": "통신 단절과 지연, 센서 중지를 구분해 시험합니다. 센서가 멈춘 구간은 결측으로 남습니다. 미확인 배치의 재시작 후 재전송과 브로커 확인은 함께 제공하는 별도 실행 근거에서 확인할 수 있습니다.",
+      "actions": [
+        {
+          "type": "click",
+          "role": "button",
+          "name": "재생·장애 시험"
+        },
+        {
+          "type": "click",
+          "label": "MQTT 연결 단절"
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "장애 적용",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 5000
+        },
+        {
+          "type": "click",
+          "role": "link",
+          "name": "RTU 디바이스"
+        },
+        {
+          "type": "focus",
+          "text": "연결 · 전송"
+        },
+        {
+          "type": "wait",
+          "ms": 2000
+        },
+        {
+          "type": "click",
+          "role": "link",
+          "name": "시험 시나리오"
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "재생·장애 시험"
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "모든 장애 해제",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 2000
+        },
+        {
+          "type": "click",
+          "label": "센서 수집 중지"
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "장애 적용",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 2500
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "모든 장애 해제",
+          "requiresOwned": true
+        }
+      ],
+      "voice": "/Users/charleskoh/research/20260921-RALPTON/artifacts/video/source/voice-5.aiff",
+      "cues": [
+        {
+          "start": 0,
+          "end": 3.99,
+          "text": "통신 단절과 지연, 센서 중지를 구분해 시험합니다."
+        },
+        {
+          "start": 3.99,
+          "end": 6.98,
+          "text": "센서가 멈춘 구간은 결측으로 남습니다."
+        },
+        {
+          "start": 6.98,
+          "end": 14.21,
+          "text": "미확인 배치의 재시작 후 재전송과 브로커 확인은 함께 제공하는 별도 실행 근거에서 확인할 수 있습니다."
+        }
+      ],
+      "duration": 32,
+      "start": 204.255,
+      "end": 236.301
+    },
+    {
+      "title": "재현 가능한 시나리오와 연동",
+      "seconds": 30,
+      "narration": "배속과 일시정지, 난수 생성에 쓰는 초기값으로 시험 조건을 조절합니다. 선택한 RTU에 저장된 시나리오를 다시 불러오면 새 실행 아이디가 생깁니다. 이전 실행은 런 아이디로 구분하며 기존 아웃박스를 삭제하지 않습니다. 가이드에서 이 RTU의 토픽과 메시지 형식을 확인합니다.",
+      "actions": [
+        {
+          "type": "select",
+          "label": "재생 배속",
+          "value": "2"
+        },
+        {
+          "type": "fill",
+          "label": "난수 시드",
+          "value": 777
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "재생 설정 적용",
+          "requiresOwned": true
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "일시정지",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 1500
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "재생",
+          "requiresOwned": true
+        },
+        {
+          "type": "select",
+          "label": "재생 배속",
+          "value": "1"
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "재생 설정 적용",
+          "requiresOwned": true
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "저장 시나리오"
+        },
+        {
+          "type": "fill",
+          "label": "시나리오 이름",
+          "value": "최종 시연 2026-09-21T21-51-42-441Z b6889dcb 저장"
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "현재 상태 저장",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 1000
+        },
+        {
+          "type": "restoreScenario",
+          "selector": ".scenario:has(h3:text-is(\"최종 시연 2026-09-21T21-51-42-441Z b6889dcb 저장\")) button:first-child",
+          "scenarioName": "최종 시연 2026-09-21T21-51-42-441Z b6889dcb 저장",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 1500
+        },
+        {
+          "type": "click",
+          "role": "link",
+          "name": "연동 가이드"
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "SCADA 데이터"
+        },
+        {
+          "type": "wait",
+          "ms": 1500
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "목표값·결과"
+        },
+        {
+          "type": "wait",
+          "ms": 1500
+        }
+      ],
+      "voice": "/Users/charleskoh/research/20260921-RALPTON/artifacts/video/source/voice-6.aiff",
+      "cues": [
+        {
+          "start": 0,
+          "end": 5.61,
+          "text": "배속과 일시정지, 난수 생성에 쓰는 초기값으로 시험 조건을 조절합니다."
+        },
+        {
+          "start": 5.61,
+          "end": 11.04,
+          "text": "선택한 RTU에 저장된 시나리오를 다시 불러오면 새 실행 아이디가 생깁니다."
+        },
+        {
+          "start": 11.04,
+          "end": 15.579999999999998,
+          "text": "이전 실행은 런 아이디로 구분하며 기존 아웃박스를 삭제하지 않습니다."
+        },
+        {
+          "start": 15.579999999999998,
+          "end": 19.65,
+          "text": "가이드에서 이 RTU의 토픽과 메시지 형식을 확인합니다."
+        }
+      ],
+      "duration": 30,
+      "start": 236.301,
+      "end": 266.326
+    },
+    {
+      "title": "검증 범위와 남은 제약",
+      "seconds": 24,
+      "narration": "최종 릴리스에는 시험 증거와 복원 자료, 취약점 및 이슈 기록을 함께 제공합니다. 실제 VPP와 외부 클라우드 자격증명이 없는 부분은 미검증으로 구분합니다. 상세 검증 범위와 남은 제약은 같은 버전의 릴리스 문서에서 확인합니다.",
+      "actions": [
+        {
+          "type": "click",
+          "role": "link",
+          "name": "통합 대시보드"
+        },
+        {
+          "type": "focus",
+          "selector": ".scene canvas"
+        }
+      ],
+      "voice": "/Users/charleskoh/research/20260921-RALPTON/artifacts/video/source/voice-7.aiff",
+      "cues": [
+        {
+          "start": 0,
+          "end": 5.92,
+          "text": "최종 릴리스에는 시험 증거와 복원 자료, 취약점 및 이슈 기록을 함께 제공합니다."
+        },
+        {
+          "start": 5.92,
+          "end": 11.44,
+          "text": "실제 VPP와 외부 클라우드 자격증명이 없는 부분은 미검증으로 구분합니다."
+        },
+        {
+          "start": 11.44,
+          "end": 16.56,
+          "text": "상세 검증 범위와 남은 제약은 같은 버전의 릴리스 문서에서 확인합니다."
+        }
+      ],
+      "duration": 24,
+      "start": 266.326,
+      "end": 290.361
+    }
+  ],
+  "interactions": [
+    {
+      "kind": "click",
+      "at": 0.867,
+      "x": 110.5,
+      "y": 168
+    },
+    {
+      "kind": "click",
+      "at": 1.717,
+      "x": 423.3984375,
+      "y": 513.6875
+    },
+    {
+      "kind": "click",
+      "at": 24.927,
+      "x": 1834.1484375,
+      "y": 38
+    },
+    {
+      "kind": "click",
+      "at": 31.467,
+      "x": 707.9140625,
+      "y": 842.078125
+    },
+    {
+      "kind": "click",
+      "at": 35.833,
+      "x": 1218.5078125,
+      "y": 1002.65625
+    },
+    {
+      "kind": "click",
+      "at": 62.565,
+      "x": 396.4140625,
+      "y": 148.1875
+    },
+    {
+      "kind": "click",
+      "at": 65.416,
+      "x": 666.2421875,
+      "y": 148.1875
+    },
+    {
+      "kind": "click",
+      "at": 68.266,
+      "x": 1745.5703125,
+      "y": 148.1875
+    },
+    {
+      "kind": "click",
+      "at": 73.08,
+      "x": 1433.9296875,
+      "y": 747.1875
+    },
+    {
+      "kind": "click",
+      "at": 87.745,
+      "x": 1433.9296875,
+      "y": 601.1875
+    },
+    {
+      "kind": "click",
+      "at": 102.119,
+      "x": 1574.1171875,
+      "y": 1062.1875
+    },
+    {
+      "kind": "click",
+      "at": 105.029,
+      "x": 1714.296875,
+      "y": 540.1875
+    },
+    {
+      "kind": "click",
+      "at": 107.946,
+      "x": 1433.9296875,
+      "y": 540.1875
+    },
+    {
+      "kind": "click",
+      "at": 112.911,
+      "x": 1574.1171875,
+      "y": 490.1875
+    },
+    {
+      "kind": "click",
+      "at": 115.261,
+      "x": 337.6015625,
+      "y": 878.0546875
+    },
+    {
+      "kind": "click",
+      "at": 131.012,
+      "x": 110.5,
+      "y": 223
+    },
+    {
+      "kind": "click",
+      "at": 159.065,
+      "x": 110.5,
+      "y": 278
+    },
+    {
+      "kind": "click",
+      "at": 159.906,
+      "x": 319.6015625,
+      "y": 377.1875
+    },
+    {
+      "kind": "click",
+      "at": 162.66,
+      "x": 1288.25,
+      "y": 760.1875
+    },
+    {
+      "kind": "click",
+      "at": 163.51,
+      "x": 552.28125,
+      "y": 377.1875
+    },
+    {
+      "kind": "click",
+      "at": 180.192,
+      "x": 1757.140625,
+      "y": 628
+    },
+    {
+      "kind": "click",
+      "at": 205.111,
+      "x": 319.6015625,
+      "y": 399.1875
+    },
+    {
+      "kind": "click",
+      "at": 205.956,
+      "x": 1115.5,
+      "y": 533.1875
+    },
+    {
+      "kind": "click",
+      "at": 206.887,
+      "x": 1288.25,
+      "y": 782.1875
+    },
+    {
+      "kind": "click",
+      "at": 212.728,
+      "x": 110.5,
+      "y": 223
+    },
+    {
+      "kind": "click",
+      "at": 216.174,
+      "x": 110.5,
+      "y": 278
+    },
+    {
+      "kind": "click",
+      "at": 217.022,
+      "x": 319.6015625,
+      "y": 377.1875
+    },
+    {
+      "kind": "click",
+      "at": 218.172,
+      "x": 1665.75,
+      "y": 760.1875
+    },
+    {
+      "kind": "click",
+      "at": 221.006,
+      "x": 1115.5,
+      "y": 615.78125
+    },
+    {
+      "kind": "click",
+      "at": 221.923,
+      "x": 1288.25,
+      "y": 825.78125
+    },
+    {
+      "kind": "click",
+      "at": 225.356,
+      "x": 1665.75,
+      "y": 760.1875
+    },
+    {
+      "kind": "click",
+      "at": 238.473,
+      "x": 476.25,
+      "y": 718.1875
+    },
+    {
+      "kind": "click",
+      "at": 239.353,
+      "x": 853.75,
+      "y": 718.1875
+    },
+    {
+      "kind": "click",
+      "at": 241.739,
+      "x": 853.75,
+      "y": 783.78125
+    },
+    {
+      "kind": "click",
+      "at": 243.252,
+      "x": 476.25,
+      "y": 783.78125
+    },
+    {
+      "kind": "click",
+      "at": 244.106,
+      "x": 664.71875,
+      "y": 377.1875
+    },
+    {
+      "kind": "click",
+      "at": 245.622,
+      "x": 1804.3984375,
+      "y": 560.6875
+    },
+    {
+      "kind": "click",
+      "at": 247.708,
+      "x": 1722.3359375,
+      "y": 711.1875
+    },
+    {
+      "kind": "click",
+      "at": 250.074,
+      "x": 110.5,
+      "y": 388
+    },
+    {
+      "kind": "click",
+      "at": 250.921,
+      "x": 409.578125,
+      "y": 419.78125
+    },
+    {
+      "kind": "click",
+      "at": 253.255,
+      "x": 515.3515625,
+      "y": 354.1875
+    },
+    {
+      "kind": "click",
+      "at": 267.176,
+      "x": 110.5,
+      "y": 168
+    }
+  ],
+  "downloads": [
+    {
+      "schemaVersion": 1,
+      "contractVersion": 2,
+      "productVersion": "1.7.1",
+      "plantId": "8201415e-11b5-4223-97f4-5f470ce9db3d",
+      "scope": "recent-command-snapshots",
+      "limit": 20,
+      "count": 5,
+      "file": "source/recent-command-states.json",
+      "sha256": "4b07ed6330f2f2d5f1019f38c766df616bfd56b0c2c4eca0a40a669702df95b8",
+      "at": 180.584
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "recordedAt": "2026-09-21T22:07:58.944916+00:00",
+  "roles": {
+    "product": {
+      "file": "docs/product/final-role-closeout.json",
+      "sha256": "f28210b0433a0b8241760bfbabbe38010ae31d7e1f4d2e2e443fe9e9eb545cf6"
+    },
+    "security": {
+      "file": "docs/security/final-role-closeout.json",
+      "sha256": "541976855fdbfc5edb77c12836ac3327b0c9edfb48ed684a03cb4611b08ed52c"
+    },
+    "issues": {
+      "file": "docs/issues/final-role-closeout.json",
+      "sha256": "64a7c370be65736f6b27168bb9ae3204ee209b605c3ed996dda67f2dff1f4e4a"
+    }
+  },
+  "scope": "Actual role handoff records; product acceptance final judgement remains in referenced report. Historical vulnerability and unresolved incident root causes retained.",
+  "allRolesHandedOff": true
+}

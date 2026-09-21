@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-09-21T22:01:51.017924+00:00",
+  "result": "PASS",
+  "originalHandle": 61560,
+  "terminalToolChunk": "f5ebbe",
+  "exitCode": 0,
+  "statusSha256": "e88d2155a9bcc640829dd192d1f432ff3f9b7549a679b17abac904fd2debd597",
+  "previousOriginalHandle": 12339,
+  "previousExitCode": 0,
+  "previousIssues": [
+    "Ended primary/audit null handles disagreed with historical process records"
+  ],
+  "resolution": "Retain original historical handles72957/8133 and explicit EXITED/activefalse; no process restarted or source code changed",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "scope": "Read-only current Git/API/Ready Pod/image and resume metadata verified. Previous actual reconnect evidence retained. Codex/host-offline AI execution is not guaranteed."
+}

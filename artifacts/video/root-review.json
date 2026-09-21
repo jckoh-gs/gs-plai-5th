@@ -1,0 +1,30 @@
+{
+  "reviewedAt": "2026-09-21T21:59:26.071251+00:00",
+  "reviewer": "/root",
+  "videoSha256": "44e7290268c280989d70425f676d66f534ce6cc99223b7afc3372367b88b812c",
+  "visualReview": "passed",
+  "claimsReview": "passed",
+  "encodedFramesDirectlyInspected": [
+    "review-scene-1.png",
+    "review-scene-2.png",
+    "review-scene-3.png",
+    "review-scene-4.png",
+    "review-scene-5.png",
+    "review-scene-6.png",
+    "review-scene-7.png",
+    "review-scene-8.png",
+    "review-weather-6518.png",
+    "review-csv-500.png"
+  ],
+  "findings": [
+    "All eight scenes are readable; Korean captions, visible pointer, click ring and scene2 zoom inspected",
+    "Weather model output is visible in scene3 at0.652MW with14m/s,90degrees,300W/m2; separate named weather frame is at mode selection transition and is not sole weather proof",
+    "CSV return shows0.500MW with original input values and manual provenance retained",
+    "Actual MQTT report has accepted/executing/completed, target125 actual125 error0; no external VPP business receipt claim",
+    "Actual201 registration, scenario new run, owned settings/weather recovery and five existing RTUs unchanged verified against reports",
+    "Offline clip explicitly points to separate restart/PUBACK evidence; no restart-from-short-clip assertion"
+  ],
+  "directAudioListening": false,
+  "audioScope": "H264/AAC/fullDecode, finite -19.4dB audio, Korean narration and34cue captions verified; fresh ASR still in progress; no pronunciation-naturalness claim",
+  "goalCompletionClaim": false
+}

@@ -1,0 +1,26 @@
+{
+  "createdAt": "2026-09-21T22:07:58.944916+00:00",
+  "result": "PASS",
+  "mediaInventory": "artifacts/delivery/final-inventory.json",
+  "mediaOriginalExecution": "artifacts/delivery/final-inventory-execution.json",
+  "finalDocumentHashes": {
+    "docs/product/acceptance.json": "4309c92566807e4d3609548ad6306679bf3b3dd40ae2aa33896853190a8c93bd",
+    "docs/product/FINAL-REQUIREMENT-REVIEW.json": "9619de52b017bfa37994d02f2d98742c46191a2a6dce9228b5eafdc0c9319373",
+    "docs/product/FINAL-REQUIREMENT-REVIEW.md": "3f9634d87e2429ad2f520abe0f2bea23497d8b1184ca2800c96642fb60d8c544",
+    "docs/product/final-role-closeout.json": "f28210b0433a0b8241760bfbabbe38010ae31d7e1f4d2e2e443fe9e9eb545cf6",
+    "docs/security/final-role-closeout.json": "541976855fdbfc5edb77c12836ac3327b0c9edfb48ed684a03cb4611b08ed52c",
+    "docs/issues/final-role-closeout.json": "64a7c370be65736f6b27168bb9ae3204ee209b605c3ed996dda67f2dff1f4e4a",
+    "docs/operations/final-role-closeout.json": "7917a00acfe4fd29c068d7060977345cee251292a105aeb3b959e8fc10a0a328",
+    "artifacts/delivery/final-inventory.json": "459a42d5749b1c45105d210ba296b3da1c53fc50dc82cce8dbd9e3c95b267471",
+    "artifacts/delivery/final-inventory-execution.json": "cd96ad59f6a9de1b174d7ea6c92ac4aff9f697e3058a1548127fb54e876eba53",
+    "artifacts/delivery/owned-cleanup/summary.json": "f518f3d2c90e19d728ad587ed202899dd2f10230a4caf9fff2dd671c4e48cc70",
+    "artifacts/checkpoints/network-resume-final/summary.json": "ba17b23be2a8bd1435be2a66f733ad4d941dcbae6e7ebb11a3dd363b767fd3f2"
+  },
+  "acceptanceCount": 198,
+  "verifiedFunctional": 145,
+  "verifiedLocal": 53,
+  "pending": 0,
+  "partial": 0,
+  "whitespaceException": "Original ASR transcript retains final blank line; intentionally preserve raw transcription bytes. All other staged paths pass diff whitespace checks.",
+  "goalCompletionClaim": false
+}

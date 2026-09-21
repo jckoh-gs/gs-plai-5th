@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T21:50:06.637344+00:00",
+  "updatedAt": "2026-09-21T22:03:51.647251+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -31,7 +31,7 @@
     "productVersion": "1.7.1",
     "prdVersion": "1.15",
     "idea": "IDEA-012",
-    "state": "Completefunctional1.7.1checkpoint+tags. Maintaincurrentobservers and originalfinalwindow; overallgoalpending"
+    "state": "Final deliverables verified and operationalcloseout complete; final evidenceGitdelivery pending"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -44,11 +44,8 @@
     "1.7.1 exact40b/234 CLIcontractpatch: main/MQTT/online/outbox/normal5ff snapshot current1.7.1+back1.7 26reports+2identities, rootcleanup/REVIEW045, immutable2033hashREVIEW046, bothstabletagsremoteverified; finaltime/media pending"
   ],
   "remainingInOrder": [
-    "1.7.1stabletagsremoteverified; completedallmain/restore/manifestgates. Keep72957/8133/48590 andoriginaldeadline. No repeatedmainwrite orrestore.",
-    "Actual1.7.1 first-hour capture and REVIEW051 completed; preserve errors and ISSUE030 received gaps with persisted144-position brokerACK proof. Maintain same current processes until original freeze. Only adopt further concrete improvements with versioned scope and known fallback.",
-    "At21:27:33.079009Z conductproduct/security/issues selectedversion finalreviews. Atoriginalfreeze21:37:33.079009Z followFINAL-RESTORE-PLAN actualnormalversion/exactsnapshot/immutablefinalmanifest.",
-    "Inoriginalfinalwindow generateNEWrealKoreanUIvideo withpointer/zoom/voice/subtitles; verifyandrecoverownRTU,thenNEWeditable14-slidePPTusingthesamevideo/fullrenders. Existingrehearsalsnotfinal.",
-    "Beforeoriginal22:07:33.079009Z deadline verifydelivery/artifacts/remoteGit/finalnormalstate andstopthisrunheartbeat. Do notextendT0 orpretendunfinishedworkcomplete."
+    "Deliver final evidence commit to authorized Git main",
+    "Report actual198-item acceptance and remaining documented limitations"
   ],
   "retryPolicy": {
     "readOnlyChecks": "May retry with bounded backoff",
@@ -383,8 +380,8 @@
     }
   ],
   "currentObservationHandles": {
-    "primary": null,
-    "audit": null,
+    "primary": 72957,
+    "audit": 8133,
     "supervisor": 48590
   },
   "currentObservationBaselines": {
@@ -426,7 +423,8 @@
       "processIdentity": "Tue Sep 22 02:59:54 2026",
       "state": "EXITED",
       "exitCode": 0,
-      "endedAt": "2026-09-21T21:37:33.082Z"
+      "endedAt": "2026-09-21T21:37:33.082Z",
+      "active": false
     },
     "audit": {
       "handle": 8133,
@@ -434,12 +432,16 @@
       "processIdentity": "Tue Sep 22 02:59:54 2026",
       "state": "EXITED",
       "exitCode": 0,
-      "endedAt": "2026-09-21T21:37:33.082Z"
+      "endedAt": "2026-09-21T21:37:33.082Z",
+      "active": false
     },
     "supervisor": {
       "handle": 48590,
       "pid": 56137,
-      "processIdentity": "Tue Sep 22 02:52:15 2026"
+      "processIdentity": "Tue Sep 22 02:52:15 2026",
+      "state": "EXITED",
+      "active": false,
+      "exitCode": 0
     }
   },
   "operationalDeadlineHardening": {
@@ -540,7 +542,7 @@
       "scope": "The original sessions and observed Pod/image were retained. Each RTU gained one received-sample discontinuity; a single narrow read-only query found all300 corresponding positions in continuous same-run persisted outbox windows with broker acknowledgments. Repeated connection error events are not separate outages. No universal subscriber replay, external VPP receipt, continuous service availability or root-cause claim. ISSUE030/032 history remains intact."
     }
   ],
-  "nextOperationalReview": "Verified5ff/current1.7.1 fallback selected after new restore cutoff. New ee980 snapshot is supplemental, never accepted as restored. Create and verify final manifest/tag immediately, then actual new video and same-video PPT within unchanged22:07:33Z. Main/supervisor unchanged; original observers ended. Inspect original restore75944 actual125 and cleanup evidence, no blind retry.",
+  "nextOperationalReview": "Final video/PPT and inventory complete; actualownedprocesscleanup and heartbeatPAUSED verified. Only final evidence Git push and truthful requirement report remain. Never restart observers, media, supervisor or original14h run automatically.",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.7.1",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
@@ -1416,11 +1418,9 @@
   ],
   "currentObservationState": "Original1.7.1 primary72957/audit8133 exited0 at planned_stop21:37:33.082Z and are archived; do not restart. Supervisor48590 and operating3104/18884 remain live for final media.",
   "networkResumeReview": {
-    "checkedAt": "2026-09-21T18:28:08.853945+00:00",
-    "evidence": "artifacts/checkpoints/network-resume-1.7.1/summary.json",
-    "independentReview": "docs/security/NETWORK-RESUME-20260922-REVIEW.md",
     "result": "PASS",
-    "scope": "Current read-only service and actual process identities, saved heartbeat configuration and existing isolated tests. No forced real network outage or AI restart guarantee."
+    "evidence": "artifacts/checkpoints/network-resume-final/summary.json",
+    "scope": "Actualread-onlyreconciliation passed before deliberatefinaltunnelshutdown; aftercloseout noautomatic14hrunrestart"
   },
   "softwareDeliveryPreparation": {
     "checkedAt": "2026-09-21T18:32:20.762Z",
@@ -1762,6 +1762,52 @@
       "previousObservedAt": "2026-09-21T21:40:41+00:00",
       "nextObservedAt": "2026-09-21T21:49:33+00:00",
       "cause": "unknown; observed tool/clock gap, no inferred network or host root cause"
-    }
-  }
+    },
+    "manifest": "artifacts/releases/final-20260921.json",
+    "manifestSha256": "10e4e035587166263dfba9d91e2350b84b43c44d15222d561dba84852e51f024",
+    "sourceCommit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
+    "tag": "stable-final-20260921",
+    "tagCommit": "44899b9b40a82d6b08d0ac16efeb01c0d2c9ba34",
+    "remoteTagPushOriginalHandle": 25333,
+    "remoteTagPushExitCode": 0,
+    "verification": "deploy/verification/final-manifest-verification.json",
+    "verificationExecution": "deploy/verification/final-manifest-execution.json",
+    "softwareDelivery": "artifacts/delivery/software/checks.json",
+    "softwareExecution": "artifacts/delivery/software/execution.json"
+  },
+  "finalMedia": {
+    "state": "VIDEO_AND_PPT_REVIEWED_ARTIFACT_CHECKS_PASSED",
+    "recorder": {
+      "owner": "/root/media",
+      "handle": 32276,
+      "exitCode": 0
+    },
+    "observer": {
+      "owner": "/root/media",
+      "handle": 53851,
+      "exitCode": 0
+    },
+    "asr": {
+      "owner": "/root/media",
+      "handle": 21913,
+      "exitCode": 0
+    },
+    "video": "artifacts/video/GRID-VPP-demo-ko.mp4",
+    "review": "artifacts/video/root-review.json",
+    "verification": "artifacts/video/verification.json",
+    "recovery": "artifacts/video/source/demo-recovery.json",
+    "ownedRtuId": "8201415e-11b5-4223-97f4-5f470ce9db3d",
+    "activeOwner": null,
+    "doNotReplay": "Registration, MQTT commands, scenario load and recovery have completed. Do not repeat uncertain writes or create a second RTU.",
+    "presentation": "artifacts/presentation/GRID-VPP-presentation-ko.pptx",
+    "presentationRootReview": "artifacts/presentation/root-review.json"
+  },
+  "observationHandleSemantics": "Handles preserve the last owned epoch for metadata consistency. Process state EXITED/active=false and original terminal receipts are authoritative; never restart ended observers.",
+  "operationalCloseoutAt": "2026-09-21T22:03:17.145802+00:00",
+  "ownedCleanup": "artifacts/delivery/owned-cleanup/summary.json",
+  "finalArtifactInventory": "artifacts/delivery/final-inventory.json",
+  "finalArtifactExecution": "artifacts/delivery/final-inventory-execution.json",
+  "finalRoleCloseout": "docs/operations/final-role-closeout.json",
+  "finalMainNormal": "deploy/verification/final-main-health.json",
+  "automationState": "PAUSED"
 }

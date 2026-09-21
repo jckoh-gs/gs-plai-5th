@@ -1,0 +1,21 @@
+{
+  "at": "2026-09-21T21:54:06.029603+00:00",
+  "issue": "ISSUE034",
+  "state": "RESTORE_INCOMPLETE_FALLBACK_SELECTED",
+  "evidenceDirectory": "deploy/verification/final-restore-20260921",
+  "hashesVerified": 35,
+  "inventorySha256": "18d8576480d2baf060afd905c2eb14f040bcca8495e825291b949601954f207c",
+  "summarySha256": "f1f2bde102b34bb07cc68061cb69be8627b8f19042dad2c6e357359a4cc2db92",
+  "restoreHandle": 75944,
+  "restoreExit": 125,
+  "backupHandle": 68920,
+  "backupExit": 0,
+  "cleanupHandle": 15447,
+  "cleanupExit": 0,
+  "selectedManifestSha256": "10e4e035587166263dfba9d91e2350b84b43c44d15222d561dba84852e51f024",
+  "selectedBackupSha256": "5ff34f3e5dbc52f07b899f0c8013db130e5fd13c3d315e92aa512d474ea1f782",
+  "newSnapshotSelected": false,
+  "sourceInspectionOnly": true,
+  "rootCause": "unknown",
+  "finalMediaOrGoalApproved": false
+}

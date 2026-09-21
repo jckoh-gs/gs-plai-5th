@@ -1,0 +1,532 @@
+{
+  "checkedAt": "2026-09-21T22:01:50.863368+00:00",
+  "version": "1.7.1",
+  "gateway": {
+    "connected": true,
+    "clientId": "vpp-scada-lab",
+    "lastError": null,
+    "rssBytes": 149192704,
+    "uptimeSeconds": 14554.668805853,
+    "scope": "shared Node process; not per-RTU hardware"
+  },
+  "plants": [
+    {
+      "id": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+      "runId": "c83f35c0-23b7-45c5-b567-0dbf1fb3e1a0",
+      "connection": {
+        "connected": true,
+        "clientId": "vpp-scada-lab-c81f4573-1987-4c01-8d7c-b1e7aa5af38f"
+      },
+      "rtuMetrics": {
+        "generatedSamples": 48286,
+        "firstSampleAt": "2026-09-21T08:33:41.136Z",
+        "lastSampleAt": "2026-09-21T22:01:49.661Z",
+        "telemetryAttempts": 1607,
+        "telemetryConfirmed": 1607,
+        "telemetryFailed": 0,
+        "skippedPublications": 0,
+        "confirmedBytes": 152931705,
+        "lastConfirmedAt": "2026-09-21T22:01:26.028Z",
+        "lastPubackMs": 16,
+        "lastPayloadBytes": 70769,
+        "lastBatchSamples": 22,
+        "lastError": null,
+        "commandsReceived": 1,
+        "commandsAccepted": 1,
+        "commandsRejected": 0,
+        "commandsDuplicate": 0,
+        "lastCommandMs": 9,
+        "recentCommands": [
+          {
+            "commandId": "89e8ff6f-4e22-4ae5-9330-29dfb53f4164",
+            "status": "accepted",
+            "source": "MQTT",
+            "duplicate": false,
+            "timestamp": "2026-09-21T08:36:50.494Z"
+          }
+        ],
+        "telemetryPending": 0,
+        "clientId": "vpp-scada-lab-c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+        "telemetryTopic": "vpp/rtu/c81f4573-1987-4c01-8d7c-b1e7aa5af38f/telemetry",
+        "pendingMessages": 0,
+        "oldestPendingAt": null,
+        "unbatchedSamples": 24,
+        "connected": true,
+        "sampleAgeSeconds": 0.981,
+        "pubackAgeSeconds": 24.614,
+        "completionRate": 1,
+        "health": "HEALTHY"
+      },
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      },
+      "outbox": {
+        "pendingMessages": 0,
+        "oldestPendingAt": null,
+        "unbatchedSamples": 24
+      }
+    },
+    {
+      "id": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+      "runId": "1ad54156-ba54-4fc0-8bbb-ec7595e25a80",
+      "connection": {
+        "connected": true,
+        "clientId": "vpp-scada-lab-ed0ac897-69d6-4e7c-ae0a-9d212f272db6"
+      },
+      "rtuMetrics": {
+        "generatedSamples": 48286,
+        "firstSampleAt": "2026-09-21T08:33:41.146Z",
+        "lastSampleAt": "2026-09-21T22:01:49.674Z",
+        "telemetryAttempts": 1963,
+        "telemetryConfirmed": 1963,
+        "telemetryFailed": 0,
+        "skippedPublications": 0,
+        "confirmedBytes": 190932597,
+        "lastConfirmedAt": "2026-09-21T22:01:26.114Z",
+        "lastPubackMs": 9,
+        "lastPayloadBytes": 16562,
+        "lastBatchSamples": 3,
+        "lastError": null,
+        "commandsReceived": 0,
+        "commandsAccepted": 0,
+        "commandsRejected": 0,
+        "commandsDuplicate": 0,
+        "lastCommandMs": null,
+        "recentCommands": [],
+        "telemetryPending": 0,
+        "clientId": "vpp-scada-lab-ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+        "telemetryTopic": "vpp/rtu/ed0ac897-69d6-4e7c-ae0a-9d212f272db6/telemetry",
+        "pendingMessages": 0,
+        "oldestPendingAt": null,
+        "unbatchedSamples": 24,
+        "connected": true,
+        "sampleAgeSeconds": 0.971,
+        "pubackAgeSeconds": 24.531,
+        "completionRate": 1,
+        "health": "HEALTHY"
+      },
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      },
+      "outbox": {
+        "pendingMessages": 0,
+        "oldestPendingAt": null,
+        "unbatchedSamples": 24
+      }
+    },
+    {
+      "id": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+      "runId": "0c51962b-d6a3-4513-8118-c54f0bbefb3b",
+      "connection": {
+        "connected": true,
+        "clientId": "vpp-scada-lab-adb56898-ae8d-4628-9db1-6d33df5417b5"
+      },
+      "rtuMetrics": {
+        "generatedSamples": 48286,
+        "firstSampleAt": "2026-09-21T08:33:41.153Z",
+        "lastSampleAt": "2026-09-21T22:01:49.684Z",
+        "telemetryAttempts": 2187,
+        "telemetryConfirmed": 2187,
+        "telemetryFailed": 0,
+        "skippedPublications": 0,
+        "confirmedBytes": 199273301,
+        "lastConfirmedAt": "2026-09-21T22:01:26.118Z",
+        "lastPubackMs": 7,
+        "lastPayloadBytes": 16442,
+        "lastBatchSamples": 3,
+        "lastError": null,
+        "commandsReceived": 0,
+        "commandsAccepted": 0,
+        "commandsRejected": 0,
+        "commandsDuplicate": 0,
+        "lastCommandMs": null,
+        "recentCommands": [],
+        "telemetryPending": 0,
+        "clientId": "vpp-scada-lab-adb56898-ae8d-4628-9db1-6d33df5417b5",
+        "telemetryTopic": "vpp/rtu/adb56898-ae8d-4628-9db1-6d33df5417b5/telemetry",
+        "pendingMessages": 0,
+        "oldestPendingAt": null,
+        "unbatchedSamples": 24,
+        "connected": true,
+        "sampleAgeSeconds": 0.964,
+        "pubackAgeSeconds": 24.53,
+        "completionRate": 1,
+        "health": "HEALTHY"
+      },
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      },
+      "outbox": {
+        "pendingMessages": 0,
+        "oldestPendingAt": null,
+        "unbatchedSamples": 24
+      }
+    },
+    {
+      "id": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+      "runId": "efdcb3c8-851b-42ea-8501-61907552b932",
+      "connection": {
+        "connected": true,
+        "clientId": "vpp-scada-lab-90528620-2d53-4a06-8945-aa7a37e0eaee"
+      },
+      "rtuMetrics": {
+        "generatedSamples": 47912,
+        "firstSampleAt": "2026-09-21T08:40:03.312Z",
+        "lastSampleAt": "2026-09-21T22:01:49.691Z",
+        "telemetryAttempts": 814,
+        "telemetryConfirmed": 814,
+        "telemetryFailed": 0,
+        "skippedPublications": 0,
+        "confirmedBytes": 79425626,
+        "lastConfirmedAt": "2026-09-21T22:01:25.944Z",
+        "lastPubackMs": 19,
+        "lastPayloadBytes": 99482,
+        "lastBatchSamples": 60,
+        "lastError": null,
+        "commandsReceived": 2,
+        "commandsAccepted": 1,
+        "commandsRejected": 0,
+        "commandsDuplicate": 1,
+        "lastCommandMs": 4,
+        "recentCommands": [
+          {
+            "commandId": "3cf901f9-ef37-40a6-803d-eee07c1efbe8",
+            "status": "completed",
+            "source": "MQTT",
+            "duplicate": true,
+            "timestamp": "2026-09-21T08:40:05.541Z"
+          },
+          {
+            "commandId": "3cf901f9-ef37-40a6-803d-eee07c1efbe8",
+            "status": "accepted",
+            "source": "MQTT",
+            "duplicate": false,
+            "timestamp": "2026-09-21T08:40:04.699Z"
+          }
+        ],
+        "telemetryPending": 0,
+        "clientId": "vpp-scada-lab-90528620-2d53-4a06-8945-aa7a37e0eaee",
+        "telemetryTopic": "vpp/rtu/90528620-2d53-4a06-8945-aa7a37e0eaee/telemetry",
+        "pendingMessages": 0,
+        "oldestPendingAt": null,
+        "unbatchedSamples": 24,
+        "connected": true,
+        "sampleAgeSeconds": 0.96,
+        "pubackAgeSeconds": 24.707,
+        "completionRate": 1,
+        "health": "HEALTHY"
+      },
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      },
+      "outbox": {
+        "pendingMessages": 0,
+        "oldestPendingAt": null,
+        "unbatchedSamples": 24
+      }
+    },
+    {
+      "id": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "runId": "26d2830a-4774-4f97-996d-a36dc227a62c",
+      "connection": {
+        "connected": true,
+        "clientId": "vpp-scada-lab-f49684af-b7dd-47b2-b360-8e7d28ef751b"
+      },
+      "rtuMetrics": {
+        "generatedSamples": 47220,
+        "firstSampleAt": "2026-09-21T08:51:44.909Z",
+        "lastSampleAt": "2026-09-21T22:01:49.697Z",
+        "telemetryAttempts": 802,
+        "telemetryConfirmed": 802,
+        "telemetryFailed": 0,
+        "skippedPublications": 0,
+        "confirmedBytes": 78660817,
+        "lastConfirmedAt": "2026-09-21T22:01:25.947Z",
+        "lastPubackMs": 19,
+        "lastPayloadBytes": 99970,
+        "lastBatchSamples": 60,
+        "lastError": null,
+        "commandsReceived": 20,
+        "commandsAccepted": 10,
+        "commandsRejected": 0,
+        "commandsDuplicate": 10,
+        "lastCommandMs": 5,
+        "recentCommands": [
+          {
+            "commandId": "247378f3-5d3e-499b-b283-d00cc6672547",
+            "status": "completed",
+            "source": "MQTT",
+            "duplicate": true,
+            "timestamp": "2026-09-21T17:53:58.663Z"
+          },
+          {
+            "commandId": "247378f3-5d3e-499b-b283-d00cc6672547",
+            "status": "accepted",
+            "source": "MQTT",
+            "duplicate": false,
+            "timestamp": "2026-09-21T17:53:33.026Z"
+          },
+          {
+            "commandId": "76168cc6-eb1d-4faa-aaf0-3632709575d1",
+            "status": "completed",
+            "source": "MQTT",
+            "duplicate": true,
+            "timestamp": "2026-09-21T16:42:05.913Z"
+          },
+          {
+            "commandId": "76168cc6-eb1d-4faa-aaf0-3632709575d1",
+            "status": "accepted",
+            "source": "MQTT",
+            "duplicate": false,
+            "timestamp": "2026-09-21T16:41:33.613Z"
+          },
+          {
+            "commandId": "c42602c9-13fc-4cde-b876-cbaebef4d336",
+            "status": "completed",
+            "source": "MQTT",
+            "duplicate": true,
+            "timestamp": "2026-09-21T16:01:42.853Z"
+          },
+          {
+            "commandId": "c42602c9-13fc-4cde-b876-cbaebef4d336",
+            "status": "accepted",
+            "source": "MQTT",
+            "duplicate": false,
+            "timestamp": "2026-09-21T16:01:10.611Z"
+          },
+          {
+            "commandId": "20c5cc32-4a55-47b3-b302-384e90b1ddee",
+            "status": "completed",
+            "source": "MQTT",
+            "duplicate": true,
+            "timestamp": "2026-09-21T14:53:07.177Z"
+          },
+          {
+            "commandId": "20c5cc32-4a55-47b3-b302-384e90b1ddee",
+            "status": "accepted",
+            "source": "MQTT",
+            "duplicate": false,
+            "timestamp": "2026-09-21T14:52:48.282Z"
+          },
+          {
+            "commandId": "daa14196-5610-4c43-85c0-9ca93a46d7da",
+            "status": "completed",
+            "source": "MQTT",
+            "duplicate": true,
+            "timestamp": "2026-09-21T13:47:41.610Z"
+          },
+          {
+            "commandId": "daa14196-5610-4c43-85c0-9ca93a46d7da",
+            "status": "accepted",
+            "source": "MQTT",
+            "duplicate": false,
+            "timestamp": "2026-09-21T13:46:49.578Z"
+          },
+          {
+            "commandId": "5b29decd-ce89-4bf0-aff6-10832d302f16",
+            "status": "completed",
+            "source": "MQTT",
+            "duplicate": true,
+            "timestamp": "2026-09-21T12:15:47.232Z"
+          },
+          {
+            "commandId": "5b29decd-ce89-4bf0-aff6-10832d302f16",
+            "status": "accepted",
+            "source": "MQTT",
+            "duplicate": false,
+            "timestamp": "2026-09-21T12:15:45.897Z"
+          },
+          {
+            "commandId": "8ea20c1e-943e-41c0-8061-5d98e0044264",
+            "status": "completed",
+            "source": "MQTT",
+            "duplicate": true,
+            "timestamp": "2026-09-21T10:06:26.699Z"
+          },
+          {
+            "commandId": "8ea20c1e-943e-41c0-8061-5d98e0044264",
+            "status": "accepted",
+            "source": "MQTT",
+            "duplicate": false,
+            "timestamp": "2026-09-21T10:06:19.374Z"
+          },
+          {
+            "commandId": "ed59e7ea-5e5f-4418-bc7a-ec2b28f67e4e",
+            "status": "completed",
+            "source": "MQTT",
+            "duplicate": true,
+            "timestamp": "2026-09-21T09:32:18.229Z"
+          },
+          {
+            "commandId": "ed59e7ea-5e5f-4418-bc7a-ec2b28f67e4e",
+            "status": "accepted",
+            "source": "MQTT",
+            "duplicate": false,
+            "timestamp": "2026-09-21T09:31:36.718Z"
+          },
+          {
+            "commandId": "676e1aa7-9f18-4ca4-8c42-3f384dd0d9c6",
+            "status": "completed",
+            "source": "MQTT",
+            "duplicate": true,
+            "timestamp": "2026-09-21T09:01:26.750Z"
+          },
+          {
+            "commandId": "676e1aa7-9f18-4ca4-8c42-3f384dd0d9c6",
+            "status": "accepted",
+            "source": "MQTT",
+            "duplicate": false,
+            "timestamp": "2026-09-21T09:01:22.918Z"
+          },
+          {
+            "commandId": "e4aa53b9-14b5-4863-96be-c70ef6eac92a",
+            "status": "completed",
+            "source": "MQTT",
+            "duplicate": true,
+            "timestamp": "2026-09-21T08:52:11.121Z"
+          },
+          {
+            "commandId": "e4aa53b9-14b5-4863-96be-c70ef6eac92a",
+            "status": "accepted",
+            "source": "MQTT",
+            "duplicate": false,
+            "timestamp": "2026-09-21T08:51:45.591Z"
+          }
+        ],
+        "telemetryPending": 0,
+        "clientId": "vpp-scada-lab-f49684af-b7dd-47b2-b360-8e7d28ef751b",
+        "telemetryTopic": "vpp/rtu/f49684af-b7dd-47b2-b360-8e7d28ef751b/telemetry",
+        "pendingMessages": 0,
+        "oldestPendingAt": null,
+        "unbatchedSamples": 24,
+        "connected": true,
+        "sampleAgeSeconds": 0.956,
+        "pubackAgeSeconds": 24.706,
+        "completionRate": 1,
+        "health": "HEALTHY"
+      },
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      },
+      "outbox": {
+        "pendingMessages": 0,
+        "oldestPendingAt": null,
+        "unbatchedSamples": 24
+      }
+    },
+    {
+      "id": "8201415e-11b5-4223-97f4-5f470ce9db3d",
+      "runId": "ea26448c-1362-4c31-b4e7-ad87b4df24bd",
+      "connection": {
+        "connected": true,
+        "clientId": "vpp-scada-lab-8201415e-11b5-4223-97f4-5f470ce9db3d"
+      },
+      "rtuMetrics": {
+        "generatedSamples": 558,
+        "firstSampleAt": "2026-09-21T21:53:08.202Z",
+        "lastSampleAt": "2026-09-21T22:01:49.704Z",
+        "telemetryAttempts": 12,
+        "telemetryConfirmed": 12,
+        "telemetryFailed": 0,
+        "skippedPublications": 0,
+        "confirmedBytes": 914057,
+        "lastConfirmedAt": "2026-09-21T22:01:25.951Z",
+        "lastPubackMs": 21,
+        "lastPayloadBytes": 101620,
+        "lastBatchSamples": 60,
+        "lastError": null,
+        "commandsReceived": 5,
+        "commandsAccepted": 5,
+        "commandsRejected": 0,
+        "commandsDuplicate": 0,
+        "lastCommandMs": 3,
+        "recentCommands": [
+          {
+            "commandId": "c0371c82-a1fb-47f9-9c0b-1c4b2b6505ab",
+            "status": "accepted",
+            "source": "MQTT",
+            "duplicate": false,
+            "timestamp": "2026-09-21T21:55:18.446Z"
+          },
+          {
+            "commandId": "a3b6b0f5-1704-4fbd-8ba8-5ee06bfa4dce",
+            "status": "accepted",
+            "source": "REST",
+            "duplicate": false,
+            "timestamp": "2026-09-21T21:54:25.053Z"
+          },
+          {
+            "commandId": "34f07fe5-59c8-4ba9-bbcc-5f90a38545cd",
+            "status": "accepted",
+            "source": "REST",
+            "duplicate": false,
+            "timestamp": "2026-09-21T21:54:20.062Z"
+          },
+          {
+            "commandId": "07f6aaf6-d8de-4c40-b374-12eb507b7438",
+            "status": "accepted",
+            "source": "REST",
+            "duplicate": false,
+            "timestamp": "2026-09-21T21:54:17.142Z"
+          },
+          {
+            "commandId": "de5a28a8-9f6d-4148-b296-c780151cca70",
+            "status": "accepted",
+            "source": "REST",
+            "duplicate": false,
+            "timestamp": "2026-09-21T21:54:14.263Z"
+          }
+        ],
+        "telemetryPending": 0,
+        "clientId": "vpp-scada-lab-8201415e-11b5-4223-97f4-5f470ce9db3d",
+        "telemetryTopic": "vpp/rtu/8201415e-11b5-4223-97f4-5f470ce9db3d/telemetry",
+        "pendingMessages": 0,
+        "oldestPendingAt": null,
+        "unbatchedSamples": 24,
+        "connected": true,
+        "sampleAgeSeconds": 0.951,
+        "pubackAgeSeconds": 24.704,
+        "completionRate": 1,
+        "health": "HEALTHY"
+      },
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      },
+      "outbox": {
+        "pendingMessages": 0,
+        "oldestPendingAt": null,
+        "unbatchedSamples": 24
+      }
+    }
+  ]
+}

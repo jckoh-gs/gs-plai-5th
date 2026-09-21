@@ -1,0 +1,7 @@
+{
+  "releaseManifest": "artifacts/releases/final-20260921.json",
+  "videoDir": "artifacts/video",
+  "factsFile": "artifacts/media-preparation/final-facts.json",
+  "outputConfig": "artifacts/media-preparation/final-deck.json",
+  "presentationDir": "artifacts/presentation"
+}

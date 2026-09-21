@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "manifest": "artifacts/releases/final-20260921.json",
+  "checkedHashes": 2280,
+  "remoteImageMatched": true,
+  "scope": "File integrity and optional deployed identity only; acceptance, restore and media verdicts remain independent"
+}

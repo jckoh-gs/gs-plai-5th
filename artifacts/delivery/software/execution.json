@@ -1,0 +1,29 @@
+{
+  "state": "SOFTWARE_GIT_DELIVERY_CHECKS_PASSED",
+  "originalToolSession": 26779,
+  "tool": "write_stdin",
+  "terminalChunkId": "fe6a21",
+  "exitCode": 0,
+  "output": "artifacts/delivery/software/checks.json",
+  "outputSha256": "4be1b2f45fc2b859a02db25743245d7490aee7f372d52da90aeb5e0bc1ffe888",
+  "stdoutReceipt": {
+    "result": "SOFTWARE_GIT_DELIVERY_CHECKS_PASSED",
+    "output": "artifacts/delivery/software/checks.json",
+    "outputSha256": "4be1b2f45fc2b859a02db25743245d7490aee7f372d52da90aeb5e0bc1ffe888",
+    "counts": {
+      "source": 193,
+      "runtime": 28,
+      "supplemental": 4,
+      "deliveredAtMain": 197,
+      "testsAtSource": 65,
+      "scriptsAtSource": 84,
+      "samplesAtSource": 3
+    },
+    "completionClaim": false,
+    "scope": "Valid only with process exit 0 and the exact saved report hash"
+  },
+  "manifest": "artifacts/releases/final-20260921.json",
+  "checkpointTag": "stable-final-20260921",
+  "runtimeTag": "stable-runtime-v1.7.1-40b9ed8",
+  "scope": "Actual final software Git inventory and fresh approved remote refs. Media and whole-goal completion remain separate."
+}

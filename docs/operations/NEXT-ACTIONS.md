@@ -39,11 +39,13 @@ revision3 보존 커밋9c90808 전달 뒤 [19:24Z 읽기 점검](../../artifacts
 
 ## 다음 작업과 원래 마감
 
+최신진행: 최종새영상295.03초와같은영상14장PPT를 실제생성·검수했고 final-inventory154파일/실패0을확인했다. 22:03:17Z에 owned감독기/전원유지와임시포트를정리하고gridheartbeat를PAUSED했다. 운영k3s/PVC와private백업은보존했다. 재개시이14시간작업을새로시작하지않는다. 최종제품판정과공개근거Git전달만확인하고실제완료/제약을인계한다. [최종정리](final-closeout.json)와[재개점검](../../artifacts/checkpoints/network-resume-final/summary.json)을먼저읽는다.
+
 실제 동결을21:37:40Z에 확인했다. 원래 primary72957·audit8133은 모두21:37:33.082Z planned_stop/exit0으로 종료됐으며 [최종 관측 원문](../../artifacts/checkpoints/soak-1.7.1-final/summary.json)에 각2080메시지·오류와 전체관측/실행소스/원래종료영수증을 보존했다. 두관측기는 재시작하지 않는다. supervisor48590/3104·18884는 최종촬영을 위해 유지한다. [실제 최종창 진행](final-closeout.json)을 우선하며 새백업·동일snapshot복원과최종manifest는 현재진행중이다. 검증된 새영상→같은영상PPT→인도/정리 순서와 원래마감은 그대로다.
 
 [실제 동결 전 검토](prefreeze-review.json)를21:28~21:31Z에 완료했다. 제품 REVIEW058·보안·이슈 역할은 현재1.7.1 선택을 새로 막는 입증 결함을 찾지 못했고 기존 잔여 위험·20개 최종 게이트를 유지했다.21:29 실제 Pod/이미지·registry Ready/35 BoundPVC와 DB1479634944B·node여유58529443840B·local여유564894715904B를 확인했다. 원격 snapshot/전송본/복원본의 계획 여유량은 현재 DB3배이며 실제 여유공간이 이를 넘는다. 이 관측은 전용PVC 예약이나 미래 성장 보장이 아니다. 이 검토 당시 실제 동결·새백업/복원·최종미디어는 실행 전이었다. 이후 실제 동결 진행은 위 final-closeout 기록을 따른다.
 
-최종 백업 선택은 기존 불변1.7.1/5ff 체크포인트 기록을 보존한 채 별도 `finalReleaseSelection`에 기록한다. 실제 복원이 증명된 선택만 `run.backup`과 새 최종 매니페스트에 연결하며 기존 stable 태그의 백업·복원 근거를 덮어쓰지 않는다. [독립 제품 검토057](../product/REVIEW-057.md)은 이 절차와 생성·검증 코드의 일치를 확인했다. 실제 최종 선택과 매니페스트는 아직 없다.
+최종 백업 선택은 기존 불변1.7.1/5ff 체크포인트 기록을 보존한 채 별도 `finalReleaseSelection`에 기록한다. 실제 복원이 증명된 선택만 `run.backup`과 새 최종 매니페스트에 연결하며 기존 stable 태그의 백업·복원 근거를 덮어쓰지 않는다. [독립 제품 검토057](../product/REVIEW-057.md)은 이 절차와 생성·검증 코드의 일치를 확인했다. 실제 최종 선택과 매니페스트는 final-closeout.json의 finalReleaseSelection에 기록했다.
 
 동결 시 기존 관측기의 원래 핸들 종료0과 각 종료 파일·마지막 poll·전체 로그·실제 소스를 함께 보존한다. [종료 절차의 독립 준비 검토](../issues/evidence/final-observer-closeout-preparation-review.json)는 실제 finally/close 처리와 계획의 일치를 확인했으며 실제 종료나 최종 역할 판정은 아니다. 정상 종료에 따른 연결 해제 증가를 새 장애로 오인하지 않고 감독기와 운영 터널은 최종 촬영까지 유지한다. 정확한 파일과 순서는 [최종 복원 계획](FINAL-RESTORE-PLAN.md)을 따른다.
 

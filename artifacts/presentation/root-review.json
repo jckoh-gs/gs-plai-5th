@@ -1,0 +1,15 @@
+{
+  "reviewedAt": "2026-09-21T22:00:50.608363+00:00",
+  "reviewer": "/root",
+  "pptxSha256": "c1d0e285a6b67c204bc506d81e98b9b4072e0a6a325777f996bb263de0eba538",
+  "directlyViewedAll14RenderedSlides": true,
+  "visualReview": "passed",
+  "claimsReview": "passed",
+  "findings": [
+    "14 rendered slides legible without text overlap or clipping",
+    "Slide4 native architecture shows both telemetry and control directions",
+    "UI screenshots from actual same-video session; scene7 manual weather change and output pictured",
+    "Simple text slides rely on speaker notes for full evidence and limitations; no unverified external production connection claim"
+  ],
+  "nativePowerPointExecutionVerified": false
+}

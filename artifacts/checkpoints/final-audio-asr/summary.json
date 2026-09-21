@@ -1,0 +1,55 @@
+{
+  "status": "TECHNICAL_ASR_RECORDED",
+  "actualTerminalExit": 0,
+  "terminalChunk": "d82422",
+  "receiptSha256": "9101bacd2492a6474549ac8c2509bc01ec665dcec2d213cb9395d79b5f2cfc4f",
+  "videoSha256": "44e7290268c280989d70425f676d66f534ce6cc99223b7afc3372367b88b812c",
+  "cliSha256": "645af2334c629a5ee8ed33b76a2cad4745c9c39c4b003a3ca90616326cb98528",
+  "modelSha256": "1be3a9b2063867b937e64e2ec7483364a79917e157fa98c5d94b5c1fffea987b",
+  "pcmSha256": "9067b623d2f53b116e4926458d6847ba51356eb0116be60db333931fc27223fa",
+  "durationSeconds": 287.602375,
+  "segments": 40,
+  "language": "ko",
+  "promptProvided": false,
+  "directListening": false,
+  "naturalPronunciationVerified": false,
+  "coreContentPresent": [
+    "125kW request and actual completion",
+    "recent maximum20 stored snapshots, not complete audit or external receipt",
+    "weather manual inputs/output change/CSV return",
+    "new run and outbox preserved",
+    "restart retransmission separate evidence",
+    "external operational VPP/cloud unverified"
+  ],
+  "differences": [
+    {
+      "scene": 3,
+      "script": "서버 상태",
+      "asr": "써본 상태"
+    },
+    {
+      "scene": 7,
+      "script": "난수 생성",
+      "asr": "난소 생성"
+    },
+    {
+      "scene": 3,
+      "script": "확인한 뒤 CSV",
+      "asr": "확인한 vCSV"
+    }
+  ],
+  "limits": [
+    "ASR differences cannot distinguish TTS pronunciation from recognizer error",
+    "Long scene3 silence produced parenthetical time hallucinations; original audio and subtitles unchanged"
+  ],
+  "outputs": [
+    {
+      "path": "transcription.srt",
+      "sha256": "864280b56678007ca8d526a7b6b41a5e034c9b70a7033a473a88330f137a28d7"
+    },
+    {
+      "path": "transcription.txt",
+      "sha256": "17d5de2d810ce1ba6d5d662bb52d2201c93a6bc0ad5259bb85ecf0afb0e65453"
+    }
+  ]
+}

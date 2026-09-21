@@ -488,7 +488,7 @@
       "scope": "Current read-only service and actual process identities, saved heartbeat configuration and existing isolated tests. No forced real network outage or AI restart guarantee."
     }
   },
-  "updatedAt": "2026-09-21T21:50:06.637344+00:00",
+  "updatedAt": "2026-09-21T22:03:51.647251+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
@@ -1201,6 +1201,51 @@
       "previousObservedAt": "2026-09-21T21:40:41+00:00",
       "nextObservedAt": "2026-09-21T21:49:33+00:00",
       "cause": "unknown; observed tool/clock gap, no inferred network or host root cause"
-    }
-  }
+    },
+    "manifest": "artifacts/releases/final-20260921.json",
+    "manifestSha256": "10e4e035587166263dfba9d91e2350b84b43c44d15222d561dba84852e51f024",
+    "sourceCommit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
+    "tag": "stable-final-20260921",
+    "tagCommit": "44899b9b40a82d6b08d0ac16efeb01c0d2c9ba34",
+    "remoteTagPushOriginalHandle": 25333,
+    "remoteTagPushExitCode": 0,
+    "verification": "deploy/verification/final-manifest-verification.json",
+    "verificationExecution": "deploy/verification/final-manifest-execution.json",
+    "softwareDelivery": "artifacts/delivery/software/checks.json",
+    "softwareExecution": "artifacts/delivery/software/execution.json"
+  },
+  "finalMedia": {
+    "state": "VIDEO_AND_PPT_REVIEWED_ARTIFACT_CHECKS_PASSED",
+    "recorder": {
+      "owner": "/root/media",
+      "handle": 32276,
+      "exitCode": 0
+    },
+    "observer": {
+      "owner": "/root/media",
+      "handle": 53851,
+      "exitCode": 0
+    },
+    "asr": {
+      "owner": "/root/media",
+      "handle": 21913,
+      "exitCode": 0
+    },
+    "video": "artifacts/video/GRID-VPP-demo-ko.mp4",
+    "review": "artifacts/video/root-review.json",
+    "verification": "artifacts/video/verification.json",
+    "recovery": "artifacts/video/source/demo-recovery.json",
+    "ownedRtuId": "8201415e-11b5-4223-97f4-5f470ce9db3d",
+    "activeOwner": null,
+    "doNotReplay": "Registration, MQTT commands, scenario load and recovery have completed. Do not repeat uncertain writes or create a second RTU.",
+    "presentation": "artifacts/presentation/GRID-VPP-presentation-ko.pptx",
+    "presentationRootReview": "artifacts/presentation/root-review.json"
+  },
+  "operationalCloseoutAt": "2026-09-21T22:03:17.145802+00:00",
+  "ownedCleanup": "artifacts/delivery/owned-cleanup/summary.json",
+  "finalArtifactInventory": "artifacts/delivery/final-inventory.json",
+  "finalArtifactExecution": "artifacts/delivery/final-inventory-execution.json",
+  "finalRoleCloseout": "docs/operations/final-role-closeout.json",
+  "finalMainNormal": "deploy/verification/final-main-health.json",
+  "automationState": "PAUSED"
 }

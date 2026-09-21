@@ -31,6 +31,8 @@
 
 - ISSUE033: **RECOVERED_CAUSE_UNKNOWN — 21:08 관측 단절**. API오류10/primary연결오류61/audit64로 증가하고 새5RTU 공백이 검출됐다. 실제 ready21:10:38.589Z, 원인미확정; 보존bundle17해시·실제수집exit0 독립대조 완료.
 
+- ISSUE034: **RESTORE_INCOMPLETE_FALLBACK_SELECTED**. 새ee980백업은성공했으나최종복원75944 exit125/컷오프내인수미완료. 정리완료후기존증명된1.7.1/5ff를선택했으며새복원성공으로표시하지않는다.
+
 번호가 없는 IDEA011 명령 목록 실패 가시성 기록도 현재 기능 인수 완료로 정리한다. 로컬8검증군의 합성503·header/body timeout·전환/해제 시험과 실제 main/현재1.7 복원 읽기, REVIEW037/038를 근거로 한다. 이전1.6에 신규 안내가 있다고 주장하지 않는다.
 
 계속 남는 경계: 오디오의 실제 청취 미검증, 최종창 신규 미디어·동일 영상 PPT 검수, 실제 KMA/AWS/운영 VPP 외부 연동 미검증, 단일노드 k3s의 노드 HA 미검증은 해결로 바꾸지 않는다. SEC006의 현재 이미지 OS4매치/2CVE와 인증 사용자 자원 소모 잔여 위험은 보안 원장에 계속 연결한다. npm audit0/전체시험 PASS가 이를 해소하지 않는다. 원래 freeze21:37:33Z/deadline22:07:33Z를 유지하며 역할·전체목표는 아직 종료하지 않는다.
@@ -747,3 +749,18 @@ ISSUE033 영속 후속 독립대조: connection-1.7.1-20260921T2108-persisted-pr
 기존API10/primary연결오류61/audit64·불연속[2,2,2,1,2]는보존됐다. 의도client.end에따른최종disconnect3→4는마지막해제시각=endedAt로대조했고별도새장애로세지않는다. primary마지막poll21:37:24.482Z의APIready/5HEALTHY/pending0을보존했으며API상세없는final과구분했다. auditlatest/result와종료observations는close후기록이다. 이전144·300수신공백과원인미확정사건은종료성공으로해소되지않는다.
 
 이는관측종료·증거보존진행확인만이며전체goal/역할종료·최종영상/PPT완료판정이아니다. 감독기48590및운영터널은촬영용으로유지된보존상태를확인했다. 독립추가원격조회·재시작없음. 근거 evidence/final-observer-closeout-review.json; 원래22:07:33.079Z마감불변.
+
+
+## ISSUE-034 — 최종 새 snapshot 복원 인수 미완료와 검증된 fallback 선택
+
+P2 최종복구증거/시간관리. 상태 RESTORE_INCOMPLETE_FALLBACK_SELECTED/새복원미완료·격리정리완료·기존검증snapshot선택. deploy/verification/final-restore-20260921의35파일해시를독립대조했다. 새backup68920 exit0/1497214976B/SHAee980470…/worker종료·34health표본실패0은백업성공근거다. terminal.json의exit0은이백업감독결과이며복원75944의성공이아니다.
+
+복원75944는실제exit125,create.log는wrapper가raw실패출력을숨긴기록이다. PodReady21:41:13Z였으나21:44:33.079Z컷오프내원래데이터/UI·auth·export·preview/MQTT인수가실행완료되지않았다.21:40:41→다음확인21:49:33의시간/스케줄링간격원인은미확정이며이를앱오류나호스트절전으로단정하지않는다. Ready만으로해당snapshot복원인수를승격하지않는다.
+
+cleanup15447 exit0과cleanup.json은복원replicas0/Pod0/3105·18885비점유/forward미시작/두PVC보존을기록한다. main-after-canonical은원래5RTU설정·run·generator·dataset·scenario불변PASS다. 독립검토는이원문과메타데이터만읽고재실행·원격변경하지않았다.
+
+최종manifest artifacts/releases/final-20260921.json SHA10e4e035…/source21a6bc7…은기존실제동일snapshot양복원검증을가진1.7.1/runtime40b/image234의1075081216B/5ff34를선택했다. 새ee980은추가보관백업이며선택복원근거가아니다. 이전복원근거와이번실패를혼합하지않고원래시간계획의fallback원칙으로기능버전을유지한다. 메인의remote검증6f2bb8 exit0 보고는별도게이트이며이번이슈검토가원격검증을반복한것은아니다.
+
+기존실패·원인미확정030/032/033/024는보존한다. 진행중최종영상·PPT·검수/전체goal·역할종료는아직완료가아니다. 원래22:07:33.079Z마감불변. 독립receipt: evidence/issue034-final-restore-review.json.
+
+ISSUE034 추가연결관측: 관측기정상종료이후supervisor events의21:40~21:50 원문을 별도issue034-supervisor-window.jsonl에행번호·전체읽은prefix길이/SHA와함께보존했다. 타임라인은 [{"at": "2026-09-21T21:40:52.370Z", "state": "disconnected", "reason": "kubernetes_unavailable", "outageAt": "2026-09-21T21:40:52.370Z", "reconnectedAt": "2026-09-21T21:10:38.589Z"}, {"at": "2026-09-21T21:49:24.536Z", "state": "connecting", "reason": "forward_started", "outageAt": "2026-09-21T21:40:52.370Z", "reconnectedAt": "2026-09-21T21:10:38.589Z"}, {"at": "2026-09-21T21:49:54.934Z", "state": "ready", "reason": "verified", "outageAt": null, "reconnectedAt": "2026-09-21T21:49:54.934Z"}] 이다. 복원컷오프/시간간격과겹치는관측이나인과·근본원인을확정하지않는다. primary/audit는21:37:33종료해이후구독누락량은계산할수없고전체무손실/무중단으로해석하지않는다. 회복후21:52시작한녹화가이사건으로중단됐다는증거도아니다. 이전finalrestore35근거는불변이며추가원격·DB조회/재시작없음.

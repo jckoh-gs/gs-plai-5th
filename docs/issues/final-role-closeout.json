@@ -1,0 +1,41 @@
+{
+  "closedAt": "2026-09-21T22:01:22.790243+00:00",
+  "role": "issues",
+  "state": "ROLE_REVIEW_COMPLETE_WITH_RECORDED_RESIDUALS",
+  "selectedVersion": "1.7.1",
+  "selectedSnapshot": "5ff34f3e5dbc52f07b899f0c8013db130e5fd13c3d315e92aa512d474ea1f782",
+  "sourceHashes": {
+    "artifacts/releases/final-20260921.json": "10e4e035587166263dfba9d91e2350b84b43c44d15222d561dba84852e51f024",
+    "deploy/verification/final-restore-20260921/summary.json": "f1f2bde102b34bb07cc68061cb69be8627b8f19042dad2c6e357359a4cc2db92",
+    "artifacts/video/source/demo-recovery.json": "db5938a44e27bfa47404f79c930141c7c487c2906f1a9233283c1df46bff7401",
+    "artifacts/video/root-review.json": "4bccbbe88788d17d4470ae70c1ef1f6280916b0a2c002ed4a79d63f1345e70c3",
+    "artifacts/presentation/verification.json": "f2b7bde984ce9bb431f680d2fbc82b75ca64f69ce2a32e7e119b89189ef13447",
+    "artifacts/presentation/root-review.json": "e09ac6b548dec6065e003937d6769f42a8569a03b5d43e3b1ef51ef6885395a7",
+    "docs/issues/evidence/final-observer-closeout-review.json": "703d8fb809817a1abc011a53beb7c700a396d9391c47d837033e67b1bd748b0b",
+    "docs/issues/evidence/issue034-final-restore-review.json": "87520e860c74d26585d5e495767d36b2b535629736b5ce211bbc77cd28a3fbc0"
+  },
+  "ownedDemoRecovery": "PASS",
+  "preexistingFiveUnchanged": true,
+  "sameVideoDeckBindingVerified": true,
+  "reportedOriginalMediaHandles": {
+    "recorder32276": 0,
+    "observer53851": 0,
+    "asr21913": 0,
+    "ppt10061": 0
+  },
+  "mediaTerminalScope": "Original exit codes supplied by root; saved visual/claims/recovery receipts independently read",
+  "unresolvedRootCauseIssues": [
+    "024",
+    "030",
+    "032",
+    "033",
+    "034"
+  ],
+  "remainingRootActions": [
+    "Ended observation handle metadata reconciliation",
+    "Final owned cleanup and delivery acceptance"
+  ],
+  "directListeningPerformed": false,
+  "goalCompletionClaim": false,
+  "newRuntimeTests": false
+}

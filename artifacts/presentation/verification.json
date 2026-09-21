@@ -1,0 +1,14 @@
+{
+  "rehearsal": false,
+  "createdAt": "2026-09-21T21:59:38.557Z",
+  "releaseCommit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
+  "manifestSha256": "10e4e035587166263dfba9d91e2350b84b43c44d15222d561dba84852e51f024",
+  "videoSha256": "44e7290268c280989d70425f676d66f534ce6cc99223b7afc3372367b88b812c",
+  "slideCount": 14,
+  "renderedEverySlide": true,
+  "editableTextAndArchitecture": true,
+  "visualReview": "passed",
+  "claimsReview": "passed",
+  "validationReceipt": "validation.json",
+  "reproductionManifest": "reproduction-manifest.json"
+}

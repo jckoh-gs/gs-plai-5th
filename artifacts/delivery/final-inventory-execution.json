@@ -1,0 +1,15 @@
+{
+  "recordedAt": "2026-09-21T22:01:09.473076+00:00",
+  "command": "python3 scripts/deadline-command.py --timeout-seconds60 -- node scripts/verify-delivery.mjs --manifest artifacts/releases/final-20260921.json --video-dir artifacts/video --deck-dir artifacts/presentation --report artifacts/delivery/final-inventory.json",
+  "originalToolChunk": "26d343",
+  "exitCode": 0,
+  "wallSeconds": 0.475134166,
+  "stdout": {
+    "result": "ARTIFACT_CHECKS_PASSED",
+    "files": 154,
+    "failedChecks": 0,
+    "failures": [],
+    "completionClaim": false
+  },
+  "reportSha256": "459a42d5749b1c45105d210ba296b3da1c53fc50dc82cce8dbd9e3c95b267471"
+}

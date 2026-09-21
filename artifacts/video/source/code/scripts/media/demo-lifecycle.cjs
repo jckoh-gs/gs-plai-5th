@@ -1,0 +1,63 @@
+// Private, resumable ownership journal. Never resets pre-existing RTUs.
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const generatorKeys=['ratedKw','rampKwPerSec','on','limitPct','targetLimitKw','startupDelaySeconds','cutInMs','ratedWindMs','cutOutMs','windCurve','temperatureCoefficient','solarEfficiency'];
+const replayKeys=['speed','paused','seed','noisePct','freezeLiveWeather'];
+const weatherKeys=['wind_speed_ms','wind_direction_deg','irradiance_wm2','temperature'];
+const weatherBaselineBasis='actual201-and-submitted-csv-without-weather-overlays';
+const pick=(o,keys)=>Object.fromEntries(keys.filter(k=>Object.hasOwn(o||{},k)).map(k=>[k,structuredClone(o[k])]));
+const stable=o=>JSON.stringify(o);
+const hash=o=>crypto.createHash('sha256').update(stable(o)).digest('hex');
+const projection=p=>({id:p.id,runId:p.runId,name:p.name,type:p.type,mode:p.mode,station:p.station,dataset:p.dataset,irradianceDataset:p.irradianceDataset,generators:p.generators.map(g=>({id:g.id,...pick(g,generatorKeys)})),replay:pick(p.replay,replayKeys),faults:structuredClone(p.faults)});
+const fingerprint=p=>({name:p.name,type:p.type,count:p.generators.length,ratedKw:p.generators.map(g=>g.ratedKw),rampKwPerSec:p.generators.map(g=>g.rampKwPerSec)});
+const weatherConfiguration=p=>({mode:p.mode,...pick(p.weather,weatherKeys)});
+function captureWeatherConfiguration(plant,request){
+ // publicPlant exposes effective weather. CSV/irradiance overlays must not be
+ // mistaken for the hidden manual input configuration during cleanup.
+ if(request===undefined)return null; // Historical journals made no weather claim.
+ if(typeof request?.csv!=='string')throw Error('Weather demo requires the actual submitted CSV');
+ const columns=request.csv.replace(/^\uFEFF/,'').split(/\r?\n/,1)[0].split(/[\t,]/).map(x=>x.trim().toLowerCase());
+ const allowed=new Set(['timestamp','power_kw','wind_power_kw','solar_power_kw','voltage','current_a']);
+ if(!columns.includes('timestamp')||columns.some(x=>!allowed.has(x))||new Set(columns).size!==columns.length)throw Error('Weather demo CSV must omit weather overlays and use explicit supported headers');
+ if(plant.mode!=='csv'||plant.irradianceDataset!=null||!weatherKeys.every(k=>typeof plant.weather?.[k]==='number'&&Number.isFinite(plant.weather[k])))throw Error('Registration weather settings missing or obscured; no baseline invented');
+ return weatherConfiguration(plant);
+}
+const matches=(p,intent)=>p.name===intent.name&&p.type===intent.type&&p.generators.length===intent.count&&p.generators.every(g=>g.ratedKw===intent.ratedKw&&g.rampKwPerSec===intent.rampKwPerSec);
+const delta=(current,target)=>Object.fromEntries(Object.entries(target).filter(([k,v])=>stable(current?.[k])!==stable(v)));
+function atomic(file,data){fs.mkdirSync(path.dirname(file),{recursive:true,mode:0o700});const temp=file+'.'+crypto.randomUUID()+'.tmp',fd=fs.openSync(temp,'wx',0o600);try{fs.writeFileSync(fd,JSON.stringify(data,null,2)+'\n');fs.fsyncSync(fd);}finally{fs.closeSync(fd);}fs.renameSync(temp,file);}
+function createLifecycle({baseUrl,tokenFile,journalPath,deadlineAt,runId,productVersion}){
+ const url=new URL(baseUrl);if(url.protocol!=='http:'||!['127.0.0.1','localhost'].includes(url.hostname)||url.username||url.password||url.search||url.hash||url.pathname!=='/')throw Error('Demo recovery requires HTTP loopback origin');
+ if(!path.isAbsolute(tokenFile)||!path.isAbsolute(journalPath))throw Error('Private token and journal require absolute file paths');
+ if(typeof runId!=='string'||!runId||typeof productVersion!=='string'||!productVersion)throw Error('Original run and product version required');
+ const original=Date.parse(deadlineAt);if(!Number.isFinite(original))throw Error('Invalid original deadline');const stopAt=Math.min(original,Date.now()+60000);
+ const remaining=()=>{const n=stopAt-Date.now();if(n<=0)throw Error('Demo recovery deadline expired');return n;};remaining();
+ const token=fs.readFileSync(tokenFile,'utf8').trim();let journal=fs.existsSync(journalPath)?JSON.parse(fs.readFileSync(journalPath)):null;
+ if(journal&&(journal.baseUrl!==url.origin||journal.deadlineAt!==deadlineAt||journal.runId!==runId||journal.productVersion!==productVersion))throw Error('Recovery journal binding mismatch');
+ const save=()=>{remaining();atomic(journalPath,journal)};
+ const request=async(route,method='GET',body)=>{remaining();try{const response=await fetch(url.origin+'/api'+route,{method,headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body),signal:AbortSignal.timeout(Math.min(5000,remaining())),redirect:'error'});if(!response.ok)throw Error();const result=await response.json();remaining();return result;}catch{throw Error('Demo API request failed or timed out; reconcile before retry');}};
+ const state=async()=>{const s=await request('/state');if(s.version!==productVersion||!Array.isArray(s.plants))throw Error('Demo runtime version mismatch');return s;};
+ const begin=async()=>{if(journal){if(journal.intent||journal.owned)throw Error('Existing registration must be reconciled, never overwritten');const s=await state();if(journal.existing.some(before=>{const p=s.plants.find(p=>p.id===before.id);return !p||stable(projection(p))!==stable(before);})||s.plants.length!==journal.existing.length)throw Error('Existing baseline differs; no automatic reuse');return {existingIds:journal.existing.map(p=>p.id),reused:true};}const s=await state();journal={schemaVersion:1,baseUrl:url.origin,deadlineAt,runId,productVersion,createdAt:new Date().toISOString(),existing:s.plants.map(projection),intent:null,owned:null};save();return {existingIds:journal.existing.map(p=>p.id)};};
+ const prepareRegistration=spec=>{if(!journal||journal.intent||journal.owned)throw Error('Registration intent already exists or journal missing');if(typeof spec.name!=='string'||!spec.name||journal.existing.some(p=>p.name===spec.name)||!['wind','solar','hybrid'].includes(spec.type)||!Number.isInteger(spec.count)||spec.count<1||!Number.isFinite(spec.ratedKw)||!Number.isFinite(spec.rampKwPerSec))throw Error('Invalid registration fingerprint');journal.intent={...pick(spec,['name','type','count','ratedKw','rampKwPerSec']),preparedAt:new Date().toISOString()};save();};
+ // Creation time is a server identity field, never ordered against the workstation clock.
+ const candidate=p=>journal.intent&&typeof p?.id==='string'&&p.id&&typeof p.runId==='string'&&p.runId&&!journal.existing.some(x=>x.id===p.id)&&Array.isArray(p.generators)&&matches(p,journal.intent)&&typeof p.createdAt==='string'&&Number.isFinite(Date.parse(p.createdAt));
+ const captureRegistration=(plant,status=201,submittedRequest)=>{if(status!==201||!journal?.intent||journal.owned||!candidate(plant))throw Error('Registration response ownership mismatch');const weatherBaseline=captureWeatherConfiguration(plant,submittedRequest);journal.owned={id:plant.id,runId:plant.runId,createdAt:plant.createdAt,fingerprint:fingerprint(plant),baseline:projection(plant),...(weatherBaseline?{weatherConfigurationBaseline:weatherBaseline,weatherConfigurationBasis:weatherBaselineBasis,weatherSourceAtRegistration:plant.weatherSource??null}:{}),capturedAt:new Date().toISOString(),basis:'actual201'};save();return {ownedId:plant.id};};
+ const reconcile=async()=>{if(!journal)throw Error('Journal missing');const s=await state();if(journal.restoreIntent){const error=Error('Planned scenario response unresolved; no automatic write');error.code='UNRESOLVED_SCENARIO_RESTORE';throw error;}if(journal.owned){const p=s.plants.find(p=>p.id===journal.owned.id);if(!p||p.runId!==journal.owned.runId||p.createdAt!==journal.owned.createdAt||p.name!==journal.intent.name||p.type!==journal.intent.type||journal.existing.some(x=>x.id===p.id))throw Error('Owned RTU identity changed; no automatic write');return p;}const candidates=s.plants.filter(candidate);if(candidates.length!==1)throw Error('Registration ownership ambiguous or absent; no automatic write');journal.reconciled={id:candidates[0].id,at:new Date().toISOString(),baselineMissing:true};save();const error=Error('Unique registration reconciled but initial baseline missing; no automatic write');error.code='NO_BASELINE_NEEDS_MAIN_RECONCILIATION';error.rtuId=candidates[0].id;throw error;};
+ const prepareScenarioRestore=async scenarioId=>{if(!journal?.owned||journal.restoreIntent)throw Error('Owned RTU or settled restore state required');const p=await reconcile();const rows=await request('/scenarios'),scenario=rows.find(s=>s.id===scenarioId);if(!scenario||scenario.plantId!==journal.owned.id)throw Error('Scenario belongs to a different RTU');journal.restoreIntent={scenarioId,fromRunId:p.runId,preparedAt:new Date().toISOString()};save();return {ownedId:p.id,fromRunId:p.runId};};
+ const captureScenarioRestore=(plant,status=200)=>{const intent=journal?.restoreIntent,owned=journal?.owned;if(status!==200||!intent||!owned||plant.id!==owned.id||plant.createdAt!==owned.createdAt||plant.name!==journal.intent.name||plant.type!==journal.intent.type||typeof plant.runId!=='string'||!plant.runId||plant.runId===intent.fromRunId||owned.runId!==intent.fromRunId)throw Error('Scenario response ownership or run transition mismatch');journal.transitions??=[];journal.transitions.push({...intent,toRunId:plant.runId,capturedAt:new Date().toISOString()});owned.runId=plant.runId;journal.restoreIntent=null;save();return {ownedId:owned.id,runId:owned.runId};};
+ const recover=async()=>{remaining();await reconcile();const owned=journal.owned;let writes=0;const current=async()=>{const s=await state(),p=s.plants.find(x=>x.id===owned.id);if(!p||p.runId!==owned.runId||p.createdAt!==owned.createdAt||p.name!==journal.intent.name||p.type!==journal.intent.type||journal.existing.some(x=>x.id===p.id))throw Error('Owned RTU identity changed; no automatic write');return p;};
+  const apply=async(route,method,get,target)=>{const p=await current(),patch=delta(get(p),target);if(Object.keys(patch).length){await request('/plants/'+encodeURIComponent(owned.id)+route,method,patch);writes++;}};
+  await apply('/faults','PATCH',p=>p.faults,owned.baseline.faults);
+  // Restore only captured input settings. The public API truthfully marks
+  // restored numeric inputs as manual; never forge earlier KMA/default provenance.
+  const weatherTarget=owned.weatherConfigurationBasis===weatherBaselineBasis?owned.weatherConfigurationBaseline:null;
+  if(weatherTarget)await apply('/weather','PATCH',weatherConfiguration,weatherTarget);
+  for(const g of owned.baseline.generators)await apply('/generators/'+encodeURIComponent(g.id),'PATCH',p=>p.generators.find(x=>x.id===g.id),pick(g,generatorKeys));
+  // Restore seed configuration using the public API; this intentionally reinitializes rngState.
+  const seedReset=(await current()).replay.seed!==owned.baseline.replay.seed;
+  const replayTarget={...owned.baseline.replay};
+  await apply('/replay','POST',p=>p.replay,replayTarget);
+  const final=await state(),restored=final.plants.find(p=>p.id===owned.id),compared=journal.existing.map(before=>{const now=final.plants.find(p=>p.id===before.id);return {id:before.id,beforeHash:hash(before),afterHash:now?hash(projection(now)):null,unchanged:!!now&&stable(before)===stable(projection(now))};});
+  const actual=projection(restored),weatherMatched=weatherTarget?stable(weatherConfiguration(restored))===stable(weatherTarget):null,matched=stable({...actual,runId:owned.baseline.runId})===stable(owned.baseline)&&weatherMatched!==false;const result={result:matched&&compared.every(x=>x.unchanged)?'PASS':'NEEDS_REVIEW',checkedAt:new Date().toISOString(),ownedId:owned.id,currentRunId:owned.runId,baselineRunId:owned.baseline.runId,baselineHash:hash(owned.baseline),actualHash:hash(actual),settingsMatched:matched,weatherConfigurationMatched:weatherMatched,weatherConfigurationScope:weatherTarget?'Captured own-RTU input values and mode; historical weather provenance is not rewritten':'Journal has no verified weather-input baseline; no weather restoration claim',weatherSourceAtRegistration:owned.weatherSourceAtRegistration??null,weatherSourceAfterRecovery:restored.weatherSource??null,weatherSourceLabelUnchanged:weatherTarget?owned.weatherSourceAtRegistration===restored.weatherSource:null,existing:compared,rngReinitializedBySeedPatch:seedReset,exactPriorRandomTrajectoryRestored:false,scope:'Owned demo RTU settings cleanup only; not goal or media acceptance',writes};journal.lastRecovery=result;save();return result;
+ };
+ return {begin,prepareRegistration,captureRegistration,prepareScenarioRestore,captureScenarioRestore,reconcile,recover};
+}
+module.exports={createLifecycle,projection};

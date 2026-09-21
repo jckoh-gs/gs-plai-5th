@@ -1,0 +1,33 @@
+{
+  "reviewedAt": "2026-09-21T22:00:13.139497+00:00",
+  "presentationSha256": "c1d0e285a6b67c204bc506d81e98b9b4072e0a6a325777f996bb263de0eba538",
+  "videoSha256": "44e7290268c280989d70425f676d66f534ce6cc99223b7afc3372367b88b812c",
+  "reviewer": "media",
+  "renderedSlidesIndividuallyViewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "overflowOrClippingObserved": false,
+  "nativeTextSlides": 14,
+  "nativeNotesParts": 14,
+  "relativeVideoFilenameInEveryNotesPart": true,
+  "architectureNativeTextConfirmed": true,
+  "claimsReview": "passed",
+  "visualReview": "passed",
+  "limitations": [
+    "Native PowerPoint application rendering was not exercised",
+    "Direct audio listening was not performed; local ASR is separate technical evidence"
+  ]
+}

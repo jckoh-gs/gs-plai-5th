@@ -1,0 +1,42 @@
+{
+  "recordedAt": "2026-09-21T22:03:17.032Z",
+  "supervisor": {
+    "originalHandle": 48590,
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "001e2a",
+        "wall_time_seconds": 1.028966167,
+        "exit_code": 0,
+        "original_token_count": 0,
+        "output": ""
+      }
+    }
+  },
+  "powerGuard": {
+    "originalHandle": 11821,
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "05f62d",
+        "wall_time_seconds": 0.00000375,
+        "exit_code": 143,
+        "original_token_count": 0,
+        "output": ""
+      }
+    }
+  },
+  "automationUpdate": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Updated automation in the app."
+      },
+      {
+        "type": "text",
+        "text": "{\"automationId\":\"grid\",\"mode\":\"update\",\"status\":\"PAUSED\"}"
+      }
+    ],
+    "isError": false
+  }
+}

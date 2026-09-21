@@ -1,0 +1,20 @@
+{
+  "at": "2026-09-21T22:02:01.531546+00:00",
+  "owned": [
+    {
+      "pid": 56137,
+      "startIdentity": "Tue Sep 22 02:52:15 2026",
+      "command": "node scripts/connection-supervisor.mjs",
+      "signal": "SIGTERM",
+      "identityVerifiedBeforeSignal": true
+    },
+    {
+      "pid": 80946,
+      "startIdentity": "Mon Sep 21 22:33:11 2026",
+      "command": "caffeinate -i -s -t 30861",
+      "signal": "SIGTERM",
+      "identityVerifiedBeforeSignal": true
+    }
+  ],
+  "remoteWorkloadsChanged": false
+}

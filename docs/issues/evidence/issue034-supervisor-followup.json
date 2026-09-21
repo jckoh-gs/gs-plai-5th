@@ -1,0 +1,46 @@
+{
+  "at": "2026-09-21T21:55:06.436518+00:00",
+  "source": "artifacts/operations/events.jsonl",
+  "sourcePrefixBytes": 70430,
+  "sourcePrefixSha256": "3034c5d29ef7c0027389d9905b895f2fe7789108ac6a8091a6ca7382343add35",
+  "selectedLineNumbers": [
+    93,
+    94,
+    95
+  ],
+  "windowStart": "2026-09-21T21:40:00Z",
+  "windowEndExclusive": "2026-09-21T21:50:00Z",
+  "savedWindow": "docs/issues/evidence/issue034-supervisor-window.jsonl",
+  "windowSha256": "8f38dbc440e06e995630b0d4aa7acf945cf003755954d01e605f44191150768e",
+  "timeline": [
+    {
+      "at": "2026-09-21T21:40:52.370Z",
+      "state": "disconnected",
+      "reason": "kubernetes_unavailable",
+      "outageAt": "2026-09-21T21:40:52.370Z",
+      "reconnectedAt": "2026-09-21T21:10:38.589Z"
+    },
+    {
+      "at": "2026-09-21T21:49:24.536Z",
+      "state": "connecting",
+      "reason": "forward_started",
+      "outageAt": "2026-09-21T21:40:52.370Z",
+      "reconnectedAt": "2026-09-21T21:10:38.589Z"
+    },
+    {
+      "at": "2026-09-21T21:49:54.934Z",
+      "state": "ready",
+      "reason": "verified",
+      "outageAt": null,
+      "reconnectedAt": "2026-09-21T21:49:54.934Z"
+    }
+  ],
+  "scope": "Local supervisor log only; observers had already stopped. No subscriber loss count, root cause or current recording interruption inferred.",
+  "captureExecution": {
+    "chunkId": "16680d",
+    "exitCode": 0,
+    "sessionId": null,
+    "wallTimeSeconds": 0.005596208,
+    "deadlineWrapperSeconds": 15
+  }
+}
