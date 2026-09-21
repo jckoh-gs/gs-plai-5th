@@ -34,4 +34,6 @@
 5. 그 최종창에 **새 실제 한국어 UI 시연 영상**을 녹화한다. 포인터·클릭·확대/축소·음성·자막,8장면과 실제MQTT125/error0/3상태를 검수한다. 자체201 RTU·private journal을 사용하고 recorder 실제종료 뒤 복구를 검증한다. 이전 리허설은 최종 영상이 아니다. 이어 검수된 동일 영상으로 **새 편집가능14장PPT**를 생성·재수입·전장렌더·검수한다. facts.template은1.7.1의 미검수 준비용이며 reviewed=false/preparationTemplate=true를 임의 승인하지 않는다.
 6. **22:07:33.079009Z (한국시간07:07:33)**까지 인도 파일·소스/샘플/시험·원격Git·정상배포와 완료/미완료를 확인한다. [DELIVERY-PLAN](DELIVERY-PLAN.md)에 따라 독립 검수와 해시를 기록한 뒤 이 실행의 heartbeat를 비활성화한다. 마감이나 목표 완료를 거짓으로 연장하지 않는다.
 
+소프트웨어 인도 도구와 현재1.7.1의 실제 Git 준비 관측을 [software-delivery-1.7.1](../../artifacts/checkpoints/software-delivery-1.7.1/summary.json)에 보존했다. source188/runtime28/추가README·환경·Compose·broker4파일, 당시main194파일과 원격 태그 관계를 확인했다. ISSUE029의 빈시험 목록/마감후PASS파일 오인 문제를 수정했고 독립18fixture가 통과했다. 최종창에서는 새 선택 manifest를 포함한 실제 원격 commit/tag로 재검사하고, 파일 단독이 아니라 원래 성공 종료·stdout 영수증·정확SHA를 함께 확인한다. 현재 runtime40b/image234·불변1.7.1 manifest·기존 태그는 변경하지 않았다.
+
 기존 `.idea`, 미디어 리허설, `artifacts/releases/current.json`, 과거 partial과 검증 백업/PVC를 임의 삭제하지 않는다. private SQLite/토큰/Secret 값은 Git·화면·공개 로그에 넣지 않는다. 무관한3101/PID20846,1883브로커를 보존한다. 실제 대기 동작과 미완료 원격 작업을 먼저 확인하고, 필요한 소유 작업만 조정한다.

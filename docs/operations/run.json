@@ -485,7 +485,7 @@
       "scope": "Current read-only service and actual process identities, saved heartbeat configuration and existing isolated tests. No forced real network outage or AI restart guarantee."
     }
   },
-  "updatedAt": "2026-09-21T18:18:59.744061+00:00",
+  "updatedAt": "2026-09-21T18:33:26.191182+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
@@ -770,5 +770,23 @@
     "state": "Ended1.7epoch forplanned1.7.1upgrade",
     "endedAt": "2026-09-21T17:49:45.688Z",
     "archive": "artifacts/checkpoints/soak-1.7.0/summary.json"
+  },
+  "softwareDeliveryPreparation": {
+    "checkedAt": "2026-09-21T18:32:20.762Z",
+    "evidence": "artifacts/checkpoints/software-delivery-1.7.1/summary.json",
+    "sourceCommit": "b6c3cbc5742b095bedb32b5f4dea598e685412f5",
+    "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+    "observedRemoteMain": "5afd2249d173a9414fb7e36eb5c4aa0b7f12bddf",
+    "counts": {
+      "source": 188,
+      "runtime": 28,
+      "supplemental": 4,
+      "deliveredAtMain": 194,
+      "testsAtSource": 63,
+      "scriptsAtSource": 81,
+      "samplesAtSource": 3
+    },
+    "finalWindowRecheckRequired": true,
+    "scope": "Selected1.7.1 exact software Git inventory and remote refs observation with successful execution/hash receipt. Final window and media/role/end gates remain pending."
   }
 }

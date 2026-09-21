@@ -52,6 +52,10 @@ python3 scripts/deadline-command.py --timeout-seconds 70 -- node scripts/verify-
 
 최종창에서는 최종 선택 manifest를 포함한 커밋을 원격 main과 새 불변 checkpoint 태그에 전달한 뒤 같은 검사를 새 출력 경로로 수행한다. 이미 존재하는 stable 태그를 이동하거나 과거 source/runtime 커밋을 덮어쓰지 않는다. 준비 단계의 검사 결과를 이후 최종 refs 관측으로 재사용하지 않는다.
 
+[현재1.7.1 준비 관측](../../artifacts/checkpoints/software-delivery-1.7.1/summary.json)은 source188/runtime28/추가4/main194파일을 실제 Git 객체와 대조했다. source의 scripts81/tests63/samples3 및 package/lock을 포함하며 main5afd224·stable태그c9b·runtime태그40b의 원격 refs를 조회했다. [실행 영수증](../../artifacts/checkpoints/software-delivery-1.7.1/execution.json)의 원래 handle11253 종료0/stdout/정확 파일 SHA를 함께 확인했다. 이는 해당 관측의 전달 근거이며 최종창의 새 refs 관측과 미디어 인도를 대신하지 않는다.
+
+[독립 제품 검토048](../product/REVIEW-048.md)은 저장된 refs/종료 영수증과 실제 로컬 Git 객체의 해시·포함 관계를 대조했다. 현재 준비 인도 공백은 채웠지만 최종 시점의 선택·원격 상태는 다시 관측해야 한다.
+
 ## 동결 전 역할 판정 수집
 
 원래 동결 10분 전인 **2026-09-21T21:27:33.079009Z**부터 선택할 정상 릴리스에 대한 제품·보안·이슈 역할의 마지막 검토를 수집한다. 제품은 채택·보류 아이디어와 요구별 잔여 판정, 보안은 정확 lock/image 및 미적용 취약점의 담당·완화·재검토 조건, 이슈는 미해결 사항·원인 미확정·후속 조치를 확인한다. 이는 준비 시각이며 원래 동결/마감을 바꾸지 않는다. 실제 종료 시 변경분과 담당의 종료 판정을 다시 연결하고 OPS02/AT-OPS03 근거로 남긴다. 기존 문서 링크의 존재나 이 계획 자체를 역할 종료 증거로 취급하지 않는다. [REVIEW042](../product/REVIEW-042.md)의 인도 공백 점검을 따른다.

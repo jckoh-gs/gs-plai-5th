@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-21T18:32:52.621532+00:00",
+  "handle": 11253,
+  "exitCode": 0,
+  "stdout": {
+    "result": "SOFTWARE_GIT_DELIVERY_CHECKS_PASSED",
+    "output": "artifacts/checkpoints/software-delivery-1.7.1/checks.json",
+    "outputSha256": "523fe4093b4008c8fc9402fc7dedbda93a52e391c0902e7c437d3b1c235a4f5a",
+    "counts": {
+      "source": 188,
+      "runtime": 28,
+      "supplemental": 4,
+      "deliveredAtMain": 194,
+      "testsAtSource": 63,
+      "scriptsAtSource": 81,
+      "samplesAtSource": 3
+    },
+    "completionClaim": false,
+    "scope": "Valid only with process exit 0 and the exact saved report hash"
+  },
+  "savedFileHashMatched": true,
+  "checkerCommit": "5afd2249d173a9414fb7e36eb5c4aa0b7f12bddf",
+  "checkerSha256": "2b13af5bdc2c53d48994984af04490060b74e081a90864b13e59d41c9be617fc",
+  "review": "docs/issues/evidence/software-delivery-review.json",
+  "securityReview": "docs/security/SOFTWARE-DELIVERY-REVIEW.md",
+  "scope": "Root observed original finite handle terminal0 and matched its stdout SHA to exact saved file; this is preparation for final selected refs, not final goal completion."
+}
