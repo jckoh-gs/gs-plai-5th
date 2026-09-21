@@ -1,0 +1,48 @@
+{
+  "reviewedAt": "2026-09-21T21:29:13.948264+00:00",
+  "state": "PRE_FREEZE_REVIEW",
+  "version": "1.7.1",
+  "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "verdict": "No newly demonstrated unresolved blocker to selecting current functional version; final delivery gates remain incomplete",
+  "sourceHashes": {
+    "docs/issues/ISSUES.md": "d4a9eaf43695b98691cdc13bc1ef843849aea38fcfab38051e935e8f2a4f4035",
+    "docs/operations/FINAL-RESTORE-PLAN.md": "731b0c79f62d381991f745f9b807af05aca3e48d1529ebc2a80e8598cf836061",
+    "docs/operations/DELIVERY-PLAN.md": "64542a18cd9843abe5b9a12a045a8b18158256126d281672eb70cb18a90a3400",
+    "docs/issues/evidence/issue033-connection-review.json": "aa1d2950b1ca80723e0050054b968adeca2947c1d46404d06f57a804614250b7",
+    "docs/issues/evidence/issue031-after-review.json": "593a711fc482804e8a06cd397712d866b22959e7c30e54a14c159dd566ef6fbe",
+    "docs/issues/evidence/final-observer-closeout-preparation-review.json": "a85cc4e3f57d572afd8f2593254f89c2ddcc52fef95214c8c6be73eca0bfa539",
+    "docs/issues/PRE-FREEZE-VERDICT-1.7.1.md": "86646356cc0fa7a0d72375e1d5891f51a9fd0461b0a824c0692a70eb3295477b"
+  },
+  "localReadExitReceipts": [
+    {
+      "chunkId": "9514ba",
+      "exitCode": 0,
+      "timeoutSeconds": 20
+    },
+    {
+      "chunkId": "0eac14",
+      "exitCode": 0,
+      "timeoutSeconds": 20
+    }
+  ],
+  "unresolvedCauseIssues": [
+    "ISSUE024",
+    "ISSUE030",
+    "ISSUE032",
+    "ISSUE033"
+  ],
+  "blockingOverallCompletion": [
+    "Final selected snapshot and recovery/fallback evidence",
+    "Original observer terminal closeout",
+    "New final8scene video and samevideoPPT, direct review and delivery receipts"
+  ],
+  "noNewRuntimeTests": true,
+  "roleFinalTermination": false,
+  "acceptanceChanged": false,
+  "goalCompletionClaim": false,
+  "writeReceipt": {
+    "chunkId": "913e18",
+    "exitCode": 0,
+    "sessionId": null
+  }
+}

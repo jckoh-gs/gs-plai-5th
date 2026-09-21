@@ -1,0 +1,22 @@
+[
+  {
+    "file": "README.md",
+    "sha256": "633aa1a4a67c2654a512bcfa29715ea4099f1d698b1ba8f8c7233a304de419d1",
+    "bytes": 772
+  },
+  {
+    "file": "execution.json",
+    "sha256": "bc1e04cedc2170178538f846124bdec5e8b6c3e05fccb0bcb03403f9499da75b",
+    "bytes": 608
+  },
+  {
+    "file": "observation.json",
+    "sha256": "3872b77a5bd7be26e804c86fb1f18611c8d9df7b3fc975bb1ec13a8e78aa0b93",
+    "bytes": 2599
+  },
+  {
+    "file": "resource-read.mjs",
+    "sha256": "dd392b03ab27d4489f72f8f3706fcea8268b22c6764be2d4f471c0ac39db20ee",
+    "bytes": 460
+  }
+]

@@ -1,0 +1,75 @@
+{
+  "state": "READ_ONLY_PREFREEZE_OBSERVATION",
+  "startedAt": "2026-09-21T21:29:02.202141+00:00",
+  "observedAt": "2026-09-21T21:29:02.610Z",
+  "pod": {
+    "name": "grid-69d8766f7-zmfq8",
+    "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+    "node": "charleskoh-nucbox-g3",
+    "containers": [
+      {
+        "name": "app",
+        "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+        "ready": true,
+        "restarts": 0
+      },
+      {
+        "name": "mqtt",
+        "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+        "ready": true,
+        "restarts": 0
+      }
+    ]
+  },
+  "sameIdentityAfterResourceRead": true,
+  "resources": {
+    "observedAt": "2026-09-21T21:29:02.610Z",
+    "filesystemAvailableBytes": 58529443840,
+    "databaseBytes": 1479634944,
+    "walBytes": 4882232,
+    "dataFileBytes": 17226477483
+  },
+  "localFilesystemAvailableBytes": 564894715904,
+  "pvcCount": 35,
+  "pvcPhases": {
+    "Bound": 35
+  },
+  "mainPvc": [
+    {
+      "name": "grid-data",
+      "phase": "Bound",
+      "requested": "5Gi",
+      "reportedCapacity": "5Gi"
+    },
+    {
+      "name": "grid-mqtt-data",
+      "phase": "Bound",
+      "requested": "1Gi",
+      "reportedCapacity": "1Gi"
+    }
+  ],
+  "registry": {
+    "name": "grid-registry",
+    "desired": 1,
+    "ready": 1,
+    "images": [
+      "127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c"
+    ]
+  },
+  "comparison": {
+    "previousObservedAt": "2026-09-21T19:53:24.772Z",
+    "elapsedHours": 1.5938438888888888,
+    "databaseGrowthBytes": 184414208,
+    "observedDatabaseGrowthBytesPerHour": 115704059.40355933,
+    "scope": "Actual observed interval; not a guaranteed future growth rate."
+  },
+  "capacityPlanning": {
+    "basis": "Current DB bytes times3 for raw snapshot, worst-case comparable compressed copy and separate restore DB; observed host filesystem, no dedicated quota reservation. Local allowance is two current raw DB copies.",
+    "remoteExtraAllowanceBytes": 4438904832,
+    "remoteAvailableExceedsAllowance": true,
+    "localExtraAllowanceBytes": 2959269888,
+    "localAvailableExceedsAllowance": true
+  },
+  "scope": "Actual read-only selected-version prefreeze observation. Host available bytes are not a dedicated PVC reservation. No final backup, restore or final media evidence yet. Actual backup and restore remain required after freeze.",
+  "sourceSha256": "dd392b03ab27d4489f72f8f3706fcea8268b22c6764be2d4f471c0ac39db20ee"
+}

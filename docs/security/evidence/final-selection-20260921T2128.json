@@ -1,0 +1,192 @@
+{
+  "checkedAt": "2026-09-21T21:28:30.689894+00:00",
+  "runtime": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "image": "234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "sources": {
+    "package.json": {
+      "sha256": "8560c180daec6b576feb057395d6ee692e5f77a4f851e3398dad54719f2db304",
+      "sameExactRuntime": true
+    },
+    "package-lock.json": {
+      "sha256": "7fc8d323eb98ed41aa1c5387168068695793c70aa006c9190c51f3cbe421f563",
+      "sameExactRuntime": true
+    },
+    "scripts/media/observe-demo-state.py": {
+      "sha256": "7f9e3656821859d77a2c9cb42c1f3f428221119a28d39c56509b1638fd6b78cc"
+    },
+    "scripts/media/transcribe-audio.py": {
+      "sha256": "7077f0801685ebee5ef78f34ea17a57971267fb7716e8df1dda0d61cef26019a"
+    },
+    "scripts/media/demo-lifecycle.cjs": {
+      "sha256": "7674e060ea3cc85805100060810904ac6b29de1d99b8936e7dd6c9103a1a625c"
+    }
+  },
+  "alpine": {
+    "url": "https://secdb.alpinelinux.org/v3.24/main.json",
+    "sha256": "18af63e6013a0c89ba82fba49dd748b6870f413fb997a8ab78bef7587ccedae1",
+    "packages": [
+      {
+        "pkg": {
+          "name": "busybox",
+          "secfixes": {
+            "0": [
+              "CVE-2021-42373",
+              "CVE-2021-42376",
+              "CVE-2021-42377"
+            ],
+            "1.27.2-r4": [
+              "CVE-2017-16544",
+              "CVE-2017-15873",
+              "CVE-2017-15874"
+            ],
+            "1.28.3-r2": [
+              "CVE-2018-1000500"
+            ],
+            "1.29.3-r10": [
+              "CVE-2018-20679"
+            ],
+            "1.30.1-r2": [
+              "CVE-2019-5747"
+            ],
+            "1.33.0-r5": [
+              "CVE-2021-28831"
+            ],
+            "1.34.0-r0": [
+              "CVE-2021-42374",
+              "CVE-2021-42375",
+              "CVE-2021-42378",
+              "CVE-2021-42379",
+              "CVE-2021-42380",
+              "CVE-2021-42381",
+              "CVE-2021-42382",
+              "CVE-2021-42383",
+              "CVE-2021-42384",
+              "CVE-2021-42385",
+              "CVE-2021-42386"
+            ],
+            "1.35.0-r17": [
+              "CVE-2022-30065"
+            ],
+            "1.35.0-r7": [
+              "ALPINE-13661",
+              "CVE-2022-28391"
+            ],
+            "1.36.1-r2": [
+              "CVE-2022-48174"
+            ],
+            "1.36.1-r25": [
+              "CVE-2023-42366"
+            ],
+            "1.36.1-r27": [
+              "CVE-2023-42363"
+            ],
+            "1.36.1-r30": [
+              "CVE-2023-42364",
+              "CVE-2023-42365"
+            ],
+            "1.37.0-r24": [
+              "CVE-2024-58251"
+            ],
+            "1.37.0-r27": [
+              "CVE-2025-46394"
+            ]
+          }
+        }
+      },
+      {
+        "pkg": {
+          "name": "zlib",
+          "secfixes": {
+            "0": [
+              "CVE-2023-45853",
+              "CVE-2023-6992",
+              "CVE-2026-22184"
+            ],
+            "1.2.11-r4": [
+              "CVE-2018-25032"
+            ],
+            "1.2.12-r2": [
+              "CVE-2022-37434"
+            ],
+            "1.3.2-r0": [
+              "CVE-2026-22184",
+              "CVE-2026-27171"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "4059": {
+    "url": "https://api.github.com/repos/ggml-org/whisper.cpp/issues/4059",
+    "state": "open",
+    "state_reason": null,
+    "updated_at": "2026-09-19T18:23:26Z"
+  },
+  "3924": {
+    "url": "https://api.github.com/repos/ggml-org/whisper.cpp/issues/3924",
+    "state": "closed",
+    "state_reason": "not_planned",
+    "updated_at": "2026-09-06T01:14:27Z"
+  },
+  "3807": {
+    "url": "https://api.github.com/repos/ggml-org/whisper.cpp/issues/3807",
+    "state": "closed",
+    "state_reason": "not_planned",
+    "updated_at": "2026-09-06T01:14:50Z"
+  },
+  "runtimeInventory": {
+    "count": 28,
+    "mismatch": []
+  },
+  "head": "d7ae0981ce4e1fde88e310b8434d25275ddbd5ff",
+  "freshAdvisories": {
+    "CVE-2026-85091": {
+      "url": "https://api.github.com/advisories?cve_id=CVE-2026-85091",
+      "records": [
+        {
+          "ghsa_id": "GHSA-g5fp-32jq-cfw2",
+          "updated_at": "2026-09-03T15:32:24Z",
+          "vulnerabilities": [],
+          "html_url": "https://github.com/advisories/GHSA-g5fp-32jq-cfw2"
+        }
+      ]
+    },
+    "CVE-2025-60876": {
+      "url": "https://api.github.com/advisories?cve_id=CVE-2025-60876",
+      "records": [
+        {
+          "ghsa_id": "GHSA-48hw-cv6f-mcpj",
+          "updated_at": "2026-06-02T15:32:54Z",
+          "vulnerabilities": [],
+          "html_url": "https://github.com/advisories/GHSA-48hw-cv6f-mcpj"
+        }
+      ]
+    },
+    "CVE-2026-17513": {
+      "url": "https://api.github.com/advisories?cve_id=CVE-2026-17513",
+      "records": [
+        {
+          "ghsa_id": "GHSA-hqg6-4q5h-9ggc",
+          "updated_at": "2026-07-27T15:32:30Z",
+          "vulnerabilities": [],
+          "html_url": "https://github.com/advisories/GHSA-hqg6-4q5h-9ggc"
+        }
+      ]
+    },
+    "CVE-2026-10298": {
+      "url": "https://api.github.com/advisories?cve_id=CVE-2026-10298",
+      "records": [
+        {
+          "ghsa_id": "GHSA-jx42-8f9x-g57f",
+          "updated_at": "2026-06-02T00:32:06Z",
+          "vulnerabilities": [],
+          "html_url": "https://github.com/advisories/GHSA-jx42-8f9x-g57f"
+        }
+      ]
+    }
+  },
+  "collectionExitCode": 0,
+  "completedAt": "2026-09-21T21:29:20.405101+00:00",
+  "scope": "Read-only source/hash and official feed/advisory refresh; no image/npm scan or deployment"
+}

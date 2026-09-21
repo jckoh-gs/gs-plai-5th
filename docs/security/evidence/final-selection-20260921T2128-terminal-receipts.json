@@ -1,0 +1,32 @@
+{
+  "scope": "Transcribed original tool terminal results; no command or scan rerun",
+  "collectionFile": "docs/security/evidence/final-selection-20260921T2128.json",
+  "collectionSha256": "82e99ae61a388778847fcfd6ee191353e981eb0be0206a5c0d6ec2f1d644e9c5",
+  "commands": [
+    {
+      "purpose": "Source package/helper hashes, official Alpine feed and whisper issue state collection",
+      "tool": "exec_command",
+      "chunkId": "7c52d2",
+      "sessionId": null,
+      "exitCode": 0,
+      "wallTimeSeconds": 2.641478292
+    },
+    {
+      "purpose": "Runtime28 hash inventory, HEAD and four official GHSA API records",
+      "tool": "exec_command",
+      "chunkId": "ea66d9",
+      "sessionId": null,
+      "exitCode": 0,
+      "wallTimeSeconds": 0.404974292
+    }
+  ],
+  "supplementalRead": {
+    "purpose": "Read two GHSA descriptions/references and locate incident paths",
+    "tool": "exec_command",
+    "chunkId": "e77b2a",
+    "sessionId": null,
+    "exitCode": 0,
+    "wallTimeSeconds": 7.833e-06
+  },
+  "interpretation": "All returned terminal completion directly; no yielded session to poll. Wall times are tool-reported values, not independently inferred network durations."
+}

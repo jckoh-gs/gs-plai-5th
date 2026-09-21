@@ -1,0 +1,70 @@
+{
+  "state": "PREFREEZE_REVIEW_COMPLETED",
+  "recordedAt": "2026-09-21T21:31:21.052169+00:00",
+  "selectedVersion": "1.7.1",
+  "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "appImage": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "reviews": {
+    "product": {
+      "path": "docs/product/REVIEW-058.md",
+      "sha256": "2199d831a94a111d7d443c1b1846e99dd33f1f5ae137386ffe20d209457c981c"
+    },
+    "security": {
+      "path": "docs/security/FINAL-SELECTION-20260921T2128-REVIEW.md",
+      "sha256": "0042e52555acfa3f92e59befe64fb9df773f1c94686a4046d2ab0f6325cddbd0"
+    },
+    "securityEvidence": {
+      "path": "docs/security/evidence/final-selection-20260921T2128.json",
+      "sha256": "82e99ae61a388778847fcfd6ee191353e981eb0be0206a5c0d6ec2f1d644e9c5"
+    },
+    "securityTerminalReceipts": {
+      "path": "docs/security/evidence/final-selection-20260921T2128-terminal-receipts.json",
+      "sha256": "5b4cd2b20199a2cc9a92aea2217513e06ec971c638346bcc28a91631512bc7af"
+    },
+    "issues": {
+      "path": "docs/issues/PRE-FREEZE-VERDICT-1.7.1.md",
+      "sha256": "86646356cc0fa7a0d72375e1d5891f51a9fd0461b0a824c0692a70eb3295477b"
+    },
+    "issuesEvidence": {
+      "path": "docs/issues/evidence/pre-freeze-verdict-1.7.1.json",
+      "sha256": "0173a6b537232129a2b6bca0059fcb5a521e1f5562afd6d9b366d6b124e584b0"
+    },
+    "capacity": {
+      "path": "artifacts/checkpoints/capacity-1.7.1-freeze-preflight/observation.json",
+      "sha256": "3872b77a5bd7be26e804c86fb1f18611c8d9df7b3fc975bb1ec13a8e78aa0b93"
+    },
+    "capacityExecution": {
+      "path": "artifacts/checkpoints/capacity-1.7.1-freeze-preflight/execution.json",
+      "sha256": "bc1e04cedc2170178538f846124bdec5e8b6c3e05fccb0bcb03403f9499da75b"
+    }
+  },
+  "decision": "Keep the currently verified functional version for the original freeze. No newly demonstrated blocking functional or security defect was found within the reviewed scope. Final execution and delivery remain unproven.",
+  "rootChecks": {
+    "capacityOriginalChunkId": "318497",
+    "capacityOriginalExitCode": 0,
+    "capacityPayloadHashesVerified": 4,
+    "issueSourceHashesVerified": 7,
+    "securitySourceHashesVerified": 5,
+    "crossCheckChunkId": "cc6a44",
+    "crossCheckExitCode": 0,
+    "acceptanceUnchanged": true
+  },
+  "preservedIncidentHistory": [
+    "ISSUE030",
+    "ISSUE032",
+    "ISSUE033"
+  ],
+  "preservedKnownLimits": [
+    "Connection incidents recovered with root causes unknown",
+    "Observed subscriber gaps remain; 144 and300 incident positions separately persisted and broker acknowledged",
+    "Known application OS4matches/2CVEs and separate ASR malformed-model residual risk",
+    "Direct listening and actual external KMA/AWS/VPP integrations unverified"
+  ],
+  "remainingFinalGates": "docs/product/final-pending-gates.json",
+  "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "freezeExecuted": false,
+  "finalBackupRestoreCompleted": false,
+  "newFinalMediaCompleted": false,
+  "goalCompletionClaim": false
+}

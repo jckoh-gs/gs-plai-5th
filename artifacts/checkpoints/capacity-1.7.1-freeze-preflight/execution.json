@@ -1,0 +1,14 @@
+{
+  "state": "READ_ONLY_PREFREEZE_OBSERVATION_COMPLETED",
+  "executionOwner": "root",
+  "tool": "exec_command",
+  "chunkId": "318497",
+  "sessionId": null,
+  "exitCode": 0,
+  "wallTimeSeconds": 0.652608875,
+  "deadlineWrapperSeconds": 45,
+  "observedAt": "2026-09-21T21:29:02.610Z",
+  "observationSha256": "3872b77a5bd7be26e804c86fb1f18611c8d9df7b3fc975bb1ec13a8e78aa0b93",
+  "operation": "Read main Pod identity before and after preserved resource read; inspect PVC and registry status and local filesystem space.",
+  "scope": "Actual prefreeze observation, not final backup/restore or media acceptance."
+}
