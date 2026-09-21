@@ -1,0 +1,11 @@
+{
+  "state": "LOCAL_FINAL_BACKUP_BYTES_VERIFIED",
+  "checkedAt": "2026-09-21T21:49:36.275407+00:00",
+  "metadata": "deploy/verification/final-backup-20260921.json",
+  "metadataSha256": "914810e31f212c4e62cef003ee2201decfc7c4db24fbca0ffdbc626e4b4ed049",
+  "localPath": "artifacts/private/backups/stable-40b9ed8-20260921T213806965Z.sqlite",
+  "bytes": 1497214976,
+  "sha256": "ee980470a2fda2dba7e609099400f0c315bb4c91e6436c33966e24ff762dee7e",
+  "mode": "0600",
+  "scope": "Actual complete local-byte hash and permissions; exact remote restore remains separate."
+}

@@ -488,7 +488,7 @@
       "scope": "Current read-only service and actual process identities, saved heartbeat configuration and existing isolated tests. No forced real network outage or AI restart guarantee."
     }
   },
-  "updatedAt": "2026-09-21T21:40:02.632828+00:00",
+  "updatedAt": "2026-09-21T21:50:06.637344+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
@@ -1183,5 +1183,24 @@
     "postFreezeIdentityEvidence": "deploy/verification/final-restore-20260921/preflight.json",
     "scope": "Feature freeze confirmed at the original boundary; verified current version retained. Post-freeze authenticated main state and exact Pod identity captured before final backup. Final snapshot selection and new media remain in progress."
   },
-  "finalCloseoutEvidence": "docs/operations/final-closeout.json"
+  "finalCloseoutEvidence": "docs/operations/final-closeout.json",
+  "finalReleaseSelection": {
+    "selectedAt": "2026-09-21T21:50:06.637344+00:00",
+    "productVersion": "1.7.1",
+    "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+    "appImage": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+    "backupEvidence": "deploy/verification/stable-backup-40b9ed8.json",
+    "recoveryEvidence": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+    "backupSha256": "5ff34f3e5dbc52f07b899f0c8013db130e5fd13c3d315e92aa512d474ea1f782",
+    "fallbackManifest": "artifacts/releases/checkpoint-1.7.1.json",
+    "selectionReason": "The new ee980 snapshot is locally verified but its fresh restore did not complete by21:44:33Z. Original restore handle75944 returned125. Select the already proven identical5ff snapshot and current1.7.1 runtime; never promote supplemental snapshot by file existence.",
+    "supplementalBackup": "deploy/verification/final-backup-20260921.json",
+    "newRestoreAttempt": "deploy/verification/final-restore-20260921",
+    "originalCutoffAt": "2026-09-21T21:44:33.079009+00:00",
+    "clockObservationGap": {
+      "previousObservedAt": "2026-09-21T21:40:41+00:00",
+      "nextObservedAt": "2026-09-21T21:49:33+00:00",
+      "cause": "unknown; observed tool/clock gap, no inferred network or host root cause"
+    }
+  }
 }

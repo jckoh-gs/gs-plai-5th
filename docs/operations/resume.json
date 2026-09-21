@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T21:40:02.632828+00:00",
+  "updatedAt": "2026-09-21T21:50:06.637344+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -540,7 +540,7 @@
       "scope": "The original sessions and observed Pod/image were retained. Each RTU gained one received-sample discontinuity; a single narrow read-only query found all300 corresponding positions in continuous same-run persisted outbox windows with broker acknowledgments. Repeated connection error events are not separate outages. No universal subscriber replay, external VPP receipt, continuous service availability or root-cause claim. ISSUE030/032 history remains intact."
     }
   ],
-  "nextOperationalReview": "Original freeze confirmed; primary72957/audit8133 terminal0 archived in soak-1.7.1-final. Keep supervisor48590/3104/18884 for new media. Deployment owns the single final backup/restore attempt; inspect its original handles and actual results, never restart blindly. By21:44:33Z choose only verified new snapshot or existing verified5ff fallback, preserve stableCheckpoint, commit actual evidence then create/verify final manifest. New video and reviewed same-video PPT, delivery and owned-process cleanup remain due by unchanged22:07:33.079009Z.",
+  "nextOperationalReview": "Verified5ff/current1.7.1 fallback selected after new restore cutoff. New ee980 snapshot is supplemental, never accepted as restored. Create and verify final manifest/tag immediately, then actual new video and same-video PPT within unchanged22:07:33Z. Main/supervisor unchanged; original observers ended. Inspect original restore75944 actual125 and cleanup evidence, no blind retry.",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.7.1",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
@@ -1744,5 +1744,24 @@
     "primary": 72957,
     "audit": 8133,
     "originalTerminalResults": "artifacts/checkpoints/soak-1.7.1-final/original-terminal-results.json"
+  },
+  "finalReleaseSelection": {
+    "selectedAt": "2026-09-21T21:50:06.637344+00:00",
+    "productVersion": "1.7.1",
+    "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+    "appImage": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+    "backupEvidence": "deploy/verification/stable-backup-40b9ed8.json",
+    "recoveryEvidence": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+    "backupSha256": "5ff34f3e5dbc52f07b899f0c8013db130e5fd13c3d315e92aa512d474ea1f782",
+    "fallbackManifest": "artifacts/releases/checkpoint-1.7.1.json",
+    "selectionReason": "The new ee980 snapshot is locally verified but its fresh restore did not complete by21:44:33Z. Original restore handle75944 returned125. Select the already proven identical5ff snapshot and current1.7.1 runtime; never promote supplemental snapshot by file existence.",
+    "supplementalBackup": "deploy/verification/final-backup-20260921.json",
+    "newRestoreAttempt": "deploy/verification/final-restore-20260921",
+    "originalCutoffAt": "2026-09-21T21:44:33.079009+00:00",
+    "clockObservationGap": {
+      "previousObservedAt": "2026-09-21T21:40:41+00:00",
+      "nextObservedAt": "2026-09-21T21:49:33+00:00",
+      "cause": "unknown; observed tool/clock gap, no inferred network or host root cause"
+    }
   }
 }
