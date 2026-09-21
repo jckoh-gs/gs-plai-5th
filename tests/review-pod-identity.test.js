@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {verifiedAppPod} from '../scripts/pod-identity.mjs';
+const image='repo/app@sha256:'+'a'.repeat(64);
+const make=()=>({items:[{metadata:{name:'pod',uid:'uid'},spec:{containers:[{name:'app',image}]},status:{conditions:[{type:'Ready',status:'True'}],containerStatuses:[{name:'app',ready:true,imageID:image}]}}]});
+test('backup runtime identity rejects old rollout pod, wrong digest, unavailable or ambiguous ready pods',()=>{assert.equal(verifiedAppPod(make(),image).uid,'uid');for(const change of [x=>x.items[0].spec.containers[0].image='old',x=>x.items[0].status.containerStatuses[0].imageID='sha256:'+'b'.repeat(64),x=>x.items[0].status.conditions=[],x=>x.items.push(structuredClone(x.items[0])),x=>x.items[0].metadata.deletionTimestamp='now']){const x=make();change(x);assert.throws(()=>verifiedAppPod(x,image));}});

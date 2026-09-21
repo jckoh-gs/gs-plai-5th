@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "capturedAt": "2026-09-21T09:31:55.443Z",
+  "verifiedAt": "2026-09-21T09:34:38.172Z",
+  "sourceCommit": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
+  "appImage": "127.0.0.1:15050/grid@sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420",
+  "remotePath": "/data/stable-8599ab9-20260921T093154817Z.sqlite",
+  "localPath": "artifacts/private/backups/stable-8599ab9-20260921T093154817Z.sqlite",
+  "bytes": 105144320,
+  "sha256": "29071fdc6a800e7b173aeaa49c45a6f4f83b0dacbaf5e6594f1ea66864c21879",
+  "compressedBytes": 3547160,
+  "verifiedChunks": 14,
+  "remoteCompressionPeakRssBytes": 85893120,
+  "localPeakRssBytes": 177799168,
+  "integrity": "ok",
+  "plants": 5,
+  "pending": 0,
+  "method": "online node:sqlite backup; streaming gzip and disk-backed chunk+whole SHA256 verification; private0600 copy",
+  "metadataPath": "deploy/verification/streaming-backup-8599ab9.json"
+}

@@ -1,0 +1,15 @@
+{
+  "reviewedAt": "2026-09-21T09:37:01.301757+00:00",
+  "commit": "f0c8fae130d3461d2405a6dc46497857d7e212fa",
+  "workingTree": true,
+  "files": {
+    "scripts/remote-backup.mjs": "cde2357ec7d953629fec5c810ded0eadd7dc875041d99cb10836da7799d09ac0",
+    "scripts/remote-outbox-restart.mjs": "2ef55e17adb424c25203730af6979aa87149e4de3a674b2db6262ee947b7b3bf",
+    "scripts/pod-identity.mjs": "2e985af6a16219e34d39c11dd6c78eed6e62cdd161c1b13515e6252176b2a3e8",
+    "scripts/verify-release.mjs": "ff2680854a6294da8d1eb079ec6ed4612011ac62041d73df4dfa0b5d90be229e",
+    "tests/review-pod-identity.test.js": "2b29e2c422ee91d06060876c93d30a8d0dbc9140963907da8c37c0245d543630",
+    "deploy/verification/streaming-backup-8599ab9-identity-review.json": "49fe323a0deb1cc9055aa6298f209b6ae2778621666ee60677485ebd2c87de1e",
+    "docs/issues/evidence/review-008-live-identity.log": "75c74faf192d7ab998245de2f72de0cd99a7633f3db1cf1cd6b3566b4a8d51ed"
+  },
+  "metadataClarifiedAt": "2026-09-21T09:37:56.023845+00:00"
+}

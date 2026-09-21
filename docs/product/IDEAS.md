@@ -36,7 +36,7 @@
 - 범위 제안: 인증 관리 API `POST /api/datasets/preview`에 `{csv,type,unit,semantics}`를 보내 parseCSV 결과의 행 수, 시작/끝 UTC 및 KST 표시, 입력 단위/선택 의미/실제 보간, 정규화 최소·최대kW, 앞3행을 반환. RTU/UUID/DB/outbox 생성이나 기상조회 없음. 등록폼에 명시적 미리보기 버튼과 요약을 추가하되 미리보기 후 실제 등록은 기존 서버 검증을 다시 수행한다.
 - 수락 제안:10kWh→60kW/hold,100→200kW linear,55행TSV/KST정규화,hybrid분리출력 미리보기; 잘못된행은 기존 row오류; 전후plant/command/outbox개수 불변.20MiB 상한/인증 동일. 입력4요소 중 어느것이 바뀌어도 이전미리보기 즉시 무효화. 늦게 끝난 이전요청은 새입력 결과를 덮어쓰지 않음. HTML/원본CSV 전체를 응답하지 않고 최대3행만 반환.
 - 위험/완화:100000행 처리비용 및 비동기응답 경합. 자동키입력당 호출 없이 버튼으로만 실행, 요청 중 중복버튼 비활성, 입력revision 검사. hybrid의 총합 표시 방식은 wind+solar 합임을 명시하고 임의단지유형 추론 금지.
-- 상태: 메인채택(PRD1.8/제품1.1.0후보). 기준 runtime af7f223, stable-runtime-v1.0.0-af7f223, delivery d853f59, artifacts/releases/checkpoint-1.0.0.json. 구현·검증 대기.
+- 상태: 메인채택(PRD1.8/제품1.1.0후보). 기준 runtime af7f223, stable-runtime-v1.0.0-af7f223, delivery d853f59, artifacts/releases/checkpoint-1.0.0.json. 구현 및 배포기능 검증 완료(8599ab9/71unit/remote preview+browser races). 현재버전 복원·역호환·stable 승격은 대기.
 - 버전 제안: 단독 채택 시 PRD1.8 / 제품1.1.0 후보. MQTT계약2·보고서schema1 유지. 회귀/브라우저/배포/복원 통과 후 stable 승격; 실패하면 현 정상checkpoint 유지.
 
 ## IDEA-006 · 최근 명령 이력 내보내기 — 대안, 동시 착수 비권장

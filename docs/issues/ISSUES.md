@@ -170,3 +170,17 @@ ISSUE-005의 배포/브라우저/복원/미디어 등 다른 게이트는 이 �
 중요도 P2, 담당/수정자 메인. 상태 **수정 및 실제 브라우저 fixture 검증 완료**(최종1.1.0 배포 연결 대기). `File.text()` 비동기 완료 이전의 사용자 편집/다른 파일 선택과 경합하므로 fileRevision을 비교하고 오래된 결과를 무시한다. 파일 읽는 동안 등록/preview는 비활성화한다. previewRevision은 CSV/type/unit/semantics 변경시 늦은 성공/실패 응답을 무효화한다.
 
 증거: `scripts/browser-preview-race.cjs`에서 File.text 지연 후 실제 다른 CSV 값으로 textarea를 편집하고 파일 읽기 완료를 풀어 최신 편집 유지, 파일 읽는 동안 두 버튼 disabled, 늦은 preview 성공/실패 폐기,390px 화면 page overflow 없음 확인. `artifacts/checkpoints/preview-browser/race.json` extended7requests PASS와 source를 대조했다. 브라우저는 메인이 실행했으며 독립 리뷰어의 추가 재실행은 아니다. 초기 fixture의 잘못된 버튼 selector 및 동일 값 fill로 change event가 안 난 실패는 제품 결함으로 기록하지 않는다.
+
+## ISSUE-013 — 장시간 DB 증가에 대한 백업 메모리 및 실행 이미지 증거 경계
+
+중요도 P2 운영 위험, 상태: streaming 수정과 증거 식별 보강 검증 완료. **실제 OOM은 관측하지 않았다.** 전체 SQLite를 readFileSync/gzipSync로 메모리에 적재하면14시간 증가한 DB에서1GiB 컨테이너 한도를 넘을 위험이 있어 메인이 remote gzip/hash 및 local chunk→file/gunzip/hash를 streaming으로 바꿨다.
+
+독립 검토에서 deployment template만 비교하면 rollout 중 이전 pod에 exec할 수 있는 증거 경계를 발견했다. 허가받아 `pod-identity.mjs`를 추가, 정확히 하나의 Ready/nonterminating pod와 실제 app spec.image 및 container imageID digest를 검증한다. backup의 모든 exec를 해당 pod 이름에 고정하고 같은 UID/imageID가 유지되는지 **로컬 파일 승격 전** 재확인한다. remote-outbox-restart는 재시작 전후 실제 Ready pod image/digest와 UID 변경을 검사한다. verify-release의 --remote도 app와 mqtt 실제 실행 digest를 검사하며 큰 backup hash는 streaming 처리한다.
+
+검증:
+- 기존105144320바이트 immutable remote snapshot을 재전송,14청크와 전체 SHA256 일치/SQLite integrity ok. 원래 사본은 previous-transfer 이름으로 보존, 최종0600 확인. 새 metadata `deploy/verification/streaming-backup-8599ab9-identity-review.json`에는 전송 검증 대상 pod UID와 실제 imageID(`verifiedTransferPod`, `podVerificationStage=transfer`) 포함. snapshot 생성시각은09:31, 검증·재전송은09:36이므로 이 UID를 원래 snapshot 생성 pod로 주장하지 않는다.
+- 실제 검증시 remote peak RSS85450752B, local206209024B. 이것은 이번105MB fixture의 관측이며 최대 향후 DB 크기 또는 완전 상수 메모리 보장은 아니다.
+- Ready pod 없음/복수/종료중, 다른 spec image, 다른 실제 digest를 거절하는 단위 fixture PASS. 실제 app/mqtt Ready image도 읽기 전용 검증 PASS.
+- remote-outbox-restart는 이번 변경 후 **다시 rollout하지 않았다**. 새로운 identity helper 단위/실제 읽기 검증과 이전 candidate8599 outbox 성공 증거를 구분한다. verify-release 전체 최종 manifest 검증은 릴리스 책임자가 수행한다.
+
+실패 경로: 중간 실패하면 .part 및 remote gzip/backup을 남기며 PASS evidence를 만들지 않는다. 검증 전 local 승격하지 않고 기존 remote SQLite를 덮어쓰지 않는다. remote gzip 재생성과 검증 실패 시의 잔여 임시 파일은 데이터 손실 없이 후속 정리가 가능하다. timestamp/sourceCommit이 붙은 파일명은 provenance의 대체물이 아니며 재전송은 원래 snapshot capture 증거와 함께 사용해야 한다.

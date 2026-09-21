@@ -1,0 +1,19 @@
+{
+  "result": "PASS",
+  "sourceCommit": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
+  "appImage": "127.0.0.1:15050/grid@sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420",
+  "checkedAt": "2026-09-21T09:33:36.317Z",
+  "context": "charles-k3s",
+  "namespace": "gs-plai-5h",
+  "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+  "beforePod": "2c0534d4-d2f5-4417-ab87-7c7169759f6f",
+  "afterPod": "dac7c939-d0ed-4584-b478-455743ff0a87",
+  "podReplaced": true,
+  "messageId": "6116fb3b-ea34-40e0-8e8c-4db486d88118",
+  "sequence": 56,
+  "bodySha256": "7cb427c160cf82e412ff31764cde88f9c4e8b6044e0240b33f32bf55b0c3e5d6",
+  "samePersistedBodyBeforeAndAfterRestart": true,
+  "sameObservedMQTTBody": true,
+  "ackedAt": "2026-09-21T09:33:35.125Z",
+  "consistentPendingBackup": "/data/pending-outbox-8599ab9-20260921T093247338Z.sqlite"
+}

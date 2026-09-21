@@ -1,0 +1,22 @@
+{
+  "at": "2026-09-21T09:31:58.253265+00:00",
+  "sourceCommit": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
+  "productVersion": "1.1.0",
+  "prdVersion": "1.8",
+  "pod": "grid-6756dcb968-zfskl",
+  "podUID": "2c0534d4-d2f5-4417-ab87-7c7169759f6f",
+  "actualImageID": "127.0.0.1:15050/grid@sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420",
+  "expectedManifest": "sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420",
+  "readyContainers": 2,
+  "imageLabels": {
+    "grid.prd.version": "1.8",
+    "grid.runtime.variant": "alpine",
+    "org.opencontainers.image.revision": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
+    "org.opencontainers.image.version": "1.1.0"
+  },
+  "labelEvidence": "OCI config bound by verified manifest digest; matching kubelet imageID",
+  "apiVersionObserved": "1.1.0",
+  "mqttConnected": true,
+  "previousBackupEvidence": "deploy/verification/pre-1.1.0-backup.json",
+  "passed": true
+}

@@ -4,7 +4,7 @@
   "freezeAt": "2026-09-21T21:37:33.079009+00:00",
   "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
   "timezone": "Asia/Seoul",
-  "phase": "versioned-improvement",
+  "phase": "stability",
   "scope": "greenfield; mandatory k3s deployment",
   "context": "charles-k3s",
   "namespace": "gs-plai-5h",
@@ -44,13 +44,13 @@
   "requestedModel": "Codex Astra",
   "modelVerification": "Agents inherited main session model; exact runtime model identifier not exposed by available goal tools.",
   "deployment": {
-    "observedAt": "2026-09-21T09:00:07.430957+00:00",
-    "status": "functional acceptance verified; final media pending",
-    "sourceCommit": "af7f2233df239f22bcff2d95440a62673bf12ed9",
-    "prdVersion": "1.7",
+    "observedAt": "2026-09-21T09:38:20.985434+00:00",
+    "status": "functional acceptance and isolated recovery verified; final media/time gates pending",
+    "sourceCommit": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
+    "prdVersion": "1.8",
     "context": "charles-k3s",
     "namespace": "gs-plai-5h",
-    "appImage": "127.0.0.1:15050/grid@sha256:13da26c81e8caf23701d62e0a61e0457e6183d75dddcb9bde7fa75e1a41792ba",
+    "appImage": "127.0.0.1:15050/grid@sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420",
     "brokerImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
     "registryImage": "127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c",
     "uiTunnel": "http://127.0.0.1:3104",
@@ -59,34 +59,34 @@
     "brokerPVC": "grid-mqtt-data",
     "recoveryReplicas": 0,
     "name": "grid",
-    "mqttImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    "mqttImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+    "productVersion": "1.1.0"
   },
   "backup": {
     "result": "PASS",
-    "capturedAt": "2026-09-21T09:06:01.465Z",
-    "verifiedAt": "2026-09-21T09:09:40.887Z",
-    "sourceCommit": "af7f223",
-    "appImage": "127.0.0.1:15050/grid@sha256:13da26c81e8caf23701d62e0a61e0457e6183d75dddcb9bde7fa75e1a41792ba",
-    "remotePath": "/data/stable-af7f223-20260921T090600873Z.sqlite",
-    "localPath": "artifacts/private/backups/stable-af7f223-20260921T090600873Z.sqlite",
-    "bytes": 56594432,
-    "sha256": "7f98602386dc80a7ddfb2a138b81b81f6c0a894439ddfddba37fddb673965a7a",
-    "compressedBytes": 1909315,
-    "verifiedChunks": 8,
+    "capturedAt": "2026-09-21T09:31:55.443Z",
+    "verifiedAt": "2026-09-21T09:32:05.529Z",
+    "sourceCommit": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
+    "appImage": "127.0.0.1:15050/grid@sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420",
+    "remotePath": "/data/stable-8599ab9-20260921T093154817Z.sqlite",
+    "localPath": "artifacts/private/backups/stable-8599ab9-20260921T093154817Z.sqlite",
+    "bytes": 105144320,
+    "sha256": "29071fdc6a800e7b173aeaa49c45a6f4f83b0dacbaf5e6594f1ea66864c21879",
+    "compressedBytes": 3547160,
+    "verifiedChunks": 14,
     "integrity": "ok",
     "plants": 5,
     "pending": 0,
     "method": "online node:sqlite backup; gzip chunk+whole SHA256 verification; private0600 copy"
   },
   "stableCheckpoint": {
-    "runtimeCommit": "af7f2233df239f22bcff2d95440a62673bf12ed9",
-    "tag": "stable-runtime-v1.0.0-af7f223",
-    "backupEvidence": "deploy/verification/stable-backup-af7f223.json",
-    "restoreEvidence": [
-      "deploy/verification/stable-af7f223-restored-browser/result.json",
-      "deploy/verification/stable-af7f223-restored-mqtt.json",
-      "deploy/verification/stable-af7f223-restored-original.json"
-    ],
+    "productVersion": "1.1.0",
+    "prdVersion": "1.8",
+    "runtimeCommit": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
+    "tag": "stable-runtime-v1.1.0-8599ab9",
+    "manifest": "artifacts/releases/checkpoint-1.1.0.json",
+    "backupEvidence": "deploy/verification/stable-backup-8599ab9.json",
+    "recoveryEvidence": "deploy/verification/candidate-8599ab9/restore-summary.json",
     "scope": "Functional runtime recovery checkpoint; overall goal awaits final media/time gates"
   },
   "candidate": {
@@ -94,9 +94,31 @@
     "prdVersion": "1.8",
     "idea": "IDEA-005",
     "sourceCommit": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
-    "status": "source and browser verified; immutable image validation pending",
+    "status": "functional acceptance and rollback verified; stable manifest pending",
     "startedAt": "2026-09-21T09:27:07.825616+00:00",
     "fallbackTag": "stable-runtime-v1.0.0-af7f223",
     "preUpgradeBackup": "deploy/verification/pre-1.1.0-backup.json"
+  },
+  "previousStableCheckpoints": [
+    {
+      "runtimeCommit": "af7f2233df239f22bcff2d95440a62673bf12ed9",
+      "tag": "stable-runtime-v1.0.0-af7f223",
+      "backupEvidence": "deploy/verification/stable-backup-af7f223.json",
+      "restoreEvidence": [
+        "deploy/verification/stable-af7f223-restored-browser/result.json",
+        "deploy/verification/stable-af7f223-restored-mqtt.json",
+        "deploy/verification/stable-af7f223-restored-original.json"
+      ],
+      "scope": "Functional runtime recovery checkpoint; overall goal awaits final media/time gates"
+    }
+  ],
+  "soak": {
+    "directory": "artifacts/soak/v1.1.0",
+    "sessionId": "2627bc33-7fa8-458d-b6df-fcf0b5973868",
+    "startedAt": "2026-09-21T09:34:52.786Z",
+    "readOnly": true,
+    "expectedStopAt": "2026-09-21T21:37:33.079009+00:00",
+    "priorEvidence": "artifacts/checkpoints/soak-1.0.0",
+    "gapReason": "Planned 1.1 upgrade, recovery and outbox restart verification"
   }
 }

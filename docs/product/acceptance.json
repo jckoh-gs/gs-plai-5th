@@ -3650,44 +3650,226 @@
     {
       "id": "FR-PREVIEW-01",
       "description": "parseCSV 기반 인증미리보기 정확응답/최대3행/쓰기없음",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "deploy/verification/candidate-8599ab9/unit.log",
+          "sha256": "c6e1bb6c56eaf7238b2fa1affbe4f50f8353f723339776b6cc570dcf47f0ead8"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/integration.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/advanced.log",
+          "sha256": "b8bda2433b04be29fb6fb8701807b62037ab481bfee07da478a823426c8aed3c"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+          "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/remote-preview.log",
+          "sha256": "d526b1be7446231278e9584f79345b6aa2b72c3582a12ec9057191e97ce0903d"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/browser-preview/race.json",
+          "sha256": "2f31432dfefbbad77cb10c90d477f12879bb8206a15c886f6984e0b6c1cc185f"
+        }
+      ],
+      "assessment": "Exact deployed8599ab92af7f884871b7f7f89a0baf3b253d300a / digest07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420.71unit+sameimageintegration/advanced, actualauthenticatedpreview and browserlate-success/error/file-read races/4inputinvalidation/maxfilebefore-read pass. Independent no-write/security tests supplement. Candidate restore/stable separate."
     },
     {
       "id": "UI-08",
       "description": "등록폼 미리보기/입력revision 무효화/늦은응답보호",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "deploy/verification/candidate-8599ab9/unit.log",
+          "sha256": "c6e1bb6c56eaf7238b2fa1affbe4f50f8353f723339776b6cc570dcf47f0ead8"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/integration.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/advanced.log",
+          "sha256": "b8bda2433b04be29fb6fb8701807b62037ab481bfee07da478a823426c8aed3c"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+          "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/remote-preview.log",
+          "sha256": "d526b1be7446231278e9584f79345b6aa2b72c3582a12ec9057191e97ce0903d"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/browser-preview/race.json",
+          "sha256": "2f31432dfefbbad77cb10c90d477f12879bb8206a15c886f6984e0b6c1cc185f"
+        }
+      ],
+      "assessment": "Exact deployed8599ab92af7f884871b7f7f89a0baf3b253d300a / digest07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420.71unit+sameimageintegration/advanced, actualauthenticatedpreview and browserlate-success/error/file-read races/4inputinvalidation/maxfilebefore-read pass. Independent no-write/security tests supplement. Candidate restore/stable separate."
     },
     {
       "id": "AT-PREVIEW-01",
       "description": "1.1.0미리보기 전체인수",
-      "status": "pending",
-      "evidence": []
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "deploy/verification/candidate-8599ab9/unit.log",
+          "sha256": "c6e1bb6c56eaf7238b2fa1affbe4f50f8353f723339776b6cc570dcf47f0ead8"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/integration.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/advanced.log",
+          "sha256": "b8bda2433b04be29fb6fb8701807b62037ab481bfee07da478a823426c8aed3c"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+          "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/remote-preview.log",
+          "sha256": "d526b1be7446231278e9584f79345b6aa2b72c3582a12ec9057191e97ce0903d"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/browser-preview/race.json",
+          "sha256": "2f31432dfefbbad77cb10c90d477f12879bb8206a15c886f6984e0b6c1cc185f"
+        }
+      ],
+      "assessment": "Feature/local+deployed71unit/integration/advanced/authpreview/browserpass. Current1.1.0 outboxpodrestart/newbackuprestore/backward1.0.0compatibility and1.1.0stablemanifest still pending; prior1.0.0 evidence is not substituted."
     },
     {
       "id": "AT-PREVIEW-01-01",
       "description": "정규화/UTC/KST/hybrid/3행",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "deploy/verification/candidate-8599ab9/unit.log",
+          "sha256": "c6e1bb6c56eaf7238b2fa1affbe4f50f8353f723339776b6cc570dcf47f0ead8"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/integration.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/advanced.log",
+          "sha256": "b8bda2433b04be29fb6fb8701807b62037ab481bfee07da478a823426c8aed3c"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+          "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/remote-preview.log",
+          "sha256": "d526b1be7446231278e9584f79345b6aa2b72c3582a12ec9057191e97ce0903d"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/browser-preview/race.json",
+          "sha256": "2f31432dfefbbad77cb10c90d477f12879bb8206a15c886f6984e0b6c1cc185f"
+        }
+      ],
+      "assessment": "Exact deployed8599ab92af7f884871b7f7f89a0baf3b253d300a / digest07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420.71unit+sameimageintegration/advanced, actualauthenticatedpreview and browserlate-success/error/file-read races/4inputinvalidation/maxfilebefore-read pass. Independent no-write/security tests supplement. Candidate restore/stable separate."
     },
     {
       "id": "AT-PREVIEW-01-02",
       "description": "검증상한/인증/부작용없음",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "deploy/verification/candidate-8599ab9/unit.log",
+          "sha256": "c6e1bb6c56eaf7238b2fa1affbe4f50f8353f723339776b6cc570dcf47f0ead8"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/integration.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/advanced.log",
+          "sha256": "b8bda2433b04be29fb6fb8701807b62037ab481bfee07da478a823426c8aed3c"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+          "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/remote-preview.log",
+          "sha256": "d526b1be7446231278e9584f79345b6aa2b72c3582a12ec9057191e97ce0903d"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/browser-preview/race.json",
+          "sha256": "2f31432dfefbbad77cb10c90d477f12879bb8206a15c886f6984e0b6c1cc185f"
+        }
+      ],
+      "assessment": "Exact deployed8599ab92af7f884871b7f7f89a0baf3b253d300a / digest07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420.71unit+sameimageintegration/advanced, actualauthenticatedpreview and browserlate-success/error/file-read races/4inputinvalidation/maxfilebefore-read pass. Independent no-write/security tests supplement. Candidate restore/stable separate."
     },
     {
       "id": "AT-PREVIEW-01-03",
       "description": "브라우저/경합/등록",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "deploy/verification/candidate-8599ab9/unit.log",
+          "sha256": "c6e1bb6c56eaf7238b2fa1affbe4f50f8353f723339776b6cc570dcf47f0ead8"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/integration.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/advanced.log",
+          "sha256": "b8bda2433b04be29fb6fb8701807b62037ab481bfee07da478a823426c8aed3c"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+          "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/remote-preview.log",
+          "sha256": "d526b1be7446231278e9584f79345b6aa2b72c3582a12ec9057191e97ce0903d"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/browser-preview/race.json",
+          "sha256": "2f31432dfefbbad77cb10c90d477f12879bb8206a15c886f6984e0b6c1cc185f"
+        }
+      ],
+      "assessment": "Exact deployed8599ab92af7f884871b7f7f89a0baf3b253d300a / digest07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420.71unit+sameimageintegration/advanced, actualauthenticatedpreview and browserlate-success/error/file-read races/4inputinvalidation/maxfilebefore-read pass. Independent no-write/security tests supplement. Candidate restore/stable separate."
     },
     {
       "id": "AT-PREVIEW-01-04",
       "description": "전체회귀/배포/기존복원/stable",
-      "status": "pending",
-      "evidence": []
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "deploy/verification/candidate-8599ab9/unit.log",
+          "sha256": "c6e1bb6c56eaf7238b2fa1affbe4f50f8353f723339776b6cc570dcf47f0ead8"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/integration.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/advanced.log",
+          "sha256": "b8bda2433b04be29fb6fb8701807b62037ab481bfee07da478a823426c8aed3c"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+          "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/remote-preview.log",
+          "sha256": "d526b1be7446231278e9584f79345b6aa2b72c3582a12ec9057191e97ce0903d"
+        },
+        {
+          "path": "deploy/verification/candidate-8599ab9/browser-preview/race.json",
+          "sha256": "2f31432dfefbbad77cb10c90d477f12879bb8206a15c886f6984e0b6c1cc185f"
+        }
+      ],
+      "assessment": "Feature/local+deployed71unit/integration/advanced/authpreview/browserpass. Current1.1.0 outboxpodrestart/newbackuprestore/backward1.0.0compatibility and1.1.0stablemanifest still pending; prior1.0.0 evidence is not substituted."
     }
   ],
   "reviewedSource": {

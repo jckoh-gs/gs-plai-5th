@@ -1,0 +1,325 @@
+{
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+        "annotations": {
+            "deployment.kubernetes.io/revision": "2",
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{},\"name\":\"grid-restore-8599ab9\",\"namespace\":\"gs-plai-5h\"},\"spec\":{\"progressDeadlineSeconds\":600,\"replicas\":1,\"revisionHistoryLimit\":10,\"selector\":{\"matchLabels\":{\"app\":\"grid-restore-8599ab9\"}},\"strategy\":{\"type\":\"Recreate\"},\"template\":{\"metadata\":{\"labels\":{\"app\":\"grid-restore-8599ab9\"}},\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"env\":[{\"name\":\"MQTT_URL\",\"value\":\"mqtt://127.0.0.1:1883\"},{\"name\":\"MQTT_USERNAME\",\"value\":\"grid\"},{\"name\":\"MQTT_PASSWORD\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"mqtt-password\",\"name\":\"grid-secrets\"}}},{\"name\":\"API_TOKEN\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"api-token\",\"name\":\"grid-secrets\"}}},{\"name\":\"SEED_DEMO\",\"value\":\"false\"}],\"image\":\"127.0.0.1:15050/grid@sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420\",\"imagePullPolicy\":\"IfNotPresent\",\"livenessProbe\":{\"failureThreshold\":3,\"httpGet\":{\"path\":\"/api/health\",\"port\":3001,\"scheme\":\"HTTP\"},\"initialDelaySeconds\":30,\"periodSeconds\":15,\"successThreshold\":1,\"timeoutSeconds\":1},\"name\":\"app\",\"ports\":[{\"containerPort\":3001,\"protocol\":\"TCP\"}],\"readinessProbe\":{\"failureThreshold\":3,\"httpGet\":{\"path\":\"/api/health\",\"port\":3001,\"scheme\":\"HTTP\"},\"initialDelaySeconds\":5,\"periodSeconds\":5,\"successThreshold\":1,\"timeoutSeconds\":1},\"resources\":{\"limits\":{\"cpu\":\"2\",\"memory\":\"1Gi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"256Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"readOnlyRootFilesystem\":true},\"terminationMessagePath\":\"/dev/termination-log\",\"terminationMessagePolicy\":\"File\",\"volumeMounts\":[{\"mountPath\":\"/data\",\"name\":\"data\"}]},{\"command\":[\"sh\",\"-c\",\"cp /mosquitto/secrets/passwords /run/mosquitto/passwords \\u0026\\u0026 cp /mosquitto/config/acl /run/mosquitto/acl \\u0026\\u0026 chmod 600 /run/mosquitto/passwords /run/mosquitto/acl \\u0026\\u0026 exec mosquitto -c /mosquitto/config/mosquitto.conf\"],\"image\":\"127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c\",\"imagePullPolicy\":\"IfNotPresent\",\"name\":\"mqtt\",\"readinessProbe\":{\"failureThreshold\":3,\"initialDelaySeconds\":3,\"periodSeconds\":5,\"successThreshold\":1,\"tcpSocket\":{\"port\":1883},\"timeoutSeconds\":1},\"resources\":{\"limits\":{\"cpu\":\"1\",\"memory\":\"128Mi\"},\"requests\":{\"cpu\":\"50m\",\"memory\":\"32Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"readOnlyRootFilesystem\":true},\"terminationMessagePath\":\"/dev/termination-log\",\"terminationMessagePolicy\":\"File\",\"volumeMounts\":[{\"mountPath\":\"/run/mosquitto\",\"name\":\"mqtt-runtime\"},{\"mountPath\":\"/mosquitto/config\",\"name\":\"mqtt-config\"},{\"mountPath\":\"/mosquitto/secrets\",\"name\":\"secrets\",\"readOnly\":true},{\"mountPath\":\"/mosquitto/data\",\"name\":\"mqtt-data\"}]}],\"dnsPolicy\":\"ClusterFirst\",\"initContainers\":[{\"command\":[\"node\",\"--input-type=module\",\"-e\",\"import{copyFileSync,existsSync,chmodSync}from'node:fs';import{DatabaseSync}from'node:sqlite';const dest='/restore/lab.sqlite';if(!existsSync(dest)){copyFileSync('/backup/stable-8599ab9-20260921T093154817Z.sqlite',dest);chmodSync(dest,0o600);}const db=new DatabaseSync(dest,{readOnly:true});if(db.prepare('PRAGMA integrity_check').get().integrity_check!=='ok')throw Error('Restored database integrity failed');db.close();console.log('Isolated recovery database integrity ok');\"],\"image\":\"127.0.0.1:15050/grid@sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420\",\"name\":\"restore-database\",\"resources\":{\"limits\":{\"cpu\":\"1\",\"memory\":\"256Mi\"},\"requests\":{\"cpu\":\"50m\",\"memory\":\"64Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"readOnlyRootFilesystem\":true},\"volumeMounts\":[{\"mountPath\":\"/backup\",\"name\":\"backup-source\",\"readOnly\":true},{\"mountPath\":\"/restore\",\"name\":\"data\"}]}],\"nodeSelector\":{\"kubernetes.io/hostname\":\"charleskoh-nucbox-g3\"},\"restartPolicy\":\"Always\",\"schedulerName\":\"default-scheduler\",\"securityContext\":{\"fsGroup\":1000,\"runAsGroup\":1000,\"runAsUser\":1000,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}},\"terminationGracePeriodSeconds\":30,\"volumes\":[{\"name\":\"data\",\"persistentVolumeClaim\":{\"claimName\":\"grid-restore-8599ab9-data\"}},{\"name\":\"mqtt-data\",\"persistentVolumeClaim\":{\"claimName\":\"grid-restore-8599ab9-mqtt-data\"}},{\"configMap\":{\"defaultMode\":420,\"name\":\"grid-mqtt\"},\"name\":\"mqtt-config\"},{\"emptyDir\":{\"medium\":\"Memory\",\"sizeLimit\":\"1Mi\"},\"name\":\"mqtt-runtime\"},{\"name\":\"secrets\",\"secret\":{\"defaultMode\":288,\"items\":[{\"key\":\"passwords\",\"path\":\"passwords\"}],\"secretName\":\"grid-secrets\"}},{\"name\":\"backup-source\",\"persistentVolumeClaim\":{\"claimName\":\"grid-data\",\"readOnly\":true}}]}}}}\n"
+        },
+        "creationTimestamp": "2026-09-21T09:32:53Z",
+        "generation": 3,
+        "name": "grid-restore-8599ab9",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "9987741",
+        "uid": "4d19a04c-151b-4d30-9b3c-b96d341ef130"
+    },
+    "spec": {
+        "progressDeadlineSeconds": 600,
+        "replicas": 0,
+        "revisionHistoryLimit": 10,
+        "selector": {
+            "matchLabels": {
+                "app": "grid-restore-8599ab9"
+            }
+        },
+        "strategy": {
+            "type": "Recreate"
+        },
+        "template": {
+            "metadata": {
+                "creationTimestamp": null,
+                "labels": {
+                    "app": "grid-restore-8599ab9"
+                }
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "env": [
+                            {
+                                "name": "MQTT_URL",
+                                "value": "mqtt://127.0.0.1:1883"
+                            },
+                            {
+                                "name": "MQTT_USERNAME",
+                                "value": "grid"
+                            },
+                            {
+                                "name": "MQTT_PASSWORD",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "mqtt-password",
+                                        "name": "grid-secrets"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "API_TOKEN",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "api-token",
+                                        "name": "grid-secrets"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "SEED_DEMO",
+                                "value": "false"
+                            }
+                        ],
+                        "image": "127.0.0.1:15050/grid@sha256:13da26c81e8caf23701d62e0a61e0457e6183d75dddcb9bde7fa75e1a41792ba",
+                        "imagePullPolicy": "IfNotPresent",
+                        "livenessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/api/health",
+                                "port": 3001,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 30,
+                            "periodSeconds": 15,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 1
+                        },
+                        "name": "app",
+                        "ports": [
+                            {
+                                "containerPort": 3001,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "readinessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/api/health",
+                                "port": 3001,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 5,
+                            "periodSeconds": 5,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 1
+                        },
+                        "resources": {
+                            "limits": {
+                                "cpu": "2",
+                                "memory": "1Gi"
+                            },
+                            "requests": {
+                                "cpu": "100m",
+                                "memory": "256Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/data",
+                                "name": "data"
+                            }
+                        ]
+                    },
+                    {
+                        "command": [
+                            "sh",
+                            "-c",
+                            "cp /mosquitto/secrets/passwords /run/mosquitto/passwords \u0026\u0026 cp /mosquitto/config/acl /run/mosquitto/acl \u0026\u0026 chmod 600 /run/mosquitto/passwords /run/mosquitto/acl \u0026\u0026 exec mosquitto -c /mosquitto/config/mosquitto.conf"
+                        ],
+                        "image": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "mqtt",
+                        "readinessProbe": {
+                            "failureThreshold": 3,
+                            "initialDelaySeconds": 3,
+                            "periodSeconds": 5,
+                            "successThreshold": 1,
+                            "tcpSocket": {
+                                "port": 1883
+                            },
+                            "timeoutSeconds": 1
+                        },
+                        "resources": {
+                            "limits": {
+                                "cpu": "1",
+                                "memory": "128Mi"
+                            },
+                            "requests": {
+                                "cpu": "50m",
+                                "memory": "32Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/run/mosquitto",
+                                "name": "mqtt-runtime"
+                            },
+                            {
+                                "mountPath": "/mosquitto/config",
+                                "name": "mqtt-config"
+                            },
+                            {
+                                "mountPath": "/mosquitto/secrets",
+                                "name": "secrets",
+                                "readOnly": true
+                            },
+                            {
+                                "mountPath": "/mosquitto/data",
+                                "name": "mqtt-data"
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "initContainers": [
+                    {
+                        "command": [
+                            "node",
+                            "--input-type=module",
+                            "-e",
+                            "import{copyFileSync,existsSync,chmodSync}from'node:fs';import{DatabaseSync}from'node:sqlite';const dest='/restore/lab.sqlite';if(!existsSync(dest)){copyFileSync('/backup/stable-8599ab9-20260921T093154817Z.sqlite',dest);chmodSync(dest,0o600);}const db=new DatabaseSync(dest,{readOnly:true});if(db.prepare('PRAGMA integrity_check').get().integrity_check!=='ok')throw Error('Restored database integrity failed');db.close();console.log('Isolated recovery database integrity ok');"
+                        ],
+                        "image": "127.0.0.1:15050/grid@sha256:13da26c81e8caf23701d62e0a61e0457e6183d75dddcb9bde7fa75e1a41792ba",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "restore-database",
+                        "resources": {
+                            "limits": {
+                                "cpu": "1",
+                                "memory": "256Mi"
+                            },
+                            "requests": {
+                                "cpu": "50m",
+                                "memory": "64Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/backup",
+                                "name": "backup-source",
+                                "readOnly": true
+                            },
+                            {
+                                "mountPath": "/restore",
+                                "name": "data"
+                            }
+                        ]
+                    }
+                ],
+                "nodeSelector": {
+                    "kubernetes.io/hostname": "charleskoh-nucbox-g3"
+                },
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "fsGroup": 1000,
+                    "runAsGroup": 1000,
+                    "runAsUser": 1000,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "terminationGracePeriodSeconds": 30,
+                "volumes": [
+                    {
+                        "name": "data",
+                        "persistentVolumeClaim": {
+                            "claimName": "grid-restore-8599ab9-data"
+                        }
+                    },
+                    {
+                        "name": "mqtt-data",
+                        "persistentVolumeClaim": {
+                            "claimName": "grid-restore-8599ab9-mqtt-data"
+                        }
+                    },
+                    {
+                        "configMap": {
+                            "defaultMode": 420,
+                            "name": "grid-mqtt"
+                        },
+                        "name": "mqtt-config"
+                    },
+                    {
+                        "emptyDir": {
+                            "medium": "Memory",
+                            "sizeLimit": "1Mi"
+                        },
+                        "name": "mqtt-runtime"
+                    },
+                    {
+                        "name": "secrets",
+                        "secret": {
+                            "defaultMode": 288,
+                            "items": [
+                                {
+                                    "key": "passwords",
+                                    "path": "passwords"
+                                }
+                            ],
+                            "secretName": "grid-secrets"
+                        }
+                    },
+                    {
+                        "name": "backup-source",
+                        "persistentVolumeClaim": {
+                            "claimName": "grid-data",
+                            "readOnly": true
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "status": {
+        "conditions": [
+            {
+                "lastTransitionTime": "2026-09-21T09:35:04Z",
+                "lastUpdateTime": "2026-09-21T09:35:04Z",
+                "message": "Deployment has minimum availability.",
+                "reason": "MinimumReplicasAvailable",
+                "status": "True",
+                "type": "Available"
+            },
+            {
+                "lastTransitionTime": "2026-09-21T09:32:53Z",
+                "lastUpdateTime": "2026-09-21T09:35:04Z",
+                "message": "ReplicaSet \"grid-restore-8599ab9-6cf7c5dffd\" has successfully progressed.",
+                "reason": "NewReplicaSetAvailable",
+                "status": "True",
+                "type": "Progressing"
+            }
+        ],
+        "observedGeneration": 3
+    }
+}

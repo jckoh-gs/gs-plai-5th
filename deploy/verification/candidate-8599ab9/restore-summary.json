@@ -1,0 +1,31 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T09:36:50.607971+00:00",
+  "backupPath": "/data/stable-8599ab9-20260921T093154817Z.sqlite",
+  "backupSha256": "29071fdc6a800e7b173aeaa49c45a6f4f83b0dacbaf5e6594f1ea66864c21879",
+  "backupBytes": 105144320,
+  "recoveryDeployment": "grid-restore-8599ab9",
+  "restoredProduct": "1.1.0",
+  "restoredImage": "127.0.0.1:15050/grid@sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420",
+  "backwardProduct": "1.0.0",
+  "backwardImage": "127.0.0.1:15050/grid@sha256:13da26c81e8caf23701d62e0a61e0457e6183d75dddcb9bde7fa75e1a41792ba",
+  "checks": [
+    "restore-1.1-data.json",
+    "restore-1.1-preview.json",
+    "restore-1.1-mqtt.json",
+    "restore-1.1-browser/result.json",
+    "restore-backward-data.json",
+    "restore-backward-mqtt.json",
+    "restore-backward-browser/result.json",
+    "restore-backward-preview-expected.json"
+  ],
+  "originalPlants": 5,
+  "originalScenarios": 1,
+  "finalReplicas": 0,
+  "retainedPVCs": [
+    "grid-restore-8599ab9-data",
+    "grid-restore-8599ab9-mqtt-data"
+  ],
+  "productionDatabaseModifiedByThisTest": false,
+  "runJsonModified": false
+}
