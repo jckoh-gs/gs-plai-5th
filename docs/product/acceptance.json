@@ -1,5 +1,5 @@
 {
-  "prdVersion": "1.11",
+  "prdVersion": "1.12",
   "runId": "grid-new-20260921T080733Z",
   "scope": "greenfield, mandatory k3s",
   "policy": "pending until new-run direct evidence covers complete requirement; code presence/legacy reports are not pass",
@@ -6368,6 +6368,62 @@
         }
       ],
       "assessment": "REVIEW021 independently verified actual1.4 main7proofs and17restore proofs. Exact594944000byte/be09snapshot restored to fresh1.4 and separate1.3 with original5RTUs preserved beforefixtures; actualservedbundle, auth/UI/preview/export/scenario/MQTT and1.4form44checks PASS. Bothrigs0/noPods/ownedtunnelsclosed. Manifest/tag provenance and finalmedia/time gates remain separately checked."
+    },
+    {
+      "id": "FR-COMMAND-RECEIPT-01",
+      "description": "REST 명령 접수 결과·응답 유실 및 읽기 확인",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "IDEA009 adopted; implementation and direct acceptance evidence pending. Beforeproof demonstrates prior issue, not completion."
+    },
+    {
+      "id": "UI-12",
+      "description": "RTU별 이 탭의 최근20개 명령 전송 확인",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "IDEA009 adopted; implementation and direct acceptance evidence pending. Beforeproof demonstrates prior issue, not completion."
+    },
+    {
+      "id": "AT-COMMAND-RECEIPT-01-01",
+      "description": "실제 접수/거절/만료 상태와 ID 귀속",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "IDEA009 adopted; implementation and direct acceptance evidence pending. Beforeproof demonstrates prior issue, not completion."
+    },
+    {
+      "id": "AT-COMMAND-RECEIPT-01-02",
+      "description": "POST 확정과 화면 갱신 실패 분리",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "IDEA009 adopted; implementation and direct acceptance evidence pending. Beforeproof demonstrates prior issue, not completion."
+    },
+    {
+      "id": "AT-COMMAND-RECEIPT-01-03",
+      "description": "응답 유실·미도달·읽기 확인·15초 경계",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "IDEA009 adopted; implementation and direct acceptance evidence pending. Beforeproof demonstrates prior issue, not completion."
+    },
+    {
+      "id": "AT-COMMAND-RECEIPT-01-04",
+      "description": "중복 제출과 RTU/탭 전환 경합",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "IDEA009 adopted; implementation and direct acceptance evidence pending. Beforeproof demonstrates prior issue, not completion."
+    },
+    {
+      "id": "AT-COMMAND-RECEIPT-01-05",
+      "description": "모든 REST 제어·기존 의미·접근성·보존 범위",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "IDEA009 adopted; implementation and direct acceptance evidence pending. Beforeproof demonstrates prior issue, not completion."
+    },
+    {
+      "id": "AT-COMMAND-RECEIPT-01-06",
+      "description": "실제 후보 k3s·MQTT·회귀·백업/복원",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "IDEA009 adopted; implementation and direct acceptance evidence pending. Beforeproof demonstrates prior issue, not completion."
     }
   ],
   "reviewedSource": {

@@ -102,3 +102,12 @@ IDEA008 개정3 로컬 완료: runtime fdd0491 / PRD1.11 / 제품1.4.0. 범위·
 
 
 IDEA008 개정3 기능·배포·복원 완료: 실제 fdd0491/c19d 이미지에서 main UI·MQTT·outbox 재시작, 동일594944000바이트/be09 백업의 별도1.4·하위1.3 복원17증거와 새폼44검사를 REVIEW021에서 독립 확인했다. 기능 안정 기준1.4.0으로 고정하며 태그/manifest 해시 검증은 별도 운영 기록으로 완료한다. 위 구현·배포 대기 표현은 각 시점의 이력이다. 최종 영상/PPT·시간·인도는 미완료다.
+
+## IDEA-009 · REST 명령 접수 결과와 응답 유실 안내 — 제안 v1
+
+**미채택·미구현.** [REVIEW-024](REVIEW-024.md)의 소스 관찰과 최소 수락안을 등록한다. HTTP200의 rejected/expired를 접수 성공으로 표시하는 문제, accepted 뒤 상태조회 실패를 명령실패로 혼동하는 문제, 응답대기 중 새UUID 중복 제출을 하나의 REST 접수 흐름으로 다룬다. 제안 범위는 Target/대시보드 REST 명령의 정확한 반환 상태·고정 RTU/commandId receipt·RTU별 단일 pending guard·응답미확정 시 읽기 확인이다. 자동 재전송·새 서버 API/DB·전체 폼 재설계·탭 간 exactly-once는 제외한다. 실제 재현은 독립 이슈 담당 증거와 대조 후 채택 판단한다. 현재 stable1.4/PRD1.11과 원래 동결/종료·미디어 조건은 변경하지 않았다.
+
+
+### IDEA009 채택 결정 — 개정1
+
+메인은 실제 local1.4 beforeproof의 rejected 성공알림, accepted 후 상태GET 오류, 서로다른ID의 중복POST를 확인하고 REVIEW024 범위를 PRD1.12/제품1.5.0 후보로 채택했다. 각 HTTP대기15초, RTU별 단일 pending POST 및 앱메모리 최근20개 확인, 명시적 원래ID 읽기 확인을 계약에 고정한다. 구현/시험/stable 승격은 대기이며 실제원격1.4와 immutable checkpoint/백업을 보존한다. 위 미채택 표현은 채택 전 이력이다.

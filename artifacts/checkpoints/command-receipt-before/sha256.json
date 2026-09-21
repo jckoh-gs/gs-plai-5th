@@ -1,0 +1,15 @@
+{
+  "command-form-before.js": "ba71bfda52cb154ab15765f5ebc99f8cab8e3ae80aed3d90543e5228e4d3b67e",
+  "owned-baseline.json": "c3424b99ae7a78826f993d9fa112b9bf8d2a6cb72754fc99bda92b7514b16ebb",
+  "owned-cleanup.json": "a9f90f908791a7f419e5252ffad0d36eed9875197a7c3d15754a37df15d4afd8",
+  "reproduce.cjs": "dc0fb091194826a15d92fcba9f0107f30226b3e2fd5dcc811f3853919b656f04",
+  "reproduce.log": "c533c207f909820c69d11691ca6e8ecfadb3f3a376061900776be42b4afa7980",
+  "round2/A-rejected-success.png": "ee76bfbff4a5af6b9173e35b7bc88363f10772daa0ceb88ce4bb153b6c7aecdd",
+  "round2/B-persisted-state-error.png": "6c7264680be5276524547b1165460b0d1fe8b6b2e1b2ff47f8e8528f4b1d9a9b",
+  "round2/C-two-pending-posts.png": "ee9a7a09823fc1c3d2a23b4b09dd0e12bb5ea2ca5b08e335233154b4a84e1746",
+  "round2/owned-baseline.json": "d6674843641f06afc69998a1ef0270a732893bc33b8c807f7d7fe7095057914a",
+  "round2/owned-cleanup.json": "f9462e541d16c101d3887ba747c7339703443aee80c01e269cd55ad75dc3bc42",
+  "round2/result.json": "7882875d986f72ac3e83f297570aadf3ddb0f1fa72d0e21f377a0af2ba1c2c26",
+  "round2.log": "e1bd7c22b162e76a370c740040f01267dd17fdd9c80a6999a314e2a8f61d22fb",
+  "web-before.jsx": "d44ecb94ea29950d0940c7ce8fe993420a4226c13088d70d59bfc01a25493227"
+}

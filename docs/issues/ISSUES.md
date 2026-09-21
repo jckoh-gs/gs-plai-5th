@@ -419,3 +419,15 @@ REVIEW022 최종 통합 후속: 실제로 시간대가 다른 서버의 createdA
 독립 읽기 확인: supervisor84952/81174는14:01:54.445Z health timeout5002ms 후14:01:55.750Z verified로 복귀했다. 두 관측기 primary85649/36193, audit85652/92936은 유지됐고 제한된ps시작identity를 기록했다. 실제read-only pod조회는 동일UID f45d1e93-03e8-4f0a-a7af-7f4925b44190/Ready app·mqtt/재시작0과1.4 c19digest를 확인했다.
 
 고정14:00:30~14:04:30prefix에서 primaryAPI오류0→1/connectionErrors0→0, auditconnectionErrors0→1이다. 다섯RTU 모두invalid0/sampleDiscontinuities0/sequenceForwardJumps0이며 비교구간수신샘플증가가각simulationSeconds증가와같다(첫RTU142,나머지180). 마지막prefixAPI/MQTT정상·5RTU HEALTHY/pending0이고14:03:49경전RTU재수신을확인했다. 추가latest파일은14:04이후신선도스냅샷으로별도보존한다. 이번은관측된샘플공백이없어원격outbox조회/누락배치추정을하지않았다. 모든구독자무손실/무중단을주장하지않는다. host전원조사는하지않았으며sleep원인추정도없다. 증거는 artifacts/checkpoints/reconnect-20260921T1401/summary.json 및 sha256.json. 소스보존은provenance이며process메모리attestation이아니다. 앱/DB/MQTT변경·재시작·관측중복기동은없다.
+
+
+### Command receipt before-proof — 실제1.4 로컬 UI 세 경계
+
+독립 실제브라우저/REST 재현은 artifacts/checkpoints/command-receipt-before/round2/result.json과3개PNG/소유RTU baseline·cleanup에 보존했다. local3107 version1.4 확인 후 고유1기/정격1000RTU만 사용했다. A: 유효폼1001kW 요청은 서버rejected인데 초록 “목표값을 접수했습니다. 아래 수명주기를 확인하세요.”가 표시됨. B: 실제accepted POST 뒤 브라우저의 후속GET/state만503으로 합성하면 명령은 서버에영속되었는데 일반요청오류가 표시됨. B는실제서버실패재현이 아니라 명시적response fault fixture다. C: 실제POST응답만 hold하면서 두번submit하면 서로다른commandId 두요청이저장되고 앞명령superseded/뒤accepted를확인했다.
+
+로드1.4bundle index-BndL-kls SHA37a5224b…와 source d44ecb94…를기록했다. 최초harness는 hint포함label에exact접근하여재현전timeout했고 원본로그/초기소유RTU정리결과를보존했다. round2는source확인한name selector로수정했다. 두소유RTU 모두faults기본값·on/limit/targetLimit을생성baseline으로정리했고 기존RTU/main3104/앱소스/PRD/run은변경하지않았다. IDEA009 채택·수정은메인별도결정이며이beforeproof로개선완료를주장하지않는다.
+
+
+## ISSUE-022 — REST 명령 응답과 전송 확인의 혼동
+
+상태: REPRODUCED / FIX_PENDING (IDEA009, PRD1.12/제품1.5.0 후보). 위 command-receipt-before A/B/C는 각각 HTTP200 명령 거절의 성공알림, 명령 접수와 후속 상태조회 실패의 혼동, 응답 대기 중 다른UUID 반복제출을 보여준다. 수정 전 실제1.4 증거를 보존하며 서버 검증이나 같은ID 멱등성의 실패라고 확대하지 않는다. 실제 수정·독립 인수·원격 배포/복원 후에만 해결로 바꾼다.

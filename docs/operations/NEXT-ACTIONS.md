@@ -43,6 +43,10 @@ native heartbeat `grid`가 10분마다 이 재개 절차를 호출한다. Mac과
 
 [14:01 사건](../../artifacts/checkpoints/reconnect-20260921T1401/summary.json): health 검사 timeout 5002ms, 단절 기록 14:01:54.445Z → 검증 복귀 14:01:55.750Z. 같은 Pod UID·Ready 2개·재시작 0회다. 사건 이후 비교 기준은 primary APIerrors **1**, connectionErrors **0**, audit connectionErrors **1**, RTU별 sampleDiscontinuities **0**이다. 보존 구간에서 5개 RTU의 수신 샘플 증가와 simulation advance가 일치했고 invalid/sequence jump도 0이었다. 원인은 미확정이며 보편적인 무손실 보장이 아니다. 이후 새 사건은 이 기준과 비교해 기록한다.
 
+## 채택된 다음 후보
+
+IDEA009를 PRD1.12/제품1.5.0 후보로 채택했다. 실제 로컬 beforeproof A/B/C와 REVIEW024가 근거이며 아직 구현·검증 전이다. REST 접수 상태·응답 유실·중복 제출을 로컬에서 구현하고 검증하는 단계부터 재개한다. 원격1.4 배포·백업·체크포인트 및 관측은 유지한다. 완료한1.4 배포를 반복하지 않는다.
+
 ## 남은 작업 순서
 
 1. 현재 관측을 계속하며 신선도·오류 증가분·Ready·저장 공간·전원 상태를 확인한다. 14:49:42Z 이후 첫 1시간의 원문과 소스를 불변 보존한다.

@@ -1,0 +1,55 @@
+{
+  "version": "1.4.0",
+  "rtuId": "b6e2a04d-2b8d-4be6-aa63-be8b8e71ba6f",
+  "scope": "Isolated local actual browser/API; network response faults explicitly synthetic",
+  "A": {
+    "status": "rejected",
+    "commandId": "83d99d16-be81-430a-978b-56a9bf1b020c",
+    "notice": [
+      "목표값을 접수했습니다. 아래 수명주기를 확인하세요."
+    ]
+  },
+  "B": {
+    "postStatus": "accepted",
+    "commandId": "a9786365-ac23-4ef3-be1b-8f27bcc7d082",
+    "persistedStatus": "accepted",
+    "error": [
+      "요청을 확인해 주세요controlled following state failure"
+    ],
+    "fault": "Only browser GET/state response overridden after real POST"
+  },
+  "C": {
+    "requests": [
+      {
+        "commandId": "df123add-28b1-4501-943e-4be217c52464",
+        "targetKw": 100
+      },
+      {
+        "commandId": "714d0c24-ac4b-458a-8232-0145e73942fe",
+        "targetKw": 100
+      }
+    ],
+    "count": 2,
+    "persisted": [
+      {
+        "commandId": "df123add-28b1-4501-943e-4be217c52464",
+        "status": "superseded"
+      },
+      {
+        "commandId": "714d0c24-ac4b-458a-8232-0145e73942fe",
+        "status": "accepted"
+      }
+    ]
+  },
+  "observedAt": "2026-09-21T14:11:47.064Z",
+  "assets": [
+    {
+      "path": "dist/assets/index-BndL-kls.js",
+      "sha256": "37a5224ba233be5966d02ac96fc91c7eddc0adad70e8d4783df6b5b4068d5bce"
+    }
+  ],
+  "source": {
+    "path": "web/src.jsx",
+    "sha256": "d44ecb94ea29950d0940c7ce8fe993420a4226c13088d70d59bfc01a25493227"
+  }
+}

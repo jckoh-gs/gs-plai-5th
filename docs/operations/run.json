@@ -11,7 +11,7 @@
   "baselineCommit": "a59646b",
   "baselineDatabase": null,
   "documents": {
-    "docs/PRD-VPP-SCADA-RTU.md": "97ef5f28b111e86174c75a0953795e0f00924d52be71554b740acd7ce2c5c2e7",
+    "docs/PRD-VPP-SCADA-RTU.md": "b8ed507346fb7c5c4915cfe5b016e49688487c47623ec33400925fcc660fe163",
     "docs/GOAL-VPP-AUTONOMOUS.md": "f391e5fab594f02cb4953c52055cf4b01f3817343144a9d89df8b64fe8fd11f2"
   },
   "roles": {
@@ -120,20 +120,15 @@
     }
   },
   "candidate": {
-    "productVersion": "1.4.0",
-    "prdVersion": "1.11",
-    "idea": "IDEA-008",
-    "ideaRevision": 3,
-    "startedAt": "2026-09-21T13:34:20.352933+00:00",
-    "status": "Verified stable1.4 functional runtime and exactsnapshot current/backwardrestore; finalmedia/time/deliverypending",
-    "fallbackTag": "stable-v1.3.0",
-    "fallbackManifest": "artifacts/releases/checkpoint-1.3.0.json",
-    "sourceCommit": "fdd0491a5c08901962f46ac845f8582921150d45",
-    "buildOwner": "/root/deployment",
-    "evidenceDirectory": "deploy/verification/candidate-fdd0491",
-    "appImage": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4",
-    "preUpgradeBackup": "deploy/verification/pre-1.4.0-backup.json",
-    "backupEvidence": "deploy/verification/stable-backup-fdd0491.json"
+    "productVersion": "1.5.0",
+    "prdVersion": "1.12",
+    "idea": "IDEA-009",
+    "ideaRevision": 1,
+    "startedAt": "2026-09-21T14:14:28.603123+00:00",
+    "status": "Adopted; implementation/local acceptance pending; remote1.4 unchanged",
+    "fallbackTag": "stable-v1.4.0",
+    "fallbackManifest": "artifacts/releases/checkpoint-1.4.0.json",
+    "beforeEvidence": "artifacts/checkpoints/command-receipt-before/round2/result.json"
   },
   "previousStableCheckpoints": [
     {
@@ -225,7 +220,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T14:08:59.369531+00:00",
+  "updatedAt": "2026-09-21T14:14:28.603123+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
@@ -277,16 +272,20 @@
     }
   ],
   "previousCandidate": {
-    "productVersion": "1.3.0",
-    "prdVersion": "1.10",
-    "idea": "IDEA-007",
-    "sourceCommit": "3fa3ba0a6984dc752a8968d1788e72a3069b1267",
-    "status": "Functional acceptance, outbox actualrestart, exactsnapshot1.3 and backward1.2 verified; final media/time gates pending",
-    "startedAt": "2026-09-21T11:59:36.329441+00:00",
-    "fallbackTag": "stable-runtime-v1.2.0-83d10ce",
-    "preUpgradeBackup": "deploy/verification/pre-1.3.0-backup.json",
-    "appImage": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
-    "backupEvidence": "deploy/verification/stable-backup-3fa3ba0.json"
+    "productVersion": "1.4.0",
+    "prdVersion": "1.11",
+    "idea": "IDEA-008",
+    "ideaRevision": 3,
+    "startedAt": "2026-09-21T13:34:20.352933+00:00",
+    "status": "Verified stable1.4 functional runtime and exactsnapshot current/backwardrestore; finalmedia/time/deliverypending",
+    "fallbackTag": "stable-v1.3.0",
+    "fallbackManifest": "artifacts/releases/checkpoint-1.3.0.json",
+    "sourceCommit": "fdd0491a5c08901962f46ac845f8582921150d45",
+    "buildOwner": "/root/deployment",
+    "evidenceDirectory": "deploy/verification/candidate-fdd0491",
+    "appImage": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4",
+    "preUpgradeBackup": "deploy/verification/pre-1.4.0-backup.json",
+    "backupEvidence": "deploy/verification/stable-backup-fdd0491.json"
   },
   "hostPowerGuard": {
     "handle": 11821,

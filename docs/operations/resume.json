@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T14:08:59.369531+00:00",
+  "updatedAt": "2026-09-21T14:14:28.603123+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": "stable-v1.4.0",
   "stableManifest": "artifacts/releases/checkpoint-1.4.0.json",
   "workingMilestone": {
-    "productVersion": "1.4.0",
-    "prdVersion": "1.11",
-    "idea": "IDEA-008",
-    "state": "Stable1.4.0 / PRD1.11 / runtimefdd0491 / immutablecheckpoint962hashes andactualReadyimages independentlyverified. Exact594944000Bbe09backup1.4 andbackward1.3restorePASS. Finalfreeze/media/time/deliverypending."
+    "productVersion": "1.5.0",
+    "prdVersion": "1.12",
+    "idea": "IDEA-009",
+    "state": "Adopted candidate only; remote remains verifiedstable1.4; implement and independently validate locally before any upgrade."
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -22,6 +22,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
+    "Implement and independently verify adoptedIDEA009/1.5 locally while preserving1.4observations. Review candidate exactimage/security/UI/MQTT/recovery beforepromotion; no remotechanges until justified. Originalfreeze/media/deadline unchanged.",
     "Continue existing1.4observers until originalfreeze; preserve first-hour prefix after14:49:42UTC and periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -294,10 +295,10 @@
     "instruction": "Use FINAL-RESTORE-PLAN bounded direct commands and media watchdog; inspect uncertain remote outcome before retry; immutable1.3 checkpoint unchanged"
   },
   "nextProductProposal": {
-    "id": "IDEA-008",
-    "revision": 3,
-    "state": "implemented and functionally verified1.4",
-    "review": "docs/product/REVIEW-021.md"
+    "id": "IDEA-009",
+    "revision": 1,
+    "state": "adopted1.5 candidate; not implemented or deployed",
+    "review": "docs/product/REVIEW-024.md"
   },
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",

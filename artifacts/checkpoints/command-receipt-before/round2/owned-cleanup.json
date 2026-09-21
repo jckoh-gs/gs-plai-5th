@@ -1,0 +1,20 @@
+{
+  "rtuId": "b6e2a04d-2b8d-4be6-aa63-be8b8e71ba6f",
+  "faults": {
+    "offline": false,
+    "latencyMs": 0,
+    "dropPct": 0,
+    "sensorFreeze": false,
+    "scadaReject": false,
+    "actuatorStuck": false
+  },
+  "controls": [
+    {
+      "id": "WT-01",
+      "on": true,
+      "limitPct": 100,
+      "targetLimitKw": null
+    }
+  ],
+  "at": "2026-09-21T14:11:47.135Z"
+}
