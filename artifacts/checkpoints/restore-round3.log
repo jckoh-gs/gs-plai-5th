@@ -1,0 +1,24 @@
+{"result":"PASS","authRequired":false,"authenticatedSSE":true,"initialWaitingState":true,"openStreamWithoutMessagesStale":true,"wrongTokenReentry":null,"independentTabRequiresLogin":null,"noLocalStorageToken":null,"staleAfterFiveSeconds":true,"resumeClearsStale":true,"guideDownload":true,"narrowViewportNoPageOverflow":true,"pageErrors":[]}
+
+{
+  "result": "PASS",
+  "suite": "backup-restore",
+  "evidence": {
+    "restoredBrowserVerified": true,
+    "onlineBackupAPI": true,
+    "integrityCheck": "ok",
+    "separateRestoreDatabase": true,
+    "plantCSVRunIdPreserved": true,
+    "commandDedupRecordsPreserved": true,
+    "scenarioPreserved": true,
+    "checkpointFaultsRestored": true,
+    "httpHealth": true,
+    "realMQTT": true,
+    "pendingOutboxCapturedInBackup": true,
+    "identicalPendingBodyAndIdDelivered": true,
+    "restoredPubackPersisted": true,
+    "newControlAcceptedExecutingCompleted": true,
+    "newActualKw": 75,
+    "newErrorKw": 0
+  }
+}

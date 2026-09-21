@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-09-21T08:35:55.604Z",
+  "base": "http://127.0.0.1:3103",
+  "rtuId": "1198d24d-8257-4d8b-baa9-169461b827e6",
+  "method": "Actual native Chrome via cua_repl; this script reconciles API and downloaded files after those actions",
+  "browserObserved": [
+    "Synthetic fixture token login -> live dashboard",
+    "All six faults applied: offline/sensorFreeze/scadaReject/actuatorStuck=true,latencyMs120,dropPct15; server state independently read",
+    "All faults reset through UI",
+    "Replay speed5,seed777,freeze=true,pause and resume",
+    "Wind numeric fields and custom curve saved",
+    "Solar efficiency0.8 and temperature coefficient-0.003 saved",
+    "Irradiance CSV2 rows registered then cleared",
+    "Weather mode selected and applied; wind direction241",
+    "Keyboard CSV seek601 persisted",
+    "Hybrid camera drag and wheel zoom visibly changed camera, solar cells now face initial camera",
+    "Selected fixture preserved dashboard→lab",
+    "Invalid CSV source row3 power_kw error visible; no partial plant created",
+    "wind.csv browser download completed and content verified",
+    "Scenario JSON browser download completed; schemaVersion1 and snapshot verified"
+  ],
+  "assertions": "PASS",
+  "screenshotsSaved": false,
+  "screenshotLimitation": "Documented CUA API produced inline screenshot bytes; no filesystem-save API. Visual captures were inspected inline.",
+  "remaining": [
+    "Individual fault behavioral outcomes are server integration scope; browser only applied all fields and reset",
+    "Pure solar scene observed round1; round2 hybrid cells/orbit inspected",
+    "No exhaustive keyboard focus traversal or narrow viewport performed in this round; parent browser-check records separate checks",
+    "No remote k3s browser verification in this round"
+  ]
+}

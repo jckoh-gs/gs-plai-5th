@@ -13,3 +13,13 @@ Observed:
 - Final build succeeds. Three chunk warning only.
 
 Implemented but needing broader independent browser acceptance: remote authenticated login/SSE, stale5s behavior under connection interruption, all six fault controls, all model fields, keyboard accessibility at narrow viewport, actual guide/sample/export download, wind drag/zoom/direction controls, error entry paths. Unit/API integration tests do not substitute for these UI interactions.
+
+## Round 2 — isolated authenticated fixture
+
+Actual native Chrome CUA interactions at port3103, dedicated hybrid RTU1198d24d-8257-4d8b-baa9-169461b827e6. Token was a synthetic test credential; no token screenshot was captured. API setup registered only the dedicated fixture; browser controls performed all subsequent changes.
+
+All six faults applied and independently confirmed from API, then all reset through UI. Replay5×, seed777, live-weather freeze, pause/resume; wind model rated1001/ramp101/startup1/cutIn2/rated13/cutOut26/custom curve; solar efficiency0.8/temp coefficient−0.003; irradiance CSV2 rows registered and cleared. Manual weather mode and direction241°, keyboard CSV seek601 applied. Hybrid drag and wheel zoom visibly changed camera; corrected panel tilt exposes solar cells. Selected RTU persisted across dashboard/lab. Invalid CSV displayed `csv 행 3 power_kw: 유한한 숫자여야 합니다` and created no partial RTU. Wind CSV and scenario JSON downloads showed 완료 and downloaded contents were read and validated.
+
+Evidence reconciler `scripts/browser-flows.cjs` asserts API state and exact downloaded artifacts. It explicitly does not automate UI and does not substitute API assertions for browser observations. Result: `artifacts/checkpoints/browser-flows/result.json` PASS. All injected faults cleared. Model/replay changes remain only on named QA fixture for reproducible evidence; no other plants changed. No file screenshots exported via undocumented CUA APIs.
+
+Round2 code fixes: replay noise max50 matches contract; telemetry example uses rtuId; outbox guide distinguishes PUBACK completion marking from later retention deletion. `npm run build` passed after fixes.

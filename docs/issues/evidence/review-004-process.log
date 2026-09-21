@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "suite": "actual-process-command-restart",
+  "firstPid": 24918,
+  "secondPid": 24936,
+  "signal": "SIGKILL",
+  "commandId": "64c6530a-84d9-411c-abdb-65a7dc94bc6b",
+  "originalDeadline": "2026-09-21T08:41:28.991Z",
+  "restoredStatus": "executing",
+  "timeoutObservedAt": "2026-09-21T08:41:29.140Z",
+  "targetPreservedAfterTimeout": true,
+  "explicitStopCompleted": true,
+  "broker": "mqtt://127.0.0.1:18883",
+  "prefix": "process-review-21c771d3-0291-4fe4-8b95-20931e06b5c7"
+}

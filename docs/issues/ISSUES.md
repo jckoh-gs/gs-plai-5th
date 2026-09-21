@@ -98,3 +98,29 @@
 - **센서 누락:** 실제 broker/runtime에서 freeze 2301ms 동안 frame 수 불변, 재개 frame timestamp는 해제 이후, freeze 구간 timestamp 존재하지 않음, 양쪽 관측 간격≥2300ms. AT-MQTT-08의 no-backfill 직접 증거.
 
 ISSUE-005의 배포/브라우저/복원/미디어 등 다른 게이트는 이 검증으로 닫지 않는다.
+
+## Round 4 — 실제 프로세스 중단 후 미완료 제어 복원
+
+`review-process-restart.js`는 별도 임시 DB·포트·무작위 MQTT prefix를 사용하고 실제 로컬 Mosquitto에서 수행했다. 기존 root/원격 런타임은 건드리지 않았다.
+
+- REST로 실제 가용 출력보다 높은 1800kW 목표/8초 timeout을 접수하고 MQTT `executing` 수신 후 child 프로세스에 SIGKILL.
+- 동일 SQLite에서 새로운 PID로 deadline 이전 재기동, REST 명령 조회가 executing이며 deadlineAt 원문 동일함을 확인.
+- MQTT timed_out 수신 시각은 원 deadline보다 149ms 뒤. 재시작에 의한 timeout 연장 없음.
+- timeout 뒤 발전기 targetLimitKw=900과 on=true 보존, 명시적 stop 접수 후 MQTT completed 및 REST on=false/powerKw=0 확인.
+- `evidence/review-004-process.log` PASS. 이는 AT-CONTROL-10의 실제 프로세스 재시작 공백을 보완하고 AT-CONTROL-11의 timeout/stop 동작을 end-to-end로 증명한다.
+
+별도 backup 복원 범위는 기존 `restore-integration.js` 소스 검토상 health/CSV/runId/scenario/명령 ID/실제 telemetry까지 검증한다. backup 시점에 미확인 outbox가 실제 존재하는 fixture, 복원 후 그 동일 body 전송, 복원 UI 조작 및 새 제어 왕복은 이 스크립트가 증명하지 않으며 다른 검증과 연결할 필요가 있다. 메인에 잔여 범위를 전달했다.
+
+## Round 5 — 백업 outbox 및 복원 후 새 제어
+
+이전 Round 4의 backend 복원 공백을 실제 실행으로 보완했다. `scripts/restore-integration.js`가 offline 상태에서 실제 pending telemetry를 기다린 다음 online backup API로 snapshot을 생성한다. 백업 DB에서 해당 ID의 acked=null과 원 body 일치를 확인한다. 별도 restore.sqlite, 새 MQTT prefix/client에서 복원하고 fault도 snapshot 값으로 복원됐는지 확인한다. offline 해제 후 broker가 받은 **raw UTF-8 body**를 백업 전 원 body와 완전히 비교한다. messageId/sequence/runId/rtuId와 원 관측값을 보존하고, 실제 PUBACK 후 restored DB acked 저장까지 검증한다.
+
+이어 복원된 RTU에 새로운 MQTT setpoint 75kW를 보내 accepted→executing→completed, actualKw=75/errorKw=0을 확인했다. `evidence/review-005-restore.log` PASS. 변경 전 root/원격 DB는 사용하지 않고 임시 격리 fixture만 사용했다. **복원 UI 조작은 이 시험에 포함하지 않는다.** 메인이 별도 브라우저 시험으로 연결한다.
+
+## ISSUE-008 — 첫 상태 수신 전 연결 배지 의미
+
+- 중요도 P3. 수정자: 메인. 상태: 메인 브라우저 검증 PASS의 소스-증거 대조 완료.
+- 증상/원인: 처음 유효 snapshot을 받기 전에도 '다시 연결 중'으로 표시하여 초기 대기와 재연결을 구별하지 못함.
+- 수정: `updatedAt`이 없을 때 '상태 수신 대기', 이후 정상/지연/재연결 분기 유지. 기존 AT-FRESH 요구의 구현 보완이며 새 범위 아님.
+- 증거: `scripts/browser-check.cjs`의 최초 `/api/state` 503 경계, 열린 SSE chunk 전달 중단, socket 단절, 복구 UI assertions와 `artifacts/checkpoints/browser-stream-boundaries.log` PASS를 대조했다. 이번 이슈 담당자가 브라우저 시험을 직접 재실행한 것은 아니다.
+- 잔여: 실제 최종 배포 revision 연결과 복원 UI 흐름은 메인 검증 범위.

@@ -1,0 +1,67 @@
+
+> grid-vpp-emulator@1.0.0 test
+> node --test tests/*.test.js
+
+✔ malformed, null, array, oversized, retained and cross-RTU statuses rejected (0.816875ms)
+✔ only allowlisted fields survive; raw credentials and controls are removed from reason (0.2295ms)
+✔ remote management fails closed without strong token (0.784333ms)
+✔ exact bearer token required and topic wildcards forbidden (0.154208ms)
+✔ configuration bounds and credential redaction (0.2035ms)
+✔ zero available power does not complete start while fractional startup remains (5.895375ms)
+✔ already expired and latency-expired requests leave SCADA settings unchanged (6.679333ms)
+✔ canonical global dedup, validation atomicity, priority intersections (10.176875ms)
+✔ expiry before dispatch; sensor freeze cannot complete; restart deadline real time (1.723209ms)
+✔ target checks every allocated device and signed actual error, then completion (0.683084ms)
+✔ stop clears pending startup and completed requires a post-dispatch model sample (0.750291ms)
+✔ failed durable dispatch rolls back model, command cache and outbox together (1.755709ms)
+✔ setpoint action validation applies even to known duplicate IDs (0.761041ms)
+✔ outer model transaction rollback also restores nested command cancellation cache (1.233625ms)
+✔ health precedence and exact real-time boundaries (3.445542ms)
+✔ CSV/TSV BOM and Korean aliases, unit and missing weather (3.858333ms)
+✔ linear 300/599/600 boundaries and last interval hold, no wrapping interpolation (0.339792ms)
+✔ mean/kWh energy holds original interval without claiming ramp-adjusted energy (0.904625ms)
+✔ direction shortest arc and optional missing data never backwards-filled (0.3355ms)
+✔ strict actual dates, offsets, seconds, leap years (0.322959ms)
+✔ invalid CSV errors identify original row/field; duplicate, reverse, gap, NaN, empty (1.285833ms)
+✔ registration validates whole input and generates correct hybrid IDs and virtual coordinates (1.249959ms)
+✔ CSV total allocation and hybrid separate allocation, voltage/current provenance (1.117584ms)
+✔ weather wind power cubic/rated/cut-out and custom interpolation (0.581125ms)
+✔ solar temperature correction, saturation, efficiency and manual night irradiance (0.473958ms)
+✔ ramp, stopping, fractional startup and actuator freeze (0.451541ms)
+✔ percentage limit and rated reductions, unchanged CSV power on weather-only edit (0.245458ms)
+✔ all PATCH validators are atomic including RNG and source metadata (0.57125ms)
+✔ LCG common noise, independent fault RNG, snapshot deterministic replay and pause (0.712125ms)
+✔ separate irradiance CSV aligns source timestamp and falls back outside range (0.3375ms)
+✔ frame includes complete state and excludes custom curve data; API retains curve (0.46175ms)
+✔ loop count records actual dataset wraps, not seeks, and survives scenario JSON snapshots (0.365583ms)
+✔ expiresAt accepts explicit ISO zones/fractions and rejects permissive Date.parse calendar normalization (6.900875ms)
+✔ expiresAt-only body change conflicts; equal priority supersedes overlapping but disjoint remains active (1.528375ms)
+✔ physical database reopen restores unfinished deadline; timeout retains setting until explicit stop makes power zero (9.889917ms)
+✔ independent review: generated sample files accepted by production parser (36.217917ms)
+✔ independent review: delayed KMA HTTP result cannot overwrite newer manual edit or station (31.724917ms)
+✔ prune deletes old acknowledged frames/outbox while preserving old pending/unbatched data, command IDs and scenarios (4.589542ms)
+✔ runtime keeps tick/prune/shutdown alive when audit and storage both fail (24.73975ms)
+✔ shutdown closes HTTP and SQLite even if transport stop rejects (2.355875ms)
+✔ unauthenticated health/config contain no configured credentials; protected state requires token (7.048167ms)
+✔ durable atomic model/frame, immutable sequence and byte/run/count batches (60.49625ms)
+✔ retention keeps unacknowledged messages, unbatched frames, command IDs and scenarios (0.942916ms)
+✔ storage failure during pump keeps row retryable and other event errors never escape (23.68975ms)
+✔ delayed storage failure and PUBACK ack failure retain original queue row for retry (62.613292ms)
+✔ per RTU independent inflight; only PUBACK removes immutable row; malformed and retained rejected (35.967416ms)
+✔ connection client IDs remain caller-specific with common auth configuration (0.211667ms)
+✔ delayed pump reads latest model object and REST receipts persist (15.962083ms)
+✔ KMA SFCTM2 field fixture uses index11 temperature, 10 degree wind and KST time (2.073625ms)
+✔ KMA malformed/stale/future/out-of-range/wrong-station responses fail (0.413916ms)
+✔ live refresh preserves irradiance; request has current observation parameters and no old tm (2.306ms)
+✔ automatic manual/frozen skips; explicit lookup enters weather mode and releases freeze (0.603791ms)
+✔ failed live observations retain all last-valid values, source and timestamp without auth leaks (0.504375ms)
+✔ missing direction preserves previous direction; SI never interpreted as irradiance (0.296292ms)
+✔ manual edit during in-flight request is protected, including explicit request (0.635167ms)
+ℹ tests 55
+ℹ suites 0
+ℹ pass 55
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 188.001333

@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "suite": "backup-restore",
+  "evidence": {
+    "onlineBackupAPI": true,
+    "integrityCheck": "ok",
+    "separateRestoreDatabase": true,
+    "plantCSVRunIdPreserved": true,
+    "commandDedupRecordsPreserved": true,
+    "scenarioPreserved": true,
+    "checkpointFaultsRestored": true,
+    "httpHealth": true,
+    "realMQTT": true,
+    "pendingOutboxCapturedInBackup": true,
+    "identicalPendingBodyAndIdDelivered": true,
+    "restoredPubackPersisted": true,
+    "newControlAcceptedExecutingCompleted": true,
+    "newActualKw": 75,
+    "newErrorKw": 0
+  }
+}

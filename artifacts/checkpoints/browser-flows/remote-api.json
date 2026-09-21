@@ -1,0 +1,45 @@
+{
+  "time": "2026-09-21T08:38:13.443Z",
+  "sourceCommit": "0b23c41",
+  "image": "127.0.0.1:15050/grid@sha256:1dd9be395d7fe324b20216f2db7162da51851cf01edc212bd2334a6a12bc7223",
+  "base": "http://127.0.0.1:3104",
+  "unauthenticatedState": 401,
+  "authenticatedState": 200,
+  "version": "1.0.0",
+  "plantCount": 3,
+  "gatewayConnected": true,
+  "health": [
+    {
+      "id": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+      "health": "HEALTHY"
+    },
+    {
+      "id": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+      "health": "HEALTHY"
+    },
+    {
+      "id": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+      "health": "HEALTHY"
+    }
+  ],
+  "commandsEndpoint": 200,
+  "scenariosEndpoint": 200,
+  "sse": {
+    "status": 200,
+    "events": 3,
+    "simulationSeconds": [
+      263,
+      264,
+      265
+    ],
+    "advancing": true
+  },
+  "servedUiAsset": "/assets/index-8ovxBxIx.js",
+  "servedUiMenuStrings": true,
+  "scope": "Authenticated remote HTTP/SSE and served UI asset verification. Browser rendering/navigation delegated to root separate check.",
+  "notYetDeployed": [
+    "round2 replay noise max50 UI attribute",
+    "guide telemetry rtuId and PUBACK retention wording"
+  ],
+  "assertions": "PASS"
+}

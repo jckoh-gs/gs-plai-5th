@@ -1,0 +1,12 @@
+{
+  "reviewedAt": "2026-09-21T08:43:11.297402+00:00",
+  "commit": "79c996f7445dc3c252b12757a16f912f72c21808",
+  "workingTree": true,
+  "files": {
+    "scripts/restore-integration.js": "296f380feff2c9a4e16f4f5ba11b2a05f1aa9bb2eb33e3378ca66c83a9a84a1d",
+    "web/src.jsx": "37806e37a08c543862612339bfaeae31403734b1f938d763f7c69c8c547bff8e",
+    "artifacts/checkpoints/browser-stream-boundaries.log": "3fa21296d07c4b5f6fa403f62192c5392e72c6a512f024904e07013fd46f9cf2",
+    "docs/issues/evidence/review-005-restore.log": "c2ec316b18522d0637890deb791acf01b8654e9de457b9b3f76fffa3cf83b774",
+    "scripts/browser-check.cjs": "57183d82997ab820fb0c3e134572f9d31b4d6d4892858ce83af5c22764ffc714"
+  }
+}

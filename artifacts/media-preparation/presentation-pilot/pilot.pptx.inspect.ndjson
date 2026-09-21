@@ -1,0 +1,29 @@
+{"kind":"deck","id":"pr/3gs1cb","name":"Deck"}
+{"kind":"layout","layoutId":"a549ce3a-491d-46d3-8b5c-b41d8b862ee7","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"60364afd-259d-46f0-b5d2-aa72271b7875","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/i3dkci","slide":1,"title":"GRID","textShapes":4}
+{"kind":"textbox","id":"sh/1kf6dsri","slide":1,"text":"GRID","textPreview":"GRID","textChars":4,"textLines":1,"bbox":[80,92,1100,100]}
+{"kind":"textbox","id":"sh/exon2x8r","slide":1,"text":"VPP 연동 시험을 위한 가상 현장","textPreview":"VPP 연동 시험을 위한 가상 현장","textChars":19,"textLines":1,"bbox":[80,240,1100,150]}
+{"kind":"textbox","id":"sh/fyxob29c","slide":1,"text":"SCADA · RTU · MQTT 에뮬레이터","textPreview":"SCADA · RTU · MQTT 에뮬레이터","textChars":24,"textLines":1,"bbox":[80,430,1100,70]}
+{"kind":"textbox","id":"sh/sv650nal","slide":1,"text":"제작 도구 사전 검증 · 최종 발표자료 아님","textPreview":"제작 도구 사전 검증 · 최종 발표자료 아님","textChars":24,"textLines":1,"bbox":[80,620,1100,45]}
+{"kind":"notes","id":"nt/i3dkci","slide":1,"text":"이 파일은 한글 편집·내보내기·렌더링 도구의 사전 점검입니다. 최종 제품이나 배포 성공을 주장하지 않습니다. 최종 발표자료는 검증 버전의 시연 영상 제작 이후 확정합니다."}
+{"kind":"slide","id":"sl/fwvgnx","slide":2,"title":"데이터와 제어의 양방향 경로","textShapes":14}
+{"kind":"textbox","id":"sh/0bydgj2p","slide":2,"text":"데이터와 제어의 양방향 경로","textPreview":"데이터와 제어의 양방향 경로","textChars":15,"textLines":1,"bbox":[70,55,1140,80]}
+{"kind":"shape","id":"sh/zapwny14","slide":2,"bbox":[70,260,230,115]}
+{"kind":"textbox","id":"sh/e9wvetkj","slide":2,"text":"SCADA","textPreview":"SCADA","textChars":5,"textLines":1,"bbox":[85,285,200,70]}
+{"kind":"textbox","id":"sh/d8nulojy","slide":2,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[310,280,50,70]}
+{"kind":"textbox","id":"sh/c7edcj2d","slide":2,"text":"←","textPreview":"←","textChars":1,"textLines":1,"bbox":[310,425,50,70]}
+{"kind":"shape","id":"sh/r65cje1s","slide":2,"bbox":[370,260,230,115]}
+{"kind":"textbox","id":"sh/q5wva9k7","slide":2,"text":"RTU","textPreview":"RTU","textChars":3,"textLines":1,"bbox":[385,285,200,70]}
+{"kind":"textbox","id":"sh/x4rex8j2","slide":2,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[610,280,50,70]}
+{"kind":"textbox","id":"sh/w3idon2x","slide":2,"text":"←","textPreview":"←","textChars":1,"textLines":1,"bbox":[610,425,50,70]}
+{"kind":"shape","id":"sh/ep0jqpc7","slide":2,"bbox":[670,260,230,115]}
+{"kind":"textbox","id":"sh/fq90zuds","slide":2,"text":"MQTT","textPreview":"MQTT","textChars":4,"textLines":1,"bbox":[685,285,200,70]}
+{"kind":"textbox","id":"sh/gri1szud","slide":2,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[910,280,50,70]}
+{"kind":"textbox","id":"sh/1sri14vi","slide":2,"text":"←","textPreview":"←","textChars":1,"textLines":1,"bbox":[910,425,50,70]}
+{"kind":"shape","id":"sh/6lgzmpcv","slide":2,"bbox":[970,260,230,115]}
+{"kind":"textbox","id":"sh/rmp0vudg","slide":2,"text":"VPP","textPreview":"VPP","textChars":3,"textLines":1,"bbox":[985,285,200,70]}
+{"kind":"textbox","id":"sh/sni1ozu1","slide":2,"text":"전체 발전 데이터와 출력 피드백","textPreview":"전체 발전 데이터와 출력 피드백","textChars":17,"textLines":1,"bbox":[70,180,1100,60]}
+{"kind":"textbox","id":"sh/torixkvm","slide":2,"text":"목표값 → 검증·변환 → SCADA 제어","textPreview":"목표값 → 검증·변환 → SCADA 제어","textChars":22,"textLines":1,"bbox":[70,520,1100,65]}
+{"kind":"textbox","id":"sh/qhkjy9cf","slide":2,"text":"실물 SCADA 프로토콜과 예측·입찰 알고리즘은 별도 범위","textPreview":"실물 SCADA 프로토콜과 예측·입찰 알고리즘은 별도 범위","textChars":32,"textLines":1,"bbox":[70,635,1140,40]}
+{"kind":"notes","id":"nt/fwvgnx","slide":2,"text":"편집 가능한 도형·텍스트로 구성한 구조도 시험입니다. 데이터는 SCADA에서 외부 VPP로, 제어 목표는 반대 방향으로 전달됩니다. 최종 슬라이드에는 실제 영상 타임코드와 검증한 배포 버전을 붙입니다."}

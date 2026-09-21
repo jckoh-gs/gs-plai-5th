@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "suite": "client-result-wait-timeout",
+  "elapsedMs": 46072,
+  "commandPublications": 1,
+  "exitReason": "result_wait_timeout",
+  "observedCommandStatus": null
+}

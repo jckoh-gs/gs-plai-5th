@@ -17,12 +17,29 @@
   "roles": {
     "model": "/root/model",
     "transport": "/root/transport",
-    "ui": "/root/ui"
+    "ui": "/root/ui",
+    "product": "/root/product",
+    "security": "/root/security",
+    "issues": "/root/issues",
+    "deployment": "/root/deployment"
   },
-  "checks": {},
+  "checks": {
+    "localUnit": "53 passing at artifacts/checkpoints/unit-round3.log",
+    "localIntegration": "PASS",
+    "localAdvanced": "PASS",
+    "hardCrashPubackReplay": "PASS",
+    "sixtySecondWindow": "PASS",
+    "browserAuthStale": "PASS",
+    "backupRestore": "PASS; artifacts/checkpoints/restore-first.log",
+    "remote": "checkpoint0b23c41: k3s Running, authenticated browser+MQTT125kW, pod restart persistence PASS; next storage separation pending",
+    "media": "preparation; not produced",
+    "weatherTimeout": "PASS actual12s AbortSignal, prior valid observation retained"
+  },
   "notes": [
     "Existing sibling implementation must not be copied or reused.",
     "Old fixed OPS-01 dates are cancelled; this run is authoritative."
   ],
-  "automationId": "grid"
+  "automationId": "grid",
+  "requestedModel": "Codex Astra",
+  "modelVerification": "Agents inherited main session model; exact runtime model identifier not exposed by available goal tools."
 }
