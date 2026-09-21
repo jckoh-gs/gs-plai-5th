@@ -1,0 +1,13 @@
+{
+  "reviewedAt": "2026-09-21T08:58:49.556557+00:00",
+  "commit": "af7f2233df239f22bcff2d95440a62673bf12ed9",
+  "workingTree": true,
+  "files": {
+    "scripts/review-scenario-integration.js": "c16b2a3e810848bd3013aef7aec5d7d3782a74c808382a774e6a6a0b6a132c08",
+    "server/index.js": "945a30388d0d9bb08ae70c2ab6d470778734875436be306e40d9f02afe408a8f",
+    "server/model.js": "ab20a7f7f7b64f8dc9be152b74f617647860524ef0a06577f160d2a3be522f47",
+    "server/store.js": "5b497e48f84e0a918a6d565e5dc9c741c4e68fc69c8141d813e7921e96a73969",
+    "server/control.js": "ceabb746658b7bb3af35b767457ea81129da1ddf4f142850dc11a4fff467b9ac",
+    "docs/issues/evidence/review-006-scenario.log": "d0fe7d320ca2c58729a7ceaaa6a320e47113e8eac06976b628d6c0f0cd35eb83"
+  }
+}

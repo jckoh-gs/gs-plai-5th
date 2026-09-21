@@ -1,0 +1,13 @@
+{
+  "imageManifest": "sha256:1dd9be395d7fe324b20216f2db7162da51851cf01edc212bd2334a6a12bc7223",
+  "configDigest": "sha256:99a5ec5dc35ce0b4b989fcb20b17acc35c08e77a961ac5f8162b00838c5dfe2c",
+  "architecture": "amd64",
+  "os": "linux",
+  "labels": {
+    "org.opencontainers.image.revision": "0b23c41",
+    "org.opencontainers.image.version": "1.7"
+  },
+  "compressedLayerBytes": 83696672,
+  "context": "git archive 0b23c41",
+  "status": "deployed checkpoint; pending full final gates"
+}

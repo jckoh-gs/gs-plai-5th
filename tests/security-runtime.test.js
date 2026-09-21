@@ -34,3 +34,15 @@ test('unauthenticated health/config contain no configured credentials; protected
   const allowed=await fetch(`${base}/api/state`,{headers:{Authorization:`Bearer ${config.token}`}});assert.equal(allowed.status,200);
  }finally{await runtime.stop();}
 });
+test('public config exact allowlist and authenticated downloads never echo the credential',async()=>{
+ const runtime=createRuntime(config);runtime.transport.start=()=>{};runtime.transport.stop=async()=>{};const server=await runtime.start();
+ try {
+  const base=`http://127.0.0.1:${server.address().port}`;
+  for(const headers of [{},{Authorization:`Bearer ${config.token}`}]){
+   const response=await fetch(`${base}/api/config`,{headers});const data=await response.json();
+   assert.deepEqual(Object.keys(data).sort(),['authRequired','version']);assert.equal(data.authRequired,true);
+   assert(!JSON.stringify(data).includes(config.token));assert(!JSON.stringify([...response.headers]).includes(config.token));
+  }
+  const guide=await fetch(`${base}/api/guide`,{headers:{Authorization:`Bearer ${config.token}`}});assert.equal(guide.status,200);assert(!guide.url.includes(config.token));assert(!(await guide.text()).includes(config.token));assert(!JSON.stringify([...guide.headers]).includes(config.token));
+ }finally{await runtime.stop();}
+});

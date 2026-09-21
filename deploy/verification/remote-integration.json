@@ -1,0 +1,18 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T08:40:05.733Z",
+  "base": "http://127.0.0.1:3104",
+  "plantId": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+  "commandId": "3cf901f9-ef37-40a6-803d-eee07c1efbe8",
+  "actualKw": 125,
+  "errorKw": 0,
+  "states": [
+    "accepted",
+    "executing",
+    "completed"
+  ],
+  "actualAuthenticatedMQTT": true,
+  "duplicate": true,
+  "sampleCount": 1,
+  "telemetryBytes": 3934
+}

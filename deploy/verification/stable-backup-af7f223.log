@@ -1,0 +1,12 @@
+file:///Users/charleskoh/research/20260921-RALPTON/scripts/remote-backup.mjs:12
+const db=new DatabaseSync(local,{readOnly:true});assert.equal(db.prepare('PRAGMA integrity_check').get().integrity_check,'ok');const plants=db.prepare('SELECT count(*) AS n FROM plants').get().n,pending=db.prepare('SELECT count(*) AS n FROM outbox WHERE acked IS NULL').get().n;db.close();const deployment=JSON.parse((await exec('kubectl',[...k,'get','deployment','grid','-o','json'])).stdout);
+                                                                 ^
+
+Error: database disk image is malformed
+    at file:///Users/charleskoh/research/20260921-RALPTON/scripts/remote-backup.mjs:12:66 {
+  code: 'ERR_SQLITE_ERROR',
+  errcode: 11,
+  errstr: 'database disk image is malformed'
+}
+
+Node.js v24.16.0

@@ -1,0 +1,54 @@
+node:internal/errors:985
+  const err = new Error(message);
+              ^
+
+Error: Command failed: kubectl --context charles-k3s -n gs-plai-5h exec deployment/grid -c app -- node --input-type=module -e import{openSync,readSync,closeSync}from'node:fs';import{createHash}from'node:crypto';const f=openSync(process.argv[1]),b=Buffer.alloc(Number(process.argv[3]));const n=readSync(f,b,0,b.length,Number(process.argv[2]));closeSync(f);const data=b.subarray(0,n),text=JSON.stringify({bytes:n,sha256:createHash('sha256').update(data).digest('hex'),base64:data.toString('base64')})+'
+';await new Promise((resolve,reject)=>process.stdout.write(text,e=>e?reject(e):resolve())); /data/stable-af7f223-20260921T090600873Z.sqlite.gz 0 262144
+file:///app/[eval1]:1
+import{openSync,readSync,closeSync}from'node:fs';import{createHash}from'node:crypto';const f=openSync(process.argv[1]),b=Buffer.alloc(Number(process.argv[3]));const n=readSync(f,b,0,b.length,Number(process.argv[2]));closeSync(f);const data=b.subarray(0,n),text=JSON.stringify({bytes:n,sha256:createHash('sha256').update(data).digest('hex'),base64:data.toString('base64')})+'
+                                                                                                                                                                                                                                                                                                                                                                                     ^
+
+SyntaxError: Invalid or unexpected token
+    at compileSourceTextModule (node:internal/modules/esm/utils:319:16)
+    at ModuleLoader.createModuleWrap (node:internal/modules/esm/loader:209:12)
+    at ModuleLoader.eval (node:internal/modules/esm/loader:247:23)
+    at node:internal/process/execution:77:24
+    at asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:11)
+    at Object.runEntryPointWithESMLoader (node:internal/modules/run_main:123:19)
+    at evalModuleEntryPoint (node:internal/process/execution:76:47)
+    at node:internal/main/eval_string:37:3
+
+Node.js v24.21.0
+command terminated with exit code 1
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at ChildProcess.exithandler (node:child_process:417:12)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1124:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5) {
+  code: 1,
+  killed: false,
+  signal: null,
+  cmd: "kubectl --context charles-k3s -n gs-plai-5h exec deployment/grid -c app -- node --input-type=module -e import{openSync,readSync,closeSync}from'node:fs';import{createHash}from'node:crypto';const f=openSync(process.argv[1]),b=Buffer.alloc(Number(process.argv[3]));const n=readSync(f,b,0,b.length,Number(process.argv[2]));closeSync(f);const data=b.subarray(0,n),text=JSON.stringify({bytes:n,sha256:createHash('sha256').update(data).digest('hex'),base64:data.toString('base64')})+'\n" +
+    "';await new Promise((resolve,reject)=>process.stdout.write(text,e=>e?reject(e):resolve())); /data/stable-af7f223-20260921T090600873Z.sqlite.gz 0 262144",
+  stdout: '',
+  stderr: 'file:///app/[eval1]:1\n' +
+    "import{openSync,readSync,closeSync}from'node:fs';import{createHash}from'node:crypto';const f=openSync(process.argv[1]),b=Buffer.alloc(Number(process.argv[3]));const n=readSync(f,b,0,b.length,Number(process.argv[2]));closeSync(f);const data=b.subarray(0,n),text=JSON.stringify({bytes:n,sha256:createHash('sha256').update(data).digest('hex'),base64:data.toString('base64')})+'\n" +
+    '                                                                                                                                                                                                                                                                                                                                                                                     ^\n' +
+    '\n' +
+    'SyntaxError: Invalid or unexpected token\n' +
+    '    at compileSourceTextModule (node:internal/modules/esm/utils:319:16)\n' +
+    '    at ModuleLoader.createModuleWrap (node:internal/modules/esm/loader:209:12)\n' +
+    '    at ModuleLoader.eval (node:internal/modules/esm/loader:247:23)\n' +
+    '    at node:internal/process/execution:77:24\n' +
+    '    at asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:11)\n' +
+    '    at Object.runEntryPointWithESMLoader (node:internal/modules/run_main:123:19)\n' +
+    '    at evalModuleEntryPoint (node:internal/process/execution:76:47)\n' +
+    '    at node:internal/main/eval_string:37:3\n' +
+    '\n' +
+    'Node.js v24.21.0\n' +
+    'command terminated with exit code 1\n'
+}
+
+Node.js v24.16.0

@@ -1,0 +1,1 @@
+{"result":"PASS","base":"http://127.0.0.1:3104","guideTabs":["연결 준비","SCADA 데이터","목표값·결과","시험 절차","운영 설정"],"requiredTopicsAndSemantics":true,"renderedPersistedAuditEvents":15,"auditColumns":["시각","유형","메시지"],"tokenAbsentFromRenderedGuideAndLogs":true,"pageErrors":[]}

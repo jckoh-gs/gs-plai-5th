@@ -128,3 +128,19 @@ ISSUE-005의 배포/브라우저/복원/미디어 등 다른 게이트는 이 �
 ## ISSUE-009 — 완료된 start/stop/set_limit의 목표 출력 표시 누락
 
 상태: 수정 및 실제 브라우저 검증 완료, 다음 최종 이미지 반영 대기. 명령 결과 표가 request.targetKw만 읽어 start/stop/set_limit의 관측된 대상별 목표를 비워 표시했다. targets가 비어 있지 않고 모든 targetKw가 유한한 경우에만 합계를 표시한다. 피드백 전 null을0으로 만들지 않는다. UI 검증에서 stop0/0, start400.2/400.2, set_limit400.2/400.2,100%복귀925.1/925.1을 확인했다. 증거: artifacts/checkpoints/browser-flows/review004-ui.json 및 controls-stages.json, web/QA.md.
+
+## Round 6 — 시나리오 전체 필드/paused/미전송 보존
+
+새 결함은 발견하지 않았다. `scripts/review-scenario-integration.js`를 격리 임시 DB·MQTT prefix 및 실제 로컬 broker로 실행해 `evidence/review-006-scenario.log` PASS를 얻었다.
+
+- 실제 API로 paused=true, speed5, 위치317, seed7654/noise17, 수동 기상, 별도 일사 dataset, 발전기 제한/목표/램프/기동 지연/사용자 곡선을 구성한다. 기존 실제 발전 sample로 출력 상태와 history도 채운다.
+- 저장 직전 전체 내부 plant를 독립 복제한 예상값과 JSON export의 snapshot을 deepEqual한다. dataset·irradiance dataset·모든 발전기 모델/실제 출력/제어·기상·장애·위치/배속/일시정지·rngState/faultRngState를 일부 요약값이 아니라 전체로 비교한다. 실제 history 및 명시적 임시 telemetryBuffer sentinel이 제외됨을 확인한다.
+- 저장 후 필드를 다르게 바꾸고 복원, 허용된 runId 및 live-weather freeze 차이만 반영한 전체 예상 상태와 Map·SQLite를 deepEqual한다.
+- 저장 전 offline으로 대기시킨 실제 telemetry row가 복원 후에도 같은 id/body로 존재한다. offline 해제 후 **paused가 그대로인 상태에서** 실제 MQTT 수신으로 기존 메시지 전송을 확인한다.
+- pause 동안 simulationSeconds/frame 수가 변하지 않고 새 명령의 실제 시간 timeout은 계속 진행함을 확인한다.
+
+이 증거는 FR-SCEN 저장/복원 필드, paused 의미, pending 보존 계약의 부족을 보완하며 UI 영상 또는 원격 배포 결과를 주장하지 않는다. 소스·로그 식별: `evidence/review-006-source.json`.
+
+## ISSUE-010 — 대용량 원격 백업 전송 사본 잘림
+
+상태: 수정 및 실제 전송·복원 검증 완료. 원격 online SQLite backup은 integrity_check=ok였으나 단일 kubectl stdout 바이너리 전송의 로컬 사본이167936bytes 짧아 무결성 검사에서 거부됐다. 원격 정상 원본은 보존했다. 압축 후256KiB 청크별 길이/SHA256, 전체 압축본 SHA256, 압축 해제본 길이/SHA256, 최종 SQLite integrity_check를 모두 확인하도록 보강했다. 실패한 사본은 채택하지 않고 private 영역에 구분 보존한다. 56594432bytes 원본을8청크로 전송했고 원격·로컬 SHA256이 일치했다. 같은 원격 snapshot을 새 전용PVC/최종이미지로 복원하여 실제 UI 및 MQTT125kW 왕복과 원본5단지/시나리오 보존을 확인했다. 증거: stable-backup-af7f223-round3.log와 stable-af7f223-restored-*; round2는 준비 스크립트 문자열 escape 오류 기록이며 원본 DB 결함이 아니다.

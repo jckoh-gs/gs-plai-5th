@@ -1,0 +1,14 @@
+file:///Users/charleskoh/research/20260921-RALPTON/server/store.js:28
+ addFrame(p,f){this.db.prepare('INSERT INTO scada_frames(plant,body,created) VALUES(?,?,?)').run(p.id,json(f),f.timestamp);this.db.prepare('INSERT INTO samples VALUES(?,?,?,?)').run(p.id,f.timestamp,f.powerKw,f.availableKw);}
+                                                                                             ^
+
+TypeError: Provided value cannot be bound to SQLite parameter 1.
+    at Store.addFrame (file:///Users/charleskoh/research/20260921-RALPTON/server/store.js:28:94)
+    at file:///Users/charleskoh/research/20260921-RALPTON/scripts/api-boundaries.mjs:7:227
+    at Store.transaction (file:///Users/charleskoh/research/20260921-RALPTON/server/store.js:24:123)
+    at file:///Users/charleskoh/research/20260921-RALPTON/scripts/api-boundaries.mjs:7:18
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  code: 'ERR_INVALID_ARG_TYPE'
+}
+
+Node.js v24.16.0

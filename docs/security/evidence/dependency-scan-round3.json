@@ -1,0 +1,24 @@
+{
+  "capturedAt": "2026-09-21T08:38:05.528Z",
+  "node": "v24.16.0",
+  "lockSha256": "b70ce6a829ebda97b98f9976ba0188744b588163e19653249d70d7e7a919f0cf",
+  "scope": "prod+dev",
+  "audit": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "dependencies": {
+      "prod": 111,
+      "dev": 127,
+      "optional": 53,
+      "peer": 2,
+      "peerOptional": 0,
+      "total": 237
+    }
+  }
+}

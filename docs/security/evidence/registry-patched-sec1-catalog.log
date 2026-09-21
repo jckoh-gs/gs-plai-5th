@@ -1,0 +1,47 @@
+[0000]  INFO grype version: 0.119.0
+[0000]  INFO completed image read digest=sha256:e0278a79023817eddfaafe24f86d405c157f7ffcb8b63858604c799d1f31851a from=stereoscope mediaType=application/vnd.oci.image.manifest.v1+json tags=[] time=181.94525ms
+[0000]  INFO loaded DB status=valid time=436.141833ms
+[0000]  INFO task completed elapsed=39µs from=syft task=environment-cataloger
+[0000]  INFO task completed elapsed=55.083µs from=syft task=rpm-db-cataloger
+[0000]  INFO task completed elapsed=18.334µs from=syft task=apple-app-bundle-cataloger
+[0000]  INFO task completed elapsed=42.5µs from=syft task=conan-info-cataloger
+[0000]  INFO task completed elapsed=53.459µs from=syft task=php-composer-installed-cataloger
+[0000]  INFO task completed elapsed=82.333µs from=syft task=dpkg-db-cataloger
+[0000]  INFO task completed elapsed=108.375µs from=syft task=ruby-installed-gemspec-cataloger
+[0000]  INFO task completed elapsed=55.959µs from=syft task=alpm-db-cataloger
+[0000]  INFO task completed elapsed=31.333µs from=syft task=wordpress-plugins-cataloger
+[0000]  INFO task completed elapsed=60.583µs from=syft task=dotnet-packages-lock-cataloger
+[0000]  INFO task completed elapsed=233.625µs from=syft task=python-installed-package-cataloger
+[0000]  INFO task completed elapsed=219.042µs from=syft task=graalvm-native-image-cataloger
+[0000]  INFO task completed elapsed=288.75µs from=syft task=cargo-auditable-binary-cataloger
+[0000]  INFO task completed elapsed=124.625µs from=syft task=safetensors-cataloger
+[0000]  INFO task completed elapsed=135.959µs from=syft task=javascript-package-cataloger
+[0000]  INFO task completed elapsed=138.667µs from=syft task=homebrew-cataloger
+[0000]  INFO task completed elapsed=143.25µs from=syft task=bitnami-cataloger
+[0000]  INFO task completed elapsed=154.083µs from=syft task=linux-kernel-cataloger
+[0000]  INFO task completed elapsed=102.208µs from=syft task=snap-cataloger
+[0000]  INFO task completed elapsed=86.958µs from=syft task=lua-rock-cataloger
+[0000]  INFO task completed elapsed=41.5µs from=syft task=elf-binary-package-cataloger
+[0000]  INFO task completed elapsed=196.084µs from=syft task=php-pear-serialized-cataloger
+[0000]  INFO task completed elapsed=170.083µs from=syft task=php-interpreter-cataloger
+[0000]  INFO task completed elapsed=41.584µs from=syft task=java-jvm-cataloger
+[0000]  INFO task completed elapsed=121.625µs from=syft task=nix-cataloger
+[0000]  INFO task completed elapsed=69.5µs from=syft task=pe-binary-package-cataloger
+[0000]  INFO task completed elapsed=128.458µs from=syft task=apk-db-cataloger
+[0000]  INFO task completed elapsed=138.042µs from=syft task=gguf-cataloger
+[0000]  INFO task completed elapsed=125.667µs from=syft task=portage-cataloger
+[0000]  INFO task completed elapsed=147.208µs from=syft task=java-archive-cataloger
+[0000]  INFO task completed elapsed=129.75µs from=syft task=binary-classifier-cataloger
+[0000]  INFO task completed elapsed=63.833µs from=syft task=r-package-cataloger
+[0000]  INFO task completed elapsed=20.893208ms from=syft task=dotnet-deps-binary-cataloger
+[0000]  INFO task completed elapsed=61.793083ms from=syft task=go-module-binary-cataloger
+[0000]  INFO task completed elapsed=375ns from=syft task=file-content-cataloger
+[0000]  INFO task completed elapsed=706.917µs from=syft task=file-executable-cataloger
+[0000]  INFO task completed elapsed=734.75µs from=syft task=file-metadata-cataloger
+[0000]  INFO task completed elapsed=26.463375ms from=syft task=file-digest-cataloger
+[0000]  INFO task completed elapsed=2.959083ms from=syft task=relationships-cataloger
+[0000]  INFO task completed elapsed=805.875µs from=syft task=unknowns-labeler
+[0000]  INFO task completed elapsed=4.792µs from=syft task=os-feature-detection
+[0000]  INFO gathered packages packages=105 time=707.386417ms
+[0000]  INFO found 0 vulnerability matches across 105 packages
+[0000]  INFO found vulnerability matches time=58.229375ms

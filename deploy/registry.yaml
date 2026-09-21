@@ -47,7 +47,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: registry
-          image: registry:3@sha256:fd374bae807c225661adfe2c0c1f9970a0b8fab1761fd7dfb91e0fd9a8748f9b
+          image: 127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c
           env:
             - name: REGISTRY_HTTP_ADDR
               value: "127.0.0.1:15050"
@@ -55,6 +55,7 @@ spec:
               value: none
           securityContext:
             allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
             capabilities:
               drop: [ALL]
           resources:
@@ -65,7 +66,7 @@ spec:
               mountPath: /var/lib/registry
           readinessProbe:
             exec:
-              command: [wget, -q, -O, /dev/null, "http://127.0.0.1:15050/v2/"]
+              command: [/healthcheck]
             initialDelaySeconds: 3
             periodSeconds: 5
       volumes:

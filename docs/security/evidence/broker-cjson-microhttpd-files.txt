@@ -1,0 +1,8 @@
+cjson-1.7.19-r1 contains:
+usr/lib/libcjson.so.1
+usr/lib/libcjson.so.1.7.19
+
+libmicrohttpd-1.0.2-r1 contains:
+usr/lib/libmicrohttpd.so.12
+usr/lib/libmicrohttpd.so.12.62.2
+

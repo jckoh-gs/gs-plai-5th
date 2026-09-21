@@ -1,0 +1,124 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.26kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/golang:1.27.1-alpine3.23@sha256:96a6b037cd95ee2d72dc63fec59ad8250110fe795111d783d97aa980ec59ec32
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 285B done
+#4 DONE 0.0s
+
+#5 [build  1/13] FROM docker.io/library/golang:1.27.1-alpine3.23@sha256:96a6b037cd95ee2d72dc63fec59ad8250110fe795111d783d97aa980ec59ec32
+#5 resolve docker.io/library/golang:1.27.1-alpine3.23@sha256:96a6b037cd95ee2d72dc63fec59ad8250110fe795111d783d97aa980ec59ec32 done
+#5 DONE 0.0s
+
+#6 [build  3/13] ADD https://codeload.github.com/distribution/distribution/tar.gz/9a8d98b679740cd514aa7e7d84d23d442a5ef54c /tmp/source.tar.gz
+#6 DONE 0.3s
+
+#7 [build  4/13] RUN echo 'db8d38f341b7699e516eaa33986814cce3276e75d1df4ac6f77d60e58c688c45  /tmp/source.tar.gz' | sha256sum -c - && tar -xzf /tmp/source.tar.gz --strip-components=1 -C /src
+#7 CACHED
+
+#8 [build  5/13] COPY security-upgrades.txt /tmp/security-upgrades.txt
+#8 CACHED
+
+#9 [build  2/13] WORKDIR /src
+#9 CACHED
+
+#10 [build  3/13] ADD https://codeload.github.com/distribution/distribution/tar.gz/9a8d98b679740cd514aa7e7d84d23d442a5ef54c /tmp/source.tar.gz
+#10 CACHED
+
+#11 [build  6/13] RUN xargs go get < /tmp/security-upgrades.txt && go mod tidy
+#11 CACHED
+
+#12 [build  7/13] COPY compatibility-upgrades.txt /tmp/compatibility-upgrades.txt
+#12 DONE 0.0s
+
+#13 [build  8/13] RUN xargs go get < /tmp/compatibility-upgrades.txt && go mod tidy
+#13 0.197 go: downloading go.opentelemetry.io/contrib/exporters/autoexport v0.70.0
+#13 0.198 go: downloading go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.70.0
+#13 2.390 go: downloading github.com/felixge/httpsnoop v1.1.0
+#13 2.390 go: downloading go.opentelemetry.io/contrib/bridges/prometheus v0.70.0
+#13 2.390 go: downloading github.com/prometheus/client_golang v1.24.1
+#13 2.390 go: downloading go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploghttp v0.21.0
+#13 2.391 go: downloading go.opentelemetry.io/otel/exporters/prometheus v0.67.0
+#13 2.391 go: downloading go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp v1.45.0
+#13 2.391 go: downloading go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc v1.45.0
+#13 2.391 go: downloading go.opentelemetry.io/otel/exporters/stdout/stdoutlog v0.21.0
+#13 2.391 go: downloading go.opentelemetry.io/otel/exporters/stdout/stdoutmetric v1.45.0
+#13 2.392 go: downloading go.opentelemetry.io/otel/exporters/stdout/stdouttrace v1.45.0
+#13 2.729 go: downloading github.com/prometheus/common v0.70.1
+#13 2.729 go: downloading github.com/prometheus/procfs v0.21.1
+#13 3.450 go: downloading github.com/golang-jwt/jwt/v5 v5.3.1
+#13 3.451 go: downloading github.com/klauspost/compress v1.19.1
+#13 3.452 go: downloading go.yaml.in/yaml/v2 v2.4.4
+#13 12.49 go: upgraded github.com/felixge/httpsnoop v1.0.4 => v1.1.0
+#13 12.49 go: upgraded github.com/golang-jwt/jwt/v5 v5.3.0 => v5.3.1
+#13 12.49 go: upgraded github.com/klauspost/compress v1.18.4 => v1.19.1
+#13 12.49 go: upgraded github.com/prometheus/client_golang v1.23.2 => v1.24.1
+#13 12.49 go: upgraded github.com/prometheus/common v0.67.5 => v0.70.1
+#13 12.49 go: upgraded github.com/prometheus/procfs v0.20.1 => v0.21.1
+#13 12.49 go: upgraded go.opentelemetry.io/contrib/bridges/prometheus v0.67.0 => v0.70.0
+#13 12.49 go: upgraded go.opentelemetry.io/contrib/exporters/autoexport v0.67.0 => v0.70.0
+#13 12.49 go: upgraded go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.67.0 => v0.70.0
+#13 12.49 go: upgraded go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploghttp v0.19.0 => v0.21.0
+#13 12.49 go: upgraded go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc v1.42.0 => v1.45.0
+#13 12.49 go: upgraded go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp v1.43.0 => v1.45.0
+#13 12.49 go: upgraded go.opentelemetry.io/otel/exporters/prometheus v0.64.0 => v0.67.0
+#13 12.49 go: upgraded go.opentelemetry.io/otel/exporters/stdout/stdoutlog v0.18.0 => v0.21.0
+#13 12.49 go: upgraded go.opentelemetry.io/otel/exporters/stdout/stdoutmetric v1.42.0 => v1.45.0
+#13 12.49 go: upgraded go.opentelemetry.io/otel/exporters/stdout/stdouttrace v1.42.0 => v1.45.0
+#13 12.49 go: upgraded go.yaml.in/yaml/v2 v2.4.3 => v2.4.4
+#13 DONE 12.8s
+
+#14 [build  9/13] RUN go test -timeout 90s ./configuration ./registry/storage/driver/filesystem ./registry/api/v2
+#14 5.233 ok  	github.com/distribution/distribution/v3/configuration	0.006s
+#14 30.24 ok  	github.com/distribution/distribution/v3/registry/storage/driver/filesystem	24.328s
+#14 30.24 ok  	github.com/distribution/distribution/v3/registry/api/v2	0.048s
+#14 DONE 30.4s
+
+#15 [build 10/13] RUN GOOS=linux GOARCH=amd64 go build -trimpath -ldflags '-s -w -X github.com/distribution/distribution/v3/version.version=3.1.1-grid-sec1 -X github.com/distribution/distribution/v3/version.revision=9a8d98b679740cd514aa7e7d84d23d442a5ef54c' -o /out/registry ./cmd/registry
+#15 DONE 10.9s
+
+#16 [build 11/13] COPY healthcheck.go /tmp/healthcheck.go
+#16 DONE 0.0s
+
+#17 [build 12/13] RUN GOOS=linux GOARCH=amd64 go build -trimpath -ldflags '-s -w' -o /out/healthcheck /tmp/healthcheck.go
+#17 DONE 0.2s
+
+#18 [build 13/13] RUN mkdir -p /out/data && cp go.mod go.sum /out/
+#18 DONE 0.1s
+
+#19 [stage-2 1/6] COPY --from=build /src/LICENSE /LICENSE
+#19 DONE 0.0s
+
+#20 [stage-2 2/6] COPY --from=build /out/registry /registry
+#20 DONE 0.0s
+
+#21 [stage-2 3/6] COPY --from=build /out/healthcheck /healthcheck
+#21 DONE 0.0s
+
+#22 [stage-2 4/6] COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+#22 DONE 0.0s
+
+#23 [stage-2 5/6] COPY --from=build --chown=1000:1000 /out/data /var/lib/registry
+#23 DONE 0.0s
+
+#24 [stage-2 6/6] COPY config.yml /etc/distribution/config.yml
+#24 DONE 0.0s
+
+#25 exporting to oci image format
+#25 exporting layers
+#25 exporting layers 0.9s done
+#25 exporting manifest sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c
+#25 exporting manifest sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c done
+#25 exporting config sha256:e0278a79023817eddfaafe24f86d405c157f7ffcb8b63858604c799d1f31851a done
+#25 sending tarball
+#25 sending tarball 0.2s done
+#25 DONE 1.1s

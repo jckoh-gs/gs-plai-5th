@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "capturedAt": "2026-09-21T09:06:01.465Z",
+  "verifiedAt": "2026-09-21T09:09:40.887Z",
+  "sourceCommit": "af7f223",
+  "appImage": "127.0.0.1:15050/grid@sha256:13da26c81e8caf23701d62e0a61e0457e6183d75dddcb9bde7fa75e1a41792ba",
+  "remotePath": "/data/stable-af7f223-20260921T090600873Z.sqlite",
+  "localPath": "artifacts/private/backups/stable-af7f223-20260921T090600873Z.sqlite",
+  "bytes": 56594432,
+  "sha256": "7f98602386dc80a7ddfb2a138b81b81f6c0a894439ddfddba37fddb673965a7a",
+  "compressedBytes": 1909315,
+  "verifiedChunks": 8,
+  "integrity": "ok",
+  "plants": 5,
+  "pending": 0,
+  "method": "online node:sqlite backup; gzip chunk+whole SHA256 verification; private0600 copy"
+}

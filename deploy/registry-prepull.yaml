@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: grid-registry-prepull
+  namespace: gs-plai-5h
+spec:
+  restartPolicy: Never
+  automountServiceAccountToken: false
+  nodeSelector:
+    kubernetes.io/hostname: charleskoh-nucbox-g3
+  securityContext:
+    runAsUser: 1000
+    runAsGroup: 1000
+    seccompProfile: {type: RuntimeDefault}
+  containers:
+    - name: prepull
+      image: 127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c
+      command: [/registry, --version]
+      securityContext:
+        allowPrivilegeEscalation: false
+        readOnlyRootFilesystem: true
+        capabilities: {drop: [ALL]}

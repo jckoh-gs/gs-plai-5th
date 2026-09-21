@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-09-21T08:58:38.518361+00:00",
+  "backendLoopbackHealth": "ok",
+  "serviceIP": "10.43.93.187",
+  "sameNamespaceUnlabelledProbe": "access denied",
+  "probePhase": "Succeeded",
+  "output": "wget: can't connect to remote host (10.43.93.187): Connection refused\nEXPECTED_DENIAL",
+  "policy": {
+    "podSelector": {
+      "matchLabels": {
+        "app": "grid"
+      }
+    },
+    "policyTypes": [
+      "Ingress"
+    ]
+  },
+  "scope": "Observed denied access while backend healthy; no temporary allow rule applied.",
+  "backendHealthAfter": "ok",
+  "endpointStateAfter": [
+    {
+      "endpoints": [
+        {
+          "addresses": [
+            "10.42.0.170"
+          ],
+          "conditions": {
+            "ready": true,
+            "serving": true,
+            "terminating": false
+          },
+          "nodeName": "charleskoh-nucbox-g3",
+          "targetRef": {
+            "kind": "Pod",
+            "name": "grid-579474d884-8j2nz",
+            "namespace": "gs-plai-5h",
+            "uid": "b95f6ef5-0d38-4d58-9c17-7db5286c7b52"
+          }
+        }
+      ],
+      "ports": [
+        {
+          "name": "http",
+          "port": 3001,
+          "protocol": "TCP"
+        }
+      ]
+    }
+  ]
+}

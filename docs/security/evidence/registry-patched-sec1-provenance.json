@@ -1,0 +1,31 @@
+{
+  "capturedAt": "2026-09-21T08:54:22.119278+00:00",
+  "upstreamSource": "https://github.com/distribution/distribution",
+  "upstreamCommit": "9a8d98b679740cd514aa7e7d84d23d442a5ef54c",
+  "sourceArchiveSha256": "db8d38f341b7699e516eaa33986814cce3276e75d1df4ac6f77d60e58c688c45",
+  "goVersion": "1.27.1",
+  "builderImage": "golang:1.27.1-alpine3.23@sha256:96a6b037cd95ee2d72dc63fec59ad8250110fe795111d783d97aa980ec59ec32",
+  "manifestDigest": "sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c",
+  "recipeFileHashes": {
+    "deploy/registry-source/security-upgrades.txt": "6278e6d1321cdb95372d719a27ce8d60fe6f95da76bd2a96bed221b1909d6a1d",
+    "deploy/registry-source/healthcheck.go": "445e059ae5b5ed26d4aab581fab8af48bc03bcb3395e0ff037e40f8b5f54bc92",
+    "deploy/registry-source/Dockerfile": "618fc2237355eee0e991588ad9c38a2346ae02c0e7a3afa0909abbf4f5c0caa7",
+    "deploy/registry-source/compatibility-upgrades.txt": "5b8f76712ac79095dbd91cea628e1a40b4620df6ab6eaaa204d321a460d42690",
+    "deploy/registry-source/README.md": "8571c049e5fbf915d7600a80892e4ccf6a323b17cd2eeaa1ef840b9d246acf81",
+    "deploy/registry-source/config.yml": "c684e792b4340e77c8dc3a265e57caed4f251764007ff96c1fdc2e9f87c147ad",
+    "deploy/registry-source/lock/go.mod": "11bc4784cb53b05973b33c6d10333c22937fc1049d1d7fbbb4a1e115d7cbc093",
+    "deploy/registry-source/lock/go.sum": "d32f5b59bcc497ee3dc7e4052258f56ceb2364bb8f056ea6351aba5f4a166eea"
+  },
+  "knownMatches": 0,
+  "cataloguedPackages": 105,
+  "databaseBuilt": "2026-09-21T06:39:24Z",
+  "validation": [
+    "upstream configuration/filesystem/API tests",
+    "isolated registry2 to patched3 OCI content migration",
+    "new OCI content digest push/pull",
+    "healthcheck",
+    "restart persistence",
+    "UID1000 read-only rootfs all capabilities dropped"
+  ],
+  "rollout": "delegated to deployment agent; separately verify"
+}

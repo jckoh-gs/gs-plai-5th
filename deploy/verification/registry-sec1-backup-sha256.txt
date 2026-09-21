@@ -1,0 +1,1 @@
+87d420e32f65f07a33502dbd73fe7a2cf136328de5276a7cd59b97dedfd21a95  /var/lib/registry/.checkpoints/pre-sec1-79c996f.tar

@@ -1,0 +1,10 @@
+version: 0.1
+log:
+  level: info
+  fields:
+    service: registry
+storage:
+  filesystem:
+    rootdirectory: /var/lib/registry
+http:
+  addr: 127.0.0.1:15050

@@ -21,5 +21,5 @@ export async function harness(overrides={}){
  const command=async(id,body={})=>{const request={schemaVersion:2,commandId:randomUUID(),action:'set_target',targetKw:125,expiresAt:new Date(Date.now()+15000).toISOString(),timeoutSeconds:5,...body};await client.publishAsync(`${prefix}/rtu/${id}/setpoint`,JSON.stringify(request),{qos:1,retain:false});return request;};
  const status=(commandId,status)=>messages.find(m=>m.body.commandId===commandId&&m.body.status===status)?.body;
  const close=async()=>{await runtime.stop();await client.endAsync(true);rmSync(dir,{recursive:true,force:true});};
- return {api,add,command,status,messages,client,prefix,config,get runtime(){return runtime;},restart:async()=>{await runtime.stop();await start();},close};
+ return {api,add,command,status,messages,client,prefix,config,get base(){return base;},get runtime(){return runtime;},restart:async()=>{await runtime.stop();await start();},close};
 }

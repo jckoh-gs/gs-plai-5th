@@ -1,0 +1,535 @@
+{
+  "capturedAt": "2026-09-21T08:43:10.001384+00:00",
+  "imageDigest": "sha256:fd374bae807c225661adfe2c0c1f9970a0b8fab1761fd7dfb91e0fd9a8748f9b",
+  "status": "candidate",
+  "findings": [
+    {
+      "advisory": "GO-2026-4981",
+      "package": "stdlib",
+      "version": "go1.25.9",
+      "severity": "High",
+      "fixedVersions": [
+        "1.25.10",
+        "1.26.3"
+      ],
+      "source": "https://go.dev/issue/78803",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-4918",
+      "package": "golang.org/x/net",
+      "version": "v0.52.0",
+      "severity": "High",
+      "fixedVersions": [
+        "0.53.0"
+      ],
+      "source": "https://go.dev/cl/761581",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-4918",
+      "package": "stdlib",
+      "version": "go1.25.9",
+      "severity": "High",
+      "fixedVersions": [
+        "1.25.10",
+        "1.26.3"
+      ],
+      "source": "https://go.dev/cl/761581",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-5026",
+      "package": "golang.org/x/net",
+      "version": "v0.52.0",
+      "severity": "High",
+      "fixedVersions": [
+        "0.55.0"
+      ],
+      "source": "https://go.dev/cl/767220",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-5026",
+      "package": "stdlib",
+      "version": "go1.25.9",
+      "severity": "High",
+      "fixedVersions": [
+        "1.25.13",
+        "1.26.6",
+        "1.27.0-rc.3"
+      ],
+      "source": "https://go.dev/cl/767220",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GHSA-2v4p-qf9q-27wj",
+      "package": "google.golang.org/grpc",
+      "version": "v1.80.0",
+      "severity": "High",
+      "fixedVersions": [
+        "1.82.2"
+      ],
+      "source": "https://github.com/advisories/GHSA-2v4p-qf9q-27wj",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-5037",
+      "package": "stdlib",
+      "version": "go1.25.9",
+      "severity": "High",
+      "fixedVersions": [
+        "1.25.11",
+        "1.26.4"
+      ],
+      "source": "https://go.dev/cl/783621",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-4971",
+      "package": "stdlib",
+      "version": "go1.25.9",
+      "severity": "High",
+      "fixedVersions": [
+        "1.25.10",
+        "1.26.3"
+      ],
+      "source": "https://go.dev/issue/79006",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-6088",
+      "package": "stdlib",
+      "version": "go1.25.9",
+      "severity": "High",
+      "fixedVersions": [
+        "1.25.13",
+        "1.26.6",
+        "1.27.0-rc.3"
+      ],
+      "source": "https://go.dev/issue/80481",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-6089",
+      "package": "stdlib",
+      "version": "go1.25.9",
+      "severity": "High",
+      "fixedVersions": [
+        "1.25.13",
+        "1.26.6",
+        "1.27.0-rc.3"
+      ],
+      "source": "https://go.dev/issue/80205",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-5972",
+      "package": "stdlib",
+      "version": "go1.25.9",
+      "severity": "High",
+      "fixedVersions": [
+        "1.25.13",
+        "1.26.6",
+        "1.27.0-rc.3"
+      ],
+      "source": "https://go.dev/issue/80405",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-6090",
+      "package": "stdlib",
+      "version": "go1.25.9",
+      "severity": "High",
+      "fixedVersions": [
+        "1.25.13",
+        "1.26.6",
+        "1.27.0-rc.3"
+      ],
+      "source": "https://go.dev/issue/80528",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-5970",
+      "package": "golang.org/x/text",
+      "version": "v0.35.0",
+      "severity": "High",
+      "fixedVersions": [
+        "0.39.0"
+      ],
+      "source": "https://go.dev/issue/80142",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "CVE-2026-85091",
+      "package": "zlib",
+      "version": "1.3.2-r0",
+      "severity": "High",
+      "fixedVersions": [],
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-85091",
+      "paths": [
+        "/lib/apk/db/installed"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "upstream fix absent in current feed; preserve as open",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GHSA-vp52-pcj8-j9qc",
+      "package": "google.golang.org/grpc",
+      "version": "v1.80.0",
+      "severity": "High",
+      "fixedVersions": [
+        "1.83.1"
+      ],
+      "source": "https://github.com/advisories/GHSA-vp52-pcj8-j9qc",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-6218",
+      "package": "stdlib",
+      "version": "go1.25.9",
+      "severity": "Medium",
+      "fixedVersions": [
+        "1.25.13",
+        "1.26.6",
+        "1.27.0-rc.3"
+      ],
+      "source": "https://go.dev/cl/803681",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-4980",
+      "package": "stdlib",
+      "version": "go1.25.9",
+      "severity": "Medium",
+      "fixedVersions": [
+        "1.25.10",
+        "1.26.3"
+      ],
+      "source": "https://go.dev/issue/78981",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-5856",
+      "package": "stdlib",
+      "version": "go1.25.9",
+      "severity": "Medium",
+      "fixedVersions": [
+        "1.25.12",
+        "1.26.5",
+        "1.27.0-rc.2"
+      ],
+      "source": "https://go.dev/cl/775960",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-5039",
+      "package": "stdlib",
+      "version": "go1.25.9",
+      "severity": "Medium",
+      "fixedVersions": [
+        "1.25.11",
+        "1.26.4"
+      ],
+      "source": "https://go.dev/issue/79346",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GHSA-qc2q-p7wx-3px3",
+      "package": "google.golang.org/grpc",
+      "version": "v1.80.0",
+      "severity": "Medium",
+      "fixedVersions": [
+        "1.83.1"
+      ],
+      "source": "https://github.com/advisories/GHSA-qc2q-p7wx-3px3",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-4982",
+      "package": "stdlib",
+      "version": "go1.25.9",
+      "severity": "Medium",
+      "fixedVersions": [
+        "1.25.10",
+        "1.26.3"
+      ],
+      "source": "https://go.dev/issue/78913",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-5158",
+      "package": "go.opentelemetry.io/otel",
+      "version": "v1.43.0",
+      "severity": "Medium",
+      "fixedVersions": [
+        "1.42.0",
+        "1.44.0"
+      ],
+      "source": "https://github.com/open-telemetry/opentelemetry-go/security/advisories/GHSA-5wrp-cwcj-q835",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GO-2026-6091",
+      "package": "stdlib",
+      "version": "go1.25.9",
+      "severity": "Medium",
+      "fixedVersions": [
+        "1.25.13",
+        "1.26.6",
+        "1.27.0-rc.3"
+      ],
+      "source": "https://go.dev/issue/80435",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "CVE-2025-60876",
+      "package": "busybox",
+      "version": "1.37.0-r30",
+      "severity": "Medium",
+      "fixedVersions": [],
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876",
+      "paths": [
+        "/lib/apk/db/installed"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "upstream fix absent in current feed; preserve as open",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "CVE-2025-60876",
+      "package": "busybox-binsh",
+      "version": "1.37.0-r30",
+      "severity": "Medium",
+      "fixedVersions": [],
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876",
+      "paths": [
+        "/lib/apk/db/installed"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "upstream fix absent in current feed; preserve as open",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "CVE-2025-60876",
+      "package": "ssl_client",
+      "version": "1.37.0-r30",
+      "severity": "Medium",
+      "fixedVersions": [],
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876",
+      "paths": [
+        "/lib/apk/db/installed"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "upstream fix absent in current feed; preserve as open",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GHSA-w34q-cm8f-9c5x",
+      "package": "go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploggrpc",
+      "version": "v0.18.0",
+      "severity": "Medium",
+      "fixedVersions": [
+        "0.21.0"
+      ],
+      "source": "https://github.com/advisories/GHSA-w34q-cm8f-9c5x",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GHSA-8wmf-6v46-5gfg",
+      "package": "go.opentelemetry.io/otel/exporters/otlp/otlptrace",
+      "version": "v1.43.0",
+      "severity": "Low",
+      "fixedVersions": [
+        "1.45.0"
+      ],
+      "source": "https://github.com/advisories/GHSA-8wmf-6v46-5gfg",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GHSA-8wmf-6v46-5gfg",
+      "package": "go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc",
+      "version": "v1.42.0",
+      "severity": "Low",
+      "fixedVersions": [
+        "1.45.0"
+      ],
+      "source": "https://github.com/advisories/GHSA-8wmf-6v46-5gfg",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GHSA-8wmf-6v46-5gfg",
+      "package": "go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp",
+      "version": "v1.43.0",
+      "severity": "Low",
+      "fixedVersions": [
+        "1.45.0"
+      ],
+      "source": "https://github.com/advisories/GHSA-8wmf-6v46-5gfg",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GHSA-8wmf-6v46-5gfg",
+      "package": "go.opentelemetry.io/otel/sdk",
+      "version": "v1.43.0",
+      "severity": "Low",
+      "fixedVersions": [
+        "1.45.0"
+      ],
+      "source": "https://github.com/advisories/GHSA-8wmf-6v46-5gfg",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    },
+    {
+      "advisory": "GHSA-hrxh-6v49-42gf",
+      "package": "google.golang.org/grpc",
+      "version": "v1.80.0",
+      "severity": "High",
+      "fixedVersions": [
+        "1.82.1"
+      ],
+      "source": "https://github.com/advisories/GHSA-hrxh-6v49-42gf",
+      "paths": [
+        "/bin/registry"
+      ],
+      "status": "candidate-not-deployed",
+      "action": "rebuild with fixed Go/modules and recheck",
+      "mitigation": "registry loopback-only; stop when not needed; does not remove CVE"
+    }
+  ]
+}

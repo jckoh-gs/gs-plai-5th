@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-09-21T08:55:43.936969+00:00",
+  "registryImage": "sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c",
+  "preserved": [
+    "grid@sha256:1dd9be395d7fe324b20216f2db7162da51851cf01edc212bd2334a6a12bc7223",
+    "grid@sha256:617ff5ec1dc207af7028d8cdec08c4d2bcf09c7f65db1397fdfd4dc61253adbb",
+    "grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+  ],
+  "freshPushPullDigest": "sha256:d5ca87c8bafa49d22038bdbfc204ce619622c5ae014f37ff875b152eed0451e4",
+  "passed": true
+}

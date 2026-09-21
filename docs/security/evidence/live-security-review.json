@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-09-21T09:01:43.960001+00:00",
+  "kmaPresenceOnly": {
+    "localProcessKmaKeyNamePresent": false,
+    "deploymentKmaKeyNamePresent": false,
+    "deploymentEnvFromPresent": false,
+    "secretKmaKeyNamePresent": false
+  },
+  "apiChecks": [
+    {
+      "path": "/api/config",
+      "status": 200,
+      "credentialAbsentInBodyHeadersURL": true
+    },
+    {
+      "path": "/api/health",
+      "status": 200,
+      "credentialAbsentInBodyHeadersURL": true
+    },
+    {
+      "path": "/api/guide",
+      "status": 200,
+      "credentialAbsentInBodyHeadersURL": true
+    },
+    {
+      "path": "/api/state",
+      "status": 200,
+      "credentialAbsentInBodyHeadersURL": true
+    }
+  ],
+  "last500AppLogLinesCredentialAbsent": true,
+  "limitations": [
+    "KMA presence is based on process env name, deployment env names, envFrom presence and Secret key names; no secret values are recorded.",
+    "No claim that all historical logs or arbitrary future output are secret-free."
+  ]
+}

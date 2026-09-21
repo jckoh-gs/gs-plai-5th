@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-09-21T08:59:45.250Z",
+  "url": "mqtt://127.0.0.1:18884",
+  "checks": [
+    {
+      "name": "anonymous denied",
+      "passed": true
+    },
+    {
+      "name": "external client forbidden message denied despite wildcard subscription",
+      "passed": true
+    },
+    {
+      "name": "external client telemetry delivered",
+      "passed": true
+    }
+  ]
+}

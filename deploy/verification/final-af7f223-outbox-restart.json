@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T09:04:42.143Z",
+  "context": "charles-k3s",
+  "namespace": "gs-plai-5h",
+  "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+  "beforePod": "30b8e93c-5144-4d12-9571-5e27df2819bb",
+  "afterPod": "fb306bdc-041b-4e88-8f32-33a61c043a34",
+  "podReplaced": true,
+  "messageId": "d3869b82-0e8a-4d67-a991-852429676bed",
+  "sequence": 22,
+  "bodySha256": "59d9dbfccc331d1b35e74ec881cf1912937ba05d9e9f45f893adc2092275ab5f",
+  "samePersistedBodyBeforeAndAfterRestart": true,
+  "sameObservedMQTTBody": true,
+  "ackedAt": "2026-09-21T09:04:40.566Z",
+  "consistentPendingBackup": "/data/pending-outbox-af7f223.sqlite"
+}

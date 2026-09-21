@@ -7,230 +7,1420 @@
     {
       "id": "FR-REG-01",
       "description": "등록 입력",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-unit.log",
+          "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c"
+        },
+        {
+          "path": "artifacts/checkpoints/api-boundaries-round2.log",
+          "sha256": "b075ad986603a94f4f5c317a06988cd3a608e8b28f12b30fc792a754ba3696e5"
+        },
+        {
+          "path": "scripts/api-boundaries.mjs",
+          "sha256": "57918b838c2ff1b5d7ea879a9432be7d7c26cf53e2a8859e3d0f0c524188bdb5"
+        }
+      ],
+      "assessment": "Reviewed server validators plus final59unit representative bounds/atomic cases; exact20MiB parser accepts and+1byte413; sample3600/frame120 oldest/newest ascending checks. Exhaustive every input combination is not claimed or required.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "FR-REG-02",
       "description": "좌표 미입력",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-unit.log",
+          "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-integration.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        },
+        {
+          "path": "server/model.js",
+          "sha256": "ab20a7f7f7b64f8dc9be152b74f617647860524ef0a06577f160d2a3be522f47"
+        }
+      ],
+      "assessment": "Final model registration/virtualcoordinates/hybridIDs/defaults/replayseed/pause/wrap checks and reviewed implementation cover declared behavior; previous live3demo registration confirms integration. Not a stochastic distribution or load certification.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "FR-REG-03",
       "description": "발전기 구성",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-unit.log",
+          "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-integration.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        },
+        {
+          "path": "server/model.js",
+          "sha256": "ab20a7f7f7b64f8dc9be152b74f617647860524ef0a06577f160d2a3be522f47"
+        }
+      ],
+      "assessment": "Final model registration/virtualcoordinates/hybridIDs/defaults/replayseed/pause/wrap checks and reviewed implementation cover declared behavior; previous live3demo registration confirms integration. Not a stochastic distribution or load certification.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "FR-DATA-01",
       "description": "형식과 열",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-unit.log",
+          "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c"
+        },
+        {
+          "path": "artifacts/checkpoints/api-boundaries-round2.log",
+          "sha256": "b075ad986603a94f4f5c317a06988cd3a608e8b28f12b30fc792a754ba3696e5"
+        },
+        {
+          "path": "scripts/api-boundaries.mjs",
+          "sha256": "57918b838c2ff1b5d7ea879a9432be7d7c26cf53e2a8859e3d0f0c524188bdb5"
+        }
+      ],
+      "assessment": "Reviewed server validators plus final59unit representative bounds/atomic cases; exact20MiB parser accepts and+1byte413; sample3600/frame120 oldest/newest ascending checks. Exhaustive every input combination is not claimed or required.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "FR-DATA-02",
       "description": "검증",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-unit.log",
+          "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c"
+        },
+        {
+          "path": "artifacts/checkpoints/api-boundaries-round2.log",
+          "sha256": "b075ad986603a94f4f5c317a06988cd3a608e8b28f12b30fc792a754ba3696e5"
+        },
+        {
+          "path": "scripts/api-boundaries.mjs",
+          "sha256": "57918b838c2ff1b5d7ea879a9432be7d7c26cf53e2a8859e3d0f0c524188bdb5"
+        }
+      ],
+      "assessment": "Reviewed server validators plus final59unit representative bounds/atomic cases; exact20MiB parser accepts and+1byte413; sample3600/frame120 oldest/newest ascending checks. Exhaustive every input combination is not claimed or required.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "FR-DATA-03",
       "description": "출력 의미와 보간",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "coveredBy": [
+        "AT-DATA-02",
+        "AT-DATA-03",
+        "AT-DATA-04",
+        "AT-DATA-06"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "FR-DATA-04",
       "description": "분배와 전기 계측",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        },
+        {
+          "path": "web/QA.md",
+          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "tests/user-data.test.js",
+          "sha256": "8029d71e2fc0c9310522efe4728d457a3a92269d0cb10f7ba4fa24a0bf2c6fe5"
+        },
+        {
+          "path": "tests/fixtures/user-wind-55.tsv",
+          "sha256": "fc158138224b395a1a2da15721323f557985f3b4ca6920a87f81595315bcfec4"
+        }
+      ],
+      "coveredBy": [
+        "AT-DATA-07",
+        "AT-DATA-08"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "FR-SIM-01",
       "description": "두 모드",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "coveredBy": [
+        "AT-MODEL-01",
+        "AT-MODEL-03",
+        "AT-MODEL-08"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "FR-SIM-02",
       "description": "시간과 난수",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-unit.log",
+          "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-integration.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        },
+        {
+          "path": "server/model.js",
+          "sha256": "ab20a7f7f7b64f8dc9be152b74f617647860524ef0a06577f160d2a3be522f47"
+        }
+      ],
+      "assessment": "Final model registration/virtualcoordinates/hybridIDs/defaults/replayseed/pause/wrap checks and reviewed implementation cover declared behavior; previous live3demo registration confirms integration. Not a stochastic distribution or load certification.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "FR-SIM-03",
       "description": "풍력",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "coveredBy": [
+        "AT-MODEL-01",
+        "AT-MODEL-02"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "FR-SIM-04",
       "description": "태양광",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "coveredBy": [
+        "AT-MODEL-03"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "FR-SIM-05",
       "description": "제한과 응답",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        },
+        {
+          "path": "tests/control.test.js",
+          "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "tests/control-model-boundary.test.js",
+          "sha256": "121a4096514ec7e82b8d208c9d61734846137720e257d10fed637fe76d8dbf92"
+        },
+        {
+          "path": "docs/issues/evidence/review-003-unit.log",
+          "sha256": "582752488f67b3827f908cba9e45856e81d24f1633075a216c94ab216b4d675c"
+        },
+        {
+          "path": "docs/issues/evidence/review-003-mqtt.log",
+          "sha256": "aae835f7503e0d696d45dbb927187be9d25b97ae28d61dc23c666a990aca8851"
+        },
+        {
+          "path": "tests/review-control.test.js",
+          "sha256": "7bd1d3cf301aaf4e9a0cef730a69cc7ef20d99995fe5ef6d772f25042a9e875c"
+        },
+        {
+          "path": "scripts/review-control-integration.js",
+          "sha256": "963470b166705690b36b87e1e47d184b46ea92002cb944342ff548e84cbac228"
+        }
+      ],
+      "coveredBy": [
+        "AT-MODEL-04",
+        "AT-MODEL-05",
+        "AT-MODEL-06",
+        "AT-CONTROL-11"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "FR-WTH-01",
       "description": "KMA 조회",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-unit.log",
+          "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c"
+        },
+        {
+          "path": "artifacts/checkpoints/weather-timeout.log",
+          "sha256": "0d48bebaa5c2b5744d57bba2b553711f154b4f6b6275d71625014dfc805b3a47"
+        }
+      ],
+      "assessment": "Fixture parser/failure/manualprecedence/irradiance/12sec timeout pass. Security inspected env/deployment/Secret key names: KMA key not supplied. Conditional actual KMA call is not performed or claimed; no fabricated liveweather success.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "FR-WTH-02",
       "description": "덮어쓰기 정책",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "docs/issues/evidence/review-002-unit.log",
+          "sha256": "4bf03b5628c1159879a7b4a719f7338f95a493058de1b31c3abf0940e7995e35"
+        },
+        {
+          "path": "tests/review-regressions.test.js",
+          "sha256": "1879b71013a304604383387daf73aa60b5ccf18074c780e0f6e22e1ef48c1fb4"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        }
+      ],
+      "coveredBy": [
+        "AT-UI-08"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "FR-WTH-03",
       "description": "일사",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-unit.log",
+          "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c"
+        },
+        {
+          "path": "artifacts/checkpoints/weather-timeout.log",
+          "sha256": "0d48bebaa5c2b5744d57bba2b553711f154b4f6b6275d71625014dfc805b3a47"
+        }
+      ],
+      "assessment": "Fixture parser/failure/manualprecedence/irradiance/12sec timeout pass. Security inspected env/deployment/Secret key names: KMA key not supplied. Conditional actual KMA call is not performed or claimed; no fabricated liveweather success.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "FR-CTRL-01",
       "description": "지원 명령",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "scripts/integration.js",
+          "sha256": "e05ffc170c6c85a0298ef8662d7a8a2c039a543fa714a11cd30d0ab5200fc143"
+        },
+        {
+          "path": "deploy/verification/remote-integration-round2.log",
+          "sha256": "792eb3b72befdbab9d85d8dbfde4edbcee29d52b1e839d32ff3512498a52f167"
+        },
+        {
+          "path": "scripts/remote-integration.mjs",
+          "sha256": "5ecf7b9699495f88088d151b67e77f56f51c5d9045601788f9328f70e1f073b2"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        },
+        {
+          "path": "tests/control.test.js",
+          "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
+        },
+        {
+          "path": "docs/issues/evidence/review-003-unit.log",
+          "sha256": "582752488f67b3827f908cba9e45856e81d24f1633075a216c94ab216b4d675c"
+        },
+        {
+          "path": "docs/issues/evidence/review-003-mqtt.log",
+          "sha256": "aae835f7503e0d696d45dbb927187be9d25b97ae28d61dc23c666a990aca8851"
+        },
+        {
+          "path": "tests/review-control.test.js",
+          "sha256": "7bd1d3cf301aaf4e9a0cef730a69cc7ef20d99995fe5ef6d772f25042a9e875c"
+        },
+        {
+          "path": "scripts/review-control-integration.js",
+          "sha256": "963470b166705690b36b87e1e47d184b46ea92002cb944342ff548e84cbac228"
+        },
+        {
+          "path": "web/QA.md",
+          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        },
+        {
+          "path": "tests/weather.test.js",
+          "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/controls-stages.json",
+          "sha256": "df1f3f67e36d6a270cb5fc23851fb711420c9ef13e254a0ac9f1d904f9b1807d"
+        }
+      ],
+      "coveredBy": [
+        "AT-CONTROL-01",
+        "AT-CONTROL-02",
+        "AT-MODEL-06",
+        "AT-CONTROL-11",
+        "AT-UI-04"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "FR-CTRL-02",
       "description": "수신 검증과 중복",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-unit.log",
+          "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-integration.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-advanced.log",
+          "sha256": "b8bda2433b04be29fb6fb8701807b62037ab481bfee07da478a823426c8aed3c"
+        },
+        {
+          "path": "artifacts/checkpoints/process-metrics-round2.log",
+          "sha256": "369e55861fdf66c6009506ed5e79387345f90bb58158ff4f13e4f968a71f9224"
+        }
+      ],
+      "assessment": "Consolidated reviewed behavior and direct tests cover validation/dedup/state transitions/all6faults/metric definitions and cumulative process persistence. No unsupported hardware metrics claimed.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "FR-CTRL-03",
       "description": "시간·우선순위",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "tests/control.test.js",
+          "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
+        },
+        {
+          "path": "tests/transport.test.js",
+          "sha256": "c01531d46197f283a7798acd7da62e2a9123ad1a56d5579e6bda6764866bbdde"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "tests/control-model-boundary.test.js",
+          "sha256": "121a4096514ec7e82b8d208c9d61734846137720e257d10fed637fe76d8dbf92"
+        },
+        {
+          "path": "docs/issues/evidence/review-003-unit.log",
+          "sha256": "582752488f67b3827f908cba9e45856e81d24f1633075a216c94ab216b4d675c"
+        },
+        {
+          "path": "docs/issues/evidence/review-003-mqtt.log",
+          "sha256": "aae835f7503e0d696d45dbb927187be9d25b97ae28d61dc23c666a990aca8851"
+        },
+        {
+          "path": "tests/review-control.test.js",
+          "sha256": "7bd1d3cf301aaf4e9a0cef730a69cc7ef20d99995fe5ef6d772f25042a9e875c"
+        },
+        {
+          "path": "scripts/review-control-integration.js",
+          "sha256": "963470b166705690b36b87e1e47d184b46ea92002cb944342ff548e84cbac228"
+        },
+        {
+          "path": "docs/issues/evidence/review-004-process.log",
+          "sha256": "a5673e592c5d5eaf7c5f1202e990c7ca33c3bb8b6b37b3969a9d16b51ad4c9a0"
+        },
+        {
+          "path": "scripts/review-process-restart.js",
+          "sha256": "ffbfc42b59f42f019142f2e7f3a059a023b066b458d9777ae3ba7a9ae87f3db1"
+        }
+      ],
+      "coveredBy": [
+        "AT-CONTROL-07",
+        "AT-CONTROL-08",
+        "AT-CONTROL-10"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "FR-CTRL-04",
       "description": "상태 전이",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-unit.log",
+          "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-integration.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-advanced.log",
+          "sha256": "b8bda2433b04be29fb6fb8701807b62037ab481bfee07da478a823426c8aed3c"
+        },
+        {
+          "path": "artifacts/checkpoints/process-metrics-round2.log",
+          "sha256": "369e55861fdf66c6009506ed5e79387345f90bb58158ff4f13e4f968a71f9224"
+        }
+      ],
+      "assessment": "Consolidated reviewed behavior and direct tests cover validation/dedup/state transitions/all6faults/metric definitions and cumulative process persistence. No unsupported hardware metrics claimed.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "FR-MQTT-01",
       "description": "연결과 토픽",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "docs/security/evidence/live-security-review.json",
+          "sha256": "15a2d85d9dfec2940ac462f132015ab20b59879398373a93101038dbbd8184f4"
+        },
+        {
+          "path": "docs/security/evidence/security-round4-tests.txt",
+          "sha256": "b9c1db92aa9ddc04be08706da11b2ff1c45ed22fdc564c0e9c19f1ddb3acfcff"
+        },
+        {
+          "path": "docs/security/evidence/security-lwt-integration.json",
+          "sha256": "34ecf1fcb6009a97ce552c10bbbe740abf4abc0da0517c3ed4d4303211b78e2e"
+        },
+        {
+          "path": "deploy/verification/final-af7f223-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        }
+      ],
+      "assessment": "Exact publicconfig keys/nonreflection APIguideheadersURL, perdevicecert overrides/TLSverification, actualbroker RTU+gateway LWT and retainedlateobserver, remote credential-string checks incl500loglines and correct/wrongtoken sessions browser. Bounded security verification, not allfuturelogs or externalAWS/TLSaccount certification.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "FR-MQTT-02",
       "description": "전체 SCADA",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "scripts/integration.js",
+          "sha256": "e05ffc170c6c85a0298ef8662d7a8a2c039a543fa714a11cd30d0ab5200fc143"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "scripts/integration.js",
+          "sha256": "ebc040c24a5ff344e1b590ff56869609dd56e5c7385543ff8329e8d8298fc1f4"
+        },
+        {
+          "path": "artifacts/checkpoints/sixty-second-first.log",
+          "sha256": "0660a7416c459b60a0f417455af500204eb9750a4f41096d0e0abd23e60d3845"
+        },
+        {
+          "path": "scripts/sixty-second-integration.js",
+          "sha256": "a8de74104aea22baf01954e3695195f67c7ac24439a6a725457550686e757a93"
+        },
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        },
+        {
+          "path": "tests/store.test.js",
+          "sha256": "bf4fac2f6b0d9bd1d6f5abf0fa6f81eab5b289f7dbf45c30b02b480e62ea1dbe"
+        }
+      ],
+      "coveredBy": [
+        "AT-MQTT-01",
+        "AT-MQTT-02",
+        "AT-MQTT-03",
+        "AT-MQTT-09"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "FR-MQTT-03",
       "description": "전달 보장 경계",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        },
+        {
+          "path": "artifacts/checkpoints/crash-first.log",
+          "sha256": "45c5574428bf7499b60cd99affe59fa1f3287656336fc63d515fdd07a1ab98b7"
+        },
+        {
+          "path": "docs/issues/evidence/review-002-crash.log",
+          "sha256": "45c5574428bf7499b60cd99affe59fa1f3287656336fc63d515fdd07a1ab98b7"
+        },
+        {
+          "path": "scripts/crash-integration.js",
+          "sha256": "3a5ca553db09ff40b960cfd0a4b868c64d2921d419e958451f0eb2c2120c86d9"
+        }
+      ],
+      "coveredBy": [
+        "AT-MQTT-05",
+        "AT-MQTT-06",
+        "AT-MQTT-07"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "FR-STORE-01",
       "description": "데이터와 식별",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "deploy/verification/final-af7f223-outbox-restart.json",
+          "sha256": "8c811885f1dfe817d6eaae1fdf9994ab53111d983a9125454e839ea25fdcc6dc"
+        },
+        {
+          "path": "docs/issues/evidence/review-006-scenario.log",
+          "sha256": "d0fe7d320ca2c58729a7ceaaa6a320e47113e8eac06976b628d6c0f0cd35eb83"
+        },
+        {
+          "path": "deploy/verification/restore-patched-original-data.json",
+          "sha256": "fda8706dc251743b18616bbc5849c39c232071d5a40ee11539f4baa3ff6a719e"
+        }
+      ],
+      "assessment": "Real pod replacement preserves samepending body/sequence/message observed+PUBACK; scenario fullstate and previous/patched compatible backup restoration. GreenfieldDB compatibility applies to this run versions, no siblingDB migration claimed.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "FR-STORE-02",
       "description": "트랜잭션과 발행",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        },
+        {
+          "path": "artifacts/checkpoints/crash-first.log",
+          "sha256": "45c5574428bf7499b60cd99affe59fa1f3287656336fc63d515fdd07a1ab98b7"
+        },
+        {
+          "path": "docs/issues/evidence/review-002-crash.log",
+          "sha256": "45c5574428bf7499b60cd99affe59fa1f3287656336fc63d515fdd07a1ab98b7"
+        },
+        {
+          "path": "scripts/crash-integration.js",
+          "sha256": "3a5ca553db09ff40b960cfd0a4b868c64d2921d419e958451f0eb2c2120c86d9"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/store.test.js",
+          "sha256": "bf4fac2f6b0d9bd1d6f5abf0fa6f81eab5b289f7dbf45c30b02b480e62ea1dbe"
+        }
+      ],
+      "coveredBy": [
+        "AT-MQTT-05",
+        "AT-MQTT-06",
+        "AT-MQTT-09"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "FR-STORE-03",
       "description": "보존과 이력",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-unit.log",
+          "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c"
+        },
+        {
+          "path": "artifacts/checkpoints/api-boundaries-round2.log",
+          "sha256": "b075ad986603a94f4f5c317a06988cd3a608e8b28f12b30fc792a754ba3696e5"
+        },
+        {
+          "path": "scripts/api-boundaries.mjs",
+          "sha256": "57918b838c2ff1b5d7ea879a9432be7d7c26cf53e2a8859e3d0f0c524188bdb5"
+        }
+      ],
+      "assessment": "Reviewed server validators plus final59unit representative bounds/atomic cases; exact20MiB parser accepts and+1byte413; sample3600/frame120 oldest/newest ascending checks. Exhaustive every input combination is not claimed or required.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "FR-METRIC-01",
       "description": "단말별 필수 지표",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-unit.log",
+          "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-integration.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-advanced.log",
+          "sha256": "b8bda2433b04be29fb6fb8701807b62037ab481bfee07da478a823426c8aed3c"
+        },
+        {
+          "path": "artifacts/checkpoints/process-metrics-round2.log",
+          "sha256": "369e55861fdf66c6009506ed5e79387345f90bb58158ff4f13e4f968a71f9224"
+        }
+      ],
+      "assessment": "Consolidated reviewed behavior and direct tests cover validation/dedup/state transitions/all6faults/metric definitions and cumulative process persistence. No unsupported hardware metrics claimed.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "FR-METRIC-02",
       "description": "health 우선순위",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "web/QA.md",
+          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "tests/weather.test.js",
+          "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+        },
+        {
+          "path": "artifacts/checkpoints/process-metrics-round2.log",
+          "sha256": "369e55861fdf66c6009506ed5e79387345f90bb58158ff4f13e4f968a71f9224"
+        },
+        {
+          "path": "tests/metrics.test.js",
+          "sha256": "e55bb64b6eaf544b88ceb71cf414e30481dc738d2d2077fc6b95e58878d95b3e"
+        },
+        {
+          "path": "web/QA.md",
+          "sha256": "95dfdce45f1158915fa463f61bf8f7860752c1e1462738b2109235fbdf9d3ceb"
+        }
+      ],
+      "coveredBy": [
+        "AT-UI-06"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "FR-FAULT-01",
       "description": "지원 장애",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-unit.log",
+          "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-integration.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-advanced.log",
+          "sha256": "b8bda2433b04be29fb6fb8701807b62037ab481bfee07da478a823426c8aed3c"
+        },
+        {
+          "path": "artifacts/checkpoints/process-metrics-round2.log",
+          "sha256": "369e55861fdf66c6009506ed5e79387345f90bb58158ff4f13e4f968a71f9224"
+        }
+      ],
+      "assessment": "Consolidated reviewed behavior and direct tests cover validation/dedup/state transitions/all6faults/metric definitions and cumulative process persistence. No unsupported hardware metrics claimed.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "FR-FAULT-02",
       "description": "UI 피드백",
-      "status": "pending",
-      "evidence": []
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        }
+      ],
+      "assessment": "UIfault/reset events observed; final demonstration cleanup and initial model restoration await final run.",
+      "auditRound": "005"
     },
     {
       "id": "FR-SCENE-01",
       "description": "저장 범위",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "docs/issues/evidence/review-006-scenario.log",
+          "sha256": "d0fe7d320ca2c58729a7ceaaa6a320e47113e8eac06976b628d6c0f0cd35eb83"
+        },
+        {
+          "path": "scripts/review-scenario-integration.js",
+          "sha256": "c16b2a3e810848bd3013aef7aec5d7d3782a74c808382a774e6a6a0b6a132c08"
+        }
+      ],
+      "assessment": "Full snapshot/restored state deep equality including SQLite; paused/freeze/history exclusions/pending preservation/networkwhilepaused/wallclocktimeout assertions cover remaining scope.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "FR-SCENE-02",
       "description": "복원",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "docs/issues/evidence/review-006-scenario.log",
+          "sha256": "d0fe7d320ca2c58729a7ceaaa6a320e47113e8eac06976b628d6c0f0cd35eb83"
+        },
+        {
+          "path": "scripts/review-scenario-integration.js",
+          "sha256": "c16b2a3e810848bd3013aef7aec5d7d3782a74c808382a774e6a6a0b6a132c08"
+        }
+      ],
+      "assessment": "Full snapshot/restored state deep equality including SQLite; paused/freeze/history exclusions/pending preservation/networkwhilepaused/wallclocktimeout assertions cover remaining scope.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "UI-01",
       "description": "통합 대시보드 / #dashboard",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/result.json",
+          "sha256": "ea39cf54c2340c0379bd676608e3b2b7499df1cee2ef2928f005dd2d2878a493"
+        },
+        {
+          "path": "web/QA.md",
+          "sha256": "95dfdce45f1158915fa463f61bf8f7860752c1e1462738b2109235fbdf9d3ceb"
+        },
+        {
+          "path": "deploy/verification/final-af7f223-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        }
+      ],
+      "assessment": "Cumulative actual nativebrowser functional workflow+finalimage render/auth/stream. Control/registration/fault/model/scenario/search/copy/keyboard/3D behavior reviewed. Browser failure fallback source inspected; not exhaustive assistivetechnology certification.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "UI-02",
       "description": "RTU 디바이스 / #devices",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/result.json",
+          "sha256": "ea39cf54c2340c0379bd676608e3b2b7499df1cee2ef2928f005dd2d2878a493"
+        },
+        {
+          "path": "web/QA.md",
+          "sha256": "95dfdce45f1158915fa463f61bf8f7860752c1e1462738b2109235fbdf9d3ceb"
+        },
+        {
+          "path": "deploy/verification/final-af7f223-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        }
+      ],
+      "assessment": "Cumulative actual nativebrowser functional workflow+finalimage render/auth/stream. Control/registration/fault/model/scenario/search/copy/keyboard/3D behavior reviewed. Browser failure fallback source inspected; not exhaustive assistivetechnology certification.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "UI-03",
       "description": "시험 시나리오 / #lab",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/result.json",
+          "sha256": "ea39cf54c2340c0379bd676608e3b2b7499df1cee2ef2928f005dd2d2878a493"
+        },
+        {
+          "path": "web/QA.md",
+          "sha256": "95dfdce45f1158915fa463f61bf8f7860752c1e1462738b2109235fbdf9d3ceb"
+        },
+        {
+          "path": "deploy/verification/final-af7f223-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        }
+      ],
+      "assessment": "Cumulative actual nativebrowser functional workflow+finalimage render/auth/stream. Control/registration/fault/model/scenario/search/copy/keyboard/3D behavior reviewed. Browser failure fallback source inspected; not exhaustive assistivetechnology certification.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "UI-04",
       "description": "이벤트 로그 / #logs",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "deploy/verification/final-guide-log/result.json",
+          "sha256": "ab91e4e9b0330a70625ac4570c54e125955797a966f6b2fd6a885270ecf55e87"
+        },
+        {
+          "path": "scripts/browser-guide-log.cjs",
+          "sha256": "f58a2b53be7449ac2069c2aa1c76d8e01c1803138886cc224e391e6803f9409d"
+        }
+      ],
+      "assessment": "Final deployed5guide tabs requiredsemantics/topic content and15persistedaudit rows/columns, token absent, pageerrorsnone; previous clipboard/keyboard/RTUselection evidence supplements.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "UI-05",
       "description": "연동 가이드 / #api",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "deploy/verification/final-guide-log/result.json",
+          "sha256": "ab91e4e9b0330a70625ac4570c54e125955797a966f6b2fd6a885270ecf55e87"
+        },
+        {
+          "path": "scripts/browser-guide-log.cjs",
+          "sha256": "f58a2b53be7449ac2069c2aa1c76d8e01c1803138886cc224e391e6803f9409d"
+        }
+      ],
+      "assessment": "Final deployed5guide tabs requiredsemantics/topic content and15persistedaudit rows/columns, token absent, pageerrorsnone; previous clipboard/keyboard/RTUselection evidence supplements.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "UI-06",
       "description": "RTU 추가",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/result.json",
+          "sha256": "ea39cf54c2340c0379bd676608e3b2b7499df1cee2ef2928f005dd2d2878a493"
+        },
+        {
+          "path": "web/QA.md",
+          "sha256": "95dfdce45f1158915fa463f61bf8f7860752c1e1462738b2109235fbdf9d3ceb"
+        },
+        {
+          "path": "deploy/verification/final-af7f223-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        }
+      ],
+      "assessment": "Cumulative actual nativebrowser functional workflow+finalimage render/auth/stream. Control/registration/fault/model/scenario/search/copy/keyboard/3D behavior reviewed. Browser failure fallback source inspected; not exhaustive assistivetechnology certification.",
+      "auditRound": "005",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "DEPLOY-01",
       "description": "— 필수 k3s 배포 수락 기준",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "deploy/verification/post-restart.json",
+          "sha256": "a44bff2342969bcc2258f60348097e67b980f66a2c9f97547925013e5c28cbe7"
+        },
+        {
+          "path": "deploy/verification/browser/result.json",
+          "sha256": "a2eeb6513112ca0bab3f4a12561531b05ed2d77bef9914180d712a8f7fc88fb0"
+        },
+        {
+          "path": "deploy/verification/mqtt-access.json",
+          "sha256": "5c946bdc8bb148eec98825a4ceb1b8ab93adab6002f16a96f307f08db50a43c5"
+        },
+        {
+          "path": "artifacts/checkpoints/restore-first.log",
+          "sha256": "f3e8bc67d5a9a2ea94bc0c9584201be00434c3e0e4a424a0c5ed9bf6c7deb772"
+        },
+        {
+          "path": "scripts/restore-integration.js",
+          "sha256": "e2fec1dfe0d851e4773bbc2bfb179ea87979e475cfa85608eb298528f2b6f333"
+        },
+        {
+          "path": "deploy/verification/remote-integration-round2.log",
+          "sha256": "792eb3b72befdbab9d85d8dbfde4edbcee29d52b1e839d32ff3512498a52f167"
+        },
+        {
+          "path": "scripts/remote-integration.mjs",
+          "sha256": "5ecf7b9699495f88088d151b67e77f56f51c5d9045601788f9328f70e1f073b2"
+        },
+        {
+          "path": "artifacts/checkpoints/restore-round3.log",
+          "sha256": "771ea22f5fdec61a05fab176519431a674db935f2357bbadd807516efc285659"
+        },
+        {
+          "path": "scripts/restore-integration.js",
+          "sha256": "e8d6447a6a7b4d262504855ff4925ef69dd7b576a02ad80f9dea072faf357110"
+        },
+        {
+          "path": "artifacts/checkpoints/restored-browser/result.json",
+          "sha256": "fa49a395097d93b953a4658c7525f09cda46e89d04338a81c98767a92299efac"
+        },
+        {
+          "path": "deploy/verification/restore-old-browser.log",
+          "sha256": "8624b3c66c0ee836ea10107c924d22db2808c87ddb0d62cd3a1bde820542c006"
+        },
+        {
+          "path": "deploy/verification/restore-old-mqtt.json",
+          "sha256": "86909f1054219ce562fee2e0cb9e4dd6116b491632700c1efb15424ea9480c7e"
+        },
+        {
+          "path": "deploy/verification/restore-patched-browser.log",
+          "sha256": "8624b3c66c0ee836ea10107c924d22db2808c87ddb0d62cd3a1bde820542c006"
+        },
+        {
+          "path": "deploy/verification/restore-patched-mqtt.json",
+          "sha256": "21a77c25c6f55b786366361abd6dae45769720f7949c1ff06570f2487d47ed54"
+        },
+        {
+          "path": "deploy/verification/restore-patched-original-data.json",
+          "sha256": "fda8706dc251743b18616bbc5849c39c232071d5a40ee11539f4baa3ff6a719e"
+        },
+        {
+          "path": "deploy/verification/final-af7f223-mqtt.json",
+          "sha256": "85be3751ae94b5fbf7f132aca15687791eddd6ef80b393449281b10bd4434638"
+        },
+        {
+          "path": "deploy/verification/final-af7f223-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/final-af7f223-outbox-restart.json",
+          "sha256": "8c811885f1dfe817d6eaae1fdf9994ab53111d983a9125454e839ea25fdcc6dc"
+        },
+        {
+          "path": "deploy/verification/restore-old-browser.log",
+          "sha256": "8624b3c66c0ee836ea10107c924d22db2808c87ddb0d62cd3a1bde820542c006"
+        },
+        {
+          "path": "deploy/verification/restore-old-mqtt.json",
+          "sha256": "86909f1054219ce562fee2e0cb9e4dd6116b491632700c1efb15424ea9480c7e"
+        }
+      ],
+      "assessment": "af7f223 deployed authenticatedMQTT125/60samples99847bytes, remoteUI, actualpodrestart immutableoutbox/PUBACK, priorimage separate restoreUI/MQTT. Functional deployment gates satisfied; stablemanifest remains OPS03/05.",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "AT-DATA",
@@ -295,8 +1485,23 @@
     {
       "id": "FR-VPP-REPORT-01",
       "description": "선택적 MQTT 시험 결과 파일 (IDEA-001, 작업본 구현·검증 대기)",
-      "status": "pending",
-      "evidence": []
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        }
+      ],
+      "assessment": "Report success/failure/nonleak/noredispatch/timeout fully functional; finalrelease suite/build/stable linking remains.",
+      "auditRound": "005"
     },
     {
       "id": "AT-VPP-REPORT",
@@ -307,8 +1512,47 @@
     {
       "id": "FR-AUTH-01",
       "description": "원격 관리 UI 인증 (IDEA-002, 채택·검증 대기)",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "deploy/verification/browser/result.json",
+          "sha256": "a2eeb6513112ca0bab3f4a12561531b05ed2d77bef9914180d712a8f7fc88fb0"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/remote-api.json",
+          "sha256": "4a977f7de78321c4adcba4e4a388ca2e180c499aee384cd4d34fff96c300efb6"
+        },
+        {
+          "path": "scripts/browser-check.cjs",
+          "sha256": "c06bdae255f6934ab2650c40c4a5063b9675607efc9550ebebfe882975b89d97"
+        },
+        {
+          "path": "deploy/verification/browser-round2.log",
+          "sha256": "9c9f1bad969e6881bd0358f14370cc5becd836ddc958499c724ca3b97599685d"
+        },
+        {
+          "path": "scripts/browser-check.cjs",
+          "sha256": "c06bdae255f6934ab2650c40c4a5063b9675607efc9550ebebfe882975b89d97"
+        },
+        {
+          "path": "docs/security/evidence/live-security-review.json",
+          "sha256": "15a2d85d9dfec2940ac462f132015ab20b59879398373a93101038dbbd8184f4"
+        },
+        {
+          "path": "docs/security/evidence/security-round4-tests.txt",
+          "sha256": "b9c1db92aa9ddc04be08706da11b2ff1c45ed22fdc564c0e9c19f1ddb3acfcff"
+        },
+        {
+          "path": "docs/security/evidence/security-lwt-integration.json",
+          "sha256": "34ecf1fcb6009a97ce552c10bbbe740abf4abc0da0517c3ed4d4303211b78e2e"
+        },
+        {
+          "path": "deploy/verification/final-af7f223-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        }
+      ],
+      "assessment": "Exact publicconfig keys/nonreflection APIguideheadersURL, perdevicecert overrides/TLSverification, actualbroker RTU+gateway LWT and retainedlateobserver, remote credential-string checks incl500loglines and correct/wrongtoken sessions browser. Bounded security verification, not allfuturelogs or externalAWS/TLSaccount certification.",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "OPS-01",
@@ -325,8 +1569,71 @@
     {
       "id": "OPS-03",
       "description": "검증 버전과 비파괴 복원 (채택, 실행 검증 대기)",
-      "status": "pending",
-      "evidence": []
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "deploy/verification/post-restart.json",
+          "sha256": "a44bff2342969bcc2258f60348097e67b980f66a2c9f97547925013e5c28cbe7"
+        },
+        {
+          "path": "deploy/verification/browser/result.json",
+          "sha256": "a2eeb6513112ca0bab3f4a12561531b05ed2d77bef9914180d712a8f7fc88fb0"
+        },
+        {
+          "path": "deploy/verification/mqtt-access.json",
+          "sha256": "5c946bdc8bb148eec98825a4ceb1b8ab93adab6002f16a96f307f08db50a43c5"
+        },
+        {
+          "path": "artifacts/checkpoints/restore-first.log",
+          "sha256": "f3e8bc67d5a9a2ea94bc0c9584201be00434c3e0e4a424a0c5ed9bf6c7deb772"
+        },
+        {
+          "path": "scripts/restore-integration.js",
+          "sha256": "e2fec1dfe0d851e4773bbc2bfb179ea87979e475cfa85608eb298528f2b6f333"
+        },
+        {
+          "path": "deploy/verification/remote-integration-round2.log",
+          "sha256": "792eb3b72befdbab9d85d8dbfde4edbcee29d52b1e839d32ff3512498a52f167"
+        },
+        {
+          "path": "scripts/remote-integration.mjs",
+          "sha256": "5ecf7b9699495f88088d151b67e77f56f51c5d9045601788f9328f70e1f073b2"
+        },
+        {
+          "path": "artifacts/checkpoints/restore-round3.log",
+          "sha256": "771ea22f5fdec61a05fab176519431a674db935f2357bbadd807516efc285659"
+        },
+        {
+          "path": "scripts/restore-integration.js",
+          "sha256": "e8d6447a6a7b4d262504855ff4925ef69dd7b576a02ad80f9dea072faf357110"
+        },
+        {
+          "path": "artifacts/checkpoints/restored-browser/result.json",
+          "sha256": "fa49a395097d93b953a4658c7525f09cda46e89d04338a81c98767a92299efac"
+        },
+        {
+          "path": "deploy/verification/restore-old-browser.log",
+          "sha256": "8624b3c66c0ee836ea10107c924d22db2808c87ddb0d62cd3a1bde820542c006"
+        },
+        {
+          "path": "deploy/verification/restore-old-mqtt.json",
+          "sha256": "86909f1054219ce562fee2e0cb9e4dd6116b491632700c1efb15424ea9480c7e"
+        },
+        {
+          "path": "deploy/verification/restore-patched-browser.log",
+          "sha256": "8624b3c66c0ee836ea10107c924d22db2808c87ddb0d62cd3a1bde820542c006"
+        },
+        {
+          "path": "deploy/verification/restore-patched-mqtt.json",
+          "sha256": "21a77c25c6f55b786366361abd6dae45769720f7949c1ff06570f2487d47ed54"
+        },
+        {
+          "path": "deploy/verification/restore-patched-original-data.json",
+          "sha256": "fda8706dc251743b18616bbc5849c39c232071d5a40ee11539f4baa3ff6a719e"
+        }
+      ],
+      "assessment": "Remote previous image separate restore and patched restore browser+MQTT125 pass;original4plant IDs/run/generator IDs/dataset counts+scenario preserved. Functional rollback evidence exists; final af7f223 deploy and stable/tag/manifest linkage outstanding, no longer missing rollback smoke.",
+      "releaseRevalidation": "Verify final af7f223 image and final gates; functional evidence is cumulative, not final release certification."
     },
     {
       "id": "OPS-04",
@@ -337,8 +1644,29 @@
     {
       "id": "NFR-01",
       "description": "단지 최대 기기 수 100을 입력 검증하고 해당 크기의 전체 SCADA 패킷 상한을 시험한다. 이는 다수 단지×100기×60배속 부하 성능 인증이 아니다.",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        },
+        {
+          "path": "tests/store.test.js",
+          "sha256": "bf4fac2f6b0d9bd1d6f5abf0fa6f81eab5b289f7dbf45c30b02b480e62ea1dbe"
+        }
+      ],
+      "coveredBy": [
+        "AT-MQTT-03"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "NFR-02",
@@ -349,32 +1677,118 @@
     {
       "id": "NFR-03",
       "description": "영속 outbox/ID를 사용하고 중복 가능성을 명시한다. exactly-once 보장은 하지 않는다.",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        },
+        {
+          "path": "artifacts/checkpoints/crash-first.log",
+          "sha256": "45c5574428bf7499b60cd99affe59fa1f3287656336fc63d515fdd07a1ab98b7"
+        },
+        {
+          "path": "docs/issues/evidence/review-002-crash.log",
+          "sha256": "45c5574428bf7499b60cd99affe59fa1f3287656336fc63d515fdd07a1ab98b7"
+        },
+        {
+          "path": "scripts/crash-integration.js",
+          "sha256": "3a5ca553db09ff40b960cfd0a4b868c64d2921d419e958451f0eb2c2120c86d9"
+        }
+      ],
+      "coveredBy": [
+        "AT-MQTT-05",
+        "AT-MQTT-06"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "NFR-04",
       "description": "모든 API 수치를 서버에서 검증한다. 잘못된 요청으로 일부 모델만 변경하지 않는다.",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/final-af7f223-unit.log",
+          "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c"
+        },
+        {
+          "path": "artifacts/checkpoints/api-boundaries-round2.log",
+          "sha256": "b075ad986603a94f4f5c317a06988cd3a608e8b28f12b30fc792a754ba3696e5"
+        },
+        {
+          "path": "scripts/api-boundaries.mjs",
+          "sha256": "57918b838c2ff1b5d7ea879a9432be7d7c26cf53e2a8859e3d0f0c524188bdb5"
+        }
+      ],
+      "assessment": "Reviewed server validators plus final59unit representative bounds/atomic cases; exact20MiB parser accepts and+1byte413; sample3600/frame120 oldest/newest ascending checks. Exhaustive every input combination is not claimed or required.",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "NFR-05",
       "description": "키를 소스·로그·문서에 노출하지 않고 TLS 검증을 유지한다.",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "docs/security/evidence/live-security-review.json",
+          "sha256": "15a2d85d9dfec2940ac462f132015ab20b59879398373a93101038dbbd8184f4"
+        },
+        {
+          "path": "docs/security/evidence/security-round4-tests.txt",
+          "sha256": "b9c1db92aa9ddc04be08706da11b2ff1c45ed22fdc564c0e9c19f1ddb3acfcff"
+        },
+        {
+          "path": "docs/security/evidence/security-lwt-integration.json",
+          "sha256": "34ecf1fcb6009a97ce552c10bbbe740abf4abc0da0517c3ed4d4303211b78e2e"
+        },
+        {
+          "path": "deploy/verification/final-af7f223-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        }
+      ],
+      "assessment": "Exact publicconfig keys/nonreflection APIguideheadersURL, perdevicecert overrides/TLSverification, actualbroker RTU+gateway LWT and retainedlateobserver, remote credential-string checks incl500loglines and correct/wrongtoken sessions browser. Bounded security verification, not allfuturelogs or externalAWS/TLSaccount certification.",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "NFR-06",
       "description": "재시작 복원과 기존 DB 호환성을 검증한다. 저장 매체 장애·용량 부족에 대한 HA는 제외한다.",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "deploy/verification/final-af7f223-outbox-restart.json",
+          "sha256": "8c811885f1dfe817d6eaae1fdf9994ab53111d983a9125454e839ea25fdcc6dc"
+        },
+        {
+          "path": "docs/issues/evidence/review-006-scenario.log",
+          "sha256": "d0fe7d320ca2c58729a7ceaaa6a320e47113e8eac06976b628d6c0f0cd35eb83"
+        },
+        {
+          "path": "deploy/verification/restore-patched-original-data.json",
+          "sha256": "fda8706dc251743b18616bbc5849c39c232071d5a40ee11539f4baa3ff6a719e"
+        }
+      ],
+      "assessment": "Real pod replacement preserves samepending body/sequence/message observed+PUBACK; scenario fullstate and previous/patched compatible backup restoration. GreenfieldDB compatibility applies to this run versions, no siblingDB migration claimed.",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "NFR-07",
       "description": "외부 KMA 장애로 전체 에뮬레이터가 멈추지 않는다. 기존값과 오류 출처를 유지한다.",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/final-af7f223-unit.log",
+          "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c"
+        },
+        {
+          "path": "artifacts/checkpoints/weather-timeout.log",
+          "sha256": "0d48bebaa5c2b5744d57bba2b553711f154b4f6b6275d71625014dfc805b3a47"
+        }
+      ],
+      "assessment": "Fixture parser/failure/manualprecedence/irradiance/12sec timeout pass. Security inspected env/deployment/Secret key names: KMA key not supplied. Conditional actual KMA call is not performed or claimed; no fabricated liveweather success.",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "NFR-08",
@@ -499,7 +1913,7 @@
     {
       "id": "AT-DATA-07",
       "description": "사용자 풍력 TSV를 wind로 등록하고 380V 원본과 비례 전류 추정, 원본 0일 때 null을 검증한다.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
           "path": "artifacts/checkpoints/unit-round1.log",
@@ -512,15 +1926,27 @@
         {
           "path": "web/QA.md",
           "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "tests/user-data.test.js",
+          "sha256": "8029d71e2fc0c9310522efe4728d457a3a92269d0cb10f7ba4fa24a0bf2c6fe5"
+        },
+        {
+          "path": "tests/fixtures/user-wind-55.tsv",
+          "sha256": "fc158138224b395a1a2da15721323f557985f3b4ca6920a87f81595315bcfec4"
         }
       ],
-      "assessment": "Voltage/current/zero-null and split hybrid are directly tested; exact user 55-row TSV fixture and hybrid total-power allocation at type-group level need explicit remaining evidence.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Actual55-row fixture wind/380V/proportional current/zero-null and hybrid total1200 allocation400each plus previous hybrid split test cover case.",
+      "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
       "id": "AT-DATA-08",
       "description": "hybrid 총출력과 유형별 출력 각각의 배분을 검증한다.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
           "path": "artifacts/checkpoints/unit-round1.log",
@@ -533,10 +1959,22 @@
         {
           "path": "web/QA.md",
           "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "tests/user-data.test.js",
+          "sha256": "8029d71e2fc0c9310522efe4728d457a3a92269d0cb10f7ba4fa24a0bf2c6fe5"
+        },
+        {
+          "path": "tests/fixtures/user-wind-55.tsv",
+          "sha256": "fc158138224b395a1a2da15721323f557985f3b4ca6920a87f81595315bcfec4"
         }
       ],
-      "assessment": "Voltage/current/zero-null and split hybrid are directly tested; exact user 55-row TSV fixture and hybrid total-power allocation at type-group level need explicit remaining evidence.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Actual55-row fixture wind/380V/proportional current/zero-null and hybrid total1200 allocation400each plus previous hybrid split test cover case.",
+      "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
       "id": "AT-MODEL-01",
@@ -609,7 +2047,7 @@
     {
       "id": "AT-MODEL-05",
       "description": "정지/재시작과 기동 지연, 소수 지연에서 완료 조기 판정이 없음을 검증한다.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
           "path": "artifacts/checkpoints/unit-round1.log",
@@ -622,10 +2060,18 @@
         {
           "path": "tests/control.test.js",
           "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "tests/control-model-boundary.test.js",
+          "sha256": "121a4096514ec7e82b8d208c9d61734846137720e257d10fed637fe76d8dbf92"
         }
       ],
-      "assessment": "Fractional 1.5s startup and post-dispatch sample are tested separately; command completion under fractional startup is not asserted jointly.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Model+Controller fractional startup1.5s stays executing at0.5 remaining despite zero available; expiry before/during latency retains identical generator settings.",
+      "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
       "id": "AT-MODEL-06",
@@ -694,9 +2140,17 @@
         {
           "path": "scripts/integration.js",
           "sha256": "e05ffc170c6c85a0298ef8662d7a8a2c039a543fa714a11cd30d0ab5200fc143"
+        },
+        {
+          "path": "deploy/verification/remote-integration-round2.log",
+          "sha256": "792eb3b72befdbab9d85d8dbfde4edbcee29d52b1e839d32ff3512498a52f167"
+        },
+        {
+          "path": "scripts/remote-integration.mjs",
+          "sha256": "5ecf7b9699495f88088d151b67e77f56f51c5d9045601788f9328f70e1f073b2"
         }
       ],
-      "assessment": "Actual broker accepts/executes/completes 125kW with scadaSignal, actual125/error0; duplicate response and single command record observed.",
+      "assessment": "Actual broker accepts/executes/completes 125kW with scadaSignal, actual125/error0; duplicate response and single command record observed. Follow-up remote authenticated MQTT PASS125/actual125/error0 accepted-executing-completed and duplicate. SampleCount1 is not60sec-window proof. Earlier connack failure resolved by fresh tunnel; remaining deployment/rollback gates unchanged.",
       "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
     },
     {
@@ -711,9 +2165,17 @@
         {
           "path": "scripts/integration.js",
           "sha256": "e05ffc170c6c85a0298ef8662d7a8a2c039a543fa714a11cd30d0ab5200fc143"
+        },
+        {
+          "path": "deploy/verification/remote-integration-round2.log",
+          "sha256": "792eb3b72befdbab9d85d8dbfde4edbcee29d52b1e839d32ff3512498a52f167"
+        },
+        {
+          "path": "scripts/remote-integration.mjs",
+          "sha256": "5ecf7b9699495f88088d151b67e77f56f51c5d9045601788f9328f70e1f073b2"
         }
       ],
-      "assessment": "Actual broker accepts/executes/completes 125kW with scadaSignal, actual125/error0; duplicate response and single command record observed.",
+      "assessment": "Actual broker accepts/executes/completes 125kW with scadaSignal, actual125/error0; duplicate response and single command record observed. Follow-up remote authenticated MQTT PASS125/actual125/error0 accepted-executing-completed and duplicate. SampleCount1 is not60sec-window proof. Earlier connack failure resolved by fresh tunnel; remaining deployment/rollback gates unchanged.",
       "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
     },
     {
@@ -745,73 +2207,81 @@
         {
           "path": "scripts/integration.js",
           "sha256": "e05ffc170c6c85a0298ef8662d7a8a2c039a543fa714a11cd30d0ab5200fc143"
+        },
+        {
+          "path": "deploy/verification/remote-integration-round2.log",
+          "sha256": "792eb3b72befdbab9d85d8dbfde4edbcee29d52b1e839d32ff3512498a52f167"
+        },
+        {
+          "path": "scripts/remote-integration.mjs",
+          "sha256": "5ecf7b9699495f88088d151b67e77f56f51c5d9045601788f9328f70e1f073b2"
         }
       ],
-      "assessment": "Actual broker accepts/executes/completes 125kW with scadaSignal, actual125/error0; duplicate response and single command record observed.",
+      "assessment": "Actual broker accepts/executes/completes 125kW with scadaSignal, actual125/error0; duplicate response and single command record observed. Follow-up remote authenticated MQTT PASS125/actual125/error0 accepted-executing-completed and duplicate. SampleCount1 is not60sec-window proof. Earlier connack failure resolved by fresh tunnel; remaining deployment/rollback gates unchanged.",
       "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
     },
     {
       "id": "AT-CONTROL-05",
       "description": "같은 ID로 값·RTU·expiresAt 변경은 rejected.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
-          "path": "artifacts/checkpoints/unit-round1.log",
-          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+          "path": "docs/issues/evidence/review-003-unit.log",
+          "sha256": "582752488f67b3827f908cba9e45856e81d24f1633075a216c94ab216b4d675c"
         },
         {
-          "path": "artifacts/checkpoints/advanced-first.log",
-          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+          "path": "docs/issues/evidence/review-003-mqtt.log",
+          "sha256": "aae835f7503e0d696d45dbb927187be9d25b97ae28d61dc23c666a990aca8851"
+        },
+        {
+          "path": "tests/review-control.test.js",
+          "sha256": "7bd1d3cf301aaf4e9a0cef730a69cc7ef20d99995fe5ef6d772f25042a9e875c"
         },
         {
           "path": "tests/control.test.js",
           "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
         },
         {
-          "path": "tests/transport.test.js",
-          "sha256": "c01531d46197f283a7798acd7da62e2a9123ad1a56d5579e6bda6764866bbdde"
-        },
-        {
-          "path": "scripts/advanced-integration.js",
-          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+          "path": "scripts/review-control-integration.js",
+          "sha256": "963470b166705690b36b87e1e47d184b46ea92002cb944342ff548e84cbac228"
         }
       ],
-      "assessment": "Some subcases tested. Remaining explicit boundary coverage needed: expiresAt dedup conflict; all malformed/8KB/schema/targets; unchanged model on both expiry paths; equal-priority and disjoint devices; sensorFreeze completion withholding is unit only; unfinished command across process restart; explicit stop after timed_out.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "New direct assertions: expiresAt body conflict; actual broker invalid schema/action/target/type/negative/date/malformed/oversize; equal overlapping supersedes, disjoint stays; timeout retained target then explicit stop makes power zero.",
+      "releaseRevalidation": "Final release revision/image and remaining subcriteria must be revalidated."
     },
     {
       "id": "AT-CONTROL-06",
       "description": "잘못된 action/schema/대상/수치/8KB초과/JSON을 거절한다.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
-          "path": "artifacts/checkpoints/unit-round1.log",
-          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+          "path": "docs/issues/evidence/review-003-unit.log",
+          "sha256": "582752488f67b3827f908cba9e45856e81d24f1633075a216c94ab216b4d675c"
         },
         {
-          "path": "artifacts/checkpoints/advanced-first.log",
-          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+          "path": "docs/issues/evidence/review-003-mqtt.log",
+          "sha256": "aae835f7503e0d696d45dbb927187be9d25b97ae28d61dc23c666a990aca8851"
+        },
+        {
+          "path": "tests/review-control.test.js",
+          "sha256": "7bd1d3cf301aaf4e9a0cef730a69cc7ef20d99995fe5ef6d772f25042a9e875c"
         },
         {
           "path": "tests/control.test.js",
           "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
         },
         {
-          "path": "tests/transport.test.js",
-          "sha256": "c01531d46197f283a7798acd7da62e2a9123ad1a56d5579e6bda6764866bbdde"
-        },
-        {
-          "path": "scripts/advanced-integration.js",
-          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+          "path": "scripts/review-control-integration.js",
+          "sha256": "963470b166705690b36b87e1e47d184b46ea92002cb944342ff548e84cbac228"
         }
       ],
-      "assessment": "Some subcases tested. Remaining explicit boundary coverage needed: expiresAt dedup conflict; all malformed/8KB/schema/targets; unchanged model on both expiry paths; equal-priority and disjoint devices; sensorFreeze completion withholding is unit only; unfinished command across process restart; explicit stop after timed_out.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "New direct assertions: expiresAt body conflict; actual broker invalid schema/action/target/type/negative/date/malformed/oversize; equal overlapping supersedes, disjoint stays; timeout retained target then explicit stop makes power zero.",
+      "releaseRevalidation": "Final release revision/image and remaining subcriteria must be revalidated."
     },
     {
       "id": "AT-CONTROL-07",
       "description": "이미 만료한 명령, 지연 중 만료한 명령은 SCADA 설정을 바꾸지 않는다.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
           "path": "artifacts/checkpoints/unit-round1.log",
@@ -832,39 +2302,47 @@
         {
           "path": "scripts/advanced-integration.js",
           "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "tests/control-model-boundary.test.js",
+          "sha256": "121a4096514ec7e82b8d208c9d61734846137720e257d10fed637fe76d8dbf92"
         }
       ],
-      "assessment": "Some subcases tested. Remaining explicit boundary coverage needed: expiresAt dedup conflict; all malformed/8KB/schema/targets; unchanged model on both expiry paths; equal-priority and disjoint devices; sensorFreeze completion withholding is unit only; unfinished command across process restart; explicit stop after timed_out.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Model+Controller fractional startup1.5s stays executing at0.5 remaining despite zero available; expiry before/during latency retains identical generator settings.",
+      "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
       "id": "AT-CONTROL-08",
       "description": "우선순위 낮은 충돌은 거절, 같거나 높은 충돌은 superseded. 대상이 다른 기기는 독립.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
-          "path": "artifacts/checkpoints/unit-round1.log",
-          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+          "path": "docs/issues/evidence/review-003-unit.log",
+          "sha256": "582752488f67b3827f908cba9e45856e81d24f1633075a216c94ab216b4d675c"
         },
         {
-          "path": "artifacts/checkpoints/advanced-first.log",
-          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+          "path": "docs/issues/evidence/review-003-mqtt.log",
+          "sha256": "aae835f7503e0d696d45dbb927187be9d25b97ae28d61dc23c666a990aca8851"
+        },
+        {
+          "path": "tests/review-control.test.js",
+          "sha256": "7bd1d3cf301aaf4e9a0cef730a69cc7ef20d99995fe5ef6d772f25042a9e875c"
         },
         {
           "path": "tests/control.test.js",
           "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
         },
         {
-          "path": "tests/transport.test.js",
-          "sha256": "c01531d46197f283a7798acd7da62e2a9123ad1a56d5579e6bda6764866bbdde"
-        },
-        {
-          "path": "scripts/advanced-integration.js",
-          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+          "path": "scripts/review-control-integration.js",
+          "sha256": "963470b166705690b36b87e1e47d184b46ea92002cb944342ff548e84cbac228"
         }
       ],
-      "assessment": "Some subcases tested. Remaining explicit boundary coverage needed: expiresAt dedup conflict; all malformed/8KB/schema/targets; unchanged model on both expiry paths; equal-priority and disjoint devices; sensorFreeze completion withholding is unit only; unfinished command across process restart; explicit stop after timed_out.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "New direct assertions: expiresAt body conflict; actual broker invalid schema/action/target/type/negative/date/malformed/oversize; equal overlapping supersedes, disjoint stays; timeout retained target then explicit stop makes power zero.",
+      "releaseRevalidation": "Final release revision/image and remaining subcriteria must be revalidated."
     },
     {
       "id": "AT-CONTROL-09",
@@ -898,65 +2376,61 @@
     {
       "id": "AT-CONTROL-10",
       "description": "서버 재시작 후 미완료 명령과 실제 시간 deadline을 복원한다.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
-          "path": "artifacts/checkpoints/unit-round1.log",
-          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+          "path": "docs/issues/evidence/review-003-unit.log",
+          "sha256": "582752488f67b3827f908cba9e45856e81d24f1633075a216c94ab216b4d675c"
         },
         {
-          "path": "artifacts/checkpoints/advanced-first.log",
-          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+          "path": "tests/review-control.test.js",
+          "sha256": "7bd1d3cf301aaf4e9a0cef730a69cc7ef20d99995fe5ef6d772f25042a9e875c"
         },
         {
-          "path": "tests/control.test.js",
-          "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
+          "path": "docs/issues/evidence/review-004-process.log",
+          "sha256": "a5673e592c5d5eaf7c5f1202e990c7ca33c3bb8b6b37b3969a9d16b51ad4c9a0"
         },
         {
-          "path": "tests/transport.test.js",
-          "sha256": "c01531d46197f283a7798acd7da62e2a9123ad1a56d5579e6bda6764866bbdde"
-        },
-        {
-          "path": "scripts/advanced-integration.js",
-          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+          "path": "scripts/review-process-restart.js",
+          "sha256": "ffbfc42b59f42f019142f2e7f3a059a023b066b458d9777ae3ba7a9ae87f3db1"
         }
       ],
-      "assessment": "Some subcases tested. Remaining explicit boundary coverage needed: expiresAt dedup conflict; all malformed/8KB/schema/targets; unchanged model on both expiry paths; equal-priority and disjoint devices; sensorFreeze completion withholding is unit only; unfinished command across process restart; explicit stop after timed_out.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Actual distinct child PIDs and SIGKILL; persisted executing command retains original deadline, times out then explicit stop completes. Local MQTT only.",
+      "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
       "id": "AT-CONTROL-11",
       "description": "timeout 후 기존 목표 설정을 자동 원복하지 않으며 명시적 stop으로 해제됨을 확인한다.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
-          "path": "artifacts/checkpoints/unit-round1.log",
-          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+          "path": "docs/issues/evidence/review-003-unit.log",
+          "sha256": "582752488f67b3827f908cba9e45856e81d24f1633075a216c94ab216b4d675c"
         },
         {
-          "path": "artifacts/checkpoints/advanced-first.log",
-          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+          "path": "docs/issues/evidence/review-003-mqtt.log",
+          "sha256": "aae835f7503e0d696d45dbb927187be9d25b97ae28d61dc23c666a990aca8851"
+        },
+        {
+          "path": "tests/review-control.test.js",
+          "sha256": "7bd1d3cf301aaf4e9a0cef730a69cc7ef20d99995fe5ef6d772f25042a9e875c"
         },
         {
           "path": "tests/control.test.js",
           "sha256": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df"
         },
         {
-          "path": "tests/transport.test.js",
-          "sha256": "c01531d46197f283a7798acd7da62e2a9123ad1a56d5579e6bda6764866bbdde"
-        },
-        {
-          "path": "scripts/advanced-integration.js",
-          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+          "path": "scripts/review-control-integration.js",
+          "sha256": "963470b166705690b36b87e1e47d184b46ea92002cb944342ff548e84cbac228"
         }
       ],
-      "assessment": "Some subcases tested. Remaining explicit boundary coverage needed: expiresAt dedup conflict; all malformed/8KB/schema/targets; unchanged model on both expiry paths; equal-priority and disjoint devices; sensorFreeze completion withholding is unit only; unfinished command across process restart; explicit stop after timed_out.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "New direct assertions: expiresAt body conflict; actual broker invalid schema/action/target/type/negative/date/malformed/oversize; equal overlapping supersedes, disjoint stays; timeout retained target then explicit stop makes power zero.",
+      "releaseRevalidation": "Final release revision/image and remaining subcriteria must be revalidated."
     },
     {
       "id": "AT-MQTT-01",
       "description": "실제 Mosquitto로 모든 발전기가 samples[] 및 scada에 포함되는지 확인한다.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
           "path": "artifacts/checkpoints/integration-first.log",
@@ -965,10 +2439,18 @@
         {
           "path": "scripts/integration.js",
           "sha256": "e05ffc170c6c85a0298ef8662d7a8a2c039a543fa714a11cd30d0ab5200fc143"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "scripts/integration.js",
+          "sha256": "ebc040c24a5ff344e1b590ff56869609dd56e5c7385543ff8329e8d8298fc1f4"
         }
       ],
-      "assessment": "scada.generators length2 checked; every samples[].generators complete set not asserted in this integration test.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Actual broker samples[] each generator count+ID set matches registered plant and scada contains same complete set.",
+      "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
       "id": "AT-MQTT-02",
@@ -1087,19 +2569,19 @@
     {
       "id": "AT-MQTT-08",
       "description": "센서 중단 기간은 frame이 생성되지 않고 복구 후 누락 구간을 만들어 채우지 않는다.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
-          "path": "artifacts/checkpoints/advanced-first.log",
-          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+          "path": "docs/issues/evidence/review-003-mqtt.log",
+          "sha256": "aae835f7503e0d696d45dbb927187be9d25b97ae28d61dc23c666a990aca8851"
         },
         {
-          "path": "scripts/advanced-integration.js",
-          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+          "path": "scripts/review-control-integration.js",
+          "sha256": "963470b166705690b36b87e1e47d184b46ea92002cb944342ff548e84cbac228"
         }
       ],
-      "assessment": "generatedSamples stays fixed while sensorFreeze. No explicit timestamp-gap/no-backfill assertion after resume.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Actual runtime sensor freeze2301ms: zero new frames, resumed timestamps after freeze end, no interval backfill.",
+      "releaseRevalidation": "Final release revision/image and remaining subcriteria must be revalidated."
     },
     {
       "id": "AT-MQTT-09",
@@ -1121,19 +2603,19 @@
     {
       "id": "AT-MQTT-10",
       "description": "오래된 완료 데이터만 보존기간 정리되고 미전송·ID·시나리오는 남는다.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
-          "path": "artifacts/checkpoints/unit-round1.log",
-          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+          "path": "docs/issues/evidence/review-003-unit.log",
+          "sha256": "582752488f67b3827f908cba9e45856e81d24f1633075a216c94ab216b4d675c"
         },
         {
-          "path": "tests/store.test.js",
-          "sha256": "bf4fac2f6b0d9bd1d6f5abf0fa6f81eab5b289f7dbf45c30b02b480e62ea1dbe"
+          "path": "tests/review-retention.test.js",
+          "sha256": "ea7d9d96ec37f5a0ccc0dda6a53238e5363db743ca67eea47f9f2d6e2dfa0bc0"
         }
       ],
-      "assessment": "Prune preserves unacknowledged/unbatched/command IDs/scenarios; removal of old completed rows is not asserted.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Old acknowledged frame/outbox removed; pending/unbatched data, command IDs, scenario preserved.",
+      "releaseRevalidation": "Final release revision/image and remaining subcriteria must be revalidated."
     },
     {
       "id": "AT-UI-01",
@@ -1176,32 +2658,32 @@
     {
       "id": "AT-UI-03",
       "description": "풍력·태양광·복합 3D 렌더링, 단지 변경, 풍향/회전/확대 확인.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
           "path": "web/QA.md",
-          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+          "sha256": "5cebb5bad9cdf6956ecc86a34626101b7216497e86bd50a8ae1c6c23e5156eee"
         },
         {
-          "path": "artifacts/checkpoints/unit-round1.log",
-          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+          "path": "artifacts/checkpoints/browser-flows/result.json",
+          "sha256": "ea39cf54c2340c0379bd676608e3b2b7499df1cee2ef2928f005dd2d2878a493"
         },
         {
-          "path": "artifacts/checkpoints/integration-first.log",
-          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
         },
         {
-          "path": "tests/weather.test.js",
-          "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+          "path": "artifacts/checkpoints/browser-flows/controls-stages.json",
+          "sha256": "df1f3f67e36d6a270cb5fc23851fb711420c9ef13e254a0ac9f1d904f9b1807d"
         }
       ],
-      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Native browser evidence:3types+fixed-camera0→140yaw;20%/stop/start charts and rows reconcile400.2/0/400.2;name search+selection persists;RTU4topics change+clipboard paste+keyboard label/range. Non-target command finite target fallback regression confirmed.",
+      "releaseRevalidation": "Verify final af7f223 image and final gates; functional evidence is cumulative, not final release certification."
     },
     {
       "id": "AT-UI-04",
       "description": "출력 제한·정지·기동과 차트·기기 표가 같은 값을 보여준다.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
           "path": "web/QA.md",
@@ -1218,15 +2700,23 @@
         {
           "path": "tests/weather.test.js",
           "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/controls-stages.json",
+          "sha256": "df1f3f67e36d6a270cb5fc23851fb711420c9ef13e254a0ac9f1d904f9b1807d"
         }
       ],
-      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Native browser evidence:3types+fixed-camera0→140yaw;20%/stop/start charts and rows reconcile400.2/0/400.2;name search+selection persists;RTU4topics change+clipboard paste+keyboard label/range. Non-target command finite target fallback regression confirmed.",
+      "releaseRevalidation": "Verify final af7f223 image and final gates; functional evidence is cumulative, not final release certification."
     },
     {
       "id": "AT-UI-05",
       "description": "RTU 검색·선택·상세와 발전 제어 화면 이동에서 선택이 유지된다.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
           "path": "web/QA.md",
@@ -1243,15 +2733,23 @@
         {
           "path": "tests/weather.test.js",
           "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/controls-stages.json",
+          "sha256": "df1f3f67e36d6a270cb5fc23851fb711420c9ef13e254a0ac9f1d904f9b1807d"
         }
       ],
-      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Native browser evidence:3types+fixed-camera0→140yaw;20%/stop/start charts and rows reconcile400.2/0/400.2;name search+selection persists;RTU4topics change+clipboard paste+keyboard label/range. Non-target command finite target fallback regression confirmed.",
+      "releaseRevalidation": "Verify final af7f223 image and final gates; functional evidence is cumulative, not final release certification."
     },
     {
       "id": "AT-UI-06",
       "description": "health 임계값, PUBACK 지연, 누적 지표 재시작 복원 및 공용 메모리 라벨 확인.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
           "path": "web/QA.md",
@@ -1268,15 +2766,27 @@
         {
           "path": "tests/weather.test.js",
           "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+        },
+        {
+          "path": "artifacts/checkpoints/process-metrics-round2.log",
+          "sha256": "369e55861fdf66c6009506ed5e79387345f90bb58158ff4f13e4f968a71f9224"
+        },
+        {
+          "path": "tests/metrics.test.js",
+          "sha256": "e55bb64b6eaf544b88ceb71cf414e30481dc738d2d2077fc6b95e58878d95b3e"
+        },
+        {
+          "path": "web/QA.md",
+          "sha256": "95dfdce45f1158915fa463f61bf8f7860752c1e1462738b2109235fbdf9d3ceb"
         }
       ],
-      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Actual SIGKILL counters preserve sample/attempt/PUBACK/byte/command history; prior health threshold tests and observed shared gateway memory label cover scope.",
+      "releaseRevalidation": "Verify final af7f223 image and final gates; functional evidence is cumulative, not final release certification."
     },
     {
       "id": "AT-UI-07",
       "description": "기상청 정상/키 없음/timeout/오래된 관측/결측 풍향 fixture를 시험한다. 실제 키가 있으면 실제 조회도 별도로 기록한다.",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "web/QA.md",
@@ -1293,10 +2803,26 @@
         {
           "path": "tests/weather.test.js",
           "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+        },
+        {
+          "path": "artifacts/checkpoints/weather-timeout.log",
+          "sha256": "0d48bebaa5c2b5744d57bba2b553711f154b4f6b6275d71625014dfc805b3a47"
+        },
+        {
+          "path": "scripts/weather-timeout-integration.mjs",
+          "sha256": "13dd9961dd3a2e52dd7cc91312287b8b0a9d127e4ddcfc89fc7e24d739729aaf"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-unit.log",
+          "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c"
+        },
+        {
+          "path": "artifacts/checkpoints/weather-timeout.log",
+          "sha256": "0d48bebaa5c2b5744d57bba2b553711f154b4f6b6275d71625014dfc805b3a47"
         }
       ],
-      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Fixture parser/failure/manualprecedence/irradiance/12sec timeout pass. Security inspected env/deployment/Secret key names: KMA key not supplied. Conditional actual KMA call is not performed or claimed; no fabricated liveweather success.",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "AT-UI-08",
@@ -1326,77 +2852,105 @@
     {
       "id": "AT-UI-09",
       "description": "시나리오 저장·복원·JSON 내려받기, 새 runId와 명령 cancelled 확인.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
           "path": "web/QA.md",
-          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+          "sha256": "5cebb5bad9cdf6956ecc86a34626101b7216497e86bd50a8ae1c6c23e5156eee"
         },
         {
-          "path": "artifacts/checkpoints/unit-round1.log",
-          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+          "path": "artifacts/checkpoints/browser-flows/result.json",
+          "sha256": "ea39cf54c2340c0379bd676608e3b2b7499df1cee2ef2928f005dd2d2878a493"
         },
         {
           "path": "artifacts/checkpoints/integration-first.log",
           "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
         },
         {
-          "path": "tests/weather.test.js",
-          "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "scripts/integration.js",
+          "sha256": "ebc040c24a5ff344e1b590ff56869609dd56e5c7385543ff8329e8d8298fc1f4"
+        },
+        {
+          "path": "web/QA.md",
+          "sha256": "5cebb5bad9cdf6956ecc86a34626101b7216497e86bd50a8ae1c6c23e5156eee"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/result.json",
+          "sha256": "ea39cf54c2340c0379bd676608e3b2b7499df1cee2ef2928f005dd2d2878a493"
         }
       ],
-      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Recorded UI scenario save/restore/export plus actual MQTT integration active executing command transitions cancelled on restore and newrunId; original pending data preservation assessed separately.",
+      "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
       "id": "AT-UI-10",
       "description": "가이드 RTU별 토픽 갱신, 복사와 문서 다운로드, keyboard label 확인.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
           "path": "web/QA.md",
-          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+          "sha256": "5cebb5bad9cdf6956ecc86a34626101b7216497e86bd50a8ae1c6c23e5156eee"
         },
         {
-          "path": "artifacts/checkpoints/unit-round1.log",
-          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+          "path": "artifacts/checkpoints/browser-flows/result.json",
+          "sha256": "ea39cf54c2340c0379bd676608e3b2b7499df1cee2ef2928f005dd2d2878a493"
         },
         {
-          "path": "artifacts/checkpoints/integration-first.log",
-          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+          "path": "deploy/verification/browser/result.json",
+          "sha256": "a2eeb6513112ca0bab3f4a12561531b05ed2d77bef9914180d712a8f7fc88fb0"
         },
         {
-          "path": "tests/weather.test.js",
-          "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/controls-stages.json",
+          "sha256": "df1f3f67e36d6a270cb5fc23851fb711420c9ef13e254a0ac9f1d904f9b1807d"
         }
       ],
-      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Native browser evidence:3types+fixed-camera0→140yaw;20%/stop/start charts and rows reconcile400.2/0/400.2;name search+selection persists;RTU4topics change+clipboard paste+keyboard label/range. Non-target command finite target fallback regression confirmed.",
+      "releaseRevalidation": "Verify final af7f223 image and final gates; functional evidence is cumulative, not final release certification."
     },
     {
       "id": "AT-UI-11",
       "description": "console error 없이 주요 화면 사용 및 긴 SSE payload로 연속 수신 확인.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
           "path": "web/QA.md",
-          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+          "sha256": "5cebb5bad9cdf6956ecc86a34626101b7216497e86bd50a8ae1c6c23e5156eee"
         },
         {
-          "path": "artifacts/checkpoints/unit-round1.log",
-          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+          "path": "artifacts/checkpoints/browser-flows/result.json",
+          "sha256": "ea39cf54c2340c0379bd676608e3b2b7499df1cee2ef2928f005dd2d2878a493"
         },
         {
-          "path": "artifacts/checkpoints/integration-first.log",
-          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+          "path": "deploy/verification/browser/result.json",
+          "sha256": "a2eeb6513112ca0bab3f4a12561531b05ed2d77bef9914180d712a8f7fc88fb0"
         },
         {
-          "path": "tests/weather.test.js",
-          "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+          "path": "artifacts/checkpoints/browser-large.log",
+          "sha256": "9f07f00310843c9dfd3bd84996d82c07024164261d30f69e5327f64436c21671"
+        },
+        {
+          "path": "scripts/browser-large.cjs",
+          "sha256": "3c34f6f9c0c107345dc878e575c8f4c84c0908c30d75344bf99a76113418bd7d"
+        },
+        {
+          "path": "deploy/verification/browser-round2.log",
+          "sha256": "9c9f1bad969e6881bd0358f14370cc5becd836ddc958499c724ca3b97599685d"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/result.json",
+          "sha256": "ea39cf54c2340c0379bd676608e3b2b7499df1cee2ef2928f005dd2d2878a493"
         }
       ],
-      "assessment": "Narrow browser workflow and local tests support parts only. See REVIEW-002 for remaining interactions; broad case not passed.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Actual243497-byte state stream browser displays100 rows and chart advances after3.1s; no pageErrors plus earlier primary workflows. This is sampled browser scope not exhaustive browser compatibility.",
+      "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
       "id": "AT-UI-12",
@@ -1424,19 +2978,23 @@
     {
       "id": "AT-VPP-REPORT-02",
       "description": "가용량보다 높은 목표의 미도달 사례는 관측한 timed_out과 exit 1을 기록한다. 클라이언트 대기 timeout은 명령에서 수신한 timed_out과 다른 종료 원인으로 기록한다.",
-      "status": "partial",
+      "status": "verified_local",
       "evidence": [
         {
           "path": "artifacts/checkpoints/report-round2.log",
           "sha256": "87b81efba03df43a87093cb3d9818e7d914ed93f573fad69e2f5aa3db5f2be7e"
         },
         {
-          "path": "scripts/report-integration.js",
-          "sha256": "d9e293f159144c5d79300530333024451389607340dddaf6e78f14bdbe16862a"
+          "path": "artifacts/checkpoints/report-timeout-first.log",
+          "sha256": "afb6b4d8242880e50ff318e4f40c482ed7eb5b80e15071015e91995f0c62ee0d"
+        },
+        {
+          "path": "scripts/report-timeout-integration.js",
+          "sha256": "dae2cc144048dced7ed2e78f7b159d480d8f85eb14f17ab758c074b8f2ec89ef"
         }
       ],
-      "assessment": "Observed timed_out exit1 and no-report monitor/dispatch pass; result-wait timeout distinction needs dedicated case; final revision full suite/build/stable promotion missing.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Observed timed_out separately proven; real result wait46.072s yields exit1/result_wait_timeout/null status+actual/no events/exactly1 publication.",
+      "releaseRevalidation": "Final release revision/image and remaining subcriteria must be revalidated."
     },
     {
       "id": "AT-VPP-REPORT-03",
@@ -1492,19 +3050,47 @@
     {
       "id": "AT-AUTH-01",
       "description": "PRD의 해당 명시 인수 조건",
-      "status": "pending",
+      "status": "verified_functional",
       "evidence": [
         {
-          "path": "artifacts/checkpoints/browser-auth.log",
-          "sha256": "c23523325d0532afc3eac30c983d8d84e37b7b29491aa19fffe3321c0cba2e6c"
+          "path": "deploy/verification/browser/result.json",
+          "sha256": "a2eeb6513112ca0bab3f4a12561531b05ed2d77bef9914180d712a8f7fc88fb0"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/remote-api.json",
+          "sha256": "4a977f7de78321c4adcba4e4a388ca2e180c499aee384cd4d34fff96c300efb6"
         },
         {
           "path": "scripts/browser-check.cjs",
-          "sha256": "c0960fca825aa30fc798d4a9134ce0379b97d00f888c25c3d4ae36b78160a71f"
+          "sha256": "c06bdae255f6934ab2650c40c4a5063b9675607efc9550ebebfe882975b89d97"
+        },
+        {
+          "path": "deploy/verification/browser-round2.log",
+          "sha256": "9c9f1bad969e6881bd0358f14370cc5becd836ddc958499c724ca3b97599685d"
+        },
+        {
+          "path": "scripts/browser-check.cjs",
+          "sha256": "c06bdae255f6934ab2650c40c4a5063b9675607efc9550ebebfe882975b89d97"
+        },
+        {
+          "path": "docs/security/evidence/live-security-review.json",
+          "sha256": "15a2d85d9dfec2940ac462f132015ab20b59879398373a93101038dbbd8184f4"
+        },
+        {
+          "path": "docs/security/evidence/security-round4-tests.txt",
+          "sha256": "b9c1db92aa9ddc04be08706da11b2ff1c45ed22fdc564c0e9c19f1ddb3acfcff"
+        },
+        {
+          "path": "docs/security/evidence/security-lwt-integration.json",
+          "sha256": "34ecf1fcb6009a97ce552c10bbbe740abf4abc0da0517c3ed4d4303211b78e2e"
+        },
+        {
+          "path": "deploy/verification/final-af7f223-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
         }
       ],
-      "assessment": "Current browser run failed waiting stale label; no broad authentication or freshness pass. Correct-token login/SSE screenshot alone does not establish wrong-token/relogin/session/non-leak/download coverage. Main diagnosed invalid offline fixture: existing SSE continued receiving; not proof of UI bug. Real socket-cut proxy round2 in progress; result not yet reviewed.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Exact publicconfig keys/nonreflection APIguideheadersURL, perdevicecert overrides/TLSverification, actualbroker RTU+gateway LWT and retainedlateobserver, remote credential-string checks incl500loglines and correct/wrongtoken sessions browser. Bounded security verification, not allfuturelogs or externalAWS/TLSaccount certification.",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "AT-PPT-01",
@@ -1533,8 +3119,71 @@
     {
       "id": "AT-OPS-02",
       "description": "PRD의 해당 명시 인수 조건",
-      "status": "pending",
-      "evidence": []
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "deploy/verification/post-restart.json",
+          "sha256": "a44bff2342969bcc2258f60348097e67b980f66a2c9f97547925013e5c28cbe7"
+        },
+        {
+          "path": "deploy/verification/browser/result.json",
+          "sha256": "a2eeb6513112ca0bab3f4a12561531b05ed2d77bef9914180d712a8f7fc88fb0"
+        },
+        {
+          "path": "deploy/verification/mqtt-access.json",
+          "sha256": "5c946bdc8bb148eec98825a4ceb1b8ab93adab6002f16a96f307f08db50a43c5"
+        },
+        {
+          "path": "artifacts/checkpoints/restore-first.log",
+          "sha256": "f3e8bc67d5a9a2ea94bc0c9584201be00434c3e0e4a424a0c5ed9bf6c7deb772"
+        },
+        {
+          "path": "scripts/restore-integration.js",
+          "sha256": "e2fec1dfe0d851e4773bbc2bfb179ea87979e475cfa85608eb298528f2b6f333"
+        },
+        {
+          "path": "deploy/verification/remote-integration-round2.log",
+          "sha256": "792eb3b72befdbab9d85d8dbfde4edbcee29d52b1e839d32ff3512498a52f167"
+        },
+        {
+          "path": "scripts/remote-integration.mjs",
+          "sha256": "5ecf7b9699495f88088d151b67e77f56f51c5d9045601788f9328f70e1f073b2"
+        },
+        {
+          "path": "artifacts/checkpoints/restore-round3.log",
+          "sha256": "771ea22f5fdec61a05fab176519431a674db935f2357bbadd807516efc285659"
+        },
+        {
+          "path": "scripts/restore-integration.js",
+          "sha256": "e8d6447a6a7b4d262504855ff4925ef69dd7b576a02ad80f9dea072faf357110"
+        },
+        {
+          "path": "artifacts/checkpoints/restored-browser/result.json",
+          "sha256": "fa49a395097d93b953a4658c7525f09cda46e89d04338a81c98767a92299efac"
+        },
+        {
+          "path": "deploy/verification/restore-old-browser.log",
+          "sha256": "8624b3c66c0ee836ea10107c924d22db2808c87ddb0d62cd3a1bde820542c006"
+        },
+        {
+          "path": "deploy/verification/restore-old-mqtt.json",
+          "sha256": "86909f1054219ce562fee2e0cb9e4dd6116b491632700c1efb15424ea9480c7e"
+        },
+        {
+          "path": "deploy/verification/restore-patched-browser.log",
+          "sha256": "8624b3c66c0ee836ea10107c924d22db2808c87ddb0d62cd3a1bde820542c006"
+        },
+        {
+          "path": "deploy/verification/restore-patched-mqtt.json",
+          "sha256": "21a77c25c6f55b786366361abd6dae45769720f7949c1ff06570f2487d47ed54"
+        },
+        {
+          "path": "deploy/verification/restore-patched-original-data.json",
+          "sha256": "fda8706dc251743b18616bbc5849c39c232071d5a40ee11539f4baa3ff6a719e"
+        }
+      ],
+      "assessment": "Remote previous image separate restore and patched restore browser+MQTT125 pass;original4plant IDs/run/generator IDs/dataset counts+scenario preserved. Functional rollback evidence exists; final af7f223 deploy and stable/tag/manifest linkage outstanding, no longer missing rollback smoke.",
+      "releaseRevalidation": "Verify final af7f223 image and final gates; functional evidence is cumulative, not final release certification."
     },
     {
       "id": "AT-OPS-03",
@@ -1557,32 +3206,205 @@
     {
       "id": "G-01",
       "description": "10분 발전 이력을 1초 SCADA 상태로 변환해 외부 시스템이 반복적으로 사용할 수 있게 한다.",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "tests/model.test.js",
+          "sha256": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "scripts/integration.js",
+          "sha256": "e05ffc170c6c85a0298ef8662d7a8a2c039a543fa714a11cd30d0ab5200fc143"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "scripts/integration.js",
+          "sha256": "ebc040c24a5ff344e1b590ff56869609dd56e5c7385543ff8329e8d8298fc1f4"
+        },
+        {
+          "path": "artifacts/checkpoints/sixty-second-first.log",
+          "sha256": "0660a7416c459b60a0f417455af500204eb9750a4f41096d0e0abd23e60d3845"
+        },
+        {
+          "path": "scripts/sixty-second-integration.js",
+          "sha256": "a8de74104aea22baf01954e3695195f67c7ac24439a6a725457550686e757a93"
+        }
+      ],
+      "coveredBy": [
+        "AT-DATA-01",
+        "AT-DATA-02",
+        "AT-DATA-03",
+        "AT-MQTT-01",
+        "AT-MQTT-02"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "G-02",
       "description": "VPP가 MQTT로 전달한 목표 kW를 RTU가 검증하고 SCADA 제어로 변환하며, 실제 모델 출력으로 도달 여부를 판단한다.",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "scripts/integration.js",
+          "sha256": "e05ffc170c6c85a0298ef8662d7a8a2c039a543fa714a11cd30d0ab5200fc143"
+        },
+        {
+          "path": "deploy/verification/remote-integration-round2.log",
+          "sha256": "792eb3b72befdbab9d85d8dbfde4edbcee29d52b1e839d32ff3512498a52f167"
+        },
+        {
+          "path": "scripts/remote-integration.mjs",
+          "sha256": "5ecf7b9699495f88088d151b67e77f56f51c5d9045601788f9328f70e1f073b2"
+        },
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        }
+      ],
+      "coveredBy": [
+        "AT-CONTROL-01",
+        "AT-CONTROL-02",
+        "AT-CONTROL-03"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "G-03",
       "description": "풍력·태양광·복합 발전단지와 발전기 상태를 화면 및 3D로 관찰한다.",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "web/QA.md",
+          "sha256": "5cebb5bad9cdf6956ecc86a34626101b7216497e86bd50a8ae1c6c23e5156eee"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/result.json",
+          "sha256": "ea39cf54c2340c0379bd676608e3b2b7499df1cee2ef2928f005dd2d2878a493"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+          "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-flows/controls-stages.json",
+          "sha256": "df1f3f67e36d6a270cb5fc23851fb711420c9ef13e254a0ac9f1d904f9b1807d"
+        },
+        {
+          "path": "web/QA.md",
+          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c"
+        },
+        {
+          "path": "artifacts/checkpoints/unit-round1.log",
+          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-first.log",
+          "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f"
+        },
+        {
+          "path": "tests/weather.test.js",
+          "sha256": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706"
+        }
+      ],
+      "coveredBy": [
+        "AT-UI-03",
+        "AT-UI-04"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "G-04",
       "description": "통신 단절, 지연, 센서 중단, 제어 거절, 목표 미도달 같은 실패 조건을 재현한다.",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/advanced-first.log",
+          "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba"
+        },
+        {
+          "path": "scripts/advanced-integration.js",
+          "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        },
+        {
+          "path": "docs/issues/evidence/review-003-mqtt.log",
+          "sha256": "aae835f7503e0d696d45dbb927187be9d25b97ae28d61dc23c666a990aca8851"
+        },
+        {
+          "path": "scripts/review-control-integration.js",
+          "sha256": "963470b166705690b36b87e1e47d184b46ea92002cb944342ff548e84cbac228"
+        }
+      ],
+      "coveredBy": [
+        "AT-MQTT-04",
+        "AT-MQTT-07",
+        "AT-MQTT-08",
+        "AT-CONTROL-03"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "G-05",
       "description": "데이터·명령·상태를 보존하고 재시작 후 시험을 계속한다.",
-      "status": "pending",
-      "evidence": []
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "docs/issues/evidence/review-003-unit.log",
+          "sha256": "582752488f67b3827f908cba9e45856e81d24f1633075a216c94ab216b4d675c"
+        },
+        {
+          "path": "tests/review-control.test.js",
+          "sha256": "7bd1d3cf301aaf4e9a0cef730a69cc7ef20d99995fe5ef6d772f25042a9e875c"
+        },
+        {
+          "path": "docs/issues/evidence/review-004-process.log",
+          "sha256": "a5673e592c5d5eaf7c5f1202e990c7ca33c3bb8b6b37b3969a9d16b51ad4c9a0"
+        },
+        {
+          "path": "scripts/review-process-restart.js",
+          "sha256": "ffbfc42b59f42f019142f2e7f3a059a023b066b458d9777ae3ba7a9ae87f3db1"
+        },
+        {
+          "path": "artifacts/checkpoints/crash-first.log",
+          "sha256": "45c5574428bf7499b60cd99affe59fa1f3287656336fc63d515fdd07a1ab98b7"
+        },
+        {
+          "path": "docs/issues/evidence/review-002-crash.log",
+          "sha256": "45c5574428bf7499b60cd99affe59fa1f3287656336fc63d515fdd07a1ab98b7"
+        },
+        {
+          "path": "scripts/crash-integration.js",
+          "sha256": "3a5ca553db09ff40b960cfd0a4b868c64d2921d419e958451f0eb2c2120c86d9"
+        },
+        {
+          "path": "tests/review-retention.test.js",
+          "sha256": "ea7d9d96ec37f5a0ccc0dda6a53238e5363db743ca67eea47f9f2d6e2dfa0bc0"
+        }
+      ],
+      "coveredBy": [
+        "AT-CONTROL-10",
+        "AT-MQTT-06",
+        "AT-MQTT-10"
+      ],
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate."
     },
     {
       "id": "G-06",
@@ -1593,24 +3415,28 @@
     {
       "id": "CHECK-test",
       "description": "npm test must exit 0 on final release revision; log and revision required",
-      "status": "observed_prior_pass",
+      "status": "verified_functional",
       "evidence": [
         {
-          "path": "artifacts/checkpoints/unit-round1.log",
-          "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d"
+          "path": "artifacts/checkpoints/unit-round3.log",
+          "sha256": "f76cddf97029f0435dc4b82b0213e7314a44a964c966fba927f623e583046714"
         },
         {
-          "path": "package.json",
-          "sha256": "50f094fc8d67f19261eb2beccacf97196b2b0d0280d84f4cf5f305761890e7ad"
+          "path": "artifacts/checkpoints/unit-round5.log",
+          "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-unit.log",
+          "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c"
         }
       ],
-      "assessment": "Command success observed in log for earlier working tree; exact final release revision not certified. Build retains Three chunk warning.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Finalsameimage59unit PASS",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "CHECK-test-integration",
       "description": "npm run test:integration must exit 0 on final release revision; log and revision required",
-      "status": "observed_prior_pass",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/integration-first.log",
@@ -1619,15 +3445,23 @@
         {
           "path": "scripts/integration.js",
           "sha256": "e05ffc170c6c85a0298ef8662d7a8a2c039a543fa714a11cd30d0ab5200fc143"
+        },
+        {
+          "path": "artifacts/checkpoints/integration-round3.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-integration.log",
+          "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
         }
       ],
-      "assessment": "Command success observed in log for earlier working tree; exact final release revision not certified. Build retains Three chunk warning.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Finalsameimageintegration PASS",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "CHECK-test-advanced",
       "description": "npm run test:advanced must exit 0 on final release revision; log and revision required",
-      "status": "observed_prior_pass",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/advanced-first.log",
@@ -1636,10 +3470,14 @@
         {
           "path": "scripts/advanced-integration.js",
           "sha256": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32"
+        },
+        {
+          "path": "artifacts/checkpoints/final-af7f223-advanced.log",
+          "sha256": "b8bda2433b04be29fb6fb8701807b62037ab481bfee07da478a823426c8aed3c"
         }
       ],
-      "assessment": "Command success observed in log for earlier working tree; exact final release revision not certified. Build retains Three chunk warning.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Finalsameimageadvanced PASS",
+      "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
       "id": "CHECK-build",
@@ -1661,65 +3499,175 @@
     {
       "id": "UI-07",
       "description": "5초 무수신 UI 오래된 데이터/초기 대기/정상 수신 해제",
-      "status": "pending",
+      "status": "verified_functional",
       "evidence": [
         {
-          "path": "artifacts/checkpoints/browser-auth.log",
-          "sha256": "c23523325d0532afc3eac30c983d8d84e37b7b29491aa19fffe3321c0cba2e6c"
+          "path": "artifacts/checkpoints/browser-auth-round2.log",
+          "sha256": "992be332020d6f360098566ea88472acfc725ae154655162bbd50d51c7f06f92"
+        },
+        {
+          "path": "deploy/verification/browser.log",
+          "sha256": "992be332020d6f360098566ea88472acfc725ae154655162bbd50d51c7f06f92"
+        },
+        {
+          "path": "deploy/verification/browser/result.json",
+          "sha256": "a2eeb6513112ca0bab3f4a12561531b05ed2d77bef9914180d712a8f7fc88fb0"
         },
         {
           "path": "scripts/browser-check.cjs",
-          "sha256": "c0960fca825aa30fc798d4a9134ce0379b97d00f888c25c3d4ae36b78160a71f"
+          "sha256": "c06bdae255f6934ab2650c40c4a5063b9675607efc9550ebebfe882975b89d97"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-stream-boundaries.log",
+          "sha256": "3fa21296d07c4b5f6fa403f62192c5392e72c6a512f024904e07013fd46f9cf2"
+        },
+        {
+          "path": "scripts/browser-check.cjs",
+          "sha256": "245f310ed52a829d09f4a85c64295b3ceb2464504fdf995a6d2bff93027d1212"
         }
       ],
-      "assessment": "Current browser run failed waiting stale label; no broad authentication or freshness pass. Correct-token login/SSE screenshot alone does not establish wrong-token/relogin/session/non-leak/download coverage. Main diagnosed invalid offline fixture: existing SSE continued receiving; not proof of UI bug. Real socket-cut proxy round2 in progress; result not yet reviewed.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Review005 aggregate: specified behavioral scope covered by named direct acceptance cases and reviewed implementation. Final release/image revalidation remains separate.",
+      "releaseRevalidation": "Final release commit/image full checks remain required.",
+      "coveredBy": [
+        "AT-FRESH-01"
+      ]
     },
     {
       "id": "AT-FRESH-01",
       "description": "실제 UI 또는 브라우저 시험에서 수신→5초 중단→stale→복구 검증",
-      "status": "pending",
+      "status": "verified_local",
       "evidence": [
         {
-          "path": "artifacts/checkpoints/browser-auth.log",
-          "sha256": "c23523325d0532afc3eac30c983d8d84e37b7b29491aa19fffe3321c0cba2e6c"
+          "path": "artifacts/checkpoints/browser-auth-round2.log",
+          "sha256": "992be332020d6f360098566ea88472acfc725ae154655162bbd50d51c7f06f92"
+        },
+        {
+          "path": "deploy/verification/browser.log",
+          "sha256": "992be332020d6f360098566ea88472acfc725ae154655162bbd50d51c7f06f92"
+        },
+        {
+          "path": "deploy/verification/browser/result.json",
+          "sha256": "a2eeb6513112ca0bab3f4a12561531b05ed2d77bef9914180d712a8f7fc88fb0"
         },
         {
           "path": "scripts/browser-check.cjs",
-          "sha256": "c0960fca825aa30fc798d4a9134ce0379b97d00f888c25c3d4ae36b78160a71f"
+          "sha256": "c06bdae255f6934ab2650c40c4a5063b9675607efc9550ebebfe882975b89d97"
+        },
+        {
+          "path": "artifacts/checkpoints/browser-stream-boundaries.log",
+          "sha256": "3fa21296d07c4b5f6fa403f62192c5392e72c6a512f024904e07013fd46f9cf2"
+        },
+        {
+          "path": "scripts/browser-check.cjs",
+          "sha256": "245f310ed52a829d09f4a85c64295b3ceb2464504fdf995a6d2bff93027d1212"
         }
       ],
-      "assessment": "Current browser run failed waiting stale label; no broad authentication or freshness pass. Correct-token login/SSE screenshot alone does not establish wrong-token/relogin/session/non-leak/download coverage. Main diagnosed invalid offline fixture: existing SSE continued receiving; not proof of UI bug. Real socket-cut proxy round2 in progress; result not yet reviewed.",
-      "releaseRevalidation": "Required: final release commit/image is not identified by these working-tree logs."
+      "assessment": "Actual browser initial503 state waiting; open SSE muted data produces stale; unmute recovers, plus socket disconnect recovery. Correct token authenticated fixture. Earlier remote stale core also verified.",
+      "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
       "id": "OPS-05",
       "description": "릴리스 manifest에 commit/dirty 파일 해시/PRD/image/backup/tests/deploy/restore 기록",
-      "status": "pending",
-      "evidence": []
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "deploy/verification/post-restart.json",
+          "sha256": "a44bff2342969bcc2258f60348097e67b980f66a2c9f97547925013e5c28cbe7"
+        },
+        {
+          "path": "deploy/verification/browser/result.json",
+          "sha256": "a2eeb6513112ca0bab3f4a12561531b05ed2d77bef9914180d712a8f7fc88fb0"
+        },
+        {
+          "path": "deploy/verification/mqtt-access.json",
+          "sha256": "5c946bdc8bb148eec98825a4ceb1b8ab93adab6002f16a96f307f08db50a43c5"
+        },
+        {
+          "path": "artifacts/checkpoints/restore-first.log",
+          "sha256": "f3e8bc67d5a9a2ea94bc0c9584201be00434c3e0e4a424a0c5ed9bf6c7deb772"
+        },
+        {
+          "path": "scripts/restore-integration.js",
+          "sha256": "e2fec1dfe0d851e4773bbc2bfb179ea87979e475cfa85608eb298528f2b6f333"
+        },
+        {
+          "path": "artifacts/checkpoints/restore-round3.log",
+          "sha256": "771ea22f5fdec61a05fab176519431a674db935f2357bbadd807516efc285659"
+        },
+        {
+          "path": "scripts/restore-integration.js",
+          "sha256": "e8d6447a6a7b4d262504855ff4925ef69dd7b576a02ad80f9dea072faf357110"
+        },
+        {
+          "path": "artifacts/checkpoints/restored-browser/result.json",
+          "sha256": "fa49a395097d93b953a4658c7525f09cda46e89d04338a81c98767a92299efac"
+        }
+      ],
+      "assessment": "Local SQLite backup API/integrity/separateDB restore now includes exact pendingbody+id redelivery/PUBACK persistence/new75kW completed and restored browser visual+stream/download check. Restored fixture authRequired=false: authenticatedSSE:true in historical result is misnamed and proves no authentication. Final stable/tag/image/manifest and remote previous-version rollback still incomplete.",
+      "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
       "id": "AT-RELEASE-01",
       "description": "manifest 파싱, 실제 hash/digest 일치, 해당 revision 로그, 별도 복원 UI/MQTT/DB/outbox 검증",
-      "status": "pending",
-      "evidence": []
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "deploy/verification/post-restart.json",
+          "sha256": "a44bff2342969bcc2258f60348097e67b980f66a2c9f97547925013e5c28cbe7"
+        },
+        {
+          "path": "deploy/verification/browser/result.json",
+          "sha256": "a2eeb6513112ca0bab3f4a12561531b05ed2d77bef9914180d712a8f7fc88fb0"
+        },
+        {
+          "path": "deploy/verification/mqtt-access.json",
+          "sha256": "5c946bdc8bb148eec98825a4ceb1b8ab93adab6002f16a96f307f08db50a43c5"
+        },
+        {
+          "path": "artifacts/checkpoints/restore-first.log",
+          "sha256": "f3e8bc67d5a9a2ea94bc0c9584201be00434c3e0e4a424a0c5ed9bf6c7deb772"
+        },
+        {
+          "path": "scripts/restore-integration.js",
+          "sha256": "e2fec1dfe0d851e4773bbc2bfb179ea87979e475cfa85608eb298528f2b6f333"
+        },
+        {
+          "path": "artifacts/checkpoints/restore-round3.log",
+          "sha256": "771ea22f5fdec61a05fab176519431a674db935f2357bbadd807516efc285659"
+        },
+        {
+          "path": "scripts/restore-integration.js",
+          "sha256": "e8d6447a6a7b4d262504855ff4925ef69dd7b576a02ad80f9dea072faf357110"
+        },
+        {
+          "path": "artifacts/checkpoints/restored-browser/result.json",
+          "sha256": "fa49a395097d93b953a4658c7525f09cda46e89d04338a81c98767a92299efac"
+        }
+      ],
+      "assessment": "Local SQLite backup API/integrity/separateDB restore now includes exact pendingbody+id redelivery/PUBACK persistence/new75kW completed and restored browser visual+stream/download check. Restored fixture authRequired=false: authenticatedSSE:true in historical result is misnamed and proves no authentication. Final stable/tag/image/manifest and remote previous-version rollback still incomplete.",
+      "releaseRevalidation": "Final release commit/image full checks remain required."
     }
   ],
   "reviewedSource": {
-    "commit": "a59646b032baf362802b7c7307fc762357b22367",
-    "workingTree": "development in progress; not release",
-    "recordedAt": "2026-09-21T08:25:26.351091+00:00",
+    "commit": "0b23c41841c4e5998e3a472096bd1b36116f87da",
+    "workingTree": "development in progress",
+    "recordedAt": "2026-09-21T08:39:55.305332+00:00",
     "sha256": {
       "docs/PRD-VPP-SCADA-RTU.md": "3b1ef22b4cf03c8f036f9172ddbe4f39b26919acc9860b0e23ac6e068c49b165",
       "server/index.js": "945a30388d0d9bb08ae70c2ab6d470778734875436be306e40d9f02afe408a8f",
-      "web/src.jsx": "cfe73bc22dcb050740e8d4c4becdb1943f91b5e36ed3ef35ce9056857f3dcb79",
-      "docs/operations/run.json": "42e175e3d76ebf602f2f2bf4b91c5e1d7dd8993ffb17da446e13bb009d3ab5d4"
+      "web/src.jsx": "3ab54e758bda03e807ab46581f9b14e249c183675ea603d2dd56b220e5e61bb5",
+      "scripts/browser-check.cjs": "c06bdae255f6934ab2650c40c4a5063b9675607efc9550ebebfe882975b89d97"
     }
   },
   "statusPolicy": {
     "verified_local": "Direct named acceptance criterion covered by reviewed test assertions and recorded local passing evidence; final release revalidation required",
     "partial": "Only stated subcases covered; entire requirement remains incomplete",
     "observed_prior_pass": "Earlier working-tree command success, not final-release check",
-    "pending": "Missing, failed or insufficient direct evidence"
-  }
+    "pending": "Missing, failed or insufficient direct evidence",
+    "verified_remote": "Direct named acceptance criterion observed against remote deployed app through local port-forward; final release revision requires revalidation.",
+    "verified_functional": "Aggregate behavior reviewed and covered by explicit child acceptance evidence; final revision/deployment/media gates remain distinct."
+  },
+  "review004At": "2026-09-21T08:47:43.631889+00:00",
+  "review005At": "2026-09-21T08:57:12.313349+00:00",
+  "review006At": "2026-09-21T09:06:34.224709+00:00"
 }

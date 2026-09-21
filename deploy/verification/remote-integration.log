@@ -1,0 +1,11 @@
+/Users/charleskoh/research/20260921-RALPTON/node_modules/mqtt/build/lib/client.js:447
+        this.emit('error', new Error('connack timeout'));
+                           ^
+
+Error: connack timeout
+    at MqttClient._onConnackTimeout (/Users/charleskoh/research/20260921-RALPTON/node_modules/mqtt/build/lib/client.js:447:28)
+    at Timeout._onTimeout (/Users/charleskoh/research/20260921-RALPTON/node_modules/mqtt/build/lib/client.js:441:51)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+Node.js v24.16.0

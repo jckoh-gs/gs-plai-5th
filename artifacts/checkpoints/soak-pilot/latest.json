@@ -1,0 +1,56 @@
+{
+  "sessionId": "35c7b466-ef80-43ef-a6e5-ad48bb00273b",
+  "startedAt": "2026-09-21T08:56:56.458Z",
+  "checkedAt": "2026-09-21T08:56:58.551Z",
+  "plannedStopAt": "2026-09-21T08:57:08.458Z",
+  "polls": 1,
+  "messages": 0,
+  "duplicates": 0,
+  "invalid": 0,
+  "maxPayloadBytes": 0,
+  "lastMessageAt": null,
+  "connectionErrors": 0,
+  "apiErrors": 0,
+  "maxGapMs": 0,
+  "dedupWindowLimit": 10000,
+  "apiReady": true,
+  "plants": 5,
+  "rssBytes": 128897024,
+  "health": [
+    {
+      "id": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+      "health": "HEALTHY",
+      "pending": 0,
+      "generated": 1380,
+      "confirmed": 45
+    },
+    {
+      "id": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+      "health": "HEALTHY",
+      "pending": 0,
+      "generated": 1380,
+      "confirmed": 45
+    },
+    {
+      "id": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+      "health": "HEALTHY",
+      "pending": 0,
+      "generated": 1380,
+      "confirmed": 57
+    },
+    {
+      "id": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+      "health": "HEALTHY",
+      "pending": 0,
+      "generated": 1006,
+      "confirmed": 17
+    },
+    {
+      "id": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "health": "HEALTHY",
+      "pending": 0,
+      "generated": 314,
+      "confirmed": 5
+    }
+  ]
+}

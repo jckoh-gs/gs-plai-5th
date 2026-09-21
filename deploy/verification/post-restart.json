@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-09-21T08:37:44.497Z",
+  "plantsPersisted": true,
+  "scenarioPersisted": true,
+  "commandPersisted": true,
+  "mqttConnected": true,
+  "sourceCommit": "0b23c41",
+  "image": "127.0.0.1:15050/grid@sha256:1dd9be395d7fe324b20216f2db7162da51851cf01edc212bd2334a6a12bc7223"
+}

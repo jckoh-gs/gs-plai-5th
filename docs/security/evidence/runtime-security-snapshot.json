@@ -1,0 +1,112 @@
+{
+  "checkedAt": "2026-09-21T09:02:04.321860+00:00",
+  "pods": [
+    {
+      "role": "app",
+      "name": "grid-68b66cccdb-6l59k",
+      "phase": "Running",
+      "containers": [
+        {
+          "name": "app",
+          "image": "127.0.0.1:15050/grid@sha256:13da26c81e8caf23701d62e0a61e0457e6183d75dddcb9bde7fa75e1a41792ba",
+          "securityContext": {
+            "allowPrivilegeEscalation": false,
+            "capabilities": {
+              "drop": [
+                "ALL"
+              ]
+            },
+            "readOnlyRootFilesystem": true
+          },
+          "mounts": [
+            {
+              "mountPath": "/data",
+              "name": "data"
+            }
+          ]
+        },
+        {
+          "name": "mqtt",
+          "image": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+          "securityContext": {
+            "allowPrivilegeEscalation": false,
+            "capabilities": {
+              "drop": [
+                "ALL"
+              ]
+            },
+            "readOnlyRootFilesystem": true
+          },
+          "mounts": [
+            {
+              "mountPath": "/run/mosquitto",
+              "name": "mqtt-runtime"
+            },
+            {
+              "mountPath": "/mosquitto/config",
+              "name": "mqtt-config"
+            },
+            {
+              "mountPath": "/mosquitto/secrets",
+              "name": "secrets",
+              "readOnly": true
+            },
+            {
+              "mountPath": "/mosquitto/data",
+              "name": "mqtt-data"
+            }
+          ]
+        }
+      ],
+      "ready": [
+        {
+          "name": "app",
+          "ready": true,
+          "imageID": "127.0.0.1:15050/grid@sha256:13da26c81e8caf23701d62e0a61e0457e6183d75dddcb9bde7fa75e1a41792ba"
+        },
+        {
+          "name": "mqtt",
+          "ready": true,
+          "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+        }
+      ],
+      "automountServiceAccountToken": false,
+      "hostNetwork": false
+    },
+    {
+      "role": "registry",
+      "name": "grid-registry-5c879c647f-2shw5",
+      "phase": "Running",
+      "containers": [
+        {
+          "name": "registry",
+          "image": "127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c",
+          "securityContext": {
+            "allowPrivilegeEscalation": false,
+            "capabilities": {
+              "drop": [
+                "ALL"
+              ]
+            },
+            "readOnlyRootFilesystem": true
+          },
+          "mounts": [
+            {
+              "mountPath": "/var/lib/registry",
+              "name": "data"
+            }
+          ]
+        }
+      ],
+      "ready": [
+        {
+          "name": "registry",
+          "ready": true,
+          "imageID": "127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c"
+        }
+      ],
+      "automountServiceAccountToken": false,
+      "hostNetwork": true
+    }
+  ]
+}

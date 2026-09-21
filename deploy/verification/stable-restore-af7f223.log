@@ -1,0 +1,6 @@
+persistentvolumeclaim/grid-restore-af7f223-data created
+persistentvolumeclaim/grid-restore-af7f223-mqtt-data created
+deployment.apps/grid-restore-af7f223 created
+networkpolicy.networking.k8s.io/grid-restore-af7f223-private created
+Waiting for deployment "grid-restore-af7f223" rollout to finish: 0 of 1 updated replicas are available...
+deployment "grid-restore-af7f223" successfully rolled out

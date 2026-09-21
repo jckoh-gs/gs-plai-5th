@@ -11,7 +11,8 @@ let plant;
 try {
  const messages=[];c.on('message',(topic,b)=>{try{messages.push({topic,body:JSON.parse(b.toString()),bytes:b.length});}catch{}});
  await c.subscribeAsync('vpp/rtu/+/#',{qos:1});
- plant=await api('/api/plants','POST',{name:'k3s 검증 단지',type:'wind',csv:'timestamp,power_kw,voltage,current_a\n2026-01-01 00:00:00,1000,380,100\n2026-01-01 00:10:00,1000,380,100',count:2,ratedKw:1000,rampKwPerSec:1000},201);
+ plant=process.env.REMOTE_PLANT_ID?(await api('/api/state')).plants.find(p=>p.id===process.env.REMOTE_PLANT_ID):await api('/api/plants','POST',{name:'k3s 검증 단지',type:'wind',csv:'timestamp,power_kw,voltage,current_a\n2026-01-01 00:00:00,1000,380,100\n2026-01-01 00:10:00,1000,380,100',count:2,ratedKw:1000,rampKwPerSec:1000},201);
+ assert(plant,'Requested test RTU must exist');
  const req={schemaVersion:2,commandId:randomUUID(),action:'set_target',targetKw:125,expiresAt:new Date(Date.now()+25000).toISOString(),timeoutSeconds:15};
  await new Promise(r=>setTimeout(r,1500));
  await c.publishAsync(`vpp/rtu/${plant.id}/setpoint`,JSON.stringify(req),{qos:1});

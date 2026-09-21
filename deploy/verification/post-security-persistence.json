@@ -1,0 +1,10 @@
+{
+  "at": "2026-09-21T08:50:27.618Z",
+  "source": "79c996f",
+  "appImage": "sha256:617ff5ec1dc207af7028d8cdec08c4d2bcf09c7f65db1397fdfd4dc61253adbb",
+  "brokerImage": "sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+  "baselinePlantsPreserved": true,
+  "scenarioPreserved": true,
+  "historicalCommandPreserved": true,
+  "mqttConnected": true
+}

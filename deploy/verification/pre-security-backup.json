@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-09-21T08:43:24.188962+00:00",
+  "sourcePod": "grid-5d7d7dc89c-zt6vv",
+  "sourceImage": "sha256:1dd9be395d7fe324b20216f2db7162da51851cf01edc212bd2334a6a12bc7223",
+  "backupMethod": "node:sqlite backup, PRAGMA integrity_check ok",
+  "localPath": "artifacts/private/pre-security-79c996f.sqlite",
+  "sha256": "9d27e52b6e56c0d2381f907037386baf9b456db460af5a3e1a8d8be02049b7fa",
+  "bytes": 14897152
+}

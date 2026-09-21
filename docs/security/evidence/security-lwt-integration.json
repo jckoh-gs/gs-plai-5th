@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "suite": "security-lwt",
+  "checks": [
+    "unexpected RTU disconnect publishes offline",
+    "late subscriber receives retained offline state",
+    "other RTU stays connected",
+    "gateway unexpected disconnect publishes offline"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "sourceCommit": "79c996f",
+  "buildContext": "git archive 79c996f",
+  "imageManifest": "sha256:617ff5ec1dc207af7028d8cdec08c4d2bcf09c7f65db1397fdfd4dc61253adbb",
+  "configDigest": "sha256:fb9e6b482ea2beb66e026aa9f28d60210e0328c71f9fd1d1bc0e89eaff986ec0",
+  "architecture": "amd64",
+  "os": "linux",
+  "labels": {
+    "org.opencontainers.image.revision": "79c996f",
+    "org.opencontainers.image.version": "1.7"
+  },
+  "compressedLayerBytes": 84486541
+}

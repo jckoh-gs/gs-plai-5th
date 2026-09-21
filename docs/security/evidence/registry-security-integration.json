@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "oldImage": "registry:2@sha256:a3d8aaa63ed8681a604f1dea0aa03f100d5895b6a58ace528858a7b332415373",
+  "newImage": "grid-registry:3.1.1-sec1",
+  "checks": [
+    "registry2 OCI push + digest pull",
+    "existing v2 data readable by patched3",
+    "patched3 OCI push + digest pull",
+    "nonroot read-only no-capability runtime",
+    "healthcheck binary",
+    "restart persistence"
+  ]
+}

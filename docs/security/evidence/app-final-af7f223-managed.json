@@ -1,0 +1,52 @@
+{
+  "capturedAt": "2026-09-21T08:57:19.205263+00:00",
+  "manifestDigest": "sha256:13da26c81e8caf23701d62e0a61e0457e6183d75dddcb9bde7fa75e1a41792ba",
+  "status": "final-source image scanned; live rollout separate",
+  "findings": [
+    {
+      "id": "CVE-2026-85091",
+      "package": "zlib",
+      "version": "1.3.2-r0",
+      "severity": "High",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-85091",
+      "fixedVersions": [],
+      "status": "open no fixed version in current Alpine feed",
+      "mitigation": "private tunnel, nonroot, readonly rootfs; not claimed non-exploitable",
+      "recheck": "Alpine package and vulnerability DB updates"
+    },
+    {
+      "id": "CVE-2025-60876",
+      "package": "busybox",
+      "version": "1.37.0-r31",
+      "severity": "Medium",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876",
+      "fixedVersions": [],
+      "status": "open no fixed version in current Alpine feed",
+      "mitigation": "private tunnel, nonroot, readonly rootfs; not claimed non-exploitable",
+      "recheck": "Alpine package and vulnerability DB updates"
+    },
+    {
+      "id": "CVE-2025-60876",
+      "package": "busybox-binsh",
+      "version": "1.37.0-r31",
+      "severity": "Medium",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876",
+      "fixedVersions": [],
+      "status": "open no fixed version in current Alpine feed",
+      "mitigation": "private tunnel, nonroot, readonly rootfs; not claimed non-exploitable",
+      "recheck": "Alpine package and vulnerability DB updates"
+    },
+    {
+      "id": "CVE-2025-60876",
+      "package": "ssl_client",
+      "version": "1.37.0-r31",
+      "severity": "Medium",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876",
+      "fixedVersions": [],
+      "status": "open no fixed version in current Alpine feed",
+      "mitigation": "private tunnel, nonroot, readonly rootfs; not claimed non-exploitable",
+      "recheck": "Alpine package and vulnerability DB updates"
+    }
+  ],
+  "sourceCommit": "af7f223"
+}

@@ -1,0 +1,13 @@
+✔ per-device identity/auth overrides are separate from common defaults and LWT topics are exact (2.56175ms)
+✔ runtime keeps tick/prune/shutdown alive when audit and storage both fail (24.41225ms)
+✔ shutdown closes HTTP and SQLite even if transport stop rejects (3.109542ms)
+✔ unauthenticated health/config contain no configured credentials; protected state requires token (5.7795ms)
+✔ public config exact allowlist and authenticated downloads never echo the credential (6.966542ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 147.322792

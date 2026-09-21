@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "suite": "complete-scenario-contract",
+  "fullSnapshotDeepEquality": true,
+  "fullRestoredStateDeepEquality": true,
+  "sqliteStateMatches": true,
+  "historyAndTelemetryBufferExcluded": true,
+  "savedPausedPreserved": true,
+  "freezeLiveWeatherOnRestore": true,
+  "pendingMessagesPreserved": 1,
+  "networkTransmitsWhilePaused": true,
+  "wallClockCommandTimeoutWhilePaused": true
+}
