@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-09-21T19:24:44.697825+00:00",
+  "resumeCommand": {
+    "handle": 39652,
+    "terminalExitCode": 0,
+    "mutationsPerformed": false
+  },
+  "previousPush": {
+    "handle": 86269,
+    "terminalExitCode": 0,
+    "commit": "9c90808f63f848c2cccbf1fb3db594f71c3a3cbf"
+  },
+  "remoteMainMatched": true,
+  "apiVersion": "1.7.1",
+  "plantCount": 5,
+  "podUid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+  "image": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "observationLedgerMatched": true,
+  "actualProcessIdentitiesReobserved": true,
+  "preparationRevision": 3,
+  "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "scope": "Post-preparation read-only resume snapshot. Earlier incident counters retained; no new outage simulation, process restart, remote mutation, final media or whole-goal completion."
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "runId": "grid-new-20260921T080733Z",
+  "checkedAt": "2026-09-21T19:24:26.669Z",
+  "nextAction": "resume-first-incomplete-checkpoint",
+  "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "head": "9c90808f63f848c2cccbf1fb3db594f71c3a3cbf",
+  "workingTree": [
+    "?? .idea/",
+    "?? artifacts/media-preparation/candidate17-layout/",
+    "?? artifacts/media-preparation/deck-binding-packaging-rehearsal/",
+    "?? artifacts/media-preparation/deck-candidate17-rehearsal/",
+    "?? artifacts/media-preparation/full-candidate15-20260921/",
+    "?? artifacts/media-preparation/full-candidate15-receipts-20260921/",
+    "?? artifacts/media-preparation/full-candidate17-20260921/",
+    "?? artifacts/media-preparation/media-lifecycle-local-round1-retry1/",
+    "?? artifacts/media-preparation/media-lifecycle-local-round1/",
+    "?? artifacts/media-preparation/weather-r2-focused/",
+    "?? artifacts/media-preparation/weather-r2-round2/",
+    "?? artifacts/releases/current.json",
+    "?? deploy/verification/candidate-1197ab5/",
+    "?? deploy/verification/candidate-8599ab9/operational-baseline.json"
+  ],
+  "remoteMain": "9c90808f63f848c2cccbf1fb3db594f71c3a3cbf",
+  "remoteGitReachable": true,
+  "clusterReachable": true,
+  "api": {
+    "ok": true,
+    "version": "1.7.1",
+    "plantCount": 5
+  },
+  "identity": {
+    "ok": true,
+    "pod": {
+      "name": "grid-69d8766f7-zmfq8",
+      "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+      "image": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+      "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876"
+    },
+    "broker": {
+      "name": "grid-69d8766f7-zmfq8",
+      "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+      "image": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  },
+  "observationLedger": {
+    "ok": true,
+    "issues": [],
+    "scope": "Metadata consistency only; verify actual PID/start identity and observation files before acting"
+  },
+  "workingMilestone": {
+    "productVersion": "1.7.1",
+    "prdVersion": "1.15",
+    "idea": "IDEA-012",
+    "state": "Completefunctional1.7.1checkpoint+tags. Maintaincurrentobservers and originalfinalwindow; overallgoalpending"
+  },
+  "remainingInOrder": [
+    "1.7.1stabletagsremoteverified; completedallmain/restore/manifestgates. Keep72957/8133/48590 andoriginaldeadline. No repeatedmainwrite orrestore.",
+    "Actual1.7.1 first-hour capture and REVIEW051 completed; preserve errors and ISSUE030 received gaps with persisted144-position brokerACK proof. Maintain same current processes until original freeze. Only adopt further concrete improvements with versioned scope and known fallback.",
+    "At21:27:33.079009Z conductproduct/security/issues selectedversion finalreviews. Atoriginalfreeze21:37:33.079009Z followFINAL-RESTORE-PLAN actualnormalversion/exactsnapshot/immutablefinalmanifest.",
+    "Inoriginalfinalwindow generateNEWrealKoreanUIvideo withpointer/zoom/voice/subtitles; verifyandrecoverownRTU,thenNEWeditable14-slidePPTusingthesamevideo/fullrenders. Existingrehearsalsnotfinal.",
+    "Beforeoriginal22:07:33.079009Z deadline verifydelivery/artifacts/remoteGit/finalnormalstate andstopthisrunheartbeat. Do notextendT0 orpretendunfinishedworkcomplete."
+  ],
+  "mutationsPerformed": false
+}

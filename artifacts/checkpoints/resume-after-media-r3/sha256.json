@@ -1,0 +1,32 @@
+[
+  {
+    "file": "audit-latest.json",
+    "bytes": 5852,
+    "sha256": "4ef1635a5c024f99d63ee9471d0cbf5de3fe086ff04f9c966e5f5ac491a4cf6a"
+  },
+  {
+    "file": "primary-latest.json",
+    "bytes": 1773,
+    "sha256": "a989619edbc4dc30a8c9093dc0fb71c64d75bf5868c1fd3632eb1170f2dd1f1c"
+  },
+  {
+    "file": "processes.txt",
+    "bytes": 270,
+    "sha256": "556a8c69425c4e3011fde726870ef0fa29ff5f0a91a552b60d34321088bf05e2"
+  },
+  {
+    "file": "resume-status.json",
+    "bytes": 3574,
+    "sha256": "a1295326aa5316f40ef65a60d53e2d2a099884002f5fd3d846e751c312423667"
+  },
+  {
+    "file": "summary.json",
+    "bytes": 925,
+    "sha256": "09e071666e6430a633afe06ba890bc76886df1230773b4ac8f3bb2f973179e29"
+  },
+  {
+    "file": "supervisor-status.json",
+    "bytes": 923,
+    "sha256": "d5c7a2673b84af3969285e25f2835f05e3a14082b7cfc95f0a45267dbb0d34c5"
+  }
+]
