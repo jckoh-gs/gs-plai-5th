@@ -1,0 +1,18 @@
+{
+  "summary.json": "ac3e0071fe04e87d0e70a9f1c65d2c0093e5289a049d8156f500dd800158134e",
+  "source/telemetry-audit-monitor.mjs": "6c4bbb0b77c03e8a49d9d17c8f7e743c10765ab05b0d94f6b1a736f6a60c4617",
+  "source/soak-diagnostics.mjs": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c",
+  "source/telemetry-audit.mjs": "ba6c2c1c9ac39e4a1666d7ad0b6468271a1eda163f2653df9e6bac842bb48486",
+  "source/soak-monitor.mjs": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3",
+  "audit/latest.json": "1f7f44a6fc94f022e2f149752ff309529f21af189e11ddbba6f5dca394f43a62",
+  "audit/observations.jsonl": "41744ffb3841e418be32cc66ca3a14b1d80792a3b40b43341b28abf8de74d16e",
+  "audit/result.json": "1f7f44a6fc94f022e2f149752ff309529f21af189e11ddbba6f5dca394f43a62",
+  "primary/latest.json": "d2e15600cdb371236beaa209b159c52b31a92d3c08cd4b48f6e454233826fa10",
+  "primary/observations.jsonl": "4953e29338dbfdd65ce4847fa0e8e3d4499eae8cc71d5cba769a1365c9b00d65",
+  "primary/source-hashes.json": "65df27f54232ca2e18474582224ab46d842f359eee22848cca271dfcf4444a6f",
+  "primary/session-706da638-fd32-4256-b219-8b0b5ab1fde7.json": "df2403c267dd688f4c60781bd1f8cb4db88a474dc7dd41a3c1ed217f0636517a",
+  "primary/source/soak-diagnostics.mjs": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c",
+  "primary/source/soak-monitor.mjs": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3",
+  "audit/source/telemetry-audit-monitor.mjs": "6c4bbb0b77c03e8a49d9d17c8f7e743c10765ab05b0d94f6b1a736f6a60c4617",
+  "audit/source/telemetry-audit.mjs": "ba6c2c1c9ac39e4a1666d7ad0b6468271a1eda163f2653df9e6bac842bb48486"
+}

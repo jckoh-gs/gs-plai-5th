@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T13:36:38.637596+00:00",
+  "updatedAt": "2026-09-21T13:46:47.627672+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": "stable-v1.3.0",
@@ -10,7 +10,7 @@
     "productVersion": "1.4.0",
     "prdVersion": "1.11",
     "idea": "IDEA-008",
-    "state": "PRD1.11/IDEA008revision3 adopted af8253f; Target source and5unit tests ready,1.4buildPASS and isolated3107 actualbrowser acceptance inprogress. Actual deployment/fallback remains1.3.0; full regression/release gates pending."
+    "state": "ActualReady1.4candidate fdd0491/c19d deployed; local and exactimage gates PASS, remoteacceptance/restart/backuprestore and stablepromotion pending. Stablefallback1.3. Finalmedia/timepending."
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -175,9 +175,7 @@
     }
   ],
   "currentObservationHandles": {
-    "supervisor": 7353,
-    "primary": 40339,
-    "supplementary": 30644
+    "supervisor": 81174
   },
   "currentObservationBaselines": {
     "primaryApiErrors": 6,
@@ -212,20 +210,10 @@
     }
   ],
   "currentObservationProcesses": {
-    "primary": {
-      "pid": 66462,
-      "handle": 40339,
-      "processIdentity": "Mon Sep 21 21:22:04 2026"
-    },
-    "supplementary": {
-      "pid": 66465,
-      "handle": 30644,
-      "processIdentity": "Mon Sep 21 21:22:05 2026"
-    },
     "supervisor": {
-      "pid": 80224,
-      "handle": 7353,
-      "processIdentity": "Mon Sep 21 22:23:12 2026"
+      "pid": 84952,
+      "handle": 81174,
+      "processIdentity": "Mon Sep 21 22:46:07 2026"
     }
   },
   "operationalDeadlineHardening": {
@@ -295,13 +283,13 @@
   ],
   "nextOperationalReview": "Continue existing observers/supervisor, check freshness and counter increases without resets. Temporary power guard verified; do not attribute all failures to sleep. Implement1.4candidate in isolation; deployed1.3 remains fallback.",
   "supervisorDiagnosticUpgrade": {
-    "state": "verified-active",
+    "state": "verified-active1.4",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
     "evidence": "artifacts/checkpoints/supervisor-diagnostics/summary.json",
-    "currentPid": 80224,
-    "currentHandle": 7353,
-    "currentIdentity": "Mon Sep 21 22:23:12 2026",
-    "nextStep": "Active since planned13:23handoff; do not repeat replacement. Compare lastLocalVerification with its checkedAt.",
+    "currentPid": 84952,
+    "currentHandle": 81174,
+    "currentIdentity": "Mon Sep 21 22:46:07 2026",
+    "nextStep": "After1.4rollout supervisor restarted once; old7353terminal. Do not repeat.",
     "activationEvidence": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "oldHandleTerminal": 25872,
     "new": {
@@ -327,5 +315,39 @@
     "mqttPrefix": "candidate14",
     "seedDemo": false,
     "scope": "Local isolated UI acceptance; never mix1.3API3106 with1.4dist; no primary cluster writes"
+  },
+  "candidateOperations": {
+    "sourceCommit": "fdd0491a5c08901962f46ac845f8582921150d45",
+    "buildOwner": "/root/deployment",
+    "evidenceDirectory": "deploy/verification/candidate-fdd0491",
+    "phase": "1.4supervisor Ready; primary/auditnotyetrestarted pending planned outboxrestartproof",
+    "mainRuntimeUnchanged": true,
+    "retry": "Inspect existing handles and evidence before any repeat build/push/registration; content/source/digest must match.",
+    "localRegressionHandleTerminal": 79493,
+    "localBrowserEvidence": [
+      "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
+      "artifacts/checkpoints/command-form-1.4-correction-delta/result.json",
+      "artifacts/checkpoints/candidate-1.4-browser-regression/summary.json"
+    ],
+    "backupMetadata": "deploy/verification/pre-1.4.0-backup.json",
+    "backupJournalDirectory": "artifacts/operations/backups",
+    "registryForwardHandle": 29782,
+    "exactImageEvidence": "deploy/verification/candidate-fdd0491/provenance.json",
+    "backupHandleTerminal": 95193,
+    "intendedImage": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4",
+    "plannedStopAt": "2026-09-21T13:45:08.353307+00:00",
+    "resumeDuringTransition": "Inspect actual deployment/Ready image and process identities first. If new image already active, validate then update run.deployment before starting supervisor. If old image remains and rollout not performed, resume from preserved preupgrade backup without duplicating a completed action. Never report candidate active based solely on intendedImage.",
+    "endedObservationHandles": {
+      "supervisor": 7353,
+      "primary": 40339,
+      "supplementary": 30644
+    },
+    "priorObservationArchive": "artifacts/checkpoints/soak-1.3.0/summary.json",
+    "rolloutLog": "deploy/verification/candidate-fdd0491/rollout.log",
+    "rolloutHandleTerminal": 1231,
+    "remoteMqttHandle": 42908,
+    "remoteMqttRtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+    "remoteMqttEvidence": "deploy/verification/candidate-fdd0491/mqtt.json",
+    "remoteCommandRetry": "On uncertainty inspect original commandId/report and targetRTU recentcommands. Never blindly rerun script with a new UUID."
   }
 }

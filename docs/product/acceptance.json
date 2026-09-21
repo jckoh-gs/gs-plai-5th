@@ -5380,58 +5380,322 @@
     {
       "id": "FR-CONTROL-FORM-01",
       "description": "일반 목표의 서버 범위·표현 가능한 만료일",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "PRD1.11/product1.4.0 candidate adopted; before-change reproduction is not acceptance."
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
+          "sha256": "ad7a4fb95ee118b997e5fd6a7462aa7dcc922a47fb43c83f92ac6564233da205"
+        },
+        {
+          "path": "artifacts/checkpoints/command-form-1.4-correction-delta/result.json",
+          "sha256": "5c7eef96bfdc82c9157ebfa72a1156e5496e40e1ae32f3b53ffe4cd933a5b05e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-browser-regression/summary.json",
+          "sha256": "5b411002e51531563a18d04f5b96500c46f3c2d4a90634ce13a37943fe0add47"
+        },
+        {
+          "path": "docs/product/REVIEW-020.md",
+          "sha256": "588ff1e33a4f605341b97a755df3a2c07826b39ccd99735dda6f67f168845231"
+        },
+        {
+          "path": "docs/security/COMMAND-FORM-REVIEW.md",
+          "sha256": "2e4523d4b0c3c0fd1faf9b6981e343fe0335dfb97f2880b0a77c9f32b88cec14"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-tests-round1.log",
+          "sha256": "f841aced868d229d5ea6aa61b490392d67ea32b1e88db282c88a0158e1fe1cc9"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-integration.log",
+          "sha256": "df3c2832103c0b55074efcfb72a1c43177b0e7fe0261e7b5a232018298e55ad9"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-advanced.log",
+          "sha256": "4c11f003d246eb898488bf7a3b72e81510a87314e30bbfd894c589501f3325df"
+        }
+      ],
+      "assessment": "fdd0491 local1.4 input/date/ARIA/RTU-switch and actual MQTT command evidence reviewed independently.43browserchecks plus direct-correction delta,240workstation tests+3independent input tests and existing4browserregressions. Boundary-only checks are not all endpoint commands. Exactimage77app tests and security completed separately; remote1.4 rollout/backup/restore/stable pending. Finalmedia/time gates distinct."
     },
     {
       "id": "UI-11",
       "description": "범위·날짜 오류 접근성과 RTU 격리",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "PRD1.11/product1.4.0 candidate adopted; before-change reproduction is not acceptance."
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
+          "sha256": "ad7a4fb95ee118b997e5fd6a7462aa7dcc922a47fb43c83f92ac6564233da205"
+        },
+        {
+          "path": "artifacts/checkpoints/command-form-1.4-correction-delta/result.json",
+          "sha256": "5c7eef96bfdc82c9157ebfa72a1156e5496e40e1ae32f3b53ffe4cd933a5b05e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-browser-regression/summary.json",
+          "sha256": "5b411002e51531563a18d04f5b96500c46f3c2d4a90634ce13a37943fe0add47"
+        },
+        {
+          "path": "docs/product/REVIEW-020.md",
+          "sha256": "588ff1e33a4f605341b97a755df3a2c07826b39ccd99735dda6f67f168845231"
+        },
+        {
+          "path": "docs/security/COMMAND-FORM-REVIEW.md",
+          "sha256": "2e4523d4b0c3c0fd1faf9b6981e343fe0335dfb97f2880b0a77c9f32b88cec14"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-tests-round1.log",
+          "sha256": "f841aced868d229d5ea6aa61b490392d67ea32b1e88db282c88a0158e1fe1cc9"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-integration.log",
+          "sha256": "df3c2832103c0b55074efcfb72a1c43177b0e7fe0261e7b5a232018298e55ad9"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-advanced.log",
+          "sha256": "4c11f003d246eb898488bf7a3b72e81510a87314e30bbfd894c589501f3325df"
+        }
+      ],
+      "assessment": "fdd0491 local1.4 input/date/ARIA/RTU-switch and actual MQTT command evidence reviewed independently.43browserchecks plus direct-correction delta,240workstation tests+3independent input tests and existing4browserregressions. Boundary-only checks are not all endpoint commands. Exactimage77app tests and security completed separately; remote1.4 rollout/backup/restore/stable pending. Finalmedia/time gates distinct."
     },
     {
       "id": "AT-CONTROL-FORM-01-01",
       "description": "범위 밖 버튼·Enter 제출 차단",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "PRD1.11/product1.4.0 candidate adopted; before-change reproduction is not acceptance."
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
+          "sha256": "ad7a4fb95ee118b997e5fd6a7462aa7dcc922a47fb43c83f92ac6564233da205"
+        },
+        {
+          "path": "artifacts/checkpoints/command-form-1.4-correction-delta/result.json",
+          "sha256": "5c7eef96bfdc82c9157ebfa72a1156e5496e40e1ae32f3b53ffe4cd933a5b05e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-browser-regression/summary.json",
+          "sha256": "5b411002e51531563a18d04f5b96500c46f3c2d4a90634ce13a37943fe0add47"
+        },
+        {
+          "path": "docs/product/REVIEW-020.md",
+          "sha256": "588ff1e33a4f605341b97a755df3a2c07826b39ccd99735dda6f67f168845231"
+        },
+        {
+          "path": "docs/security/COMMAND-FORM-REVIEW.md",
+          "sha256": "2e4523d4b0c3c0fd1faf9b6981e343fe0335dfb97f2880b0a77c9f32b88cec14"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-tests-round1.log",
+          "sha256": "f841aced868d229d5ea6aa61b490392d67ea32b1e88db282c88a0158e1fe1cc9"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-integration.log",
+          "sha256": "df3c2832103c0b55074efcfb72a1c43177b0e7fe0261e7b5a232018298e55ad9"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-advanced.log",
+          "sha256": "4c11f003d246eb898488bf7a3b72e81510a87314e30bbfd894c589501f3325df"
+        }
+      ],
+      "assessment": "fdd0491 local1.4 input/date/ARIA/RTU-switch and actual MQTT command evidence reviewed independently.43browserchecks plus direct-correction delta,240workstation tests+3independent input tests and existing4browserregressions. Boundary-only checks are not all endpoint commands. Exactimage77app tests and security completed separately; remote1.4 rollout/backup/restore/stable pending. Finalmedia/time gates distinct."
     },
     {
       "id": "AT-CONTROL-FORM-01-02",
       "description": "경계·소수·비유한 입력",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "PRD1.11/product1.4.0 candidate adopted; before-change reproduction is not acceptance."
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
+          "sha256": "ad7a4fb95ee118b997e5fd6a7462aa7dcc922a47fb43c83f92ac6564233da205"
+        },
+        {
+          "path": "artifacts/checkpoints/command-form-1.4-correction-delta/result.json",
+          "sha256": "5c7eef96bfdc82c9157ebfa72a1156e5496e40e1ae32f3b53ffe4cd933a5b05e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-browser-regression/summary.json",
+          "sha256": "5b411002e51531563a18d04f5b96500c46f3c2d4a90634ce13a37943fe0add47"
+        },
+        {
+          "path": "docs/product/REVIEW-020.md",
+          "sha256": "588ff1e33a4f605341b97a755df3a2c07826b39ccd99735dda6f67f168845231"
+        },
+        {
+          "path": "docs/security/COMMAND-FORM-REVIEW.md",
+          "sha256": "2e4523d4b0c3c0fd1faf9b6981e343fe0335dfb97f2880b0a77c9f32b88cec14"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-tests-round1.log",
+          "sha256": "f841aced868d229d5ea6aa61b490392d67ea32b1e88db282c88a0158e1fe1cc9"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-integration.log",
+          "sha256": "df3c2832103c0b55074efcfb72a1c43177b0e7fe0261e7b5a232018298e55ad9"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-advanced.log",
+          "sha256": "4c11f003d246eb898488bf7a3b72e81510a87314e30bbfd894c589501f3325df"
+        }
+      ],
+      "assessment": "fdd0491 local1.4 input/date/ARIA/RTU-switch and actual MQTT command evidence reviewed independently.43browserchecks plus direct-correction delta,240workstation tests+3independent input tests and existing4browserregressions. Boundary-only checks are not all endpoint commands. Exactimage77app tests and security completed separately; remote1.4 rollout/backup/restore/stable pending. Finalmedia/time gates distinct."
     },
     {
       "id": "AT-CONTROL-FORM-01-03",
       "description": "Date·서버 ISO 호환성",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "PRD1.11/product1.4.0 candidate adopted; before-change reproduction is not acceptance."
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
+          "sha256": "ad7a4fb95ee118b997e5fd6a7462aa7dcc922a47fb43c83f92ac6564233da205"
+        },
+        {
+          "path": "artifacts/checkpoints/command-form-1.4-correction-delta/result.json",
+          "sha256": "5c7eef96bfdc82c9157ebfa72a1156e5496e40e1ae32f3b53ffe4cd933a5b05e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-browser-regression/summary.json",
+          "sha256": "5b411002e51531563a18d04f5b96500c46f3c2d4a90634ce13a37943fe0add47"
+        },
+        {
+          "path": "docs/product/REVIEW-020.md",
+          "sha256": "588ff1e33a4f605341b97a755df3a2c07826b39ccd99735dda6f67f168845231"
+        },
+        {
+          "path": "docs/security/COMMAND-FORM-REVIEW.md",
+          "sha256": "2e4523d4b0c3c0fd1faf9b6981e343fe0335dfb97f2880b0a77c9f32b88cec14"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-tests-round1.log",
+          "sha256": "f841aced868d229d5ea6aa61b490392d67ea32b1e88db282c88a0158e1fe1cc9"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-integration.log",
+          "sha256": "df3c2832103c0b55074efcfb72a1c43177b0e7fe0261e7b5a232018298e55ad9"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-advanced.log",
+          "sha256": "4c11f003d246eb898488bf7a3b72e81510a87314e30bbfd894c589501f3325df"
+        }
+      ],
+      "assessment": "fdd0491 local1.4 input/date/ARIA/RTU-switch and actual MQTT command evidence reviewed independently.43browserchecks plus direct-correction delta,240workstation tests+3independent input tests and existing4browserregressions. Boundary-only checks are not all endpoint commands. Exactimage77app tests and security completed separately; remote1.4 rollout/backup/restore/stable pending. Finalmedia/time gates distinct."
     },
     {
       "id": "AT-CONTROL-FORM-01-04",
       "description": "오류 수정·좁은 화면·RTU 전환",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "PRD1.11/product1.4.0 candidate adopted; before-change reproduction is not acceptance."
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
+          "sha256": "ad7a4fb95ee118b997e5fd6a7462aa7dcc922a47fb43c83f92ac6564233da205"
+        },
+        {
+          "path": "artifacts/checkpoints/command-form-1.4-correction-delta/result.json",
+          "sha256": "5c7eef96bfdc82c9157ebfa72a1156e5496e40e1ae32f3b53ffe4cd933a5b05e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-browser-regression/summary.json",
+          "sha256": "5b411002e51531563a18d04f5b96500c46f3c2d4a90634ce13a37943fe0add47"
+        },
+        {
+          "path": "docs/product/REVIEW-020.md",
+          "sha256": "588ff1e33a4f605341b97a755df3a2c07826b39ccd99735dda6f67f168845231"
+        },
+        {
+          "path": "docs/security/COMMAND-FORM-REVIEW.md",
+          "sha256": "2e4523d4b0c3c0fd1faf9b6981e343fe0335dfb97f2880b0a77c9f32b88cec14"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-tests-round1.log",
+          "sha256": "f841aced868d229d5ea6aa61b490392d67ea32b1e88db282c88a0158e1fe1cc9"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-integration.log",
+          "sha256": "df3c2832103c0b55074efcfb72a1c43177b0e7fe0261e7b5a232018298e55ad9"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-advanced.log",
+          "sha256": "4c11f003d246eb898488bf7a3b72e81510a87314e30bbfd894c589501f3325df"
+        }
+      ],
+      "assessment": "fdd0491 local1.4 input/date/ARIA/RTU-switch and actual MQTT command evidence reviewed independently.43browserchecks plus direct-correction delta,240workstation tests+3independent input tests and existing4browserregressions. Boundary-only checks are not all endpoint commands. Exactimage77app tests and security completed separately; remote1.4 rollout/backup/restore/stable pending. Finalmedia/time gates distinct."
     },
     {
       "id": "AT-CONTROL-FORM-01-05",
       "description": "의도된 제어 의미 보존",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "PRD1.11/product1.4.0 candidate adopted; before-change reproduction is not acceptance."
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
+          "sha256": "ad7a4fb95ee118b997e5fd6a7462aa7dcc922a47fb43c83f92ac6564233da205"
+        },
+        {
+          "path": "artifacts/checkpoints/command-form-1.4-correction-delta/result.json",
+          "sha256": "5c7eef96bfdc82c9157ebfa72a1156e5496e40e1ae32f3b53ffe4cd933a5b05e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-browser-regression/summary.json",
+          "sha256": "5b411002e51531563a18d04f5b96500c46f3c2d4a90634ce13a37943fe0add47"
+        },
+        {
+          "path": "docs/product/REVIEW-020.md",
+          "sha256": "588ff1e33a4f605341b97a755df3a2c07826b39ccd99735dda6f67f168845231"
+        },
+        {
+          "path": "docs/security/COMMAND-FORM-REVIEW.md",
+          "sha256": "2e4523d4b0c3c0fd1faf9b6981e343fe0335dfb97f2880b0a77c9f32b88cec14"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-tests-round1.log",
+          "sha256": "f841aced868d229d5ea6aa61b490392d67ea32b1e88db282c88a0158e1fe1cc9"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-integration.log",
+          "sha256": "df3c2832103c0b55074efcfb72a1c43177b0e7fe0261e7b5a232018298e55ad9"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-advanced.log",
+          "sha256": "4c11f003d246eb898488bf7a3b72e81510a87314e30bbfd894c589501f3325df"
+        }
+      ],
+      "assessment": "fdd0491 local1.4 input/date/ARIA/RTU-switch and actual MQTT command evidence reviewed independently.43browserchecks plus direct-correction delta,240workstation tests+3independent input tests and existing4browserregressions. Boundary-only checks are not all endpoint commands. Exactimage77app tests and security completed separately; remote1.4 rollout/backup/restore/stable pending. Finalmedia/time gates distinct."
     },
     {
       "id": "AT-CONTROL-FORM-01-06",
       "description": "회귀·정확한 이미지·배포·복원",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "PRD1.11/product1.4.0 candidate adopted; before-change reproduction is not acceptance."
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/command-form-1.4-browser-round2/result.json",
+          "sha256": "ad7a4fb95ee118b997e5fd6a7462aa7dcc922a47fb43c83f92ac6564233da205"
+        },
+        {
+          "path": "artifacts/checkpoints/command-form-1.4-correction-delta/result.json",
+          "sha256": "5c7eef96bfdc82c9157ebfa72a1156e5496e40e1ae32f3b53ffe4cd933a5b05e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-browser-regression/summary.json",
+          "sha256": "5b411002e51531563a18d04f5b96500c46f3c2d4a90634ce13a37943fe0add47"
+        },
+        {
+          "path": "docs/product/REVIEW-020.md",
+          "sha256": "588ff1e33a4f605341b97a755df3a2c07826b39ccd99735dda6f67f168845231"
+        },
+        {
+          "path": "docs/security/COMMAND-FORM-REVIEW.md",
+          "sha256": "2e4523d4b0c3c0fd1faf9b6981e343fe0335dfb97f2880b0a77c9f32b88cec14"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-tests-round1.log",
+          "sha256": "f841aced868d229d5ea6aa61b490392d67ea32b1e88db282c88a0158e1fe1cc9"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-integration.log",
+          "sha256": "df3c2832103c0b55074efcfb72a1c43177b0e7fe0261e7b5a232018298e55ad9"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.4-advanced.log",
+          "sha256": "4c11f003d246eb898488bf7a3b72e81510a87314e30bbfd894c589501f3325df"
+        }
+      ],
+      "assessment": "fdd0491 local1.4 input/date/ARIA/RTU-switch and actual MQTT command evidence reviewed independently.43browserchecks plus direct-correction delta,240workstation tests+3independent input tests and existing4browserregressions. Boundary-only checks are not all endpoint commands. Exactimage77app tests and security completed separately; remote1.4 rollout/backup/restore/stable pending. Finalmedia/time gates distinct."
     }
   ],
   "reviewedSource": {

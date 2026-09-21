@@ -1,0 +1,51 @@
+{
+  "recordedAt": "2026-09-21T13:45:36.114503+00:00",
+  "reason": "Planned1.4candidate upgrade; all original handles exited0 after verified-identity SIGTERM",
+  "primary": {
+    "sessionId": "706da638-fd32-4256-b219-8b0b5ab1fde7",
+    "startedAt": "2026-09-21T12:22:04.265Z",
+    "checkedAt": "2026-09-21T13:45:14.282Z",
+    "plannedStopAt": "2026-09-21T21:37:33.079Z",
+    "polls": 454,
+    "messages": 692,
+    "duplicates": 0,
+    "invalid": 0,
+    "maxPayloadBytes": 119972,
+    "lastMessageAt": "2026-09-21T13:44:55.901Z",
+    "connectionErrors": 6,
+    "apiErrors": 6,
+    "maxGapMs": 73416,
+    "maxGapMeaning": "legacy alias of maxPollGapMs; observer poll start interval",
+    "maxPollGapMs": 73416,
+    "maxTelemetryGapMs": 119979,
+    "telemetryGapMeaning": "maximum interval between observed messages across all RTUs; not per-RTU loss proof",
+    "telemetrySilenceMs": 18381,
+    "mqttConnected": false,
+    "connectionEvents": 6,
+    "disconnectionEvents": 6,
+    "lastConnectedAt": "2026-09-21T13:25:54.946Z",
+    "lastDisconnectedAt": "2026-09-21T13:45:09.165Z",
+    "dedupWindowLimit": 10000,
+    "endedAt": "2026-09-21T13:45:14.282Z",
+    "endReason": "signal"
+  },
+  "audit": {
+    "sessionId": "9a9f5e31-eff9-4836-8d46-351ddb7b0d7b",
+    "endedAt": "2026-09-21T13:45:14.272Z",
+    "connectionErrors": 11,
+    "invalidMessages": 0,
+    "duplicateMessages": 0
+  },
+  "terminalHandles": {
+    "supervisor": 7353,
+    "primary": 40339,
+    "audit": 30644
+  },
+  "scope": "Historical1.3 observation with known natural interruptions and planned supervisor/upgrade disconnects. Simultaneous final forward shutdown increased observer connection error counters during graceful stop. Not uninterrupted service or universal subscriber receipt evidence.",
+  "baselineBeforeFinalStop": {
+    "primaryApiErrors": 6,
+    "primaryConnectionErrors": 3,
+    "auditConnectionErrors": 8,
+    "perRtuSampleDiscontinuities": 2
+  }
+}

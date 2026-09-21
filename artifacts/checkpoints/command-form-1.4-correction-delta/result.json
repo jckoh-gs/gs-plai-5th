@@ -1,0 +1,44 @@
+{
+  "result": "PASS",
+  "scope": "Same prior owned localRTU, direct invalid-date correction via Enter; no otherRTU change",
+  "rtuId": "43ad030c-2c0b-4cee-9676-3abb25fd578f",
+  "invalidPosts": 0,
+  "normal": {
+    "payload": {
+      "targetKw": 25.25,
+      "toleranceKw": 1,
+      "timeoutSeconds": 3.25,
+      "priority": 50,
+      "action": "set_target",
+      "commandId": "5330cc05-6e3e-480e-b487-1e00cd6fb639",
+      "expiresAt": "2026-09-21T13:41:01.983Z"
+    },
+    "status": "completed",
+    "actualKw": 25.25
+  },
+  "fractional": {
+    "payload": {
+      "targetKw": 25.25,
+      "toleranceKw": 1,
+      "timeoutSeconds": 3.25,
+      "priority": 50,
+      "action": "set_target",
+      "commandId": "547785be-4134-49e3-bd34-51be5e042e03",
+      "expiresAt": "2026-09-21T13:40:32.501Z"
+    },
+    "expiryOffsetMs": 250,
+    "status": "accepted"
+  },
+  "pageErrors": [],
+  "unhandledrejections": [],
+  "sourceSha256": "7960e5b6a748592a3ba84f1ee1b408096bdac8a44db743e4adc804bf9c083f33",
+  "uiSourceHashes": {
+    "web/src.jsx": "d44ecb94ea29950d0940c7ce8fe993420a4226c13088d70d59bfc01a25493227",
+    "web/command-form.js": "ba71bfda52cb154ab15765f5ebc99f8cab8e3ae80aed3d90543e5228e4d3b67e",
+    "scripts/browser-command-form.cjs": "f92b99d7fbc20100dc45ef988580f7630dab977e2fcc65ff7c6eb842be18a9c1"
+  },
+  "servedAsset": {
+    "path": "/assets/index-BndL-kls.js",
+    "sha256": "37a5224ba233be5966d02ac96fc91c7eddc0adad70e8d4783df6b5b4068d5bce"
+  }
+}

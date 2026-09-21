@@ -45,13 +45,13 @@
   "requestedModel": "Codex Astra",
   "modelVerification": "Agents inherited main session model; exact runtime model identifier not exposed by available goal tools.",
   "deployment": {
-    "observedAt": "2026-09-21T12:22:00.548Z",
-    "status": "Functional acceptance, outbox actualrestart, exactsnapshot1.3 and backward1.2 verified; final media/time gates pending",
-    "sourceCommit": "3fa3ba0a6984dc752a8968d1788e72a3069b1267",
-    "prdVersion": "1.10",
+    "observedAt": "2026-09-21T13:46:07.542Z",
+    "status": "Actual Ready1.4 image verified after rollout; API/UI/MQTT/restart/backuprestore acceptance pending, stable fallback remains1.3",
+    "sourceCommit": "fdd0491a5c08901962f46ac845f8582921150d45",
+    "prdVersion": "1.11",
     "context": "charles-k3s",
     "namespace": "gs-plai-5h",
-    "appImage": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+    "appImage": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4",
     "brokerImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
     "registryImage": "127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c",
     "uiTunnel": "http://127.0.0.1:3104",
@@ -61,7 +61,7 @@
     "recoveryReplicas": 0,
     "name": "grid",
     "mqttImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
-    "productVersion": "1.3.0"
+    "productVersion": "1.4.0"
   },
   "backup": {
     "result": "PASS",
@@ -122,9 +122,14 @@
     "idea": "IDEA-008",
     "ideaRevision": 3,
     "startedAt": "2026-09-21T13:34:20.352933+00:00",
-    "status": "Adopted; implementation and all candidate release gates pending",
+    "status": "Actual Ready1.4 image verified after rollout; API/UI/MQTT/restart/backuprestore acceptance pending, stable fallback remains1.3",
     "fallbackTag": "stable-v1.3.0",
-    "fallbackManifest": "artifacts/releases/checkpoint-1.3.0.json"
+    "fallbackManifest": "artifacts/releases/checkpoint-1.3.0.json",
+    "sourceCommit": "fdd0491a5c08901962f46ac845f8582921150d45",
+    "buildOwner": "/root/deployment",
+    "evidenceDirectory": "deploy/verification/candidate-fdd0491",
+    "appImage": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4",
+    "preUpgradeBackup": "deploy/verification/pre-1.4.0-backup.json"
   },
   "previousStableCheckpoints": [
     {
@@ -195,7 +200,7 @@
     "deadlineHardening": "artifacts/checkpoints/final-window-boundaries/summary.json",
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json"
   },
-  "updatedAt": "2026-09-21T13:35:13.591479+00:00",
+  "updatedAt": "2026-09-21T13:46:07.542Z",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
@@ -253,5 +258,24 @@
     "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
     "scope": "Temporary idle/system sleep assertions until original deadline, no persistent settings changed; system assertion applies only on AC. Cannot guarantee against manual/forced sleep, shutdown or process termination. Existing unrelated caffeinate processes preserved.",
     "evidence": "artifacts/checkpoints/host-power-guard-20260921T1333/activation.json"
+  },
+  "previousDeployment": {
+    "observedAt": "2026-09-21T12:22:00.548Z",
+    "status": "Functional acceptance, outbox actualrestart, exactsnapshot1.3 and backward1.2 verified; final media/time gates pending",
+    "sourceCommit": "3fa3ba0a6984dc752a8968d1788e72a3069b1267",
+    "prdVersion": "1.10",
+    "context": "charles-k3s",
+    "namespace": "gs-plai-5h",
+    "appImage": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+    "brokerImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+    "registryImage": "127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c",
+    "uiTunnel": "http://127.0.0.1:3104",
+    "mqttTunnel": "mqtt://127.0.0.1:18884",
+    "appPVC": "grid-data",
+    "brokerPVC": "grid-mqtt-data",
+    "recoveryReplicas": 0,
+    "name": "grid",
+    "mqttImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+    "productVersion": "1.3.0"
   }
 }

@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "recordedAt": "2026-09-21T13:42:37.175791+00:00",
+  "sourceCommit": "fdd0491a5c08901962f46ac845f8582921150d45",
+  "productVersion": "1.4.0",
+  "endpoint": "http://127.0.0.1:3107",
+  "scope": "Isolated local actual browser regression; auth/SSE interruption and stale recovery, CSV preview races, command export isolation/auth, scenarios/late responses/KMA feedback. Controlled response probes identified inside each harness. Not remote acceptance.",
+  "proofs": [
+    "auth/result.json",
+    "preview/race.json",
+    "export/result.json",
+    "scenario/result.json"
+  ],
+  "servedAssetSha256": "37a5224ba233be5966d02ac96fc91c7eddc0adad70e8d4783df6b5b4068d5bce",
+  "runtimeSourcesUnchangedSinceBuild": true,
+  "fixtures": "Dedicated candidate1.4 private SQLite; scenario harness creates new owned RTUs, preview/auth/export are read-only except controlled local browser fixtures."
+}

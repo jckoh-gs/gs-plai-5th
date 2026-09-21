@@ -1,0 +1,246 @@
+{
+  "result": "FAIL",
+  "message": "The expression evaluated to a falsy value:\n\n  assert(observed.seen.includes('executing'))\n",
+  "checks": [
+    {
+      "kind": "blocked-submission",
+      "key": "toleranceKw",
+      "value": "0",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "toleranceKw",
+      "message": "허용 오차 (kW): 0.01–10000 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "toleranceKw",
+      "value": "0",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "toleranceKw",
+      "message": "허용 오차 (kW): 0.01–10000 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "toleranceKw",
+      "value": "10001",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "toleranceKw",
+      "message": "허용 오차 (kW): 0.01–10000 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "toleranceKw",
+      "value": "10001",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "toleranceKw",
+      "message": "허용 오차 (kW): 0.01–10000 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "timeoutSeconds",
+      "value": "0",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "timeoutSeconds",
+      "message": "실행 timeout (초): 1–3600 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "timeoutSeconds",
+      "value": "0",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "timeoutSeconds",
+      "message": "실행 timeout (초): 1–3600 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "timeoutSeconds",
+      "value": "3601",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "timeoutSeconds",
+      "message": "실행 timeout (초): 1–3600 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "timeoutSeconds",
+      "value": "3601",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "timeoutSeconds",
+      "message": "실행 timeout (초): 1–3600 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "priority",
+      "value": "-1",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "priority",
+      "message": "우선순위 (0–100): 0–100 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "priority",
+      "value": "-1",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "priority",
+      "message": "우선순위 (0–100): 0–100 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "priority",
+      "value": "101",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "priority",
+      "message": "우선순위 (0–100): 0–100 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "priority",
+      "value": "101",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "priority",
+      "message": "우선순위 (0–100): 0–100 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "toleranceKw",
+      "value": "",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "toleranceKw",
+      "message": "허용 오차 (kW): 0.01–10000 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "toleranceKw",
+      "value": "",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "toleranceKw",
+      "message": "허용 오차 (kW): 0.01–10000 범위의 유한한 숫자를 입력하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "validSeconds",
+      "value": "1e20",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "validSeconds",
+      "message": "전달 유효기간으로 유효한 만료일을 만들 수 없습니다. 값을 확인하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "validSeconds",
+      "value": "1e20",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "validSeconds",
+      "message": "전달 유효기간으로 유효한 만료일을 만들 수 없습니다. 값을 확인하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "validSeconds",
+      "value": "300000000000",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "validSeconds",
+      "message": "만료일이 서버에서 지원하는 네 자리 연도 범위를 벗어납니다. 전달 유효기간을 확인하세요."
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "validSeconds",
+      "value": "300000000000",
+      "method": "enter",
+      "postDelta": 0,
+      "focus": "validSeconds",
+      "message": "만료일이 서버에서 지원하는 네 자리 연도 범위를 벗어납니다. 전달 유효기간을 확인하세요."
+    },
+    {
+      "kind": "boundary-only",
+      "key": "toleranceKw",
+      "value": 0.01,
+      "step": "any"
+    },
+    {
+      "kind": "boundary-only",
+      "key": "toleranceKw",
+      "value": 10000,
+      "step": "any"
+    },
+    {
+      "kind": "boundary-only",
+      "key": "toleranceKw",
+      "value": 0.125,
+      "step": "any"
+    },
+    {
+      "kind": "boundary-only",
+      "key": "timeoutSeconds",
+      "value": 1,
+      "step": "any"
+    },
+    {
+      "kind": "boundary-only",
+      "key": "timeoutSeconds",
+      "value": 3600,
+      "step": "any"
+    },
+    {
+      "kind": "boundary-only",
+      "key": "timeoutSeconds",
+      "value": 1.25,
+      "step": "any"
+    },
+    {
+      "kind": "boundary-only",
+      "key": "priority",
+      "value": 0,
+      "step": "any"
+    },
+    {
+      "kind": "boundary-only",
+      "key": "priority",
+      "value": 100,
+      "step": "any"
+    },
+    {
+      "kind": "boundary-only",
+      "key": "priority",
+      "value": 50.5,
+      "step": "any"
+    },
+    {
+      "kind": "blocked-submission",
+      "key": "validSeconds",
+      "value": "1e20",
+      "method": "button",
+      "postDelta": 0,
+      "focus": "validSeconds",
+      "message": "전달 유효기간으로 유효한 만료일을 만들 수 없습니다. 값을 확인하세요."
+    }
+  ],
+  "posts": [
+    {
+      "path": "/api/plants/b3b87155-6376-4550-ab91-c65d169763d6/commands",
+      "body": {
+        "targetKw": 25.5,
+        "toleranceKw": 0.125,
+        "timeoutSeconds": 3.25,
+        "priority": 50.5,
+        "action": "set_target",
+        "commandId": "debed0c5-e0a6-4ab6-a64a-c168c75caef1",
+        "expiresAt": "2026-09-21T13:37:18.859Z"
+      }
+    }
+  ],
+  "pageErrors": []
+}
