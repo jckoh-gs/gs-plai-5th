@@ -24,15 +24,15 @@
     "deployment": "/root/deployment"
   },
   "checks": {
-    "localUnit": "53 passing at artifacts/checkpoints/unit-round3.log",
+    "localUnit": "57 passing; Alpine container runtime also57pass",
     "localIntegration": "PASS",
     "localAdvanced": "PASS",
     "hardCrashPubackReplay": "PASS",
     "sixtySecondWindow": "PASS",
     "browserAuthStale": "PASS",
-    "backupRestore": "PASS; artifacts/checkpoints/restore-first.log",
-    "remote": "checkpoint0b23c41: k3s Running, authenticated browser+MQTT125kW, pod restart persistence PASS; next storage separation pending",
-    "media": "preparation; not produced",
+    "backupRestore": "PASS local pending exactbody PUBACK+75control+browser and remote previous/patched image recovery",
+    "remote": "79c996f patched main Running; previous-image isolated restore UI/auth/MQTT125+originalDB preserved; same restored DB patched-image compatibility PASS",
+    "media": "Preparation verified: Korean editablePPT render and actual1080p H264/AAC browser recording/pointer/click/zoom/voice/full decode; final media pending freeze",
     "weatherTimeout": "PASS actual12s AbortSignal, prior valid observation retained"
   },
   "notes": [

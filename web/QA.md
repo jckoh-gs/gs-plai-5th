@@ -23,3 +23,11 @@ All six faults applied and independently confirmed from API, then all reset thro
 Evidence reconciler `scripts/browser-flows.cjs` asserts API state and exact downloaded artifacts. It explicitly does not automate UI and does not substitute API assertions for browser observations. Result: `artifacts/checkpoints/browser-flows/result.json` PASS. All injected faults cleared. Model/replay changes remain only on named QA fixture for reproducible evidence; no other plants changed. No file screenshots exported via undocumented CUA APIs.
 
 Round2 code fixes: replay noise max50 matches contract; telemetry example uses rtuId; outbox guide distinguishes PUBACK completion marking from later retention deletion. `npm run build` passed after fixes.
+
+## REVIEW-004 remaining UI acceptance
+
+Native CUA at authenticated3103, same dedicated hybrid test RTU. Keyboard output slider20% resulted chart decline and rows200.2/200kW, aggregate400.2; stop showed chart0 and OFF rows; start returned400.2 and CURTAILED20%. Restored100% and total925.08. Separate API snapshots assert sum(generator power)=plant power=last chart sample for each stage.
+
+RTU search `Round2 UI` yielded one row; select then 발전 제어 화면 preserved the selected fixture. Guide selection switched to solar RTU12833923-5f3c-42aa-9f33-4fd8930a3bf1 and four topics updated. Code-copy clipboard was pasted into an unsubmitted registration CSV draft, verified exact topic text, then canceled. Keyboard Tab moved selector→연결 준비; accessible labels and keyboard slider operation observed. Wind0°→140° visibly changed rotor-plane yaw with camera unchanged; restored241°.
+
+Defect found: completed start/stop/set_limit result target column showed — despite server c.targets populated. Fixed fallback sum only for nonempty targets where all targetKw are finite; null feedback targets remain —. Built and refreshed browser, confirmed start400.2/400.2, stop0/0, restoredlimit925.1/925.1. No requirement/schema change. Evidence `artifacts/checkpoints/browser-flows/review004-ui.json` and `controls-stages.json` PASS. Root to assign central issue identifier. Test RTU final on=true,limit100%,direction241°,allfaultsfalse. Other plants not modified.

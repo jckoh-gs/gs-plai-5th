@@ -1,0 +1,12 @@
+{
+  "result": "PASS",
+  "suite": "hard-crash",
+  "evidence": {
+    "signal": "SIGKILL",
+    "pubackWithheld": true,
+    "brokerReceivedBeforeCrash": true,
+    "outboxUnacknowledgedAfterCrash": true,
+    "sameIdSequenceBodyAfterRestart": true,
+    "receiverDedup": true
+  }
+}

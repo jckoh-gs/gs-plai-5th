@@ -1,0 +1,141 @@
+{
+  "time": "2026-09-21T08:51:37.776Z",
+  "scope": "REVIEW-004 remaining native CUA UI acceptance; separate API checks reconcile observed state",
+  "rtuId": "1198d24d-8257-4d8b-baa9-169461b827e6",
+  "stages": [
+    {
+      "stage": "limit20",
+      "power": 400.2,
+      "lastHistory": {
+        "timestamp": "2026-09-21T08:49:04.916Z",
+        "sourceTimestamp": "2026-01-01T00:02:10.000Z",
+        "simulationSeconds": 4377,
+        "powerKw": 400.2,
+        "availableKw": 925.08
+      },
+      "generators": [
+        {
+          "id": "WT-01",
+          "on": true,
+          "power": 200.2,
+          "rated": 1001,
+          "limit": 20,
+          "status": "CURTAILED"
+        },
+        {
+          "id": "PV-02",
+          "on": true,
+          "power": 200,
+          "rated": 1000,
+          "limit": 20,
+          "status": "CURTAILED"
+        }
+      ]
+    },
+    {
+      "stage": "stop",
+      "power": 0,
+      "lastHistory": {
+        "timestamp": "2026-09-21T08:49:19.932Z",
+        "sourceTimestamp": "2026-01-01T00:03:25.000Z",
+        "simulationSeconds": 4452,
+        "powerKw": 0,
+        "availableKw": 925.08
+      },
+      "generators": [
+        {
+          "id": "WT-01",
+          "on": false,
+          "power": 0,
+          "limit": 20,
+          "status": "OFF"
+        },
+        {
+          "id": "PV-02",
+          "on": false,
+          "power": 0,
+          "limit": 20,
+          "status": "OFF"
+        }
+      ]
+    },
+    {
+      "stage": "start",
+      "power": 400.2,
+      "lastHistory": {
+        "timestamp": "2026-09-21T08:49:35.942Z",
+        "sourceTimestamp": "2026-01-01T00:04:45.000Z",
+        "simulationSeconds": 4532,
+        "powerKw": 400.2,
+        "availableKw": 925.08
+      },
+      "generators": [
+        {
+          "id": "WT-01",
+          "on": true,
+          "power": 200.2,
+          "limit": 20,
+          "status": "CURTAILED"
+        },
+        {
+          "id": "PV-02",
+          "on": true,
+          "power": 200,
+          "limit": 20,
+          "status": "CURTAILED"
+        }
+      ]
+    }
+  ],
+  "commands": [
+    {
+      "commandId": "21602d51-affa-4f84-a1c0-cc436847d561",
+      "action": "set_limit",
+      "status": "completed",
+      "targetSum": 925.08,
+      "actualKw": 925.08
+    },
+    {
+      "commandId": "1f8bc0c9-48ab-4f76-8273-0cebf929c756",
+      "action": "start",
+      "status": "completed",
+      "targetSum": 400.2,
+      "actualKw": 400.2
+    },
+    {
+      "commandId": "cbf1c18b-6e69-4448-b693-a03031d1f05e",
+      "action": "stop",
+      "status": "completed",
+      "targetSum": 0,
+      "actualKw": 0
+    },
+    {
+      "commandId": "a669072c-16ab-4855-851d-7e8360ccb811",
+      "action": "set_limit",
+      "status": "completed",
+      "targetSum": 400.2,
+      "actualKw": 400.2
+    }
+  ],
+  "observed": [
+    "Keyboard slider Home+20Right applied20%;chart dropped to400.2;rows200.2/200 and CURTAILED20%",
+    "Stop button produced chart0 and OFF rows0/0;start button restored400.2 and CURTAILED20%",
+    "Restored100% before ending;chart and table returned925.08",
+    "RTU name search Round2 UI displayed single fixture row;select+발전제어화면 preserved fixture",
+    "Guide RTU changed from hybrid1198d24d to solar12833923;all4topics changed to selected id",
+    "Actual clipboardcopy pasted into canceled registration draft matched all4solar topics",
+    "KeyboardTab from RTU selector focused 연결준비;native labels announced by accessibility tree;range keyboard operation verified",
+    "Wind0deg→140deg with cameraunchanged visibly yawed rotorplane from broadface toedge-on;restored241deg",
+    "Found blank targets for completedstart/stop/limit;fixed sumtargets fallback onlyifallfinite;rebuilt+browser confirmed400.2/400.2,start;0/0stop;925.1/925.1limit"
+  ],
+  "defect": {
+    "title": "Completed non-set_target command targets were blank",
+    "fix": "Fallback sum of server targets only if nonempty and every targetKw finite; pending null targets stay unavailable",
+    "browserRegression": "PASS"
+  },
+  "remaining": [
+    "Exhaustive keyboard traversal/screenreader testing outside observed controls not claimed",
+    "Screenshots inspected inline;no file export via undocumented CUA APIs"
+  ],
+  "assertions": "PASS"
+}

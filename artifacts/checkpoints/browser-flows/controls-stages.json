@@ -1,0 +1,85 @@
+[
+  {
+    "stage": "limit20",
+    "power": 400.2,
+    "lastHistory": {
+      "timestamp": "2026-09-21T08:49:04.916Z",
+      "sourceTimestamp": "2026-01-01T00:02:10.000Z",
+      "simulationSeconds": 4377,
+      "powerKw": 400.2,
+      "availableKw": 925.08
+    },
+    "generators": [
+      {
+        "id": "WT-01",
+        "on": true,
+        "power": 200.2,
+        "rated": 1001,
+        "limit": 20,
+        "status": "CURTAILED"
+      },
+      {
+        "id": "PV-02",
+        "on": true,
+        "power": 200,
+        "rated": 1000,
+        "limit": 20,
+        "status": "CURTAILED"
+      }
+    ]
+  },
+  {
+    "stage": "stop",
+    "power": 0,
+    "lastHistory": {
+      "timestamp": "2026-09-21T08:49:19.932Z",
+      "sourceTimestamp": "2026-01-01T00:03:25.000Z",
+      "simulationSeconds": 4452,
+      "powerKw": 0,
+      "availableKw": 925.08
+    },
+    "generators": [
+      {
+        "id": "WT-01",
+        "on": false,
+        "power": 0,
+        "limit": 20,
+        "status": "OFF"
+      },
+      {
+        "id": "PV-02",
+        "on": false,
+        "power": 0,
+        "limit": 20,
+        "status": "OFF"
+      }
+    ]
+  },
+  {
+    "stage": "start",
+    "power": 400.2,
+    "lastHistory": {
+      "timestamp": "2026-09-21T08:49:35.942Z",
+      "sourceTimestamp": "2026-01-01T00:04:45.000Z",
+      "simulationSeconds": 4532,
+      "powerKw": 400.2,
+      "availableKw": 925.08
+    },
+    "generators": [
+      {
+        "id": "WT-01",
+        "on": true,
+        "power": 200.2,
+        "limit": 20,
+        "status": "CURTAILED"
+      },
+      {
+        "id": "PV-02",
+        "on": true,
+        "power": 200,
+        "limit": 20,
+        "status": "CURTAILED"
+      }
+    ]
+  }
+]

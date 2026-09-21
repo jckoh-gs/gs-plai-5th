@@ -124,3 +124,7 @@ ISSUE-005의 배포/브라우저/복원/미디어 등 다른 게이트는 이 �
 - 수정: `updatedAt`이 없을 때 '상태 수신 대기', 이후 정상/지연/재연결 분기 유지. 기존 AT-FRESH 요구의 구현 보완이며 새 범위 아님.
 - 증거: `scripts/browser-check.cjs`의 최초 `/api/state` 503 경계, 열린 SSE chunk 전달 중단, socket 단절, 복구 UI assertions와 `artifacts/checkpoints/browser-stream-boundaries.log` PASS를 대조했다. 이번 이슈 담당자가 브라우저 시험을 직접 재실행한 것은 아니다.
 - 잔여: 실제 최종 배포 revision 연결과 복원 UI 흐름은 메인 검증 범위.
+
+## ISSUE-009 — 완료된 start/stop/set_limit의 목표 출력 표시 누락
+
+상태: 수정 및 실제 브라우저 검증 완료, 다음 최종 이미지 반영 대기. 명령 결과 표가 request.targetKw만 읽어 start/stop/set_limit의 관측된 대상별 목표를 비워 표시했다. targets가 비어 있지 않고 모든 targetKw가 유한한 경우에만 합계를 표시한다. 피드백 전 null을0으로 만들지 않는다. UI 검증에서 stop0/0, start400.2/400.2, set_limit400.2/400.2,100%복귀925.1/925.1을 확인했다. 증거: artifacts/checkpoints/browser-flows/review004-ui.json 및 controls-stages.json, web/QA.md.
