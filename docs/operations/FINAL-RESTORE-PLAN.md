@@ -117,7 +117,11 @@ final_command 20 kubectl --context charles-k3s -n gs-plai-5h get deployment/"$FI
 
 ## 매니페스트와 새 미디어 결합
 
-메인이 `run.json.backup`을 선택한 새 백업 메타데이터로 갱신하고 `stableCheckpoint`의 backupEvidence/recoveryEvidence를 이번 summary에 연결한다. acceptance OPS-05에도 같은 증거를 연결한다. 현재 `release-manifest.js`는 tracked 파일만 evidence에 포함하고 존재 자체로 수락을 판정하지 않는다. 따라서 새 복원증거/메타데이터/acceptance/run을 명시적으로 add/commit한 다음 매니페스트를 생성한다. 비밀 SQLite/자격증명은 add하지 않는다. 매니페스트가 해시한 원본 증거를 이후 수정하면 무결성 검증이 실패하므로 새로운 최종 미디어 증거는 별도 기록한다.
+메인이 `run.json.backup`을 실제 복원이 증명된 선택 백업 메타데이터로 갱신한다. `release-manifest.js`는 이 필드를 최종 manifest.backup으로 복사한다. 새 백업 복원이 컷오프까지 증명되지 않았다면 기존 검증된5ff 백업을 그대로 선택하고 미검증 새 파일을 대신 넣지 않는다.
+
+기존 `stableCheckpoint`는 불변 `checkpoint-1.7.1.json`·stable-v1.7.1 태그·5ff 백업·당시 복원 증거의 연결로 보존한다. 그 backupEvidence/recoveryEvidence를 새 최종 백업으로 덮어써 과거 태그가 새 복원을 가리키는 것처럼 만들지 않는다. 실제 최종 선택은 별도 `run.json.finalReleaseSelection`과 resume의 같은 항목에 selectedAt, 정확 runtime/image, backupEvidence, recoveryEvidence, 선택 근거와 fallback manifest를 기록한다. 매니페스트 생성·검증·태그 전달이 끝난 뒤 그 실제 경로·SHA·source commit·tag commit을 이 최종 선택 기록에 추가한다. 계획 상태를 완료로 기록하지 않으며, 현재는 이 선택 객체나 최종 매니페스트를 미리 만들지 않는다.
+
+acceptance OPS-05에는 실제 선택과 동일한 복원 증거를 연결한다. 현재 `release-manifest.js`는 tracked 파일만 evidence에 포함하고 존재 자체로 수락을 판정하지 않는다. 따라서 새 복원증거/메타데이터/acceptance/run을 명시적으로 add/commit한 다음 매니페스트를 생성한다. 비밀 SQLite/자격증명은 add하지 않는다. 매니페스트가 해시한 원본 증거를 이후 수정하면 무결성 검증이 실패하므로 새로운 최종 미디어 증거는 별도 기록한다. 이후 현재 acceptance가 최종 미디어 인수로 갱신되면 동결 source commit의 과거 manifest 검증에는 `--at-commit`을 사용하고, 새 최종 판정은 별도 인도 기록과 현재 acceptance에 연결한다. 과거 manifest의 인수를 소급해서 바꾸지 않는다.
 
 ```sh
 test ! -e artifacts/releases/final-20260921.json

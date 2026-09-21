@@ -35,6 +35,8 @@ revision3 보존 커밋9c90808 전달 뒤 [19:24Z 읽기 점검](../../artifacts
 
 ## 다음 작업과 원래 마감
 
+최종 백업 선택은 기존 불변1.7.1/5ff 체크포인트 기록을 보존한 채 별도 `finalReleaseSelection`에 기록한다. 실제 복원이 증명된 선택만 `run.backup`과 새 최종 매니페스트에 연결하며 기존 stable 태그의 백업·복원 근거를 덮어쓰지 않는다. [독립 제품 검토057](../product/REVIEW-057.md)은 이 절차와 생성·검증 코드의 일치를 확인했다. 실제 최종 선택과 매니페스트는 아직 없다.
+
 동결 시 기존 관측기의 원래 핸들 종료0과 각 종료 파일·마지막 poll·전체 로그·실제 소스를 함께 보존한다. [종료 절차의 독립 준비 검토](../issues/evidence/final-observer-closeout-preparation-review.json)는 실제 finally/close 처리와 계획의 일치를 확인했으며 실제 종료나 최종 역할 판정은 아니다. 정상 종료에 따른 연결 해제 증가를 새 장애로 오인하지 않고 감독기와 운영 터널은 최종 촬영까지 유지한다. 정확한 파일과 순서는 [최종 복원 계획](FINAL-RESTORE-PLAN.md)을 따른다.
 
 [추가 제품 검토056](../product/REVIEW-056.md)은 새 실증 결함이나 남은 시간에 전체 검증 가능한 개선안이 없어 이번 회차 새 기능을 채택하지 않았다. 제품1.7.1/PRD1.15와 원래 일정을 유지한다. [19:53Z 공간 관측](../../artifacts/checkpoints/capacity-1.7.1-pre-final/README.md)은 동일 main Pod·레지스트리 Ready,35개 Bound PVC, DB약1.30GB/노드 여유약58.7GB를 확인했다. 실제 동결 직전 공간 재확인은 여전히 필요하며 최종 역할 판정·백업·복원을 대신하지 않는다.
