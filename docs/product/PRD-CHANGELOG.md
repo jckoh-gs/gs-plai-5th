@@ -1,5 +1,9 @@
 # PRD 변경 이력
 
+## 1.15 — IDEA012 개정1 채택 / 제품1.7.1 후보
+
+NFR08 검토/REVIEW040에서 확인한 MQTT monitor online 유실·quickstart 환경/포트 불일치·미지원 v1 문구를 정정한다. FR-VPP-STATUS01 및 AT-VPP-STATUS01 네개를 추가하고 PRD 부록A/B와 배포 가이드를 함께 맞춘다. 현재 명령 중복방지·복원·실제시간 만료는 유지한다. 서버/DB/제어/UI/wire schema/OSS 변경 없이 기존 상태 관측 계약을 이행하며 stable1.7과 원래 시간·최종미디어 게이트를 유지한다. 새 후보 인수는 대기다.
+
 ## 1.14 — IDEA011 개정1 채택 / 제품1.7.0 후보
 
 실제1.6 읽기+브라우저GET503 fixture에서기존명령행이있을때오류가숨는현상을REVIEW034로확인했다. UI13/AT-COMMAND-LIST01 네개를추가한다. 목록별loading/empty/failure·마지막성공브라우저시각·행보존/복구·RTU경합·단일유한poll수명에한정한다. POST/서버/DB/API/export를변경하지않고stable1.6과원래마감·최종미디어게이트를유지한다. 신규인수는대기다.

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T17:07:00.865461+00:00",
+  "updatedAt": "2026-09-21T17:24:41.534332+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -10,7 +10,7 @@
     "commit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
     "tag": "stable-v1.7.0",
     "tagState": "created-and-remote-verified",
-    "tagScope": "Full operational/evidence checkpoint; tag pending manifest verification",
+    "tagScope": "Full verified operational/evidence checkpoint",
     "alias": "stable-runtime-v1.7.0-d98d3c4",
     "appImage": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
     "backupEvidence": "deploy/verification/stable-backup-d98d3c4.json",
@@ -28,10 +28,10 @@
     "tagVerification": "artifacts/checkpoints/release-1.7/tags.json"
   },
   "workingMilestone": {
-    "productVersion": "1.7.0",
-    "prdVersion": "1.14",
-    "idea": "IDEA-011",
-    "state": "Stable1.7 checkpoint delivered toremote; continuousobservations and originalfinalmedia window remain"
+    "productVersion": "1.7.1",
+    "prdVersion": "1.15",
+    "idea": "IDEA-012",
+    "state": "Candidateexistingcontractpatch; actualmainstable1.7"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -43,7 +43,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Keep live1.7 observations/supervisor; first-hourcapture only after actual17:45:54.307Z using recorded preparation script/identity checks. REVIEW039 foundno justifiednewfeature; prioritize finalsecurity/issues consistency, samevideo decklayout preparation and originalfinalwindow.",
+    "Validate adopted1.7.1 CLI/protocol correction locally (fullsuite, actualbroker CLI/dispatch, cleanenvguide), independently review source/security/media compatibility, commit exactruntime andbuild/scanimage. Keepactualstable1.7 observers; no rollout beforeactual1h capture17:45:54.307Z. Then explicitnewbackup/current+backwardrestore/manifest gates; fallback1.7 preserved.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -368,15 +368,10 @@
     "instruction": "Use FINAL-RESTORE-PLAN bounded direct commands and media watchdog; inspect uncertain remote outcome before retry; immutable1.3 checkpoint unchanged"
   },
   "nextProductProposal": {
-    "state": "IDEA011 complete; nextboundedsource review found no justified newfeature",
-    "owner": "/root/product",
-    "review": "docs/product/REVIEW-034.md",
-    "scope": "Existingcommandrows hide subsequentGETfailure despite healthyglobalSSE; browser-only503fixture/APIwrites0. Consider bounded command-list freshness UI withoutserver/DB/control changes.",
-    "idea": "IDEA-011",
-    "evidence": "artifacts/checkpoints/command-list-readonly-before/result.json",
-    "adoptedAt": "2026-09-21T16:24:46.061882+00:00",
-    "nextReview": "docs/product/REVIEW-039.md",
-    "decision": "No new version or scope; observation/finalmedia/security/handoff remain active"
+    "state": "AdoptedIDEA012revision1/1.7.1/PRD1.15",
+    "review": "docs/product/REVIEW-040.md",
+    "beforeEvidence": "docs/operations/NFR08-CONTRACT-FIXTURES-20260922.json",
+    "adoptedAt": "2026-09-21T17:16:40.505705+00:00"
   },
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
@@ -448,102 +443,66 @@
     "retirementEvidence": "artifacts/checkpoints/local-fixture-1.7-retirement/summary.json"
   },
   "candidateOperations": {
-    "productVersion": "1.7.0",
-    "prdVersion": "1.14",
-    "idea": "IDEA-011",
-    "phase": "Completed1.7 checkpoint: main/pairedrestore/immutablemanifest/tags remoteverified; no active candidatewrites",
-    "uiOwner": "/root/ui",
-    "browserOwner": "/root/issues",
-    "securityOwner": "/root/security",
-    "fallback": "artifacts/releases/checkpoint-1.6.0.json",
-    "beforeEvidence": "artifacts/checkpoints/command-list-readonly-before/result.json",
+    "productVersion": "1.7.1",
+    "prdVersion": "1.15",
+    "idea": "IDEA-012",
+    "ideaRevision": 1,
+    "startedAt": "2026-09-21T17:16:40.505705+00:00",
+    "status": "Local full317, actual integration/advanced/report/client-security, retained online/LWT monitor and fresh private quickstart passed; independent local review and exact image gates pending",
+    "fallbackTag": "stable-v1.7.0",
+    "fallbackManifest": "artifacts/releases/checkpoint-1.7.0.json",
+    "beforeEvidence": "docs/operations/NFR08-CONTRACT-FIXTURES-20260922.json",
+    "adoptionReview": "docs/product/REVIEW-040.md",
+    "implementationOwner": "/root/transport",
+    "scope": "StrictbooleanRTUonline in suppliedmonitor; exampleenv/ports/unsupportedlegacy wording. No serverDBUI/wire/OSS changes. Do not rollout before captured actual1.7 firsthour at17:45:54.307Z.",
+    "phase": "Local gates passed; exact source commit and image build/security next; actual stable1.7 remains unchanged",
     "activeOperations": [],
-    "policy": "Actualmain1.7 supervisor77410/primary85394/audit60682 remainrunning. Local3111 andbothrestore3105/18885 ended. ReadactualPID/startidentity before restarting. No uncertainwrite retry; originalfreeze/deadline unchanged.",
-    "localSummary": "artifacts/checkpoints/candidate-1.7-local-summary.json",
-    "runtimeCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
-    "candidateImage": "sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
-    "completedImageBuild": {
-      "owner": "deployment",
-      "handle": 43018,
-      "exitCode": 0
-    },
-    "preUpgradeBackup": {
-      "metadata": "deploy/verification/pre-1.7.0-backup.json",
-      "rootReview": "deploy/verification/candidate-d98d3c4/pre-upgrade/backup/root-backup-review.json",
-      "handle": 53201,
-      "exitCode": 0
-    },
-    "exactImageVerification": "deploy/verification/candidate-d98d3c4/provenance.json",
-    "registryProof": "deploy/verification/candidate-d98d3c4/registry-push-proof.json",
-    "security": "docs/security/evidence/app-candidate-d98d3c4-findings.json",
-    "mainMqtt": {
-      "handle": 37873,
+    "mainWritesAllowed": false,
+    "localClientStatusEvidence": "artifacts/checkpoints/candidate-1.7.1-local/client-status-integration.json",
+    "mediaCompatibility": "docs/operations/MEDIA-1.7.1-COMPATIBILITY.md",
+    "policy": "Preserve actual1.7/1cab/stabletags; capture real first hour before rollout. Owned private quickstart3112 ended; unrelated3101 PID20846 preserved. CLI test used random tempDB/HTTPport/prefix and owned local18883 broker. No ended fixture restart.",
+    "completedFullSuite": {
+      "handle": 11498,
       "exitCode": 0,
-      "evidence": "deploy/verification/candidate-d98d3c4/main-mqtt.json"
+      "passed": 317,
+      "failed": 0,
+      "log": "artifacts/checkpoints/candidate-1.7.1-local/full-suite.log"
     },
-    "mainRegressions": "deploy/verification/candidate-d98d3c4/main-regression/summary.json",
-    "outboxRestart": {
-      "state": "PASSterminal0rootnormalconfirmed",
-      "targetOwnedRtu": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
-      "evidence": "deploy/verification/candidate-d98d3c4/outbox-restart.json",
-      "temporaryPorts": [
-        3107,
-        18887
-      ],
-      "policy": "Oninterruption inspectactualPodUID/RTUoffline/outboxmessage andprocess before retry; finallymustrestoreoriginalofflinefalse.",
-      "handle": 17841,
-      "observerOwner": "deployment",
-      "observerHandle": 79945,
-      "normalEvidence": "deploy/verification/candidate-d98d3c4/outbox-post-normal.json"
+    "completedLocalHandles": {
+      "fullSuite": {
+        "handle": 11498,
+        "exitCode": 0,
+        "pass": 317
+      },
+      "integration": {
+        "handle": 57400,
+        "exitCode": 0
+      },
+      "advanced": {
+        "handle": 39072,
+        "exitCode": 0
+      },
+      "reportAndClientSecurity": {
+        "handle": 12901,
+        "exitCode": 0
+      },
+      "quickstartRound1": {
+        "handle": 82256,
+        "exitCode": 125,
+        "reason": "macOS cp -n existing-file skip returned1; preserved"
+      },
+      "quickstartRound2": {
+        "handle": 75804,
+        "exitCode": 0
+      },
+      "build": {
+        "handle": 6535,
+        "exitCode": 0
+      }
     },
-    "mediaRehearsal": {
-      "owner": "media",
-      "handle": 58112,
-      "exitCode": 0,
-      "directory": "artifacts/media-preparation/full-candidate17-20260921",
-      "privateJournal": "artifacts/private/media-candidate17-1790008670218.json",
-      "state": "Completed+normalrecovery+REVIEW036; localfixture retired; preparation only"
-    },
-    "normalBackup": {
-      "handle": 24866,
-      "exitCode": 0,
-      "metadata": "deploy/verification/stable-backup-d98d3c4.json",
-      "rootReview": "deploy/verification/candidate-d98d3c4/normal-backup/root-backup-review.json"
-    },
-    "currentRestoreProgress": {
-      "setupHandle": 79306,
-      "setupExit": 0,
-      "baselineHandle": 26502,
-      "baselineExit": 0,
-      "mqttHandle": 37540,
-      "mqttExit": 0,
-      "cleanupHandle": 60723,
-      "cleanupExit": 0,
-      "forwardHandle": 19658,
-      "forwardExit": 143,
-      "scope": "Owner terminal results androotlive cleanup verified"
-    },
-    "restoreSummary": "deploy/verification/candidate-d98d3c4/restore-summary.json",
-    "rootCleanupReview": "deploy/verification/candidate-d98d3c4/root-recovery-review/summary.json",
-    "independentFunctionalReview": "docs/product/REVIEW-037.md",
-    "restoreState": "All ownerhandles ended; same1cab current1.7/backward1.6 PASS25; both0/noPods/4BoundPVC/portsclosed",
-    "backwardRestoreProgress": {
-      "setupHandle": 99596,
-      "setupExit": 0,
-      "baselineHandle": 31998,
-      "baselineExit": 0,
-      "mqttHandle": 64790,
-      "mqttExit": 0,
-      "cleanupHandle": 43322,
-      "cleanupExit": 0,
-      "forwardHandle": 54676,
-      "forwardExit": 143
-    },
-    "rendererCorrection": {
-      "commit": "4b6009d",
-      "evidence": "artifacts/checkpoints/deployment-renderer/summary.json",
-      "status": "PASS client-only dryrun/full312; no realapply"
-    }
+    "quickstartEvidence": "artifacts/checkpoints/candidate-1.7.1-local/quickstart.json",
+    "localSummary": "artifacts/checkpoints/candidate-1.7.1-local/summary.json",
+    "independentLocalReview": "docs/product/REVIEW-041.md"
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
   "previousCandidateFixture": {
@@ -957,6 +916,104 @@
       "restoreState": "Allownerhandlesended; same9bdcurrent1.6/backward1.5PASS21; both0/noPods/4PVCretained/portsclosed",
       "independentFunctionalReview": "docs/product/REVIEW-032.md",
       "terminalStatusScope": "Initialcorelocal handles passed; historicalbackupfull failures1/1/0 and firstimagefixture125 retained in explicit subrecords, not allzero"
+    },
+    {
+      "productVersion": "1.7.0",
+      "prdVersion": "1.14",
+      "idea": "IDEA-011",
+      "phase": "Completed1.7 checkpoint: main/pairedrestore/immutablemanifest/tags remoteverified; no active candidatewrites",
+      "uiOwner": "/root/ui",
+      "browserOwner": "/root/issues",
+      "securityOwner": "/root/security",
+      "fallback": "artifacts/releases/checkpoint-1.6.0.json",
+      "beforeEvidence": "artifacts/checkpoints/command-list-readonly-before/result.json",
+      "activeOperations": [],
+      "policy": "Actualmain1.7 supervisor77410/primary85394/audit60682 remainrunning. Local3111 andbothrestore3105/18885 ended. ReadactualPID/startidentity before restarting. No uncertainwrite retry; originalfreeze/deadline unchanged.",
+      "localSummary": "artifacts/checkpoints/candidate-1.7-local-summary.json",
+      "runtimeCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
+      "candidateImage": "sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+      "completedImageBuild": {
+        "owner": "deployment",
+        "handle": 43018,
+        "exitCode": 0
+      },
+      "preUpgradeBackup": {
+        "metadata": "deploy/verification/pre-1.7.0-backup.json",
+        "rootReview": "deploy/verification/candidate-d98d3c4/pre-upgrade/backup/root-backup-review.json",
+        "handle": 53201,
+        "exitCode": 0
+      },
+      "exactImageVerification": "deploy/verification/candidate-d98d3c4/provenance.json",
+      "registryProof": "deploy/verification/candidate-d98d3c4/registry-push-proof.json",
+      "security": "docs/security/evidence/app-candidate-d98d3c4-findings.json",
+      "mainMqtt": {
+        "handle": 37873,
+        "exitCode": 0,
+        "evidence": "deploy/verification/candidate-d98d3c4/main-mqtt.json"
+      },
+      "mainRegressions": "deploy/verification/candidate-d98d3c4/main-regression/summary.json",
+      "outboxRestart": {
+        "state": "PASSterminal0rootnormalconfirmed",
+        "targetOwnedRtu": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+        "evidence": "deploy/verification/candidate-d98d3c4/outbox-restart.json",
+        "temporaryPorts": [
+          3107,
+          18887
+        ],
+        "policy": "Oninterruption inspectactualPodUID/RTUoffline/outboxmessage andprocess before retry; finallymustrestoreoriginalofflinefalse.",
+        "handle": 17841,
+        "observerOwner": "deployment",
+        "observerHandle": 79945,
+        "normalEvidence": "deploy/verification/candidate-d98d3c4/outbox-post-normal.json"
+      },
+      "mediaRehearsal": {
+        "owner": "media",
+        "handle": 58112,
+        "exitCode": 0,
+        "directory": "artifacts/media-preparation/full-candidate17-20260921",
+        "privateJournal": "artifacts/private/media-candidate17-1790008670218.json",
+        "state": "Completed+normalrecovery+REVIEW036; localfixture retired; preparation only"
+      },
+      "normalBackup": {
+        "handle": 24866,
+        "exitCode": 0,
+        "metadata": "deploy/verification/stable-backup-d98d3c4.json",
+        "rootReview": "deploy/verification/candidate-d98d3c4/normal-backup/root-backup-review.json"
+      },
+      "currentRestoreProgress": {
+        "setupHandle": 79306,
+        "setupExit": 0,
+        "baselineHandle": 26502,
+        "baselineExit": 0,
+        "mqttHandle": 37540,
+        "mqttExit": 0,
+        "cleanupHandle": 60723,
+        "cleanupExit": 0,
+        "forwardHandle": 19658,
+        "forwardExit": 143,
+        "scope": "Owner terminal results androotlive cleanup verified"
+      },
+      "restoreSummary": "deploy/verification/candidate-d98d3c4/restore-summary.json",
+      "rootCleanupReview": "deploy/verification/candidate-d98d3c4/root-recovery-review/summary.json",
+      "independentFunctionalReview": "docs/product/REVIEW-037.md",
+      "restoreState": "All ownerhandles ended; same1cab current1.7/backward1.6 PASS25; both0/noPods/4BoundPVC/portsclosed",
+      "backwardRestoreProgress": {
+        "setupHandle": 99596,
+        "setupExit": 0,
+        "baselineHandle": 31998,
+        "baselineExit": 0,
+        "mqttHandle": 64790,
+        "mqttExit": 0,
+        "cleanupHandle": 43322,
+        "cleanupExit": 0,
+        "forwardHandle": 54676,
+        "forwardExit": 143
+      },
+      "rendererCorrection": {
+        "commit": "4b6009d",
+        "evidence": "artifacts/checkpoints/deployment-renderer/summary.json",
+        "status": "PASS client-only dryrun/full312; no realapply"
+      }
     }
   ],
   "additionalMediaPreparation": {

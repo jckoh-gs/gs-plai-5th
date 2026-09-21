@@ -1,0 +1,63 @@
+{
+  "reviewedHead": "f9147d1",
+  "method": "pure local imports; no connection or control",
+  "statusFixture": [
+    {
+      "input": {
+        "rtuId": "fixture-rtu",
+        "online": true
+      },
+      "monitorPrintedObject": {
+        "kind": "status",
+        "topic": "vpp/rtu/fixture-rtu/status",
+        "rtuId": "fixture-rtu",
+        "messageId": null,
+        "runId": null,
+        "serverVersion": null,
+        "commandId": null,
+        "status": null,
+        "actualKw": null,
+        "errorKw": null,
+        "reason": null,
+        "timestamp": null,
+        "powerKw": null,
+        "sampleCount": null
+      }
+    },
+    {
+      "input": {
+        "rtuId": "fixture-rtu",
+        "online": false
+      },
+      "monitorPrintedObject": {
+        "kind": "status",
+        "topic": "vpp/rtu/fixture-rtu/status",
+        "rtuId": "fixture-rtu",
+        "messageId": null,
+        "runId": null,
+        "serverVersion": null,
+        "commandId": null,
+        "status": null,
+        "actualKw": null,
+        "errorKw": null,
+        "reason": null,
+        "timestamp": null,
+        "powerKw": null,
+        "sampleCount": null
+      }
+    }
+  ],
+  "outputsIdentical": true,
+  "bareConfig": {
+    "port": 3001,
+    "mqttUrl": "mqtt://127.0.0.1:1883"
+  },
+  "exampleNonsecretLines": [
+    "HOST=127.0.0.1",
+    "PORT=3101",
+    "MQTT_URL=mqtt://127.0.0.1:18883",
+    "MQTT_PREFIX=vpp"
+  ],
+  "composeLoopbackPortLine": "      - \"127.0.0.1:18883:1883\"",
+  "protocolQuickstart": "npm install\nnpm run broker\nnpm run build\nnpm start\n"
+}

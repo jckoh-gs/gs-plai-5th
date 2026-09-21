@@ -1,0 +1,34 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T17:20:15Z",
+  "scope": "Fresh private source/dependency/env/DB build and real guide path; existing project-owned examplebroker reused via explicit COMPOSE_FILE/PROJECT_NAME and --no-recreate to preserve local service. Not a new clean broker installation. No remote changes.",
+  "checks": {
+    "initialPreflight": "Firstattempt stopped beforecopy/start because3101 is occupied by existingPID20846; preserved. Thisattempt uses explicitPORT3112 override. Example .env3101/18883 bytevalues separately verified.",
+    "appStartMethod": "npm start script invokes node --env-file-if-exists=.env server/index.js; run that exact node command directly to own and clean its process.",
+    "npmCiExit": 0,
+    "copyAbsentEnvExit": 0,
+    "copyExistingEnvExit": 0,
+    "existingEnvironmentPreserved": true,
+    "brokerExit": 0,
+    "existingOwnedBrokerReusedWithoutReplacement": true,
+    "buildExit": 0,
+    "appVersion": "1.7.1",
+    "connectedDemoRtus": 3,
+    "httpPort": 3112,
+    "mqttPort": 18883,
+    "actualGuideServed": true,
+    "ownedNodeStartTerminal": 0,
+    "ownedPortClosed": true,
+    "originalWorkspaceEnvUnchanged": true,
+    "packageLockMatchesCandidate": true
+  },
+  "privateWorkdir": "artifacts/private/quickstart-1.7.1-round2",
+  "sourceHashes": {
+    "package.json": "8560c180daec6b576feb057395d6ee692e5f77a4f851e3398dad54719f2db304",
+    "package-lock.json": "7fc8d323eb98ed41aa1c5387168068695793c70aa006c9190c51f3cbe421f563",
+    ".env.example": "7a61516e97f0dd26761a948d260ebd14c5149b013fea521263f52b7bfdaa78e4",
+    "docker-compose.yml": "3bbac96558c5938aff3f0a1f8753750c83c57652434ec8a0d5a1086e267dc718",
+    "docs/protocol.md": "07295bdbc14613aa87a3890ee32439e715009ca2310859ad2dc18259d4734709",
+    "server/config.js": "9ed29685b837bb4da146792723bd4edd9cf4874a8a31e3da75f4f8027bcedac6"
+  }
+}

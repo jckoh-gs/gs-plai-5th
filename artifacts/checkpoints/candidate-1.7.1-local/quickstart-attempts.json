@@ -1,0 +1,19 @@
+{
+  "recordedAt": "2026-09-21T17:20:09.379425+00:00",
+  "attempts": [
+    {
+      "attempt": 1,
+      "exitCode": 125,
+      "stage": "preflight",
+      "reason": "3101occupied byexistingPID20846; no privatecopy orappstarted; existingprocesspreserved"
+    },
+    {
+      "attempt": 2,
+      "handle": 82256,
+      "exitCode": 125,
+      "stage": "existing-env preservation command",
+      "reason": "macOS cp -n skipped existingfile with exit1; privatefixturebytespreserved, harness incorrectlyrequired0. No broker/build/appstart yet. Freshsource/187packages installpassed. Originalattemptdirectorypreserved.",
+      "correction": "Guide/PRD now conditional existingfile/symlink guard; only absent .env calls no-clobber copy. Freshround2 uses exactdocumented setup block. Existing workspace .env never touched."
+    }
+  ]
+}

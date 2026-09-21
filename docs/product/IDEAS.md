@@ -138,3 +138,15 @@ IDEA011 개정1 채택: PRD1.14/제품1.7.0후보, UI13 및 AT-COMMAND-LIST01 �
 ### IDEA011 구현·배포·복원 인수 완료
 
 제품1.7.0/runtime d98d3c4/PRD1.14를 실제k3s에 배포했다. 로컬8군 경계검증과 실제main/현재복원 목록읽기, 같은1cab 스냅샷의1.7/1.6복원23보고서+2Pod identity를 REVIEW037에서 대조했다. REVIEW038은 checkpoint-1.7.0의1731해시/실제Ready/선택백업을 확인했다. 위 제안·채택대기 표현은 당시 이력이다. 종료시각과 최종 신규 영상·같은영상 PPT 게이트는 남아 있으며 전체 목표 완료를 뜻하지 않는다.
+
+## IDEA-012 · 연동 가이드와 RTU 상태 관측 계약 정정 — 제안 v1
+
+**미채택·미구현 제안.** REVIEW040과 NFR08-CONTRACT-REVIEW/FIXTURES-20260922의 소스·순수 fixture 근거로 제품1.7.1/PRD1.15 패치를 권고한다. 독립 quickstart의 안전한 `.env` 준비와 실제 예제 포트, monitor의 strict boolean online/offline 구분, 구현되지 않은 legacy_accepted 약속 정정이 최소 범위다. PRD 부록 A의 같은 두 문서 불일치도 함께 정정해야 한다. 현재 명령 중복방지·재시작/하위버전 복원·MQTT wire 계약을 줄이지 않는다. 새 DB/server/control/UI 변경은 불필요하며 실제 격리 실행/monitor 및 기존 배포·복원 근거를 채택 후 검증해야 한다. stable1.7/1cab과 불변 manifest, 첫1시간 관찰 이후 교체 조건, 원래 동결·종료·최종 미디어 게이트는 그대로다.
+
+### IDEA012 채택 결정 — 개정1
+
+REVIEW040과 실제 순수beforefixture를 근거로 제품1.7.1/PRD1.15에 채택했다. RTU상태 online 출력, 빠른시작 환경·포트 및 미지원 v1 문구 정정으로 한정한다. 구현·새시험·배포·복원 인수는 아직 대기다. stable1.7/1cab을 보존하며 실제1.7 첫1시간 관찰기록 전에는 새 이미지로 교체하지 않는다. 원래 동결·종료·최종미디어 일정은 그대로다.
+
+### IDEA012 로컬 인수
+
+구현과 로컬 전체 317개·실제 MQTT 통합/고급·report/client-security·실제 online/LWT monitor·새 실행 폴더 quickstart·빌드를 통과했다. REVIEW041은 신규 AT01~03을 로컬 검증으로, AT04를 부분 충족으로 판정했다. 정확 이미지·k3s·동일 백업 현재/하위 복원·불변 checkpoint는 아직 대기다. 초기 quickstart 실패 두 건과 기존 브로커 재사용/3112 지정 범위를 보존한다.

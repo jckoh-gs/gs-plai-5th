@@ -1,0 +1,59 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T17:24:02.098825+00:00",
+  "productVersion": "1.7.1",
+  "prdVersion": "1.15",
+  "idea": "IDEA-012 revision1",
+  "scope": "Local candidate validation only; actual k3s remains stable1.7.0. Independent review/exact image/remote/current and backward restore/immutable manifest gates remain.",
+  "fullSuite": {
+    "passed": 317,
+    "failed": 0,
+    "exitCode": 0,
+    "log": "artifacts/checkpoints/candidate-1.7.1-local/full-suite.log"
+  },
+  "additionalProofs": {
+    "integration": "Real isolated MQTT125kW/error0 with command transitions/dedup/scenario/restart persistence",
+    "advanced": "Independent RTUs, outbox restart, rejections/expiry/timeouts/faults/100generators",
+    "report": "Independent subscriber/report/error boundaries",
+    "clientSecurity": "Malformed/crossRTU/numeric/credential-output boundaries",
+    "clientStatus": "Actual late retained online and unexpected device-disconnect LWT offline through shipped monitor",
+    "quickstart": "Fresh copied source/dependencies/env/private DB/build; reused existing owned broker; PORT3112 override because unrelated3101 occupied. Existing .env preserved, originalworkspace env unchanged, owned app exited0/portclosed. Not a clean broker installation.",
+    "build": {
+      "exitCode": 0,
+      "log": "artifacts/checkpoints/candidate-1.7.1-local/build.log"
+    }
+  },
+  "counting": "Focused client4 and media53 are subsets of full317; not added. Integration suites are separate behavioral proofs, not counted as unit totals.",
+  "sourceHashes": {
+    "package.json": "8560c180daec6b576feb057395d6ee692e5f77a4f851e3398dad54719f2db304",
+    "package-lock.json": "7fc8d323eb98ed41aa1c5387168068695793c70aa006c9190c51f3cbe421f563",
+    "docs/protocol.md": "07295bdbc14613aa87a3890ee32439e715009ca2310859ad2dc18259d4734709",
+    "docs/PRD-VPP-SCADA-RTU.md": "9aab4e968467f626af2a323e6d6a61abf00d09200547dc808f9c3e0cb022cb26",
+    "scripts/client-message.js": "ecb5f3b3fcdf74fa5a3d352da33856b47116eb27b4eb91b039fa58b39e12b53f",
+    "scripts/client-status-integration.js": "ed157b1dfecc6cf3dcfc82643ba6459d258bf2a9548b90abe8f81595d078a535",
+    "tests/client-security.test.js": "4bbb1597054f3e8e897193508f17d1d3e74835d12cfc200482fcaaaae791bb3d",
+    "scripts/media/final-deck-binding.cjs": "b105931fcfde888e607e867845ea0b32c1dee26869e759584f4e1dbeb6225371",
+    "scripts/media/release-features.cjs": "52c5bd8f280f4344ec12da7347eee2265d12db1b673b19a807ec46df9266eb58",
+    "tests/final-deck-binding.test.js": "b4d0f94df697ce0e540255bcb20724bab5984c15213f7edbfac6ddc3b8d8ae5b",
+    "tests/media-scene-lifecycle.test.js": "6909f1555facbe41145d5e41934c0c011a9dc9896cd85acdc58edee4db372c6c"
+  },
+  "evidenceHashes": {
+    "artifacts/checkpoints/candidate-1.7.1-local/advanced.log": "d4b8975c6894312bb9711b73b199cf553b60018768da9b76f4ce31119c9410d5",
+    "artifacts/checkpoints/candidate-1.7.1-local/build.log": "c2679b480a98a9630dc5f01b9d82586be583f306e66a5bb010de7eea7edd0627",
+    "artifacts/checkpoints/candidate-1.7.1-local/client-security.log": "ba2b71c5693cd96f8e366b1f7e1038ffcf873d471597396faebe612fc8a75c5c",
+    "artifacts/checkpoints/candidate-1.7.1-local/client-status-integration.json": "2b17c53da0bb9ff7f5ae31025f0bb39a9ffb2765fb1c7b216115c9069bd8c1c7",
+    "artifacts/checkpoints/candidate-1.7.1-local/client-status-integration.log": "2b17c53da0bb9ff7f5ae31025f0bb39a9ffb2765fb1c7b216115c9069bd8c1c7",
+    "artifacts/checkpoints/candidate-1.7.1-local/client-status-source.json": "4da4cb535105e6d8687bff0e81ca20deb392adb0cc50f6c25326bae0ea55f2b3",
+    "artifacts/checkpoints/candidate-1.7.1-local/full-suite.log": "d8d4d18e3db297848e9bc740e818ccc1296235c0d7359a64f606f696d92cd731",
+    "artifacts/checkpoints/candidate-1.7.1-local/integration.log": "a488b9794c8c86dc734a6815d84a80164f9fd6a8fba4b94cccd416ed8abbd815",
+    "artifacts/checkpoints/candidate-1.7.1-local/quickstart-attempts.json": "50b433035b22f4a9dc67e134bae81973a38bff5e8abefc0c73c3ffef285f6670",
+    "artifacts/checkpoints/candidate-1.7.1-local/quickstart.json": "f2dec47324fe95866a1bc8bdc407552ad1b1a33dfeb478a061107b709fc89513",
+    "artifacts/checkpoints/candidate-1.7.1-local/report.log": "87b81efba03df43a87093cb3d9818e7d914ed93f573fad69e2f5aa3db5f2be7e"
+  },
+  "uiContinuity": {
+    "sourceChanged": false,
+    "builtJsSha256": "154fe2de1f039fe27fbcce6793e15716e843ca3814c2d361392a2207b6918dfc",
+    "scope": "Identical frontend assets to stable1.7; productmetadata/servedguide/client sanitizer patch still requires exactimage gates"
+  },
+  "knownFailures": "First quickstart refused occupied3101 beforecreating workdir. Second skipped existing.env with cp-n exit1; source updated to conditional and successful fresh round2 retained separately. Allfailed artifacts preserved privately and compactattempts public."
+}

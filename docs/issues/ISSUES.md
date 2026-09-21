@@ -1,6 +1,24 @@
 # 이슈 관리
 
-신규 구현 전용. 독립 검토자 `/root/issues`. 운영 기준은 `docs/operations/run.json`, PRD 1.7이다. 다른 프로젝트 구현이나 과거 인도 증거를 사용하지 않는다. 아래 수정 검증은 작업본에서 수행했으며 배포 완료를 뜻하지 않는다.
+신규 구현 전용. 독립 검토자 `/root/issues`. 현재 대조 기준은 제품1.7.0/PRD1.14 및 `docs/operations/run.json`이다. 다른 프로젝트 구현이나 과거 인도 증거를 사용하지 않는다. 아래 최초 발견·라운드 기록은 당시 상태이며, “commit 없음/배포 대기/현재/pending” 표현은 해당 시점의 이력이다. 현재 상태는 이 요약과 각 이슈의 마지막 후속 기록을 우선한다. 불변 증거·과거 실패·부분 snapshot은 삭제하거나 성공으로 바꾸지 않는다.
+
+## 최종창 전 현재 상태 점검 — stable1.7
+
+읽기 대조 근거는 `evidence/issue-status-pre-freeze-1.7.json`이다. 신규 실행·네트워크 재시험 없이 REVIEW037/038, 실제 복원 summary/태그/renderer receipt와 기존 이슈 회귀 근거를 대조했다. 현재1.7/runtime d98d3c4/image d1e4, 동일1cab snapshot의 현재1.7·이전1.6 복원23보고서+2Pod identity 및 매니페스트1731해시 검증과 원격 stable 태그가 완료됐다. 이것은 최종 영상·PPT·전체 작업시간 완료 선언이 아니다.
+
+- ISSUE001–004·006–009: 기록된 수정과 독립 회귀 완료. 예전 “commit/최종 배포 대기”는 역사다. 현재 기능 체크포인트에 소스·시험 근거가 포함되지만 각 항목에 남긴 실제 저장장치 장애·특정 기상 경합·실브로커 단독 경계의 미시험 범위를 지우지 않는다. 실제 KMA 성공도 추정하지 않는다.
+- ISSUE005: **OPEN — 최종창/최종 미디어/인도 게이트**. 초기142개 pending·60초/강제종료 증거 부재는 당시 기록이며 현재 상태가 아니다. 뒤의 실제60샘플/중단·재전송/보고서, 반복된 main UI·MQTT·정확 이미지·동일 백업 복원 및 REVIEW037/038로 기능 게이트는 보완됐다. 005-G와 최종 선택 버전의 신규 영상·같은 영상 PPT·검수·원래 시간 준수는 아직 완료가 아니다. 기존 기능복원 PASS를 최종창 새 선택의 PASS로 자동 전환하지 않는다.
+- ISSUE010–019: 해당 전송/관측/검증도구의 수정과 기록된 회귀 완료. ISSUE015의 가짜 artifact 부정시험 PASS는 실제 media 검수와 다르다. ISSUE018의 host 대기 제한은 원격 취소 보장이 아니며 실제 잔여 작업 사건은 ISSUE024에서 별도 관리한다.
+- ISSUE020–023: 기능 수정 검증 완료. ISSUE020의 실제 HTTP200 업무실패/중립·늦은응답 fixture 범위와 외부 KMA 미검증은 유지한다. ISSUE023의1.6 로컬·main·복원 및1.7 main66/양복원 이벤트 회귀·REVIEW033/037/038가 예전 독립 인수 대기를 해소한다. 이전1.5의 시각 대시는 알려진 버전 차이다.
+- ISSUE024: 관찰된 사건 복구·backup 제한 보완·실제 재시험 완료, **최초 stall 원인 미확정/잔여 자원 위험 추적 유지**. 새 성공 snapshot으로 원래 사건의 원인을 확정하거나 기존 .part를 성공으로 해석하지 않는다.
+- ISSUE025: **RESOLVED**. 운영 수정4b6009d, focused6 및 별도 전체312 PASS, client-only dry-run. 실제 재배포/rollback 검증을 새로 수행한 것은 아니다.
+
+- ISSUE026: **FIX_VERIFIED_LOCAL / 원격·복원 인수 대기 — NFR08 연동 client/quickstart 계약 불일치**. 순수 before fixture에서 status online true/false 출력 유실을 확인했고 독립 quickstart 환경 준비 누락 및 지원하지 않는 legacy 문구를 함께 관리한다. IDEA012 v1/제품1.7.1/PRD1.15 채택 및 로컬 수정 검증 완료. 실제 main은1.7이며 원격·복원은 미완료다. 아래 최초 기록과 후속 참조.
+
+번호가 없는 IDEA011 명령 목록 실패 가시성 기록도 현재 기능 인수 완료로 정리한다. 로컬8검증군의 합성503·header/body timeout·전환/해제 시험과 실제 main/현재1.7 복원 읽기, REVIEW037/038를 근거로 한다. 이전1.6에 신규 안내가 있다고 주장하지 않는다.
+
+계속 남는 경계: 오디오의 실제 청취 미검증, 최종창 신규 미디어·동일 영상 PPT 검수, 실제 KMA/AWS/운영 VPP 외부 연동 미검증, 단일노드 k3s의 노드 HA 미검증은 해결로 바꾸지 않는다. SEC006의 현재 이미지 OS4매치/2CVE와 인증 사용자 자원 소모 잔여 위험은 보안 원장에 계속 연결한다. npm audit0/전체시험 PASS가 이를 해소하지 않는다. 원래 freeze21:37:33Z/deadline22:07:33Z를 유지하며 역할·전체목표는 아직 종료하지 않는다.
+
 
 ## ISSUE-001 — 합성 샘플의 timestamp 형식 불일치
 
@@ -75,13 +93,13 @@
 - 중요도: P2. 발견/수정: 모델 담당/메인; 독립 검토시 수정되어 있음.
 - 기대: 데이터 끝→처음 실제 전이만 증가하며 seek는 증가시키지 않고 pause는 유지. snapshot 복원 시 저장된 값 유지.
 - 원인/수정: source에서 `stepPlant`의 wrap 시 `loopCount` 증가 및 createPlant 초기값0 확인. 수정 전 오류의 별도 실행 재현 없음.
-- 담당: 메인. 상태: 작업본 회귀 검증 완료; 릴리스 commit 대기.
+- 담당: 메인. 상태: 수정·회귀 완료; 최초 기록의 릴리스 commit 대기는 현재 stable 근거로 대체(상단 요약 참조).
 - 회귀: `tests/model.test.js`의 `loop count records actual dataset wraps, not seeks, and survives scenario JSON snapshots` 독립 재실행. 1199→0 증가, seek 비증가, structured JSON snapshot 복원, pause 비증가를 검증. 이 시험은 실제 UI나 SQLite 재시작까지 증명하지 않음.
 - 증거: `evidence/review-002-unit.log`, 19/19 pass. 샘플 생성/기상 경합 독립 regression도 함께 통과. 해당 source와 검사한 로그 SHA는 `evidence/review-002-source.json`.
 
 ## ISSUE-007 — expiresAt의 비 ISO/존재하지 않는 날짜 허용
 
-- 중요도 P2, 확인된 입력 검증 결함. 상태: 수정 및 독립 회귀 완료, 최종 배포 revision 대기. 담당/수정자: `/root/issues` (메인에 변경 전 통보).
+- 중요도 P2, 확인된 입력 검증 결함. 상태: 수정 및 독립 회귀 완료, 현재 stable 소스·배포 근거 연결(상단 요약 참조). 담당/수정자: `/root/issues` (메인에 변경 전 통보).
 - 원인: `Date.parse` 성공 여부만 검사하면 `'1'`을 날짜로 해석하고 `2099-02-30T00:00:00Z`를 3월로 정규화한다. 전자는 rejected 대신 expired, 후자는 accepted가 될 수 있다.
 - 수정: `server/control.js`에서 T·초·명시적 timezone을 요구하는 ISO 형식과 달력 유효성을 검사한다. 정상 UTC/offset 및 소수초 1~3자리, expiresAt 생략 기본값은 유지한다.
 - 회귀: `tests/review-control.test.js`에서 숫자/비 ISO/없는 날짜/24시/잘못된 월 거절 및 정상 offset·millisecond 허용. 실제 broker의 impossible-date 명령도 rejected 수신.
@@ -127,7 +145,7 @@ ISSUE-005의 배포/브라우저/복원/미디어 등 다른 게이트는 이 �
 
 ## ISSUE-009 — 완료된 start/stop/set_limit의 목표 출력 표시 누락
 
-상태: 수정 및 실제 브라우저 검증 완료, 다음 최종 이미지 반영 대기. 명령 결과 표가 request.targetKw만 읽어 start/stop/set_limit의 관측된 대상별 목표를 비워 표시했다. targets가 비어 있지 않고 모든 targetKw가 유한한 경우에만 합계를 표시한다. 피드백 전 null을0으로 만들지 않는다. UI 검증에서 stop0/0, start400.2/400.2, set_limit400.2/400.2,100%복귀925.1/925.1을 확인했다. 증거: artifacts/checkpoints/browser-flows/review004-ui.json 및 controls-stages.json, web/QA.md.
+상태: 수정 및 실제 브라우저 검증 완료, 현재 stable에 포함(상단 요약 참조). 최초 다음 이미지 반영 대기는 역사다. 명령 결과 표가 request.targetKw만 읽어 start/stop/set_limit의 관측된 대상별 목표를 비워 표시했다. targets가 비어 있지 않고 모든 targetKw가 유한한 경우에만 합계를 표시한다. 피드백 전 null을0으로 만들지 않는다. UI 검증에서 stop0/0, start400.2/400.2, set_limit400.2/400.2,100%복귀925.1/925.1을 확인했다. 증거: artifacts/checkpoints/browser-flows/review004-ui.json 및 controls-stages.json, web/QA.md.
 
 ## Round 6 — 시나리오 전체 필드/paused/미전송 보존
 
@@ -320,7 +338,7 @@ deployment담당이 remote-restore-check.mjs, remote-preview.mjs, remote-integra
 
 ## ISSUE-020 — KMA 업무 실패 응답을 조회 성공으로 표시
 
-중요도 P2 사용자 피드백, 현재 상태: 로컬 수정·회귀 검증 완료(원격 배포 대기). 기존1.2 번들의 실제 로컬 브라우저에서 KMA_AUTH_KEY 미설정 상태로 KMA 조회를 누르면 HTTP200 응답의 plant.weatherError가 실패를 알리는데도 전역 초록색 “기상청 관측을 조회했습니다.”와 실패 경고가 동시에 표시됐다. 재현 원본은 `artifacts/checkpoints/weather-feedback-before/result.json` 및 `contradictory-feedback.png`이며 HTTP200/동시표시 true와 로드된 번들 SHA를 보존한다. 실제 KMA 요청이나 클러스터 장애를 뜻하지 않는다.
+중요도 P2 사용자 피드백, 현재 상태: 기능 수정·회귀 검증 완료, 현재 stable에 포함. 최초 로컬 검증 당시 원격 배포 대기는 역사다. 기존1.2 번들의 실제 로컬 브라우저에서 KMA_AUTH_KEY 미설정 상태로 KMA 조회를 누르면 HTTP200 응답의 plant.weatherError가 실패를 알리는데도 전역 초록색 “기상청 관측을 조회했습니다.”와 실패 경고가 동시에 표시됐다. 재현 원본은 `artifacts/checkpoints/weather-feedback-before/result.json` 및 `contradictory-feedback.png`이며 HTTP200/동시표시 true와 로드된 번들 SHA를 보존한다. 실제 KMA 요청이나 클러스터 장애를 뜻하지 않는다.
 
 확정 원인은 서버가 현재 plant 상태를 반환하는 계약인데 Dashboard가 응답 weatherError를 읽지 않고 공통 act의 고정 성공 문구를 사용한 것이다. API/schema 변경 없이 weatherError는 오류로, 오류 없는 응답도 새 관측 적용을 단정하지 않는 중립적 처리 결과로 표시해야 한다. 서버가 대기 중 수동 설정/시나리오 복원에 의해 늦은 기상을 폐기할 수 있으므로 weatherSource=kma만으로 이번 조회의 새 관측 적용을 단정할 수 없다.
 
@@ -457,7 +475,7 @@ IDEA009 browser harness 재사용 준비: isolated-restore 명시모드는 정�
 
 ## ISSUE-023 — 저장된 운영 이벤트 시각이 실제 화면에서 누락
 
-P2 진단 표시. 현재 상태: 1.6 현재 런타임의 기능 수정 검증 완료(로컬·실제 main·동일 snapshot 복원), 독립 제품 REVIEW032 진행 중. 최초 등록 상태는 OPEN/수정미착수였다. REVIEW029의 소스가설을 실제 인증된 main1.5 UI와GET/state로 독립 재현했다. artifacts/checkpoints/event-time-before/result.json은 서로다른created UTC값55개를 가진55행 모두 화면시각 “—”임을 대조한다. 해당 이벤트에는 timestamp/createdAt/time 필드가없다. 서버 Store.events()가 created를반환하는데 UI가다른세필드만time()에전달하는계약불일치가확정원인이다. 실제served index-CyjJuK5n SHA b6c12889… 확인, rendered HTML/PNG/소스복사/sha256보존. 현재로그화면은글로벌이며RTU선택/필터없음도기록했다.
+P2 진단 표시. 현재 상태: RESOLVED_FUNCTIONAL — 1.6 수정 및1.7 회귀·동일 snapshot 복원·독립 REVIEW033/037/038 완료. 최초 REVIEW032 대기 표현은 당시 이력이다. 최초 등록 상태는 OPEN/수정미착수였다. REVIEW029의 소스가설을 실제 인증된 main1.5 UI와GET/state로 독립 재현했다. artifacts/checkpoints/event-time-before/result.json은 서로다른created UTC값55개를 가진55행 모두 화면시각 “—”임을 대조한다. 해당 이벤트에는 timestamp/createdAt/time 필드가없다. 서버 Store.events()가 created를반환하는데 UI가다른세필드만time()에전달하는계약불일치가확정원인이다. 실제served index-CyjJuK5n SHA b6c12889… 확인, rendered HTML/PNG/소스복사/sha256보존. 현재로그화면은글로벌이며RTU선택/필터없음도기록했다.
 
 읽기만수행하여새이벤트/RTU/제어/시나리오/배포/관측기변경은없다. 토큰은브라우저session에만주입하고출력/HTML/이미지본문비노출을확인했다. 기존소스검토는가설이었고이번은실제표시누락재현이며1.5불변checkpoint를수정하지않았다.
 
@@ -546,3 +564,29 @@ docs/security/DEPLOYMENT-RENDERER-REVIEW.md와 연결 evidence/deployment-render
 ISSUE025 후속 검증 완료: 메인의 focused6시험은 기존 순수 renderer3개와 wrapper3개로 구성된다. 인자 digest 반영·0600·성공 cleanup, 잘못된 인자의 kubectl 미호출, apply exit9 시 rollout 미실행 및 cleanup을 확인했다. artifacts/checkpoints/deployment-renderer/client-dry-run.json은 실제 kubectl apply --dry-run=client --validate=false가5개 객체를 파싱하고 app A×64/양 broker B×64 digest를 정확히 반영함을 기록한다. 실제 apply/원격 쓰기는0이며 실제 배포나 rollback 완료 시험으로 확대하지 않는다.
 
 같은 디렉터리 full-suite.log는 전체312/312 PASS를 확인하며 메인 handle86685 terminal0이다. focused6은 전체312와 중복될 수 있어 합산하지 않는다. 이전 원인·수정·실제1.7 영향 없음의 범위를 유지하고 ISSUE025를 운영 도구 수정 검증 완료로 종결한다. canonical template 형식 제약과 실제 배포 전 대상 확인 필요성은 남는다. 이 후속 작성은 해당 receipt와 로그의 읽기 대조 및 issues 문서 수정만 수행했다.
+
+
+## ISSUE-026 — NFR08 연동 client 및 quickstart 계약 불일치
+
+현재 상태 FIX_VERIFIED_LOCAL/원격·복원 인수 대기. 최초 상태는 OPEN/미수정이었다. P2 연동 관찰·재현성, legacy 문구는 P3 계약 정확성. 발견·before 근거는 `docs/operations/NFR08-CONTRACT-REVIEW-20260922.md` 및 `NFR08-CONTRACT-FIXTURES-20260922.json`(reviewedHead f9147d1). 본 이슈 검토자는 두 파일을 읽어 대조했으며 연결·MQTT 발행·RTU 생성·추가시험을 수행하지 않았다. 담당 메인/transport, 제품 REVIEW040 최소수정 검토 중이다.
+
+- **026-A / status 관측 유실(P2)**: 서버 retained/LWT status의 online true와 false를 순수 parser에 입력했지만 monitorPrintedObject가 동일하며 online 필드가 없다. client-message.js의 축약 반환값을 vpp-client가 그대로 출력하여 공급 client로 online/offline을 구분할 수 없는 실제 before fixture다. 제안은 엄격 boolean online만 보존하고 그 외는 null로 표시하는 최소수정이며 command-status 의미 변경이나 PUBACK를 완료로 간주하는 변경이 아니다.
+- **026-B / standalone quickstart 환경 누락(P2)**: protocol의 npm install→broker→build→start 블록이 .env 준비 없이 실행된다. Compose는 loopback18883을 노출하지만 bare config의 broker 기본값은1883(UI3001)이다. .env.example은 UI3101/broker18883이다. 따라서 해당 블록만 따라 실행하면 기대 broker로 연결되지 않거나 다른1883 broker에 연결될 수 있다. 이 경계는 소스/config 순수 대조로 확인했으며 실제 잘못된 broker 연결을 일으켜 재현하지 않았다. 수정안은 기존 .env를 덮어쓰지 않는 준비 단계와 포트 구분이다.
+- **026-C / 미지원 legacy 문구(P3)**: protocol이 v1 command-ID 보존 및 legacy_accepted 가능성을 설명하지만 현재 greenfield store/control에 대응 migration/read 경로가 없고 client도 해당 상태를 허용하지 않는다. 지원하지 않는 옛 DB 입력을 지원 계약으로 오인하게 하는 문서 결함이다. 삭제 또는 명시적인 범위 제외가 필요하며 legacy 기능 추가를 요구하지 않는다.
+
+내부 운영 CONTRACTS.md의 문서 정리는 위 before 근거와 별도이며 A/B/C 실제 runtime/protocol 수정 완료를 뜻하지 않는다. 예상 IDEA012 v1/제품1.7.1 후보/PRD1.15는 이 최초 기록 시점 미채택이며 stable1.7 운영 및 검증된1cab 복구기준을 그대로 유지한다.
+
+종결에는 각 수정의 focused 회귀/안전한 quickstart 대조, status true/false/비boolean 구분, legacy 미지원 계약의 일관성 및 채택된 범위에 필요한 제품 인수 근거가 필요하다. 현재는 계획만 존재하므로 해결로 표시하지 않는다. 오디오 실제 청취·외부 KMA/AWS/VPP·노드HA 및 최종 미디어/원래 시간 게이트의 미완료 상태도 유지한다.
+
+
+### ISSUE026 후속 — 채택 및 로컬 수정 검증
+
+IDEA012 v1/제품1.7.1/PRD1.15 채택 후 `docs/product/REVIEW-041.md` 및 `artifacts/checkpoints/candidate-1.7.1-local/summary.json`을 읽어 대조했다. AT-VPP-STATUS-01-01~03은 verified_local, 04는 partial이다. 현재 실제main은 stable1.7이며 정확 후보 이미지·원격 UI/MQTT/outbox·같은 백업의 현재1.7.1/하위1.7 복원·정리·불변 체크포인트가 남아 전체종결하지 않는다.
+
+026-A: strict boolean true/false와 비boolean·누락 null, retained 양값/RTU경계/크기·비밀제거 및 command-status 불변의 로컬 회귀가 통과했다. 실제 격리 broker에서 먼저 발행된 retained online 이후 shipped monitor를 시작하고 연결 stream.destroy/reconnectPeriod0으로 실제 LWT offline을 받아 true/false를 구분했다. 수동 false 발행 fixture가 아니며 다른RTU connected/명령발행0/monitor SIGTERM exit0 범위다.
+
+026-B: fresh private 소스·의존성·환경·DB·build/실제 guide serving·3demoRTU 연결이 통과했다. 기존 소유 broker18883 재사용이며 새 broker 설치 시험은 아니다. 점유된3101을 보존하고 명시적 PORT3112로 실행했으며 예제3101/18883 값은 별도 대조했다. npm start와 같은 node 명령을 직접 실행해 종료 소유권을 확보한 범위다. quickstart-attempts.json의 첫3101점유 preflight 거절(exit125), 둘째 macOS cp-n 기존파일 skip exit1로 인한 harness실패를 원본 그대로 유지한다. 수정은 absent/existing/symlink를 구분하는 conditional guard이며 fresh 재시험에서 양경로exit0/기존환경불변/소유포트종료를 확인했다. 앞선 실패를 성공으로 바꾸지 않는다.
+
+026-C: protocol과 PRD가 예제/기본 포트 및 환경 준비 guard를 일치시켰고 v1 legacy_accepted 지원 약속을 제거했다. greenfield 범위 밖 legacy migration 기능을 새로 구현했다고 표현하지 않는다.
+
+전체317/317·실제broker integration/advanced·report/client-security·root build는 각각 기록된 범위에서 PASS다. focused client4/media53은 전체317의 부분집합이므로 더하지 않는다. UI 번들154fe2는 기존1.7과 같지만 metadata/guide/client 변경의 정확 이미지 게이트를 대신하지 않는다. 이번 독립 작업은 읽기와 이슈 문서 갱신만이며 실제 KMA/AWS/VPP·오디오 청취·HA·최종 미디어와 시간 게이트의 잔여 상태는 유지한다.

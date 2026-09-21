@@ -2,7 +2,13 @@
 
 현재 실제 배포는 **제품 1.7.0 / PRD 1.14 / IDEA011 v1**이다. 소스 `d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9`, 이미지 `sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692`를 사용한다. 전체 목표는 미완료이며, 1.7/1cab의 기능·동일 스냅샷 복구 인수를 완료했다. 새 불변 매니페스트와 태그 원격 전달을 완료했으며 이전 검증된 1.6/9bd 체크포인트도 보존한다. 재개 시 현재 시각·최신 사용자 지시·[run.json](run.json)·[resume.json](resume.json)부터 읽는다.
 
-## 지금 이어갈 단계
+## 현재 후속 후보1.7.1 — 먼저 확인
+
+NFR08 독립 검토에서 공급 monitor가 online true/false를 모두 같은 객체로 출력하고, protocol quickstart의 환경 준비·포트가 맞지 않으며 미지원 v1 호환 문장이 남아 있음을 확인했다. [수정 전 근거](NFR08-CONTRACT-FIXTURES-20260922.json), [REVIEW040](../product/REVIEW-040.md)를 근거로 IDEA012v1/PRD1.15/제품1.7.1 패치를 채택했다. CLI strictboolean online 및 가이드·부록·예제 안내만 수정한다. 실제1.7 배포/관측/복구 기준은 유지한다.
+
+로컬 전체 317개·실제 broker 통합/고급·report/client-security·공급 monitor의 late online/실제 RTU LWT offline 시험을 통과했다. 별도 새 폴더의 의존성·환경·DB·빌드와 3개 RTU 연결도 통과했다. 기존 소유 브로커를 재사용하고 점유된 3101 대신 3112를 지정한 범위이며, 기존 환경 파일과 무관한 프로세스를 보존했다. [로컬 집계](../../artifacts/checkpoints/candidate-1.7.1-local/summary.json)를 확인한다. 독립 인수/정확 이미지·보안·배포·복원 인수는 남아 있다. 서버·web·DB·제어·wire schema·OSS 변경은 없다. 미디어 도구의 exact1.7.1 호환 검사53개는 전체시험과 합산하지 않는다. 현재facts는stable1.7 미검수 템플릿을 유지한다. **기존1.7 관찰의 실제 첫1시간17:45:54.307Z 캡처 전에는 후보를 운영에 교체하지 않는다.** 담당·활성작업은 resume.candidateOperations를 읽고 중복 기동하지 않는다.
+
+## 완료한1.7 안정 단계
 
 1. 1.7 main UI·API·원래 5 RTU 전체 설정/실행/데이터/시나리오·실제 MQTT 125kW/error0·인증/SSE/preview/export 회귀를 완료했다. [배포 증거](../../deploy/verification/candidate-d98d3c4/rollout/proof.json), [배포 후 확인](../../deploy/verification/candidate-d98d3c4/post-rollout/summary.json), [실제 MQTT](../../deploy/verification/candidate-d98d3c4/main-mqtt.json), [회귀](../../deploy/verification/candidate-d98d3c4/main-regression/summary.json)를 재사용하며 완료한 제어를 반복하지 않는다.
 2. pending-outbox 실제 Pod 교체 검증을 완료했다. root17841과 독립관찰79945는 종료0. [동일 메시지 복구](../../deploy/verification/candidate-d98d3c4/outbox-restart.json)와 [원래5설정·fault·임시포트 종료·supervisor 재연결](../../deploy/verification/candidate-d98d3c4/outbox-post-normal.json)을 확인했다. 전환 중 health 오류5회는 독립 관찰에 보존했다. 재시작을 반복하지 않는다.
@@ -11,7 +17,7 @@
 
 ## 다음 관찰·준비
 
-[REVIEW039](../product/REVIEW-039.md)는 정당한 추가 기능을 확인하지 못해 새 버전 채택을 보류했다. 현재 관찰과 최종 보안·이슈 정합성·영상/PPT 인도 준비를 계속한다. 첫1시간 캡처는17:45:54.307Z 이후 실제 완성된 두 관찰 구간이 있을 때만 [준비 스크립트](../../artifacts/checkpoints/soak-1.7-first-hour-preparation/capture-first-hour.py)를 실행한다. 조기 실행은 원격조회·체크포인트 생성 전에 거절됨을 확인했다. 현재 짧은 관찰을1시간으로 표현하지 않는다. media 역할은1.7의 바뀐 원고·캡처로14장 준비용 덱 배치·편집가능성·노트·패키징 검토를 완료했다. root도25개 compact파일·21개 재생성파일 해시와 대표3장을 확인했다. [준비 검토](../../artifacts/checkpoints/media-candidate17-deck/root-review.json)는 최종 PPT가 아니다. 고유출력과 완료 상태는 resume.additionalMediaPreparation을 읽고 같은 준비작업을 중복 시작하지 않는다. 최종 영상을 새로 제작할 원래 창은 유지한다.
+[REVIEW039](../product/REVIEW-039.md)의 당시 검토는 새 제안을 보류했으나, 이후 구체적NFR08 before근거로 위1.7.1 정정 패치를 채택했다. 현재 관찰과 최종 보안·이슈 정합성·영상/PPT 인도 준비를 계속한다. 첫1시간 캡처는17:45:54.307Z 이후 실제 완성된 두 관찰 구간이 있을 때만 [준비 스크립트](../../artifacts/checkpoints/soak-1.7-first-hour-preparation/capture-first-hour.py)를 실행한다. 조기 실행은 원격조회·체크포인트 생성 전에 거절됨을 확인했다. 현재 짧은 관찰을1시간으로 표현하지 않는다. media 역할은1.7의 바뀐 원고·캡처로14장 준비용 덱 배치·편집가능성·노트·패키징 검토를 완료했다. root도25개 compact파일·21개 재생성파일 해시와 대표3장을 확인했다. [준비 검토](../../artifacts/checkpoints/media-candidate17-deck/root-review.json)는 최종 PPT가 아니다. 고유출력과 완료 상태는 resume.additionalMediaPreparation을 읽고 같은 준비작업을 중복 시작하지 않는다. 최종 영상을 새로 제작할 원래 창은 유지한다.
 
 ## 재접속과 현재 소유 프로세스
 

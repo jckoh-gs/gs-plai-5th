@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-09-21T17:16:40.505705+00:00",
+  "handle": "immediate",
+  "exitCode": 0,
+  "sourceHashes": {
+    "scripts/client-status-integration.js": "ed157b1dfecc6cf3dcfc82643ba6459d258bf2a9548b90abe8f81595d078a535",
+    "scripts/client-message.js": "ecb5f3b3fcdf74fa5a3d352da33856b47116eb27b4eb91b039fa58b39e12b53f",
+    "scripts/test-harness.js": "6738f8c6e844f59c555fb06acb3137fb4e49ff9182b64ae93050e06b3ab6eac0",
+    "scripts/vpp-client.js": "762cb18072e5db77b48199681a266b520ee08b12986efd8795356e4b877911cd"
+  }
+}

@@ -1,0 +1,12 @@
+✔ malformed, null, array, oversized, retained and cross-RTU statuses rejected (0.572792ms)
+✔ only allowlisted fields survive; raw credentials and controls are removed from reason (0.146666ms)
+✔ RTU status preserves strict online booleans including retained online and offline (0.129792ms)
+✔ online cannot change ack or command-status interpretation or retained-message boundaries (0.079625ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 34.257042

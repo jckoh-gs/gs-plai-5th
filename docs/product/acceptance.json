@@ -1,5 +1,5 @@
 {
-  "prdVersion": "1.14",
+  "prdVersion": "1.15",
   "runId": "grid-new-20260921T080733Z",
   "scope": "greenfield, mandatory k3s",
   "policy": "pending until new-run direct evidence covers complete requirement; code presence/legacy reports are not pass",
@@ -8895,6 +8895,92 @@
         }
       ],
       "assessment": "REVIEW037:23 actualPASS reports+2ReadyPod identities, same931876864B/1cab fresh1.7/backward1.6 initSHA, canonical original5settings includingon/limitPct, UI/MQTT/form44/receipt14/event and exactserved154fe2 assets. Main/currentrestore list actual-only GET; failure/timeouts/races coveredlocal REVIEW035, not realremote outage. Backward1.6 newlistUI notasserted, scenario originalIDpreservation only. Bothrig0/noPods/ownedforwards ended/4PVC retained. Functional gates complete; provenance/finalmedia/time/inventory and1hour observation notclaimed."
+    },
+    {
+      "id": "FR-VPP-STATUS-01",
+      "description": "연동 시작과 RTU online 상태 관측",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-VPP-STATUS-01-01",
+      "description": "strictboolean/retained/기존안전경계",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/candidate-1.7.1-local/full-suite.log",
+          "sha256": "d8d4d18e3db297848e9bc740e818ccc1296235c0d7359a64f606f696d92cd731"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7.1-local/client-security.log",
+          "sha256": "ba2b71c5693cd96f8e366b1f7e1038ffcf873d471597396faebe612fc8a75c5c"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7.1-local/client-status-source.json",
+          "sha256": "4da4cb535105e6d8687bff0e81ca20deb392adb0cc50f6c25326bae0ea55f2b3"
+        }
+      ],
+      "assessment": "로컬 strict boolean·retained·안전경계 검증 완료. REVIEW041. 원격 인수와 구분."
+    },
+    {
+      "id": "AT-VPP-STATUS-01-02",
+      "description": "실제monitor retainedonline/RTULWT offline 및 무명령발행",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/candidate-1.7.1-local/client-status-integration.json",
+          "sha256": "2b17c53da0bb9ff7f5ae31025f0bb39a9ffb2765fb1c7b216115c9069bd8c1c7"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7.1-local/client-status-source.json",
+          "sha256": "4da4cb535105e6d8687bff0e81ca20deb392adb0cc50f6c25326bae0ea55f2b3"
+        }
+      ],
+      "assessment": "격리 실제 브로커 retained online/실제 RTU 비정상 단절 LWT stdout 및 무명령발행·종료 검증. REVIEW041."
+    },
+    {
+      "id": "AT-VPP-STATUS-01-03",
+      "description": "환경·포트·가이드 정합성과 격리실행",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/candidate-1.7.1-local/quickstart.json",
+          "sha256": "f2dec47324fe95866a1bc8bdc407552ad1b1a33dfeb478a061107b709fc89513"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7.1-local/quickstart-attempts.json",
+          "sha256": "50b433035b22f4a9dc67e134bae81973a38bff5e8abefc0c73c3ffef285f6670"
+        }
+      ],
+      "assessment": "fresh source/env/DB 앱 구성에서 기존 소유 예제 브로커18883 재사용, PORT3112 명시 override로 실제 연결·가이드·환경보존·정리 PASS. 새 브로커 설치나 기본3101 직접실행 증거는 아님. 두 초기실패 보존. REVIEW041."
+    },
+    {
+      "id": "AT-VPP-STATUS-01-04",
+      "description": "정확이미지 k3s/동일스냅샷 현재·하위복원",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/candidate-1.7.1-local/full-suite.log",
+          "sha256": "d8d4d18e3db297848e9bc740e818ccc1296235c0d7359a64f606f696d92cd731"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7.1-local/integration.log",
+          "sha256": "a488b9794c8c86dc734a6815d84a80164f9fd6a8fba4b94cccd416ed8abbd815"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7.1-local/advanced.log",
+          "sha256": "d4b8975c6894312bb9711b73b199cf553b60018768da9b76f4ce31119c9410d5"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7.1-local/report.log",
+          "sha256": "87b81efba03df43a87093cb3d9818e7d914ed93f573fad69e2f5aa3db5f2be7e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7.1-local/client-security.log",
+          "sha256": "ba2b71c5693cd96f8e366b1f7e1038ffcf873d471597396faebe612fc8a75c5c"
+        }
+      ],
+      "assessment": "로컬317단위 및 실제 broker 통합/고급/report/client-security PASS. 정확 이미지 k3s·동일 백업 현재1.7.1/하위1.7 복원·정리·불변 checkpoint 대기. REVIEW041."
     }
   ],
   "reviewedSource": {

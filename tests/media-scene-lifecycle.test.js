@@ -28,10 +28,10 @@ test('receipt demonstration is exact1.5/1.6/1.7 gated and wide RTU metrics are n
  for(const version of ['1.4.0','1.5.0','1.5.1','1.6.0','1.6.1','1.6.0-rc.1','1.7.0','1.7.1','1.7.0-rc.1','1.8.0']){
   const c=plan({...options,...features(version)});
   const receipt=c.scenes[2].actions.filter(a=>a.name==='저장 상태 확인');
-  assert.equal(receipt.length,['1.5.0','1.6.0','1.7.0'].includes(version)?1:0);
+  assert.equal(receipt.length,['1.5.0','1.6.0','1.7.0','1.7.1'].includes(version)?1:0);
   assert.equal(c.scenes[3].zoom,undefined);
   assert.ok(c.scenes[1].zoom.scale>1);
-  assert.equal(c.scenes[2].actions.some(a=>a.name==='rest-receipt-stored-status'),['1.5.0','1.6.0','1.7.0'].includes(version));
+  assert.equal(c.scenes[2].actions.some(a=>a.name==='rest-receipt-stored-status'),['1.5.0','1.6.0','1.7.0','1.7.1'].includes(version));
   assert.equal(c.scenes[4].actions.filter(a=>a.type==='dispatch').length,1);
  }
  const c=plan({...options,...features('1.5.0')});
@@ -39,4 +39,6 @@ test('receipt demonstration is exact1.5/1.6/1.7 gated and wide RTU metrics are n
  assert.equal(c.scenes[2].actions.filter(a=>a.name==='출력 상한 적용').length,2);
 });
 
-test('1.7 list status framing centers status and command rows without changing older layout',()=>{for(const version of ['1.5.0','1.6.0','1.7.0']){const c=plan({...options,...features(version)}),focus=c.scenes[4].actions.find(a=>a.type==='focus');assert.equal(focus.selector,version==='1.7.0'?'.command-list-state':undefined);assert.equal(c.scenes[4].narration.includes('브라우저 조회 시각'),version==='1.7.0');assert.equal(c.scenes[4].zoom,undefined);}});
+test('1.7 list status framing centers status and command rows without changing older layout',()=>{for(const version of ['1.5.0','1.6.0','1.7.0','1.7.1']){const c=plan({...options,...features(version)}),focus=c.scenes[4].actions.find(a=>a.type==='focus');assert.equal(focus.selector,['1.7.0','1.7.1'].includes(version)?'.command-list-state':undefined);assert.equal(c.scenes[4].narration.includes('브라우저 조회 시각'),['1.7.0','1.7.1'].includes(version));assert.equal(c.scenes[4].zoom,undefined);}});
+
+test('1.7.1 scene content/actions equal1.7.0; patch/prerelease not implicitly enabled',()=>{assert.deepEqual(plan({...options,...features('1.7.1')}),plan({...options,...features('1.7.0')}));for(const version of ['1.7.2','1.7.1-rc.1','1.8.0']){assert.equal(features(version).commandReceipt,false);assert.equal(features(version).commandListStatus,false);}});

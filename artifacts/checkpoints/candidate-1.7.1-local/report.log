@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "suite": "report",
+  "cases": [
+    "commandId/events/output compared against independent MQTT subscriber",
+    "observed timed_out exit1",
+    "unreachable credentialed URL exits1 without leaking secret",
+    "save failure exit1 and exactly one observed command publication",
+    "no-report monitor and dispatch compatibility"
+  ]
+}

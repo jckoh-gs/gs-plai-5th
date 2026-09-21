@@ -1,6 +1,6 @@
 # GRID — VPP·SCADA·RTU 통합 에뮬레이터 PRD
 
-문서 버전: 1.14 · 기준일: 2026-09-21 · 제품 기준: SCADA Emulation Engine v2 / MQTT 계약 v2
+문서 버전: 1.15 · 기준일: 2026-09-21 · 제품 기준: SCADA Emulation Engine v2 / MQTT 계약 v2
 
 ## 문서의 목적과 사용법
 
@@ -991,17 +991,20 @@ AT-RELEASE-01: manifest가 JSON으로 파싱되고 기록된 파일의 실제 SH
 현재 RTU→SCADA는 프로세스 내부 어댑터입니다. 실물 Modbus/OPC UA/IEC 프로토콜 연결은 별도 구현 대상입니다. 모델의 모든 발전기 상태와 이용 가능한 계측값을 전송하며, 실제 센서가 없는 값은 임의 계측치로 생성하지 않습니다.
 
 ```bash
-npm install
+npm ci
+if [ ! -e .env ] && [ ! -L .env ]; then
+  cp -n .env.example .env
+fi  # 기존 .env는 그대로 사용합니다.
 npm run broker
 npm run build
 npm start
 ```
 
-앱: <http://127.0.0.1:3001> → **연동 가이드**. 시험 시나리오와 RTU 메트릭 메뉴를 함께 사용하세요.
+새 예제 `.env`를 적용한 앱: <http://127.0.0.1:3101> → **연동 가이드**. 예제 브로커는 `mqtt://127.0.0.1:18883`입니다. 기존 `.env`를 보존했다면 그 파일의 PORT/MQTT_URL을 사용하며 Compose와 일치하는지 확인하세요. 시험 시나리오와 RTU 메트릭 메뉴를 함께 사용하세요.
 
 ### A-2. 브로커·인증 설정
 
-기본 로컬 Mosquitto는 `mqtt://127.0.0.1:1883`입니다. 외부 컴퓨터는 자신의 localhost로 이 브로커에 접근할 수 없습니다. 실제 VPP와 연결할 때는 양쪽에서 접근 가능한 동일 브로커를 지정하세요.
+이 저장소의 로컬 Compose Mosquitto는 `mqtt://127.0.0.1:18883`입니다. 환경변수를 전혀 지정하지 않은 런타임 기본값 `mqtt://127.0.0.1:1883`과 구분합니다. 외부 컴퓨터는 자신의 localhost로 이 브로커에 접근할 수 없습니다. 실제 VPP와 연결할 때는 양쪽에서 접근 가능한 동일 브로커를 지정하세요.
 
 ```dotenv
 MQTT_URL=mqtts://YOUR-BROKER:8883
@@ -1137,7 +1140,7 @@ RTU MQTT 연결은 clean session입니다. 단절 중 외부 VPP가 보낸 명�
 
 set_limit은 정격 대비 상한이며 on/off는 변경하지 않습니다. start는 기존 상한을 유지하고 기동합니다. stop은 램프로 0을 향합니다.
 
-재시작 전 실행 중인 명령은 복원합니다. 만료/제한시간은 실제 시간으로 평가하므로 서버가 꺼져 있던 시간도 포함됩니다. v1 명령 ID 기록은 재실행 방지 목적으로 보존하며 중복 응답에는 legacy_accepted가 표시될 수 있습니다.
+재시작 전 실행 중인 명령은 복원합니다. 만료/제한시간은 실제 시간으로 평가하므로 서버가 꺼져 있던 시간도 포함됩니다. 이번 새 구현의 명령 ID와 본문은 재시작 후에도 중복 실행을 방지하도록 보존합니다. 이전 별도 v1 구현의 DB 마이그레이션이나 legacy_accepted 상태는 지원 계약에 포함하지 않습니다. 이번 프로젝트에서 검증한 버전 사이의 백업 복원과는 별개입니다.
 
 ### A-7. 영속화·장애 시험
 
@@ -1276,9 +1279,9 @@ npm run test:advanced
 ### B. `.env.example`
 
 ```dotenv
-PORT=3001
+PORT=3101
 HOST=127.0.0.1
-MQTT_URL=mqtt://127.0.0.1:1883
+MQTT_URL=mqtt://127.0.0.1:18883
 MQTT_PREFIX=vpp
 TELEMETRY_SECONDS=60
 KMA_AUTH_KEY=
@@ -1304,7 +1307,7 @@ services:
   mqtt:
     image: eclipse-mosquitto:2
     ports:
-      - "127.0.0.1:1883:1883"
+      - "127.0.0.1:18883:1883"
     volumes:
       - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
     restart: unless-stopped
@@ -1679,3 +1682,19 @@ RTU 변경 시 행·시각·오류를 초기화하고 늦은 A 응답은 B에 �
 2. 지연/멈춘응답·응답본문에서 유한timeout과동시에1개이하 요청,RTU전환/해제시abort/타이머정리 및늦은A불혼입을검증한다. 성공시각을서버시각으로표현하지않는다.
 3. 실제읽기/브라우저fixture를구분하고 POST0·자동제어재시도0·원래목록순서/출처/상태보존·기존export/receipt불변을확인한다. 접근성·좁은화면·안전한오류안내도확인한다.
 4. 관련단위/실제브라우저와기존auth/SSE/form/receipt/export회귀,정확후보이미지의k3s읽기검증 및동일백업현재1.7/하위1.6복원후기능안정승격한다. 하위버전에새목록안내가있다고추정하지않는다. 최종미디어·시간·인도는별도다.
+
+
+### FR-VPP-STATUS-01 연동 시작과 RTU 상태 관측 (IDEA012 개정1 / 제품1.7.1 후보)
+
+배포되는 연동 가이드와 부록 A의 빠른 시작은 기존 `.env`를 덮어쓰지 않고 예제를 준비한다. 예제 앱3101/Compose MQTT18883과 bare runtime 기본3001/1883을 구분하며 부록 B의 예제 설정도 일치시킨다. 기존 사용자 설정은 자동 교체하지 않는다.
+
+실행 가능한 VPP monitor는 RTU `status`의 strictly boolean `online`을 보존한다. false를 잃거나 문자열·숫자를 true/false로 추정하지 않으며 비boolean/누락은 null이다. 이 값은 명령 생명주기 `status`와 별개이고 다른 메시지 종류에 혼입하지 않는다. retained online/LWT offline은 마지막 관측 상태이며 현재 장치 건강이나 오프라인 중 외부 명령 보관을 보장하지 않는다. 전체 payload를 출력하지 않고 기존 허용목록·비밀 제거·RTU/topic 경계·retained 명령결과 거부·dispatch 종결 및 보고서 계약을 유지한다.
+
+이전 별도 v1 구현 DB의 마이그레이션은 사용자 지시의 새 구현 범위 밖이다. legacy_accepted 지원을 약속하는 부록 문구만 정정한다. 이번 구현의 명령 ID·본문 중복방지, 재시작 복원, 실제시간 만료 및 현재/이전 검증 버전의 동일 스냅샷 복원 요구를 제거하지 않는다. 새 OSS·서버·DB·제어·UI·MQTT wire schema 변경은 없다.
+
+### AT-VPP-STATUS-01 인수 — 구현·검증 대기
+
+1. status parser에서 true/false와 retained 상태를 보존하고 누락/null/문자열/숫자는 null임을 확인한다. 다른 RTU/topic, 크기 제한, 비밀 제거, retained ack/command-status 거부 및 기존 명령 상태 의미를 보존한다.
+2. 격리된 실제 로컬 브로커와 실제 monitor stdout에서 online true와 비정상 RTU 연결 종료의 LWT offline false를 구분한다. 다른 RTU 연결과 monitor의 무명령발행·정상 종료도 확인한다. 순수 또는 수동 발행 fixture를 실제 LWT로 표현하지 않는다.
+3. protocol/PRD부록/설정 예제의 환경 준비·포트를 맞추고 기존 `.env` 보존을 검증한다. 격리된 깨끗한 실행 구성에서 앱이 예제 브로커에 실제 연결되는 근거를 확보한다. 원격/사용자 설정·다른 프로젝트를 수정하지 않는다. unsupported v1 문구 정정을 현재 복원 요구 제거로 넓히지 않는다.
+4. 기존 관련 단위·실제 broker 통합/고급·dispatch 보고서 회귀와 정확한 후보 이미지의 k3s UI/MQTT/outbox·동일 백업 현재1.7.1/이전1.7 복원을 확인한 뒤 새 불변 체크포인트를 만든다. UI소스가 같다는 사실과 실제 배포 검증을 구분한다. 안정1.7/1cab 및 원래14시간·최종미디어·인도 게이트를 유지한다.

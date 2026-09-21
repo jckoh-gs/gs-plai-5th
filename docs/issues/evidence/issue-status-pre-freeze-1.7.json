@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-09-21T17:10:10.767457+00:00",
+  "result": "READ_ONLY_STATUS_RECONCILED",
+  "scope": "Issue status and historical/current wording only; no rerun, network, runtime, ledger, acceptance or immutable evidence edits",
+  "inputs": [
+    {
+      "path": "docs/product/REVIEW-033.md",
+      "sha256": "28ffdc2522ac85d77fec8f4332eaded938142bfcd1336b9ee5f6d63d58d9bb34"
+    },
+    {
+      "path": "docs/product/REVIEW-037.md",
+      "sha256": "c16e0434fcf3c0f61e8a490673fba8d98b8fa9fed039c5a1735aad60a021d855"
+    },
+    {
+      "path": "docs/product/REVIEW-038.md",
+      "sha256": "116240b7c7131b544d9f2e2bbec3f611db969de8af2fe762d4c1740679595acd"
+    },
+    {
+      "path": "docs/operations/NEXT-ACTIONS.md",
+      "sha256": "7950b0f1163f5f72751a64add67d93dfeb84fcb24d795c82a228087215edb649"
+    },
+    {
+      "path": "docs/operations/DELIVERY-PLAN.md",
+      "sha256": "01132228787bcedc1eb8f486304c60e9f39807c1b6842bd9820e0ed35f9b4608"
+    },
+    {
+      "path": "docs/security/VULNERABILITY-MANAGEMENT.md",
+      "sha256": "1c51e206158f3330c9b39589f3e1c6a611861639348ffeb7262172c96c5365bb"
+    },
+    {
+      "path": "deploy/verification/candidate-d98d3c4/restore-summary.json",
+      "sha256": "8211b4ecbcb606a2f6b4bde176281a8d4b65ab3b87271ab65acfffccce7c26a6"
+    },
+    {
+      "path": "deploy/verification/candidate-d98d3c4/root-recovery-review/summary.json",
+      "sha256": "7eaa461bc12fa182c5458da27457b691872d441b263392ccdac90320d738acd1"
+    },
+    {
+      "path": "artifacts/checkpoints/release-1.7/tags.json",
+      "sha256": "1cf4693097903698066f6684c71e4e2a8283049313f17961af035e99d9cd0d43"
+    },
+    {
+      "path": "artifacts/checkpoints/deployment-renderer/summary.json",
+      "sha256": "91b6cc755693dd7466a95737bb074abeffae35c61ef23a347000df1341135398"
+    },
+    {
+      "path": "artifacts/checkpoints/deployment-renderer/client-dry-run.json",
+      "sha256": "ec92db55880bb39d245a9d78e897ddf0f419740a7ef6f28a969270ca43ca861c"
+    },
+    {
+      "path": "artifacts/checkpoints/deployment-renderer/full-suite.log",
+      "sha256": "b5e87dd20202bf18e0f14850d9ff0f7b06cc7392d258c87448828f7cef656ea2"
+    }
+  ],
+  "open": [
+    "ISSUE005 final time/media/delivery gates",
+    "ISSUE024 root cause unknown and residual resource risk"
+  ],
+  "unchangedLimits": [
+    "audio listening not verified",
+    "KMA/AWS/production VPP external success not verified",
+    "single-node HA not verified",
+    "SEC006 OS findings remain security-ledger managed"
+  ],
+  "notGoalCompletion": true
+}
