@@ -1,0 +1,230 @@
+{
+  "observedAt": "2026-09-21T15:30:00.908717+00:00",
+  "owner": "/root",
+  "handle": 95785,
+  "pid": 8719,
+  "processIdentity": "Tue Sep 22 00:14:46 2026",
+  "url": "http://127.0.0.1:3110",
+  "productVersion": "1.6.0",
+  "scope": "Completed isolated1.6 local fixture only; main3104/18884 unchanged. Preserve private DB and token; no automatic restart needed.",
+  "settings": [
+    {
+      "id": "51914627-090e-4fb5-9e7e-625c77bfd903",
+      "name": "Candidate1.6 wind 9e488718-1c65-4697-bd1e-39f0fd2365b0",
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      },
+      "generators": [
+        {
+          "id": "WT-01",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null
+        },
+        {
+          "id": "WT-02",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null
+        }
+      ]
+    },
+    {
+      "id": "041fef49-0547-45dd-9831-41545cf73dd3",
+      "name": "Candidate1.6 solar f4df7ec3-a43a-4a53-8e91-34166e4141cf",
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      },
+      "generators": [
+        {
+          "id": "PV-01",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null
+        },
+        {
+          "id": "PV-02",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null
+        }
+      ]
+    },
+    {
+      "id": "42e7e2c1-2294-4666-8468-912c0e806438",
+      "name": "Candidate1.6 hybrid 1816f246-ca06-46b6-9009-1aa13a200524",
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      },
+      "generators": [
+        {
+          "id": "WT-01",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null
+        },
+        {
+          "id": "WT-02",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null
+        },
+        {
+          "id": "PV-03",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null
+        },
+        {
+          "id": "PV-04",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null
+        }
+      ]
+    },
+    {
+      "id": "f50cd376-3ec8-489d-8773-176f69a96b05",
+      "name": "Command form d386998f-ab9b-4151-9c48-01ed8d64f6ab A",
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      },
+      "generators": [
+        {
+          "id": "WT-01",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null
+        }
+      ]
+    },
+    {
+      "id": "88aab8f2-a8c4-4acd-b166-1ab4e42b9ac1",
+      "name": "Command form d386998f-ab9b-4151-9c48-01ed8d64f6ab B",
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      },
+      "generators": [
+        {
+          "id": "WT-01",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null
+        }
+      ]
+    },
+    {
+      "id": "12837e76-8dc1-497e-994c-e0a58c38e3d9",
+      "name": "Receipt15-A-2c75274b",
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      },
+      "generators": [
+        {
+          "id": "WT-01",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null
+        }
+      ]
+    },
+    {
+      "id": "bc304546-84aa-4c96-8f11-9250faec45c3",
+      "name": "Receipt15-B-76dc74ba",
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      },
+      "generators": [
+        {
+          "id": "WT-01",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null
+        }
+      ]
+    },
+    {
+      "id": "0b9dfd59-d72a-4479-aac9-d8f0d5e34412",
+      "name": "Command form 3b6d7883-d88a-45f3-8de1-582463418a94 A",
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      },
+      "generators": [
+        {
+          "id": "WT-01",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null
+        }
+      ]
+    },
+    {
+      "id": "e1bd3c3d-415d-479f-8fff-bfa7cde1f57f",
+      "name": "Command form 3b6d7883-d88a-45f3-8de1-582463418a94 B",
+      "faults": {
+        "offline": false,
+        "latencyMs": 0,
+        "dropPct": 0,
+        "sensorFreeze": false,
+        "scadaReject": false,
+        "actuatorStuck": false
+      },
+      "generators": [
+        {
+          "id": "WT-01",
+          "on": true,
+          "limitPct": 100,
+          "targetLimitKw": null
+        }
+      ]
+    }
+  ],
+  "reason": "All local UI/API/broker regressions and independent reviews complete; exact OCI tests use separate owned containers.",
+  "state": "Completed; root handle terminal0, owned PID absent, port3110 closed, private DB retained",
+  "privateDatabase": "artifacts/private/candidate-1.6/lab.sqlite",
+  "sourceCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+  "exitCode": 0,
+  "pidAbsent": true,
+  "portClosed": true,
+  "endedAt": "2026-09-21T15:30:15.297390+00:00"
+}

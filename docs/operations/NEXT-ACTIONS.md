@@ -39,7 +39,7 @@ native heartbeat `grid`가10분마다 재개 절차를 호출한다. Mac과 Code
 - SCADA audit: handle98957 / PID2888 / `Mon Sep 21 23:56:58 2026`, `artifacts/soak/telemetry-audit/2026-09-21T14-56-58-686Z-820d9a15/latest.json`.
 - 임시 전원 보호: handle11821 / PID80946 / `Mon Sep 21 22:33:11 2026`, `caffeinate -i -s -t 30861`. 원래 마감까지 AC 전원 idle/system sleep을 억제한다. 지속 설정 변경은 없으며 수동·강제 절전/종료를 방지한다고 보장하지 않는다.
 
-[새1.5 관찰 시작](../../artifacts/checkpoints/observer-1.5-activation/activation.json)은 실제 Ready/API1.5와 신규 primary/audit 오류 기준0을 보존한다. 첫1시간 원문 보존은 **15:56:58.686Z 이후**다. 정상 관찰기를 재시작하거나 누적 카운터를 초기화하지 않는다.
+[새1.5 관찰 시작](../../artifacts/checkpoints/observer-1.5-activation/activation.json)은 실제 Ready/API1.5와 신규 primary/audit 오류 기준0을 보존한다. 첫1시간 보존 도구의 최소 시각은 **15:56:58.686Z**이지만, 버전마다1시간은 사용자/PRD 필수조건이 아니다.1.6 후보 게이트가 먼저 완료되어 계획 전환할 때는 실제로 관찰한1.5 전체구간을 별도 보존하며1시간으로 주장하지 않는다. 정상 관찰기를 불필요하게 재시작하거나 누적 카운터를 초기화하지 않는다.
 
 이전1.4 primary36193/audit92936/supervisor81174는 계획 교체로 모두 종료0을 확인했다. [첫1시간](../../artifacts/checkpoints/soak-1.4.0-first-hour/summary.json), [전체 종료 구간](../../artifacts/checkpoints/soak-1.4.0/summary.json), [14:01 사건](../../artifacts/checkpoints/reconnect-20260921T1401/summary.json)을 보존했다. 과거1.4 APIerrors1/audit connectionErrors1을 새1.5 카운터에 적용하지 않으며 구간들을 합쳐 무중단·보편적 무손실로 주장하지 않는다.
 
@@ -49,7 +49,7 @@ native heartbeat `grid`가10분마다 재개 절차를 호출한다. Mac과 Code
 
 IDEA010/ISSUE023: 실제1.5에서55개의created UTC가 모두 화면대시로 표시됨을 읽기만 하여 재현했다. [REVIEW029](../product/REVIEW-029.md)와 [수정 전 근거](../../artifacts/checkpoints/event-time-before/result.json)를 참조한다. PRD1.13은 기존created의 엄격한 canonical UTC 검사, 명시적Asia/Seoul·KST와 접근 가능한 원본UTC, 잘못된값/누락의 대시 표시만 요구한다. 서버·DB·API·순서·최근80개·메시지·제어는 바꾸지 않는다.
 
-web/helper 구현·build·전체281검사·실제broker 통합/고급·인증/SSE/좁은화면·form44/receipt14·이벤트 브라우저 및 소스보안 검토를 통과했다. [로컬 집계](../../artifacts/checkpoints/candidate-1.6-local-summary.json)와 [REVIEW030](../product/REVIEW-030.md)을 참조한다. 신규AT01~03은 로컬검증, UI04/AT04는 원격 대기로 partial이다. form의 실제 반환 baseline 복구를 검증했으며, 후속HTTP201/pageguard의 실행 증명은 다음 복원시험에서 확보한다. 로컬3110/handle95785/PID8719/`Tue Sep 22 00:14:46 2026`가 별도privatecandidate1.6 DB와MQTTprefixcandidate16을 사용한다. 실제4개 이벤트와 날짜경계/잘못된값의 브라우저 대조를 마쳤다. 이 fixture를 중복 기동하지 않는다. 다음은 정확 커밋 이미지·이미지 보안·원격·동일 백업 복원 게이트다. 아직1.6 원격배포는 없다. 실제main1.5 관찰기와3104/18884 supervisor를 그대로 유지한다.1.6 로컬·보안·정확이미지·원격·동일스냅샷복원을 완료하기 전 기존 복구 기준을 교체하지 않는다.
+web/helper 구현·build·전체281검사·실제broker 통합/고급·인증/SSE/좁은화면·form44/receipt14·이벤트 브라우저 및 소스보안 검토를 통과했다. [로컬 집계](../../artifacts/checkpoints/candidate-1.6-local-summary.json)와 [REVIEW030](../product/REVIEW-030.md)을 참조한다. 신규AT01~03은 로컬검증, UI04/AT04는 원격 대기로 partial이다. form의 실제 반환 baseline 복구를 검증했으며, 후속HTTP201/pageguard의 실행 증명은 다음 복원시험에서 확보한다. 로컬3110/handle95785 fixture의 시험·복구를 마친 뒤 소유PID 시작identity를 대조해 정상 종료0/포트 닫힘을 확인했다. [종료 기록](../../artifacts/checkpoints/local-fixture-1.6-retirement/summary.json)에9개 시험RTU 설정과 privateDB 보존을 기록했다. 시험 필요 없이 재기동하지 않는다. 실제4개 이벤트와 날짜경계/잘못된값의 브라우저 대조는 보존돼 있다. 정확 커밋 `331ab9a00ee71a0924042e7952013d47495449d3`과 후보이미지4af99e7을 전달했다. [배포 전 검토](../../deploy/verification/candidate-331ab9a/pre-deployment-review.json): 이미지77개 시험·실제MQTT 통합/고급·HTTP 파일 일치·보안 검토를 완료했다. 초기HTTP fixture의 토큰 누락 실패와 별도 성공을 모두 보존했다. 다음은 새 전환 전 백업, 실제1.5 관찰구간 보존, 계획 배포, 동일 백업 복원 게이트다. 아직1.6 원격배포는 없다. 실제main1.5 관찰기와3104/18884 supervisor를 그대로 유지한다.1.6 로컬·보안·정확이미지·원격·동일스냅샷복원을 완료하기 전 기존 복구 기준을 교체하지 않는다.
 
 ## 남은 작업
 

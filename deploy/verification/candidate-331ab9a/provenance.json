@@ -1,0 +1,53 @@
+{
+  "sourceCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+  "archive": "artifacts/private/grid-331ab9a.oci.tar",
+  "archiveSha256": "7342c6465212c9fe503fd8ca7550a75244bd475fca26ecfac3067acc1bd9050f",
+  "sourceArchiveSha256": "8bbc4e2c64b204857a0c0505f03f39425afe07862fa560d464d5e45ea8288cb5",
+  "imageManifest": "sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
+  "labels": {
+    "grid.prd.version": "1.13",
+    "grid.runtime.variant": "alpine",
+    "org.opencontainers.image.revision": "331ab9a00ee71a0924042e7952013d47495449d3",
+    "org.opencontainers.image.version": "1.6.0"
+  },
+  "architecture": "amd64",
+  "os": "linux",
+  "deployed": false,
+  "registryPushed": true,
+  "runtimeAppTests": {
+    "pass": 77,
+    "fail": 0,
+    "files": 21,
+    "concurrency": 1
+  },
+  "actualBrokerIntegration": "PASS",
+  "advancedIntegration": "PASS",
+  "runtimeFileEquality": "runtime-files.json",
+  "servedAssets": "served-assets.json",
+  "harnessFailures": [
+    {
+      "stage": "HTTP fixture startup",
+      "terminal": 125,
+      "log": "verification.log",
+      "cause": "HTTP fixture omitted API_TOKEN required by non-loopback HOST; all owned resources were cleaned",
+      "retry": "http-round2.log",
+      "retryTerminal": 0,
+      "completedTestsWereNotRerun": true
+    }
+  ],
+  "security": {
+    "findings": "docs/security/evidence/app-candidate-331ab9a-findings.json",
+    "packages": 130,
+    "residualMatches": 4,
+    "distinctCVEs": 2,
+    "newFindings": 0
+  },
+  "registryPushProof": "registry-push-proof.json",
+  "checkedAt": "2026-09-21T15:32:25.932674+00:00",
+  "fileCounts": {
+    "sourceFiles": 15,
+    "servedIndex": 1,
+    "servedAssets": 2
+  },
+  "localQaCleanup": "All owned grid-331 containers/network removed; registry15050 forward terminal143 and absent"
+}

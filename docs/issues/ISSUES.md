@@ -474,3 +474,12 @@ ISSUE023 후보1.6 독립 읽기회귀: artifacts/checkpoints/candidate-1.6-even
 운영 harness 정리 후속: candidate1.6 form round1은44검증PASS였으나 기존finally가latency만해제하여owned목표200kW를남겼다. 당시소유ID한정기본controls복구를별도owned-settings-cleanup.json에기록했고그원본은유지한다. 이번 browser-command-form.cjs는실제201응답projection을등록즉시wx0600 baseline-UUID.json으로보존하고setup/case예외에도outerfinally에서소유faults/발전기on·limitPct·targetLimitKw를그기준으로복구한다. 기존RTU와전체ownedprojection을재조회비교한다. PATCHguard는capturedplant/generator ID만허용하고command/weather/replay/타RTU쓰기거절focused1test PASS. 실패진단은정제고정문구,cleanup실패는nonzero+cleanup-failure.json이며성공result는정리후에만발행한다.
 
 실제local3110 fresh candidate-1.6-command-form-round2-cleanup은원래deadline/300초wrapper하에서44checks/5UI POST 및actual201BaselinesRestored=true/preExistingUnchanged=true로종료0. 기존root3RTU와다른시험RTU도변경하지않았다. 소스/기준/cleanup/hash/이미지/로그를별도보존했다. 제품기능변경이아니며이변경때문에필요한한번의회귀만실행했다. 기존round1/1.5근거는수정하지않았다.
+
+
+### 후보1.6 exact-image 운영 harness 기동 실패 및 HTTP-only 재검증
+
+메인/배포담당 보고: 첫 exact-image 검증 세션35956이exit125로끝났다. HOST=0.0.0.0인HTTP-only fixture에필수API_TOKEN을설정하지않아기동이거절됐으며의도한인증guard작동이다. 이를앱회귀로분류하지않는다. 보존된 verification.log는deadline wrapper의정제실패문구만포함하므로구체적설정원인은담당실행설명과구분한다.
+
+독립파일대조로 app-unit.log77/77PASS, 실제broker integration.log와advanced-integration.log의PASS를확인했다. 이완료시험을HTTP설정실패때문에반복하지않았다. local-cleanup.json은소유grid-331-qa/broker/http제거와mainOrRegistryChanged=false를기록한다.
+
+HTTP-only round2는새이름/private token을사용하는수정이다. 실제 served-assets.json은이미지4af99e7b…/version1.6.0/servedJS2bcc3c1b…및CSS가image파일과일치하는PASS를기록한다. http-round2-cleanup.json은grid-331-http-round2정리/mainOrRegistryChanged=false를기록한다. 이범위는HTTP정적파일·버전·이미지연결검증이며전체remote배포/복원PASS를뜻하지않는다. 초기실패로그는유지하고추가담당receipt로설정원인·수정상태를확정한다. 본검토는읽기와issues문서만수정했으며run/resume/NEXT/source/remote는변경하지않았다.

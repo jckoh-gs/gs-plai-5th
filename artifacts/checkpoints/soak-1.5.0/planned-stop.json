@@ -1,0 +1,25 @@
+{
+  "createdAt": "2026-09-21T15:35:08.473139+00:00",
+  "reason": "Planned1.6upgrade after exactimage/local/security gates; no requirement that eachversion observes1hour",
+  "runtimeCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+  "processes": {
+    "supervisor": {
+      "pid": 2061,
+      "handle": 24851,
+      "processIdentity": "Mon Sep 21 23:52:13 2026"
+    },
+    "primary": {
+      "pid": 2883,
+      "handle": 71300,
+      "processIdentity": "Mon Sep 21 23:56:57 2026"
+    },
+    "audit": {
+      "pid": 2888,
+      "handle": 98957,
+      "processIdentity": "Mon Sep 21 23:56:58 2026"
+    }
+  },
+  "state": "Intent only; wait preupgradebackup before stopping anyprocess",
+  "scope": "Preserve entireactual1.5 interval and finalplanneddisconnect; do notclaim firsthour, uninterruptedservice, or universal receipt",
+  "priorFirstHourPreparation": "artifacts/checkpoints/soak-1.5-first-hour-preparation/summary.json"
+}

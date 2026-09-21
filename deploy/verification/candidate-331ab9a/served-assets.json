@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "image": "sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
+  "version": "1.6.0",
+  "indexSha256": "937a71473041cc510576cc7026f96c3a6ce1366370bd118f01c5e81f7e1327ec",
+  "assets": [
+    {
+      "path": "/assets/index-v7p0JZRW.js",
+      "sha256": "2bcc3c1bc75a178acf7dac51bd91436b6f5e30bd1c8e3f1a176980900417be06",
+      "bytes": 266656,
+      "matchesImageFile": true
+    },
+    {
+      "path": "/assets/index-DEfqZjZ9.css",
+      "sha256": "51137c1c0da56706d8cbe87f873b7ace2b530ccdc07673e1fccf2b8cf93166db",
+      "bytes": 19886,
+      "matchesImageFile": true
+    }
+  ],
+  "eventTime": {
+    "sourceSha256": "251c71e39967b05c99ca054c093385a71728200db5f407d8cd6dc667972a7c28",
+    "sourceImported": true,
+    "compiledMarkersPresent": true,
+    "note": "Source copied in exact build stage; compiled code is served in verified bundle; raw web source is not shipped in runtime."
+  }
+}

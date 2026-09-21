@@ -1,0 +1,131 @@
+{
+  "observedAt": "2026-09-21T15:34:01.834028+00:00",
+  "reviewer": "/root",
+  "result": "PASS_PREDEPLOYMENT_GATES",
+  "sourceCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+  "imageManifest": "sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
+  "archiveSha256Verified": "7342c6465212c9fe503fd8ca7550a75244bd475fca26ecfac3067acc1bd9050f",
+  "sourceFilesComparedWithExactGit": 15,
+  "servedIndexFiles": 1,
+  "servedAssets": 2,
+  "exactImageAppTests": {
+    "passed": 77,
+    "failed": 0,
+    "sourceFiles": 21,
+    "scope": "App-only tests on exactimage; does not include unshipped browser/media/operations tests"
+  },
+  "localAcceptance": "artifacts/checkpoints/candidate-1.6-local-summary.json",
+  "independentLocalReview": "docs/product/REVIEW-030.md",
+  "security": {
+    "packages": 130,
+    "matches": 4,
+    "cves": 2,
+    "npmAuditVulnerabilities": 0,
+    "scope": "Unchanged unresolved OS findings, officialdistro feed fixedversions notconfirmed. No claim of zeroimagevulnerabilities."
+  },
+  "operationalFailure": "InitialHTTPfixture omittedmandatorytoken; preservedterminal125. OnlyHTTPfixture retried successfully; app/integration/advanced notrerun. Cause inferredfromactualfixtureconfigurationandguard, rawfailedchildstderr unavailable.",
+  "credentialScanBoundary": "8knownpersistentvalues willbechecked beforecommit. HTTPtemporarytoken existedonlyinmemoryandwasdiscarded; cannot assert exactvalue content scan for thattoken. No token/env/inspect/rawstdout captured in publicHTTPproof.",
+  "fallback": {
+    "runtime": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+    "manifest": "artifacts/releases/checkpoint-1.5.0.json",
+    "knownLimitation": "ISSUE023 storedcreated values appear as dashes in1.5 eventlog; preservedhistoricalacceptance notrewritten"
+  },
+  "pending": [
+    "Freshpreupgradebackup and actualmainbaseline",
+    "Plannedobserver archive/controlledk3supgrade",
+    "Actualmain1.6 UI/API/MQTT/outbox",
+    "Exactselectedsnapshot current1.6/backward1.5 restore and cleanup",
+    "Independentfunctionalacceptance/immutablecheckpoint",
+    "Originalfinalwindow video/PPT/delivery"
+  ],
+  "evidence": [
+    {
+      "path": "deploy/verification/candidate-331ab9a/provenance.json",
+      "sha256": "08617ef53c354c1a579b2cc2e26bf3cdf7b728fc96f0cd541122627f61be550e"
+    },
+    {
+      "path": "deploy/verification/candidate-331ab9a/runtime-files.json",
+      "sha256": "23b0cc2d5de2f45d8222b072de1e748c98c41b6819e7b29bb99cc197000cdad9"
+    },
+    {
+      "path": "deploy/verification/candidate-331ab9a/served-assets.json",
+      "sha256": "1d6f8b544f14396292b020c61cf42311130fe8fad951c6f05de9cc3bbdf93d66"
+    },
+    {
+      "path": "deploy/verification/candidate-331ab9a/test-selection.json",
+      "sha256": "f019c3d4989c8f83612ba5b2757683375746f694eba35b1b9a5d60bddf2ed62d"
+    },
+    {
+      "path": "deploy/verification/candidate-331ab9a/app-unit.log",
+      "sha256": "09e822bbdca4189612d4132b82cb4b0bd3f50ddbd9eaece6e50ce8f3f4398175"
+    },
+    {
+      "path": "deploy/verification/candidate-331ab9a/integration.log",
+      "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c"
+    },
+    {
+      "path": "deploy/verification/candidate-331ab9a/advanced-integration.log",
+      "sha256": "b8bda2433b04be29fb6fb8701807b62037ab481bfee07da478a823426c8aed3c"
+    },
+    {
+      "path": "deploy/verification/candidate-331ab9a/http-fixture-attempts.json",
+      "sha256": "01a0d50b41eeca4d72410e827f9f099fe8dbc84e2c1364ef30ac87ba6a6b9a0f"
+    },
+    {
+      "path": "deploy/verification/candidate-331ab9a/verification.log",
+      "sha256": "3a5a0a74c1c208f28e606fa39ed8d8c97855dca595750f60ff5576efced4fec9"
+    },
+    {
+      "path": "deploy/verification/candidate-331ab9a/http-round2.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "deploy/verification/candidate-331ab9a/local-cleanup.json",
+      "sha256": "7b811c10474c8bb0f8febd1b0b6c02a992f2cbadbbe80f8c6bbea2411440dc0a"
+    },
+    {
+      "path": "deploy/verification/candidate-331ab9a/http-round2-cleanup.json",
+      "sha256": "8b024dc9f2d0e3bfe473497de4cee41bc59c86f6dffb95319ba34a307fc673ec"
+    },
+    {
+      "path": "deploy/verification/candidate-331ab9a/registry-push-proof.json",
+      "sha256": "44cee1833b8b55467a0406ac3009b12cb8c3ac05ed12eb60522f33f8555f3224"
+    },
+    {
+      "path": "deploy/verification/candidate-331ab9a/registry-forward.json",
+      "sha256": "634af0a2ffbb0bb5c9b2a3f82b51a0ec884f476b719a0ab66b2685db97a80e49"
+    },
+    {
+      "path": "docs/security/evidence/app-candidate-331ab9a-npm-audit.json",
+      "sha256": "3525936ee9135b7876cfe31d33d0645eab173b84e098b277bf6bfe4b36f1de70"
+    },
+    {
+      "path": "docs/security/evidence/app-candidate-331ab9a-grype.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/security/evidence/app-candidate-331ab9a-grype.json",
+      "sha256": "73ab3293cfd1c7ab30ba307e7385770aafaf0ce4c466db78d32edddfe5b439e0"
+    },
+    {
+      "path": "docs/security/evidence/app-candidate-331ab9a-findings.json",
+      "sha256": "ab758210a5c7a1320c4aa6df8172414bb074b0ff350a1dd74d47d06cf222d74a"
+    },
+    {
+      "path": "docs/security/evidence/app-candidate-331ab9a-sbom.json",
+      "sha256": "86de6ab5407733c6bb0befabcee0ce0c4ceaf2750135207300b4ba384b80aabc"
+    },
+    {
+      "path": "docs/security/evidence/app-candidate-331ab9a-official-feed.json",
+      "sha256": "2d3c661529650931a2a9f6deea6d556627b2968749647ce43820f84d78281782"
+    },
+    {
+      "path": "docs/security/evidence/app-candidate-331ab9a-sbom.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/security/evidence/app-candidate-331ab9a-npm-audit-metadata.json",
+      "sha256": "68385a46415b70d3203f45ee4da2f3819e2d9dac824d55873f99a9875db3ebc2"
+    }
+  ]
+}

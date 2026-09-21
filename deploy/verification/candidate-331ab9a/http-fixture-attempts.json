@@ -1,0 +1,21 @@
+{
+  "first": {
+    "handle": 35956,
+    "exit": 125,
+    "scriptSha256": "8797535d2d3bbfb1a736a8a6a0a03e048d27b6e35aae68917ab4b59d4c6d5aca",
+    "API_TOKENProvided": false,
+    "configSource": "server/config.js readConfig requires token >=24 chars for HOST0.0.0.0",
+    "failureLog": "verification.log",
+    "rawChildErrorUnavailable": "deadline wrapper withheld failed-child stderr; startup cause identified from fixture arguments and config precondition"
+  },
+  "round2": {
+    "handle": 7893,
+    "exit": 0,
+    "scriptSha256": "65490cbba3d2a77148d8dfaa7cf84cef0bf98e52e2ed075e27537702caed41ac",
+    "API_TOKENProvided": true,
+    "tokenOrigin": "secrets.token_hex(24), memory only; no actual deployment token",
+    "sourceServerAndImageUnchanged": true,
+    "proof": "served-assets.json",
+    "cleanup": "http-round2-cleanup.json"
+  }
+}

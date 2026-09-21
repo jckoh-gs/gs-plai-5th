@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T15:28:04.162054+00:00",
+  "updatedAt": "2026-09-21T15:34:19.755007+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -27,7 +27,7 @@
     "productVersion": "1.6.0",
     "prdVersion": "1.13",
     "idea": "IDEA-010",
-    "state": "Local281/build/actualbroker/auth/form44/receipt14/eventtime and independentREVIEW030 PASS; exactimage/security/remote/restore pending"
+    "state": "Exactimage77/integration/advanced/servedassets/security/registrypush PASS; preupgradebackup inprogress, main1.5unchanged"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -39,7 +39,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Commit reviewedcandidate1.6 runtime andlocalproof; build exactcommit amd64OCI and app-onlytests/actualbrokerintegration/advanced; security exactimage audit, then controlledremoteupgrade and sameexactbackup current1.6/backward1.5 restore. Preserve1.5fallback and knownISSUE023 scope.",
+    "Finish unique pre-1.6 upgrade backup and actualbaseline; then archive complete observed1.5 period (may be less than1h, do notclaimfirsthour), stopownedobservers/supervisor andcontrolled1.6upgrade. ThenmainUI/MQTT/outbox plus exactnewbackup current1.6/backward1.5 restore. Immutable1.5fallback retained.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -364,7 +364,7 @@
     "localFixtureOnly": true
   },
   "currentObservationIncidents": [],
-  "nextOperationalReview": "New1.5 observerfirsthour after2026-09-21T15:56:58.686Z; inspectactualfreshness/counterincrements/Ready/storage/hostpower. Currentbackup restore ongoing; finalmedia remains originalfreeze window.",
+  "nextOperationalReview": "Beforecontrolled1.6upgrade archive actual1.5 observerperiod and Ready/resource facts. Preserve plannedfirsthour preparation but do notexecute its1hour assertion on shorter observations.",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.5",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
@@ -403,15 +403,17 @@
     "privateDirectory": "artifacts/private/candidate-1.6",
     "mqttPrefix": "candidate16",
     "seedDemo": false,
-    "state": "Running;3root-owned plus6browser-ownedRTUs; formround2 ownedbaseline/preexisting cleanupPASS, no mainwrites",
+    "state": "Completed; root handle terminal0, owned PID absent, port3110 closed, private DB retained",
     "fixtureEvidence": "artifacts/checkpoints/candidate-1.6-fixture/creation.json",
-    "bundleSha256": "2bcc3c1bc75a178acf7dac51bd91436b6f5e30bd1c8e3f1a176980900417be06"
+    "bundleSha256": "2bcc3c1bc75a178acf7dac51bd91436b6f5e30bd1c8e3f1a176980900417be06",
+    "exitCode": 0,
+    "retirementEvidence": "artifacts/checkpoints/local-fixture-1.6-retirement/summary.json"
   },
   "candidateOperations": {
     "productVersion": "1.6.0",
     "prdVersion": "1.13",
     "idea": "IDEA-010",
-    "phase": "Local281/build/actualbroker/auth/form44/receipt14/eventtime and independentREVIEW030 PASS; exactimage/security/remote/restore pending",
+    "phase": "Exactimage77/integration/advanced/servedassets/security/registrypush PASS; preupgradebackup inprogress, main1.5unchanged",
     "uiOwner": "/root/ui",
     "browserOwner": "/root/issues",
     "fallback": "artifacts/releases/checkpoint-1.5.0.json",
@@ -421,7 +423,13 @@
     "unitEvidence": "artifacts/checkpoints/candidate-1.6-unit-round2.log",
     "eventBrowserEvidence": "artifacts/checkpoints/candidate-1.6-event-time-round1/result.json",
     "securityReview": "docs/security/EVENT-TIME-REVIEW.md",
-    "activeOperations": [],
+    "activeOperations": [
+      {
+        "owner": "/root/deployment",
+        "scope": "Read main1.5 baseline/storage and unique pre-1.6 backup only; no image change yet",
+        "state": "Dispatched; reconcile owner handle/journal/remotePath before retries"
+      }
+    ],
     "completedLocalHandles": {
       "unit": 51459,
       "integrationAdvanced": 14079,
@@ -434,7 +442,34 @@
     "allCompletedHandleExitCodes": 0,
     "localSummary": "artifacts/checkpoints/candidate-1.6-local-summary.json",
     "independentReview": "docs/product/REVIEW-030.md",
-    "form201Clarification": "artifacts/checkpoints/candidate-1.6-command-form-status-clarification.json"
+    "form201Clarification": "artifacts/checkpoints/candidate-1.6-command-form-status-clarification.json",
+    "sourceCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+    "completedImageSecurity": "docs/security/evidence/app-candidate-331ab9a-findings.json",
+    "completedImageOperations": {
+      "build": {
+        "handle": 67106,
+        "exit": 0
+      },
+      "verificationFirst": {
+        "handle": 35956,
+        "exit": 125,
+        "scope": "77/integration/advanced done; HTTPfixture missingtoken failure"
+      },
+      "httpRound2": {
+        "handle": 7893,
+        "exit": 0
+      },
+      "registryPush": {
+        "handle": 62295,
+        "exit": 0
+      },
+      "registryForward": {
+        "handle": 51512,
+        "exit": 143,
+        "port15050Closed": true
+      },
+      "rootReview": "deploy/verification/candidate-331ab9a/pre-deployment-review.json"
+    }
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
   "previousCandidateFixture": {
@@ -522,7 +557,7 @@
       "prematureExitCode": 1,
       "message": "First hour not yet observed; do not create checkpoint"
     },
-    "state": "Prepared; not yetobserved orcaptured"
+    "state": "Prepared but not executed; controlled1.6 upgrade may precede1hour, so archive exact observed1.5 period instead. No user/PRD requirement for eachversion1hour; do not manufacture coverage."
   },
   "activeMediaRehearsal": {
     "productVersion": "1.5.0",

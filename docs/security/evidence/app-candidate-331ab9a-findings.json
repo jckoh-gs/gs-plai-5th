@@ -1,0 +1,654 @@
+{
+  "capturedAt": "2026-09-21T15:29:47.411603+00:00",
+  "sourceCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+  "productVersion": "1.6.0",
+  "prdVersion": "1.13",
+  "imageManifest": "sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
+  "labels": {
+    "grid.prd.version": "1.13",
+    "grid.runtime.variant": "alpine",
+    "org.opencontainers.image.revision": "331ab9a00ee71a0924042e7952013d47495449d3",
+    "org.opencontainers.image.version": "1.6.0"
+  },
+  "status": "Exact candidate archive scanned; deployment not asserted",
+  "scanner": {
+    "name": "grype",
+    "version": "0.119.0",
+    "configuration": {
+      "output": [
+        "json"
+      ],
+      "file": "",
+      "pretty": false,
+      "distro": "",
+      "add-cpes-if-none": false,
+      "output-template-file": "",
+      "check-for-app-update": true,
+      "only-fixed": false,
+      "only-notfixed": false,
+      "ignore-wontfix": "",
+      "platform": "",
+      "search": {
+        "scope": "squashed",
+        "unindexed-archives": false,
+        "indexed-archives": true
+      },
+      "ignore": [
+        {
+          "vulnerability": "",
+          "include-aliases": false,
+          "reason": "",
+          "namespace": "",
+          "fix-state": "",
+          "package": {
+            "name": "kernel-headers",
+            "version": "",
+            "language": "",
+            "type": "rpm",
+            "location": "",
+            "upstream-name": "kernel"
+          },
+          "vex-status": "",
+          "vex-justification": "",
+          "match-type": "exact-indirect-match"
+        },
+        {
+          "vulnerability": "",
+          "include-aliases": false,
+          "reason": "",
+          "namespace": "",
+          "fix-state": "",
+          "package": {
+            "name": "linux(-.*)?-headers-.*",
+            "version": "",
+            "language": "",
+            "type": "deb",
+            "location": "",
+            "upstream-name": "linux.*"
+          },
+          "vex-status": "",
+          "vex-justification": "",
+          "match-type": "exact-indirect-match"
+        },
+        {
+          "vulnerability": "",
+          "include-aliases": false,
+          "reason": "",
+          "namespace": "",
+          "fix-state": "",
+          "package": {
+            "name": "linux-libc-dev",
+            "version": "",
+            "language": "",
+            "type": "deb",
+            "location": "",
+            "upstream-name": "linux"
+          },
+          "vex-status": "",
+          "vex-justification": "",
+          "match-type": "exact-indirect-match"
+        },
+        {
+          "vulnerability": "",
+          "include-aliases": false,
+          "reason": "",
+          "namespace": "",
+          "fix-state": "",
+          "package": {
+            "name": "linux-kbuild-.*",
+            "version": "",
+            "language": "",
+            "type": "deb",
+            "location": "",
+            "upstream-name": "linux.*"
+          },
+          "vex-status": "",
+          "vex-justification": "",
+          "match-type": "exact-indirect-match"
+        }
+      ],
+      "exclude": [],
+      "externalSources": {
+        "enable": false,
+        "maven": {
+          "searchUpstreamBySha1": true,
+          "baseUrl": "https://search.maven.org/solrsearch/select",
+          "rateLimit": 300000000
+        }
+      },
+      "match": {
+        "java": {
+          "using-cpes": false
+        },
+        "jvm": {
+          "using-cpes": true
+        },
+        "dotnet": {
+          "using-cpes": false
+        },
+        "golang": {
+          "using-cpes": false,
+          "always-use-cpe-for-stdlib": false,
+          "allow-main-module-pseudo-version-comparison": false
+        },
+        "javascript": {
+          "using-cpes": false
+        },
+        "python": {
+          "using-cpes": false
+        },
+        "ruby": {
+          "using-cpes": false
+        },
+        "rust": {
+          "using-cpes": false
+        },
+        "hex": {
+          "using-cpes": false
+        },
+        "stock": {
+          "using-cpes": true
+        },
+        "dpkg": {
+          "using-cpes": false,
+          "missing-epoch-strategy": "zero",
+          "use-cpes-for-eol": false
+        },
+        "rpm": {
+          "using-cpes": false,
+          "missing-epoch-strategy": "auto",
+          "use-cpes-for-eol": false
+        }
+      },
+      "fail-on-severity": "",
+      "registry": {
+        "insecure-skip-tls-verify": false,
+        "insecure-use-http": false,
+        "ca-cert": ""
+      },
+      "show-suppressed": false,
+      "include-matcher-suppressions": false,
+      "by-cve": false,
+      "SortBy": {
+        "sort-by": "risk"
+      },
+      "name": "",
+      "default-image-pull-source": "",
+      "from": null,
+      "vex-documents": [],
+      "vex-add": [],
+      "match-upstream-kernel-headers": false,
+      "fix-channel": {
+        "redhat-eus": {
+          "apply": "auto",
+          "versions": ">= 8.0"
+        },
+        "ubuntu-esm": {
+          "apply": "auto",
+          "versions": ""
+        }
+      },
+      "timestamp": true,
+      "alerts": {
+        "enable-eol-distro-warnings": true
+      },
+      "db": {
+        "cache-dir": "/Users/charleskoh/Library/Caches/grype/db",
+        "update-url": "https://grype.anchore.io/databases",
+        "ca-cert": "",
+        "auto-update": false,
+        "validate-by-hash-on-start": true,
+        "validate-age": true,
+        "max-allowed-built-age": 432000000000000,
+        "require-update-check": false,
+        "update-available-timeout": 30000000000,
+        "update-download-timeout": 300000000000,
+        "max-update-check-frequency": 7200000000000
+      },
+      "exp": {},
+      "dev": {
+        "db": {
+          "debug": false
+        }
+      }
+    },
+    "db": {
+      "status": {
+        "schemaVersion": "v6.1.9",
+        "from": "manual import",
+        "built": "2026-09-21T06:39:24Z",
+        "path": "/Users/charleskoh/Library/Caches/grype/db/6/vulnerability.db",
+        "valid": true
+      },
+      "providers": {
+        "alma": {
+          "captured": "2026-09-21T00:37:16Z",
+          "input": "xxh64:3c06e5968dd86ad5"
+        },
+        "alpine": {
+          "captured": "2026-09-21T00:36:22Z",
+          "input": "xxh64:f71e478f3bf5f7e8"
+        },
+        "amazon": {
+          "captured": "2026-09-21T00:36:22Z",
+          "input": "xxh64:f03bc51f78b41c59"
+        },
+        "arch": {
+          "captured": "2026-09-21T00:36:41Z",
+          "input": "xxh64:44827c3d0b5df5be"
+        },
+        "bitnami": {
+          "captured": "2026-09-21T00:37:08Z",
+          "input": "xxh64:9157c8e8f40151e8"
+        },
+        "chainguard": {
+          "captured": "2026-09-21T00:36:16Z",
+          "input": "xxh64:a164d6f71143d556"
+        },
+        "chainguard-libraries": {
+          "captured": "2026-09-21T00:36:09Z",
+          "input": "xxh64:81446e9256876dfd"
+        },
+        "debian": {
+          "captured": "2026-09-21T00:36:13Z",
+          "input": "xxh64:ac903a943f46bbd1"
+        },
+        "echo": {
+          "captured": "2026-09-21T00:37:02Z",
+          "input": "xxh64:aa10b4f34b7b50b7"
+        },
+        "eol": {
+          "captured": "2026-09-21T00:35:57Z",
+          "input": "xxh64:e1972ddf7f9c1ce6"
+        },
+        "epss": {
+          "captured": "2026-09-21T00:36:38Z",
+          "input": "xxh64:b19eaf3416f8558a"
+        },
+        "fedora": {
+          "captured": "2026-09-21T00:37:12Z",
+          "input": "xxh64:81af4061defc9553"
+        },
+        "github": {
+          "captured": "2026-09-21T00:36:50Z",
+          "input": "xxh64:bac030d18e236f7c"
+        },
+        "govulndb": {
+          "captured": "2026-09-21T00:36:03Z",
+          "input": "xxh64:c5920a4342a85196"
+        },
+        "hummingbird": {
+          "captured": "2026-09-21T00:38:30Z",
+          "input": "xxh64:731391e94706f1e7"
+        },
+        "kev": {
+          "captured": "2026-09-21T00:36:15Z",
+          "input": "xxh64:2fa58cb2e8741d80"
+        },
+        "mariner": {
+          "captured": "2026-09-21T00:36:10Z",
+          "input": "xxh64:dd13bcfff621623a"
+        },
+        "minimos": {
+          "captured": "2026-09-21T00:36:18Z",
+          "input": "xxh64:e2d78dede7065bb1"
+        },
+        "nvd": {
+          "captured": "2026-09-21T00:37:04Z",
+          "input": "xxh64:602485a7c9fb9939"
+        },
+        "oracle": {
+          "captured": "2026-09-21T00:36:46Z",
+          "input": "xxh64:0105143a7d1ea823"
+        },
+        "photon": {
+          "captured": "2026-09-21T00:36:27Z",
+          "input": "xxh64:1aebda6860401770"
+        },
+        "rhel": {
+          "captured": "2026-09-21T00:38:01Z",
+          "input": "xxh64:b0e8f46a864e7a6a"
+        },
+        "secureos": {
+          "captured": "2026-09-21T00:36:31Z",
+          "input": "xxh64:d7a6658de52e92bb"
+        },
+        "sles": {
+          "captured": "2026-09-21T00:36:40Z",
+          "input": "xxh64:ce7de7095c05820e"
+        },
+        "ubuntu": {
+          "captured": "2026-09-21T00:39:01Z",
+          "input": "xxh64:1d32abba72d68a8d"
+        },
+        "wolfi": {
+          "captured": "2026-09-21T00:36:28Z",
+          "input": "xxh64:9ba91278457a2117"
+        }
+      }
+    },
+    "timestamp": "2026-09-22T00:29:34.526324+09:00"
+  },
+  "comparison": {
+    "baseline": "sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+    "added": [],
+    "removed": []
+  },
+  "matches": [
+    {
+      "id": "CVE-2026-85091",
+      "severity": "High",
+      "package": "zlib",
+      "version": "1.3.2-r0",
+      "type": "apk",
+      "fix": {
+        "versions": [],
+        "state": ""
+      },
+      "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2026-85091",
+      "advisories": [
+        "https://gist.github.com/thesmartshadow/e0b9481792afb7c31e86fee1ff084490",
+        "https://github.com/madler/zlib",
+        "https://github.com/madler/zlib/blob/v1.3.2/gzwrite.c#L393",
+        "https://www.vulncheck.com/advisories/zlib-1.3.1.2-through-1.3.2-heap-buffer-overflow-via-gz-vacate"
+      ]
+    },
+    {
+      "id": "CVE-2025-60876",
+      "severity": "Medium",
+      "package": "busybox",
+      "version": "1.37.0-r31",
+      "type": "apk",
+      "fix": {
+        "versions": [],
+        "state": ""
+      },
+      "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876",
+      "advisories": [
+        "https://gist.github.com/subyumatest/41554af6a72aedaacaec026adc311092",
+        "https://lists.busybox.net/pipermail/busybox/attachments/20250823/ccdc96ef/attachment-0001.htm",
+        "https://lists.busybox.net/pipermail/busybox/attachments/20250828/e7f90492/attachment.htm",
+        "https://cert-portal.siemens.com/productcert/html/ssa-253495.html"
+      ]
+    },
+    {
+      "id": "CVE-2025-60876",
+      "severity": "Medium",
+      "package": "busybox-binsh",
+      "version": "1.37.0-r31",
+      "type": "apk",
+      "fix": {
+        "versions": [],
+        "state": ""
+      },
+      "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876",
+      "advisories": [
+        "https://gist.github.com/subyumatest/41554af6a72aedaacaec026adc311092",
+        "https://lists.busybox.net/pipermail/busybox/attachments/20250823/ccdc96ef/attachment-0001.htm",
+        "https://lists.busybox.net/pipermail/busybox/attachments/20250828/e7f90492/attachment.htm",
+        "https://cert-portal.siemens.com/productcert/html/ssa-253495.html"
+      ]
+    },
+    {
+      "id": "CVE-2025-60876",
+      "severity": "Medium",
+      "package": "ssl_client",
+      "version": "1.37.0-r31",
+      "type": "apk",
+      "fix": {
+        "versions": [],
+        "state": ""
+      },
+      "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876",
+      "advisories": [
+        "https://gist.github.com/subyumatest/41554af6a72aedaacaec026adc311092",
+        "https://lists.busybox.net/pipermail/busybox/attachments/20250823/ccdc96ef/attachment-0001.htm",
+        "https://lists.busybox.net/pipermail/busybox/attachments/20250828/e7f90492/attachment.htm",
+        "https://cert-portal.siemens.com/productcert/html/ssa-253495.html"
+      ]
+    }
+  ],
+  "sbom": {
+    "packages": 130,
+    "types": {
+      "npm": 111,
+      "apk": 18,
+      "binary": 1
+    },
+    "descriptor": {
+      "name": "syft",
+      "version": "1.52.0",
+      "configuration": {
+        "catalogers": {
+          "requested": {
+            "default": [
+              "image",
+              "file"
+            ]
+          },
+          "used": [
+            "alpm-db-cataloger",
+            "apk-db-cataloger",
+            "apple-app-bundle-cataloger",
+            "binary-classifier-cataloger",
+            "bitnami-cataloger",
+            "cargo-auditable-binary-cataloger",
+            "conan-info-cataloger",
+            "dotnet-deps-binary-cataloger",
+            "dotnet-packages-lock-cataloger",
+            "dpkg-db-cataloger",
+            "elf-binary-package-cataloger",
+            "file-content-cataloger",
+            "file-digest-cataloger",
+            "file-executable-cataloger",
+            "file-metadata-cataloger",
+            "gguf-cataloger",
+            "go-module-binary-cataloger",
+            "graalvm-native-image-cataloger",
+            "homebrew-cataloger",
+            "java-archive-cataloger",
+            "java-jvm-cataloger",
+            "javascript-package-cataloger",
+            "linux-kernel-cataloger",
+            "lua-rock-cataloger",
+            "nix-cataloger",
+            "pe-binary-package-cataloger",
+            "php-composer-installed-cataloger",
+            "php-interpreter-cataloger",
+            "php-pear-serialized-cataloger",
+            "portage-cataloger",
+            "python-installed-package-cataloger",
+            "r-package-cataloger",
+            "rpm-db-cataloger",
+            "ruby-installed-gemspec-cataloger",
+            "safetensors-cataloger",
+            "snap-cataloger",
+            "wordpress-plugins-cataloger"
+          ]
+        },
+        "data-generation": {
+          "generate-cpes": true
+        },
+        "files": {
+          "content": {
+            "globs": null,
+            "skip-files-above-size": 0
+          },
+          "hashers": [
+            "sha-1",
+            "sha-256"
+          ],
+          "selection": "owned-by-package"
+        },
+        "licenses": {
+          "coverage": 75,
+          "include-content": "none"
+        },
+        "packages": {
+          "binary": [
+            "python-binary",
+            "python-binary-lib",
+            "pypy-binary-lib",
+            "go-binary",
+            "julia-binary",
+            "julia-binary",
+            "helm",
+            "redis-binary",
+            "valkey-binary",
+            "nodejs-binary",
+            "busybox-binary",
+            "util-linux-binary",
+            "haproxy-binary",
+            "perl-binary",
+            "php-composer-binary",
+            "httpd-binary",
+            "memcached-binary",
+            "traefik-binary",
+            "arangodb-binary",
+            "postgresql-binary",
+            "mysql-binary",
+            "mysql-binary",
+            "mysql-binary",
+            "mysqld-mysql-cluster-legacy-binary",
+            "mysqld-binary",
+            "ndbd-binary",
+            "ndbmtd-binary",
+            "ndb_mgmd-binary",
+            "xtrabackup-binary",
+            "mariadb-binary",
+            "rust-standard-library-linux",
+            "rust-standard-library-macos",
+            "ruby-binary",
+            "erlang-binary",
+            "erlang-alpine-binary",
+            "erlang-library",
+            "swipl-binary",
+            "dart-binary",
+            "deno-binary",
+            "bun-binary",
+            "haskell-ghc-binary",
+            "haskell-cabal-binary",
+            "haskell-stack-binary",
+            "consul-binary",
+            "hashicorp-vault-binary",
+            "nginx-binary",
+            "bash-binary",
+            "openssl-binary",
+            "openldap-search-binary",
+            "qt-qtbase-lib",
+            "gcc-binary",
+            "fluent-bit-binary",
+            "wordpress-cli-binary",
+            "curl-binary",
+            "lighttpd-binary",
+            "proftpd-binary",
+            "zstd-binary",
+            "xz-binary",
+            "gzip-binary",
+            "sqlcipher-binary",
+            "jq-binary",
+            "chrome-binary",
+            "firefox-binary",
+            "ffmpeg-binary",
+            "ffmpeg-library",
+            "ffmpeg-library",
+            "elixir-binary",
+            "elixir-library",
+            "istio-binary",
+            "istio-binary",
+            "grafana-binary",
+            "grafana-binary",
+            "envoy-binary",
+            "mongodb-binary",
+            "ingress-nginx-binary",
+            "filebeat-binary",
+            "metricbeat-binary",
+            "heartbeat-binary",
+            "packetbeat-binary",
+            "auditbeat-binary",
+            "elastic-agent-binary",
+            "krb5-library",
+            "heimdal-krb5-library",
+            "java-binary",
+            "java-jdb-binary"
+          ],
+          "cpp": {
+            "vcpkg-allow-git-clone": false
+          },
+          "dotnet": {
+            "dep-packages-must-claim-dll": true,
+            "dep-packages-must-have-dll": false,
+            "exclude-project-references": true,
+            "propagate-dll-claims-to-parents": true,
+            "relax-dll-claims-when-bundling-detected": true
+          },
+          "golang": {
+            "capture-symbols": "none",
+            "local-mod-cache-dir": "/Users/charleskoh/go/pkg/mod",
+            "local-vendor-dir": "",
+            "main-module-version": {
+              "from-build-settings": true,
+              "from-contents": false,
+              "from-ld-flags": true
+            },
+            "proxies": [
+              "https://proxy.golang.org",
+              "direct"
+            ],
+            "search-local-mod-cache-licenses": false,
+            "search-local-vendor-licenses": false,
+            "search-remote-licenses": false,
+            "use-packages-lib": true
+          },
+          "java-archive": {
+            "include-indexed-archives": true,
+            "include-unindexed-archives": false,
+            "maven-base-url": "https://repo1.maven.org/maven2",
+            "maven-localrepository-dir": "/Users/charleskoh/.m2/repository",
+            "max-parent-recursive-depth": 0,
+            "resolve-transitive-dependencies": false,
+            "use-maven-localrepository": false,
+            "use-network": false
+          },
+          "javascript": {
+            "include-dev-dependencies": false,
+            "npm-base-url": "https://registry.npmjs.org",
+            "search-remote-licenses": false
+          },
+          "linux-kernel": {
+            "catalog-modules": true
+          },
+          "nix": {
+            "capture-owned-files": false
+          },
+          "python": {
+            "guess-unpinned-requirements": false,
+            "pypi-base-url": "https://pypi.org/pypi",
+            "search-remote-licenses": false
+          }
+        },
+        "relationships": {
+          "exclude-binary-packages-with-file-ownership-overlap": true,
+          "package-file-ownership": true,
+          "package-file-ownership-overlap": true
+        },
+        "search": {
+          "scope": "squashed"
+        }
+      }
+    },
+    "distro": {
+      "prettyName": "Alpine Linux v3.24",
+      "name": "Alpine Linux",
+      "id": "alpine",
+      "versionID": "3.24.2",
+      "homeURL": "https://alpinelinux.org/",
+      "bugReportURL": "https://gitlab.alpinelinux.org/alpine/aports/-/issues"
+    }
+  },
+  "sha256": {
+    "app-candidate-331ab9a-grype.json": "73ab3293cfd1c7ab30ba307e7385770aafaf0ce4c466db78d32edddfe5b439e0",
+    "app-candidate-331ab9a-sbom.json": "86de6ab5407733c6bb0befabcee0ce0c4ceaf2750135207300b4ba384b80aabc",
+    "app-candidate-331ab9a-official-feed.json": "2d3c661529650931a2a9f6deea6d556627b2968749647ce43820f84d78281782"
+  }
+}

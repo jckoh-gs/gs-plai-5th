@@ -1,0 +1,11 @@
+{
+  "sessionId": 51512,
+  "pid": 13263,
+  "identity": "13263 Tue Sep 22 00:31:59 2026     kubectl --context charles-k3s -n gs-plai-5h port-forward deployment/grid-registry 15050:15050 --address 127.0.0.1",
+  "port": 15050,
+  "address": "127.0.0.1",
+  "owned": true,
+  "terminalExit": 143,
+  "local15050Absent": true,
+  "cleanup": "identity-checked SIGTERM; original session terminal143"
+}

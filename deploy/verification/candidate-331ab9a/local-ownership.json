@@ -1,0 +1,11 @@
+{
+  "network": "grid-331-qa",
+  "containers": [
+    "grid-331-unit",
+    "grid-331-broker",
+    "grid-331-integration",
+    "grid-331-advanced",
+    "grid-331-http"
+  ],
+  "scope": "isolated local Docker only; broker has no published ports"
+}
