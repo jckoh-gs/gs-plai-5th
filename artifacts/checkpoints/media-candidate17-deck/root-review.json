@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T17:07:00.865461+00:00",
+  "scope": "Root independent compact/reproduction hashes and representative layout review; preparation only, no finalbinder/media acceptance",
+  "compactFilesChecked": 25,
+  "reproductionFilesChecked": 21,
+  "pptSha256": "e4d3c5e898031481ba706700db5e4c3891176d325794b620136147f59cafc9b2",
+  "factsRemainExactUnreviewedTemplate": true,
+  "rootFramesDirectlyViewed": [
+    4,
+    6,
+    14
+  ],
+  "representativeFindings": "Architecture arrows/labels, targetcommand slide and expanded improvements text visible without overlap or clipping. UI raster remains small overview supported by video andnotes. Media role independently reviewed all14 renderframes.",
+  "all14ReviewedBy": "/root/media; summary.json",
+  "limitations": [
+    "No finalvideo or finalPowerPoint",
+    "No nativePowerPoint app execution",
+    "No audio listening",
+    "Automatic verification.json retains its original pending manual flags; manual preparation review recorded separately"
+  ]
+}

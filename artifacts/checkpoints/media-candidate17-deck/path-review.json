@@ -1,0 +1,6 @@
+{
+  "firstDraft": "artifacts/media-preparation/output",
+  "finding": "Nested rehearsal output depth initially produced one excess parent segment in video reference",
+  "correction": "config.reviewed-rehearsal.json uses actual path.relative result; rebuild distinct output-reviewed, original preserved",
+  "scope": "Preparation only"
+}

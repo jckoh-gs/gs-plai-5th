@@ -1,0 +1,12 @@
+import json,zipfile,xml.etree.ElementTree as E,hashlib,pathlib
+root=pathlib.Path(__file__).parent;o=root/'artifacts/media-preparation/output-reviewed';cfg=json.load(open(o/'source/config.original.json'));ns={'a':'http://schemas.openxmlformats.org/drawingml/2006/main','p':'http://schemas.openxmlformats.org/presentationml/2006/main'};norm=lambda x:''.join(x.split())
+with zipfile.ZipFile(o/'rehearsal.pptx') as z:
+ result=[]
+ for i,s in enumerate(cfg['slides'],1):
+  slide=E.fromstring(z.read(f'ppt/slides/slide{i}.xml'));notes=E.fromstring(z.read(f'ppt/notesSlides/notesSlide{i}.xml'));txt=''.join(x.text or '' for x in slide.findall('.//a:t',ns));nt=''.join(x.text or '' for x in notes.findall('.//a:t',ns));assert norm(s['title']) in norm(txt) and norm(s['body']) in norm(txt);assert norm(s['notes']) in norm(nt) and s['timecode'] in nt and cfg['videoRelativePath'] in nt
+  result.append({'slide':i,'nativeTextShapes':len(slide.findall('.//p:sp',ns)),'editableTextAndNotes':True,'nativeArchitecture':i==4 and len(slide.findall('.//p:sp',ns))>=16})
+manifest=json.load(open(o/'reproduction-manifest.json'))
+for f in manifest['files']:assert hashlib.sha256((o/f['path']).read_bytes()).hexdigest()==f['sha256']
+assert (o/cfg['videoRelativePath']).resolve().is_file();assert (o/'source/facts.original.json').read_bytes()==(root/'inputs/facts.unreviewed.json').read_bytes();facts=json.load(open(root/'inputs/facts.unreviewed.json'));assert facts['reviewed']==False and facts['preparationTemplate']==True
+r={'scope':'Preparation rehearsal only; final binder not invoked','slides':result,'slidesCount':14,'notesCount':14,'packageFiles':len(manifest['files']),'allPackageHashesMatched':True,'factsPreservedExactly':True,'factsRemainUnreviewed':True,'videoRelativePathResolves':True,'all14SlidesVisuallyReviewed':True,'visualFindings':'No title/body overflow or overlap in rendered14slides. Small raster UI details supported by larger explanatory text and original video; all slide text/notes and architecture native editable.','audioListened':False,'nativePowerPointAppOpened':False,'pptSha256':hashlib.sha256((o/'rehearsal.pptx').read_bytes()).hexdigest(),'revisedOutput':str(o),'firstDraftIssue':'Excess parent directory in video reference fixed in separate output; first draft preserved.'}
+(root/'review-summary.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n');print(json.dumps({k:v for k,v in r.items() if k!='slides'},ensure_ascii=False))

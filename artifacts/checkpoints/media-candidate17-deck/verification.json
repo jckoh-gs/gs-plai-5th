@@ -1,0 +1,14 @@
+{
+  "rehearsal": true,
+  "createdAt": "2026-09-21T17:04:51.776Z",
+  "releaseCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
+  "manifestSha256": "a80dde446cb2559a9d6959460ce258c0154678fdb16dba17f4e2570676fd34fd",
+  "videoSha256": null,
+  "slideCount": 14,
+  "renderedEverySlide": true,
+  "editableTextAndArchitecture": true,
+  "visualReview": "pending",
+  "claimsReview": "pending",
+  "validationReceipt": "validation.json",
+  "reproductionManifest": "reproduction-manifest.json"
+}

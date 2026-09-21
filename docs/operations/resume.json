@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T17:06:03.250848+00:00",
+  "updatedAt": "2026-09-21T17:07:00.865461+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -961,11 +961,13 @@
   ],
   "additionalMediaPreparation": {
     "owner": "/root/media",
-    "state": "Dispatched1.7 decklayout/14slide rehearsal; no newrecording orremote writes",
+    "state": "Complete; all14rendered/reviewed bymedia; root25compact/21repro hashes+3representativeframes checked",
     "output": "artifacts/media-preparation/deck-candidate17-rehearsal",
     "compactEvidence": "artifacts/checkpoints/media-candidate17-deck",
-    "scope": "Preparation artifact only; finalsamevideoPPT must stillbe generated in originalwindow; donotbypass finalbinder guards",
-    "handle": "Owner reports when a process starts; checkowner before duplicate work"
+    "scope": "Preparation only; original unreviewedfacts unchanged and finalbinder not invoked. NewfinalsamevideoPPT required in originalwindow. Firstpathdeptherror preserved in initialdraft, corrected in separateoutput.",
+    "rootReview": "artifacts/checkpoints/media-candidate17-deck/root-review.json",
+    "ownerSummary": "artifacts/checkpoints/media-candidate17-deck/summary.json",
+    "pptSha256": "e4d3c5e898031481ba706700db5e4c3891176d325794b620136147f59cafc9b2"
   },
   "documentationConsistency": {
     "readme": "README.md",

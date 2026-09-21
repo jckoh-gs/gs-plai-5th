@@ -11,7 +11,7 @@
 
 ## 다음 관찰·준비
 
-[REVIEW039](../product/REVIEW-039.md)는 정당한 추가 기능을 확인하지 못해 새 버전 채택을 보류했다. 현재 관찰과 최종 보안·이슈 정합성·영상/PPT 인도 준비를 계속한다. 첫1시간 캡처는17:45:54.307Z 이후 실제 완성된 두 관찰 구간이 있을 때만 [준비 스크립트](../../artifacts/checkpoints/soak-1.7-first-hour-preparation/capture-first-hour.py)를 실행한다. 조기 실행은 원격조회·체크포인트 생성 전에 거절됨을 확인했다. 현재 짧은 관찰을1시간으로 표현하지 않는다. media 역할은1.7의 바뀐 원고·캡처로14장 준비용 덱 배치를 점검 중이다. 담당 상태/고유출력은 resume.additionalMediaPreparation을 읽고 중복 시작하지 않는다. 최종 영상을 새로 제작할 원래 창은 유지한다.
+[REVIEW039](../product/REVIEW-039.md)는 정당한 추가 기능을 확인하지 못해 새 버전 채택을 보류했다. 현재 관찰과 최종 보안·이슈 정합성·영상/PPT 인도 준비를 계속한다. 첫1시간 캡처는17:45:54.307Z 이후 실제 완성된 두 관찰 구간이 있을 때만 [준비 스크립트](../../artifacts/checkpoints/soak-1.7-first-hour-preparation/capture-first-hour.py)를 실행한다. 조기 실행은 원격조회·체크포인트 생성 전에 거절됨을 확인했다. 현재 짧은 관찰을1시간으로 표현하지 않는다. media 역할은1.7의 바뀐 원고·캡처로14장 준비용 덱 배치·편집가능성·노트·패키징 검토를 완료했다. root도25개 compact파일·21개 재생성파일 해시와 대표3장을 확인했다. [준비 검토](../../artifacts/checkpoints/media-candidate17-deck/root-review.json)는 최종 PPT가 아니다. 고유출력과 완료 상태는 resume.additionalMediaPreparation을 읽고 같은 준비작업을 중복 시작하지 않는다. 최종 영상을 새로 제작할 원래 창은 유지한다.
 
 ## 재접속과 현재 소유 프로세스
 
