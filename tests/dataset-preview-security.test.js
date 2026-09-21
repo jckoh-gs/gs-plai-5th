@@ -41,6 +41,10 @@ test('HTTP preview returns bounded diagnostics and authenticates before malforme
     const response=await request(true);assert.equal(response.status,400);
     const output=await response.text();assert.match(output,/csv 행 2/);
     for(const forbidden of ['sensitive-password-marker','oops',config.token,'timestamp,power_kw'])assert(!output.includes(forbidden));
+    for(const malformed of ['sensitive-password-marker','"sensitive-password-marker"','{"csv": sensitive-password-marker}']) {
+      const rejected=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${config.token}`},body:malformed});
+      assert.equal(rejected.status,400);assert.deepEqual(await rejected.json(),{error:'요청 본문은 올바른 JSON 객체여야 합니다.'});
+    }
   } finally {await runtime.stop();}
 });
 test('preflight caps columns before allocation and preserves quoted commas, escapes and newlines',()=>{

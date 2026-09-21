@@ -96,7 +96,7 @@ export function createRuntime(config=readConfig()) {
   app.get('/api/guide',(req,res)=>res.download(resolve(root,'docs/protocol.md')));
   app.use('/api',(req,res)=>res.status(404).json({error:'API 경로 없음'}));
   if(existsSync(resolve(root,'dist')))app.use(express.static(resolve(root,'dist'),{index:'index.html'}));
-  app.use((error,req,res,next)=>{if(res.headersSent)return next(error);const status=error.status||400;res.status(status).json({error:status===413?'요청 크기는 20MB 이하여야 합니다.':redact(error.message)});});
+  app.use((error,req,res,next)=>{if(res.headersSent)return next(error);const status=error.status||400;res.status(status).json({error:status===413?'요청 크기는 20MB 이하여야 합니다.':error.type==='entity.parse.failed'?'요청 본문은 올바른 JSON 객체여야 합니다.':redact(error.message)});});
   function tick(){
     if(closing)return;
     try {
