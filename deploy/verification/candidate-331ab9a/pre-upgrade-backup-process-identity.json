@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-09-21T15:36:47.113Z",
+  "rows": [
+    {
+      "pid": "1",
+      "stat": "1 (MainThread) S 0 1 1 0 -1 4194560 39626 24 0 0 86 27 0 0 20 0 7 0 5128749 1172869120 27408 18446744073709551615 109431045607424 109431094249254 140734628947248 0 0 0 0 16781312 17922 0 0 0 17 3 0 0 0 0 0 109431152401368 109431153888336 109431725699072 140734628948987 140734628949008 140734628949008 140734628949988 0\n",
+      "status": "Name:\tMainThread\nUmask:\t0022\nState:\tS (sleeping)\nTgid:\t1\nNgid:\t0\nPid:\t1\nPPid:\t0\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t1000 \nNStgid:\t1\nNSpid:\t1\nNSpgid:\t1\nNSsid:\t1\nKthread:\t0\nVmPeak:\t 1165908 kB\nVmSize:\t 1145380 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  122732 kB\nVmRSS:\t  109980 kB\nRssAnon:\t   48896 kB\nRssFile:\t   61084 kB\nRssShmem:\t       0 kB\nVmData:\t  638180 kB\nVmStk:\t     132 kB\nVmExe:\t   47504 kB\nVmLib:\t      56 kB\nVmPTE:\t    2408 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t7\nSigQ:\t0/55630\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000201001000\nSigCgt:\t0000000000004602\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t0000000000000000\nCapAmb:\t0000000000000000\nNoNewPrivs:\t1\nSeccomp:\t2\nSeccomp_filters:\t1\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tf\nCpus_allowed_list:\t0-3\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t995\nnonvoluntary_ctxt_switches:\t81\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n",
+      "matchesExactTarget": false,
+      "snapshotBackupCode": false,
+      "fds": [
+        "/data/lab.sqlite",
+        "/data/lab.sqlite-wal",
+        "/data/lab.sqlite-shm"
+      ]
+    },
+    {
+      "pid": "406",
+      "exists": false
+    }
+  ],
+  "files": [
+    {
+      "path": "/data/stable-6d165d1-20260921T153417228Z.sqlite",
+      "exists": false
+    },
+    {
+      "path": "/data/stable-6d165d1-20260921T153417228Z.sqlite.snapshot.part",
+      "exists": true,
+      "bytes": 439500800,
+      "mtime": "2026-09-21T15:36:29.010Z"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "session": 47567,
+  "pid": 13595,
+  "startIdentity": "Tue Sep22 00:34:17KST node scripts/remote-backup.mjs",
+  "operations": [
+    {
+      "journal": "artifacts/operations/backups/20260921T153417228Z.json",
+      "remotePath": "/data/stable-6d165d1-20260921T153417228Z.sqlite",
+      "status": "running",
+      "stage": "snapshot creation",
+      "stopAt": "2026-09-21T15:37:17.227Z"
+    }
+  ],
+  "terminalExit": 1,
+  "failureStage": "snapshot creation",
+  "remoteCancellationGuaranteed": false,
+  "readOnlyFollowup": "pre-upgrade-backup-uncertain-state.json"
+}

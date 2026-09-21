@@ -1,0 +1,319 @@
+{
+  "checkedAt": "2026-09-21T15:34:08.123Z",
+  "mount": "/data",
+  "disk": {
+    "totalBytes": 249792131072,
+    "availableBytes": 74234785792
+  },
+  "files": [
+    {
+      "name": "lab.sqlite",
+      "bytes": 795250688
+    },
+    {
+      "name": "lab.sqlite-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "lab.sqlite-wal",
+      "bytes": 4927552
+    },
+    {
+      "name": "mosquitto.db",
+      "bytes": 1050
+    },
+    {
+      "name": "pending-outbox-3fa3ba0-20260921T121912117Z.sqlite",
+      "bytes": 425336832
+    },
+    {
+      "name": "pending-outbox-6d165d1-20260921T145324633Z.sqlite",
+      "bytes": 718962688
+    },
+    {
+      "name": "pending-outbox-83d10ce-20260921T100639005Z.sqlite",
+      "bytes": 173903872
+    },
+    {
+      "name": "pending-outbox-8599ab9-20260921T093247338Z.sqlite",
+      "bytes": 109060096
+    },
+    {
+      "name": "pending-outbox-af7f223.sqlite",
+      "bytes": 54255616
+    },
+    {
+      "name": "pending-outbox-fdd0491-20260921T134829456Z.sqlite",
+      "bytes": 594104320
+    },
+    {
+      "name": "pre-security-79c996f.sqlite",
+      "bytes": 14897152
+    },
+    {
+      "name": "pre-security-79c996f.sqlite-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "pre-security-79c996f.sqlite-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-3fa3ba0-20260921T121741365Z.sqlite",
+      "bytes": 420466688
+    },
+    {
+      "name": "stable-3fa3ba0-20260921T121741365Z.sqlite-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-3fa3ba0-20260921T121741365Z.sqlite-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-3fa3ba0-20260921T121741365Z.sqlite.20260921T121741365Z.gz",
+      "bytes": 14123657
+    },
+    {
+      "name": "stable-3fa3ba0-20260921T121741365Z.sqlite.snapshot.part-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-3fa3ba0-20260921T121741365Z.sqlite.snapshot.part-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-3fa3ba0-20260921T134414539Z.sqlite",
+      "bytes": 585441280
+    },
+    {
+      "name": "stable-3fa3ba0-20260921T134414539Z.sqlite-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-3fa3ba0-20260921T134414539Z.sqlite-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-3fa3ba0-20260921T134414539Z.sqlite.20260921T134414539Z.gz",
+      "bytes": 19674474
+    },
+    {
+      "name": "stable-3fa3ba0-20260921T134414539Z.sqlite.snapshot.part-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-3fa3ba0-20260921T134414539Z.sqlite.snapshot.part-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-6d165d1-20260921T145446277Z.sqlite",
+      "bytes": 719527936
+    },
+    {
+      "name": "stable-6d165d1-20260921T145446277Z.sqlite-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-6d165d1-20260921T145446277Z.sqlite-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-6d165d1-20260921T145446277Z.sqlite.20260921T145446277Z.gz",
+      "bytes": 24369468
+    },
+    {
+      "name": "stable-6d165d1-20260921T145446277Z.sqlite.snapshot.part-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-6d165d1-20260921T145446277Z.sqlite.snapshot.part-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-83d10ce-20260921T100542773Z.sqlite",
+      "bytes": 169414656
+    },
+    {
+      "name": "stable-83d10ce-20260921T100542773Z.sqlite-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-83d10ce-20260921T100542773Z.sqlite-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-83d10ce-20260921T100542773Z.sqlite.gz",
+      "bytes": 5746984
+    },
+    {
+      "name": "stable-83d10ce-20260921T113246668Z.sqlite",
+      "bytes": 335704064
+    },
+    {
+      "name": "stable-83d10ce-20260921T113246668Z.sqlite-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-83d10ce-20260921T113246668Z.sqlite-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-83d10ce-20260921T113246668Z.sqlite.20260921T113246668Z.gz",
+      "bytes": 11293999
+    },
+    {
+      "name": "stable-83d10ce-20260921T113246668Z.sqlite.20260921T113432058Z.gz",
+      "bytes": 11293999
+    },
+    {
+      "name": "stable-83d10ce-20260921T113246668Z.sqlite.snapshot.part-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-83d10ce-20260921T113246668Z.sqlite.snapshot.part-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-83d10ce-20260921T121142947Z.sqlite",
+      "bytes": 409907200
+    },
+    {
+      "name": "stable-83d10ce-20260921T121142947Z.sqlite-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-83d10ce-20260921T121142947Z.sqlite-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-83d10ce-20260921T121142947Z.sqlite.20260921T121142947Z.gz",
+      "bytes": 13763774
+    },
+    {
+      "name": "stable-83d10ce-20260921T121142947Z.sqlite.snapshot.part-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-83d10ce-20260921T121142947Z.sqlite.snapshot.part-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-8599ab9-20260921T093154817Z.sqlite",
+      "bytes": 105144320
+    },
+    {
+      "name": "stable-8599ab9-20260921T093154817Z.sqlite-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-8599ab9-20260921T093154817Z.sqlite-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-8599ab9-20260921T093154817Z.sqlite.gz",
+      "bytes": 3547160
+    },
+    {
+      "name": "stable-8599ab9-20260921T100441902Z.sqlite",
+      "bytes": 168460288
+    },
+    {
+      "name": "stable-8599ab9-20260921T100441902Z.sqlite-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-8599ab9-20260921T100441902Z.sqlite-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-8599ab9-20260921T100441902Z.sqlite.gz",
+      "bytes": 5708027
+    },
+    {
+      "name": "stable-af7f223-20260921T090600873Z.sqlite",
+      "bytes": 56594432
+    },
+    {
+      "name": "stable-af7f223-20260921T090600873Z.sqlite-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-af7f223-20260921T090600873Z.sqlite-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-af7f223-20260921T090600873Z.sqlite.gz",
+      "bytes": 1909315
+    },
+    {
+      "name": "stable-af7f223-20260921T092659678Z.sqlite",
+      "bytes": 96669696
+    },
+    {
+      "name": "stable-af7f223-20260921T092659678Z.sqlite-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-af7f223-20260921T092659678Z.sqlite-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-af7f223-20260921T092659678Z.sqlite.gz",
+      "bytes": 3253584
+    },
+    {
+      "name": "stable-fdd0491-20260921T134940385Z.sqlite",
+      "bytes": 594944000
+    },
+    {
+      "name": "stable-fdd0491-20260921T134940385Z.sqlite-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-fdd0491-20260921T134940385Z.sqlite-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-fdd0491-20260921T134940385Z.sqlite.20260921T134940385Z.gz",
+      "bytes": 19992572
+    },
+    {
+      "name": "stable-fdd0491-20260921T134940385Z.sqlite.snapshot.part-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-fdd0491-20260921T134940385Z.sqlite.snapshot.part-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-fdd0491-20260921T143859710Z.sqlite",
+      "bytes": 690266112
+    },
+    {
+      "name": "stable-fdd0491-20260921T143859710Z.sqlite-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-fdd0491-20260921T143859710Z.sqlite-wal",
+      "bytes": 0
+    },
+    {
+      "name": "stable-fdd0491-20260921T143859710Z.sqlite.20260921T143859710Z.gz",
+      "bytes": 23233763
+    },
+    {
+      "name": "stable-fdd0491-20260921T143859710Z.sqlite.snapshot.part-shm",
+      "bytes": 32768
+    },
+    {
+      "name": "stable-fdd0491-20260921T143859710Z.sqlite.snapshot.part-wal",
+      "bytes": 0
+    }
+  ],
+  "totalListedBytes": 7401839442,
+  "localHostDisk": {
+    "totalBytes": 994610155520,
+    "availableBytes": 580644765696
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "observedAt": "2026-09-21T15:39:03.277250+00:00",
+  "state": "Main1.5 recovered automatically; preupgradebackup remains incomplete and no1.6rollout",
+  "supervisorOutageAt": "2026-09-21T15:35:46.767Z",
+  "supervisorReconnectedAt": "2026-09-21T15:37:26.421Z",
+  "samePodUid": "62d0d7fd-915d-41e4-990b-5714fc7a6901",
+  "appContainerRestarts": {
+    "before": 0,
+    "after": 1
+  },
+  "confirmedRestartTrigger": "Kubernetes liveness probe failure at15:36:16Z; root/agent did not request restart",
+  "underlyingStallCause": "Unknown; overlapped online snapshot creation, investigatebeforeanynewbackup",
+  "counters": {
+    "primaryApiErrors": 7,
+    "primaryConnectionErrors": 30,
+    "auditConnectionErrors": 33
+  },
+  "receivedSampleDiscontinuities": 0,
+  "claimBoundary": "Zero observed sample discontinuities is not uninterrupted service, no wall-clockpause, or every subscriber receipt. Full received logs retained; no counterreset.",
+  "clusterEvidence": "deploy/verification/candidate-331ab9a/pre-upgrade-backup-summary.json",
+  "partialSnapshot": "/data/stable-6d165d1-20260921T153417228Z.sqlite.snapshot.part",
+  "partialStatus": "Retainedincomplete; no finalpath, no runningoldsnapshotprocess aftercontainerrestart. Do notpromoteorreusepartial.",
+  "stableBackupPreserved": "deploy/verification/stable-backup-6d165d1.json",
+  "evidence": [
+    {
+      "file": "recovered-primary.json",
+      "sha256": "11538aeea6543c7c2746f323ee2dda62b58f655537c28ef7f1d6891fe52781fe"
+    },
+    {
+      "file": "recovered-supervisor.json",
+      "sha256": "453b6bda6d41e1699f498a7cf3c453f19bcea4accb711cf9d91f85b194a595a5"
+    },
+    {
+      "file": "recovered-audit.json",
+      "sha256": "eb6e7051198c3ba57a4957a335f2cc158b54f2c6dd572008993f24f92abcc316"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T15:34:19.755007+00:00",
+  "updatedAt": "2026-09-21T15:41:26.589513+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -27,7 +27,7 @@
     "productVersion": "1.6.0",
     "prdVersion": "1.13",
     "idea": "IDEA-010",
-    "state": "Exactimage77/integration/advanced/servedassets/security/registrypush PASS; preupgradebackup inprogress, main1.5unchanged"
+    "state": "Actualmain1.5 Ready reconnected15:37:26Z afterlivenessrestart; improvebackup beforefreshattempt/1.6upgrade"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -39,7 +39,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Finish unique pre-1.6 upgrade backup and actualbaseline; then archive complete observed1.5 period (may be less than1h, do notclaimfirsthour), stopownedobservers/supervisor andcontrolled1.6upgrade. ThenmainUI/MQTT/outbox plus exactnewbackup current1.6/backward1.5 restore. Immutable1.5fallback retained.",
+    "Resolve bounded onlinebackup ISSUE024 locally with independentreview beforeanynewremote snapshot. Main1.5 recovered automatically; failedpartial retained, knownad34verifiedbackup unchanged. Existingobservers/supervisor remainrunning. Onlythen resume controlled1.6upgrade.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -287,12 +287,13 @@
     "audit": 98957
   },
   "currentObservationBaselines": {
-    "primaryApiErrors": 0,
-    "primaryConnectionErrors": 0,
-    "supplementaryConnectionErrors": 0,
-    "supplementarySampleDiscontinuitiesPerRTU": 0,
-    "evidence": "artifacts/checkpoints/observer-1.5-activation/activation.json",
-    "scope": "New1.5 epoch; allinitialerrorcounters0. Compare increments withoutreset; old1.4 counters/incidentshistorical only."
+    "observedAt": "2026-09-21T15:39:03.277250+00:00",
+    "primaryApiErrors": 7,
+    "primaryConnectionErrors": 30,
+    "auditConnectionErrors": 33,
+    "receivedSampleDiscontinuities": 0,
+    "evidence": "artifacts/checkpoints/backup-incident-20260921T1534/recovery-summary.json",
+    "scope": "Postincident cumulativecounters; notreset; initialzero baseline preserved in observer1.5activation and rawlogs"
   },
   "completedOperations": [
     {
@@ -363,7 +364,16 @@
     "lastLocalRehearsal": "artifacts/checkpoints/media-lifecycle-local-round1/result.json",
     "localFixtureOnly": true
   },
-  "currentObservationIncidents": [],
+  "currentObservationIncidents": [
+    {
+      "runtime": "1.5.0",
+      "evidence": "artifacts/checkpoints/backup-incident-20260921T1534/initial-summary.json",
+      "cause": "unknown; temporaloverlap withpreupgradebackup",
+      "status": "Recovered transport/Ready; backupissue open",
+      "recoveryEvidence": "artifacts/checkpoints/backup-incident-20260921T1534/recovery-summary.json",
+      "issue": "ISSUE024"
+    }
+  ],
   "nextOperationalReview": "Beforecontrolled1.6upgrade archive actual1.5 observerperiod and Ready/resource facts. Preserve plannedfirsthour preparation but do notexecute its1hour assertion on shorter observations.",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.5",
@@ -413,7 +423,7 @@
     "productVersion": "1.6.0",
     "prdVersion": "1.13",
     "idea": "IDEA-010",
-    "phase": "Exactimage77/integration/advanced/servedassets/security/registrypush PASS; preupgradebackup inprogress, main1.5unchanged",
+    "phase": "Actualmain1.5 Ready reconnected15:37:26Z afterlivenessrestart; improvebackup beforefreshattempt/1.6upgrade",
     "uiOwner": "/root/ui",
     "browserOwner": "/root/issues",
     "fallback": "artifacts/releases/checkpoint-1.5.0.json",
@@ -425,9 +435,22 @@
     "securityReview": "docs/security/EVENT-TIME-REVIEW.md",
     "activeOperations": [
       {
+        "owner": "/root/model",
+        "scope": "Implementlocaloperationalbackup read-snapshot/progressdeadline/ownworkerwatchdog; syntheticWAL/concurrency/failuretests. No remote mutations.",
+        "files": [
+          "scripts/remote-backup-helpers.mjs",
+          "scripts/remote-backup.mjs",
+          "tests/remote-backup.test.js",
+          "tests/backup-concurrency.test.js"
+        ]
+      },
+      {
+        "owner": "/root/security",
+        "scope": "Independentbackupcancellation/file/credential/deadline/ownership review; no remote changes"
+      },
+      {
         "owner": "/root/deployment",
-        "scope": "Read main1.5 baseline/storage and unique pre-1.6 backup only; no image change yet",
-        "state": "Dispatched; reconcile owner handle/journal/remotePath before retries"
+        "scope": "Read-onlypostincidentactual1.5 image/Ready/settings/data/UIrecovery check usingexisting3104; no newbackup/rollout"
       }
     ],
     "completedLocalHandles": {
@@ -469,7 +492,10 @@
         "port15050Closed": true
       },
       "rootReview": "deploy/verification/candidate-331ab9a/pre-deployment-review.json"
-    }
+    },
+    "backupFailureEvidence": "deploy/verification/candidate-331ab9a/pre-upgrade-backup-summary.json",
+    "backupIncidentRootEvidence": "artifacts/checkpoints/backup-incident-20260921T1534/recovery-summary.json",
+    "operationalChangesScope": "Backuphelpers are notshipped in candidate4af appimage; keep exact331app provenance and separate operationalcommit/testing evidence"
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
   "previousCandidateFixture": {

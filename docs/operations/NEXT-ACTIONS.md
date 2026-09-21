@@ -51,6 +51,12 @@ IDEA010/ISSUE023: 실제1.5에서55개의created UTC가 모두 화면대시로 �
 
 web/helper 구현·build·전체281검사·실제broker 통합/고급·인증/SSE/좁은화면·form44/receipt14·이벤트 브라우저 및 소스보안 검토를 통과했다. [로컬 집계](../../artifacts/checkpoints/candidate-1.6-local-summary.json)와 [REVIEW030](../product/REVIEW-030.md)을 참조한다. 신규AT01~03은 로컬검증, UI04/AT04는 원격 대기로 partial이다. form의 실제 반환 baseline 복구를 검증했으며, 후속HTTP201/pageguard의 실행 증명은 다음 복원시험에서 확보한다. 로컬3110/handle95785 fixture의 시험·복구를 마친 뒤 소유PID 시작identity를 대조해 정상 종료0/포트 닫힘을 확인했다. [종료 기록](../../artifacts/checkpoints/local-fixture-1.6-retirement/summary.json)에9개 시험RTU 설정과 privateDB 보존을 기록했다. 시험 필요 없이 재기동하지 않는다. 실제4개 이벤트와 날짜경계/잘못된값의 브라우저 대조는 보존돼 있다. 정확 커밋 `331ab9a00ee71a0924042e7952013d47495449d3`과 후보이미지4af99e7을 전달했다. [배포 전 검토](../../deploy/verification/candidate-331ab9a/pre-deployment-review.json): 이미지77개 시험·실제MQTT 통합/고급·HTTP 파일 일치·보안 검토를 완료했다. 초기HTTP fixture의 토큰 누락 실패와 별도 성공을 모두 보존했다. 다음은 새 전환 전 백업, 실제1.5 관찰구간 보존, 계획 배포, 동일 백업 복원 게이트다. 아직1.6 원격배포는 없다. 실제main1.5 관찰기와3104/18884 supervisor를 그대로 유지한다.1.6 로컬·보안·정확이미지·원격·동일스냅샷복원을 완료하기 전 기존 복구 기준을 교체하지 않는다.
 
+## 백업 중 실제 운영 사건 — 최우선
+
+1.6 이미지 준비 후 새 전환 전 백업이90초 제한에서 미완료됐다. 최종파일 없이439500800B partial만 남았으며 앱 liveness 실패로 Kubernetes가 같은Pod 안의 app 컨테이너를 재시작했다. root/담당이 재시작한 것은 아니다.15:36:55 내부health 및15:37:26 감독기 재연결로 현재1.5 Ready가 회복됐다. [사건·복구 기록](../../artifacts/checkpoints/backup-incident-20260921T1534/recovery-summary.json)과 [원격 근거](../../deploy/verification/candidate-331ab9a/pre-upgrade-backup-summary.json)를 참조한다. 백업과stall의 내부 인과관계는 아직 미확정이다. 초기API/연결 오류0은 현재기준이 아니며 재개 원장과 원문 누적치를 읽는다. 감독기2061/관찰기2883·2888은 계속 실행 중이다. 준비한1.5 종료 의도만으로 신호를 보내지 않는다.
+
+ISSUE024 백업 개선의 로컬 검증·독립 검토 전에 새 원격 스냅샷이나1.6 배포를 시작하지 않는다. 부분파일을 완료백업으로 승격하거나 기존ad34 검증백업을 삭제하지 않는다. 최종마감은 그대로다.
+
 ## 남은 작업
 
 1. 새1.5 불변 매니페스트 검증을 완료했으며 현 버전 관찰을 원래 동결까지 계속한다. 신선도·오류 증가분·Ready·저장 공간·전원 상태를 점검한다.

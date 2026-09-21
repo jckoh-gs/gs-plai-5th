@@ -45,7 +45,7 @@
   "modelVerification": "Agents inherited main session model; exact runtime model identifier not exposed by available goal tools.",
   "deployment": {
     "observedAt": "2026-09-21T14:58:02.945Z",
-    "status": "Verified functionalstable1.5; actualmainUI/MQTT/outbox and exactcurrent/backwardrestorePASS",
+    "status": "Recovered actual1.5 Ready afterlivenesscontainerrestart; preupgradebackup ISSUE024 unresolved, immutable1.5stablebackup retained",
     "sourceCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
     "prdVersion": "1.12",
     "context": "charles-k3s",
@@ -61,7 +61,8 @@
     "name": "grid",
     "mqttImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
     "productVersion": "1.5.0",
-    "podUid": "62d0d7fd-915d-41e4-990b-5714fc7a6901"
+    "podUid": "62d0d7fd-915d-41e4-990b-5714fc7a6901",
+    "appContainerRestarts": 1
   },
   "backup": {
     "result": "PASS",
@@ -125,7 +126,7 @@
     "idea": "IDEA-010",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T15:11:02.306411+00:00",
-    "status": "Exactimage77/integration/advanced/servedassets/security/registrypush PASS; preupgradebackup inprogress, main1.5unchanged",
+    "status": "1.6 imagegates complete; operationalbackup incident recovered but freshbackup fix pending, no1.6 rollout",
     "fallbackTag": "stable-v1.5.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.5.0.json",
     "beforeEvidence": "artifacts/checkpoints/event-time-before/result.json",
@@ -280,7 +281,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T15:34:19.755007+00:00",
+  "updatedAt": "2026-09-21T15:39:03.277250+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",

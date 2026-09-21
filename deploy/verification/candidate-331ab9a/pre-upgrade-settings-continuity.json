@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "originalPlantCount": 5,
+  "baseline": "deploy/verification/candidate-6d165d1/pre-upgrade-baseline.json",
+  "current": "pre-upgrade-baseline.json",
+  "fields": "IDs/runIDs/mode/replay/faults/generator rating/ramp/target/enabled and dataset.rowCount",
+  "harnessCorrection": "Initial sanitized datasetRowCount used wrong top-level field and was null; read-only requery mapped actual dataset.rowCount before comparison. No app writes."
+}

@@ -1,0 +1,998 @@
+{
+  "checkedAt": "2026-09-21T15:36:33.401005+00:00",
+  "pods": {
+    "apiVersion": "v1",
+    "items": [
+      {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "annotations": {
+            "kubectl.kubernetes.io/restartedAt": "2026-09-21T23:54:12+09:00"
+          },
+          "creationTimestamp": "2026-09-21T14:54:14Z",
+          "generateName": "grid-79fdb78bf8-",
+          "generation": 1,
+          "labels": {
+            "app": "grid",
+            "pod-template-hash": "79fdb78bf8"
+          },
+          "name": "grid-79fdb78bf8-6rbjz",
+          "namespace": "gs-plai-5h",
+          "ownerReferences": [
+            {
+              "apiVersion": "apps/v1",
+              "blockOwnerDeletion": true,
+              "controller": true,
+              "kind": "ReplicaSet",
+              "name": "grid-79fdb78bf8",
+              "uid": "3e3b37a7-624d-4932-953d-a17652c5a8d4"
+            }
+          ],
+          "resourceVersion": "9998764",
+          "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901"
+        },
+        "spec": {
+          "automountServiceAccountToken": false,
+          "containers": [
+            {
+              "env": [
+                {
+                  "name": "MQTT_URL",
+                  "value": "mqtt://127.0.0.1:1883"
+                },
+                {
+                  "name": "MQTT_USERNAME",
+                  "value": "grid"
+                },
+                {
+                  "name": "MQTT_PASSWORD",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "key": "mqtt-password",
+                      "name": "grid-secrets"
+                    }
+                  }
+                },
+                {
+                  "name": "API_TOKEN",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "key": "api-token",
+                      "name": "grid-secrets"
+                    }
+                  }
+                }
+              ],
+              "image": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+              "imagePullPolicy": "IfNotPresent",
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "httpGet": {
+                  "path": "/api/health",
+                  "port": 3001,
+                  "scheme": "HTTP"
+                },
+                "initialDelaySeconds": 30,
+                "periodSeconds": 15,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "name": "app",
+              "ports": [
+                {
+                  "containerPort": 3001,
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "httpGet": {
+                  "path": "/api/health",
+                  "port": 3001,
+                  "scheme": "HTTP"
+                },
+                "initialDelaySeconds": 5,
+                "periodSeconds": 5,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {
+                "limits": {
+                  "cpu": "2",
+                  "memory": "1Gi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "256Mi"
+                }
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "readOnlyRootFilesystem": true
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/data",
+                  "name": "data"
+                }
+              ]
+            },
+            {
+              "command": [
+                "sh",
+                "-c",
+                "cp /mosquitto/secrets/passwords /run/mosquitto/passwords && cp /mosquitto/config/acl /run/mosquitto/acl && chmod 600 /run/mosquitto/passwords /run/mosquitto/acl && exec mosquitto -c /mosquitto/config/mosquitto.conf"
+              ],
+              "image": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "mqtt",
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "initialDelaySeconds": 3,
+                "periodSeconds": 5,
+                "successThreshold": 1,
+                "tcpSocket": {
+                  "port": 1883
+                },
+                "timeoutSeconds": 1
+              },
+              "resources": {
+                "limits": {
+                  "cpu": "1",
+                  "memory": "128Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "32Mi"
+                }
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "readOnlyRootFilesystem": true
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/run/mosquitto",
+                  "name": "mqtt-runtime"
+                },
+                {
+                  "mountPath": "/mosquitto/config",
+                  "name": "mqtt-config"
+                },
+                {
+                  "mountPath": "/mosquitto/secrets",
+                  "name": "secrets",
+                  "readOnly": true
+                },
+                {
+                  "mountPath": "/mosquitto/data",
+                  "name": "mqtt-data"
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "enableServiceLinks": true,
+          "initContainers": [
+            {
+              "command": [
+                "sh",
+                "-c",
+                "if [ ! -e /broker/.migration-complete ]; then if [ -f /legacy/mosquitto.db ] && [ ! -e /broker/mosquitto.db ]; then cp /legacy/mosquitto.db /broker/mosquitto.db; fi; touch /broker/.migration-complete; fi"
+              ],
+              "image": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "migrate-mqtt-storage",
+              "resources": {
+                "limits": {
+                  "cpu": "100m",
+                  "memory": "32Mi"
+                },
+                "requests": {
+                  "cpu": "10m",
+                  "memory": "8Mi"
+                }
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "readOnlyRootFilesystem": true
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/legacy",
+                  "name": "data",
+                  "readOnly": true
+                },
+                {
+                  "mountPath": "/broker",
+                  "name": "mqtt-data"
+                }
+              ]
+            }
+          ],
+          "nodeName": "charleskoh-nucbox-g3",
+          "nodeSelector": {
+            "kubernetes.io/hostname": "charleskoh-nucbox-g3"
+          },
+          "preemptionPolicy": "PreemptLowerPriority",
+          "priority": 0,
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {
+            "fsGroup": 1000,
+            "runAsGroup": 1000,
+            "runAsUser": 1000,
+            "seccompProfile": {
+              "type": "RuntimeDefault"
+            }
+          },
+          "serviceAccount": "default",
+          "serviceAccountName": "default",
+          "terminationGracePeriodSeconds": 30,
+          "tolerations": [
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            },
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            }
+          ],
+          "volumes": [
+            {
+              "name": "data",
+              "persistentVolumeClaim": {
+                "claimName": "grid-data"
+              }
+            },
+            {
+              "name": "mqtt-data",
+              "persistentVolumeClaim": {
+                "claimName": "grid-mqtt-data"
+              }
+            },
+            {
+              "configMap": {
+                "defaultMode": 420,
+                "name": "grid-mqtt"
+              },
+              "name": "mqtt-config"
+            },
+            {
+              "emptyDir": {
+                "medium": "Memory",
+                "sizeLimit": "1Mi"
+              },
+              "name": "mqtt-runtime"
+            },
+            {
+              "name": "secrets",
+              "secret": {
+                "defaultMode": 288,
+                "items": [
+                  {
+                    "key": "passwords",
+                    "path": "passwords"
+                  }
+                ],
+                "secretName": "grid-secrets"
+              }
+            }
+          ]
+        },
+        "status": {
+          "conditions": [
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-21T14:54:15Z",
+              "status": "True",
+              "type": "PodReadyToStartContainers"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-21T14:54:15Z",
+              "status": "True",
+              "type": "Initialized"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-21T15:36:16Z",
+              "message": "containers with unready status: [app]",
+              "reason": "ContainersNotReady",
+              "status": "False",
+              "type": "Ready"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-21T15:36:16Z",
+              "message": "containers with unready status: [app]",
+              "reason": "ContainersNotReady",
+              "status": "False",
+              "type": "ContainersReady"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-21T14:54:14Z",
+              "status": "True",
+              "type": "PodScheduled"
+            }
+          ],
+          "containerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "100m",
+                "memory": "256Mi"
+              },
+              "containerID": "containerd://b0bf7a9345966ad728d32a1e5b3bb0f60f359250dc56b154cbdd7a83ae836da5",
+              "image": "sha256:cf0519837034237683aace865a5f027365fe760a9f2d0543f012db69a3f66779",
+              "imageID": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+              "lastState": {},
+              "name": "app",
+              "ready": false,
+              "resources": {
+                "limits": {
+                  "cpu": "2",
+                  "memory": "1Gi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "256Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-21T14:54:15Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 1000,
+                  "supplementalGroups": [
+                    1000
+                  ],
+                  "uid": 1000
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/data",
+                  "name": "data"
+                }
+              ]
+            },
+            {
+              "allocatedResources": {
+                "cpu": "50m",
+                "memory": "32Mi"
+              },
+              "containerID": "containerd://a4de51fb5af4d73c19789385458ed817fc992772edf13560b85bc0e78ab7f6f1",
+              "image": "sha256:9576aaa2787f4e9225c35a97f3c610d60bdd6edc481cf8ebc1bf66a006a5f6fe",
+              "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+              "lastState": {},
+              "name": "mqtt",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "1",
+                  "memory": "128Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "32Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-21T14:54:15Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 1000,
+                  "supplementalGroups": [
+                    1000
+                  ],
+                  "uid": 1000
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/run/mosquitto",
+                  "name": "mqtt-runtime"
+                },
+                {
+                  "mountPath": "/mosquitto/config",
+                  "name": "mqtt-config"
+                },
+                {
+                  "mountPath": "/mosquitto/secrets",
+                  "name": "secrets",
+                  "readOnly": true,
+                  "recursiveReadOnly": "Disabled"
+                },
+                {
+                  "mountPath": "/mosquitto/data",
+                  "name": "mqtt-data"
+                }
+              ]
+            }
+          ],
+          "hostIP": "121.143.126.21",
+          "hostIPs": [
+            {
+              "ip": "121.143.126.21"
+            }
+          ],
+          "initContainerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "10m",
+                "memory": "8Mi"
+              },
+              "containerID": "containerd://bbd3792e87284db06c079522ddacf8180d8a0874416cdb9846c99b49acffa5dd",
+              "image": "sha256:9576aaa2787f4e9225c35a97f3c610d60bdd6edc481cf8ebc1bf66a006a5f6fe",
+              "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+              "lastState": {},
+              "name": "migrate-mqtt-storage",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "100m",
+                  "memory": "32Mi"
+                },
+                "requests": {
+                  "cpu": "10m",
+                  "memory": "8Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": false,
+              "state": {
+                "terminated": {
+                  "containerID": "containerd://bbd3792e87284db06c079522ddacf8180d8a0874416cdb9846c99b49acffa5dd",
+                  "exitCode": 0,
+                  "finishedAt": "2026-09-21T14:54:15Z",
+                  "reason": "Completed",
+                  "startedAt": "2026-09-21T14:54:15Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 1000,
+                  "supplementalGroups": [
+                    1000
+                  ],
+                  "uid": 1000
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/legacy",
+                  "name": "data",
+                  "readOnly": true,
+                  "recursiveReadOnly": "Disabled"
+                },
+                {
+                  "mountPath": "/broker",
+                  "name": "mqtt-data"
+                }
+              ]
+            }
+          ],
+          "phase": "Running",
+          "podIP": "10.42.0.211",
+          "podIPs": [
+            {
+              "ip": "10.42.0.211"
+            }
+          ],
+          "qosClass": "Burstable",
+          "startTime": "2026-09-21T14:54:14Z"
+        }
+      }
+    ],
+    "kind": "List",
+    "metadata": {
+      "resourceVersion": ""
+    }
+  },
+  "events": {
+    "apiVersion": "v1",
+    "items": [
+      {
+        "action": "Binding",
+        "apiVersion": "v1",
+        "eventTime": "2026-09-21T14:54:14.777693Z",
+        "firstTimestamp": null,
+        "involvedObject": {
+          "apiVersion": "v1",
+          "kind": "Pod",
+          "name": "grid-79fdb78bf8-6rbjz",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997407",
+          "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901"
+        },
+        "kind": "Event",
+        "lastTimestamp": null,
+        "message": "Successfully assigned gs-plai-5h/grid-79fdb78bf8-6rbjz to charleskoh-nucbox-g3",
+        "metadata": {
+          "creationTimestamp": "2026-09-21T14:54:14Z",
+          "name": "grid-79fdb78bf8-6rbjz.18d75dbfb01a14db",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997413",
+          "uid": "2729f329-9561-43cc-8470-9bc9d67739ba"
+        },
+        "reason": "Scheduled",
+        "reportingComponent": "default-scheduler",
+        "reportingInstance": "default-scheduler-charleskoh-NucBox-G3",
+        "source": {},
+        "type": "Normal"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-09-21T14:54:15Z",
+        "involvedObject": {
+          "apiVersion": "v1",
+          "fieldPath": "spec.initContainers{migrate-mqtt-storage}",
+          "kind": "Pod",
+          "name": "grid-79fdb78bf8-6rbjz",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997410",
+          "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-09-21T14:54:15Z",
+        "message": "Container image \"127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c\" already present on machine",
+        "metadata": {
+          "creationTimestamp": "2026-09-21T14:54:15Z",
+          "name": "grid-79fdb78bf8-6rbjz.18d75dbfc9bed431",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997417",
+          "uid": "68c4c22a-456d-440b-998f-8810127f488c"
+        },
+        "reason": "Pulled",
+        "reportingComponent": "kubelet",
+        "reportingInstance": "charleskoh-nucbox-g3",
+        "source": {
+          "component": "kubelet",
+          "host": "charleskoh-nucbox-g3"
+        },
+        "type": "Normal"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-09-21T14:54:15Z",
+        "involvedObject": {
+          "apiVersion": "v1",
+          "fieldPath": "spec.initContainers{migrate-mqtt-storage}",
+          "kind": "Pod",
+          "name": "grid-79fdb78bf8-6rbjz",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997410",
+          "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-09-21T14:54:15Z",
+        "message": "Created container: migrate-mqtt-storage",
+        "metadata": {
+          "creationTimestamp": "2026-09-21T14:54:15Z",
+          "name": "grid-79fdb78bf8-6rbjz.18d75dbfcb225f7c",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997418",
+          "uid": "1da7c78c-ba05-4c56-85a0-7fda0b411c58"
+        },
+        "reason": "Created",
+        "reportingComponent": "kubelet",
+        "reportingInstance": "charleskoh-nucbox-g3",
+        "source": {
+          "component": "kubelet",
+          "host": "charleskoh-nucbox-g3"
+        },
+        "type": "Normal"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-09-21T14:54:15Z",
+        "involvedObject": {
+          "apiVersion": "v1",
+          "fieldPath": "spec.initContainers{migrate-mqtt-storage}",
+          "kind": "Pod",
+          "name": "grid-79fdb78bf8-6rbjz",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997410",
+          "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-09-21T14:54:15Z",
+        "message": "Started container migrate-mqtt-storage",
+        "metadata": {
+          "creationTimestamp": "2026-09-21T14:54:15Z",
+          "name": "grid-79fdb78bf8-6rbjz.18d75dbfd80a6a58",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997420",
+          "uid": "35b0c63a-7280-48c6-b53b-66f996c1a847"
+        },
+        "reason": "Started",
+        "reportingComponent": "kubelet",
+        "reportingInstance": "charleskoh-nucbox-g3",
+        "source": {
+          "component": "kubelet",
+          "host": "charleskoh-nucbox-g3"
+        },
+        "type": "Normal"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 2,
+        "eventTime": null,
+        "firstTimestamp": "2026-09-21T14:54:15Z",
+        "involvedObject": {
+          "apiVersion": "v1",
+          "fieldPath": "spec.containers{app}",
+          "kind": "Pod",
+          "name": "grid-79fdb78bf8-6rbjz",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997410",
+          "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-09-21T15:36:33Z",
+        "message": "Container image \"127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f\" already present on machine",
+        "metadata": {
+          "creationTimestamp": "2026-09-21T14:54:15Z",
+          "name": "grid-79fdb78bf8-6rbjz.18d75dbfe402ac26",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9998780",
+          "uid": "7d23fc15-d67b-4822-a89c-e54e2099f508"
+        },
+        "reason": "Pulled",
+        "reportingComponent": "kubelet",
+        "reportingInstance": "charleskoh-nucbox-g3",
+        "source": {
+          "component": "kubelet",
+          "host": "charleskoh-nucbox-g3"
+        },
+        "type": "Normal"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 2,
+        "eventTime": null,
+        "firstTimestamp": "2026-09-21T14:54:15Z",
+        "involvedObject": {
+          "apiVersion": "v1",
+          "fieldPath": "spec.containers{app}",
+          "kind": "Pod",
+          "name": "grid-79fdb78bf8-6rbjz",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997410",
+          "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-09-21T15:36:33Z",
+        "message": "Created container: app",
+        "metadata": {
+          "creationTimestamp": "2026-09-21T14:54:15Z",
+          "name": "grid-79fdb78bf8-6rbjz.18d75dbfe6816287",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9998781",
+          "uid": "6c08783e-a015-430d-a016-51a9eb843350"
+        },
+        "reason": "Created",
+        "reportingComponent": "kubelet",
+        "reportingInstance": "charleskoh-nucbox-g3",
+        "source": {
+          "component": "kubelet",
+          "host": "charleskoh-nucbox-g3"
+        },
+        "type": "Normal"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 2,
+        "eventTime": null,
+        "firstTimestamp": "2026-09-21T14:54:15Z",
+        "involvedObject": {
+          "apiVersion": "v1",
+          "fieldPath": "spec.containers{app}",
+          "kind": "Pod",
+          "name": "grid-79fdb78bf8-6rbjz",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997410",
+          "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-09-21T15:36:33Z",
+        "message": "Started container app",
+        "metadata": {
+          "creationTimestamp": "2026-09-21T14:54:15Z",
+          "name": "grid-79fdb78bf8-6rbjz.18d75dbfec0ac732",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9998782",
+          "uid": "b86ab8f9-35ee-4674-955a-af9d577043d9"
+        },
+        "reason": "Started",
+        "reportingComponent": "kubelet",
+        "reportingInstance": "charleskoh-nucbox-g3",
+        "source": {
+          "component": "kubelet",
+          "host": "charleskoh-nucbox-g3"
+        },
+        "type": "Normal"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-09-21T14:54:15Z",
+        "involvedObject": {
+          "apiVersion": "v1",
+          "fieldPath": "spec.containers{mqtt}",
+          "kind": "Pod",
+          "name": "grid-79fdb78bf8-6rbjz",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997410",
+          "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-09-21T14:54:15Z",
+        "message": "Container image \"127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c\" already present on machine",
+        "metadata": {
+          "creationTimestamp": "2026-09-21T14:54:15Z",
+          "name": "grid-79fdb78bf8-6rbjz.18d75dbfec1ae76f",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997427",
+          "uid": "a21f41cb-3fd0-4fb2-8a1e-22dfc120b8c5"
+        },
+        "reason": "Pulled",
+        "reportingComponent": "kubelet",
+        "reportingInstance": "charleskoh-nucbox-g3",
+        "source": {
+          "component": "kubelet",
+          "host": "charleskoh-nucbox-g3"
+        },
+        "type": "Normal"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-09-21T14:54:15Z",
+        "involvedObject": {
+          "apiVersion": "v1",
+          "fieldPath": "spec.containers{mqtt}",
+          "kind": "Pod",
+          "name": "grid-79fdb78bf8-6rbjz",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997410",
+          "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-09-21T14:54:15Z",
+        "message": "Created container: mqtt",
+        "metadata": {
+          "creationTimestamp": "2026-09-21T14:54:15Z",
+          "name": "grid-79fdb78bf8-6rbjz.18d75dbfedaba9c1",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997428",
+          "uid": "e41d7c17-54f2-4184-b77e-1d326aface1a"
+        },
+        "reason": "Created",
+        "reportingComponent": "kubelet",
+        "reportingInstance": "charleskoh-nucbox-g3",
+        "source": {
+          "component": "kubelet",
+          "host": "charleskoh-nucbox-g3"
+        },
+        "type": "Normal"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-09-21T14:54:15Z",
+        "involvedObject": {
+          "apiVersion": "v1",
+          "fieldPath": "spec.containers{mqtt}",
+          "kind": "Pod",
+          "name": "grid-79fdb78bf8-6rbjz",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997410",
+          "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-09-21T14:54:15Z",
+        "message": "Started container mqtt",
+        "metadata": {
+          "creationTimestamp": "2026-09-21T14:54:15Z",
+          "name": "grid-79fdb78bf8-6rbjz.18d75dbff1c88410",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997429",
+          "uid": "1d8a0175-2175-4ade-8666-757c4e41bc84"
+        },
+        "reason": "Started",
+        "reportingComponent": "kubelet",
+        "reportingInstance": "charleskoh-nucbox-g3",
+        "source": {
+          "component": "kubelet",
+          "host": "charleskoh-nucbox-g3"
+        },
+        "type": "Normal"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 10,
+        "eventTime": null,
+        "firstTimestamp": "2026-09-21T15:35:40Z",
+        "involvedObject": {
+          "apiVersion": "v1",
+          "fieldPath": "spec.containers{app}",
+          "kind": "Pod",
+          "name": "grid-79fdb78bf8-6rbjz",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997410",
+          "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-09-21T15:36:26Z",
+        "message": "Readiness probe failed: Get \"http://10.42.0.211:3001/api/health\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+        "metadata": {
+          "creationTimestamp": "2026-09-21T15:35:40Z",
+          "name": "grid-79fdb78bf8-6rbjz.18d760027d753562",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9998774",
+          "uid": "82e03b00-0b28-4e24-901f-8aae28a56783"
+        },
+        "reason": "Unhealthy",
+        "reportingComponent": "kubelet",
+        "reportingInstance": "charleskoh-nucbox-g3",
+        "source": {
+          "component": "kubelet",
+          "host": "charleskoh-nucbox-g3"
+        },
+        "type": "Warning"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 3,
+        "eventTime": null,
+        "firstTimestamp": "2026-09-21T15:35:46Z",
+        "involvedObject": {
+          "apiVersion": "v1",
+          "fieldPath": "spec.containers{app}",
+          "kind": "Pod",
+          "name": "grid-79fdb78bf8-6rbjz",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997410",
+          "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-09-21T15:36:16Z",
+        "message": "Liveness probe failed: Get \"http://10.42.0.211:3001/api/health\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+        "metadata": {
+          "creationTimestamp": "2026-09-21T15:35:46Z",
+          "name": "grid-79fdb78bf8-6rbjz.18d76003bfc889f5",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9998761",
+          "uid": "a187139c-28e5-4d7c-990a-7ded59e787d1"
+        },
+        "reason": "Unhealthy",
+        "reportingComponent": "kubelet",
+        "reportingInstance": "charleskoh-nucbox-g3",
+        "source": {
+          "component": "kubelet",
+          "host": "charleskoh-nucbox-g3"
+        },
+        "type": "Warning"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-09-21T15:36:16Z",
+        "involvedObject": {
+          "apiVersion": "v1",
+          "fieldPath": "spec.containers{app}",
+          "kind": "Pod",
+          "name": "grid-79fdb78bf8-6rbjz",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997410",
+          "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-09-21T15:36:16Z",
+        "message": "Container app failed liveness probe, will be restarted",
+        "metadata": {
+          "creationTimestamp": "2026-09-21T15:36:16Z",
+          "name": "grid-79fdb78bf8-6rbjz.18d7600abc06060e",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9998762",
+          "uid": "5b32c0ed-4a8a-496c-8415-ae3d3497a71c"
+        },
+        "reason": "Killing",
+        "reportingComponent": "kubelet",
+        "reportingInstance": "charleskoh-nucbox-g3",
+        "source": {
+          "component": "kubelet",
+          "host": "charleskoh-nucbox-g3"
+        },
+        "type": "Normal"
+      },
+      {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-09-21T15:36:30Z",
+        "involvedObject": {
+          "apiVersion": "v1",
+          "fieldPath": "spec.containers{app}",
+          "kind": "Pod",
+          "name": "grid-79fdb78bf8-6rbjz",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9997410",
+          "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-09-21T15:36:30Z",
+        "message": "Readiness probe failed: Get \"http://10.42.0.211:3001/api/health\": dial tcp 10.42.0.211:3001: connect: connection refused",
+        "metadata": {
+          "creationTimestamp": "2026-09-21T15:36:30Z",
+          "name": "grid-79fdb78bf8-6rbjz.18d7600e21e10428",
+          "namespace": "gs-plai-5h",
+          "resourceVersion": "9998779",
+          "uid": "cf43ae74-0bc0-4b16-930d-9d20d7ff843c"
+        },
+        "reason": "Unhealthy",
+        "reportingComponent": "kubelet",
+        "reportingInstance": "charleskoh-nucbox-g3",
+        "source": {
+          "component": "kubelet",
+          "host": "charleskoh-nucbox-g3"
+        },
+        "type": "Warning"
+      }
+    ],
+    "kind": "List",
+    "metadata": {
+      "resourceVersion": ""
+    }
+  },
+  "top": "POD                     NAME   CPU(cores)   MEMORY(bytes)   \ngrid-79fdb78bf8-6rbjz   app    316m         153Mi           \ngrid-79fdb78bf8-6rbjz   mqtt   1m           2Mi             \n"
+}

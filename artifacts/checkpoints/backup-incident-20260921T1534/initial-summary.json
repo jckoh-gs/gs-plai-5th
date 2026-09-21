@@ -1,0 +1,44 @@
+{
+  "capturedAt": "2026-09-21T15:37:01.539275+00:00",
+  "scope": "First captured actual main1.5 degradation during preupgradebackup. Temporal overlap does not establish sole cause; no1.6 rollout occurred.",
+  "runtime": "1.5.0",
+  "runtimeCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+  "backupJournal": "artifacts/operations/backups/20260921T153417228Z.json",
+  "remoteSnapshot": "/data/stable-6d165d1-20260921T153417228Z.sqlite",
+  "backupHostExit": 1,
+  "backupStage": "snapshot creation timedout90s; remoteprocess maycontinue",
+  "state": "Investigating remoteprocess and readiness; keep observers/supervisor running, do not reset counters or create duplicatebackup.",
+  "initialObserverBaseline": {
+    "primaryApiErrors": 0,
+    "primaryConnectionErrors": 0,
+    "auditConnectionErrors": 0
+  },
+  "remoteEvidenceOwner": "/root/deployment",
+  "preupgradeState": "PAUSED_STEP_PENDING_RECONCILIATION; overallautonomousgoal remainsactive",
+  "evidence": [
+    {
+      "file": "primary-observations-prefix.jsonl",
+      "sha256": "e73e75fad68f09a91878e920b6243d8c8b982dbf5625a7410f603156300bd184"
+    },
+    {
+      "file": "supervisor-status.json",
+      "sha256": "ec90f51129b7f58a9345d32ec9b6e96fbc89e4719b2a35d8a8d2a838376d14e2"
+    },
+    {
+      "file": "audit-observations-prefix.jsonl",
+      "sha256": "b53b87f884cf209c09d08991e489ccffc4f5cb8ad849a704bbb21eb328bf1e2f"
+    },
+    {
+      "file": "primary-latest.json",
+      "sha256": "87afbab3ac9455aab81a93e27aab7f867a3f77d7369972ef48357c5731aed592"
+    },
+    {
+      "file": "audit-latest.json",
+      "sha256": "f762e3bc262daa1178101ff5672feba49d90692bf280b4bb664e1febdffd5242"
+    },
+    {
+      "file": "supervisor-events-prefix.jsonl",
+      "sha256": "418108b657618dcba509404783bd49ceb8d4044021856b5f5fe85c7dd89876bc"
+    }
+  ]
+}

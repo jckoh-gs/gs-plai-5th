@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-09-21T15:36:02.494Z",
+  "files": [
+    {
+      "path": "/data/stable-6d165d1-20260921T153417228Z.sqlite",
+      "exists": false
+    },
+    {
+      "path": "/data/stable-6d165d1-20260921T153417228Z.sqlite.snapshot.part",
+      "exists": true,
+      "bytes": 439500800,
+      "mtime": "2026-09-21T15:36:02.492Z"
+    }
+  ],
+  "processes": [
+    {
+      "pid": "406",
+      "containsSnapshotCode": true,
+      "containsInspection": false
+    },
+    {
+      "pid": "422",
+      "containsSnapshotCode": true,
+      "containsInspection": true
+    }
+  ]
+}

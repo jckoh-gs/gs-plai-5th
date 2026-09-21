@@ -483,3 +483,25 @@ ISSUE023 후보1.6 독립 읽기회귀: artifacts/checkpoints/candidate-1.6-even
 독립파일대조로 app-unit.log77/77PASS, 실제broker integration.log와advanced-integration.log의PASS를확인했다. 이완료시험을HTTP설정실패때문에반복하지않았다. local-cleanup.json은소유grid-331-qa/broker/http제거와mainOrRegistryChanged=false를기록한다.
 
 HTTP-only round2는새이름/private token을사용하는수정이다. 실제 served-assets.json은이미지4af99e7b…/version1.6.0/servedJS2bcc3c1b…및CSS가image파일과일치하는PASS를기록한다. http-round2-cleanup.json은grid-331-http-round2정리/mainOrRegistryChanged=false를기록한다. 이범위는HTTP정적파일·버전·이미지연결검증이며전체remote배포/복원PASS를뜻하지않는다. 초기실패로그는유지하고추가담당receipt로설정원인·수정상태를확정한다. 본검토는읽기와issues문서만수정했으며run/resume/NEXT/source/remote는변경하지않았다.
+
+
+HTTP-only 후속 receipt 확인: deploy/verification/candidate-331ab9a/http-fixture-attempts.json은 첫 실행의 API_TOKEN 누락과 server/config.js의 외부 bind 인증 조건을 대조한다. 원래 child stderr는 wrapper가 보존하지 않았으므로 원오류 문구를 직접 관측했다고 주장하지 않는다. round2는 메모리에서 생성한 임시 토큰을 제공했고 동일 이미지/서버 소스에서 handle7893 exit0 및 served-assets/cleanup receipt로 성공을 확인했다. 양 실행 script SHA를 receipt에 보존했다.
+
+## ISSUE-024 — 승격 전 원격 백업 host 시간 초과와 동시 원격 health 장애
+
+심각도 P1 운영 가용성, 상태 OPEN/원인 조사 중. 담당은 메인·배포, 독립 검토는 issues이다. 1.6 변경 전 main1.5 runtime6d165d1/image2fd3f21에서 발생했으며 후보1.6 앱 회귀로 분류하지 않는다. 기존 성공 백업의 무결성 실패를 뜻하지 않는다.
+
+2026-09-21 UTC 시간 순서와 증거:
+- 15:34:17.227: snapshot 생성 시작. private journal artifacts/operations/backups/20260921T153417228Z.json의 원본은 유지한다. 전체 stopAt15:37:17.227/원래 deadline22:07:33.079009+00:00이며 명령별 snapshot90초 제한이다.
+- 15:35:47.386: host 세션47567 terminal1, stage snapshot creation/incomplete로 종료했다. journal의 remoteCancellationGuaranteed=false와 같이 host 종료는 원격 SQLite 작업 취소 보장이 아니다.
+- 배포담당 15:36:02 읽기 관측: 최종 /data/stable-6d165d1-20260921T153417228Z.sqlite는 없고 .snapshot.part는439500800바이트로 갱신 중이며 원격 node PID406이 존재했다. 이 수치·프로세스는 담당 관측으로 구분하며 완료된 snapshot이나 복원 가능성의 증거로 쓰지 않는다.
+- 메인 15:36:06 관측: supervisor remote_not_ready/health timeout5003ms, primary 누적 APIerrors3/connectionErrors7, audit connectionErrors4. 누적값을 이번 사건만의 증가량으로 해석하지 않는다. 관측 원문 보존은 메인이 진행 중이다.
+- 독립 확인한 deploy/verification/candidate-331ab9a/pre-upgrade-backup-incident-cluster.json(checkedAt15:36:33.401005Z): Pod grid-79fdb78bf8-6rbjz/UID62d0d7fd-915d-41e4-990b-5714fc7a6901, app image2fd3f21. readiness timeout 첫15:35:40, liveness timeout15:35:46~15:36:16, 15:36:16 Killing 이벤트 “Container app failed liveness probe, will be restarted”, 15:36:30 readiness connection refused가 있다. 같은 캡처 status는 app ready=false/restartCount0으로 아직 재시작 완료를 입증하지 않는다. MQTT container는 ready=true/restartCount0이다.
+
+기대: 제한된 host 대기 후 불완전 백업을 성공으로 채택하지 않고, 원격 잔여 작업과 실제 서비스 상태를 읽기로 확인해야 한다. 실제: host 시간 제한과 .part/최종파일 분리는 작동했으나 원격 잔여 작업 및 클러스터 health 실패가 동시 관측되었다. 따라서 단순 local forward 중단으로 축소하지 않는다. 백업 부하, 잠금, 자원 경합 등의 원인은 아직 가설이며 현재 자료만으로 인과관계를 확정하지 않는다. 단일 top 값으로 전체 구간 자원 고갈 부재도 주장하지 않는다.
+
+해결/종결 조건: 원격 프로세스·Pod 전후 상태 및 API/MQTT 재수신을 실제 receipt로 확인하고, 불완전 snapshot을 final manifest/복원 근거로 채택하지 않았음을 대조한다. 필요 수정 및 회귀 범위는 원인 확인 뒤 별도 기록한다. 이번 독립 검토는 파일 읽기와 이슈 기록만 수행했으며 원격 변경, 추가 백업, 파일 삭제, 재시작은 하지 않았다. 원래 최종 작업 마감은 유지한다.
+
+ISSUE024 후속 원격 복구 확인: pre-upgrade-backup-incident-after-pods.json은 같은 UID의 app가15:36:29 exit0/Completed로 종료되고15:36:33 다시 시작하여 restartCount1임을 확인한다. broker는0이다. 이는 위 최초 캡처 이후의 상태이며 최초 restartCount0 기록을 대체하지 않는다. pre-upgrade-backup-incident-health.json은15:36:55.602Z 내부 HTTP200/66ms/version1.5.0/MQTT connected=true를 확인한다. 재시작은 kubelet liveness 조치이며 에이전트가 restart/kill/배포하지 않았다는 담당 receipt와 일치한다. 이 내부 복구로 전체 구독자 수신 무손실을 주장하지 않는다.
+
+pre-upgrade-backup-summary.json(15:37:24.126Z)은 최종 snapshot 부재/metadata 미생성/INCOMPLETE/promotionReady=false 및 기존 stable-backup-6d165d1.json 보존을 명시한다. 메인의 artifacts/checkpoints/backup-incident-20260921T1534/initial-summary.json에는 실제 observer/supervisor prefix·latest의 SHA가 연결되어 있다. 부분 snapshot 추가 생성이나 삭제는 없었다. 서비스 복구는 확인했지만 stall의 근본 원인과 다음 백업의 안전 조건은 미확정이므로 이슈 OPEN을 유지한다.

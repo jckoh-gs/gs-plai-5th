@@ -55,3 +55,10 @@ The new diagnostics classified13:25:53.396Z as a health timeout after5004ms; ver
 ### 역할별 실행 핸들 확인
 
 보조 담당의 exec 핸들은 메인의 도구 조회에서 보이지 않을 수 있다. 1.5 로컬 미디어 리허설에서 메인의70803 조회는 Unknown process id였으나 담당의 같은 핸들 조회는7번 장면 진행 중이었고, 실제 supervisor97447/worker97468의 시작identity도 같았다. 이 조회 실패만으로 종료·실패 또는 재기동 필요를 판단하지 않는다. resume의 owner 담당에게 원래 핸들을 확인하게 하고, 실제 PID의 시작시각·명령·소유 경로와 완료 영수증을 함께 대조한다. 번호만 같은 PID에는 신호를 보내지 않는다. 녹화가 실제 종료됐다는 근거 전에는 별도 시연복구를 시작하지 않는다. 이 사례는 도구 조회 범위의 차이이며 실제 네트워크 단절 재현으로 표현하지 않는다.
+
+
+## 1.5 백업 중 실제 응답 지연과 자동 재연결
+
+2026-09-21 15:34Z 새 전환 전 백업은 snapshot creation90초 host 제한에서 미완료됐고, 그뒤에도 원격 process와 partial이 관측됐다.15:36:16Z Kubernetes가 liveness 실패를 이유로 같은Pod의 app 컨테이너를 재시작했으며15:36:55Z 내부health가 회복됐다. 접속 감독기는15:35:46.767Z부터 관측된 장애 후15:37:26.421Z 실제 이미지·Ready·인증API·MQTT 검증을 통과해 자동재연결했다. 이때 원격 PodUID는 같고 app restartCount는0→1, broker는0이었다. root/담당이 restart를 요청한 것은 아니다.
+
+원본 snapshothelper·미완료journal의비밀없는필드·관찰prefix·복구snapshot은 `artifacts/checkpoints/backup-incident-20260921T1534/`에 보존했다. host종료를 remote종료로 가정하거나 부분파일을 완료백업으로 승격하지 않았다. 새백업과후보배포를 보류하고 기존ad34검증백업을 유지했다. 시간적중첩은 확인됐지만 내부SQLite/I/O 원인은 아직 미확정이다. 현재 백업 중 취소·소유worker 제한을 로컬에서 개선/검증중이며 원격효과를 선행해 주장하지 않는다. 관찰기의 누적오류와 서비스응답 공백은 그대로 남기며, 수신샘플의 연속성만으로 무중단을 주장하지 않는다.
