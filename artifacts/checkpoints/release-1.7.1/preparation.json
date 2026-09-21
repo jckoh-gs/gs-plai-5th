@@ -1,0 +1,23 @@
+{
+  "state": "PREPARATION_ONLY",
+  "version": "1.7.1",
+  "prdVersion": "1.15",
+  "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "appImage": "sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "normalBackup": "deploy/verification/stable-backup-40b9ed8.json",
+  "exactBackupSha256": "5ff34f3e5dbc52f07b899f0c8013db130e5fd13c3d315e92aa512d474ea1f782",
+  "stableFallback": "artifacts/releases/checkpoint-1.7.0.json",
+  "pendingGates": [
+    "same5ff current1.7.1 andbackward1.7 allfunctionalproofs terminal",
+    "independentroot actualzeroPod/replicas/PVCretention/closedownedtunnel andmaincanonicalreview",
+    "independentproduct acceptance withstablefunctional selection only",
+    "reconcile selectedbackup/run/docs/template/finalwindowplan andcommit completedsource+evidence beforemanifest",
+    "newimmutable checkpoint-1.7.1.json localandremotehashcheck; independentreview; newtags exactruntimevsfullsource; verifyremote refs"
+  ],
+  "immutableSchedule": {
+    "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+    "deadlineAt": "2026-09-21T22:07:33.079009+00:00"
+  },
+  "completionClaim": false,
+  "mediaScope": "Existingrehearsal remains preparation; new finalvideo+samevideoeditabledeck required originalfinalwindow."
+}

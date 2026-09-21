@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "focusedPassed": 8,
+  "sourceSyntax": "bothPASS",
+  "failedAttempts": "tests.log and tests-round2.log preserve obsolete negative fixture rejecting newly-approved1.7.1; attempted text replacement initially missed arrayliteral. Corrected only expected futureversion1.7.2; tests-round3.log8/8PASS.",
+  "scope": "Operational exact-version guards only; main3104 denied; formactual201/ownedcleanupunchanged; no remote execution in this guard test",
+  "hashes": {
+    "scripts/browser-command-form.cjs": "f6bacd1845f352ea6b11625d5348d959e1c7be506ad7dd79f6a77de0a3bce6f4",
+    "scripts/browser-command-receipts.cjs": "41e0f2d77c5667b827b9f7eb8a38cf8640d8333f1eb3c32ac1ee99b09f801af1",
+    "tests/review-form-receipt-patch-target.test.js": "d31c6fffec1ac7535cf21847eb07b892c8ecc6eb651216ac4f1fdc1d7fcf56e7",
+    "tests/review-receipt-browser-target.test.js": "990f75986a77d149883a0f3f654aa6ed1afdbc4e1225280ce9abdb73f90bdc61"
+  }
+}

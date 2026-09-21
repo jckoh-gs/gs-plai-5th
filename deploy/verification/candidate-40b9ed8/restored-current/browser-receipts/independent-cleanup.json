@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "ownedResponseBaselinesRestored": true,
+  "preExistingUnchanged": true,
+  "http201ExplicitlyAsserted": false,
+  "scope": "Actual captured successfulregistrationresponse projections equal aftercleanupGET; do not claim receiptstatus201 assertion"
+}

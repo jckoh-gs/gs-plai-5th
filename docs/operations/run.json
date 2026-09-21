@@ -161,20 +161,22 @@
     "localSummary": "artifacts/checkpoints/candidate-1.7.1-local/summary.json",
     "independentLocalReview": "docs/product/REVIEW-041.md",
     "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
-    "phase": "Normal1.7.1 backupwholeSHA/SQLite/rootreview PASS; pairedsame5ffcurrent1.7.1/back1.7restore starting",
+    "phase": "Current1.7.1 same5ffrestorationallfunctionalPASS+cleanupownerconfirmed. Backward1.7 starting; no stablepromotionyet.",
     "activeOperations": [
       {
         "owner": "/root/deployment",
-        "kind": "pairedisolatedrestore setup/baseline/MQTT/cleanup",
-        "state": "Dispatched; askownerforactualhandle beforeaction",
-        "currentRig": "grid-restore-40b9ed8",
-        "backwardRig": "grid-restore-back-40b9ed8",
-        "backup": "deploy/verification/stable-backup-40b9ed8.json"
+        "kind": "backward1.7 same5fffreshrestore setup",
+        "handle": 5107,
+        "rig": "grid-restore-back-40b9ed8",
+        "state": "backward1.7Ready; originalcanonicalidentitycapture active",
+        "forwardHandle": 80939,
+        "setupHandle": 7749,
+        "setupExitCode": 0
       },
       {
         "owner": "/root/issues",
-        "kind": "pairedisolatedrestore browserregression andownfixtures",
-        "state": "Coordinating afterownerReady; no mainwrites"
+        "kind": "backwardbrowser/form/receipt thenexport",
+        "state": "Waiting fordeploymentactualReady"
       }
     ],
     "completedImageBuild": {
@@ -255,6 +257,21 @@
       "rootReview": "deploy/verification/candidate-40b9ed8/normal-backup/root-backup-review.json",
       "sha256": "5ff34f3e5dbc52f07b899f0c8013db130e5fd13c3d315e92aa512d474ea1f782",
       "bytes": 1075081216
+    },
+    "currentRestoreProgress": {
+      "setupHandle": 92931,
+      "setupExit": 0,
+      "baselineHandle": 24768,
+      "baselineExit": 0,
+      "mqttHandle": 50578,
+      "mqttExit": 0,
+      "browserSummary": "deploy/verification/candidate-40b9ed8/restored-current/browser-summary.json",
+      "allBrowserReportsPassed": 8,
+      "cleanupHandle": 39952,
+      "cleanupExit": 0,
+      "forwardHandle": 93104,
+      "forwardExit": 143,
+      "state": "Ownerverified0replicas/noPods/closedports; rootpairedactualreview later"
     }
   },
   "previousStableCheckpoints": [
@@ -425,7 +442,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T18:02:35.372097+00:00",
+  "updatedAt": "2026-09-21T18:09:42.558791+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",

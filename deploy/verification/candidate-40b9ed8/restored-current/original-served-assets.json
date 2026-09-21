@@ -1,0 +1,18 @@
+{
+  "result": "PASS",
+  "version": "1.7.1",
+  "image": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "runtimeSourceCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "indexSha256": "21be8f05236c1faf7fe824ee9ec4c8a0ef27fcee101e8f2bd9455426a741d4d6",
+  "assets": [
+    {
+      "path": "/assets/index-qlOuxY80.js",
+      "sha256": "154fe2de1f039fe27fbcce6793e15716e843ca3814c2d361392a2207b6918dfc"
+    },
+    {
+      "path": "/assets/index-DEfqZjZ9.css",
+      "sha256": "51137c1c0da56706d8cbe87f873b7ace2b530ccdc07673e1fccf2b8cf93166db"
+    }
+  ],
+  "harnessSourceDistinctFromCompiledRuntime": true
+}

@@ -1,0 +1,36 @@
+✔ form cleanup permits only captured plant/generator identities and PATCH routes (0.39425ms)
+✔ browser-command-form.cjs exactpatchversion keeps isolated targets and main rejection (2.419167ms)
+✔ browser-command-receipts.cjs exactpatchversion keeps isolated targets and main rejection (0.672791ms)
+✔ receipt browser target rejects primary, external, credentials and mode mismatch before I/O (0.440584ms)
+✔ isolated restore requires exact approved lowercase digest, private token and approved receipt versions (0.188416ms)
+✔ default local mode remains isolated3109 with original private candidate token (0.054625ms)
+✖ approved1.6 receipt target separateslocalport/token and keepsrestore safeguards (0.266625ms)
+✔ approved1.7 receipt fixture is isolated3111 and refuses prior or primary ports (0.107916ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 7
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 34.427459
+
+✖ failing tests:
+
+test at tests/review-receipt-browser-target.test.js:7:1
+✖ approved1.6 receipt target separateslocalport/token and keepsrestore safeguards (0.266625ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///Users/charleskoh/research/20260921-RALPTON/tests/review-receipt-browser-target.test.js:8:336)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /version/,
+    operator: 'throws',
+    diff: 'simple'
+  }

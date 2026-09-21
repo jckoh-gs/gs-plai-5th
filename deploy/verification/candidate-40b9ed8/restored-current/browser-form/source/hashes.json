@@ -1,0 +1,7 @@
+{
+  "scripts/browser-command-form.cjs": "f6bacd1845f352ea6b11625d5348d959e1c7be506ad7dd79f6a77de0a3bce6f4",
+  "web/src.jsx": "ffbb204d9275fc14ebfdd9ea3ea488494ca2c0c97271f6af69f69993ddbfa592",
+  "web/command-form.js": "ba71bfda52cb154ab15765f5ebc99f8cab8e3ae80aed3d90543e5228e4d3b67e",
+  "web/command-receipts.js": "576b56a4799aef06ec70ff3b0db124744bd4d4d865cbdc08801a5c6262665122",
+  "web/event-time.js": "251c71e39967b05c99ca054c093385a71728200db5f407d8cd6dc667972a7c28"
+}

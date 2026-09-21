@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "runtimeVersion": "1.7.1",
+  "reports": [
+    "browser-auth/result.json",
+    "browser-preview/race.json",
+    "preview-api.json",
+    "browser-form/result.json",
+    "browser-receipts/result.json",
+    "browser-event/result.json",
+    "browser-list/result.json",
+    "browser-export/result.json"
+  ],
+  "terminals": {
+    "auth65551": 0,
+    "preview18268": 0,
+    "previewAPI": 0,
+    "form84295": 0,
+    "receipts72200": 0,
+    "event15044": 0,
+    "list47502": 0,
+    "export20130": 0
+  },
+  "cleanup": "form actual201 baseline and preexisting unchanged; receipt responsebaseline independently compared aftercleanup; no explicit201assert in receipt",
+  "scope": "AuthSSE/browser fault fixtures localproxy only; preview purePOST; form/receipt onlyownednewRTUs; export after deploymentMQTT50578 PASS; no main writes; all browsers/proxies ended"
+}

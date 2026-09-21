@@ -69,3 +69,10 @@ ISSUE024 후속 로컬 보완: `artifacts/checkpoints/backup-hardening-1.6/recei
 ## 관측 세션 인계 정합성
 
 ISSUE027에서 보조 관측과 supervisor의 중복 메타데이터가 종료된 1.6 세션을 현재로 가리키는 문제를 수정했다. `resume-status.mjs`는 현재 소유 PID·시작 identity·handle과 중복 필드가 일치하는지 검사하고, 불일치하면 일반 재개 대신 `reconcile-observation-ledger`를 보고한다. 마감·동결·연결·배포 확인의 우선순위는 유지한다. 이 검사는 메타데이터 정합성만 확인한다. 실제 프로세스 생존과 관측 파일·세션은 여전히 별도로 대조해야 하며, 자동 재기동이나 제어 재시도는 수행하지 않는다. [323개 전체 시험·8개 최종 집중 검사·실제 이전 필드 재현·현재 읽기 확인](../../artifacts/checkpoints/resume-1.7-audit-binding/guard-summary.json)을 보존한다.
+
+
+## 1.7.1 전환 뒤 재개 확인
+
+1.7.1의 계획된 Pod 교체에서는 영속 미전송 메시지의 본문·순서가 유지되고 실제 MQTT 재전송/PUBACK를 확인했다. [outbox 증거](../../deploy/verification/candidate-40b9ed8/outbox-restart.json)와 [독립 관찰](../../deploy/verification/candidate-40b9ed8/outbox-observation/summary.json)은 의도한 전환 중 발생한 health 실패 4회와 복구를 구분한다. 이것은 인터넷 전체 차단 시험이나 모든 구독자의 수신 보장이 아니다. [종료 후 점검](../../deploy/verification/candidate-40b9ed8/outbox-post-normal.json)에서 원래 5 RTU의 설정·실행 식별자·시나리오, offline=false, 정상 상태, pending=0, 임시 포트 반환과 동일 supervisor의 새 Pod 연결을 확인했다.
+
+기존 1.7 관찰은 정상 종료와 함께 [별도 보존](../../artifacts/checkpoints/soak-1.7.0/summary.json)했다. 새 1.7.1 관찰의 프로세스·시작 identity·세션·소스·현재 원장 연결은 [활성화 증거](../../artifacts/checkpoints/observer-1.7.1-activation/activation.json)에, 실제 이미지/인증 API 및 중복 원장 정합성 확인은 [읽기 전용 재개 검사](../../artifacts/checkpoints/observer-1.7.1-activation/resume-status.json)에 저장했다. 이 파일들은 해당 시각의 증거다. 재연결할 때에는 항상 최신 run/resume과 실제 프로세스를 다시 확인한다. 완료된 명령을 반복하거나 이전 관찰기의 카운터를 새 관찰기에 합쳐 무중단 관측으로 표현하지 않는다.

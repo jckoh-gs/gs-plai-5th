@@ -1,0 +1,11 @@
+{
+  "resources": {
+    "deployment/grid-restore-40b9ed8": "absent",
+    "pvc/grid-restore-40b9ed8-data": "absent",
+    "pvc/grid-restore-40b9ed8-mqtt-data": "absent",
+    "deployment/grid-restore-back-40b9ed8": "absent",
+    "pvc/grid-restore-back-40b9ed8-data": "absent",
+    "pvc/grid-restore-back-40b9ed8-mqtt-data": "absent"
+  },
+  "ports3105And18885Absent": true
+}

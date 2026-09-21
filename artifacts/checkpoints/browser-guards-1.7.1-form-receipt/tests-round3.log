@@ -1,0 +1,16 @@
+✔ form cleanup permits only captured plant/generator identities and PATCH routes (0.442875ms)
+✔ browser-command-form.cjs exactpatchversion keeps isolated targets and main rejection (2.60825ms)
+✔ browser-command-receipts.cjs exactpatchversion keeps isolated targets and main rejection (0.685167ms)
+✔ receipt browser target rejects primary, external, credentials and mode mismatch before I/O (0.482541ms)
+✔ isolated restore requires exact approved lowercase digest, private token and approved receipt versions (0.18525ms)
+✔ default local mode remains isolated3109 with original private candidate token (0.047417ms)
+✔ approved1.6 receipt target separateslocalport/token and keepsrestore safeguards (0.09ms)
+✔ approved1.7 receipt fixture is isolated3111 and refuses prior or primary ports (0.084583ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33.173125
