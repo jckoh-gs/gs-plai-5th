@@ -1,0 +1,39 @@
+{
+  "result": "PASS",
+  "observedAt": "2026-09-21T12:20:29.880Z",
+  "version": "1.3.0",
+  "scope": "isolated-restore browser + real REST; explicitly marked controlled response races; no live external KMA claim",
+  "plants": [
+    {
+      "id": "4b36bb7a-7e65-4216-b35f-5a12ee8059ba",
+      "name": "A-41ac0d22 Scenario"
+    },
+    {
+      "id": "6c34475e-1b4e-42db-9176-1d75693d4555",
+      "name": "B-41ac0d22 Scenario"
+    },
+    {
+      "id": "d5a14413-a9e4-4f1d-bd98-8c0c4e7c7a43",
+      "name": "Empty-41ac0d22 Scenario"
+    }
+  ],
+  "checks": [
+    "REST global list contract unchanged",
+    "Same-named A/B rows scoped; real JSON downloads equal original server snapshots",
+    "Named empty RTU state",
+    "A restore new run and cancels A only; paused B run/models/command unchanged",
+    "Late A list cannot expose A rows while B selected",
+    "Late A save names actual request RTU; A→B→A remount stays disabled; one POST",
+    "Reload, narrow layout and keyboard RTU selection",
+    "Actual missing-key HTTP200 displayed as error with RTU attribution, no false green success",
+    "Controlled manual/no-error receipt is neutral, not evidence of new KMA data",
+    "Controlled late A weather response does not render receipt under B"
+  ],
+  "pageErrors": [],
+  "assets": [
+    {
+      "path": "dist/assets/index-Bq6rJvbB.js",
+      "sha256": "8d61e59d833af0cea234ed17c6d61300e4b564708cfeb78f51f8a0ab2e6a5a3c"
+    }
+  ]
+}

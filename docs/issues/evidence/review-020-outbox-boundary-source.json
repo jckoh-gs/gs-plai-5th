@@ -1,0 +1,8 @@
+{
+  "at": "2026-09-21T12:16:37.710563+00:00",
+  "sha256": {
+    "scripts/remote-outbox-restart.mjs": "72c2099d23059e39d1ac69f90124d79f7916c46744bce95e31003c4da31edbbb",
+    "tests/review-outbox-boundary.test.js": "2677d69bc1945f6aa529ce730bfc5aeecef40794a998b2794dc1848dc3ebcef4",
+    "docs/issues/evidence/review-020-outbox-boundary-final.log": "8828774624549dd546b97718dd386e8745403298accc212be14af80acb03ad3b"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "result": "PASS",
+  "sourceCommit": "3fa3ba0a6984dc752a8968d1788e72a3069b1267",
+  "appImage": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+  "checkedAt": "2026-09-21T12:20:06.835Z",
+  "context": "charles-k3s",
+  "namespace": "gs-plai-5h",
+  "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+  "beforePod": {
+    "name": "grid-74995df559-p6b54",
+    "uid": "395d6220-3cb9-4b74-bb14-8feef500c572",
+    "image": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+    "imageID": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d"
+  },
+  "afterPod": {
+    "name": "grid-76f9968b4-dgf2w",
+    "uid": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73",
+    "image": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+    "imageID": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d"
+  },
+  "podReplaced": true,
+  "messageId": "32747ab1-6f04-42d1-a535-0553ee0197f1",
+  "sequence": 233,
+  "bodySha256": "76070ace9463e729314323491ee3b55d1e28a2da520797aaee20d623719a5dcc",
+  "samePersistedBodyBeforeAndAfterRestart": true,
+  "sameObservedMQTTBody": true,
+  "ackedAt": "2026-09-21T12:20:05.269Z",
+  "consistentPendingBackup": "/data/pending-outbox-3fa3ba0-20260921T121912117Z.sqlite"
+}

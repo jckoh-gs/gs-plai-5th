@@ -1,0 +1,55 @@
+{
+  "checkedAt": "2026-09-21T12:09:36.194211+00:00",
+  "sourceCommit": "3fa3ba0a6984dc752a8968d1788e72a3069b1267",
+  "context": "isolated git archive",
+  "archive": "artifacts/private/grid-3fa3ba0.oci.tar",
+  "imageManifest": "sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+  "image": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+  "labels": {
+    "grid.prd.version": "1.10",
+    "grid.runtime.variant": "alpine",
+    "org.opencontainers.image.revision": "3fa3ba0a6984dc752a8968d1788e72a3069b1267",
+    "org.opencontainers.image.version": "1.3.0"
+  },
+  "architecture": "amd64",
+  "os": "linux",
+  "testSource": "Exact archive tests/scripts mounted read-only; server, packages and bundled UI from immutable image",
+  "excludedWorkstationTests": {
+    "supervisor.test.js": "process identity tooling unavailable in Alpine runtime",
+    "review-restore-rig.test.js": "Python unavailable in runtime",
+    "review-backup.test.js": "Unshipped host backup CLI timing fixtures;100ms subprocess startup budget exceeded; retained failure evidence"
+  },
+  "deployed": false,
+  "unitTests": {
+    "pass": 118,
+    "fail": 0,
+    "concurrency": 1,
+    "scope": "App tests plus compatible read-only mounted source tooling tests; unavailable workstation tests excluded"
+  },
+  "actualBrokerIntegration": "PASS",
+  "advancedIntegration": "PASS",
+  "registryPushed": true,
+  "excludedTestCount": 18,
+  "priorAttempts": [
+    {
+      "log": "unit.log",
+      "tests": 122,
+      "pass": 120,
+      "fail": 2
+    },
+    {
+      "log": "review-backup-isolated.log",
+      "tests": 4,
+      "pass": 3,
+      "fail": 1
+    },
+    {
+      "log": "unit-serial.log",
+      "tests": 122,
+      "pass": 121,
+      "fail": 1
+    }
+  ],
+  "limitation": "Mounted unshipped workstation backup100ms subprocess startup budget exceeded in linux/amd64 image execution; source unchanged; no definitive environment root cause asserted",
+  "localWorkstationTests": "Parent reported same-source136 serial PASS; separate from container acceptance"
+}

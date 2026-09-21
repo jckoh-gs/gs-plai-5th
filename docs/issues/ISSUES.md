@@ -347,3 +347,16 @@ Scenarios는 plantId가 선택 RTU와 같은 행만 표시하고 저장 요청�
 IDEA007은 같은 이름의 A/B 목록 구분, JSON 다운로드와 서버 snapshot deep equality, 빈 RTU 안내, A만 새 run/명령취소 및 B run/모델/명령 불변, 지연 list 차단, 저장 A→B→A 시 비활성/단일 POST, reload/keyboard typeahead/narrow overflow 검사를 실제 assertion으로 확인했다. 글로벌 목록 API 계약은 그대로다. 초기 네 번은 headless native key 동작/선택자 fixture 실패로 원본 로그를 보존했으며 최종 통과로 삭제하지 않는다.
 
 전체시험 후속은 메인 candidate-1.3-tests-round3.log의136/136PASS이며 REVIEW018의 독립14개 결과와 구분한다. 코드/최종 harness/원본 result 및 이미지 해시는 review-019-scenario-weather-source.json에 기록했다. 본 검토에서 클러스터/서버/공유 fixture를 변경하지 않았다.
+
+
+### ISSUE019 운영 후속 / REVIEW020 — outbox restart 검증 대기 경계
+
+remote-outbox-restart.mjs의 무제한 host exec/HTTP 대기를 제한했다. 일반 kubectl20초/온라인 backup90초/rollout status190초를 원래 run.deadlineAt와 전체300초 중 빠른 상한으로 제한하고 SIGKILL을 사용한다. HTTP는15초 및 redirect:error, MQTT subscribe/터널·DB poll도 남은 예산을 확인한다. 동일 outbox body/sequence 및 실제 수신/PUBACK 검사는 유지한다. timeout 진단에는 child stdout/stderr/토큰을 포함하지 않으며 원격 취소를 보장하지 않으므로 실제 pod/배포/RTU 상태 확인 전 재시도하지 않도록 안내한다. uncertain offline 요청도 cleanup 대상이며 예산 소진 후 cleanup을 수행하지 못하면 명시적으로 실패를 남긴다.
+
+격리 실제 CLI 두 fixture PASS: 만료 시 kubectl 미실행,3초 원래deadline의 hung discovery 유한 종료·민감출력 비노출. fakekubectl/임시 run/임시토큰/random loopback만 사용했다. 초기 fixture의 고정3104포트 충돌 실패는 review-020-outbox-boundary.log에 보존하고 OUTBOX_API_BASE 선택옵션으로 격리 포트를 사용한 최종2/2결과를 별도 final.log에 기록했다. live cluster 명령/재시작/RTU 변경은 없었다. 이 시험은 outbox 전체 복구 성공을 대신하지 않는다. 동기 파일I/O/스케줄링 중단까지 hard real-time300초 종료를 보장하지 않는다.
+
+
+REVIEW020 round2: 메인 독립 검토에서 MQTT connectAsync의 늦은 resolve가 Promise.race 종료 후 소유권 없이 남을 수 있음을 발견했다. mqtt.connect 즉시 client 소유권을 확보하고 connect/error 이벤트를 제한시간 동안 기다려 finally end(true)가 실행되도록 수정했다. 실제 소스 연결 블록을 VM에서 fake MQTT delayed connect로 실행해 timeout 후 즉시 close/늦은 connect 이후도 close1회를 확인했다. 이는 실제 브로커 통합시험은 아니다. OUTBOX_API_BASE는 credentials 없는 HTTP localhost/127.0.0.1만 허용하며 외부 host는 API 토큰 파일을 읽기 전에 거절한다. 신규 CLI 부정시험 포함4/4PASS와 node --check 완료. 최초 final source/log는 보존하고 round2 source/log를 별도로 기록했다.
+
+
+REVIEW020 round3: 보안 독립 검토에서 observer message callback의 JSON.parse 예외가 비동기 이벤트에서 main finally를 우회할 수 있음을 발견했다. listener만 try/catch 및 non-null plain object/array 제외/string messageId 일치 검사로 방어했다. 실제 소스 callback VM fixture에서 malformed/null/array/scalar/ID 누락·타입오류·다른 ID는 throw/수신변수 변경 없이 무시하고 정상 동일 ID는 공백까지 원문 그대로 보존함을 확인했다. 전체 focused5/5PASS와 node --check. 기존 실제 outbox 성공 실행 소스 `deploy/verification/candidate-3fa3ba0/actual-outbox-source.mjs`와 보고서는 변경하지 않았고 해당 성공을 이번 수정본의 실제 실행으로 소급하지 않는다. 이번은 운영도구 재사용 방어이며 앱/배포/원격 재시작 변경은 없다.

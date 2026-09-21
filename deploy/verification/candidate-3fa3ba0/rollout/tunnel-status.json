@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-09-21T12:15:30.168Z",
+  "mqttPortReachable": true,
+  "supervisor": {
+    "schemaVersion": 1,
+    "at": "2026-09-21T12:15:19.490Z",
+    "pid": 54951,
+    "processIdentity": "Mon Sep 21 20:19:20 2026",
+    "state": "connecting",
+    "reason": "forward_started",
+    "outageAt": "2026-09-21T12:14:15.318Z",
+    "lastOutageAt": "2026-09-21T11:59:33.489Z",
+    "reconnectedAt": "2026-09-21T11:59:36.037Z",
+    "readOnly": true,
+    "commandsAllowed": true,
+    "context": "charles-k3s",
+    "namespace": "gs-plai-5h",
+    "expectedImage": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+    "expectedVersion": "1.3.0",
+    "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+    "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+    "failures": 7,
+    "forwardOwned": true,
+    "podUID": "395d6220-3cb9-4b74-bb14-8feef500c572",
+    "retryInMs": 30000
+  }
+}

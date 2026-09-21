@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "observedAt": "2026-09-21T12:21:19.811Z",
+  "scope": "Actual HTTP HTML/JS from current isolated1.3 restore rig; original browser result assets field was workstation dist reference, now separately matched to served bytes",
+  "expectedImage": "sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+  "identityEvidence": "../restore-1.3-pod.json",
+  "assets": [
+    {
+      "url": "http://127.0.0.1:3105/assets/index-Bq6rJvbB.js",
+      "bytes": 256876,
+      "sha256": "8d61e59d833af0cea234ed17c6d61300e4b564708cfeb78f51f8a0ab2e6a5a3c",
+      "matchesWorkstationReference": true
+    }
+  ]
+}

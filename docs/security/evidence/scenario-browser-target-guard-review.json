@@ -1,0 +1,49 @@
+{
+  "capturedAt": "2026-09-21T12:12:37.980Z",
+  "sourceSha256": "ef2ec3ccb4280f2248ab4a97d8eca414ef1a25611ce9320535cda4c9b66d429e",
+  "scope": "Executed extracted current target guard only in isolated VM; no browser, token read, network or fixture mutation",
+  "results": [
+    {
+      "base": "http://127.0.0.1:3106",
+      "target": "default",
+      "allowed": true,
+      "expected": true
+    },
+    {
+      "base": "http://127.0.0.1:3105",
+      "target": "isolated-restore",
+      "allowed": true,
+      "expected": true
+    },
+    {
+      "base": "http://127.0.0.1:3105",
+      "target": "default",
+      "allowed": false,
+      "expected": false
+    },
+    {
+      "base": "http://127.0.0.1:3104",
+      "target": "local",
+      "allowed": false,
+      "expected": false
+    },
+    {
+      "base": "http://127.0.0.1:3104",
+      "target": "isolated-restore",
+      "allowed": false,
+      "expected": false
+    },
+    {
+      "base": "http://example.test:3105",
+      "target": "isolated-restore",
+      "allowed": false,
+      "expected": false
+    },
+    {
+      "base": "http://127.0.0.1:3106",
+      "target": "unknown",
+      "allowed": false,
+      "expected": false
+    }
+  ]
+}

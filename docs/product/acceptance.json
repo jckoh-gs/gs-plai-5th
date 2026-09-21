@@ -1441,9 +1441,85 @@
         {
           "path": "deploy/verification/candidate-83d10ce/restore-summary.json",
           "sha256": "45d663574a495d73cb92be5f5665a7cc21976195f71f72cdd4d39f3aa7c97e1b"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-summary.json",
+          "sha256": "31f8ad4a10c2c8a4bc83befb10504c4cdfafad74bfd5f8abb8a3ea8b5a0fead8"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/rollout/proof.json",
+          "sha256": "45c097e78095a84cd790113760c1ca4b3da4bac3836a3cdd4c22f93cb82f6832"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/mqtt.json",
+          "sha256": "48a35d0d0d1876c844fad3fb3a940da095f6da92b4806c3c54cbaf7ad717956b"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/outbox-restart.json",
+          "sha256": "27a86a5e730f3485f6fbb48a531cc840279f193878c769295bba2db3dbac24ae"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/post-outbox-normal.json",
+          "sha256": "dce43095c1655a4b4535221224ef772d599becab85680f51a24eb009d19b974e"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/served-assets.json",
+          "sha256": "44830f48e38103264777015b654865acf08577ddbdc718ed960a33073d8ac8dd"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-init.json",
+          "sha256": "419e40f1a617c5afc5602e1945790f0cfa7ff3d2f56bc7be6ed03799ab672b56"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-preview.json",
+          "sha256": "f0bd64276c1528ff546f7bdfe3ef76e6c96d71ac1198a39589235851bcb3b44e"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-mqtt.json",
+          "sha256": "dc8361f15bf45741875367e4437ea3f415a71637c9df56bafcc57e5d94ae5eab"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-export/result.json",
+          "sha256": "1f9cd9e74b2d7184b0d8c35daa355b716dcff6014b6a42891ca852c8186e3522"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-init.json",
+          "sha256": "419e40f1a617c5afc5602e1945790f0cfa7ff3d2f56bc7be6ed03799ab672b56"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-preview.json",
+          "sha256": "6f40cf1d994dd523ed9ab9a6f9cbe243446dc50244a9106cceec0dc97379b251"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-mqtt.json",
+          "sha256": "e6f610433d0972b55edd1eabf21aa98088118a5eb9b3491accef134955cec713"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-export/result.json",
+          "sha256": "c7069943ae80f7a786ee083d3c95ddd42a1859dfc3e0f03539b1a56fd00cb27b"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/result.json",
+          "sha256": "2a1393ea4caeea52f48ab151c9f6446ae7310b9fe7b1c94842adadfa2a8c79b0"
         }
       ],
-      "assessment": "1.2actualproduction83d10ce/digestcc387c..eab6: exactimage79app tests (local88 includes9ops), actualauthUI/export/preview/MQTT125, podoutboxsamebody/PUBACK, immutable169414656backupSHA805040..6c88 fresh1.2+backward1.1restore,9checksPASS,rig0pods. stable-v1.2.0 peeled83d10ce. Newmanifest independent gate remains pending; media/time not complete.",
+      "assessment": "3fa3ba0 actual1.3 image5563acc..ba5d rollout/browser/MQTT/outboxrestart; 13restorefiles individuallyPASS on fresh1.3 and backward1.2PVC from same420466688backupSHAb515ef..ce40. IsolatedactualscenarioA/B/late races/exports PASS with separately servedJS hash matched. Main5HEALTHY/faultfalse/pending0. Stabletag/immutablemanifest not yet asserted; media/time distinct.",
       "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
@@ -3751,7 +3827,7 @@
     {
       "id": "OPS-05",
       "description": "릴리스 manifest에 commit/dirty 파일 해시/PRD/image/backup/tests/deploy/restore 기록",
-      "status": "verified_functional",
+      "status": "partial",
       "evidence": [
         {
           "path": "deploy/verification/post-restart.json",
@@ -3810,13 +3886,13 @@
           "sha256": "ff7897a00bc72a51888a0d62348170c32685b29aa28ac2fe3d2b4cc228116e59"
         }
       ],
-      "assessment": "Independent verify-release --at-commit --remote PASS453hashes: source/evidence at e080146, runtime83d10ce, streamed169414656backupSHA and app/broker actualReadyimage identity. Prior actualrestore acceptance retained separately. Currentcheckpoint provenance complete, not finalmedia/time completion.",
+      "assessment": "Previous1.2immutablemanifest remains verified. Current1.3functional+restore evidence complete; rootstabletag/currentimmutablemanifest and independent hash verification pending.",
       "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
       "id": "AT-RELEASE-01",
       "description": "manifest 파싱, 실제 hash/digest 일치, 해당 revision 로그, 별도 복원 UI/MQTT/DB/outbox 검증",
-      "status": "verified_functional",
+      "status": "partial",
       "evidence": [
         {
           "path": "deploy/verification/post-restart.json",
@@ -3875,7 +3951,7 @@
           "sha256": "ff7897a00bc72a51888a0d62348170c32685b29aa28ac2fe3d2b4cc228116e59"
         }
       ],
-      "assessment": "Independent verify-release --at-commit --remote PASS453hashes: source/evidence at e080146, runtime83d10ce, streamed169414656backupSHA and app/broker actualReadyimage identity. Prior actualrestore acceptance retained separately. Currentcheckpoint provenance complete, not finalmedia/time completion.",
+      "assessment": "Previous1.2immutablemanifest remains verified. Current1.3functional+restore evidence complete; rootstabletag/currentimmutablemanifest and independent hash verification pending.",
       "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
@@ -4541,7 +4617,7 @@
     {
       "id": "FR-SCENE-03",
       "description": "선택RTU필터/전체API유지",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/scenario-scope-local-round5/result.json",
@@ -4562,14 +4638,90 @@
         {
           "path": "artifacts/checkpoints/candidate-1.3-advanced.log",
           "sha256": "622d8f6143795f0aecbc0faa096600432f970d42e767faaeac3253d48990a008"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-summary.json",
+          "sha256": "31f8ad4a10c2c8a4bc83befb10504c4cdfafad74bfd5f8abb8a3ea8b5a0fead8"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/rollout/proof.json",
+          "sha256": "45c097e78095a84cd790113760c1ca4b3da4bac3836a3cdd4c22f93cb82f6832"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/mqtt.json",
+          "sha256": "48a35d0d0d1876c844fad3fb3a940da095f6da92b4806c3c54cbaf7ad717956b"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/outbox-restart.json",
+          "sha256": "27a86a5e730f3485f6fbb48a531cc840279f193878c769295bba2db3dbac24ae"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/post-outbox-normal.json",
+          "sha256": "dce43095c1655a4b4535221224ef772d599becab85680f51a24eb009d19b974e"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/served-assets.json",
+          "sha256": "44830f48e38103264777015b654865acf08577ddbdc718ed960a33073d8ac8dd"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-init.json",
+          "sha256": "419e40f1a617c5afc5602e1945790f0cfa7ff3d2f56bc7be6ed03799ab672b56"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-preview.json",
+          "sha256": "f0bd64276c1528ff546f7bdfe3ef76e6c96d71ac1198a39589235851bcb3b44e"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-mqtt.json",
+          "sha256": "dc8361f15bf45741875367e4437ea3f415a71637c9df56bafcc57e5d94ae5eab"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-export/result.json",
+          "sha256": "1f9cd9e74b2d7184b0d8c35daa355b716dcff6014b6a42891ca852c8186e3522"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-init.json",
+          "sha256": "419e40f1a617c5afc5602e1945790f0cfa7ff3d2f56bc7be6ed03799ab672b56"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-preview.json",
+          "sha256": "6f40cf1d994dd523ed9ab9a6f9cbe243446dc50244a9106cceec0dc97379b251"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-mqtt.json",
+          "sha256": "e6f610433d0972b55edd1eabf21aa98088118a5eb9b3491accef134955cec713"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-export/result.json",
+          "sha256": "c7069943ae80f7a786ee083d3c95ddd42a1859dfc3e0f03539b1a56fd00cb27b"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/result.json",
+          "sha256": "2a1393ea4caeea52f48ab151c9f6446ae7310b9fe7b1c94842adadfa2a8c79b0"
         }
       ],
-      "assessment": "Local1.3browser realREST same-nameA/B/empty/export equality/A-onlynewrun+cancel/B unchanged/late list-save/globalbusy remount/keyboard/narrow/reload PASS;136localtests/integration/advanced. Delayedresponses deliberately controlled. No1.3remote/stable claim."
+      "assessment": "3fa3ba0 actual1.3 image5563acc..ba5d rollout/browser/MQTT/outboxrestart; 13restorefiles individuallyPASS on fresh1.3 and backward1.2PVC from same420466688backupSHAb515ef..ce40. IsolatedactualscenarioA/B/late races/exports PASS with separately servedJS hash matched. Main5HEALTHY/faultfalse/pending0. Stabletag/immutablemanifest not yet asserted; media/time distinct."
     },
     {
       "id": "UI-10",
       "description": "대상표시/빈상태/늦은응답/export",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/scenario-scope-local-round5/result.json",
@@ -4590,14 +4742,90 @@
         {
           "path": "artifacts/checkpoints/candidate-1.3-advanced.log",
           "sha256": "622d8f6143795f0aecbc0faa096600432f970d42e767faaeac3253d48990a008"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-summary.json",
+          "sha256": "31f8ad4a10c2c8a4bc83befb10504c4cdfafad74bfd5f8abb8a3ea8b5a0fead8"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/rollout/proof.json",
+          "sha256": "45c097e78095a84cd790113760c1ca4b3da4bac3836a3cdd4c22f93cb82f6832"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/mqtt.json",
+          "sha256": "48a35d0d0d1876c844fad3fb3a940da095f6da92b4806c3c54cbaf7ad717956b"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/outbox-restart.json",
+          "sha256": "27a86a5e730f3485f6fbb48a531cc840279f193878c769295bba2db3dbac24ae"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/post-outbox-normal.json",
+          "sha256": "dce43095c1655a4b4535221224ef772d599becab85680f51a24eb009d19b974e"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/served-assets.json",
+          "sha256": "44830f48e38103264777015b654865acf08577ddbdc718ed960a33073d8ac8dd"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-init.json",
+          "sha256": "419e40f1a617c5afc5602e1945790f0cfa7ff3d2f56bc7be6ed03799ab672b56"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-preview.json",
+          "sha256": "f0bd64276c1528ff546f7bdfe3ef76e6c96d71ac1198a39589235851bcb3b44e"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-mqtt.json",
+          "sha256": "dc8361f15bf45741875367e4437ea3f415a71637c9df56bafcc57e5d94ae5eab"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-export/result.json",
+          "sha256": "1f9cd9e74b2d7184b0d8c35daa355b716dcff6014b6a42891ca852c8186e3522"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-init.json",
+          "sha256": "419e40f1a617c5afc5602e1945790f0cfa7ff3d2f56bc7be6ed03799ab672b56"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-preview.json",
+          "sha256": "6f40cf1d994dd523ed9ab9a6f9cbe243446dc50244a9106cceec0dc97379b251"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-mqtt.json",
+          "sha256": "e6f610433d0972b55edd1eabf21aa98088118a5eb9b3491accef134955cec713"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-export/result.json",
+          "sha256": "c7069943ae80f7a786ee083d3c95ddd42a1859dfc3e0f03539b1a56fd00cb27b"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/result.json",
+          "sha256": "2a1393ea4caeea52f48ab151c9f6446ae7310b9fe7b1c94842adadfa2a8c79b0"
         }
       ],
-      "assessment": "Local1.3browser realREST same-nameA/B/empty/export equality/A-onlynewrun+cancel/B unchanged/late list-save/globalbusy remount/keyboard/narrow/reload PASS;136localtests/integration/advanced. Delayedresponses deliberately controlled. No1.3remote/stable claim."
+      "assessment": "3fa3ba0 actual1.3 image5563acc..ba5d rollout/browser/MQTT/outboxrestart; 13restorefiles individuallyPASS on fresh1.3 and backward1.2PVC from same420466688backupSHAb515ef..ce40. IsolatedactualscenarioA/B/late races/exports PASS with separately servedJS hash matched. Main5HEALTHY/faultfalse/pending0. Stabletag/immutablemanifest not yet asserted; media/time distinct."
     },
     {
       "id": "AT-SCENE-SELECT-01",
       "description": "전체선택시나리오인수",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/scenario-scope-local-round5/result.json",
@@ -4618,14 +4846,90 @@
         {
           "path": "artifacts/checkpoints/candidate-1.3-advanced.log",
           "sha256": "622d8f6143795f0aecbc0faa096600432f970d42e767faaeac3253d48990a008"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-summary.json",
+          "sha256": "31f8ad4a10c2c8a4bc83befb10504c4cdfafad74bfd5f8abb8a3ea8b5a0fead8"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/rollout/proof.json",
+          "sha256": "45c097e78095a84cd790113760c1ca4b3da4bac3836a3cdd4c22f93cb82f6832"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/mqtt.json",
+          "sha256": "48a35d0d0d1876c844fad3fb3a940da095f6da92b4806c3c54cbaf7ad717956b"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/outbox-restart.json",
+          "sha256": "27a86a5e730f3485f6fbb48a531cc840279f193878c769295bba2db3dbac24ae"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/post-outbox-normal.json",
+          "sha256": "dce43095c1655a4b4535221224ef772d599becab85680f51a24eb009d19b974e"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/served-assets.json",
+          "sha256": "44830f48e38103264777015b654865acf08577ddbdc718ed960a33073d8ac8dd"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-init.json",
+          "sha256": "419e40f1a617c5afc5602e1945790f0cfa7ff3d2f56bc7be6ed03799ab672b56"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-preview.json",
+          "sha256": "f0bd64276c1528ff546f7bdfe3ef76e6c96d71ac1198a39589235851bcb3b44e"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-mqtt.json",
+          "sha256": "dc8361f15bf45741875367e4437ea3f415a71637c9df56bafcc57e5d94ae5eab"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-export/result.json",
+          "sha256": "1f9cd9e74b2d7184b0d8c35daa355b716dcff6014b6a42891ca852c8186e3522"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-init.json",
+          "sha256": "419e40f1a617c5afc5602e1945790f0cfa7ff3d2f56bc7be6ed03799ab672b56"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-preview.json",
+          "sha256": "6f40cf1d994dd523ed9ab9a6f9cbe243446dc50244a9106cceec0dc97379b251"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-mqtt.json",
+          "sha256": "e6f610433d0972b55edd1eabf21aa98088118a5eb9b3491accef134955cec713"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-export/result.json",
+          "sha256": "c7069943ae80f7a786ee083d3c95ddd42a1859dfc3e0f03539b1a56fd00cb27b"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/result.json",
+          "sha256": "2a1393ea4caeea52f48ab151c9f6446ae7310b9fe7b1c94842adadfa2a8c79b0"
         }
       ],
-      "assessment": "All specified localbrowser cases and136tests/integration/advanced passed. Exactimagebuild/remote1.3UI+MQTT/podrestart/backuprestore/stable remains;1.2fallback unchanged."
+      "assessment": "3fa3ba0 actual1.3 image5563acc..ba5d rollout/browser/MQTT/outboxrestart; 13restorefiles individuallyPASS on fresh1.3 and backward1.2PVC from same420466688backupSHAb515ef..ce40. IsolatedactualscenarioA/B/late races/exports PASS with separately servedJS hash matched. Main5HEALTHY/faultfalse/pending0. Stabletag/immutablemanifest not yet asserted; media/time distinct."
     },
     {
       "id": "AT-SCENE-SELECT-01-01",
       "description": "동일이름A/B필터/빈상태",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/scenario-scope-local-round5/result.json",
@@ -4646,14 +4950,90 @@
         {
           "path": "artifacts/checkpoints/candidate-1.3-advanced.log",
           "sha256": "622d8f6143795f0aecbc0faa096600432f970d42e767faaeac3253d48990a008"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-summary.json",
+          "sha256": "31f8ad4a10c2c8a4bc83befb10504c4cdfafad74bfd5f8abb8a3ea8b5a0fead8"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/rollout/proof.json",
+          "sha256": "45c097e78095a84cd790113760c1ca4b3da4bac3836a3cdd4c22f93cb82f6832"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/mqtt.json",
+          "sha256": "48a35d0d0d1876c844fad3fb3a940da095f6da92b4806c3c54cbaf7ad717956b"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/outbox-restart.json",
+          "sha256": "27a86a5e730f3485f6fbb48a531cc840279f193878c769295bba2db3dbac24ae"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/post-outbox-normal.json",
+          "sha256": "dce43095c1655a4b4535221224ef772d599becab85680f51a24eb009d19b974e"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/served-assets.json",
+          "sha256": "44830f48e38103264777015b654865acf08577ddbdc718ed960a33073d8ac8dd"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-init.json",
+          "sha256": "419e40f1a617c5afc5602e1945790f0cfa7ff3d2f56bc7be6ed03799ab672b56"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-preview.json",
+          "sha256": "f0bd64276c1528ff546f7bdfe3ef76e6c96d71ac1198a39589235851bcb3b44e"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-mqtt.json",
+          "sha256": "dc8361f15bf45741875367e4437ea3f415a71637c9df56bafcc57e5d94ae5eab"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-export/result.json",
+          "sha256": "1f9cd9e74b2d7184b0d8c35daa355b716dcff6014b6a42891ca852c8186e3522"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-init.json",
+          "sha256": "419e40f1a617c5afc5602e1945790f0cfa7ff3d2f56bc7be6ed03799ab672b56"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-preview.json",
+          "sha256": "6f40cf1d994dd523ed9ab9a6f9cbe243446dc50244a9106cceec0dc97379b251"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-mqtt.json",
+          "sha256": "e6f610433d0972b55edd1eabf21aa98088118a5eb9b3491accef134955cec713"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-export/result.json",
+          "sha256": "c7069943ae80f7a786ee083d3c95ddd42a1859dfc3e0f03539b1a56fd00cb27b"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/result.json",
+          "sha256": "2a1393ea4caeea52f48ab151c9f6446ae7310b9fe7b1c94842adadfa2a8c79b0"
         }
       ],
-      "assessment": "Local1.3browser realREST same-nameA/B/empty/export equality/A-onlynewrun+cancel/B unchanged/late list-save/globalbusy remount/keyboard/narrow/reload PASS;136localtests/integration/advanced. Delayedresponses deliberately controlled. No1.3remote/stable claim."
+      "assessment": "3fa3ba0 actual1.3 image5563acc..ba5d rollout/browser/MQTT/outboxrestart; 13restorefiles individuallyPASS on fresh1.3 and backward1.2PVC from same420466688backupSHAb515ef..ce40. IsolatedactualscenarioA/B/late races/exports PASS with separately servedJS hash matched. Main5HEALTHY/faultfalse/pending0. Stabletag/immutablemanifest not yet asserted; media/time distinct."
     },
     {
       "id": "AT-SCENE-SELECT-01-02",
       "description": "A복원B불변/API보존",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/scenario-scope-local-round5/result.json",
@@ -4674,14 +5054,90 @@
         {
           "path": "artifacts/checkpoints/candidate-1.3-advanced.log",
           "sha256": "622d8f6143795f0aecbc0faa096600432f970d42e767faaeac3253d48990a008"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-summary.json",
+          "sha256": "31f8ad4a10c2c8a4bc83befb10504c4cdfafad74bfd5f8abb8a3ea8b5a0fead8"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/rollout/proof.json",
+          "sha256": "45c097e78095a84cd790113760c1ca4b3da4bac3836a3cdd4c22f93cb82f6832"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/mqtt.json",
+          "sha256": "48a35d0d0d1876c844fad3fb3a940da095f6da92b4806c3c54cbaf7ad717956b"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/outbox-restart.json",
+          "sha256": "27a86a5e730f3485f6fbb48a531cc840279f193878c769295bba2db3dbac24ae"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/post-outbox-normal.json",
+          "sha256": "dce43095c1655a4b4535221224ef772d599becab85680f51a24eb009d19b974e"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/served-assets.json",
+          "sha256": "44830f48e38103264777015b654865acf08577ddbdc718ed960a33073d8ac8dd"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-init.json",
+          "sha256": "419e40f1a617c5afc5602e1945790f0cfa7ff3d2f56bc7be6ed03799ab672b56"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-preview.json",
+          "sha256": "f0bd64276c1528ff546f7bdfe3ef76e6c96d71ac1198a39589235851bcb3b44e"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-mqtt.json",
+          "sha256": "dc8361f15bf45741875367e4437ea3f415a71637c9df56bafcc57e5d94ae5eab"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-export/result.json",
+          "sha256": "1f9cd9e74b2d7184b0d8c35daa355b716dcff6014b6a42891ca852c8186e3522"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-init.json",
+          "sha256": "419e40f1a617c5afc5602e1945790f0cfa7ff3d2f56bc7be6ed03799ab672b56"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-preview.json",
+          "sha256": "6f40cf1d994dd523ed9ab9a6f9cbe243446dc50244a9106cceec0dc97379b251"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-mqtt.json",
+          "sha256": "e6f610433d0972b55edd1eabf21aa98088118a5eb9b3491accef134955cec713"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-export/result.json",
+          "sha256": "c7069943ae80f7a786ee083d3c95ddd42a1859dfc3e0f03539b1a56fd00cb27b"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/result.json",
+          "sha256": "2a1393ea4caeea52f48ab151c9f6446ae7310b9fe7b1c94842adadfa2a8c79b0"
         }
       ],
-      "assessment": "Local1.3browser realREST same-nameA/B/empty/export equality/A-onlynewrun+cancel/B unchanged/late list-save/globalbusy remount/keyboard/narrow/reload PASS;136localtests/integration/advanced. Delayedresponses deliberately controlled. No1.3remote/stable claim."
+      "assessment": "3fa3ba0 actual1.3 image5563acc..ba5d rollout/browser/MQTT/outboxrestart; 13restorefiles individuallyPASS on fresh1.3 and backward1.2PVC from same420466688backupSHAb515ef..ce40. IsolatedactualscenarioA/B/late races/exports PASS with separately servedJS hash matched. Main5HEALTHY/faultfalse/pending0. Stabletag/immutablemanifest not yet asserted; media/time distinct."
     },
     {
       "id": "AT-SCENE-SELECT-01-03",
       "description": "지연응답/빠른선택/실제대상",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/scenario-scope-local-round5/result.json",
@@ -4702,14 +5158,90 @@
         {
           "path": "artifacts/checkpoints/candidate-1.3-advanced.log",
           "sha256": "622d8f6143795f0aecbc0faa096600432f970d42e767faaeac3253d48990a008"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-summary.json",
+          "sha256": "31f8ad4a10c2c8a4bc83befb10504c4cdfafad74bfd5f8abb8a3ea8b5a0fead8"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/rollout/proof.json",
+          "sha256": "45c097e78095a84cd790113760c1ca4b3da4bac3836a3cdd4c22f93cb82f6832"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/mqtt.json",
+          "sha256": "48a35d0d0d1876c844fad3fb3a940da095f6da92b4806c3c54cbaf7ad717956b"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/outbox-restart.json",
+          "sha256": "27a86a5e730f3485f6fbb48a531cc840279f193878c769295bba2db3dbac24ae"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/post-outbox-normal.json",
+          "sha256": "dce43095c1655a4b4535221224ef772d599becab85680f51a24eb009d19b974e"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/served-assets.json",
+          "sha256": "44830f48e38103264777015b654865acf08577ddbdc718ed960a33073d8ac8dd"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-init.json",
+          "sha256": "419e40f1a617c5afc5602e1945790f0cfa7ff3d2f56bc7be6ed03799ab672b56"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-preview.json",
+          "sha256": "f0bd64276c1528ff546f7bdfe3ef76e6c96d71ac1198a39589235851bcb3b44e"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-mqtt.json",
+          "sha256": "dc8361f15bf45741875367e4437ea3f415a71637c9df56bafcc57e5d94ae5eab"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-export/result.json",
+          "sha256": "1f9cd9e74b2d7184b0d8c35daa355b716dcff6014b6a42891ca852c8186e3522"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-init.json",
+          "sha256": "419e40f1a617c5afc5602e1945790f0cfa7ff3d2f56bc7be6ed03799ab672b56"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-preview.json",
+          "sha256": "6f40cf1d994dd523ed9ab9a6f9cbe243446dc50244a9106cceec0dc97379b251"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-mqtt.json",
+          "sha256": "e6f610433d0972b55edd1eabf21aa98088118a5eb9b3491accef134955cec713"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-export/result.json",
+          "sha256": "c7069943ae80f7a786ee083d3c95ddd42a1859dfc3e0f03539b1a56fd00cb27b"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/result.json",
+          "sha256": "2a1393ea4caeea52f48ab151c9f6446ae7310b9fe7b1c94842adadfa2a8c79b0"
         }
       ],
-      "assessment": "Local1.3browser realREST same-nameA/B/empty/export equality/A-onlynewrun+cancel/B unchanged/late list-save/globalbusy remount/keyboard/narrow/reload PASS;136localtests/integration/advanced. Delayedresponses deliberately controlled. No1.3remote/stable claim."
+      "assessment": "3fa3ba0 actual1.3 image5563acc..ba5d rollout/browser/MQTT/outboxrestart; 13restorefiles individuallyPASS on fresh1.3 and backward1.2PVC from same420466688backupSHAb515ef..ce40. IsolatedactualscenarioA/B/late races/exports PASS with separately servedJS hash matched. Main5HEALTHY/faultfalse/pending0. Stabletag/immutablemanifest not yet asserted; media/time distinct."
     },
     {
       "id": "AT-SCENE-SELECT-01-04",
       "description": "브라우저회귀배포복원",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/scenario-scope-local-round5/result.json",
@@ -4730,9 +5262,85 @@
         {
           "path": "artifacts/checkpoints/candidate-1.3-advanced.log",
           "sha256": "622d8f6143795f0aecbc0faa096600432f970d42e767faaeac3253d48990a008"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-summary.json",
+          "sha256": "31f8ad4a10c2c8a4bc83befb10504c4cdfafad74bfd5f8abb8a3ea8b5a0fead8"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/rollout/proof.json",
+          "sha256": "45c097e78095a84cd790113760c1ca4b3da4bac3836a3cdd4c22f93cb82f6832"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/mqtt.json",
+          "sha256": "48a35d0d0d1876c844fad3fb3a940da095f6da92b4806c3c54cbaf7ad717956b"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/outbox-restart.json",
+          "sha256": "27a86a5e730f3485f6fbb48a531cc840279f193878c769295bba2db3dbac24ae"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/post-outbox-normal.json",
+          "sha256": "dce43095c1655a4b4535221224ef772d599becab85680f51a24eb009d19b974e"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/served-assets.json",
+          "sha256": "44830f48e38103264777015b654865acf08577ddbdc718ed960a33073d8ac8dd"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-init.json",
+          "sha256": "419e40f1a617c5afc5602e1945790f0cfa7ff3d2f56bc7be6ed03799ab672b56"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-preview.json",
+          "sha256": "f0bd64276c1528ff546f7bdfe3ef76e6c96d71ac1198a39589235851bcb3b44e"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-mqtt.json",
+          "sha256": "dc8361f15bf45741875367e4437ea3f415a71637c9df56bafcc57e5d94ae5eab"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-export/result.json",
+          "sha256": "1f9cd9e74b2d7184b0d8c35daa355b716dcff6014b6a42891ca852c8186e3522"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-init.json",
+          "sha256": "419e40f1a617c5afc5602e1945790f0cfa7ff3d2f56bc7be6ed03799ab672b56"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-preview.json",
+          "sha256": "6f40cf1d994dd523ed9ab9a6f9cbe243446dc50244a9106cceec0dc97379b251"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-mqtt.json",
+          "sha256": "e6f610433d0972b55edd1eabf21aa98088118a5eb9b3491accef134955cec713"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-backward-export/result.json",
+          "sha256": "c7069943ae80f7a786ee083d3c95ddd42a1859dfc3e0f03539b1a56fd00cb27b"
+        },
+        {
+          "path": "deploy/verification/candidate-3fa3ba0/restore-1.3-scenarios/result.json",
+          "sha256": "2a1393ea4caeea52f48ab151c9f6446ae7310b9fe7b1c94842adadfa2a8c79b0"
         }
       ],
-      "assessment": "All specified localbrowser cases and136tests/integration/advanced passed. Exactimagebuild/remote1.3UI+MQTT/podrestart/backuprestore/stable remains;1.2fallback unchanged."
+      "assessment": "3fa3ba0 actual1.3 image5563acc..ba5d rollout/browser/MQTT/outboxrestart; 13restorefiles individuallyPASS on fresh1.3 and backward1.2PVC from same420466688backupSHAb515ef..ce40. IsolatedactualscenarioA/B/late races/exports PASS with separately servedJS hash matched. Main5HEALTHY/faultfalse/pending0. Stabletag/immutablemanifest not yet asserted; media/time distinct."
     }
   ],
   "reviewedSource": {

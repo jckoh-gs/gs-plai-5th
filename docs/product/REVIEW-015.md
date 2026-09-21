@@ -1,0 +1,7 @@
+# 제품 검토015 —1.3 기능승격 사전검토
+
+restore-summary의13개참조JSON을각각읽어모두PASS임을확인했다. 신선한버전별독립PVC로동일420466688byte/SHAb515ef26f7fb6466540f8a269e313c9b258d4b91eaca1c18fe472018d701ce40복원,기동전source/destinationSHA,1.3및backward1.2원본5단지1시나리오/실제image/UI/preview/export/MQTT검증완료.최종양rig0replica/0pod,터널종료/PVC보존이며생산DB변경없음.
+
+3fa3ba0실제생산rollout와MQTT125/error0/dedup60,outboxpod교체동일본문/PUBACK,사후5RTUHEALTHY/faultfalse/pending0기록을연결했다.복원1.3의A/B시나리오실제UI/REST와제어된지연응답검증은PRD FR-SCENE03/UI10범위를충족한다.원result의assets는workstation참조였지만served-assets.json이실제서버JS256876bytes/SHA8d61e59d…e5a3c와일치를별도로증명한다.
+
+시험수는runtime3fa136local/118image+18workstation제외,현재root운영포함140과구분한다.숫자만으로범위를확장하지않는다.기능인수승격가능하며1.3stable태그/manifest는메인이후작성·검증할사항이다.1.2기존checkpoint를변경하지않았다.원목표의14시간·동결선정·최종영상→PPT·인도게이트는계속미완료다.새아이디어/소스변경/재시험없음.

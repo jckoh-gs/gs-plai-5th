@@ -1,0 +1,49 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T12:23:09.168271+00:00",
+  "backupMetadata": "deploy/verification/stable-backup-3fa3ba0.json",
+  "backupPath": "/data/stable-3fa3ba0-20260921T121741365Z.sqlite",
+  "backupLocalPath": "artifacts/private/backups/stable-3fa3ba0-20260921T121741365Z.sqlite",
+  "backupSha256": "b515ef26f7fb6466540f8a269e313c9b258d4b91eaca1c18fe472018d701ce40",
+  "backupBytes": 420466688,
+  "sourceAndDestinationSha256VerifiedBeforeAppStart": true,
+  "freshIndependentPVCForEachVersion": true,
+  "restoredProduct": "1.3.0",
+  "restoredImage": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+  "backwardProduct": "1.2.0",
+  "backwardImage": "127.0.0.1:15050/grid@sha256:cc387c6db005acf798dbbbbd41979f07114474a5fe697118ad8c29afc904eab6",
+  "actualRuntimeAndBrokerImageIDsVerified": true,
+  "checks": [
+    "restore-1.3-init.json",
+    "restore-1.3-data.json",
+    "restore-1.3-preview.json",
+    "restore-1.3-mqtt.json",
+    "restore-1.3-browser/result.json",
+    "restore-1.3-export/result.json",
+    "restore-backward-init.json",
+    "restore-backward-data.json",
+    "restore-backward-preview.json",
+    "restore-backward-mqtt.json",
+    "restore-backward-browser/result.json",
+    "restore-backward-export/result.json",
+    "restore-1.3-scenarios/result.json"
+  ],
+  "originalPlants": 5,
+  "originalScenarios": 1,
+  "originalDataComparisonBeforeFixtureMutations": true,
+  "recoveryDeployments": [
+    "grid-restore-3fa3ba0",
+    "grid-restore-back-3fa3ba0"
+  ],
+  "finalReplicasEach": 0,
+  "finalPodsEach": 0,
+  "retainedPVCs": [
+    "grid-restore-3fa3ba0-data",
+    "grid-restore-3fa3ba0-mqtt-data",
+    "grid-restore-back-3fa3ba0-data",
+    "grid-restore-back-3fa3ba0-mqtt-data"
+  ],
+  "productionDatabaseModifiedByThisTest": false,
+  "runJsonModified": false,
+  "ownedTunnelClosed": true
+}

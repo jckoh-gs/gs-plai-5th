@@ -1,0 +1,50 @@
+1789992519: Info: running mosquitto as user id: 1000.
+1789992519: mosquitto version 2.1.2 starting
+1789992519: Config loaded from /mosquitto/config/mosquitto.conf.
+1789992519: Bridge support available.
+1789992519: Persistence support available.
+1789992519: TLS support available.
+1789992519: TLS-PSK support available.
+1789992519: Websockets support available.
+1789992519: Opening ipv4 listen socket on port 1883.
+1789992519: Opening ipv6 listen socket on port 1883.
+1789992519: mosquitto version 2.1.2 running
+1789992561: New connection from 172.22.0.4:32908 on port 1883.
+1789992561: New client connected from 172.22.0.4:32908 as test-vpp-8eab3fc6-ce17-4bcf-aca6-209412f059d2 (p4, c1, k60).
+1789992561: New connection from 172.22.0.4:32922 on port 1883.
+1789992561: New client connected from 172.22.0.4:32922 as test-gateway-8663e781-c4a7-466b-9ddd-2f8f29a0d221 (p4, c1, k60).
+1789992562: New connection from 172.22.0.4:32926 on port 1883.
+1789992562: New client connected from 172.22.0.4:32926 as test-gateway-8663e781-c4a7-466b-9ddd-2f8f29a0d221-2d4861c1-bfff-4e5e-9ce9-44062c280577 (p4, c1, k60).
+1789992562: New connection from 172.22.0.5:58188 on port 1883.
+1789992563: New client connected from 172.22.0.5:58188 as test-vpp-3d312951-7cfd-4932-aa6e-b977c51f27f2 (p4, c1, k60).
+1789992563: New connection from 172.22.0.5:58190 on port 1883.
+1789992563: New client connected from 172.22.0.5:58190 as test-gateway-1317e9e9-d9ff-4e94-85d8-a3c15ba8b1c1 (p4, c1, k60).
+1789992563: New connection from 172.22.0.5:58200 on port 1883.
+1789992563: New client connected from 172.22.0.5:58200 as test-gateway-1317e9e9-d9ff-4e94-85d8-a3c15ba8b1c1-816a4cf4-6394-42ee-bc4a-0a15a839ca62 (p4, c1, k60).
+1789992563: New connection from 172.22.0.5:58216 on port 1883.
+1789992563: New client connected from 172.22.0.5:58216 as test-gateway-1317e9e9-d9ff-4e94-85d8-a3c15ba8b1c1-3b99ca2f-898d-4999-8318-b5448bdc9287 (p4, c1, k60).
+1789992564: Client test-gateway-1317e9e9-d9ff-4e94-85d8-a3c15ba8b1c1-816a4cf4-6394-42ee-bc4a-0a15a839ca62 [172.22.0.5:58200] disconnected: connection closed by client.
+1789992566: Client test-gateway-8663e781-c4a7-466b-9ddd-2f8f29a0d221-2d4861c1-bfff-4e5e-9ce9-44062c280577 [172.22.0.4:32926] disconnected.
+1789992566: Client test-gateway-8663e781-c4a7-466b-9ddd-2f8f29a0d221 [172.22.0.4:32922] disconnected.
+1789992566: New connection from 172.22.0.4:32938 on port 1883.
+1789992566: New connection from 172.22.0.4:32950 on port 1883.
+1789992566: New client connected from 172.22.0.4:32938 as test-gateway-8663e781-c4a7-466b-9ddd-2f8f29a0d221 (p4, c1, k60).
+1789992566: New client connected from 172.22.0.4:32950 as test-gateway-8663e781-c4a7-466b-9ddd-2f8f29a0d221-2d4861c1-bfff-4e5e-9ce9-44062c280577 (p4, c1, k60).
+1789992566: Client test-gateway-8663e781-c4a7-466b-9ddd-2f8f29a0d221-2d4861c1-bfff-4e5e-9ce9-44062c280577 [172.22.0.4:32950] disconnected.
+1789992566: Client test-gateway-8663e781-c4a7-466b-9ddd-2f8f29a0d221 [172.22.0.4:32938] disconnected.
+1789992566: Client test-vpp-8eab3fc6-ce17-4bcf-aca6-209412f059d2 [172.22.0.4:32908] disconnected: connection closed by client.
+1789992567: Client test-gateway-1317e9e9-d9ff-4e94-85d8-a3c15ba8b1c1-3b99ca2f-898d-4999-8318-b5448bdc9287 [172.22.0.5:58216] disconnected.
+1789992567: Client test-gateway-1317e9e9-d9ff-4e94-85d8-a3c15ba8b1c1 [172.22.0.5:58190] disconnected.
+1789992567: New connection from 172.22.0.5:43238 on port 1883.
+1789992567: New connection from 172.22.0.5:43244 on port 1883.
+1789992567: New client connected from 172.22.0.5:43238 as test-gateway-1317e9e9-d9ff-4e94-85d8-a3c15ba8b1c1 (p4, c1, k60).
+1789992567: New client connected from 172.22.0.5:43244 as test-gateway-1317e9e9-d9ff-4e94-85d8-a3c15ba8b1c1-3b99ca2f-898d-4999-8318-b5448bdc9287 (p4, c1, k60).
+1789992567: New connection from 172.22.0.5:43250 on port 1883.
+1789992567: New client connected from 172.22.0.5:43250 as test-gateway-1317e9e9-d9ff-4e94-85d8-a3c15ba8b1c1-816a4cf4-6394-42ee-bc4a-0a15a839ca62 (p4, c1, k60).
+1789992581: New connection from 172.22.0.5:59010 on port 1883.
+1789992581: New client connected from 172.22.0.5:59010 as test-gateway-1317e9e9-d9ff-4e94-85d8-a3c15ba8b1c1-75f52de0-dfc8-4bd7-aa10-ca958cb5ee04 (p4, c1, k60).
+1789992583: Client test-gateway-1317e9e9-d9ff-4e94-85d8-a3c15ba8b1c1-816a4cf4-6394-42ee-bc4a-0a15a839ca62 [172.22.0.5:43250] disconnected.
+1789992583: Client test-gateway-1317e9e9-d9ff-4e94-85d8-a3c15ba8b1c1-3b99ca2f-898d-4999-8318-b5448bdc9287 [172.22.0.5:43244] disconnected.
+1789992583: Client test-gateway-1317e9e9-d9ff-4e94-85d8-a3c15ba8b1c1-75f52de0-dfc8-4bd7-aa10-ca958cb5ee04 [172.22.0.5:59010] disconnected.
+1789992583: Client test-gateway-1317e9e9-d9ff-4e94-85d8-a3c15ba8b1c1 [172.22.0.5:43238] disconnected.
+1789992583: Client test-vpp-3d312951-7cfd-4932-aa6e-b977c51f27f2 [172.22.0.5:58188] disconnected: connection closed by client.

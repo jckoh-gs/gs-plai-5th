@@ -1,0 +1,23 @@
+✔ independent actual backup CLI hung discovery stops within original deadline and keeps sensitive child output private (879.317293ms)
+✔ independent actual backup CLI expired original deadline launches no kubectl (322.824833ms)
+✖ independent budget expiration blocks a second command launch (111.470791ms)
+✔ independent snapshot expired remote deadline creates neither final nor part (250.380292ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1970.338001
+
+✖ failing tests:
+
+test at tests/review-backup.test.js:8:1
+✖ independent budget expiration blocks a second command launch (111.470791ms)
+  Error: Backup first failed: timeout_or_buffer_limit; inspect the private operation journal
+      at Object.exec (file:///app/scripts/remote-backup-helpers.mjs:29:15)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async TestContext.<anonymous> (file:///app/tests/review-backup.test.js:8:179)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

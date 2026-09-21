@@ -1,6 +1,6 @@
 # 최종 30분: 동일 스냅샷 복원과 릴리스 연결
 
-준비 문서이며 실행 증거가 아니다. 2026-09-21 검토 기준, 런타임83d10ce / 제품1.2.0 / PRD1.9를 유지한다. 동결21:37:33Z, 종료22:07:33Z는 변경하지 않는다. 현재169MB/10:05 백업은 별도 PVC 복원·UI·MQTT 검증까지 완료되었지만, 이후335MB 백업의 전송·무결성 성공을 같은 복원 증거로 취급하면 안 된다.
+준비 문서이며 실행 증거가 아니다. 2026-09-21 검토 기준, 런타임3fa3ba0 / 제품1.3.0 / PRD1.10을 기준으로 한다. 동결21:37:33Z, 종료22:07:33Z는 변경하지 않는다. 현재420466688바이트/12:17 백업(b515ef26…)은 별도 PVC에서1.3 및 하위1.2 복원·UI·MQTT 검증까지 완료되었다. 이전169MB/335MB 백업은 별도 이력이며 새 최종 백업의 복원 증거로 대체하지 않는다.
 
 ## 선행 준비와 한계
 
@@ -15,11 +15,11 @@
 ## 시간 배분과 병행
 
 - 0~3분: 최종 건강상태/실행 이미지 확인, 새 정상 백업과 전송·해시 검증. 목표는90초 이내, 네트워크/전송 예산180초다. NETWORK-RECOVERY.md에 기록한 동기I/O 중간취소 한계는 유지한다. 영상 원고/덱 배치 준비는 병행 가능하지만 매니페스트 고정 전에 최종 렌더를 시작하지 않는다.
-- 3~6분: 새로운 격리PVC 복원, 실제 이미지ID 확인, 원본 데이터 비교. UI 검증과 MQTT 검증은 같은 복원앱에서 병행 가능하다. MQTT는 최대75초 telemetry 대기+제어/재연결 여유가 필요하다. 이전1.2 복원 전체는 약3분30초(하위1.1 검증 포함)였다. 이번은 현 버전 복원을 필수로 하고 이미 증거가 있는 하위1.1 반복은 마지막30분 필수경로에서 제외한다.
+- 3~6분: 새로운 격리PVC 복원, 실제 이미지ID 확인, 원본 데이터 비교. UI 검증과 MQTT 검증은 같은 복원앱에서 병행 가능하다. MQTT는 최대75초 telemetry 대기+제어/재연결 여유가 필요하다. 이전1.2 복원 전체는 약3분30초(하위1.1 검증 포함)였다. 이번은 현 버전 복원을 필수로 하고 이미 증거가 있는 하위1.2 반복은 마지막30분 필수경로에서 제외한다.
 - 6~7분: 복원 결과9개가 아닌 이번 실제 실행 결과만 요약, 복원배포0/Pod0/터널종료, acceptance와run 백업 연결, 증거커밋, 매니페스트 및 원격검증. 약1분 예상.
 - 7~15분: 새 최종 영상 녹화·음성·합성·전체디코딩·내용/화면검수. 준비된 장면 기준이며 실패 시 남은 시간으로 재시도 여부를 판단한다.
 - 15~23분: 검수된 동일 영상의 실제 캡처와 타임코드로 PPT 생성/재수입/전장렌더, 슬라이드 검수.
-- 23~30분: 인도 해시/상대링크/소스/검수영수증 검사 및 제한 사항 기록. 이는 예상 예산이지30분 완료 보장이 아니다. 7분까지 새 백업 복원 증명이 끝나지 않으면 이미 전체 복원 검증된169MB 체크포인트를 계속 선택하고 새 백업은 추가 백업으로만 기록하는 대안을 메인이 판단한다. 최종 매니페스트의 backup은 반드시 실제 증명된 선택 스냅샷이어야 한다.
+- 23~30분: 인도 해시/상대링크/소스/검수영수증 검사 및 제한 사항 기록. 이는 예상 예산이지30분 완료 보장이 아니다. 7분까지 새 백업 복원 증명이 끝나지 않으면 이미 전체 복원 검증된420466688바이트1.3 체크포인트를 계속 선택하고 새 백업은 추가 백업으로만 기록하는 대안을 메인이 판단한다. 최종 매니페스트의 backup은 반드시 실제 증명된 선택 스냅샷이어야 한다.
 
 ## 실행 명령: 백업부터 복원
 
@@ -50,7 +50,7 @@ kubectl --context charles-k3s -n gs-plai-5h port-forward --address=127.0.0.1 dep
 
 ```sh
 RESTORE_API=http://127.0.0.1:3105 RESTORE_BACKUP_FILE="$FINAL_LOCAL" RESTORE_EVIDENCE_FILE="$FINAL_EVIDENCE/data.json" node scripts/remote-restore-check.mjs > "$FINAL_EVIDENCE/data.log" 2>&1
-REMOTE_API=http://127.0.0.1:3105 EXPECTED_VERSION=1.2.0 REMOTE_EVIDENCE_FILE="$FINAL_EVIDENCE/preview.json" node scripts/remote-preview.mjs > "$FINAL_EVIDENCE/preview.log" 2>&1
+REMOTE_API=http://127.0.0.1:3105 EXPECTED_VERSION=1.3.0 REMOTE_EVIDENCE_FILE="$FINAL_EVIDENCE/preview.json" node scripts/remote-preview.mjs > "$FINAL_EVIDENCE/preview.log" 2>&1
 ```
 
 다음 두 가지는 별도 세션으로 병행한다. 원본 데이터 비교를 먼저 완료한다. 테스트 RTU는 현 백업에서 해당ID·풍력·2기·rated1000을 확인하고 fault 없음/125kW 도달 가능을 점검한다. 조건이 바뀌었으면 `REMOTE_PLANT_ID`를 생략하여 복원본에만 새 테스트RTU를 생성한다. 운영 앱에 테스트를 보내지 않는다.
@@ -67,7 +67,7 @@ QA_DIRECTORY=deploy/verification/final-restore-20260921/browser node scripts/bro
 QA_DIRECTORY=deploy/verification/final-restore-20260921/export node scripts/browser-command-export.cjs > deploy/verification/final-restore-20260921/export.log 2>&1
 ```
 
-모든 프로세스 exit0 및 각 result PASS를 확인한 후 summary.json에 백업 메타데이터 경로/remotePath/localPath/sha256/bytes, 복원deployment, imageID/UID, 각각의 결과 파일, 운영DB 미수정 여부를 기록한다. FAIL/누락은 PASS로 바꾸지 않는다. 메타데이터의 해시를169MB 구기록에서 복사하지 않는다.
+모든 프로세스 exit0 및 각 result PASS를 확인한 후 summary.json에 백업 메타데이터 경로/remotePath/localPath/sha256/bytes, 복원deployment, imageID/UID, 각각의 결과 파일, 운영DB 미수정 여부를 기록한다. FAIL/누락은 PASS로 바꾸지 않는다. 메타데이터의 해시를 이전 백업 기록에서 복사하지 않는다.
 
 ```sh
 kubectl --context charles-k3s -n gs-plai-5h scale deployment/"$FINAL_RIG" --replicas=0

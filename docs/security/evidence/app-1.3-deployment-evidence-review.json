@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-09-21T12:23:51.024Z",
+  "scope": "Independent cross-check of deployment team artifacts; no new cluster request or vulnerability rescan",
+  "evidenceHashes": {
+    "deploy/verification/candidate-3fa3ba0/rollout/proof.json": "45c097e78095a84cd790113760c1ca4b3da4bac3836a3cdd4c22f93cb82f6832",
+    "deploy/verification/candidate-3fa3ba0/outbox-restart.json": "27a86a5e730f3485f6fbb48a531cc840279f193878c769295bba2db3dbac24ae",
+    "deploy/verification/candidate-3fa3ba0/post-outbox-normal.json": "dce43095c1655a4b4535221224ef772d599becab85680f51a24eb009d19b974e"
+  },
+  "manifest": "sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+  "rolloutReady": true,
+  "postRestartPod": {
+    "name": "grid-76f9968b4-dgf2w",
+    "uid": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73",
+    "image": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+    "imageID": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d"
+  },
+  "postRestartAllFiveHealthyFaultFree": true,
+  "vulnerabilityScanReusedByIdenticalDigestOnly": true
+}

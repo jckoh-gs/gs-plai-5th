@@ -1,26 +1,27 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T12:07:49.196851+00:00",
+  "updatedAt": "2026-09-21T12:26:40.863648+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
-  "stableRuntime": "stable-v1.2.0",
-  "stableManifest": "artifacts/releases/checkpoint-1.2.0.json",
+  "stableRuntime": "stable-v1.3.0",
+  "stableManifest": "artifacts/releases/checkpoint-1.3.0.json",
   "workingMilestone": {
     "productVersion": "1.3.0",
     "prdVersion": "1.10",
     "idea": "IDEA-007",
-    "state": "Local acceptance passed; immutable source image build, image security scan, k3s acceptance and exact snapshot restore/backward1.2 pending. Stable1.2 remains deployed."
+    "state": "1.3 functional acceptance, actualoutbox restart, exactsnapshot1.3 and backward1.2 freshPVC restore complete; tags/immutablemanifest pending creation after evidence commit."
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
     "1.2.0 command state export source, independent security and issue review, browser download/auth/RTU isolation",
     "Final video and editable deck tooling rehearsed; final media must be newly generated in freeze window",
     "Network recovery: 8 policy/supervisor tests passed; live supervisor owns verified forwarding; native grid heartbeat updated",
-    "1.2.0 exact-image79 runtime tests, local88 tests, image security scan, k3s UI/export/preview/MQTT, actual outbox pod replacement, fresh backup restore and backward1.1 all PASS"
+    "1.2.0 exact-image79 runtime tests, local88 tests, image security scan, k3s UI/export/preview/MQTT, actual outbox pod replacement, fresh backup restore and backward1.1 all PASS",
+    "1.3 selectedRTUscenarios and correctedKMAfeedback, exactsourceimage118selectedtests/local136, k3s UI/export/preview/MQTT, actualoutboxrestart, exact420MB snapshot1.3 and backward1.2 restore13checks PASS; overallmedia/timegatepending"
   ],
   "remainingInOrder": [
-    "Build exact committed candidate1.3 image, run exact-image tests/integration/advanced/security scan, then perform k3s acceptance/backup restore/backward1.2 and only then promote a new immutable stable checkpoint. Local136tests, integration/advanced, browser A/B/races/restore/export/KMA and independent reviews passed. Preserve stable1.2 fallback and original time limits.",
+    "Commit1.3 source/evidence and operational hardening; create runtime tags and new immutable checkpoint1.3.0 manifest, verify files/actualremoteimage/backupSHA, then continue observation until original freeze. Preserve1.2 fallback and original time limits.",
     "Continue observation until original freeze; select verified normal runtime, create consistent backup, verify that exact selected snapshot in isolated restore rig, commit evidence and create new immutable final manifest following FINAL-RESTORE-PLAN.md",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -44,12 +45,14 @@
   ],
   "supplementaryObservation": {
     "kind": "read-only per-RTU full SCADA auditor v1",
-    "sessionId": "54bdac4e-08dd-4b43-b623-9762b0632aa0",
-    "directory": "artifacts/soak/telemetry-audit/2026-09-21T10-45-56-870Z-54bdac4e",
-    "startedAt": "2026-09-21T10:45:56.870Z",
+    "sessionId": "9a9f5e31-eff9-4836-8d46-351ddb7b0d7b",
+    "directory": "artifacts/soak/telemetry-audit/2026-09-21T12-22-05-577Z-9a9f5e31",
+    "startedAt": "2026-09-21T12:22:05.577Z",
     "expectedStopAt": "2026-09-21T21:37:33.079Z",
     "instructions": "docs/operations/TELEMETRY-AUDIT.md",
-    "scope": "Additional observation; primary soak unchanged; source captured at observer start; quantity coverage is not acceptance"
+    "scope": "New1.3 observation session;1.2 archived separately; not uninterrupted uptime proof",
+    "handle": 30644,
+    "pid": 66465
   },
   "observationCheckpoints": [
     {
@@ -107,7 +110,96 @@
     "exactSnapshotFlag": "--expected-sha256",
     "helperTests": "docs/issues/evidence/review-017-restore-after.log",
     "httpBoundaryTests": "docs/issues/evidence/final-restore-http-boundary.json",
-    "status": "Prepared and isolated fixtures verified; fresh final snapshot restore not executed",
-    "constraints": "New unique proof PVC; same selected snapshot SHA before app start; preserve old verified snapshots; no retry of uncertain apply with a new name; original deadline unchanged"
+    "status": "Exactsnapshot helper now exercised on420466688B checkpoint in both1.3 and backward1.2. New final freeze snapshot still must receive its own exact restore proof.",
+    "constraints": "New unique proof PVC; same selected snapshot SHA before app start; preserve old verified snapshots; no retry of uncertain apply with a new name; original deadline unchanged",
+    "verifiedCurrentCheckpoint": "deploy/verification/candidate-3fa3ba0/restore-summary.json"
+  },
+  "activeOperations": [
+    {
+      "kind": "isolated1.3snapshotRestore",
+      "deployment": "grid-restore-3fa3ba0",
+      "backwardDeployment": "grid-restore-back-3fa3ba0",
+      "snapshotMetadata": "deploy/verification/stable-backup-3fa3ba0.json",
+      "owner": "/root/deployment",
+      "localPorts": [
+        3105,
+        18885
+      ],
+      "state": "PASS13checks; bothrestoredeployments0/noPods/ownedtunnelclosed; PVCs/backups retained"
+    },
+    {
+      "kind": "mainOutboxRestartProof",
+      "owner": "/root",
+      "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "originalOffline": false,
+      "state": "PASS, exit0, main5RTUs allfaultsfalse/HEALTHY/pending0 verified; new1.3 observers started",
+      "evidence": "deploy/verification/candidate-3fa3ba0/outbox-restart.json",
+      "scriptSha256": "35b0a1fd50a0fce6052c2390ad15040805b6b985b37f417bdbea8b8d4c57a605",
+      "retry": "Inspect result file, actual Pod UID, persisted outbox and this RTU offline flag first. Never blindly repeat rollout restart after lost response. Cleanup original offline=false before final normal-state claim."
+    }
+  ],
+  "previousObservations": [
+    {
+      "primary": "artifacts/checkpoints/soak-1.2.0",
+      "supplementary": {
+        "kind": "read-only per-RTU full SCADA auditor v1",
+        "sessionId": "54bdac4e-08dd-4b43-b623-9762b0632aa0",
+        "directory": "artifacts/soak/telemetry-audit/2026-09-21T10-45-56-870Z-54bdac4e",
+        "startedAt": "2026-09-21T10:45:56.870Z",
+        "expectedStopAt": "2026-09-21T21:37:33.079Z",
+        "instructions": "docs/operations/TELEMETRY-AUDIT.md",
+        "scope": "Additional observation; primary soak unchanged; source captured at observer start; quantity coverage is not acceptance",
+        "endedAt": "2026-09-21T12:13:44.848Z",
+        "endReason": "planned1.3 candidate upgrade",
+        "archive": "artifacts/checkpoints/soak-1.2.0"
+      },
+      "incidentBaseline": {
+        "evidence": "artifacts/checkpoints/reconnect-20260921T1116",
+        "spontaneousEvent": "2026-09-21T11:16:17.529Z",
+        "plannedSupervisorReplacement": "2026-09-21T11:19:16.440724+00:00",
+        "verifiedRecovery": "2026-09-21T11:20:13.463028+00:00",
+        "supervisorHandle": 25872,
+        "supervisorPid": 54951,
+        "supervisorProcessIdentity": "Mon Sep 21 20:19:20 2026",
+        "previousSupervisorHandleTerminal": 98912,
+        "knownCumulativeCounters": {
+          "primaryApiErrors": 3,
+          "primaryConnectionErrors": 3,
+          "supplementaryConnectionErrors": 8,
+          "supplementarySampleDiscontinuitiesPerRTU": 1
+        },
+        "instructions": "Do not reset counters or report known historical counts as new failures. Compare increases and current readiness/connection/freshness. Verify process identity before acting on a PID.",
+        "subsequentObservations": [
+          {
+            "outageObservedAt": "2026-09-21T11:34:05.722Z",
+            "readyObservedAt": "2026-09-21T11:34:07.371Z",
+            "evidence": "artifacts/checkpoints/backup-recovery/summary.json",
+            "cause": "unknown",
+            "forcedInterruption": false
+          },
+          {
+            "outageObservedAt": "2026-09-21T11:59:33.489Z",
+            "readyObservedAt": "2026-09-21T11:59:36.037Z",
+            "earlierReconnectAt": "2026-09-21T11:57:53.549Z",
+            "evidence": "artifacts/checkpoints/reconnect-20260921T1159/summary.json",
+            "cause": "local verification failed; underlying cause unknown",
+            "forcedInterruption": false,
+            "observationGap": "Clean-session QoS1 observers missed8 telemetry batches /300samples during reconnect; all corresponding remote outbox samples continuous and publisher PUBACK recorded. No every-consumer delivery guarantee."
+          }
+        ]
+      }
+    }
+  ],
+  "currentObservationHandles": {
+    "supervisor": 25872,
+    "primary": 40339,
+    "supplementary": 30644
+  },
+  "currentObservationBaselines": {
+    "primaryApiErrors": 0,
+    "primaryConnectionErrors": 0,
+    "supplementaryConnectionErrors": 0,
+    "supplementarySampleDiscontinuitiesPerRTU": 0,
+    "scope": "New1.3 sessions only; old1.2 cumulative3/3/8 andreceivergap1 remain in previousObservations/archive"
   }
 }

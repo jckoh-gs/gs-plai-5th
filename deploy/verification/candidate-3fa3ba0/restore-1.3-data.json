@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "base": "http://127.0.0.1:3105",
+  "backupIntegrity": "ok",
+  "restoredOriginalPlants": 5,
+  "originalRunAndGeneratorIdsPreserved": true,
+  "originalDatasetCountsPreserved": true,
+  "originalScenariosPreserved": 1
+}

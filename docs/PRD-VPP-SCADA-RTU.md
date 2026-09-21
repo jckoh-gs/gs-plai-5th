@@ -775,7 +775,7 @@ k3s 명령은 종료 코드 0이고 `gitVersion=v1.33.4+k3s1`, `platform=linux/a
 
 ## 25. 변경 관리와 후속 범위
 
-현재 상태: 제품 **1.2.0**, runtime `83d10cebcd7cab2b1f889c970011a463bad09099`, `stable-v1.2.0`이다. IDEA-001~006의 채택 기능은 검증 완료했다. IDEA-007은 제품1.3.0 후보로 채택했으며 구현·검증 대기다. CSV 미리보기는 1.1.0에서 완료되어 현재 버전에 유지된다. 근거는 [인수 추적](product/acceptance.json), [1.1.0 checkpoint](../artifacts/releases/checkpoint-1.1.0.json), [1.2.0 checkpoint](../artifacts/releases/checkpoint-1.2.0.json), [기능·복원 검토010](product/REVIEW-010.md), [453개 해시·실제 이미지 검토011](product/REVIEW-011.md)이다. 아래 수락 절차는 요구사항으로 유지하며, 과거 후보 승격 표현은 이미 수행한 절차의 기준이다. **최종 동결 점검·영상·PPT·운영시간 및 마감 정리는 아직 완료되지 않았다.** 기능 checkpoint를 전체 목표 완료로 해석하지 않는다.
+현재 상태: 제품 **1.2.0**, runtime `83d10cebcd7cab2b1f889c970011a463bad09099`, `stable-v1.2.0`이다. IDEA-001~006의 채택 기능은 검증 완료했다. IDEA-007은 3fa3ba0 제품1.3.0의 실제배포·격리복원에서 기능검증을 완료했다([REVIEW015](product/REVIEW-015.md)). 현재정상1.2.0checkpoint는보존하며1.3.0태그·immutablemanifest 승격은별도확인한다. CSV 미리보기는 1.1.0에서 완료되어 현재 버전에 유지된다. 근거는 [인수 추적](product/acceptance.json), [1.1.0 checkpoint](../artifacts/releases/checkpoint-1.1.0.json), [1.2.0 checkpoint](../artifacts/releases/checkpoint-1.2.0.json), [기능·복원 검토010](product/REVIEW-010.md), [453개 해시·실제 이미지 검토011](product/REVIEW-011.md)이다. 아래 수락 절차는 요구사항으로 유지하며, 과거 후보 승격 표현은 이미 수행한 절차의 기준이다. **최종 동결 점검·영상·PPT·운영시간 및 마감 정리는 아직 완료되지 않았다.** 기능 checkpoint를 전체 목표 완료로 해석하지 않는다.
 
 프로토콜 변경 시 schemaVersion, 가이드, 클라이언트, 통합 시험을 함께 변경한다. 등록 시 단위 정책이나 time 의미는 기존 데이터 마이그레이션 계획 없이 바꾸지 않는다. 제조사 모델·실물 프로토콜·대규모 부하·사용자 권한·브로커 업무 ACK·미래 제어 타임라인 재생은 별도 요구사항으로 설계한다.
 
@@ -798,15 +798,15 @@ IDEA-001의 선택적 JSON 결과 파일 요구는 신규 MQTT dispatch 클라�
 4. 쓰기 불가 결과 경로는 명확한 저장 실패와 exit 1을 반환한다. 파일 저장 실패 때문에 명령을 자동 재전송하지 않는다. JSON/오류 출력에 시험용 자격증명이 노출되지 않는다.
 5. 결과 파일 옵션 없이 기존 monitor/dispatch가 동작하고 MQTT schemaVersion 2가 유지된다. 관련 단위 시험, 기본·고급 MQTT 통합 시험, build 및 실행 확인을 통과한 뒤에만 신규 제품 릴리스에 맞는 stable 태그와 증거를 기록한다.
 
-### FR-SCENE-03 선택 RTU별 시나리오 조회 (IDEA-007, 제품1.3.0 후보·검증 대기)
+### FR-SCENE-03 선택 RTU별 시나리오 조회 (IDEA-007, 제품1.3.0 기능·배포·복원 검증 완료)
 
 저장 시나리오 화면은 현재 선택 RTU의 `plantId`와 일치하는 행만 제공한다. 서버 `GET /api/scenarios`의 전체목록 계약·저장형식·복원대상 의미는 유지한다. UI 필터는 인증·권한의 보안경계가 아니다. 과거시나리오는 저장된 원래 RTU에만 복원하며, 현재선택에 맞추어 plantId를 재작성하거나 다른단지로 재할당하지 않는다. 다른RTU 시나리오는 기존 RTU 선택을 바꾸어 접근한다.
 
-### UI-10 선택 RTU 시나리오 대상 표시 (IDEA-007, 검증 대기)
+### UI-10 선택 RTU 시나리오 대상 표시 (IDEA-007, 기능 검증 완료)
 
 목록 제목·범위 안내·빈상태에 현재 RTU 이름을 표시하고 다른단지는 위선택에서 변경함을 설명한다. A→B 빠른전환, 늦은 목록응답·저장응답에도 현재선택에 맞는 행만 렌더링한다. 저장·복원 성공표시는 요청당시 실제대상을 명확히 식별하며 이전단지 응답을 현재단지의 성공으로 표시하지 않는다. 시나리오 JSON 내려받기는 그행의 원래단지 snapshot이며 선택변경 때문에 다른파일로 바뀌지 않는다. 전체목록 탭·삭제·import·재할당·추가확인 modal은 이번개선 범위가 아니다.
 
-### AT-SCENE-SELECT-01 선택 대상 인수 (검증 대기)
+### AT-SCENE-SELECT-01 선택 대상 인수 (기능 검증 완료, checkpoint 승격 별도)
 
 1. A/B에 동일이름 시나리오를 저장한 fixture에서 A선택은 A행만, B선택은 B행만 표시한다. 빈단지는 자기이름과 빈상태를 표시한다.
 2. A시나리오 복원은 A의 새runId/활성명령취소를 관측하고 B의 runId·모델·명령상태는 변하지 않는다. REST 전체목록과 export JSON 계약은 기존과 동일하다.

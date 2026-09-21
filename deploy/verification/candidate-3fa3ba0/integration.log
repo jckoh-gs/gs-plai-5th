@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "suite": "integration",
+  "evidence": {
+    "actualBroker": true,
+    "allGenerators": true,
+    "everySampleContainsAllGenerators": true,
+    "scenarioCancelsActiveCommand": true,
+    "acceptedExecutingCompleted": true,
+    "targetKw": 125,
+    "actualKw": 125,
+    "errorKw": 0,
+    "dedup": true,
+    "scenario": true,
+    "restartPersistence": true
+  }
+}
