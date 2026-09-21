@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-09-21T12:39:29.585Z",
+  "scope": "Independent source and isolated local tests only; no actual cluster changes or final media run",
+  "sourceHashes": {
+    "scripts/verify-release.mjs": "a8e0cd4ac4db8989e544236602d0be7fa8fd0c2e6524ef905eab6840cff195f5",
+    "scripts/deadline-command.py": "62151573380ca2586e54bea709c33691c3c303e3192094470b5b7078606f37cc",
+    "scripts/media/media-deadline.cjs": "109899aab91464d7d8749f2115592272cf7a680d478c60c0702f8ba8c5b975fc",
+    "scripts/media/record-demo.cjs": "5f7660e91c9f96d1825d705bd61c286ff7a27968cb3fa0250011b29945546e3d",
+    "scripts/media/build-deck.mjs": "d5671c2128404055bce38a896ce6ae014323b69755fdec62debd339b6c7ab3be"
+  },
+  "testCounts": {
+    "mediaAndRelease": 12,
+    "wrapper": 6,
+    "independentSigtermProbe": 1
+  },
+  "findingsStatus": "Reported media PID ownership, wrapper background lifetime, streamed output cap, Darwin EPERM and SIGTERM cleanup addressed; documented trusted environment and best-effort cleanup limits remain"
+}

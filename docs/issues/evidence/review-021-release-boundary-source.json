@@ -1,0 +1,8 @@
+{
+  "at": "2026-09-21T12:33:49.671996+00:00",
+  "sha256": {
+    "scripts/verify-release.mjs": "a8e0cd4ac4db8989e544236602d0be7fa8fd0c2e6524ef905eab6840cff195f5",
+    "tests/review-release-boundary.test.js": "6b8be7df0147b43f7dc329aa3ede2e04847e5a4b870e22829b5dc2a26d9ff672",
+    "docs/issues/evidence/review-021-release-boundary-final.log": "ad26af0eba8cc312a7361514892334a7b116ffd7a1606d0fc709cc42571f6914"
+  }
+}

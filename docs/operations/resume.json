@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T12:28:18.253802+00:00",
+  "updatedAt": "2026-09-21T12:41:39.226757+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": "stable-v1.3.0",
@@ -218,5 +218,18 @@
       "handle": 25872,
       "processIdentity": "Mon Sep 21 20:19:20 2026"
     }
+  },
+  "operationalDeadlineHardening": {
+    "state": "verified",
+    "evidence": "artifacts/checkpoints/final-window-boundaries/summary.json",
+    "securityReview": "docs/security/OPERATING-DEADLINE-REVIEW.md",
+    "instruction": "Use FINAL-RESTORE-PLAN bounded direct commands and media watchdog; inspect uncertain remote outcome before retry; immutable1.3 checkpoint unchanged"
+  },
+  "nextProductProposal": {
+    "id": "IDEA-008",
+    "revision": 1,
+    "state": "proposed, not adopted",
+    "review": "docs/product/REVIEW-017.md",
+    "nextDecision": "After first-hour1.3 observation checkpoint, reassess command-form server-range alignment; version PRD/product before any adoption. No user response required."
   }
 }

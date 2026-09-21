@@ -360,3 +360,19 @@ REVIEW020 round2: 메인 독립 검토에서 MQTT connectAsync의 늦은 resolve
 
 
 REVIEW020 round3: 보안 독립 검토에서 observer message callback의 JSON.parse 예외가 비동기 이벤트에서 main finally를 우회할 수 있음을 발견했다. listener만 try/catch 및 non-null plain object/array 제외/string messageId 일치 검사로 방어했다. 실제 소스 callback VM fixture에서 malformed/null/array/scalar/ID 누락·타입오류·다른 ID는 throw/수신변수 변경 없이 무시하고 정상 동일 ID는 공백까지 원문 그대로 보존함을 확인했다. 전체 focused5/5PASS와 node --check. 기존 실제 outbox 성공 실행 소스 `deploy/verification/candidate-3fa3ba0/actual-outbox-source.mjs`와 보고서는 변경하지 않았고 해당 성공을 이번 수정본의 실제 실행으로 소급하지 않는다. 이번은 운영도구 재사용 방어이며 앱/배포/원격 재시작 변경은 없다.
+
+
+### REVIEW021 — 최종창/재연결 운영 경계 (수정 검증 완료)
+
+기준: 안정1.3 runtime3fa3ba0, 원래 freeze21:37:33Z/deadline22:07:33Z 불변. FINAL-RESTORE-PLAN/NETWORK-RECOVERY/resume/NEXT-ACTIONS 및 미디어 도구를 읽었으며 기존 통과시험 재실행/원격조작은 하지 않았다. 재시도 전 실제 상태 확인, 고유 복원PVC·정확SHA, 동일매니페스트·영상 해시 결합, video-first 및 인도검사의 completedAt 창 검증은 유지된다.
+
+확인된 운영 공백 두 가지를 메인에 보고했다. (1) verify-release.mjs --remote의 두 execFileSync kubectl은 host timeout이 없다. recorder 내부 호출에는 부모20초 제한이 있지만 최종계획의 직접 manifest 검증에는 없다. 계획의 직접 get/logs/scale/wait도 host 대기 상한이 없어 네트워크 중단 시 메인감독에 의존한다. (2) recorder say/ffmpeg/audio-probe의 sync child 호출은 timeout이 없고 recorder/deck은 시작창 검사 후 종료시 deadline을 재검사하지 않는다. verify-delivery는 늦은 receipt를 거절하므로 허위 완료는 막지만 작업 자체의 초과실행을 중단하지 않는다. 실제 hang/미디어 손상 재현 주장이 아니며 source 제어흐름상 제한 누락이다.
+
+최소 권고: remote 검증 child에 남은deadline/유한 timeout과 정제오류를 적용하고 계획의 directcommands도 유한 host wrapper로 실행한다. 미디어는 남은 원래deadline 기반 child 제한/종료receipt 검사 또는 소유 process tree를 정리하는 외부 감독을 적용한다. 새 feature/목표quota 요구가 아니다. 본 검토에서 source 변경은 하지 않았고 메인 판단을 기다린다.
+
+
+REVIEW021 remote manifest 경계 수정 완료: verify-release --remote는 원래run.deadlineAt와 시작+60초 중 빠른 총예산을 설정하고 kubectl두호출을 각각20초 이하/남은예산 이하 SIGKILL timeout으로 실행한다. backup 스트리밍 hash 중 및 최종PASS 전에도 예산을 확인한다. 파싱/실패 raw child 출력·Assertion 값은 출력하지 않는다. 로컬 동기파일/git I/O의 중간취소 보장은 아니며 remote네트워크 대기를 제한한다.
+
+격리 실제CLI6/6PASS: fakekubectl hang은2.5초 원래deadline에서 종료/두번째호출 없음, 이미만료는호출0, secretstderr 실패비노출, 정상Ready app/mqtt실제digest검사2호출PASS, --remote없는검사는만료run과무관, --at-commit은workingfile변경에도git원본해시유지. 원격cluster접근은없다. source/log는 review-021-release-boundary-final 기록. 계획directcommand wrapper와 미디어deadline은 메인/다른담당 범위이며 이시험으로 종결하지 않는다.
+
+REVIEW021 최종 결합 검증: 메인의 deadline-command wrapper를 FINAL-RESTORE-PLAN의 직접 get/logs/scale/wait 및 release 명령에 적용했다. streaming32MiB/원래마감/소유그룹 종료/SIGTERM/실패출력 차단을 추가했다. 미디어 담당은 별도 watchdog·각 child 시간제한·receipt 직전 창 검사를 적용하고, 보안 검토 후 회수된PID 신호 금지·시작식별/부모계보 재확인으로 보완했다. 인도 검사도 두 산출물의 새 helper 소스 보존을 요구한다. 관련38시험PASS, 실제 기존1.3 checkpoint688해시·현재Ready image를 새 bounded 경로로 확인했다. 실제 서비스/이미지 변경·새 최종미디어 생성은 없었다. 중간실패와 한계, 독립보안검토는 artifacts/checkpoints/final-window-boundaries/summary.json 및 docs/security/OPERATING-DEADLINE-REVIEW.md에 연결한다. 전체목표/최종미디어 완료를 뜻하지 않는다.

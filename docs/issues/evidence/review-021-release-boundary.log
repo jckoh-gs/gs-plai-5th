@@ -1,0 +1,13 @@
+✔ actual release verifier expired boundary (24.990291ms)
+✔ actual release verifier hang boundary (2512.693917ms)
+✔ actual release verifier failure boundary (466.7685ms)
+✔ actual release verifier normal boundary (536.894083ms)
+✔ offline manifest verification remains independent of run deadline (25.987458ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3599.697708

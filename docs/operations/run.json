@@ -33,7 +33,8 @@
     "backupRestore": "PASS exact1.3 snapshot420466688B/SHA b515ef26 fresh1.3 and separate backward1.2 PVC original5plants/run/generator/dataset/scenario/UI/preview/export/MQTT,1.3 scenario/KMA proofs",
     "remote": "3fa3ba0 actualReady/1.3 UI/auth/SSE/narrow/preview/export, actualMQTT125/error0/60samples/dedup, actualoutboxpodreplacement identicalpersisted+receivedbody/PUBACK PASS",
     "media": "Preparation verified: Korean editablePPT render and actual1080p H264/AAC browser recording/pointer/click/zoom/voice/full decode; final media pending freeze",
-    "weatherTimeout": "PASS actual12s AbortSignal, prior valid observation retained"
+    "weatherTimeout": "PASS actual12s AbortSignal, prior valid observation retained",
+    "operationalDeadline": "38 selected boundary tests PASS; bounded actual checkpoint1.3 verification688hashes/Readyimages PASS; no app runtime or finalmedia change"
   },
   "notes": [
     "Existing sibling implementation must not be copied or reused.",
@@ -192,6 +193,7 @@
     "tests": "artifacts/checkpoints/network-recovery/tests.log",
     "heartbeatId": "grid",
     "intervalMinutes": 10,
-    "constraints": "Mac and Codex app must remain running; no offline AI work guarantee; original deadline unchanged"
+    "constraints": "Mac and Codex app must remain running; no offline AI work guarantee; original deadline unchanged",
+    "deadlineHardening": "artifacts/checkpoints/final-window-boundaries/summary.json"
   }
 }

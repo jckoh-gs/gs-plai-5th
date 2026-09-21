@@ -1,0 +1,7 @@
+{
+  "checkedAt": "2026-09-21T12:39:13.602399+00:00",
+  "scope": "isolated temp fixture SIGTERM; no cluster or unrelated process signals",
+  "exitCode": 130,
+  "privateOutputWithheld": true,
+  "childDidNotReachMarker": true
+}

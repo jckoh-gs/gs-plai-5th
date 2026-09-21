@@ -1,0 +1,14 @@
+✔ deadline command preserves successful proof bytes but withholds failed child secrets (235.707834ms)
+✔ expired, missing or invalid original deadline never starts the supplied command (153.774083ms)
+✔ original remaining time caps a larger host timeout and uncertain output is withheld (2020.3245ms)
+✔ host timeout terminates descendants only in the process group it created (3266.432125ms)
+✔ successful leader exit stops residual group members before its PID is reaped (1324.451125ms)
+✔ combined child output is capped while running and never emitted after failure (77.86675ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7107.554166

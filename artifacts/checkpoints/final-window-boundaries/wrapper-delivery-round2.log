@@ -1,0 +1,22 @@
+✔ deadline command preserves successful proof bytes but withholds failed child secrets (238.812542ms)
+✔ expired, missing or invalid original deadline never starts the supplied command (160.901375ms)
+✔ original remaining time caps a larger host timeout and uncertain output is withheld (2020.035416ms)
+✔ host timeout terminates descendants only in the process group it created (3269.133583ms)
+✔ successful leader exit stops residual group members before its PID is reaped (1309.623667ms)
+✔ combined child output is capped while running and never emitted after failure (79.434334ms)
+✔ independent delivery fixture proves only artifact consistency, never completion (41.626583ms)
+✔ independent delivery rejects changed source manifest (41.678291ms)
+✔ independent delivery rejects failed package validation (40.787458ms)
+✔ independent delivery rejects same release different reviewed video (39.435291ms)
+✔ independent delivery rejects missing deadline source (42.063791ms)
+✔ independent delivery rejects empty reproduction list (43.013666ms)
+✔ independent delivery rejects wrong config hash (40.536125ms)
+✔ independent delivery rejects both image digests invalid (41.294459ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7471.310583

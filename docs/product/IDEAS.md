@@ -87,3 +87,7 @@ KMA피드백소스관찰: 키없음/timeout에서HTTP200+weatherError일때일�
 IDEA007 후속:3fa3ba0실제1.3배포/격리시나리오UI/원래단지불변/지연응답/servedJS일치,동일420466688bytebackup의1.3·역방향1.2복원13검사PASS. 기능완료;태그/manifest승격은메인후속. REVIEW015참조.
 
 IDEA007 checkpoint확정: [REVIEW016](REVIEW-016.md)에서immutable1.3manifest688hash/실제Readyimage/backupSHA를독립확인. stable-v1.3.0 및stable-runtime-v1.3.0-3fa3ba0는모두runtime3fa3ba0. 현재기능checkpoint완료이며remoteGitpush/최종동결·미디어·시간완료를이검증으로추론하지않는다.
+
+## IDEA-008 · 일반 목표 입력의 기존 서버 범위 안내 — 제안 v1
+
+REVIEW-017.md의 소스 관찰을 등록한다. toleranceKw0.01~10000, timeoutSeconds1~3600, priority0~100을 일반 목표 폼의 입력 범위/안내와 일치시키는 제안이다. target0 또는 가용량 초과 목표를 자동 보정하지 않으며 의도한 실패시험은 유지한다. 현재는 미채택·미구현이고 PRD/제품 버전은1.10/1.3.0 그대로다. 메인은 우선 재연결/최종창 운영 공백을 보완했다. 1.3 최초1시간 관찰 구간을 확보한 뒤 가치와 위험을 다시 판단하며, 채택할 경우 PRD·제품 버전을 먼저 기록하고 기존1.3 stable을 복원 기준으로 보존한다. 개발자 응답을 기다리는 항목이 아니다.

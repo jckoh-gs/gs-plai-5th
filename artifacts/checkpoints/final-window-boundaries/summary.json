@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-09-21T12:41:39.226757+00:00",
+  "result": "PASS",
+  "scope": "Operational deadline/reconnect tools only; no application runtime change, rollout, final video or PPT generation",
+  "runtimeCommit": "3fa3ba0a6984dc752a8968d1788e72a3069b1267",
+  "selectedBoundaryTests": {
+    "passed": 38,
+    "failed": 0,
+    "log": "artifacts/checkpoints/final-window-boundaries/all-boundaries-final.log"
+  },
+  "boundedActualRemoteVerification": {
+    "result": "PASS",
+    "manifest": "artifacts/releases/checkpoint-1.3.0.json",
+    "checkedHashes": 688,
+    "remoteImageMatched": true,
+    "scope": "File integrity and optional deployed identity only; acceptance, restore and media verdicts remain independent"
+  },
+  "originalFreezeAt": "2026-09-21T21:37:33.079009+00:00",
+  "originalDeadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "independentReview": "docs/security/OPERATING-DEADLINE-REVIEW.md",
+  "intermediateFailures": "Preserved: Darwin zombie-only process-group EPERM; one delivery assertion expected the wrong diagnostic. Both corrected and rerun. Initial wrapper background/output/SIGTERM findings retained in independent security evidence.",
+  "limits": [
+    "Local process termination does not prove remote cancellation; inspect uncertain writes before retry",
+    "Python wrapper controls its own process group; escaped sessions and external SIGKILL/host stop are outside its cleanup guarantee",
+    "Media ownership checks have documented ps-to-signal race and skip uncertain identities",
+    "Rehearsal is an explicit trusted local reproduction mode; never final evidence or an extension of this autonomous run"
+  ],
+  "sources": {
+    "scripts/deadline-command.py": "62151573380ca2586e54bea709c33691c3c303e3192094470b5b7078606f37cc",
+    "scripts/verify-release.mjs": "a8e0cd4ac4db8989e544236602d0be7fa8fd0c2e6524ef905eab6840cff195f5",
+    "scripts/verify-delivery.mjs": "b744f17b5e17f3e977388d1e60eb770cdddbed23ac48b507cf8f28e0d04e1429",
+    "scripts/media/media-deadline.cjs": "109899aab91464d7d8749f2115592272cf7a680d478c60c0702f8ba8c5b975fc",
+    "scripts/media/record-demo.cjs": "5f7660e91c9f96d1825d705bd61c286ff7a27968cb3fa0250011b29945546e3d",
+    "scripts/media/build-deck.mjs": "d5671c2128404055bce38a896ce6ae014323b69755fdec62debd339b6c7ab3be",
+    "scripts/media/recording-sources.cjs": "03948e8a66a561fe2456be620170df274765a7173527d8271982287b2c5d0a30",
+    "tests/deadline-command.test.js": "21181817b89e2f9bcf30dc275bdc4a3a2d262565d43c8b1a63784a10084bdbf1",
+    "tests/media-deadline.test.js": "c04722743103165754b85fe9152c8883fc8ac1752944f83fd92d858d7f65bc28",
+    "tests/review-release-boundary.test.js": "6b8be7df0147b43f7dc329aa3ede2e04847e5a4b870e22829b5dc2a26d9ff672",
+    "tests/review-media-delivery.test.js": "b0f900f103b98120de88dc07364314dce18e60d4775b9db77e1a70f9225a03e8",
+    "tests/recording-sources.test.js": "cd71c8191f429a1434b918dc7b2ce0c6189ab6b1ea5d5f37904b6fc1f8196f8e",
+    "tests/media-release-binding.test.js": "c048c26883146046cd1f3695ba9893c4bbd9d02aaa65e9a481e6f92c04d3877c"
+  },
+  "evidence": {
+    "artifacts/checkpoints/final-window-boundaries/wrapper-delivery-final.log": "61bd0fc733f4896ce9c3833b397a398a6455bc0a33a33fc632c89433dda81509",
+    "artifacts/checkpoints/final-window-boundaries/wrapper-streaming-initial-failure.log": "7a7e34623ce5294e483ed9f333e39ab14c644e2a711dfa161d83906af48a598d",
+    "artifacts/checkpoints/final-window-boundaries/bounded-release-1.3-verification.json": "533bc21e80a7998760cb1c7df2facf51d0877495ab0c9f7614723248cc9ccc47",
+    "artifacts/checkpoints/final-window-boundaries/wrapper-delivery-round2.log": "5588d04816f2f156f5ccf36dc8bb2d09ba8c2aa32553ff6cdb4c02bd88794541",
+    "artifacts/checkpoints/final-window-boundaries/wrapper-first.log": "a248b0e37d8ab774574c364507c1892f5990f07e458cbf1bc93bda4d1099cdc0",
+    "artifacts/checkpoints/final-window-boundaries/wrapper-delivery-round1-failures.log": "dfc01c892fdbd562b6311334d3ea884c76e1f821a59224170bfd9d0200edbaa9",
+    "artifacts/checkpoints/final-window-boundaries/all-boundaries-final.log": "8c27e3e2c018b5ec9f93d237bbd32e36b433773a8c666747670940c69536b6d4",
+    "artifacts/checkpoints/final-window-boundaries/resource-observation.json": "cd58f48c0a4d7dc1390d93ebafa3e61a77e94a53b2ba1bb8459fc0672243fd9a"
+  }
+}

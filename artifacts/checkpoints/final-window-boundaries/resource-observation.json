@@ -1,0 +1,32 @@
+{
+  "scope": "Read-only resource observation; available filesystem bytes are not reserved PVC capacity",
+  "pod": "grid-76f9968b4-dgf2w",
+  "uid": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73",
+  "containers": [
+    {
+      "name": "app",
+      "imageID": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+      "ready": true,
+      "restarts": 0
+    },
+    {
+      "name": "mqtt",
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+      "ready": true,
+      "restarts": 0
+    }
+  ],
+  "observedAt": "2026-09-21T12:39:54.740Z",
+  "filesystemAvailableBytes": 81284100096,
+  "databaseBytes": 463400960,
+  "walBytes": 4700952,
+  "dataFileBytes": 3078984357,
+  "soak": {
+    "checkedAt": "2026-09-21T12:39:53.248Z",
+    "rssBytes": 141750272,
+    "apiErrors": 0,
+    "connectionErrors": 0,
+    "invalid": 0,
+    "pending": 0
+  }
+}

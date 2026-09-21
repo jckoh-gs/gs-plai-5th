@@ -1,0 +1,7 @@
+{
+  "checkedAt": "2026-09-21T12:36:31.767554+00:00",
+  "scope": "Isolated temporary fixture; descendant exits itself after one second, no external processes signalled",
+  "wrapperExit": 0,
+  "wrapperElapsedSeconds": 0.05335416599700693,
+  "childWroteAfterWrapperBudget": true
+}

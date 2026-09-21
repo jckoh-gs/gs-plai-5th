@@ -1,0 +1,45 @@
+✖ deadline command preserves successful proof bytes but withholds failed child secrets (51.06975ms)
+✔ expired, missing or invalid original deadline never starts the supplied command (149.472375ms)
+✔ original remaining time caps a larger host timeout and uncertain output is withheld (2016.851833ms)
+✔ host timeout terminates descendants only in the process group it created (3256.274ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5511.392625
+
+✖ failing tests:
+
+test at tests/deadline-command.test.js:13:1
+✖ deadline command preserves successful proof bytes but withholds failed child secrets (51.06975ms)
+  AssertionError [ERR_ASSERTION]: deadline-command: could not run the local command; no raw child output emitted
+  Traceback (most recent call last):
+    File "/Users/charleskoh/research/20260921-RALPTON/scripts/deadline-command.py", line 115, in <module>
+      sys.exit(main())
+               ~~~~^^
+    File "/Users/charleskoh/research/20260921-RALPTON/scripts/deadline-command.py", line 101, in main
+      stop_owned_group()
+      ~~~~~~~~~~~~~~~~^^
+    File "/Users/charleskoh/research/20260921-RALPTON/scripts/deadline-command.py", line 57, in stop_owned_group
+      os.killpg(process.pid, signal.SIGKILL)
+      ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  PermissionError: [Errno 1] Operation not permitted
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/charleskoh/research/20260921-RALPTON/tests/deadline-command.test.js:16:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.start (node:internal/test_runner/test:1177:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

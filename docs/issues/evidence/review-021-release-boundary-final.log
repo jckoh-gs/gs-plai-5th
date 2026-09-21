@@ -1,0 +1,14 @@
+✔ actual release verifier expired boundary (25.034542ms)
+✔ actual release verifier hang boundary (2514.296417ms)
+✔ actual release verifier failure boundary (249.233083ms)
+✔ actual release verifier normal boundary (210.5445ms)
+✔ offline manifest verification remains independent of run deadline (24.199125ms)
+✔ at-commit still hashes committed evidence when working file differs (86.049125ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3141.118375

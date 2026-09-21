@@ -23,6 +23,8 @@
 
 ## 실행 명령: 백업부터 복원
 
+아래 `final_command`는 직접 get/logs/scale/wait와 매니페스트 도구를 별도 로컬 프로세스 그룹에서 실행하며 명시한 초와 원래 deadline 중 빠른 시각에 제한한다. 성공한 명령의 출력만 전달하고 실패/시간 초과 출력은 숨긴다. 합산32MiB를 넘는 출력은 실행 중 차단한다. 명령의 종료 상태를 회수하기 전에 그 명령이 만든 같은 프로세스 그룹의 잔여 작업도 종료한다. 상주 서비스나 터널을 시작하는 용도로 쓰지 않는다. 별도 세션으로 이탈한 자손·원격 작업 취소까지 보장하지 않으며 OS의 신호 처리/동기I/O 지연도 절대 실시간 보장은 아니다. 응답이 끊긴 scale/apply는 실제 상태를 조회한 뒤 다음 조치를 결정한다. 각 독립 셸에서 함수를 다시 정의한다. verify-release 자체도 remote 모드에서 원래마감·전체60초·kubectl20초 제한과 PASS 직전 검사를 적용하지만 로컬 동기 I/O/기존 git show까지 강제로 중단하려면 이 외부 wrapper가 필요하다.
+
 다음은 동결 후 실행할 명령이다. 지금 실행하지 않는다. `set -e`가 있는 전용 셸에서 실패를 무시하지 않는다. 운영 터널3104/18884와 supervisor는 유지하며 별도3105/18885만 사용한다. 포트가 다른 프로세스 소유이면 종료하지 말고 비어 있는 포트로 아래 환경변수를 일관되게 바꾼다.
 
 ```sh
@@ -31,15 +33,20 @@ FINAL_EVIDENCE=deploy/verification/final-restore-20260921
 FINAL_BACKUP=deploy/verification/final-backup-20260921.json
 FINAL_RIG=grid-restore-final-20260921
 mkdir -p "$FINAL_EVIDENCE"
+final_command() {
+  final_command_limit="$1"
+  shift
+  python3 scripts/deadline-command.py --timeout-seconds "$final_command_limit" -- "$@"
+}
 BACKUP_METADATA_PATH="$FINAL_BACKUP" node scripts/remote-backup.mjs > "$FINAL_EVIDENCE/backup.log" 2>&1
 FINAL_IMAGE=$(node -p 'JSON.parse(require("fs").readFileSync(process.argv[1])).appImage' "$FINAL_BACKUP")
 FINAL_BASENAME=$(node -p 'require("path").basename(JSON.parse(require("fs").readFileSync(process.argv[1])).remotePath)' "$FINAL_BACKUP")
 FINAL_SHA=$(node -p 'JSON.parse(require("fs").readFileSync(process.argv[1])).sha256' "$FINAL_BACKUP")
 FINAL_LOCAL=$(node -p 'JSON.parse(require("fs").readFileSync(process.argv[1])).localPath' "$FINAL_BACKUP")
 python3 scripts/deploy-restore-rig.py --name "$FINAL_RIG" --image "$FINAL_IMAGE" --backup "$FINAL_BASENAME" --expected-sha256 "$FINAL_SHA" > "$FINAL_EVIDENCE/create.log" 2>&1
-kubectl --context charles-k3s -n gs-plai-5h get pods -l "app=$FINAL_RIG" -o json > "$FINAL_EVIDENCE/pods.json"
+final_command 20 kubectl --context charles-k3s -n gs-plai-5h get pods -l "app=$FINAL_RIG" -o json > "$FINAL_EVIDENCE/pods.json"
 node --input-type=module -e 'import{readFileSync}from"node:fs";import{verifiedAppPod}from"./scripts/pod-identity.mjs";console.log(JSON.stringify(verifiedAppPod(JSON.parse(readFileSync(process.argv[1])),process.argv[2])))' "$FINAL_EVIDENCE/pods.json" "$FINAL_IMAGE" > "$FINAL_EVIDENCE/runtime-identity.json"
-kubectl --context charles-k3s -n gs-plai-5h logs deployment/"$FINAL_RIG" -c restore-database > "$FINAL_EVIDENCE/restore-init.log"
+final_command 20 kubectl --context charles-k3s -n gs-plai-5h logs deployment/"$FINAL_RIG" -c restore-database > "$FINAL_EVIDENCE/restore-init.log"
 ```
 
 별도 세션에서 다음 터널을 시작하고 세션ID/PID를 기록한다. 이후 명령은 원래 전용 셸에서 같은 변수를 유지한다.
@@ -70,10 +77,10 @@ QA_DIRECTORY=deploy/verification/final-restore-20260921/export node scripts/brow
 모든 프로세스 exit0 및 각 result PASS를 확인한 후 summary.json에 백업 메타데이터 경로/remotePath/localPath/sha256/bytes, 복원deployment, imageID/UID, 각각의 결과 파일, 운영DB 미수정 여부를 기록한다. FAIL/누락은 PASS로 바꾸지 않는다. 메타데이터의 해시를 이전 백업 기록에서 복사하지 않는다.
 
 ```sh
-kubectl --context charles-k3s -n gs-plai-5h scale deployment/"$FINAL_RIG" --replicas=0
-kubectl --context charles-k3s -n gs-plai-5h wait --for=delete pod -l "app=$FINAL_RIG" --timeout=90s
-kubectl --context charles-k3s -n gs-plai-5h get pods -l "app=$FINAL_RIG" -o json > "$FINAL_EVIDENCE/final-pods.json"
-kubectl --context charles-k3s -n gs-plai-5h get deployment/"$FINAL_RIG" -o json > "$FINAL_EVIDENCE/scaled-zero.json"
+final_command 20 kubectl --context charles-k3s -n gs-plai-5h scale deployment/"$FINAL_RIG" --replicas=0
+final_command 95 kubectl --context charles-k3s -n gs-plai-5h wait --for=delete pod -l "app=$FINAL_RIG" --timeout=90s
+final_command 20 kubectl --context charles-k3s -n gs-plai-5h get pods -l "app=$FINAL_RIG" -o json > "$FINAL_EVIDENCE/final-pods.json"
+final_command 20 kubectl --context charles-k3s -n gs-plai-5h get deployment/"$FINAL_RIG" -o json > "$FINAL_EVIDENCE/scaled-zero.json"
 ```
 
 직접 시작한 터널만 종료하고3105/18885 대기 프로세스가 없는지 확인한다. PVC/백업은 보존한다.
@@ -83,8 +90,9 @@ kubectl --context charles-k3s -n gs-plai-5h get deployment/"$FINAL_RIG" -o json 
 메인이 `run.json.backup`을 선택한 새 백업 메타데이터로 갱신하고 `stableCheckpoint`의 backupEvidence/recoveryEvidence를 이번 summary에 연결한다. acceptance OPS-05에도 같은 증거를 연결한다. 현재 `release-manifest.js`는 tracked 파일만 evidence에 포함하고 존재 자체로 수락을 판정하지 않는다. 따라서 새 복원증거/메타데이터/acceptance/run을 명시적으로 add/commit한 다음 매니페스트를 생성한다. 비밀 SQLite/자격증명은 add하지 않는다. 매니페스트가 해시한 원본 증거를 이후 수정하면 무결성 검증이 실패하므로 새로운 최종 미디어 증거는 별도 기록한다.
 
 ```sh
-node scripts/release-manifest.js artifacts/releases/final-20260921.json
-node scripts/verify-release.mjs artifacts/releases/final-20260921.json --remote > deploy/verification/final-manifest-verification.json
+test ! -e artifacts/releases/final-20260921.json
+final_command 30 node scripts/release-manifest.js artifacts/releases/final-20260921.json
+final_command 70 node scripts/verify-release.mjs artifacts/releases/final-20260921.json --remote > deploy/verification/final-manifest-verification.json
 ```
 
 미디어 입력의 releaseManifest를 위 경로로, approvedReleaseCommit을 manifest.source.commit으로, approvedImageDigest를 manifest.deployment.appImage의 digest로 설정한다. 실제 baseUrl은 운영3104, mqtt.url은18884여야 한다. 복원3105/18885를 최종시연 입력으로 남기지 않는다. 원고/장면/소스는 사전 준비를 재사용할 수 있지만 최종 캡처/영상/PPT는 동결 후 같은 매니페스트로 새로 생성한다.

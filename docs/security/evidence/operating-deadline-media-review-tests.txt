@@ -1,0 +1,20 @@
+✔ remaining time caps child work and rejects late receipts without extending original deadline (1.077667ms)
+✔ hung synchronous tool is killed within remaining budget (124.566417ms)
+✔ watchdog kills blocked worker and its owned subprocess group (465.047958ms)
+✔ normal rehearsal tool succeeds inside finite budget (19.709458ms)
+✔ reaped or reused worker and changed descendant identities are never signalled (0.441292ms)
+✔ normal supervisor exit leaves unrelated live process alone (50.361375ms)
+✔ actual release verifier expired boundary (24.451ms)
+✔ actual release verifier hang boundary (2515.916792ms)
+✔ actual release verifier failure boundary (238.766ms)
+✔ actual release verifier normal boundary (265.956792ms)
+✔ offline manifest verification remains independent of run deadline (25.193958ms)
+✔ at-commit still hashes committed evidence when working file differs (82.120125ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3185.332875
