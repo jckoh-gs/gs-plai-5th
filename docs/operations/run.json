@@ -137,9 +137,11 @@
       "remoteImageMatched": true,
       "scope": "File integrity and optional deployed identity only; acceptance, restore and media verdicts remain independent"
     },
-    "tagState": "pending-newannotatedtags",
+    "tagState": "created-and-remote-verified",
     "previousVerifiedManifest": "artifacts/releases/checkpoint-1.7.0.json",
-    "scope": "Verified1.7.1 functional/runtime/same5ffrecovery checkpoint. Overallgoal finalmedia/time/delivery remainsincomplete."
+    "scope": "Verified1.7.1 functional/runtime/same5ffrecovery checkpoint. Overallgoal finalmedia/time/delivery remainsincomplete.",
+    "tagCommit": "c9b43bdcb03be6e01bdf9ea83cdfa6e936505692",
+    "tagVerification": "artifacts/checkpoints/release-1.7.1/tags.json"
   },
   "candidate": {
     "productVersion": "1.7.1",
@@ -157,7 +159,7 @@
     "localSummary": "artifacts/checkpoints/candidate-1.7.1-local/summary.json",
     "independentLocalReview": "docs/product/REVIEW-041.md",
     "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
-    "phase": "Independentfunctional/immutablemanifest andsecurity/issues/media-templatecloseoutdone; rootcreatingnewstabletags",
+    "phase": "Completed1.7.1 functionalcheckpoint, immutablemanifest andbothnewtagsremoteverified; noactivecandidatewrites",
     "activeOperations": [],
     "completedImageBuild": {
       "owner": "/root/deployment",
@@ -476,7 +478,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T18:17:34.481664+00:00",
+  "updatedAt": "2026-09-21T18:18:59.744061+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",

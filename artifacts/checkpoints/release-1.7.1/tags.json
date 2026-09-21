@@ -1,0 +1,24 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T18:18:59.744061+00:00",
+  "pushHandle": 85027,
+  "pushExitCode": 0,
+  "remoteMain": "c9b43bdcb03be6e01bdf9ea83cdfa6e936505692",
+  "tags": {
+    "stable-v1.7.1": {
+      "tagObject": "102f15c0c4f77aeb6fe4b8f89109b19e2f1947fd",
+      "commit": "c9b43bdcb03be6e01bdf9ea83cdfa6e936505692",
+      "remoteObjectMatched": true,
+      "remotePeeledMatched": true
+    },
+    "stable-runtime-v1.7.1-40b9ed8": {
+      "tagObject": "dbc39706d34cda5f8fa8ec7c57f77e10470c3e4c",
+      "commit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+      "remoteObjectMatched": true,
+      "remotePeeledMatched": true
+    }
+  },
+  "manifest": "artifacts/releases/checkpoint-1.7.1.json",
+  "manifestSourceCommit": "b6c3cbc5742b095bedb32b5f4dea598e685412f5",
+  "scope": "Newannotatedtags only; historicaltagsunchanged. Functionalcheckpoint notoverallgoalcompletion."
+}
