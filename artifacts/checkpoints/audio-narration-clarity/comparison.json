@@ -1,0 +1,235 @@
+{
+  "preparationOnly": true,
+  "directListening": false,
+  "finalAudio": false,
+  "voice": "Yuna",
+  "speechRate": 170,
+  "promptProvided": false,
+  "createdAt": "2026-09-21T18:47:39.981903+00:00",
+  "command": [
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/build/bin/whisper-cli",
+    "-m",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/ggml-small.bin",
+    "-f",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-clarity/combined.wav",
+    "-l",
+    "ko",
+    "-t",
+    "4",
+    "-ng",
+    "-oj",
+    "-otxt",
+    "-osrt",
+    "-of",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-clarity/candidate-asr"
+  ],
+  "asrElapsedSeconds": 3.2328231669962406,
+  "audioSeconds": 42.8465,
+  "combinedSha256": "2a074fd6612bff49e6890c73f9cd5c68dd4e73c689d034fa2c37118be46a1980",
+  "candidates": [
+    {
+      "scene1": 3,
+      "cue1": 3,
+      "original": "계측값은 현재 선택한 단지와 발전기 상태를 보여줍니다.",
+      "candidate": "측정한 값은 현재 선택한 단지와 발전기 상태를 보여줍니다.",
+      "start": 0,
+      "end": 4.5038125,
+      "seconds": 4.5038125,
+      "AIFFsha256": "bc33d3aa3ba1b28a10a5e6be67707be27c709b8e6d5ae8d85b2a9334286ae82c",
+      "PCMsha256": "9e9a8e165e6f4f5bdaa9860f6df03c427947347ebd25306a0d41360d4c22190e"
+    },
+    {
+      "scene1": 3,
+      "cue1": 5,
+      "original": "접수 패널은 마지막 관측값이며 저장 상태 확인으로 서버 상태를 다시 조회합니다.",
+      "candidate": "접수 패널은 마지막으로 받은 결과를 보여주며 저장 상태 확인으로 서버 상태를 다시 조회합니다.",
+      "start": 5.5038125,
+      "end": 11.8766875,
+      "seconds": 6.372875,
+      "AIFFsha256": "645e7dd860f480d7754cebe3204378a119ef91dbd07f8727256bbd10030ad067",
+      "PCMsha256": "2328362de51964806e37801b681d349cdbe8ad939a4cd9e825c80d90016eb1b9"
+    },
+    {
+      "scene1": 4,
+      "cue1": 3,
+      "original": "큐오에스 일은 전달 과정의 중복 가능성이 있으므로 메시지 식별자로 중복을 처리합니다.",
+      "candidate": "큐오에스 일은 전달 과정의 중복 가능성이 있으므로 메시지 아이디로 중복을 처리합니다.",
+      "start": 12.8766875,
+      "end": 18.815312499999997,
+      "seconds": 5.938625,
+      "AIFFsha256": "42e53291a77f82ff6b545c3bfbc36d69bd1cb28d1e3be18ac84521e3437c3b18",
+      "PCMsha256": "b89fb003eaed0026c2d94ae77fc63ffc3def28e34122b9a842ce22b3eb8b28d3"
+    },
+    {
+      "scene1": 5,
+      "cue1": 6,
+      "original": "최근 저장 상태를 최대 스무 개까지 JSON으로 내보냅니다.",
+      "candidate": "최근 저장 상태를 최대 스무 개까지 구조화된 파일로 내보냅니다.",
+      "start": 19.815312499999997,
+      "end": 24.264874999999996,
+      "seconds": 4.4495625,
+      "AIFFsha256": "b5e435d649c3b4b606feecb56e938d62a3251b95ba9b320b6d8823c2acf00b58",
+      "PCMsha256": "9c29a93d90f2ff22bcb37bc6220adc62a1c81e35c919a5c765f0359fa0a3d566"
+    },
+    {
+      "scene1": 7,
+      "cue1": 1,
+      "original": "배속과 일시정지, 난수 시드로 시험 조건을 조절합니다.",
+      "candidate": "배속과 일시정지, 재현에 쓰는 초기값으로 시험 조건을 조절합니다.",
+      "start": 25.264874999999996,
+      "end": 30.431312499999997,
+      "seconds": 5.1664375,
+      "AIFFsha256": "809b30154e343f0f659e34fd4dd0393d99bd5cbb347fa7f2778ddd7bf3201bc2",
+      "PCMsha256": "0c98ae2f1a6491ad58089693f5fdc4e5b897fa2042f69dbe08406570be3f3ab3"
+    },
+    {
+      "scene1": 7,
+      "cue1": 2,
+      "original": "선택한 RTU의 시나리오를 복원하면 새 실행 식별자가 생깁니다.",
+      "candidate": "선택한 RTU의 저장한 시나리오를 다시 불러오면 새 실행 아이디가 생깁니다.",
+      "start": 31.431312499999997,
+      "end": 36.7804375,
+      "seconds": 5.349125,
+      "AIFFsha256": "b50d81bf3828052418f91898f38a1f871429133da019cf4db216c3d43a7f4d79",
+      "PCMsha256": "85f405ae79a58a43d2be15b9eeb92e5565d68dc95af7ab3dd37984bcfb0dbbd6"
+    },
+    {
+      "scene1": 7,
+      "cue1": 4,
+      "original": "가이드에서 이 RTU의 토픽과 규격을 확인합니다.",
+      "candidate": "가이드에서 이 RTU의 토픽과 메시지 형식을 확인합니다.",
+      "start": 37.7804375,
+      "end": 41.8465,
+      "seconds": 4.0660625,
+      "AIFFsha256": "a8c55dbeb7dd212f33eb02198969ac8f70fb026d33bc8dbac2f3d2c1aec1ccb7",
+      "PCMsha256": "81416d2ba8d9efcc9fae3367ed80abcd21f190a3ca003fc3cab8715575ce19de"
+    }
+  ],
+  "actualTranscription": [
+    {
+      "timestamps": {
+        "from": "00:00:00,000",
+        "to": "00:00:05,560"
+      },
+      "offsets": {
+        "from": 0,
+        "to": 5560
+      },
+      "text": " 측정한 값은 현재 선택한 단지와 발전기 상태를 보여줍니다."
+    },
+    {
+      "timestamps": {
+        "from": "00:00:05,560",
+        "to": "00:00:10,080"
+      },
+      "offsets": {
+        "from": 5560,
+        "to": 10080
+      },
+      "text": " 접수 패널은 마지막으로 받은 결과를 보여주며 저장 상태 확인으로 서버"
+    },
+    {
+      "timestamps": {
+        "from": "00:00:10,080",
+        "to": "00:00:11,820"
+      },
+      "offsets": {
+        "from": 10080,
+        "to": 11820
+      },
+      "text": " 상태를 다시 조회합니다."
+    },
+    {
+      "timestamps": {
+        "from": "00:00:11,820",
+        "to": "00:00:17,920"
+      },
+      "offsets": {
+        "from": 11820,
+        "to": 17920
+      },
+      "text": " QoS1은 전달 과정이 중복, 가능성이 있음으로 메시지 아이디로 중복을"
+    },
+    {
+      "timestamps": {
+        "from": "00:00:17,920",
+        "to": "00:00:19,920"
+      },
+      "offsets": {
+        "from": 17920,
+        "to": 19920
+      },
+      "text": " 처리합니다."
+    },
+    {
+      "timestamps": {
+        "from": "00:00:19,920",
+        "to": "00:00:25,320"
+      },
+      "offsets": {
+        "from": 19920,
+        "to": 25320
+      },
+      "text": " 최근 저장 상태를 최대 20개까지 구조화된 파일로 내보냅니다."
+    },
+    {
+      "timestamps": {
+        "from": "00:00:25,320",
+        "to": "00:00:29,840"
+      },
+      "offsets": {
+        "from": 25320,
+        "to": 29840
+      },
+      "text": " 배속과 일시 정지, 재현에 쓰는 초기 값으로 실험, 조건을 조절"
+    },
+    {
+      "timestamps": {
+        "from": "00:00:29,840",
+        "to": "00:00:31,560"
+      },
+      "offsets": {
+        "from": 29840,
+        "to": 31560
+      },
+      "text": " 합니다."
+    },
+    {
+      "timestamps": {
+        "from": "00:00:31,560",
+        "to": "00:00:37,840"
+      },
+      "offsets": {
+        "from": 31560,
+        "to": 37840
+      },
+      "text": " 선택한 RTU의 저장한 시나리오를 다시 불러오면 새 실행 아이디가 생깁니다."
+    },
+    {
+      "timestamps": {
+        "from": "00:00:37,840",
+        "to": "00:00:41,800"
+      },
+      "offsets": {
+        "from": 37840,
+        "to": 41800
+      },
+      "text": " 가이드에서 이 RTU의 토픽과 메시지 형식을 확인합니다."
+    }
+  ],
+  "meaningReview": {
+    "scope": "7 changed sentences only; surrounding unchanged original sentences retain receipt-not-completed/runId/outbox/external-unverified limits",
+    "observed": "All seven intended replacement expressions are present in independent ASR. Small particles/spacing and 시험->실험 remain; no direct pronunciation conclusion.",
+    "specificityLimits": [
+      "구조화된 파일 does not uniquely mean JSON; final UI/caption/deck must retain exact JSON format evidence.",
+      "재현에 쓰는 초기값 describes purpose but omits randomness; visible seed control/original documentation retains exact random-seed meaning.",
+      "선택한 RTU의 저장한 시나리오 is awkward Korean; root should review grammar before adoption."
+    ],
+    "unchangedBoundarySentences": [
+      "명령 접수는 완료와 다릅니다.",
+      "이전 실행은 런 아이디로 구분하며 기존 아웃박스를 삭제하지 않습니다.",
+      "이 파일은 외부 VPP 수신 증거나 전체 감사 이력이 아닙니다."
+    ],
+    "adoption": "not applied; root owns source/narration choice; final video must synthesize anew"
+  }
+}

@@ -1,0 +1,54 @@
+{
+	"systeminfo": "WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | SME2 = 1 | ACCELERATE = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": true,
+		"vocab": 51865,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/ggml-small.bin",
+		"language": "ko",
+		"translate": false
+	},
+	"result": {
+		"language": "ko"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:03,380"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 3380
+			},
+			"text": " 로컬 가상 데이터로 실제 화면을 조작합니다."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,380",
+				"to": "00:00:10,460"
+			},
+			"offsets": {
+				"from": 3380,
+				"to": 10460
+			},
+			"text": " 그리드는 외부 VPP의 데이터 수집과 제어 경로를 시험하며 실물 설비나 시장 입찰은 다루지 않습니다."
+		}
+	]
+}

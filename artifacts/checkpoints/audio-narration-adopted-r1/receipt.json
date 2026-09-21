@@ -1,0 +1,112 @@
+{
+  "state": "TECHNICAL_ASR_RECORDED",
+  "requiresSuccessfulExitReceipt": true,
+  "startedAt": "2026-09-21T18:53:09.480562+00:00",
+  "recordedAt": "2026-09-21T18:53:13.090816+00:00",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "source": {
+    "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-adopted-r1/combined.wav",
+    "sha256": "91950aa76fca722a4c3479954f20fb603809c03c592ef5f447de8ff713592a58"
+  },
+  "pcm": {
+    "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-adopted-r1/transcription/audio.wav",
+    "sha256": "389350f0fb158804fd2f1714ee32510b551cc3e2a725aae7b5bc9f797e235326",
+    "frames": 699800,
+    "durationSeconds": 43.7375
+  },
+  "tools": {
+    "cli": {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/build/bin/whisper-cli",
+      "sha256": "645af2334c629a5ee8ed33b76a2cad4745c9c39c4b003a3ca90616326cb98528"
+    },
+    "model": {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/ggml-small.bin",
+      "sha256": "1be3a9b2063867b937e64e2ec7483364a79917e157fa98c5d94b5c1fffea987b"
+    },
+    "ffmpeg": {
+      "path": "/Users/charleskoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+      "sha256": "6d175a4743ca50256e89a8cdd731100f9cee33bd79aeea46894d209410dc6617"
+    }
+  },
+  "commands": [
+    {
+      "argv": [
+        "/Users/charleskoh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-nostdin",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-protocol_whitelist",
+        "file,pipe",
+        "-i",
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-adopted-r1/combined.wav",
+        "-vn",
+        "-ac",
+        "1",
+        "-ar",
+        "16000",
+        "-c:a",
+        "pcm_s16le",
+        "-t",
+        "601",
+        "-n",
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-adopted-r1/transcription/audio.wav"
+      ],
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/build/bin/whisper-cli",
+        "-m",
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/ggml-small.bin",
+        "-f",
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-adopted-r1/transcription/audio.wav",
+        "-l",
+        "ko",
+        "-t",
+        "4",
+        "-ng",
+        "-oj",
+        "-otxt",
+        "-osrt",
+        "-of",
+        "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-adopted-r1/transcription/transcription"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-adopted-r1/transcription/transcription.json",
+      "bytes": 2771,
+      "sha256": "c2a580e97e8527f82036ac01c1c711b508b533e8939f071862c61837301e7746"
+    },
+    {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-adopted-r1/transcription/transcription.txt",
+      "bytes": 662,
+      "sha256": "8e9e5bfb2cfdc67331bc39b5056c4c255a390440a64b6c912b719f4559bddf74"
+    },
+    {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-adopted-r1/transcription/transcription.srt",
+      "bytes": 968,
+      "sha256": "75d8e3d995946ca729bc6f537b95954b5d4ac5121a61a2c8692d4b1f6722515d"
+    },
+    {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-adopted-r1/transcription/decode.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-adopted-r1/transcription/asr.log",
+      "bytes": 4405,
+      "sha256": "dbe8e3b9cc4e25e8dc92b1a8c3ed35c3206b8bc2d716251133da7ebcc41109a4"
+    }
+  ],
+  "segments": 9,
+  "nonemptyAndActualPcmBoundsValidated": true,
+  "language": "ko",
+  "promptProvided": false,
+  "directListening": false,
+  "naturalPronunciationVerified": false,
+  "semanticReviewRequired": true
+}

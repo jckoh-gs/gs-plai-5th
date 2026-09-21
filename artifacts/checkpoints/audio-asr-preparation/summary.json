@@ -1,0 +1,96 @@
+{
+  "preparationOnly": true,
+  "createdAt": "2026-09-21T18:44:50.345804+00:00",
+  "directListening": false,
+  "ASR": true,
+  "naturalPronunciationVerified": false,
+  "securityReview": "docs/security/AUDIO-ASR-TOOLS-REVIEW.md",
+  "modelLicense": "MIT (pinned HF card metadata)",
+  "buildTarget": "whisper-cli",
+  "buildJobs": 2,
+  "modelPromptProvided": false,
+  "language": "ko",
+  "cpuOnly": true,
+  "shortSeconds": 20,
+  "fullElapsedSeconds": 15.208394541987218,
+  "fullSegments": 33,
+  "newOutputsNonemptyAndBoundsValidated": true,
+  "majorCoreClaimOmissionObservedInTextReview": false,
+  "technicalTermMismatchesRequireReview": true,
+  "subtitlesTimingAuthority": "original scenes/cues + prior32sentence afinfo/SRT verification; ASRsegment times are not subtitle truth",
+  "inputs": [
+    {
+      "path": "artifacts/private/audio-asr-20260921/source/ggml-org-whisper.cpp-927cfce/src/whisper.cpp",
+      "bytes": 341491,
+      "sha256": "c48686fbc2cba1b0ac0f9c8e964188c691e67fff5906f2629f3223ff64f92d16"
+    },
+    {
+      "path": "artifacts/private/audio-asr-20260921/source/ggml-org-whisper.cpp-927cfce/CMakeLists.txt",
+      "bytes": 12772,
+      "sha256": "2f48f0a240f2ad9e6ae7e239ed63ca60bc2f5b431a7f01b56f8d0b4a395b9f3f"
+    },
+    {
+      "path": "artifacts/private/audio-asr-20260921/build/bin/whisper-cli",
+      "bytes": 2518184,
+      "sha256": "645af2334c629a5ee8ed33b76a2cad4745c9c39c4b003a3ca90616326cb98528"
+    },
+    {
+      "path": "artifacts/private/audio-asr-20260921/cmake/cmake-4.4.3-macos-universal/CMake.app/Contents/bin/cmake",
+      "bytes": 26639440,
+      "sha256": "86a5ad068abe889c8d344089eb805bb70012661f1f57c16d5118d14e022f73dc"
+    },
+    {
+      "path": "artifacts/media-preparation/full-candidate17-20260921/GRID-VPP-demo-ko.mp4",
+      "bytes": 12247615,
+      "sha256": "ccb890aa150f918d43cd8610147d5bd6a139c4b1664d1b71c82ef1adfc3acace"
+    },
+    {
+      "path": "artifacts/media-preparation/full-candidate17-20260921/scenes.json",
+      "bytes": 26020,
+      "sha256": "928a5c9075fcc71cb8b8140b0518bfa6ecab557adb1350334bba3e9aba7d731d"
+    },
+    {
+      "path": "artifacts/media-preparation/full-candidate17-20260921/narration-ko.md",
+      "bytes": 2981,
+      "sha256": "a3a8187dae185a496a7e86ac6046e323e461e0f75ec0f1e07c454aea9668d436"
+    },
+    {
+      "path": "artifacts/media-preparation/full-candidate17-20260921/GRID-VPP-demo-ko.srt",
+      "bytes": 3747,
+      "sha256": "4421de4a1d54b72740c245cd8d706a054f84ff4f5757bd0f87dc8d630e9da90d"
+    },
+    {
+      "path": "artifacts/private/audio-asr-20260921/full.wav",
+      "bytes": 7897092,
+      "sha256": "ef4a9ab363165935119e8100ec1e62d8cc331a0f4d793be6a31b6c17502f681f"
+    },
+    {
+      "path": "artifacts/private/audio-asr-20260921/short.wav",
+      "bytes": 640078,
+      "sha256": "93472759002836a0212e6d84759cabea4556ca9e1acb6effeeaa7152c72d4093"
+    }
+  ],
+  "handles": {
+    "downloads": {
+      "session": 61093,
+      "exitCode": 0
+    },
+    "build": {
+      "session": 8454,
+      "exitCode": 0
+    },
+    "short": {
+      "session": 70230,
+      "exitCode": 0
+    },
+    "full": {
+      "session": 37986,
+      "exitCode": 0
+    }
+  },
+  "largeFilesPrivateOnly": true,
+  "sourceVideoSeconds": 255.33,
+  "fullPcmAudioSeconds": 246.7816875,
+  "audioTailNote": "MP4 video255.33sec; extracted complete audio stream246.7816875sec; final recognized segment ends246.68sec. ASR covers complete audio stream, not silent video tail.",
+  "actualPcmBoundsRechecked": true
+}

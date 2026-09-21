@@ -1,0 +1,88 @@
+whisper_init_from_file_with_params_no_state: loading model from '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/ggml-small.bin'
+whisper_init_with_params_no_state: use gpu    = 0
+whisper_init_with_params_no_state: flash attn = 1
+whisper_init_with_params_no_state: gpu_device = 0
+whisper_init_with_params_no_state: dtw        = 0
+whisper_init_with_params_no_state: devices    = 2
+whisper_init_with_params_no_state: backends   = 2
+whisper_model_load: loading model
+whisper_model_load: n_vocab       = 51865
+whisper_model_load: n_audio_ctx   = 1500
+whisper_model_load: n_audio_state = 768
+whisper_model_load: n_audio_head  = 12
+whisper_model_load: n_audio_layer = 12
+whisper_model_load: n_text_ctx    = 448
+whisper_model_load: n_text_state  = 768
+whisper_model_load: n_text_head   = 12
+whisper_model_load: n_text_layer  = 12
+whisper_model_load: n_mels        = 80
+whisper_model_load: ftype         = 1
+whisper_model_load: qntvr         = 0
+whisper_model_load: type          = 3 (small)
+whisper_model_load: adding 1608 extra tokens
+whisper_model_load: n_langs       = 99
+whisper_model_load:          CPU total size =   487.01 MB
+whisper_model_load: model size    =  487.01 MB
+whisper_backend_init_gpu: no GPU found
+whisper_backend_init: using BLAS backend
+whisper_init_state: kv self size  =   18.87 MB
+whisper_init_state: kv cross size =   56.62 MB
+whisper_init_state: kv pad  size  =    4.72 MB
+whisper_init_state: compute buffer (conv)   =   22.42 MB
+whisper_init_state: compute buffer (encode) =   33.85 MB
+whisper_init_state: compute buffer (cross)  =    6.20 MB
+whisper_init_state: compute buffer (decode) =   97.28 MB
+read_audio_data: reading audio data from '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/full.wav' ...
+read_audio_data: trying to decode with miniaudio
+
+system_info: n_threads = 4 / 15 | WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | SME2 = 1 | ACCELERATE = 1 | REPACK = 1 | 
+
+main: processing '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/full.wav' (3948507 samples, 246.8 sec), 4 threads, 1 processors, 5 beams + best of 5, lang = ko, task = transcribe, timestamps = 1 ...
+
+
+[00:00:00.000 --> 00:00:04.160]   이 영상은 제작 과정을 확인하는 리허설입니다.
+[00:00:04.160 --> 00:00:07.600]   로컬 가상 데이터로 실제 화면을 조작합니다.
+[00:00:07.600 --> 00:00:12.280]   그리드는 외부 VPP의 데이터 수집과 제어 경로를 시험하며 실물설비
+[00:00:12.280 --> 00:00:14.480]   나 시장 입찰은 다루지 않습니다.
+[00:00:14.480 --> 00:00:31.960]   CSV 또는 TSV를 넣고 해서 미리 보기로 시각과 단위, 정규화 출력을 먼저 확인합니다.
+[00:00:31.960 --> 00:00:34.680]   미리 보기는 RTU를 만들지 않습니다.
+[00:00:34.680 --> 00:00:39.240]   실제 등록 때 다시 검증하고 1초 단위 수집을 시작합니다.
+[00:00:39.240 --> 00:00:59.040]   원본 전류와 추정 전류도 구분합니다.
+[00:00:59.040 --> 00:01:03.680]   풍력과 태양광 복합 단지를 같은 데시포드에서 선택합니다.
+[00:01:03.680 --> 00:01:09.240]   3차원 장면에서 풍양과 회전을 확인하고, 드래그와 훌로 시점을 조절합니다.
+[00:01:09.240 --> 00:01:13.560]   개축합순 현재 선택한 단지와 발전기 상태를 보여줍니다.
+[00:01:13.560 --> 00:01:15.680]   명령 접수는 완료와 다릅니다.
+[00:01:15.680 --> 00:01:21.680]   접수 패널은 마지막 관측합시며, 저장 상태 확인으로 서버 상태를 다시 조회합니다.
+[00:01:34.680 --> 00:01:39.280]   각 RTU는 연결과 건강 상태를 독립적으로 관리합니다.
+[00:01:39.280 --> 00:01:44.920]   전체 발전기의 샘플을 수집하고, 기본 60초마다 MQTT로 전송합니다.
+[00:01:44.920 --> 00:02:03.080]   QOS1은 전달 과정이 중복, 가능성이 있으므로 메시지 10별자로 중복을 처리합니다.
+[00:02:03.080 --> 00:02:07.520]   별도 MQTT 클라이언트로 125kW를 요청합니다.
+[00:02:07.520 --> 00:02:12.600]   수락과 실행을 거쳐 실제 출력이 목표에 도달하면 완료 상태를 받습니다.
+[00:02:12.600 --> 00:02:16.760]   화면에 MQTT 출처와 목표 및 실제 값을 확인합니다.
+[00:02:16.760 --> 00:02:20.360]   이 결과는 실제 로컬 브로커에서 관측한 값입니다.
+[00:02:20.360 --> 00:02:25.720]   목록의 마지막 확인 시각은 브라우저 조회 시각이며, 명령 완료 시각과 다릅니다.
+[00:02:25.720 --> 00:02:29.720]   최근 저장 상태를 최대 20개까지 직선으로 내보냅니다.
+[00:02:29.720 --> 00:02:49.120]   이 파일은 외부 VPP 수신 증거나 전체 감사 이력이 아닙니다.
+[00:02:49.120 --> 00:02:53.120]   통신 단절과 지연, 센서 중지를 구분해 시험합니다.
+[00:02:53.120 --> 00:02:56.120]   센서가 멈춘 구간은 결측으로 남습니다.
+[00:02:56.120 --> 00:03:21.160]   미확인 배치의 재시작 복구는 함께 제공하는 별도 실행 근거에서 확인할 수 있습니다.
+[00:03:21.160 --> 00:03:25.480]   배속과 일시 정지, 난소시드로 시험, 조건을 조절합니다.
+[00:03:25.480 --> 00:03:30.400]   선택한 RTU의 시나리오를 보건하면, 새 실행 식결자가 생깁니다.
+[00:03:30.400 --> 00:03:34.920]   이전 실행은 런 아이디로 구분하며 기존 아웃박스를 삭제하지 않습니다.
+[00:03:34.920 --> 00:03:51.200]   가이드에서 이 RTU의 토픽과 교격을 확인합니다.
+[00:03:51.200 --> 00:03:54.720]   이 리허설은 로컬 동작과 제작 도구를 확인했습니다.
+[00:03:54.720 --> 00:03:58.680]   최종 영상은 동결한 K3S 버전으로 새로 녹화합니다.
+[00:03:58.680 --> 00:04:06.680]   최종 발표 자료와 영상은 같은 릴리스 증거를 사용하며 실제 외부 VPP와 클라우드 미검증 범위를 명시합니다.
+output_txt: saving output to '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/asr-full.txt'
+output_srt: saving output to '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/asr-full.srt'
+output_json: saving output to '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/asr-full.json'
+
+whisper_print_timings:     load time =   100.97 ms
+whisper_print_timings:     fallbacks =   0 p /   0 h
+whisper_print_timings:      mel time =    49.93 ms
+whisper_print_timings:   sample time =   610.80 ms /  4155 runs (     0.15 ms per run)
+whisper_print_timings:   encode time =  4947.59 ms /    10 runs (   494.76 ms per run)
+whisper_print_timings:   decode time =    39.92 ms /    10 runs (     3.99 ms per run)
+whisper_print_timings:   batchd time =  8233.01 ms /  4098 runs (     2.01 ms per run)
+whisper_print_timings:   prompt time =  1088.27 ms /  1797 runs (     0.61 ms per run)
+whisper_print_timings:    total time = 15150.74 ms

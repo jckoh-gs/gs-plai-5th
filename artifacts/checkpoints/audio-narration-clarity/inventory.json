@@ -1,0 +1,40 @@
+{
+  "preparationOnly": true,
+  "files": [
+    {
+      "file": "asr.log",
+      "bytes": 4372,
+      "sha256": "5f3ec226800c1466889008d0c64b07f3fdc50ba571764fcb3248cd216fb38a27"
+    },
+    {
+      "file": "candidate-asr.json",
+      "bytes": 2941,
+      "sha256": "058a7fae7f37a13b135d58d9853ac46beb39be9d03bb356f54abc3f49ce14fb9"
+    },
+    {
+      "file": "candidate-asr.srt",
+      "bytes": 1015,
+      "sha256": "4004e8072e23ef28c744561829b53602d0dbc2b3a8b754f29ac89d5ddae8d599"
+    },
+    {
+      "file": "candidate-asr.txt",
+      "bytes": 674,
+      "sha256": "cbd0ac4afb0c00315dabe62d2e2c34b36523ffb9f869199d1394635927b91006"
+    },
+    {
+      "file": "comparison.json",
+      "bytes": 8482,
+      "sha256": "66756c5928ce2252e322d226dd8a83da0586635d78cb18700ba41b05184cbadb"
+    },
+    {
+      "file": "review.md",
+      "bytes": 2119,
+      "sha256": "45253249d2675f8cc6c2edb9d0972e740ba89627d9d7f6293d38c3aca27b3873"
+    },
+    {
+      "file": "run.py",
+      "bytes": 3460,
+      "sha256": "bedf623fa59c2e1ebbeff7dcb03fda2e5152060ba53db098d6af312d5fa8799b"
+    }
+  ]
+}

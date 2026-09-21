@@ -1,0 +1,64 @@
+whisper_init_from_file_with_params_no_state: loading model from '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/ggml-small.bin'
+whisper_init_with_params_no_state: use gpu    = 0
+whisper_init_with_params_no_state: flash attn = 1
+whisper_init_with_params_no_state: gpu_device = 0
+whisper_init_with_params_no_state: dtw        = 0
+whisper_init_with_params_no_state: devices    = 2
+whisper_init_with_params_no_state: backends   = 2
+whisper_model_load: loading model
+whisper_model_load: n_vocab       = 51865
+whisper_model_load: n_audio_ctx   = 1500
+whisper_model_load: n_audio_state = 768
+whisper_model_load: n_audio_head  = 12
+whisper_model_load: n_audio_layer = 12
+whisper_model_load: n_text_ctx    = 448
+whisper_model_load: n_text_state  = 768
+whisper_model_load: n_text_head   = 12
+whisper_model_load: n_text_layer  = 12
+whisper_model_load: n_mels        = 80
+whisper_model_load: ftype         = 1
+whisper_model_load: qntvr         = 0
+whisper_model_load: type          = 3 (small)
+whisper_model_load: adding 1608 extra tokens
+whisper_model_load: n_langs       = 99
+whisper_model_load:          CPU total size =   487.01 MB
+whisper_model_load: model size    =  487.01 MB
+whisper_backend_init_gpu: no GPU found
+whisper_backend_init: using BLAS backend
+whisper_init_state: kv self size  =   18.87 MB
+whisper_init_state: kv cross size =   56.62 MB
+whisper_init_state: kv pad  size  =    4.72 MB
+whisper_init_state: compute buffer (conv)   =   22.42 MB
+whisper_init_state: compute buffer (encode) =   33.85 MB
+whisper_init_state: compute buffer (cross)  =    6.20 MB
+whisper_init_state: compute buffer (decode) =   97.28 MB
+read_audio_data: reading audio data from '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-adopted-r1/transcription/audio.wav' ...
+read_audio_data: trying to decode with miniaudio
+
+system_info: n_threads = 4 / 15 | WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | SME2 = 1 | ACCELERATE = 1 | REPACK = 1 | 
+
+main: processing '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-adopted-r1/transcription/audio.wav' (699800 samples, 43.7 sec), 4 threads, 1 processors, 5 beams + best of 5, lang = ko, task = transcribe, timestamps = 1 ...
+
+
+[00:00:00.000 --> 00:00:05.720]   측정한 값은 현재 선택한 단지와 발전기 상태를 보여줍니다.
+[00:00:05.720 --> 00:00:10.480]   접수 패널은 마지막으로 받은 결과를 보여주며 저장 상태 확인으로 써본
+[00:00:10.480 --> 00:00:12.220]   상태를 다시 조회합니다.
+[00:00:12.220 --> 00:00:18.440]   qos-1은 전달 과정에서 중복이 생길 수 있으므로 메시지 id로 중복을
+[00:00:18.440 --> 00:00:20.440]   처리합니다.
+[00:00:20.440 --> 00:00:25.680]   최근 저장 상태를 최대 20개까지 json 파일로 내보냅니다.
+[00:00:25.680 --> 00:00:32.640]   개속과 일시 정지, 난소 생성에 쓰는 초기 값으로 시험, 조건을 조절합니다.
+[00:00:32.640 --> 00:00:38.800]   선택한 rtu에 저장된 시나리오를 다시 불러오면 새 실행 id가 생깁니다.
+[00:00:38.800 --> 00:00:42.720]   가이드에서 이 rtu에 토픽과 메시지 형식을 확인합니다.
+output_txt: saving output to '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-adopted-r1/transcription/transcription.txt'
+output_srt: saving output to '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-adopted-r1/transcription/transcription.srt'
+output_json: saving output to '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-adopted-r1/transcription/transcription.json'
+
+whisper_print_timings:     load time =   100.11 ms
+whisper_print_timings:     fallbacks =   0 p /   0 h
+whisper_print_timings:      mel time =     9.15 ms
+whisper_print_timings:   sample time =   144.98 ms /  1029 runs (     0.14 ms per run)
+whisper_print_timings:   encode time =   993.17 ms /     2 runs (   496.59 ms per run)
+whisper_print_timings:   decode time =     3.54 ms /     1 runs (     3.54 ms per run)
+whisper_print_timings:   batchd time =  1974.32 ms /  1021 runs (     1.93 ms per run)
+whisper_print_timings:   prompt time =    94.08 ms /   123 runs (     0.76 ms per run)
+whisper_print_timings:    total time =  3339.42 ms

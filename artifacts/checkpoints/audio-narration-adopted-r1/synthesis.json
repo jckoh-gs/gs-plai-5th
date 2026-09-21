@@ -1,0 +1,79 @@
+{
+  "preparationOnly": true,
+  "directListening": false,
+  "finalAudio": false,
+  "revision": 1,
+  "voice": "Yuna",
+  "speechRate": 170,
+  "sourceHashes": {
+    "scripts/media/scenes-template.json": "096e8ed40db8c83d9c37045449d47962e4ded10e0864d907bfe183c78c16d74e",
+    "scripts/media/scene-plan.cjs": "274e72fba29fa8b34c6c7d2c4e4f939d5b112ef4b5e04b660afd37cc367d1231",
+    "scripts/media/transcribe-audio.py": "7077f0801685ebee5ef78f34ea17a57971267fb7716e8df1dda0d61cef26019a"
+  },
+  "sentences": [
+    {
+      "sentence1": 1,
+      "adoptedText": "측정한 값은 현재 선택한 단지와 발전기 상태를 보여줍니다.",
+      "start": 0,
+      "end": 4.5038125,
+      "seconds": 4.5038125,
+      "AIFFsha256": "bc33d3aa3ba1b28a10a5e6be67707be27c709b8e6d5ae8d85b2a9334286ae82c",
+      "PCMsha256": "9e9a8e165e6f4f5bdaa9860f6df03c427947347ebd25306a0d41360d4c22190e"
+    },
+    {
+      "sentence1": 2,
+      "adoptedText": "접수 패널은 마지막으로 받은 결과를 보여주며, 저장 상태 확인으로 서버 상태를 다시 조회합니다.",
+      "start": 5.5038125,
+      "end": 12.291625,
+      "seconds": 6.7878125,
+      "AIFFsha256": "0c291cf321dd34dacf64bb8641020b5b9ee91efd1ad56ab9e7df7be8c18cbbd4",
+      "PCMsha256": "95f21c79c6f0ea79c2e0bb03a63970bfe8456ff7caeefa396f35b008760065bf"
+    },
+    {
+      "sentence1": 3,
+      "adoptedText": "큐오에스 일은 전달 과정에서 중복이 생길 수 있으므로 메시지 아이디로 중복을 처리합니다.",
+      "start": 13.291625,
+      "end": 19.2999375,
+      "seconds": 6.0083125,
+      "AIFFsha256": "787622ddffbee5630977575bb3cc4141fd30b4fce3c2c2d97455b3e460d8bcbe",
+      "PCMsha256": "f4615b5c664462fd5eacb0b039df7af50a7baf82e4fa4d4b91dff37c48ebbf36"
+    },
+    {
+      "sentence1": 4,
+      "adoptedText": "최근 저장 상태를 최대 스무 개까지 제이슨 파일로 내보냅니다.",
+      "start": 20.2999375,
+      "end": 24.633374999999997,
+      "seconds": 4.3334375,
+      "AIFFsha256": "0a731667d9f9082ea36afab3f68f12e4e258b50fc434dbf4f47887f0156842d2",
+      "PCMsha256": "aa6069a78cf57822cc90808bb54fc3e8f78146d2cd8a648f9cc3ef58706db47e"
+    },
+    {
+      "sentence1": 5,
+      "adoptedText": "배속과 일시정지, 난수 생성에 쓰는 초기값으로 시험 조건을 조절합니다.",
+      "start": 25.633374999999997,
+      "end": 31.240999999999996,
+      "seconds": 5.607625,
+      "AIFFsha256": "049f397eb5cbc059249f21706fe51c6de0f158613691fe476447258fabe59d0f",
+      "PCMsha256": "6eccb6d24f237528731fd70ff4cf0a5dc0d8b4a607d09decc2d3a07796374c2e"
+    },
+    {
+      "sentence1": 6,
+      "adoptedText": "선택한 RTU에 저장된 시나리오를 다시 불러오면 새 실행 아이디가 생깁니다.",
+      "start": 32.241,
+      "end": 37.671437499999996,
+      "seconds": 5.4304375,
+      "AIFFsha256": "91a84db33d25ba89deb8d605182bf8eaf636458ab201e21519da7ae2008853bd",
+      "PCMsha256": "3aa9b9585644e30480edddd84f3743a241d965f38eff36ea78d137946228105f"
+    },
+    {
+      "sentence1": 7,
+      "adoptedText": "가이드에서 이 RTU의 토픽과 메시지 형식을 확인합니다.",
+      "start": 38.671437499999996,
+      "end": 42.7375,
+      "seconds": 4.0660625,
+      "AIFFsha256": "a8c55dbeb7dd212f33eb02198969ac8f70fb026d33bc8dbac2f3d2c1aec1ccb7",
+      "PCMsha256": "81416d2ba8d9efcc9fae3367ed80abcd21f190a3ca003fc3cab8715575ce19de"
+    }
+  ],
+  "combinedSha256": "91950aa76fca722a4c3479954f20fb603809c03c592ef5f447de8ff713592a58"
+}

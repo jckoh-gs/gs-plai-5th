@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-09-21T18:53:12.964358+00:00",
+  "scope": "Actual existing 1.7 rehearsal transcription with the reusable pinned helper; not final media",
+  "execution": {
+    "owner": "/root",
+    "handle": 2205,
+    "terminalExitCode": 0,
+    "stdoutReceiptSha256": "4e261eabf102e569d788f59a0199e768889f26b5d83d445081c4097ddd53ed77"
+  },
+  "helper": {
+    "path": "scripts/media/transcribe-audio.py",
+    "sha256": "7077f0801685ebee5ef78f34ea17a57971267fb7716e8df1dda0d61cef26019a"
+  },
+  "receipt": "receipt.json",
+  "actualPcmDurationSeconds": 246.7816875,
+  "segments": 33,
+  "independentInventoryHashCounts": {
+    "audio-review-preparation": 2,
+    "audio-asr-preparation": 24,
+    "audio-narration-clarity": 7
+  },
+  "directListening": false,
+  "naturalPronunciationVerified": false,
+  "semanticReviewRequired": true,
+  "finalWindowRecheckRequired": true
+}

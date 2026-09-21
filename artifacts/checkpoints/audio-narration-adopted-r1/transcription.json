@@ -1,0 +1,131 @@
+{
+	"systeminfo": "WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | SME2 = 1 | ACCELERATE = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": true,
+		"vocab": 51865,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/ggml-small.bin",
+		"language": "ko",
+		"translate": false
+	},
+	"result": {
+		"language": "ko"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:05,720"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 5720
+			},
+			"text": " 측정한 값은 현재 선택한 단지와 발전기 상태를 보여줍니다."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:05,720",
+				"to": "00:00:10,480"
+			},
+			"offsets": {
+				"from": 5720,
+				"to": 10480
+			},
+			"text": " 접수 패널은 마지막으로 받은 결과를 보여주며 저장 상태 확인으로 써본"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:10,480",
+				"to": "00:00:12,220"
+			},
+			"offsets": {
+				"from": 10480,
+				"to": 12220
+			},
+			"text": " 상태를 다시 조회합니다."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:12,220",
+				"to": "00:00:18,440"
+			},
+			"offsets": {
+				"from": 12220,
+				"to": 18440
+			},
+			"text": " qos-1은 전달 과정에서 중복이 생길 수 있으므로 메시지 id로 중복을"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:18,440",
+				"to": "00:00:20,440"
+			},
+			"offsets": {
+				"from": 18440,
+				"to": 20440
+			},
+			"text": " 처리합니다."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:20,440",
+				"to": "00:00:25,680"
+			},
+			"offsets": {
+				"from": 20440,
+				"to": 25680
+			},
+			"text": " 최근 저장 상태를 최대 20개까지 json 파일로 내보냅니다."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:25,680",
+				"to": "00:00:32,640"
+			},
+			"offsets": {
+				"from": 25680,
+				"to": 32640
+			},
+			"text": " 개속과 일시 정지, 난소 생성에 쓰는 초기 값으로 시험, 조건을 조절합니다."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:32,640",
+				"to": "00:00:38,800"
+			},
+			"offsets": {
+				"from": 32640,
+				"to": 38800
+			},
+			"text": " 선택한 rtu에 저장된 시나리오를 다시 불러오면 새 실행 id가 생깁니다."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:38,800",
+				"to": "00:00:42,720"
+			},
+			"offsets": {
+				"from": 38800,
+				"to": 42720
+			},
+			"text": " 가이드에서 이 rtu에 토픽과 메시지 형식을 확인합니다."
+		}
+	]
+}

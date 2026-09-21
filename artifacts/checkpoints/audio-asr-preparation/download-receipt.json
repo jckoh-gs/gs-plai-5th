@@ -1,0 +1,23 @@
+{
+  "commit": "927cfce34f31707e17f2bff35c349632fb9e2c3a",
+  "files": [
+    {
+      "file": "source.tar.gz",
+      "url": "https://api.github.com/repos/ggml-org/whisper.cpp/tarball/927cfce34f31707e17f2bff35c349632fb9e2c3a",
+      "size": 9354923,
+      "sha256": "57e0d8d9a2f9cf5569a7ce3a653e42fbe0e8b89a1ef4e599aa25121a1fcd481b"
+    },
+    {
+      "file": "cmake.tar.gz",
+      "url": "https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz",
+      "size": 89445170,
+      "sha256": "0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa"
+    },
+    {
+      "file": "ggml-small.bin",
+      "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-small.bin",
+      "size": 487601967,
+      "sha256": "1be3a9b2063867b937e64e2ec7483364a79917e157fa98c5d94b5c1fffea987b"
+    }
+  ]
+}

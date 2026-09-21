@@ -1,0 +1,125 @@
+{
+  "preparationOnly": true,
+  "files": [
+    {
+      "file": "asr-full.json",
+      "bytes": 8558,
+      "sha256": "6ae42efc5e8b400b10cf97363688a6f1da59f8375d8b10237143de9131cc2c41"
+    },
+    {
+      "file": "asr-full.srt",
+      "bytes": 3768,
+      "sha256": "c4036aba84fc6bfccb52a1f178dc7ccd138bd123b9905619fffa9a363af78f00"
+    },
+    {
+      "file": "asr-full.txt",
+      "bytes": 2622,
+      "sha256": "ff3d0807f32e46cba6a54bf58d341cc44b1bc090edc428277877159ca4cadffe"
+    },
+    {
+      "file": "asr-short.json",
+      "bytes": 1199,
+      "sha256": "4bf41697eb4a761b27f2d4ed3322498662defecb3803c36339075da569e4c37e"
+    },
+    {
+      "file": "asr-short.srt",
+      "bytes": 264,
+      "sha256": "22a374f82fa8fe70efdec672496d542685c0dd94824a1530063e0123e74336bc"
+    },
+    {
+      "file": "asr-short.txt",
+      "bytes": 196,
+      "sha256": "572955b9e70303243e7df7dffc1f5b89a126e8e6bac9c468930edc6e2f5a64a8"
+    },
+    {
+      "file": "audio-inputs.json",
+      "bytes": 607,
+      "sha256": "b910ce794319638166a6a0c395cfe1776b10cfaa9188d274ce4ba78e565c18e0"
+    },
+    {
+      "file": "build.log",
+      "bytes": 7786,
+      "sha256": "343df6b95114f0c2f70cd5752de92ef00730ffff3de50c0a42d154ed2bc71317"
+    },
+    {
+      "file": "build.sh",
+      "bytes": 731,
+      "sha256": "4790beb378ed753bfe7e464243adf26b9a43bc70254dc9b55ebd8954f08250d1"
+    },
+    {
+      "file": "cmake-LICENSE.rst",
+      "bytes": 1498,
+      "sha256": "4382e7c1879ac90e3f101a395d23846fa4dbcaa1eed7265b43681e348754825d"
+    },
+    {
+      "file": "cmake-sha.txt",
+      "bytes": 2015,
+      "sha256": "1726140f0b13bf99e4ad4e89389d5aed758e1658ebfe1ed4aa2c2b32dde839f5"
+    },
+    {
+      "file": "comparison.md",
+      "bytes": 4433,
+      "sha256": "7bb3d5bc0b9f09b7b60b0dd21107af670e9fe4d687272471f9f8eaec69c2bd6b"
+    },
+    {
+      "file": "download-receipt.json",
+      "bytes": 877,
+      "sha256": "855bcb87cd1ca6bd7c660f5244749f3755e28671e8def1070f03696381119c31"
+    },
+    {
+      "file": "full-asr.log",
+      "bytes": 7056,
+      "sha256": "d10d0c4b17c23685f4ececbb9a0b3fc7f8d9616d2ef9a402bd7a06e3289f7209"
+    },
+    {
+      "file": "full-receipt.json",
+      "bytes": 1427,
+      "sha256": "dda44e0a43b5d82e2cdb8d34f56c06d4c3a1ebd3b2d24fb7bc7ce907507e16fb"
+    },
+    {
+      "file": "mismatches.json",
+      "bytes": 6972,
+      "sha256": "a5ed26b9284a9406753349de42e5bf0010b6de4b79e67d976e21af3694121bbb"
+    },
+    {
+      "file": "model.json",
+      "bytes": 12592,
+      "sha256": "17bb1445ab90ac5a6601309135809b77aaff4c56021df82843414095f34c0cc6"
+    },
+    {
+      "file": "short-asr.log",
+      "bytes": 3579,
+      "sha256": "34b9c99997ddbc7b4fac2adcb94227853e951b8d5c0c9a947f50629bd25f8477"
+    },
+    {
+      "file": "short-receipt.json",
+      "bytes": 1431,
+      "sha256": "4b796ce90a7050210c8b48d64179b7ce0abada90e33849d8dbc2b8e64ace0442"
+    },
+    {
+      "file": "summary.json",
+      "bytes": 3479,
+      "sha256": "57f1cf4b3d1111dc3ff7341901f54577ed23f7627277efba588a3be8610836d9"
+    },
+    {
+      "file": "tag-object.json",
+      "bytes": 702,
+      "sha256": "28825afac8bfded6b47ed4d7322b417d1c79a9e34a920646ac921c6df124adf0"
+    },
+    {
+      "file": "tag.json",
+      "bytes": 335,
+      "sha256": "23c680242a8472d2157828446cb7de2b19026a6e4ce1da58e4f04ef1d1e52906"
+    },
+    {
+      "file": "transcribe.py",
+      "bytes": 1486,
+      "sha256": "3af7eb85ca27f13e3439e8a3f09c9adc70bf9fab5c2b60129b773a6622c16460"
+    },
+    {
+      "file": "whisper-LICENSE.txt",
+      "bytes": 1078,
+      "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+    }
+  ]
+}

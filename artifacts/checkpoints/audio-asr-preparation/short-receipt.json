@@ -1,0 +1,40 @@
+{
+  "command": [
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/build/bin/whisper-cli",
+    "-m",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/ggml-small.bin",
+    "-f",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/short.wav",
+    "-l",
+    "ko",
+    "-t",
+    "4",
+    "-ng",
+    "-oj",
+    "-otxt",
+    "-osrt",
+    "-of",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/asr-short"
+  ],
+  "startedAt": "2026-09-21T18:43:49.466891+00:00",
+  "endedAt": "2026-09-21T18:43:51.177082+00:00",
+  "elapsedSeconds": 1.7100519170053303,
+  "exitCode": 0,
+  "promptProvided": false,
+  "segments": 2,
+  "nonemptyAndBoundsValidated": true,
+  "outputs": [
+    {
+      "file": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/asr-short.txt",
+      "sha256": "572955b9e70303243e7df7dffc1f5b89a126e8e6bac9c468930edc6e2f5a64a8"
+    },
+    {
+      "file": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/asr-short.srt",
+      "sha256": "22a374f82fa8fe70efdec672496d542685c0dd94824a1530063e0123e74336bc"
+    },
+    {
+      "file": "/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/asr-short.json",
+      "sha256": "4bf41697eb4a761b27f2d4ed3322498662defecb3803c36339075da569e4c37e"
+    }
+  ]
+}

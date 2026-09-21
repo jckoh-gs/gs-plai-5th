@@ -1,0 +1,19 @@
+{
+  "createdAt": "2026-09-21T18:42:35.359442+00:00",
+  "video": "artifacts/media-preparation/full-candidate17-20260921/GRID-VPP-demo-ko.mp4",
+  "videoSha256": "ccb890aa150f918d43cd8610147d5bd6a139c4b1664d1b71c82ef1adfc3acace",
+  "audio": [
+    {
+      "path": "artifacts/private/audio-asr-20260921/full.wav",
+      "sha256": "ef4a9ab363165935119e8100ec1e62d8cc331a0f4d793be6a31b6c17502f681f"
+    },
+    {
+      "path": "artifacts/private/audio-asr-20260921/short.wav",
+      "sha256": "93472759002836a0212e6d84759cabea4556ca9e1acb6effeeaa7152c72d4093"
+    }
+  ],
+  "shortRangeSeconds": [
+    4,
+    24
+  ]
+}

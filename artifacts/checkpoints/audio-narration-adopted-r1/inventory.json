@@ -1,0 +1,50 @@
+{
+  "preparationOnly": true,
+  "files": [
+    {
+      "file": "asr.log",
+      "bytes": 4405,
+      "sha256": "dbe8e3b9cc4e25e8dc92b1a8c3ed35c3206b8bc2d716251133da7ebcc41109a4"
+    },
+    {
+      "file": "decode.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "receipt.json",
+      "bytes": 4442,
+      "sha256": "62c17f2eb690095a01bb436fc2eb1494a78e881bb8a6aaa284ca27db377348b9"
+    },
+    {
+      "file": "review.json",
+      "bytes": 1676,
+      "sha256": "1ffb6bde4ac1e45ebe416b7d2ac8337b6cb7a6917f72e02b29f2fc08768b41f3"
+    },
+    {
+      "file": "synthesis.json",
+      "bytes": 3499,
+      "sha256": "0ee665aa581c8dda24470b107b7d263a7bb0343f16dd20921716eb1fc67f8351"
+    },
+    {
+      "file": "synthesize.py",
+      "bytes": 2494,
+      "sha256": "e1a6b8b770589409280c3b392e8a09e23949faeb5946a5b1b62e8e26dc87d2da"
+    },
+    {
+      "file": "transcription.json",
+      "bytes": 2771,
+      "sha256": "c2a580e97e8527f82036ac01c1c711b508b533e8939f071862c61837301e7746"
+    },
+    {
+      "file": "transcription.srt",
+      "bytes": 968,
+      "sha256": "75d8e3d995946ca729bc6f537b95954b5d4ac5121a61a2c8692d4b1f6722515d"
+    },
+    {
+      "file": "transcription.txt",
+      "bytes": 662,
+      "sha256": "8e9e5bfb2cfdc67331bc39b5056c4c255a390440a64b6c912b719f4559bddf74"
+    }
+  ]
+}

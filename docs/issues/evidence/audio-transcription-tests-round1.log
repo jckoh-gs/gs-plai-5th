@@ -1,0 +1,19 @@
+test_cli_hash_mismatch_prevents_decoder_launch (__main__.FileAndPrelaunchBoundaries.test_cli_hash_mismatch_prevents_decoder_launch) ... ok
+test_existing_output_preserved_before_launch (__main__.FileAndPrelaunchBoundaries.test_existing_output_preserved_before_launch) ... ok
+test_model_hash_mismatch_prevents_decoder_launch (__main__.FileAndPrelaunchBoundaries.test_model_hash_mismatch_prevents_decoder_launch) ... ok
+test_output_symlink_rejected_before_launch (__main__.FileAndPrelaunchBoundaries.test_output_symlink_rejected_before_launch) ... ok
+test_receipt_late_fsync_contract_static_not_fake_asr_success (__main__.FileAndPrelaunchBoundaries.test_receipt_late_fsync_contract_static_not_fake_asr_success) ... ok
+test_regular_path_rejects_input_or_parent_symlink (__main__.FileAndPrelaunchBoundaries.test_regular_path_rejects_input_or_parent_symlink) ... ok
+test_30ms_rounding_boundary_not_container_duration (__main__.TranscriptValidation.test_30ms_rounding_boundary_not_container_duration) ... ok
+test_duration_numeric_finite_and_inclusive_10_to_600 (__main__.TranscriptValidation.test_duration_numeric_finite_and_inclusive_10_to_600) ... ok
+test_empty_and_blank_are_not_evidence (__main__.TranscriptValidation.test_empty_and_blank_are_not_evidence) ... ok
+test_language_and_translation_must_be_exact (__main__.TranscriptValidation.test_language_and_translation_must_be_exact) ... ok
+test_negative_reverse_overlap_and_outside_actual_pcm (__main__.TranscriptValidation.test_negative_reverse_overlap_and_outside_actual_pcm) ... ok
+test_offsets_reject_bool_nonfinite_and_nonnumeric (__main__.TranscriptValidation.test_offsets_reject_bool_nonfinite_and_nonnumeric) ... ok
+test_text_must_be_string (__main__.TranscriptValidation.test_text_must_be_string) ... ok
+test_valid_korean_actual_pcm_bounds (__main__.TranscriptValidation.test_valid_korean_actual_pcm_bounds) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.007s
+
+OK

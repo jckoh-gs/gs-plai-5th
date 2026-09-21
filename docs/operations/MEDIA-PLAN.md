@@ -2,6 +2,14 @@
 
 최종 제작 시점은 run.json의 freezeAt 이후이며 현재 파일은 준비 계획이다. 영상과 발표자료는 당시 검증된 동일 커밋·이미지·PRD 버전을 사용한다. 인증 토큰·암호·개인 데이터가 화면·음성·자막에 나타나지 않게 로그인 후 녹화를 시작한다.
 
+원고 revision1은 [REVIEW050](../product/REVIEW-050.md)의 의미 검토에 따라 측정한 값·메시지 아이디·제이슨 파일·새 실행 아이디 등7표현을 반영했다. [실제 후보 음성 대조](../../artifacts/checkpoints/audio-narration-adopted-r1/review.json)에서 일부 인식 차이가 남아 있으므로 직접 청취·발음 적합으로 표현하지 않는다. 화면의 JSON·난수 시드와 기술 계약은 유지했다. 최종 MP4의 새 로컬 전사·실제PCM 길이 검증·성공 종료 및 해시 영수증 절차는 [음성 검수 준비](AUDIO-REVIEW-PREPARATION.md)를 따른다.
+
+현재 선택은 **제품1.7.1 / PRD1.15 / runtime40b9ed8 / image234ec56**이다. [REVIEW045](../product/REVIEW-045.md)의 동일5ff 복원과 [REVIEW046](../product/REVIEW-046.md)의 [불변 checkpoint](../../artifacts/releases/checkpoint-1.7.1.json)·2033해시 검증, [원격 태그 근거](../../artifacts/checkpoints/release-1.7.1/tags.json)를 따른다. 현재 준비 입력은 [scripts/media/facts.template.json](../../scripts/media/facts.template.json)의1.7.1/1.15이며 reviewed=false/preparationTemplate=true다. 아래 과거 버전 리허설·호환 검토는 당시 이력이고 최종 영상/PPT가 아니다. 동결21:37:33Z/종료22:07:33Z는 유지한다. 최종 선택·실제 영상 검수 후에만 새 facts를 확정한다.
+
+[최종 입력 준비 점검](../../artifacts/checkpoints/final-input-1.7.1-preparation/summary.json)은 실제3104/18884 경로·0600 자격증명 파일 존재·합성CSV의 등록 파서 결과를 확인했다. 자격증명 내용은 복사하지 않았다. 입력 예시의 매니페스트 경로는 예비 current.json 대신 명시적 final-20260921.json으로 정정했으며 승인 커밋/이미지는 여전히 POPULATE_AT_FREEZE다. 이 준비본을 최종 입력으로 실행하지 않는다. 원래 동결창에서 실제 검증한 선택 manifest에 맞춰 두 승인값을 채우고 다시 대조한다. 최종 영상/발표자료/장면 설정은 아직 생성하지 않았다.
+
+음성은 [독립 기술 검수 준비](AUDIO-REVIEW-PREPARATION.md)에 따라 실제 문장 파일의 디코딩·신호·길이와 원고/SRT 동기를 별도로 확인한다. 이 검사는 직접 청취나 발음 품질 판정을 대신하지 않는다. 로컬 전사 도구 준비 여부와 범위도 같은 문서의 최신 후속 기록을 따른다.
+
 ## 영상 흐름
 
 1. 실제 배포 대시보드: 가상 발전단지와 SCADA → RTU → MQTT → 외부 VPP 시험 목적, 실물 제어가 아닌 범위를 설명한다.
@@ -82,7 +90,7 @@ PPT 제작기는 같은 릴리스의 검수 완료 영상이더라도 연결된 
 
 `node scripts/verify-delivery.mjs --manifest artifacts/releases/FINAL_MANIFEST.json --report artifacts/delivery/FINAL_INVENTORY.json`는 완성된 파일의 존재·해시·상대 영상 연결·재생성 자료를 검사한다. 보고서 경로는 새 파일을 사용한다. 누락/불일치는 종료코드1과 INCOMPLETE이며, 통과해도 ARTIFACT_CHECKS_PASSED 및 completionClaim:false다. 이 검사는 실제 동작·디코딩·육안/주장 검수·인수/운영시간 게이트를 대신하지 않는다. 현재 최종 영상/PPT 미생성 상태와 과거 리허설을 최종본으로 넣는 경우가 거절됨을 확인했다.
 
-## 제품1.3 미디어 호환성 검토
+## 제품1.3 미디어 호환성 검토 (당시 이력)
 
 후보 소스3fa3ba0의 선택 RTU별 저장 시나리오 필터/대상 알림과 KMA 조회 결과 표시를 기존8장면에 대조했다. 기존 `저장 시나리오` 탭, `시나리오 이름` 필드, `현재 상태 저장` 버튼, `.scenario` 내부 정확한 h3 이름과 첫 복원 버튼은 유지된다. 시연은 새로 등록한 복합 RTU를 계속 선택한 상태에서 저장·복원하므로 다른 RTU의 시나리오가 숨겨져도 자신의 새 시나리오를 찾는다. 변경된 패널 제목이나 성공 알림 문자열에 의존하는 선택자는 없다. 비동기 목록 갱신 뒤 클릭은 Playwright 요소 대기로 처리한다.
 
@@ -104,13 +112,13 @@ PPT 제작기는 같은 릴리스의 검수 완료 영상이더라도 연결된 
 
 `scripts/media/prepare-final-deck.cjs`는 녹화나 렌더를 하지 않는다. 입력 JSON은 `releaseManifest`, `videoDir`, `factsFile`, `outputConfig`와 선택적 `presentationDir`를 가진다. CLI는 원래 run.json의 동결 창 안에서만 동작하고 기록 직전 마감도 확인한다. 출력 파일이 존재하면 거절한다. `final-deck-binding.cjs`는 순수 파일 바인딩 계층이며 시험에서만 clock/root를 주입한다.
 
-`facts.template.json`에 제품1.3 기준14장 본문·설명·장면 번호·캡처 이름·현재 문서 근거 후보를 미리 작성했다. reviewed:false/preparationTemplate:true이며 현재 최종 설정으로 사용할 수 없다. 영상 검수 후 실제 videoSha256/scenesSha256, selectedRtuId, 시나리오 복원 전후 runId와 근거, PRD 버전, 사용하는 캡처별 SHA-256을 채우고 각 본문과 근거를 확인한다. 최종 버전이1.0~1.2로 복원되면1.3 개선 문구/미지원 캡처를 반드시 바꾼다. 미래 제품 버전은 바인더의 명시적 검토 없이는 거절한다.
+당초 제품1.3 기준으로14장 초안을 준비했으며, 현재 [facts.template.json](../../scripts/media/facts.template.json)은 제품1.7.1/PRD1.15의 본문·설명·장면·캡처·근거 후보를 담는다. reviewed:false/preparationTemplate:true이며 현재 최종 설정으로 사용할 수 없다. 영상 검수 후 실제 videoSha256/scenesSha256, selectedRtuId, 시나리오 복원 전후 runId와 근거, PRD 버전, 사용하는 캡처별 SHA-256을 채우고 각 본문과 근거를 확인한다. 최종 선택이 현재1.7.1과 달라지면 선택 버전에서 검증된 기능·캡처·manifestEvidence로 바꾸고 현재 템플릿의 개선 문구를 그대로 승인하지 않는다. 미래 제품 버전은 바인더의 명시적 검토 없이는 거절한다.
 
 바인더는 non-rehearsal/fullDecode/visualReview=passed/claimsReview=passed와 실제 MP4 해시·매니페스트 해시·커밋·image digest를 비교한다. scenes.json의 실제 start/end+lead로 MM:SS를 만든다.8장면의 경계와 영상 길이를 확인하고 실제 같은 영상 source 내부 캡처 및 검수된 캡처 해시를 요구한다. 별도 MQTT 보고서의125kW/실제125/오차0, accepted/executing/completed, 선택 RTU를 확인한다. 지원 버전의 명령 내보내기도 같은 RTU·최대20개·파일 해시를 확인한다. 시나리오 새run 주장은 검수된 facts의 이전/새run과 별도 근거를 요구하며 스크린샷만으로 run 변경을 추정하지 않는다.
 
 과거 outbox/backup 검증은 각 slide.manifestEvidence의 경로가 **선택한** manifest.evidence에 있고 파일 SHA가 일치할 때만 추가한다. 템플릿의 후보가 새 매니페스트에 없거나 바뀌면 최종 근거를 다시 선택한다. 외부 KMA 실관측/AWS/운영 VPP는 explicit unverified로 남기며 시험 브로커의 별도 클라이언트 관측과 구별한다. 바인딩 이후 `build-deck.mjs`로 제작하고 모든 장을 검수하는 순서는 유지한다.
 
-새 바인더 자체와 사용한 facts는 최종 재생성 근거다. 메인 패키징/검증기에 `prepare-final-deck.cjs`, `final-deck-binding.cjs`, 의존 `release-features.cjs`/`validate-command-download.cjs`, 정확한 사용 facts 파일과 해시를 추가 연결해야 한다. 현재 build-deck의 설정/이미지/생성 소스 보존과 별도로 필요한 파일이며 이 작업에서 기존 생성기를 수정하지 않았다. 합성 fixture10개 시험으로 시간표시/동일 영상 해시/자산/마감/덮어쓰기 제한을 확인했으며 실제 최종 config를 생성하지 않았다.
+이 바인더 최초 도입 당시의 후속 연결 기록이다(현재 패키징 상태는 DELIVERY-PLAN.md를 따른다). 새 바인더 자체와 사용한 facts는 최종 재생성 근거다. 메인 패키징/검증기에 `prepare-final-deck.cjs`, `final-deck-binding.cjs`, 의존 `release-features.cjs`/`validate-command-download.cjs`, 정확한 사용 facts 파일과 해시를 추가 연결해야 한다. 현재 build-deck의 설정/이미지/생성 소스 보존과 별도로 필요한 파일이며 이 작업에서 기존 생성기를 수정하지 않았다. 합성 fixture10개 시험으로 시간표시/동일 영상 해시/자산/마감/덮어쓰기 제한을 확인했으며 실제 최종 config를 생성하지 않았다.
 
 ### Recorder lifecycle integration (FR-FAULT-02)
 

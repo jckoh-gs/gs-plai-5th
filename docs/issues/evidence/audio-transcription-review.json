@@ -1,0 +1,35 @@
+{
+  "reviewedAt": "2026-09-21T18:54:27.486918+00:00",
+  "result": "INDEPENDENT_BOUNDARY_TESTS_PASS",
+  "tests": 14,
+  "terminalExitCode": 0,
+  "command": "python3 scripts/deadline-command.py --timeout-seconds 60 -- python3 tests/review-audio-transcription.test.py",
+  "sourceAndEvidenceSha256": {
+    "scripts/media/transcribe-audio.py": "7077f0801685ebee5ef78f34ea17a57971267fb7716e8df1dda0d61cef26019a",
+    "tests/review-audio-transcription.test.py": "272babf20c2c460b9fe7ac095578bd9125fcf290d02ef6d11a13d30e932f48ba",
+    "docs/issues/evidence/audio-transcription-tests-round1.log": "d4e79b6f1fee38fdea8ba619f53f6b5ee8e713bfe07f9a0fea4464185a7470aa"
+  },
+  "executedScope": [
+    "validate_transcription: nonempty/nonblank Korean-language metadata and translate strictly false",
+    "Finite numeric nonboolean PCM duration inclusive 10–600 seconds and segment offsets",
+    "Negative/reversed/overlapping segments and offsets beyond actual PCM duration plus 30 milliseconds rejected; exact 30 millisecond boundary accepted",
+    "Temporary regular-file and parent-symlink rejection",
+    "Temporary pinned CLI/model hash mismatch fails before decoder/ASR subprocess launch or output creation",
+    "Existing output preserved; output symlink rejected before subprocess launch"
+  ],
+  "staticReviewScope": [
+    "PCM duration comes from decoded mono 16-bit 16 kHz WAV frame count, with truncation check",
+    "Pinned tool/source hashes checked before work and again after transcription",
+    "Receipt is TECHNICAL_ASR_RECORDED, requiresSuccessfulExitReceipt=true; it does not attest direct listening or natural pronunciation",
+    "After receipt fsync, remaining budget is checked; receipt hashing also checks budget before stdout receipt is emitted"
+  ],
+  "limitations": [
+    "No actual ASR subprocess was executed by this independent test run. Prelaunch negative fixtures replace tool paths and pin hashes with temporary files and assert subprocess.run is never called.",
+    "Late fsync deadline behavior was checked by source order only, not by executing a synthetic successful transcription or injected filesystem delay. A retained RECORDED artifact without successful exit and matching stdout hash must not be consumed as a completed run.",
+    "Actual installed CLI/model hashes, audio semantic correctness, direct listening, pronunciation quality and final video synchronization are outside this fixture proof.",
+    "Path symlink rejection checks existing path components at validation time; this is a trusted local workspace tool, not a guarantee against a concurrently hostile filesystem race."
+  ],
+  "confirmedNewDefects": [],
+  "runtimeOrDeploymentChanged": false,
+  "goalCompletionClaim": false
+}

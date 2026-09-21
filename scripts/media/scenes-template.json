@@ -1,7 +1,7 @@
 {
   "baseUrl": "http://127.0.0.1:3104",
   "tokenFile": "artifacts/private/deploy/api-token",
-  "releaseManifest": "artifacts/releases/current.json",
+  "releaseManifest": "artifacts/releases/final-20260921.json",
   "approvedReleaseCommit": "POPULATE_AT_FREEZE",
   "approvedImageDigest": "POPULATE_AT_FREEZE",
   "outputDir": "artifacts/video",
@@ -31,13 +31,13 @@
     {
       "title": "풍력 태양광 복합 UI",
       "seconds": 28,
-      "narration": "풍력과 태양광, 복합 단지를 같은 대시보드에서 선택합니다. 삼차원 장면에서 풍향과 회전을 확인하고 드래그와 휠로 시점을 조절합니다. 계측값은 현재 선택한 단지와 발전기 상태를 보여줍니다.",
+      "narration": "풍력과 태양광, 복합 단지를 같은 대시보드에서 선택합니다. 삼차원 장면에서 풍향과 회전을 확인하고 드래그와 휠로 시점을 조절합니다. 측정한 값은 현재 선택한 단지와 발전기 상태를 보여줍니다.",
       "actions": []
     },
     {
       "title": "RTU와 전체 SCADA 데이터",
       "seconds": 28,
-      "narration": "각 RTU는 연결과 건강 상태를 독립적으로 관리합니다. 전체 발전기의 샘플을 수집하고 기본 육십 초마다 MQTT로 전송합니다. 큐오에스 일은 전달 과정의 중복 가능성이 있으므로 메시지 식별자로 중복을 처리합니다.",
+      "narration": "각 RTU는 연결과 건강 상태를 독립적으로 관리합니다. 전체 발전기의 샘플을 수집하고 기본 육십 초마다 MQTT로 전송합니다. 큐오에스 일은 전달 과정에서 중복이 생길 수 있으므로 메시지 아이디로 중복을 처리합니다.",
       "actions": [
         {
           "type": "click",
@@ -67,7 +67,7 @@
     {
       "title": "재현 가능한 시나리오와 연동",
       "seconds": 30,
-      "narration": "배속과 일시정지, 난수 시드로 시험 조건을 조절합니다. 선택한 RTU의 시나리오를 복원하면 새 실행 식별자가 생깁니다. 이전 실행은 런 아이디로 구분하며 기존 아웃박스를 삭제하지 않습니다. 가이드에서 이 RTU의 토픽과 규격을 확인합니다.",
+      "narration": "배속과 일시정지, 난수 생성에 쓰는 초기값으로 시험 조건을 조절합니다. 선택한 RTU에 저장된 시나리오를 다시 불러오면 새 실행 아이디가 생깁니다. 이전 실행은 런 아이디로 구분하며 기존 아웃박스를 삭제하지 않습니다. 가이드에서 이 RTU의 토픽과 메시지 형식을 확인합니다.",
       "actions": [
         {
           "type": "click",

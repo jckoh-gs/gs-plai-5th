@@ -1,0 +1,65 @@
+whisper_init_from_file_with_params_no_state: loading model from '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-asr-20260921/ggml-small.bin'
+whisper_init_with_params_no_state: use gpu    = 0
+whisper_init_with_params_no_state: flash attn = 1
+whisper_init_with_params_no_state: gpu_device = 0
+whisper_init_with_params_no_state: dtw        = 0
+whisper_init_with_params_no_state: devices    = 2
+whisper_init_with_params_no_state: backends   = 2
+whisper_model_load: loading model
+whisper_model_load: n_vocab       = 51865
+whisper_model_load: n_audio_ctx   = 1500
+whisper_model_load: n_audio_state = 768
+whisper_model_load: n_audio_head  = 12
+whisper_model_load: n_audio_layer = 12
+whisper_model_load: n_text_ctx    = 448
+whisper_model_load: n_text_state  = 768
+whisper_model_load: n_text_head   = 12
+whisper_model_load: n_text_layer  = 12
+whisper_model_load: n_mels        = 80
+whisper_model_load: ftype         = 1
+whisper_model_load: qntvr         = 0
+whisper_model_load: type          = 3 (small)
+whisper_model_load: adding 1608 extra tokens
+whisper_model_load: n_langs       = 99
+whisper_model_load:          CPU total size =   487.01 MB
+whisper_model_load: model size    =  487.01 MB
+whisper_backend_init_gpu: no GPU found
+whisper_backend_init: using BLAS backend
+whisper_init_state: kv self size  =   18.87 MB
+whisper_init_state: kv cross size =   56.62 MB
+whisper_init_state: kv pad  size  =    4.72 MB
+whisper_init_state: compute buffer (conv)   =   22.42 MB
+whisper_init_state: compute buffer (encode) =   33.85 MB
+whisper_init_state: compute buffer (cross)  =    6.20 MB
+whisper_init_state: compute buffer (decode) =   97.28 MB
+read_audio_data: reading audio data from '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-clarity/combined.wav' ...
+read_audio_data: trying to decode with miniaudio
+
+system_info: n_threads = 4 / 15 | WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | SME2 = 1 | ACCELERATE = 1 | REPACK = 1 | 
+
+main: processing '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-clarity/combined.wav' (685544 samples, 42.8 sec), 4 threads, 1 processors, 5 beams + best of 5, lang = ko, task = transcribe, timestamps = 1 ...
+
+
+[00:00:00.000 --> 00:00:05.560]   측정한 값은 현재 선택한 단지와 발전기 상태를 보여줍니다.
+[00:00:05.560 --> 00:00:10.080]   접수 패널은 마지막으로 받은 결과를 보여주며 저장 상태 확인으로 서버
+[00:00:10.080 --> 00:00:11.820]   상태를 다시 조회합니다.
+[00:00:11.820 --> 00:00:17.920]   QoS1은 전달 과정이 중복, 가능성이 있음으로 메시지 아이디로 중복을
+[00:00:17.920 --> 00:00:19.920]   처리합니다.
+[00:00:19.920 --> 00:00:25.320]   최근 저장 상태를 최대 20개까지 구조화된 파일로 내보냅니다.
+[00:00:25.320 --> 00:00:29.840]   배속과 일시 정지, 재현에 쓰는 초기 값으로 실험, 조건을 조절
+[00:00:29.840 --> 00:00:31.560]   합니다.
+[00:00:31.560 --> 00:00:37.840]   선택한 RTU의 저장한 시나리오를 다시 불러오면 새 실행 아이디가 생깁니다.
+[00:00:37.840 --> 00:00:41.800]   가이드에서 이 RTU의 토픽과 메시지 형식을 확인합니다.
+output_txt: saving output to '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-clarity/candidate-asr.txt'
+output_srt: saving output to '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-clarity/candidate-asr.srt'
+output_json: saving output to '/Users/charleskoh/research/20260921-RALPTON/artifacts/private/audio-narration-clarity/candidate-asr.json'
+
+whisper_print_timings:     load time =   101.49 ms
+whisper_print_timings:     fallbacks =   0 p /   0 h
+whisper_print_timings:      mel time =     8.80 ms
+whisper_print_timings:   sample time =   133.29 ms /   909 runs (     0.15 ms per run)
+whisper_print_timings:   encode time =   993.11 ms /     2 runs (   496.56 ms per run)
+whisper_print_timings:   decode time =   102.79 ms /    28 runs (     3.67 ms per run)
+whisper_print_timings:   batchd time =  1691.85 ms /   874 runs (     1.94 ms per run)
+whisper_print_timings:   prompt time =   116.41 ms /   150 runs (     0.78 ms per run)
+whisper_print_timings:    total time =  3168.76 ms

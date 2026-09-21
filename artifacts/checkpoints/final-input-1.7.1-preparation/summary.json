@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "state": "PREPARED_NOT_FINAL",
+  "checkedAt": "2026-09-21T18:37:07.066629+00:00",
+  "expectedProductVersion": "1.7.1",
+  "immutableSchedule": {
+    "startedAt": "2026-09-21T08:07:33.079009+00:00",
+    "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+    "deadlineAt": "2026-09-21T22:07:33.079009+00:00"
+  },
+  "existingTemplateDefaultChangedFrom": "artifacts/releases/current.json",
+  "explicitFutureManifest": "artifacts/releases/final-20260921.json",
+  "selectionRevalidationAtFreezeRequired": true,
+  "approvedValuesStillUnbound": true,
+  "recordingStarted": false,
+  "finalOutputDirectoriesAbsent": true,
+  "credentials": [
+    {
+      "kind": "api",
+      "path": "artifacts/private/deploy/api-token",
+      "regularFile": true,
+      "mode": "0600",
+      "nonempty": true,
+      "contentCopied": false
+    },
+    {
+      "kind": "mqtt",
+      "path": "artifacts/private/deploy/client-password",
+      "regularFile": true,
+      "mode": "0600",
+      "nonempty": true,
+      "contentCopied": false
+    }
+  ],
+  "sourceSha256": {
+    "scripts/media/final-input-template.json": "2cdcaaa09cc59ce104a9587f23e6e95d0c1cc2ddd3e4809542d470cede58d8e9",
+    "scripts/media/prepare-final-scenes.cjs": "e89c70ed3fa96d8eb9c330d72b862185952905b5b436d6c421fa5074ba9ea0ae",
+    "scripts/media/record-demo.cjs": "da386865cde5bf5d024d5861dbdd6dc98eb37ad32a1b205ad6d2bd5d0a09943f",
+    "scripts/media/scene-plan.cjs": "9d338fed29d964d845f16d4bc07b18a12a895f41bc984a4ad2058be2183a7887",
+    "scripts/media/release-binding.cjs": "46fd7620f0bbc0890bd40b98b68093ccdedb0c24c77e9f2be3bb75402cf8f656",
+    "scripts/media/release-features.cjs": "52c5bd8f280f4344ec12da7347eee2265d12db1b673b19a807ec46df9266eb58",
+    "scripts/media/demo-lifecycle.cjs": "56367d9ab90c70e1617aef9923c76e31195eb0869580882967831b78cb90a92b",
+    "scripts/media/media-deadline.cjs": "fdac80297e5938d921e7090c82e7934c5afececc5bce6cc2e70bfe7dae808721",
+    "scripts/media/facts.template.json": "004464ebfea30cf2c2b4686a0a8332219b94c21bde1ecf0c8005eb7b5bc89319",
+    "artifacts/media-preparation/demo-synthetic.csv": "29d7e51313cefb4bdeef718f355fac4bb1b8eb17fb746a10b537f5ad990d1266",
+    "server/model.js": "875d936b0038ef5a9bd3c678a50dafdd8d33c7c0f8c60eba0316def51e95ba67",
+    "server/dataset-preview.js": "9732f5fcc73000494fe4138ff1116ed94f03474c713438901eb225368a194443",
+    "package.json": "8560c180daec6b576feb057395d6ee692e5f77a4f851e3398dad54719f2db304",
+    "package-lock.json": "7fc8d323eb98ed41aa1c5387168068695793c70aa006c9190c51f3cbe421f563"
+  },
+  "inputSha256": "796f9e7eed8952526a2ad430e159f9ce5b45a84b031b8f3985efa1db7053952d",
+  "scope": "Read-only preparation dependency checks and unbound input copy. Final manifest/commit/image, actual GET, journal creation, recording, recovery and media review remain for the original final window.",
+  "syntheticCsvParser": {
+    "evidence": "artifacts/checkpoints/final-input-1.7.1-preparation/csv-preview.json",
+    "sha256": "1e5a5d446b1ee83bad54186a8710e667af8e0e909f2734aa67b6a7ddfb8f2490",
+    "rowCount": 2,
+    "intervalSeconds": 600,
+    "powerKw": 500,
+    "scope": "Existing actual local registration parser only; no new RTU or remote mutation"
+  }
+}

@@ -131,4 +131,4 @@ node scripts/media/build-deck.mjs artifacts/media-preparation/final-deck.json
 `final-deck-input.json`은 releaseManifest/videoDir/factsFile/outputConfig/presentationDir의 공개 저장소 상대 경로만 담는다. facts.template.json을 새 파일로 복사하고 실제 영상/장면/MQTT/복구/캡처 해시·선택 RTU·시나리오 run 전이·슬라이드 근거를 직접 검수한 뒤 reviewed=true, preparationTemplate=false로 표시한다. 바인더는 실제 원장 시각의 UTC 마이크로초 형식을 읽으며 원장을 다시 쓰지 않는다. 준비 template을 최종 검수 사실로 대체하지 않는다.
 
 
-현재1.5의19개 복원 증거와719527936바이트/ad34 백업 연결은 REVIEW027에서 기능 인수했다. 별도 불변manifest 검증 상태는 run.json에서 확인한다. 이 준비문서는 새 최종창 백업·복원·영상·PPT 실행을 대신하지 않는다. 최종창의 실제 선택은 당시 run.json과 검증된 snapshot을 다시 대조한다.
+과거1.5의19개 복원 증거와719527936바이트/ad34 백업 연결은 REVIEW027의 당시 인수 이력이다. 현재 선택은 위1.7.1/1075081216바이트·5ff이며 [REVIEW045](../product/REVIEW-045.md), [REVIEW046](../product/REVIEW-046.md), [불변 checkpoint](../../artifacts/releases/checkpoint-1.7.1.json)를 따른다. 현재 [facts.template.json](../../scripts/media/facts.template.json)은1.7.1/PRD1.15의 reviewed=false/preparationTemplate=true 준비자료다. 최신 실제 선택은 run.json에서 확인한다. 이 준비문서는 새 최종창 백업·복원·영상·PPT 실행을 대신하지 않는다. 최종창의 실제 선택은 당시 run.json과 검증된 snapshot을 다시 대조한다.

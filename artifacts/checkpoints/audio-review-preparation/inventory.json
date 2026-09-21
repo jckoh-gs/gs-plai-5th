@@ -1,0 +1,15 @@
+{
+  "scope": "Technical rehearsal audio analysis only; not listening",
+  "files": [
+    {
+      "path": "analyze.cjs",
+      "sha256": "ad1990757796df564910839472e0891eb0dabef52efdf6ceb7d75aeb010897f4"
+    },
+    {
+      "path": "analysis.json",
+      "sha256": "57f88201dbed8f4d2cfe433721a6294b09920abbc3f6089d085cdfb96d1b8d4d"
+    }
+  ],
+  "directListeningAvailable": false,
+  "localASRFoundInCheckedPaths": false
+}

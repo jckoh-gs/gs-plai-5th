@@ -1,0 +1,50 @@
+{
+  "preparationOnly": true,
+  "narrationRevision": 1,
+  "sessionId": 71323,
+  "observedProcessExitCode": 0,
+  "observedReceiptSha256": "62c17f2eb690095a01bb436fc2eb1494a78e881bb8a6aaa284ca27db377348b9",
+  "receiptHashMatches": true,
+  "directListening": false,
+  "finalAudio": false,
+  "verdict": "technical ASR completed; several recognition differences remain; no pronunciation pass",
+  "differences": [
+    {
+      "sentence1": 1,
+      "result": "측정한 값 and full sentence transcribed as written"
+    },
+    {
+      "sentence1": 2,
+      "original": "서버",
+      "recognized": "써본",
+      "result": "last received result/storage query retained; server word differs"
+    },
+    {
+      "sentence1": 3,
+      "result": "QoS1/message ID semantic terms recognized as qos-1/id; line split only"
+    },
+    {
+      "sentence1": 4,
+      "original": "제이슨",
+      "recognized": "json",
+      "result": "JSON format and maximum20 recognized explicitly"
+    },
+    {
+      "sentence1": 5,
+      "original": "배속 / 난수",
+      "recognized": "개속 / 난소",
+      "result": "initial value and conditions remain but key words differ; cause unresolved"
+    },
+    {
+      "sentence1": 6,
+      "result": "selected RTU/stored scenario/reload/new execution ID recognized; ASCII normalization only"
+    },
+    {
+      "sentence1": 7,
+      "original": "RTU의",
+      "recognized": "rtu에",
+      "result": "RTU/topic/message format recognized with particle difference"
+    }
+  ],
+  "unchangedContext": "surrounding receipt≠completion, max20, existing outbox retention, external unverified scope remain in source; only7changed sentences synthesized here"
+}

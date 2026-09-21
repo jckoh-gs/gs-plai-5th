@@ -1,0 +1,206 @@
+{
+  "preparationOnly": true,
+  "sourceVideoSha256": "ccb890aa150f918d43cd8610147d5bd6a139c4b1664d1b71c82ef1adfc3acace",
+  "items": [
+    {
+      "scene1": 2,
+      "cue1": 1,
+      "voiceFile": "source/voice-1-0.aiff",
+      "originalText": "CSV 또는 TSV를 넣고 해석 미리보기로 시각과 단위, 정규화 출력을 먼저 확인합니다.",
+      "videoCueStart": 25.029999999999983,
+      "videoCueEnd": 31.989999999999984,
+      "asrMatches": [
+        {
+          "index0": 4,
+          "text": " CSV 또는 TSV를 넣고 해서 미리 보기로 시각과 단위, 정규화 출력을 먼저 확인합니다.",
+          "offsets": {
+            "from": 14480,
+            "to": 31960
+          }
+        }
+      ],
+      "cause": "unresolved TTS pronunciation versus ASR recognition; no direct listening"
+    },
+    {
+      "scene1": 3,
+      "cue1": 1,
+      "voiceFile": "source/voice-2-0.aiff",
+      "originalText": "풍력과 태양광, 복합 단지를 같은 대시보드에서 선택합니다.",
+      "videoCueStart": 59.07799999999998,
+      "videoCueEnd": 63.71799999999998,
+      "asrMatches": [
+        {
+          "index0": 8,
+          "text": " 풍력과 태양광 복합 단지를 같은 데시포드에서 선택합니다.",
+          "offsets": {
+            "from": 59040,
+            "to": 63680
+          }
+        }
+      ],
+      "cause": "unresolved TTS pronunciation versus ASR recognition; no direct listening"
+    },
+    {
+      "scene1": 3,
+      "cue1": 2,
+      "voiceFile": "source/voice-2-1.aiff",
+      "originalText": "삼차원 장면에서 풍향과 회전을 확인하고 드래그와 휠로 시점을 조절합니다.",
+      "videoCueStart": 63.71799999999998,
+      "videoCueEnd": 69.26799999999999,
+      "asrMatches": [
+        {
+          "index0": 9,
+          "text": " 3차원 장면에서 풍양과 회전을 확인하고, 드래그와 훌로 시점을 조절합니다.",
+          "offsets": {
+            "from": 63680,
+            "to": 69240
+          }
+        }
+      ],
+      "cause": "unresolved TTS pronunciation versus ASR recognition; no direct listening"
+    },
+    {
+      "scene1": 3,
+      "cue1": 3,
+      "voiceFile": "source/voice-2-2.aiff",
+      "originalText": "계측값은 현재 선택한 단지와 발전기 상태를 보여줍니다.",
+      "videoCueStart": 69.26799999999999,
+      "videoCueEnd": 73.58799999999998,
+      "asrMatches": [
+        {
+          "index0": 10,
+          "text": " 개축합순 현재 선택한 단지와 발전기 상태를 보여줍니다.",
+          "offsets": {
+            "from": 69240,
+            "to": 73560
+          }
+        }
+      ],
+      "cause": "unresolved TTS pronunciation versus ASR recognition; no direct listening"
+    },
+    {
+      "scene1": 3,
+      "cue1": 5,
+      "voiceFile": "source/voice-2-4.aiff",
+      "originalText": "접수 패널은 마지막 관측값이며 저장 상태 확인으로 서버 상태를 다시 조회합니다.",
+      "videoCueStart": 75.70799999999998,
+      "videoCueEnd": 81.70799999999998,
+      "asrMatches": [
+        {
+          "index0": 12,
+          "text": " 접수 패널은 마지막 관측합시며, 저장 상태 확인으로 서버 상태를 다시 조회합니다.",
+          "offsets": {
+            "from": 75680,
+            "to": 81680
+          }
+        }
+      ],
+      "cause": "unresolved TTS pronunciation versus ASR recognition; no direct listening"
+    },
+    {
+      "scene1": 4,
+      "cue1": 3,
+      "voiceFile": "source/voice-3-2.aiff",
+      "originalText": "큐오에스 일은 전달 과정의 중복 가능성이 있으므로 메시지 식별자로 중복을 처리합니다.",
+      "videoCueStart": 104.94899999999998,
+      "videoCueEnd": 111.22899999999998,
+      "asrMatches": [
+        {
+          "index0": 15,
+          "text": " QOS1은 전달 과정이 중복, 가능성이 있으므로 메시지 10별자로 중복을 처리합니다.",
+          "offsets": {
+            "from": 104920,
+            "to": 123080
+          }
+        }
+      ],
+      "cause": "unresolved TTS pronunciation versus ASR recognition; no direct listening"
+    },
+    {
+      "scene1": 5,
+      "cue1": 6,
+      "voiceFile": "source/voice-4-5.aiff",
+      "originalText": "최근 저장 상태를 최대 스무 개까지 JSON으로 내보냅니다.",
+      "videoCueStart": 145.778,
+      "videoCueEnd": 149.778,
+      "asrMatches": [
+        {
+          "index0": 21,
+          "text": " 최근 저장 상태를 최대 20개까지 직선으로 내보냅니다.",
+          "offsets": {
+            "from": 145720,
+            "to": 149720
+          }
+        }
+      ],
+      "cause": "unresolved TTS pronunciation versus ASR recognition; no direct listening"
+    },
+    {
+      "scene1": 7,
+      "cue1": 1,
+      "voiceFile": "source/voice-6-0.aiff",
+      "originalText": "배속과 일시정지, 난수 시드로 시험 조건을 조절합니다.",
+      "videoCueStart": 201.23499999999999,
+      "videoCueEnd": 205.535,
+      "asrMatches": [
+        {
+          "index0": 26,
+          "text": " 배속과 일시 정지, 난소시드로 시험, 조건을 조절합니다.",
+          "offsets": {
+            "from": 201160,
+            "to": 205480
+          }
+        }
+      ],
+      "cause": "unresolved TTS pronunciation versus ASR recognition; no direct listening"
+    },
+    {
+      "scene1": 7,
+      "cue1": 2,
+      "voiceFile": "source/voice-6-1.aiff",
+      "originalText": "선택한 RTU의 시나리오를 복원하면 새 실행 식별자가 생깁니다.",
+      "videoCueStart": 205.535,
+      "videoCueEnd": 210.46499999999997,
+      "asrMatches": [
+        {
+          "index0": 27,
+          "text": " 선택한 RTU의 시나리오를 보건하면, 새 실행 식결자가 생깁니다.",
+          "offsets": {
+            "from": 205480,
+            "to": 210400
+          }
+        }
+      ],
+      "cause": "unresolved TTS pronunciation versus ASR recognition; no direct listening"
+    },
+    {
+      "scene1": 7,
+      "cue1": 4,
+      "voiceFile": "source/voice-6-3.aiff",
+      "originalText": "가이드에서 이 RTU의 토픽과 규격을 확인합니다.",
+      "videoCueStart": 215.005,
+      "videoCueEnd": 218.49499999999998,
+      "asrMatches": [
+        {
+          "index0": 29,
+          "text": " 가이드에서 이 RTU의 토픽과 교격을 확인합니다.",
+          "offsets": {
+            "from": 214920,
+            "to": 231200
+          }
+        }
+      ],
+      "cause": "unresolved TTS pronunciation versus ASR recognition; no direct listening"
+    }
+  ],
+  "boundaryTests": {
+    "samples": [
+      4,
+      200,
+      201
+    ],
+    "executed": false,
+    "evidence": "exact pinned source clamp read only; actual ASR inputs20sec/255.33sec; no API or sanitizer tiny-input runtime proof",
+    "scope": "positive short-audio OOB source mitigation inspected by security; not general parser safety proof"
+  }
+}
