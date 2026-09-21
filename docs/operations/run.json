@@ -31,7 +31,7 @@
     "browserCandidate": "PASS localreceipt14cases/form44 and priorregressions; mainreadonly19checks; exact1.5restore receipt14/form44 andbackward1.4form44 withoriginalsettingscleanup",
     "remote": "PASS actual1.5 Ready/UI/API/MQTT125/error0 and actualPod replacement with identical durableoutboxbody/PUBACK; original5settings restored",
     "backupRestore": "PASS same719527936B/ad34 snapshot exactcurrent1.5+backward1.4 19proofs; newPVCs each; scaled0/Pod0/tunnelclosed/4PVCretained; rootlivecleanupreview",
-    "releaseManifest": "Functionalstable1.5tagscreated exact6d; immutable1.5manifest generation/independentverification pending",
+    "releaseManifest": "PASS immutable1.5 checkpoint1177hashes/actualReady/exactbackupSHA; independentREVIEW028; bothstabletagsruntime6d pushed",
     "imageSecurity": "Exact2fd SBOM130/4knownunfixedmatches2CVEs unchanged; freshall-dependency npm audit0, nozeroimagevulnerabilityclaim",
     "media": "Correctedlocal8scene249.33s/272.706sproduction/normalrecovery/frames/subtitle technicalaudioPASS; no listeningclaim; finalvideo andsame-videoPPT pending originalwindow"
   },
@@ -103,11 +103,21 @@
     "tag": "stable-v1.5.0",
     "alias": "stable-runtime-v1.5.0-6d165d1",
     "manifest": "artifacts/releases/checkpoint-1.5.0.json",
-    "manifestState": "pending source/evidencecommit then generationandverification",
+    "manifestState": "verified",
     "backupEvidence": "deploy/verification/stable-backup-6d165d1.json",
     "recoveryEvidence": "deploy/verification/candidate-6d165d1/restore-summary.json",
     "independentFunctionalReview": "docs/product/REVIEW-027.md",
-    "scope": "Verified functional runtime/recovery; overallgoal awaits finalmedia/time/delivery gates"
+    "scope": "Verified functional runtime/recovery; overallgoal awaits finalmedia/time/delivery gates",
+    "manifestSha256": "6b3940ed7190530c046594186febff54d2e0ee93b0a0856e314c5c3ca3762ff7",
+    "manifestVerification": {
+      "result": "PASS",
+      "manifest": "artifacts/releases/checkpoint-1.5.0.json",
+      "checkedHashes": 1177,
+      "remoteImageMatched": true,
+      "scope": "Rootverify-release --remote; functional19proofs REVIEW027 and futuremedia/time verdicts separate",
+      "manifestSourceCommit": "19e0c3a21e49e081be3cc1625fea403890932723",
+      "independentReview": "docs/product/REVIEW-028.md"
+    }
   },
   "candidate": {
     "productVersion": "1.5.0",
@@ -115,7 +125,7 @@
     "idea": "IDEA-009",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T14:14:28.603123+00:00",
-    "status": "Functionalstable1.5 promoted after19restoreproofs andindependentREVIEW027; immutablemanifestgeneration pending",
+    "status": "Completed functionalstable1.5, immutablecheckpointverified; nextoperationalobservation andversionedidea review",
     "fallbackTag": "stable-v1.4.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.4.0.json",
     "beforeEvidence": "artifacts/checkpoints/command-receipt-before/round2/result.json",
@@ -242,14 +252,14 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T15:03:00.340778+00:00",
+  "updatedAt": "2026-09-21T15:06:25.779067+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
     "scope": "Private ownership journal, interrupted-demo settings recovery, same-video reviewed-facts binder and portable deck packaging; no runtime change",
     "originalWindowUnchanged": true,
-    "contentPreparationReview": "docs/operations/MEDIA-1.4-FINAL-CONTENT-RECOMMENDATIONS.md",
-    "contentPreparationScope": "1.4/PRD1.11 unreviewed template only; distinguish filmed MQTT/fault actions from separately tested RESTform/outbox restart. Final video/facts/PPT remain pending."
+    "contentPreparationReview": "docs/operations/MEDIA-1.5-COMPATIBILITY.md",
+    "contentPreparationScope": "Unreviewed1.5/PRD1.12 facts template exactevidence5paths confirmedinimmutablemanifest; finalvideo/facts/PPT pending originalwindow"
   },
   "operationalObservations": [
     {

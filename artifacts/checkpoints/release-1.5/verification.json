@@ -1,0 +1,12 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T15:05:12.856297+00:00",
+  "manifest": "artifacts/releases/checkpoint-1.5.0.json",
+  "sha256": "6b3940ed7190530c046594186febff54d2e0ee93b0a0856e314c5c3ca3762ff7",
+  "manifestSourceCommit": "19e0c3a21e49e081be3cc1625fea403890932723",
+  "runtimeCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+  "checkedHashes": 1177,
+  "remoteImageMatched": true,
+  "backupSha256": "ad34a074276243fb1b83d7fe081aa7631c9d2d51d0697e9d0dca5d7e5f349b24",
+  "scope": "Rootverify-release --remote; functional19proofs REVIEW027 and futuremedia/time verdicts separate"
+}

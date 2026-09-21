@@ -9,7 +9,7 @@
 - [REVIEW027](../product/REVIEW-027.md): main UI/API/MQTT·실제 Pod 교체 outbox 및 정확한 동일 백업의 현재1.5/이전1.4 복원19근거 PASS. 신규 receipt8요구 기능 인수 완료.
 - 선택 백업: [stable-backup-6d165d1.json](../../deploy/verification/stable-backup-6d165d1.json), 719527936바이트, SHA `ad34a074276243fb1b83d7fe081aa7631c9d2d51d0697e9d0dca5d7e5f349b24`. private0600 로컬 파일도 메인이 스트리밍 해시 검증했다.
 - 두 복원 rig는 replicas0/Pods0, 소유3105/18885 터널 종료, 네 PVC와 백업 보존. [복원 집계](../../deploy/verification/candidate-6d165d1/restore-summary.json)와 [메인 실제 정리 확인](../../deploy/verification/candidate-6d165d1/root-recovery-review/summary.json)을 참조한다. 배포 담당의 실행 핸들은 모두 종료됐다.
-- `stable-v1.5.0` 및 `stable-runtime-v1.5.0-6d165d1` 로컬 태그를 정확한 runtime에 생성했다. **첫 미완료 단계는 근거 커밋 → 새 checkpoint-1.5.0.json 생성 → 해시/Ready/백업 및 독립 검증 → main·태그 push**다. `run.stableCheckpoint.manifestState`와 실제 Git을 읽어 이미 끝난 단계는 반복하지 않는다.
+- `stable-v1.5.0` 및 `stable-runtime-v1.5.0-6d165d1`은 정확한 runtime을 가리키며 두 태그와 근거 커밋을 push했다. [checkpoint-1.5.0.json](../../artifacts/releases/checkpoint-1.5.0.json): source `19e0c3a21e49e081be3cc1625fea403890932723`, SHA `6b3940ed7190530c046594186febff54d2e0ee93b0a0856e314c5c3ca3762ff7`. [REVIEW028](../product/REVIEW-028.md)의1177해시·실제Ready·백업 독립 검증 PASS. 이 파일을 덮어쓰지 않는다. **다음은 현재1.5 관찰과 유용한 후속 아이디어 검토이며, 최종 미디어·시간·인도는 원래 일정에 남아 있다.** 실제 Git에서 후속 문서·manifest 커밋의 push 여부를 확인한다.
 - 이전 [checkpoint-1.4.0.json](../../artifacts/releases/checkpoint-1.4.0.json)은 불변 유지: source `bcc010c677196c1010b5e5a6c9b9bb1a8362bcdb`, SHA `df7865319ac1e97ecbf6b70f206f29b7b7747312d2e8a355f5dea2d765c377be`, 백업594944000바이트/be09. REVIEW022의962해시는 역사적 source에 `--at-commit`으로 확인한다.
 
 ## 고정 일정
@@ -47,7 +47,7 @@ native heartbeat `grid`가10분마다 재개 절차를 호출한다. Mac과 Code
 
 ## 남은 작업
 
-1. 새1.5 불변 매니페스트와 원격 전달을 마친 뒤 현 버전 관찰을 원래 동결까지 계속한다. 신선도·오류 증가분·Ready·저장 공간·전원 상태를 점검한다.
+1. 새1.5 불변 매니페스트 검증을 완료했으며 현 버전 관찰을 원래 동결까지 계속한다. 신선도·오류 증가분·Ready·저장 공간·전원 상태를 점검한다.
 2. 추가 아이디어는 효용·안정성·남은 시간과 기존 정상 복구 지점을 검토하고, 채택 시 PRD·제품 버전을 먼저 기록한다. 이미 구현한 IDEA008/009를 다시 채택하거나 중복 배포하지 않는다.
 3. 최종 동결 시 정상 버전을 선택한다. **선택 백업 → 그 정확한 스냅샷 복원 증명 → 근거 커밋 → 새 최종 매니페스트 생성·검증** 순서를 따른다. 새 백업 파일 존재만으로 과거 복원 근거를 재사용하지 않는다.
 4. 원래 마지막30분 안에서 **신규 실제 UI 영상 → 설정 복원·영상 검수 → 같은 영상의 facts → 편집 가능한 PPT → 모든 슬라이드 검수 → 인도 검사**를 수행한다.249.33초 준비 리허설은 최종 결과가 아니다. 기술적 오디오 검사는 청취·발음 검수와 구분한다.

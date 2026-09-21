@@ -1,6 +1,6 @@
 # 최종 30분: 동일 스냅샷 복원과 릴리스 연결
 
-준비 문서이며 최종창 실행 증거가 아니다. 현재 기능상 안정 기준은 **제품1.5.0 / PRD1.12 / runtime6d165d1 / image2fd3f21**이다. REVIEW027에서 main UI·MQTT·outbox 재시작과 동일 백업의 현재1.5·하위1.4 격리 복원19개 근거를 확인했다. 태그 `stable-v1.5.0`, `stable-runtime-v1.5.0-6d165d1`은 정확한 runtime을 가리킨다. 선택 백업은 `stable-backup-6d165d1.json`, **719527936바이트 / SHA ad34a074276243fb1b83d7fe081aa7631c9d2d51d0697e9d0dca5d7e5f349b24**다. 새 불변 `checkpoint-1.5.0.json`은 근거 커밋 뒤 생성·검증하며 `run.json.stableCheckpoint.manifestState`에서 완료 여부를 확인한다.
+준비 문서이며 최종창 실행 증거가 아니다. 현재 기능상 안정 기준은 **제품1.5.0 / PRD1.12 / runtime6d165d1 / image2fd3f21**이다. REVIEW027에서 main UI·MQTT·outbox 재시작과 동일 백업의 현재1.5·하위1.4 격리 복원19개 근거를 확인했다. 태그 `stable-v1.5.0`, `stable-runtime-v1.5.0-6d165d1`은 정확한 runtime을 가리킨다. 선택 백업은 `stable-backup-6d165d1.json`, **719527936바이트 / SHA ad34a074276243fb1b83d7fe081aa7631c9d2d51d0697e9d0dca5d7e5f349b24**다. 불변 `checkpoint-1.5.0.json`은 source19e0c3a에서 생성했으며 REVIEW028에서1177해시·실제Ready·백업SHA를 독립 검증했다. manifest SHA는6b3940ed7190530c046594186febff54d2e0ee93b0a0856e314c5c3ca3762ff7이다. 이 체크포인트를 최종창 산출물로 대체하지 않는다.
 
 이전1.4의594944000바이트/be09 백업 및 불변962해시 manifest는 과거 정상 복구 이력으로 보존한다. 새1.5의 복원 근거와 혼합하지 않는다. 동결21:37:33Z, 종료22:07:33Z는 변경하지 않는다. 재개 시 `resume.json`의 현재 PID·핸들·실제 Git 상태를 확인하며 완료한 배포나 복원을 반복하지 않는다.
 

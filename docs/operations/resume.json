@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T15:03:00.340778+00:00",
+  "updatedAt": "2026-09-21T15:06:25.779067+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -16,14 +16,18 @@
   },
   "stableManifest": {
     "path": "artifacts/releases/checkpoint-1.5.0.json",
-    "state": "pending generation/verification; do notuse nonexistentmanifest ascompleted",
-    "previousImmutableFallback": "artifacts/releases/checkpoint-1.4.0.json"
+    "state": "verified",
+    "sha256": "6b3940ed7190530c046594186febff54d2e0ee93b0a0856e314c5c3ca3762ff7",
+    "manifestSourceCommit": "19e0c3a21e49e081be3cc1625fea403890932723",
+    "independentReview": "docs/product/REVIEW-028.md",
+    "verification": "artifacts/checkpoints/release-1.5/verification.json",
+    "historicalFallback": "artifacts/releases/checkpoint-1.4.0.json"
   },
   "workingMilestone": {
     "productVersion": "1.5.0",
     "prdVersion": "1.12",
     "idea": "IDEA-009",
-    "state": "Functionalstable1.5 promoted; tagslocal; nextsource/evidencecommit thenimmutablemanifest generation/verification/push"
+    "state": "Completed1.5 functionalstable/checkpoint verification andruntime tagpush; observationcontinues originalfreeze, finalmedia/time pending"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -35,7 +39,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Commit completed1.5 evidence/docs aftersecretcheck, generate immutablecheckpoint-1.5.0.json fromcommittedsource, verifyallhashes/backupexactSHA/actualReady and independentreview, pushmain+twostabletags. No rerun deployment/control/backups/restores.",
+    "Continue current1.5 observation withroot71300/98957/24851; no duplicateprocess orcompletedmutations. Check latestactualstate/counterincrements andpreserve firsthour after15:56:58.686Z. Review nextusefulidea with productrole beforeanyadoption; stable1.5 immutablefallback remains.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -338,10 +342,10 @@
     "instruction": "Use FINAL-RESTORE-PLAN bounded direct commands and media watchdog; inspect uncertain remote outcome before retry; immutable1.3 checkpoint unchanged"
   },
   "nextProductProposal": {
-    "id": "IDEA-009",
-    "revision": 1,
-    "state": "IDEA009 functionalstable1.5 promoted afterREVIEW027; immutablemanifestpending, finalmedia/time stillpending",
-    "review": "docs/product/REVIEW-024.md"
+    "state": "IDEA009 complete1.5; nextboundedproductproposal may be reviewed, noIDEA010 adoption/version change yet",
+    "currentCompletedIdea": "IDEA-009",
+    "independentReview": "docs/product/REVIEW-028.md",
+    "gate": "Evaluate utility/risk/time and1.5observation; versionPRD/product before newimplementation."
   },
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
@@ -407,7 +411,7 @@
     "adoptionCommit": "b9c10ae",
     "productVersion": "1.5.0",
     "prdVersion": "1.12",
-    "phase": "Functionalstable1.5 promoted; tagslocal; nextsource/evidencecommit thenimmutablemanifest generation/verification/push",
+    "phase": "Complete1.5 local/exactimage/main/outbox/current-backrestore/independentmanifest; noactivedeploymentorrestorehandles",
     "uiOwner": "/root/ui",
     "browserOwner": "/root/issues",
     "securityOwner": "/root/security",
