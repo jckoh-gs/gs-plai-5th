@@ -1,0 +1,21 @@
+{
+  "reviewedAt": "2026-09-21T11:48:01.821Z",
+  "reviewer": "main",
+  "scope": "Final integration and plan review; no new live cluster execution",
+  "priorReview": "docs/issues/evidence/review-017-restore-after-source.json",
+  "priorCodeAndTestsUnchanged": true,
+  "planChangedSincePriorReview": "Added per-request HTTP bounds, distinguished existing unrelated rig from uncertain current apply, and clarified network budget versus synchronous I/O limits",
+  "files": {
+    "docs/operations/FINAL-RESTORE-PLAN.md": "0a591b0a79b447eac1db0690a9db7325333d9b45b73deb19b618fbe8bd253440",
+    "docs/operations/MEDIA-PLAN.md": "521fd13ea67c1367319f75feefe152cfc346d2abdf094cc0acd7570a6bfa2a8e",
+    "docs/operations/NEXT-ACTIONS.md": "4f4c8abff5069e131725f1fa483280281e943d0e1c1b5b6f756d911ed832a38a",
+    "scripts/deploy-restore-rig.py": "1a6b530055f8c86f73f77c40bd6ef6f60d8bf471567aafaafcabc79240a8e8a9",
+    "tests/review-restore-rig.test.js": "a29f89902de86711597ed2fafc3d3ae15494375fc275a5fa37dacf97b732e7e2",
+    "scripts/remote-restore-check.mjs": "dab036666df4d2000dc6a0ed1bdc41e86a048fac61ccad1e6d543ae44841f61a",
+    "scripts/remote-preview.mjs": "fd00c96113a8b805502961a15ed3287ee1dbce1643be59c52d7978ad1a17a0cb",
+    "scripts/remote-integration.mjs": "ff594af40f686fb7a7258ee6c862f1faa4bc612b2b1c4682de8d721b91e8d523",
+    "scripts/browser-check.cjs": "9844dbf9fe8d30ce08465c70c373798cd510ec4156737f8ce721f052d356c7c8",
+    "scripts/browser-command-export.cjs": "d0496cd8a6f526bdddf61701272b1c9cf9d792d2dfbc489596eda87543a8a278",
+    "scripts/verify-proof-http-boundaries.mjs": "9fc003ce4923be345d0702aaa149e1001e8f9a0ba8eabd55f4fcdb8d36cdd4e9"
+  }
+}

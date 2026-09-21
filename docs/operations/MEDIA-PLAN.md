@@ -40,12 +40,13 @@
 
 ## 마지막 30분 실행 순서
 
-1. 0~3분: 정상 커밋/이미지/호환 DB를 확정한다. 릴리스 매니페스트를 고정하고 원격 터널·UI·MQTT를 확인한다. 사전 준비한 final-scenes.json의 approvedReleaseCommit/imageDigest를 실제 확정 값으로 채운다. 녹화 전 단지·장애·시나리오를 점검하며 시연용 합성 데이터를 명확히 표시한다.
-2. 3~10분: `node scripts/media/record-demo.cjs artifacts/media-preparation/final-scenes.json`을 실행한다. 실제4분 조작, 음성·합성·디코딩이 뒤따른다. 완료 직후 조작한 장애/제어 설정을 인도 상태로 복구한다.
-3. 10~14분: 시작/중간/끝과 클릭·확대 프레임, 자막·음성·실측 VPP 결과를 검토한다. 필요 시 오류를 수정해 별도 출력 디렉터리로 재녹화한다. verification.json의 visualReview/claimsReview는 실제 검수 뒤에만 passed로 갱신한다.
-4. 14~21분: final-deck.json에 실제 장면 캡처·확정 결과·근거 경로·영상 타임코드를 채운다. `node scripts/media/build-deck.mjs artifacts/media-preparation/final-deck.json`으로 PPT를 생성한다. 영상은 발표자료 기준 `../video/GRID-VPP-demo-ko.mp4`로 안내한다. 배포 파일을 옮길 때 video와 presentation의 상대 폴더 구조를 유지한다.
-5. 21~27분: 모든 슬라이드를 각각 열어 한글·잘림·캡처·표현·근거를 확인하고 사실과 불일치한 내용을 수정한다. 자동 검증 성공을 육안 검수로 대신하지 않는다. 내용 수정 시 새 출력 경로로 재생성한다.
-6. 27~30분: MP4/SRT/원고/장면 JSON/제작 소스/대표 프레임/PPT/노트/검수 기록을 연결하고 최종 버전과 미완료를 정직하게 기록한다. deadlineAt을 넘겨 완료했다고 표시하지 않는다.
+정확한 스냅샷 복원과 명령은 [FINAL-RESTORE-PLAN.md](FINAL-RESTORE-PLAN.md)를 따른다. 아래 시간은 준비 예산이며 완료 보장이 아니다.
+
+1. 0~3분: 정상 커밋/이미지를 확인하고 새 정상 DB를 백업·전송·검증한다. 원고와 덱 배치 준비는 병행할 수 있다. 기존 정상 백업을 덮어쓰지 않는다.
+2. 3~7분: 새 고유 PVC에서 해당 백업의 원본/목적 SHA와 무결성을 확인한 뒤 실제 UI/MQTT 복원을 검증한다. 복원 앱의 데이터 비교를 먼저 하고 UI와MQTT 검증을 병행한다. 원격 복원 증거·선택 백업을 연결한 소스를 커밋하고 릴리스 매니페스트를 고정한다. 7분까지 새 백업의 복원 증거가 없으면 이미 복원 검증된 정상 스냅샷 선택 여부를 판단하며, 새 파일의 존재만으로 복원 성공이라고 표시하지 않는다.
+3. 7~15분: 확정 approvedReleaseCommit/imageDigest와 운영3104/18884로 final-scenes.json을 준비하고 `node scripts/media/record-demo.cjs artifacts/media-preparation/final-scenes.json`을 실행한다. 실제4분 조작·음성·합성·전체 디코딩 이후 시작/중간/끝, 포인터·클릭·확대, 한글·잘림, 음성·자막 및 실측VPP 결과를 검수한다. visualReview/claimsReview는 실제 검수 뒤에만 passed로 기록한다. 시연용 합성 데이터를 명시하고 완료 직후 장애/제어 설정을 정상 인도 상태로 복구한다.
+4. 15~23분: 검수된 새 영상의 실제 캡처·타임코드·같은 매니페스트로 final-deck.json을 작성한다. `node scripts/media/build-deck.mjs artifacts/media-preparation/final-deck.json`으로 제작·재수입·전장 렌더링한 뒤 모든 슬라이드의 한글·잘림·겹침·표현·근거를 개별 검수한다. 수정 시 새 출력 경로로 재생성한다. PPT의 영상 참조는 `../video/GRID-VPP-demo-ko.mp4`이며 두 폴더의 상대 구조를 유지한다.
+5. 23~30분: MP4/SRT/원고/장면 JSON/제작 소스/대표 프레임/PPT/노트/검수 기록의 해시·연결을 확인하고 실제 배포 정상 상태·최종 버전·미완료를 기록한다. 오류 수정·재제작도 남은 원래 시간 안에서만 하며 deadlineAt을 넘겨 완료했다고 표시하지 않는다.
 
 사전 리허설 결과: 한국어 음성·실제1920×1080 UI·포인터·점진 확대·하드 자막이 포함된 12.97초 영상의 전체 디코딩을 확인했다. artifact-tool로 편집 가능한14장 패키지를 생성하고 최종 패키지 재수입 후 전 장 렌더링을 확인했다. 표지/구조도/텍스트의 대표 렌더는 한글과 배치가 정상이다. 이것은 최종 영상/슬라이드의 내용 검수나 최종 릴리스 성공 증거가 아니다.
 

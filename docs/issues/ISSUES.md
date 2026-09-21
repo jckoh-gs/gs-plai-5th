@@ -292,3 +292,27 @@ ISSUE018 상태: 네트워크대기·미완성최종명 경계 **수정·격리�
 chunkSize가256KiB→1MiB이고result.transferChunkBytes에실제값을기록한다. exec maxBuffer8MiB/개별15초/전체budget/3retry/부분·전체SHA/streaming검증은그대로다. 1MiB base64는약1.34MiB여서8MiB stdout상한안에들어간다. 실제CHUNK_SOURCE의1MiB랜덤원문및마지막137B조각을자식stdout으로읽고길이/hash/연결원문동일성을검증한새회귀를포함해독립재실행10/10PASS(`review-016-backup-final.log`). 기존before/after로그·source기록은변경하지않고최종source는별도 `review-016-backup-final-source.json`에기록했다.
 
 실제335704064B백업의재전송은메인의별도실행증거이며본검토에서live재전송/중단을수행하지않았다. chunk개선만으로마감시예상DB전체가항상180초안에완료된다고보장하지않는다. 실제최종전송도예산내완료/hash/integrity/증거를별도로확인해야한다.
+
+## ISSUE-019 — 격리 복원 snapshot 동일성 및 host 대기 경계
+
+중요도 P2 최종복원 증거/운영, 현재상태: 패치·독립fixture검증완료(후속참조). 아래는초기확인·패치대기당시관찰이다. 기준구현 `e6e4f12:scripts/deploy-restore-rig.py`를직접확인했다. 이전init은목적DB가없을때복사하고SQLite integrity_check만검사했다. 목적DB가이미있으면복사를건너뛰므로파일이정상SQLite임은알수있지만최종manifest가선택한**정확한새snapshot**과동일함을해시로강제하지못했다. 이전restore증거가틀렸거나데이터가손상됐다는의미가아니다.
+
+이전discovery의subprocess.check_output과apply의subprocess.run에host timeout이없고rollout의kubectl --timeout=180s만으로hostprocess 전체대기를제한하지못한다. 원래run.deadlineAt/전체예산을명령마다적용해야한다. 현재작업본에는source/destination streamingSHA검사와host20/30/180초·총210초/originaldeadline wrapper가작성되어있음을확인했으나담당완료후fixture/source를고정하여재검증할예정이다.
+
+필수검증: 기대SHA정상복사및기존동일목적파일허용; source불일치·기존다른목적파일거절/기존파일불변; SHA일치라도비SQLite거절; --expected-sha256생략호환은exactSnapshotVerified=false; 원본PVC읽기전용·격리PVC유지; 만료/없는run은kubectl미실행; hungapply는유한종료/민감stdout비노출/자동재시도없음; timeout이원격apply취소증명은아님을표시. 335MB새백업전송성공을169MB구복원의동일snapshot증거로대체하지않는다.
+
+최종운영순서는 `docs/operations/FINAL-RESTORE-PLAN.md`를따르며원래동결/종료시각은변경하지않는다. 계획문서는실제실행증거가아니다. 이번검토는원격실행없이소스/문서만읽고issues문서만변경했다.
+
+### ISSUE019 후속 최종 격리 검토
+
+현재상태 **패치·독립fixture검증완료**. deployment담당완료신호후최종5test파일과코드를재검토/독립실행하여5/5PASS(`review-017-restore-after.log`). 초기3test는미커밋초안의당시범위이며최종증거는이번5test sourcehash와연결한다.
+
+정확한source/destination SHA와SQLite integrity를모두확인한init만앱기동을허용한다. 잘못된sourceSHA는복사전거절, 기존다른목적파일은덮어쓰지않음, matchingSHA라도비SQLite거절, 인수생략은exactSnapshotVerified=false인호환모드, 원본PVC이중readOnly/별도복원PVC를확인했다. hungapply는900ms원래deadline에약917ms로종료,raw민감출력억제/후속rollout없음. 만료/없는run은discovery도실행하지않았다. 모든host명령은공통command timeout wrapper를사용한다.
+
+보장범위: host대기종료가이미원격에적용된리소스나init의취소를뜻하지않는다. 실제고유이름상태확인전재시도금지메시지유지. 앱이DB를변경한후같은rig재시작은exactSHA검사실패할수있으므로항상새격리PVC를사용한다. 실클러스터복원/후속UI·MQTT는미실행이며이fixturePASS가최종새snapshot복원완료를대체하지않는다. 기존immutable복원증거는수정하지않았다.
+
+### ISSUE019 후속 — 검증용 HTTP 요청 대기 상한
+
+deployment담당이 remote-restore-check.mjs, remote-preview.mjs, remote-integration.mjs, browser-check.cjs, browser-command-export.cjs의6개fetch호출에15초AbortSignal과redirect:error를추가했다. 독립검토자는해당6호출의소스를확인했다. 앱/runtime변경이아니며전체실행deadline은여전히메인감독범위다.
+
+실행증거 `evidence/final-restore-http-boundary.json`은 **remote-preview 실제child+loopback 두경계만** 증명한다: 무응답15029ms에부모강제kill없이실패,302응답53ms에거절하고redirect목적요청0회. liveClusterAccess=false. `scripts/verify-proof-http-boundaries.mjs`는실행했던heredoc원본에설명주석을추가한보존소스다. 이검토에서재실행하지않았고5스크립트전체end-to-end/live회귀로표현하지않는다. 이전restore5test/sourcehash증거는변경하지않았다.

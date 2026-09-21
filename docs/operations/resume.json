@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T11:21:01.556849+00:00",
+  "updatedAt": "2026-09-21T11:47:12.995Z",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": "stable-v1.2.0",
@@ -20,8 +20,9 @@
     "1.2.0 exact-image79 runtime tests, local88 tests, image security scan, k3s UI/export/preview/MQTT, actual outbox pod replacement, fresh backup restore and backward1.1 all PASS"
   ],
   "remainingInOrder": [
-    "Continue observation until freeze; at freeze select verified normal version and create final video then editable PPT, inspect all outputs",
-    "Before deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
+    "Continue observation until original freeze; select verified normal runtime, create consistent backup, verify that exact selected snapshot in isolated restore rig, commit evidence and create new immutable final manifest following FINAL-RESTORE-PLAN.md",
+    "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
+    "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
   ],
   "retryPolicy": {
     "readOnlyChecks": "May retry with bounded backoff",
@@ -89,5 +90,13 @@
     "verifiedSnapshotMetadata": "deploy/verification/backup-recovery-1m-20260921T1135.json",
     "evidence": "artifacts/checkpoints/backup-recovery/summary.json",
     "policy": "Original deadline; bounded network waits; only completed immutable snapshots may be retransferred; final freeze snapshot still required"
+  },
+  "finalRestorePreparation": {
+    "plan": "docs/operations/FINAL-RESTORE-PLAN.md",
+    "exactSnapshotFlag": "--expected-sha256",
+    "helperTests": "docs/issues/evidence/review-017-restore-after.log",
+    "httpBoundaryTests": "docs/issues/evidence/final-restore-http-boundary.json",
+    "status": "Prepared and isolated fixtures verified; fresh final snapshot restore not executed",
+    "constraints": "New unique proof PVC; same selected snapshot SHA before app start; preserve old verified snapshots; no retry of uncertain apply with a new name; original deadline unchanged"
   }
 }

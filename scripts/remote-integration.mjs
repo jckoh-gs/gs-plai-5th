@@ -4,7 +4,7 @@ import {randomUUID} from 'node:crypto';
 import mqtt from 'mqtt';
 const base=process.env.REMOTE_API||'http://127.0.0.1:3104';
 const token=readFileSync('artifacts/private/deploy/api-token','utf8').trim();
-const api=async(path,method='GET',body,expected=200)=>{const r=await fetch(base+path,{method,headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});const data=await r.json();assert.equal(r.status,expected,JSON.stringify(data));return data;};
+const api=async(path,method='GET',body,expected=200)=>{const r=await fetch(base+path,{signal:AbortSignal.timeout(15000),redirect:'error',method,headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});const data=await r.json();assert.equal(r.status,expected,JSON.stringify(data));return data;};
 const until=async(fn,label,ms=20000)=>{const end=Date.now()+ms;while(Date.now()<end){const v=await fn();if(v)return v;await new Promise(r=>setTimeout(r,200));}throw Error(`Timeout ${label}`);};
 const c=await mqtt.connectAsync(process.env.REMOTE_MQTT||'mqtt://127.0.0.1:18884',{username:'vpp-client',password:readFileSync('artifacts/private/deploy/client-password','utf8').trim(),clientId:`remote-proof-${randomUUID()}`,reconnectPeriod:0,connectTimeout:5000});
 let plant;

@@ -1,0 +1,13 @@
+{
+  "reviewedAt": "2026-09-21T11:46:32.260883+00:00",
+  "files": {
+    "scripts/remote-restore-check.mjs": "dab036666df4d2000dc6a0ed1bdc41e86a048fac61ccad1e6d543ae44841f61a",
+    "scripts/remote-preview.mjs": "fd00c96113a8b805502961a15ed3287ee1dbce1643be59c52d7978ad1a17a0cb",
+    "scripts/remote-integration.mjs": "ff594af40f686fb7a7258ee6c862f1faa4bc612b2b1c4682de8d721b91e8d523",
+    "scripts/browser-check.cjs": "9844dbf9fe8d30ce08465c70c373798cd510ec4156737f8ce721f052d356c7c8",
+    "scripts/browser-command-export.cjs": "d0496cd8a6f526bdddf61701272b1c9cf9d792d2dfbc489596eda87543a8a278",
+    "scripts/verify-proof-http-boundaries.mjs": "9fc003ce4923be345d0702aaa149e1001e8f9a0ba8eabd55f4fcdb8d36cdd4e9"
+  },
+  "evidence": "docs/issues/evidence/final-restore-http-boundary.json",
+  "executionScope": "remote-preview actual child with two local HTTP boundaries only; no independent rerun or live cluster"
+}

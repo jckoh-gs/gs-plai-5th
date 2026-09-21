@@ -1,0 +1,10 @@
+{
+  "reviewedAt": "2026-09-21T11:42:22.412712+00:00",
+  "files": {
+    "scripts/deploy-restore-rig.py": "1a6b530055f8c86f73f77c40bd6ef6f60d8bf471567aafaafcabc79240a8e8a9",
+    "tests/review-restore-rig.test.js": "a29f89902de86711597ed2fafc3d3ae15494375fc275a5fa37dacf97b732e7e2",
+    "docs/operations/FINAL-RESTORE-PLAN.md": "0e9197229c96dad37f6df7657416bc6a82a384da0cb385619fe0ba4eaa4f37ef",
+    "docs/issues/evidence/review-017-restore-after.log": "030cda7f3c4d8cdf7c576457a1f590cb9d3cd7839baea8c0ede4a9b5e0eb644c"
+  },
+  "scope": "independent local fakekubectl/SQLite fixtures only; no live restore"
+}

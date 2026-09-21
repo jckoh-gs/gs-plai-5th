@@ -1,0 +1,11 @@
+{
+  "reviewedAt": "2026-09-21T11:42:00.470446+00:00",
+  "sourceRevision": "e6e4f12",
+  "path": "scripts/deploy-restore-rig.py",
+  "sha256": "92fe467b57d4abd296824798d11b2d2362a7904afa9fda78a801d583f18091f7",
+  "findings": [
+    "integrity-only does not force expected snapshot identity",
+    "host subprocess waits lack original deadline bounds"
+  ],
+  "scope": "read-only initial review; not a claim prior recovery evidence is invalid"
+}

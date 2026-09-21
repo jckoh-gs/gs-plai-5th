@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {DatabaseSync} from 'node:sqlite';
 import {readFileSync,writeFileSync} from 'node:fs';
 const token=readFileSync('artifacts/private/deploy/api-token','utf8').trim(),base=process.env.RESTORE_API||'http://127.0.0.1:3105';
-async function api(path){const r=await fetch(base+path,{headers:{Authorization:`Bearer ${token}`}});assert(r.ok);return r.json();}
+async function api(path){const r=await fetch(base+path,{signal:AbortSignal.timeout(15000),redirect:'error',headers:{Authorization:`Bearer ${token}`}});assert(r.ok);return r.json();}
 const db=new DatabaseSync(process.env.RESTORE_BACKUP_FILE||'artifacts/private/pre-security-79c996f.sqlite',{readOnly:true});
 try{
  assert.equal(db.prepare('PRAGMA integrity_check').get().integrity_check,'ok');const state=await api('/api/state'),saved=db.prepare('SELECT body FROM plants').all().map(r=>JSON.parse(r.body));

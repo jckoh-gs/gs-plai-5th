@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "script": "scripts/remote-preview.mjs",
+  "realHttpHang": {
+    "elapsedMs": 15029,
+    "finiteFailure": true,
+    "parentKill": false
+  },
+  "redirect": {
+    "elapsedMs": 53,
+    "rejected": true,
+    "targetRequests": 0
+  },
+  "requests": 2,
+  "liveClusterAccess": false
+}

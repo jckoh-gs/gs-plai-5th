@@ -1,0 +1,13 @@
+✔ restore manifest enforces streamed source/destination SHA before app start and retains isolated read-only source (835.503417ms)
+✔ wrong snapshot SHA fails before copy; optional argument keeps legacy command compatibility (515.073459ms)
+✔ matching hashes do not replace SQLite integrity validation (411.617708ms)
+✔ hung apply is killed by remaining deadline without raw output or automatic retry (918.622834ms)
+✔ expired or missing run fails closed without even a discovery or apply (79.5895ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2793.34775
