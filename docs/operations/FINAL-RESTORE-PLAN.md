@@ -2,6 +2,8 @@
 
 준비 문서이며 실행 증거가 아니다. 현재 기능상 안정 기준은 제품1.4.0 / PRD1.11 / runtimefdd0491 / imagec19d550f다. 독립 복원17개 및 main proof7개 검증 후 stable-v1.4.0과 stable-runtime-v1.4.0-fdd0491 태그를 로컬 생성했다. 선택한 정확한 백업은594944000바이트/be09a5f5이며1.4 및 하위1.3 복원을 검증했다. run.json의 backup/stableCheckpoint가 선택 기준이며 checkpoint-1.4.0.json의962개해시·실제Ready 이미지·백업SHA를 REVIEW022에서 독립 확인했다. 동결21:37:33Z, 종료22:07:33Z는 변경하지 않는다. 역사적 fallback420466688바이트/12:17 백업(b515ef26…)은 별도 PVC에서1.3 및 하위1.2 복원·UI·MQTT 검증까지 완료되었다. 이전169MB/335MB 백업은 별도 이력이며 새 최종 백업의 복원 증거로 대체하지 않는다.
 
+main36b7824와 두1.4 stable 태그의 push는 완료했고,14:02:13Z 재개 검사에서 로컬 HEAD와 origin/main의 일치를 확인했다. REVIEW022의 당시 독립 검증 범위는 그대로 보존한다.
+
 ## 선행 준비와 한계
 
 프로젝트 루트에서 Node24+, Python3, kubectl charles-k3s 접근, Chrome/Playwright 런타임, 기존 비밀 파일 `artifacts/private/deploy/{api-token,client-password}`가 필요하다. 비밀을 명령행/로그/공개 Git에 넣지 않는다. 실제 클러스터의 여유 디스크를 동결 전에 다시 확인한다. 최근 관측 /data 전체파일5031428043바이트는 단일594944000바이트 snapshot 크기와 다르다. available78692749312바이트는 공유 host 파일시스템 여유이며 PVC 전용 예약량이 아니다. 최종 snapshot·압축파일·로컬복사·복원PVC의 중복 공간과 이후 성장량을 함께 계산하며 자동삭제하지 않는다. 원본PVC의 새 SQLite 및 압축본, 별도 복원PVC, 로컬 전송본을 모두 보관할 공간이 필요하며 현재 파일 크기로 밤의 크기를 보장하지 않는다. 이미지가 이미 노드에 있더라도 레지스트리와 PVC 상태를 읽기 점검한다.

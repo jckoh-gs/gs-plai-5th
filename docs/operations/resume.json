@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T14:01:19.088448+00:00",
+  "updatedAt": "2026-09-21T14:08:59.369531+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": "stable-v1.4.0",
@@ -60,15 +60,17 @@
       "path": "artifacts/checkpoints/soak-1.2.0-first-hour/summary.json",
       "primaryThrough": "2026-09-21T11:08:12.445Z",
       "supplementaryThrough": "2026-09-21T11:08:07.303Z",
-      "processesContinue": true,
-      "scope": "First hour immutable observation prefix only; final observation and media gates remain pending"
+      "scope": "First hour immutable observation prefix only; final observation and media gates remain pending",
+      "processesContinuedAtCapture": true,
+      "currentProcessStatus": "Historical sessions now ended for subsequent planned upgrade; read currentObservationProcesses for live ownership."
     },
     {
       "path": "artifacts/checkpoints/soak-1.3.0-first-hour/summary.json",
       "primaryThrough": "2026-09-21T13:22:07.541Z",
       "supplementaryThrough": "2026-09-21T13:22:06.694Z",
-      "processesContinue": true,
-      "scope": "First-hour prefix with known local interruptions; not uninterrupted clean service proof"
+      "scope": "First-hour prefix with known local interruptions; not uninterrupted clean service proof",
+      "processesContinuedAtCapture": true,
+      "currentProcessStatus": "Historical sessions now ended for subsequent planned upgrade; read currentObservationProcesses for live ownership."
     }
   ],
   "connectionIncident": {
@@ -105,7 +107,7 @@
         "observationGap": "Clean-session QoS1 observers missed8 telemetry batches /300samples during reconnect; all corresponding remote outbox samples continuous and publisher PUBACK recorded. No every-consumer delivery guarantee."
       }
     ],
-    "scope": "Historical1.2 incidents only; current1.3 uses currentObservationBaselines and new observerhandles. Do not restart old ended processes."
+    "scope": "Historical1.2 incidents only; live sessions use currentObservationBaselines and currentObservationProcesses. Do not restart old ended processes."
   },
   "backupRecovery": {
     "source": "scripts/remote-backup.mjs",
@@ -119,9 +121,10 @@
     "exactSnapshotFlag": "--expected-sha256",
     "helperTests": "docs/issues/evidence/review-017-restore-after.log",
     "httpBoundaryTests": "docs/issues/evidence/final-restore-http-boundary.json",
-    "status": "Exactsnapshot helper now exercised on420466688B checkpoint in both1.3 and backward1.2. New final freeze snapshot still must receive its own exact restore proof.",
+    "status": "Exact594944000B/be09a5f5 snapshot verified in fresh1.4 and backward1.3,17restoreproofs. Any newly selected final freeze snapshot still requires its own exact restore proof.",
     "constraints": "New unique proof PVC; same selected snapshot SHA before app start; preserve old verified snapshots; no retry of uncertain apply with a new name; original deadline unchanged",
-    "verifiedCurrentCheckpoint": "deploy/verification/candidate-3fa3ba0/restore-summary.json"
+    "verifiedCurrentCheckpoint": "deploy/verification/candidate-fdd0491/restore-summary.json",
+    "previousVerifiedCheckpoint": "deploy/verification/candidate-3fa3ba0/restore-summary.json"
   },
   "previousObservations": [
     {
@@ -236,11 +239,12 @@
     "supervisor": 81174
   },
   "currentObservationBaselines": {
-    "primaryApiErrors": 0,
+    "primaryApiErrors": 1,
     "primaryConnectionErrors": 0,
-    "supplementaryConnectionErrors": 0,
+    "supplementaryConnectionErrors": 1,
     "supplementarySampleDiscontinuitiesPerRTU": 0,
-    "scope": "New1.4sessions baseline only; prior1.3counts preserved in immutablearchive, not reset in place."
+    "evidence": "artifacts/checkpoints/reconnect-20260921T1401/summary.json",
+    "scope": "Cumulative1.4 counters after14:01 natural reconnect; compare later increments without resetting observer counters. Historical1.3 counts remain separate."
   },
   "completedOperations": [
     {
@@ -299,7 +303,9 @@
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
     "scope": "Private ownership journal, interrupted-demo settings recovery, same-video reviewed-facts binder and portable deck packaging; no runtime change",
-    "originalWindowUnchanged": true
+    "originalWindowUnchanged": true,
+    "contentPreparationReview": "docs/operations/MEDIA-1.4-FINAL-CONTENT-RECOMMENDATIONS.md",
+    "contentPreparationScope": "1.4/PRD1.11 unreviewed template only; distinguish filmed MQTT/fault actions from separately tested RESTform/outbox restart. Final video/facts/PPT remain pending."
   },
   "mediaRecovery": {
     "plan": "docs/operations/FINAL-RESTORE-PLAN.md",
@@ -309,7 +315,19 @@
     "lastLocalRehearsal": "artifacts/checkpoints/media-lifecycle-local-round1/result.json",
     "localFixtureOnly": true
   },
-  "currentObservationIncidents": [],
+  "currentObservationIncidents": [
+    {
+      "evidence": "artifacts/checkpoints/reconnect-20260921T1401/summary.json",
+      "runtime": "1.4.0",
+      "outageAt": "2026-09-21T14:01:54.445Z",
+      "recoveredAt": "2026-09-21T14:01:55.750Z",
+      "symptom": "health timeout5002ms",
+      "podUidUnchanged": "f45d1e93-03e8-4f0a-a7af-7f4925b44190",
+      "cause": "unknown",
+      "observedPerRtuSampleDiscontinuities": 0,
+      "scope": "Captured received sample deltas equal simulation advance for5RTUs; no universal subscriber delivery guarantee; no remote mutations or outbox query."
+    }
+  ],
   "nextOperationalReview": "1.4firsthour prefix after14:49:42UTC. Check livefreshness/counterincrements andstorage/headroom/hostpower without changing deadlines or replaying completedwrites. Finalmedia preparation stillneeds1.4actualfacts atfreeze; no final artifacts yet.",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.4",
@@ -319,12 +337,16 @@
     "currentHandle": 81174,
     "currentIdentity": "Mon Sep 21 22:46:07 2026",
     "nextStep": "After1.4rollout supervisor restarted once; old7353terminal. Do not repeat.",
-    "activationEvidence": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
-    "oldHandleTerminal": 25872,
-    "new": {
-      "pid": 80224,
-      "handle": 7353,
-      "processIdentity": "Mon Sep 21 22:23:12 2026"
+    "historicalActivation": {
+      "scope": "Planned1.3 diagnostic activation13:23UTC; this process has since ended for the planned1.4 upgrade.",
+      "evidence": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
+      "previousHandleTerminal": 25872,
+      "activatedProcess": {
+        "pid": 80224,
+        "handle": 7353,
+        "processIdentity": "Mon Sep 21 22:23:12 2026"
+      },
+      "activatedHandleNowTerminal": 7353
     }
   },
   "hostPowerGuard": {
@@ -350,7 +372,6 @@
     "buildOwner": "/root/deployment",
     "evidenceDirectory": "deploy/verification/candidate-fdd0491",
     "phase": "complete and verified; no repeat upgrade/restore needed",
-    "mainRuntimeUnchanged": true,
     "retry": "Inspect existing handles and evidence before any repeat build/push/registration; content/source/digest must match.",
     "localRegressionHandleTerminal": 79493,
     "localBrowserEvidence": [
@@ -408,6 +429,8 @@
     },
     "registryForwardHandleTerminal": 29782,
     "registryForwardCleanup": "deploy/verification/candidate-fdd0491/registry-forward-cleanup.json",
-    "registryFutureRule": "Local15050closed; open newownedforward only for future explicitimagework afterlistenercheck; remote registry retained."
-  }
+    "registryFutureRule": "Local15050closed; open newownedforward only for future explicitimagework afterlistenercheck; remote registry retained.",
+    "deploymentChange": "Planned1.4 rollout and actual outbox restart completed and verified; no further runtime mutation during checkpoint/handoff documentation."
+  },
+  "handoffConsistencyReview": "docs/product/REVIEW-023.md"
 }

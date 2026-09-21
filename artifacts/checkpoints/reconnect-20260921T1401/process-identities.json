@@ -1,0 +1,23 @@
+[
+  {
+    "role": "supervisor",
+    "pid": 84952,
+    "handle": 81174,
+    "processIdentity": "Mon Sep 21 22:46:07 2026",
+    "psExit": 0
+  },
+  {
+    "role": "primary",
+    "pid": 85649,
+    "handle": 36193,
+    "processIdentity": "Mon Sep 21 22:49:41 2026",
+    "psExit": 0
+  },
+  {
+    "role": "audit",
+    "pid": 85652,
+    "handle": 92936,
+    "processIdentity": "Mon Sep 21 22:49:42 2026",
+    "psExit": 0
+  }
+]

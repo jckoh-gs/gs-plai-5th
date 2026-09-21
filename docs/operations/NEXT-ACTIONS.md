@@ -1,83 +1,66 @@
 # 자율 실행 인계
 
-이 기록은 전체 목표 완료 선언이 아니다. 현재 기능상 stable 기준은 제품1.4.0 / PRD1.11 / runtimefdd0491 / imagec19d550f다. run.json의 backup/stableCheckpoint는 정확한594944000바이트/be09a5f5 snapshot을 선택했다. stable-v1.4.0 및 stable-runtime-v1.4.0-fdd0491 태그는runtimefdd0491을가리키며, 불변 checkpoint-1.4.0.json의962해시·실제Ready이미지·백업SHA는 REVIEW022에서 독립 확인했다. 이전1.0~1.3 및1.3/b515ef26 역사적 fallback을 보존한다.
+이 문서는 현재 실행의 재개 지점이다. 전체 목표는 아직 완료되지 않았다. 원래 실행과 검증 기록을 이어가며, 새 실행이나 중복 배포를 만들지 않는다.
 
-- 실제 시작: 2026-09-21 17:07:33 KST.
-- 기능 동결/복원 판단/최종 미디어 시작: 2026-09-22 06:37:33 KST.
-- 종료: 2026-09-22 07:07:33 KST. 시간 연장 없음.
-- 진행 중 목표를 완료 처리하지 않는다. 추가 개발자 입력을 전제로 하지 않는다.
+## 현재 선택한 정상 버전
 
-## 완료된1.3 기능 회차
+- 제품 **1.4.0**, PRD **1.11**, 앱 runtime `fdd0491a5c08901962f46ac845f8582921150d45`.
+- k3s `charles-k3s` / namespace `gs-plai-5h` / deployment `grid`. 앱 이미지 digest `sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4`.
+- 불변 [checkpoint-1.4.0.json](../../artifacts/releases/checkpoint-1.4.0.json): manifest source `bcc010c677196c1010b5e5a6c9b9bb1a8362bcdb`, SHA256 `df7865319ac1e97ecbf6b70f206f29b7b7747312d2e8a355f5dea2d765c377be`. 앱 runtime과 운영 문서 source commit은 구분한다.
+- [REVIEW-022](../product/REVIEW-022.md)에서 962개 파일 해시·실제 Ready app/broker·백업 SHA를 독립 확인했다. 과거 시점 증거의 무결성은 `--at-commit`으로 검증한다. 이 매니페스트를 덮어쓰지 않는다.
+- `stable-v1.4.0` 및 `stable-runtime-v1.4.0-fdd0491`은 앱 runtime을 가리키며 원격 push를 완료했다. 14:02:13Z 읽기 검사에서 main 로컬/원격 `36b7824`가 일치했다. 이후 재개에서는 Git 상태를 새로 확인한다.
+- 선택 백업: [stable-backup-fdd0491.json](../../deploy/verification/stable-backup-fdd0491.json), 594944000바이트, SHA256 `be09a5f5e1721970ec7f25197fcf4f3db504f6f6ad4765080ba301a0c7fd760a`. [정확한 1.4 및 하위 1.3 복원](../../deploy/verification/candidate-fdd0491/restore-summary.json) 17개 근거와 main 7개 근거를 REVIEW-021에서 확인했다.
+- 배포·명령·outbox 재시작·현재/하위 버전 복원·매니페스트 검증은 완료했다. 재접속 자체를 이유로 반복하지 않는다. 이전 1.0~1.3 체크포인트와 백업도 보존한다.
 
-PRD1.10 / IDEA-007 선택RTU 시나리오와 ISSUE020 기상 조회 피드백을 검증했다. 정확한3fa3ba0 이미지, 실제 k3s UI·MQTT·outbox 재시작, 동일420466688바이트 백업의 별도1.3 및 하위1.2 복원까지 통과했다. 최종 영상·PPT·시간·인도 조건은 미완료다. 재접속 시 resume.json의 현재 세션과 첫 미완료 단계를 따른다.
+## 고정 일정
 
-## 관찰
+[run.json](run.json)의 원래 시각이 기준이다. 시간 연장은 없다.
 
-현재 main 포트포워딩은3104/18884이며 kubectl은 항상 charles-k3s/gs-plai-5h를 명시한다. 터널 종료는 배포 종료와 다르다. 실제 배포는 단일 writer, Ready2/2 컨테이너다. 이전1.3 read-only soak은 artifacts/soak/v1.3.0에10초마다 상태와 실제MQTT 샘플을 기록한다. 변경 전후 관찰을 이어 붙여 무중단으로 주장하지 않는다. 이전관찰은 artifacts/checkpoints/soak-1.0.0, soak-1.1.0, soak-1.2.0에 별도로 보존했다.
+- 시작: 2026-09-21 17:07:33 KST (`08:07:33.079009Z`).
+- 기능 동결·복원 판단·최종 미디어 시작: 2026-09-22 06:37:33 KST (`21:37:33.079009Z`).
+- 종료: 2026-09-22 07:07:33 KST (`22:07:33.079009Z`).
 
-재개 시 clock과 run.json을 확인하고 latest.json 시각·API/연결 오류·invalid·대기열·메모리를 확인한다. 관찰 프로세스가 끝났으면 종료 구간을 기록하고 새 SOAK_DIRECTORY 하위 세션으로 시작한다. 정상이고 의미 있는 변화가 없으면 같은 시험을 반복하거나 알림을 반복하지 않는다. 주기적으로 df와 Pod 재시작/Ready를 확인한다. 외부 KMA/AWS/실운영 VPP 자격정보는 없으며 성공으로 꾸미지 않는다.
+## 재접속 직후 순서
 
-RTU별 추가 전체 SCADA 관찰도 실행 중이다. 당시1.3 강화 세션9a9f5e31 / root handle30644, primary706da638 / handle40339를 확인한다. 이전54bdac4e/5651과 primary67091은 계획 교체로 종료되었다. primary soak를 대체하지 않으며 freeze에서 각 관측과 소스를 별도로 보존한다. 동일ID/동일본문 중복과 sequence/샘플 간격은 문서의 맥락 규칙으로 해석한다.
+1. 현재 시각, 최신 사용자 지시, run.json, [resume.json](resume.json)을 읽는다. 원래 runId·마감·첫 미완료 단계를 유지한다.
+2. `node scripts/resume-status.mjs`로 실제 Git·클러스터·Ready 이미지·인증 API 버전을 읽기 대조한다. 네트워크 실패나 응답 유실을 성공으로 표시하지 않는다.
+3. `artifacts/operations/status.json`과 실제 PID의 시작 identity를 대조한다. 기존 정상 supervisor/관측기를 중복 시작하지 않는다. 이전 핸들에 현재 프로세스 소유권이 있다고 추정하지 않는다.
+4. 중단된 변경 작업은 resume의 operation 기록과 원격 실제 상태를 먼저 확인한다. 같은 명령의 commandId, 배포 이미지, 백업 remotePath, 시연 private journal을 대조하기 전에 새 ID·새 복원 rig·새 등록을 만들지 않는다.
+5. 기존 작업을 확인한 뒤 첫 미완료 단계만 진행한다. [NETWORK-RECOVERY.md](NETWORK-RECOVERY.md)에 제한·백오프·백업 및 시연 복구 절차가 있다.
 
-11:16Z에 로컬관측이 일시실패한 뒤 supervisor가 자동복구했다.11:19Z에는 그때발견한시각기록오류를수정한감시프로세스로 계획교체했다. 당시supervisor root handle25872/PID54951(`Mon Sep 21 20:19:20 2026`)이며 이전98912는정상종료됐다. `artifacts/checkpoints/reconnect-20260921T1116`에 두사건과원문증거를분리보존했다. 당시복구후 main누적APIerror1/connectionErrors3, 추가RTUobserverconnectionErrors5는 과거누적값이다. 이후증가분/현재apiReady·MQTT연결·관측신선도·샘플이상을확인하고 기존누적값을새장애로반복보고하지않는다. 카운터를초기화하거나무중단으로표시하지않는다.
+native heartbeat `grid`가 10분마다 이 재개 절차를 호출한다. Mac과 Codex가 실행 중이어야 하며 오프라인 AI 실행을 보장하지 않는다. 상태가 같으면 알림과 재시험을 반복하지 않는다.
 
-11:34Z에 추가 로컬 검증 실패가 관측되어 같은 supervisor가11:34:05.722Z 단절/11:34:07.371Z 정상 복귀를 기록했다. 수동 재시작이나 강제 네트워크 차단은 없었다. 원인은 미확정이며 백업과의 인과관계도 입증하지 않았다. `artifacts/checkpoints/backup-recovery/summary.json`에 원문 구간을 보존했다. 최신 기준 누적값은 main APIerrors2/connectionErrors3, 추가 observer connectionErrors6이다. `resume.json`의 knownCumulativeCounters를 기준으로 이후 증가분을 판단한다.
+## 현재 프로세스와 관찰 기준
 
-11:57/11:59Z에도 로컬 연결 재수립이 기록됐다. 최신 누적 기준은 main APIerrors3/connectionErrors3, 추가observer connectionErrors8, RTU별 sampleDiscontinuities1이다. 11:59 연결 공백 중 clean-session 관측기가8개배치/300샘플을 수신하지 못했으며 해당 원격 outbox의 연속 샘플과 PUBACK는 확인했다. 모든 수신자의 무손실을 뜻하지 않는다. `artifacts/checkpoints/reconnect-20260921T1159/summary.json`을 보고 기존 공백을 새 장애로 중복 보고하지 않는다.
+실시간 소유권은 `resume.currentObservationProcesses`가 기준이며 조치 전 실제 identity를 확인한다.
 
-1.2의 누적 오류·수신 공백은 위 이력과 보존된 아카이브에 남겼다. 이전1.3의 별도 관측은12:22:04/05Z에 시작했으며 resume.json.currentObservationBaselines와 currentObservationHandles를 먼저 사용한다. 기존 누적값을 새 세션의 장애로 비교하거나 전체 실행이 무중단이었다고 주장하지 않는다.
+- supervisor: handle **81174**, PID **84952**, `Mon Sep 21 22:46:07 2026`. 자체 소유 main 포트포워딩은 **3104/18884**다.
+- primary: handle **36193**, PID **85649**, `Mon Sep 21 22:49:41 2026`, `artifacts/soak/v1.4.0/latest.json`.
+- 추가 SCADA audit: handle **92936**, PID **85652**, `Mon Sep 21 22:49:42 2026`, `artifacts/soak/telemetry-audit/2026-09-21T13-49-42-893Z-9fe9c0ec/latest.json`.
+- 임시 전원 보호: handle **11821**, PID **80946**, `Mon Sep 21 22:33:11 2026`, `caffeinate -i -s -t 30861`. 원래 마감까지 AC 전원에서 idle/system sleep을 억제하며 지속 설정은 바꾸지 않았다. 수동·강제 절전/종료는 방지 보장하지 않는다.
 
-## 동결 준비와 최종30분
+현재 1.4 세션은 13:49:41/42Z부터다. 첫 1시간 관측 보존은 **14:49:42Z 이후**에 한다. 새 세션과 이전 세션을 합쳐 무중단으로 표현하지 않는다. 정상 관측기를 재시작하거나 누적 카운터를 초기화하지 않는다.
 
-1. 현재 runtime 소스가 stable 이미지와 일치하는지 확인한다. 미완성 작업이 있으면 검증된 stable 이미지·필요시 호환 백업을 사용한다. 기존 백업을 덮어쓰지 않는다.
-2. 원격 최신 정상 DB는 scripts/remote-backup.mjs로 streaming 일관 백업·전송·해시·무결성을 검증한다. BACKUP_METADATA_PATH는 새로운 경로를 사용한다. 전체네트워크예산180초/원래마감과1MiB검증chunk를사용하며중단시 artifacts/operations/backups의privatejournal과정확한remotePath를먼저확인한다. .snapshot.part는미완성이다. 완료된동일snapshot의응답유실·전송실패만 REMOTE_BACKUP_PATH로재검증/전송하고새snapshot을중복생성하지않는다. NETWORK-RECOVERY.md의동기I/O·원격취소한계를유지한다. backup/image/source를 run.json에 반영하고 변경 기록을 commit한 뒤 새 릴리스 매니페스트를 생성·검증한다. 기존 checkpoint 매니페스트는 불변이다.
-3. 최종 영상의 입력은 scripts/media/final-input-template.json에서 복사한다. 승인된 manifest.source.commit과 배포 이미지 digest, 실제3104/18884, 비밀 파일 경로를 넣는다. 비밀 본문을 저장하지 않는다. prepare-final-scenes.cjs는 동결 창을 검사한다.
-4. record-demo.cjs로 실제 UI·한국어 음성/자막·포인터/클릭/확대 영상을 만든다. 영상은 약4분, 사전 전체 제작은약4분26초였다. 최종버전에서 새로 촬영하며 리허설을 최종으로 재사용하지 않는다.
-5. 실제VPP125kW/상태전이, 전체 디코딩, 대표프레임·음성·자막·포인터·확대/잘림을 확인한 뒤에만 영상 검수 상태를 passed로 바꾼다. 최종 캡처와 실제 근거로14장 편집 가능한 PPT를 만들어 모든 슬라이드를 각각 검수한다. 두 산출물은 동일 매니페스트를 참조한다.
-6. 시연용 가상장애를 모두 해제하고 정상 재생·현재 배포Ready를 확인한다. 영상·SRT·원고·장면JSON·소스·대표프레임·PPT·노트·검수기록 및 안전한 접속/백업 경로를 인도한다. 미디어 제작 이후 추가 백업이 있다면 촬영 전 기준 백업과 구분한다.
+[14:01 사건](../../artifacts/checkpoints/reconnect-20260921T1401/summary.json): health 검사 timeout 5002ms, 단절 기록 14:01:54.445Z → 검증 복귀 14:01:55.750Z. 같은 Pod UID·Ready 2개·재시작 0회다. 사건 이후 비교 기준은 primary APIerrors **1**, connectionErrors **0**, audit connectionErrors **1**, RTU별 sampleDiscontinuities **0**이다. 보존 구간에서 5개 RTU의 수신 샘플 증가와 simulation advance가 일치했고 invalid/sequence jump도 0이었다. 원인은 미확정이며 보편적인 무손실 보장이 아니다. 이후 새 사건은 이 기준과 비교해 기록한다.
 
-새 최종 매니페스트가 새 백업을 선택하면 그 정확한 스냅샷의 별도 복원 근거도 먼저 확보한다. `FINAL-RESTORE-PLAN.md`의원본/목적SHA·init무결성·원본데이터비교·UI/MQTT 순서를따른다. 기존420MB백업의복원증거를새파일검증으로대체해표시하지않는다. 동결후0~7분정상버전/백업/복원/매니페스트,7~15분신규영상과검수,15~23분PPT와전장검수,23~30분인도검사를준비예산으로삼고마감은연장하지않는다.
+## 남은 작업 순서
 
-정확한 명령과 도구 입력은 MEDIA-PLAN.md 및 scripts/media 아래에 있다. 리허설 검증은 artifacts/media-preparation/REVIEW.md에 있다. 최종 전체 목표가 충족되거나 종료 시점에 이르면 native heartbeat grid를 정리하고, 완료 여부를 사실대로 보고한다. 정상 동작하지 않은 항목을 완료로 표시하지 않는다.
+1. 현재 관측을 계속하며 신선도·오류 증가분·Ready·저장 공간·전원 상태를 확인한다. 14:49:42Z 이후 첫 1시간의 원문과 소스를 불변 보존한다.
+2. 유용한 추가 아이디어가 있으면 효용·안정성·남은 시간을 평가하고 채택 시 PRD와 제품 버전을 먼저 기록한다. IDEA-008은 이미 1.4로 구현·검증했으므로 다시 채택하거나 재배포하지 않는다. 현재 1.4 복원 기준을 보존한다.
+3. 최종 동결에서 정상 버전을 선택한다. **선택 백업 → 그 정확한 스냅샷 복원 증명 → 근거 커밋 → 새 최종 매니페스트 생성·검증** 순서다. 새 백업 파일 존재만으로 기존 복원 증거를 재사용하지 않는다.
+4. 원래 마지막 30분 안에서 **신규 실제 UI 영상 → 설정 복원·영상 검수 → 같은 영상의 facts 바인딩 → 편집 가능한 PPT → 모든 슬라이드 검수 → 인도 검사**를 진행한다. 리허설을 최종 결과로 재사용하지 않는다.
+5. 최종 정상 상태·원격 전달·산출물 해시와 링크를 확인하고 이 실행의 heartbeat 및 소유 터널을 종료한다. 원격 앱과 PVC는 보존한다. 최종 미디어·시간·인도 조건을 충족하기 전 전체 목표 완료를 선언하지 않는다.
 
-## Reconnection entry
+정확한 명령, 단계별 컷오프 및 새 백업 검증이 늦어질 때의 검증된 stable 선택은 [FINAL-RESTORE-PLAN.md](FINAL-RESTORE-PLAN.md)를 따른다. 미디어는 [MEDIA-PLAN.md](MEDIA-PLAN.md), 인도는 [DELIVERY-PLAN.md](DELIVERY-PLAN.md)를 따른다. 1.4 문구의 별도 시험과 실제 촬영 구분은 [미디어 준비 검토](MEDIA-1.4-FINAL-CONTENT-RECOMMENDATIONS.md)를 따른다. 실제 KMA/AWS/운영 VPP 자격정보가 없으므로 해당 연결 성공을 주장하지 않는다.
 
-After interruption, read `resume.json`, run `node scripts/resume-status.mjs`, and reconcile actual state before advancing its first incomplete checkpoint. The singleton `node scripts/connection-supervisor.mjs` owns local forwarding; check `artifacts/operations/status.json` before starting another. Native heartbeat `grid` checks every ten minutes while the Mac and Codex app are running. Preserve run.json deadlines. See NETWORK-RECOVERY.md.
+최근 /data 전체 파일 5031428043바이트와 단일 백업 594944000바이트는 다른 값이다. 공유 hostFS available 78692749312바이트는 PVC 예약량이 아니다. 최종 백업 전에 원본·압축본·로컬 전송본·복원 PVC 및 성장량의 공간을 다시 확인한다. 검증된 백업을 자동 삭제하지 않는다.
 
-최종 인도 점검은 DELIVERY-PLAN.md를 따른다. 최종 미디어 생성 도구에는 서로 다른 이미지/접속 경로/영상의 혼합을 막는 검사가 추가되어 있다. MP4 검수 후 visualReview/claimsReview를 실제 확인 결과로 갱신하고 PPT를 생성한다. PPT 검수 후 `scripts/verify-delivery.mjs --manifest <최종 고정 매니페스트> --report <새 인도 목록 파일>`로 파일·해시·영상 연결·재생성 자료를 확인한다. 이 검사 통과만으로 목표 완료를 선언하지 않는다.
+## 보존한 과거 이력
 
+과거 상태는 현재 프로세스 지시로 사용하지 않는다. 상세 사건·검증 원문은 아래와 Git 이력에 보존한다.
 
-## 현재 미디어 준비 및 다음 제품 후보
-
-최종 제작 준비 보완은 artifacts/checkpoints/final-media-lifecycle/summary.json에 보존했다. 실제 로컬 UI 시연 중단 후 소유RTU 정리, 재시험 등록/시나리오 전이/정리/영상디코딩,14장 PPT와 portable 재생성을 확인했다.76개 관련 시험과 독립보안 검토는 준비 증거이며 최종창 미디어를 대신하지 않는다. 최종녹화 실패 시 해당 핸들 종료 확인 후 private lifecycle journal을 읽고 recover-demo CLI를 사용한다. 초기baseline/실제응답이 없는 경우 메인이 실제상태를 대조하고 기존RTU 일괄초기화나 재등록을 반복하지 않는다. 최종facts는 same-video binder를 통과한 뒤 PPT 소스 묶음에 보존한다.
-
-이전 검토 시점에 IDEA-008은 제안 v2로 미채택이었다. 이후 첫1시간 관찰을 보존했고 af8253f 커밋에서 PRD1.11/제품1.4 후보로 채택했다. 해당 채택 이후 UI 구현과 실제1.4 후보 배포를 완료했다. 이후 독립 복원17개/main proof7개 검증으로 기능상 stable1.4에 승격했고 불변 매니페스트 생성·검증은 별도 후속이다. 채택·현재작업 상태는 메인이 관리하는 run/resume 및 PRD 기록을 우선한다. 실제 로컬 일반폼 범위 재현 및 극단 validSeconds의 날짜 예외(ISSUE-021)를 REVIEW-017에 기록했다.1.3 관찰 첫1시간 이후 메인이 범위/효용/안정성을 판단하고 채택 시 PRD/제품버전을 먼저 갱신한다. 새버전을 채택하면 release-features/final-deck-binding의 지원버전과 실제시연 문구도 함께 검토하며 기존1.3 안정복원 기준을 보존한다.
-
-
-1.3 관찰에서12:58:27Z와13:03:17Z에 로컬 검증 실패 후 같은 supervisor가 각각12:58:29Z/13:03:18Z 재연결했다. Pod UID/이미지/재시작 횟수는 유지됐다. 현재 알려진 누적값은 main APIerrors2/connectionErrors0, 추가관측 connectionErrors2 및각RTU sampleDiscontinuities1이다.9배치/300샘플의 수신관측 공백은 동일 원격outbox의 연속샘플·PUBACK로 대조했으며 생성누락은 확인되지 않았다. 누락배치의 서버 기록시각은 단절 로그보다 이르고 과거 두 host시계 동기화도 독립 증명하지 않았으므로 단절시각과 발행시각의 인과를 단정하지 않는다. 원인은 미확정이다. artifacts/checkpoints/reconnect-20260921T1303/summary.json 및 resume.currentObservationBaselines를 사용하고 이누적값을새장애로반복보고하지 않는다.
-
-
-13:08:35Z 추가 local_verification_failed도13:08:36Z 자동복귀했다.13:09:26Z에는 새단절로그 없이 API 관측1회가 추가 실패했다. artifacts/checkpoints/reconnect-20260921T1308/summary.json의 최종 캡처 시점에서 API/MQTT는 다시정상이며 누적 mainAPI4/connection0, 추가connection3/sampleDiscontinuities각1이다. 이후증가분은 최신resume기준과비교한다. 이회차는 추가 원격SQLite조회가 아닌 로컬원문보존이다. 첫1시간 관찰에서 오류분류가 부족한 supervisor진단을 검토하되 원인을 추정하거나 정상관측프로세스를 임의중복시작하지 않는다.
-
-
-## 13:32Z 운영 인계 갱신
-
-이13:32Z 기록 당시 안정 배포는1.3.0/runtime3fa3ba0이었다. artifacts/checkpoints/soak-1.3.0-first-hour는 첫1시간 이후 최초 poll을 고정한 관찰이며 무중단/전체수락 증거가 아니다. 당시 primary505메시지/invalid0/API오류4, 추가관측505메시지/invalid0/연결오류3/각RTU샘플간격1을 보존했고 두 관측기는 계속 실행했다.
-
-13:23Z에는 진단 필드가 추가된 supervisor로 **계획 교체**했다. 당시 handle7353/PID80224/processIdentity `Mon Sep 21 22:23:12 2026`, 이전25872는 exit0 종료다. 소유 로컬 forward의 계획 공백13:23:07.816–13:23:13.882Z는 자연 장애와 구분한다. primary40339/PID66462 및 audit30644/PID66465는 그대로이며 remote Pod UID e3d7f272-dcfb-4ea4-8472-bf42147a5b73도 유지했다. 원본은 artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json에 있다. PID에 조치하기 전 실제 시작 identity를 다시 대조한다.
-
-별도 자연 사건13:25:53.396Z는 health 단계 timeout5004ms였고13:25:54.682Z verified로 복귀했다. 최신 이 사건 기준 누적값은 primary API6/connection3, audit connection8/각RTU sampleDiscontinuities2다. root cause는 미확정이다.8배치/300샘플 관측 공백의 원격연속저장/PUBACK를 확인했지만 모든 구독자 수신 증거는 아니다. 해당 배치의 원격시각은 로컬단절로그보다 이르며 과거 host시계 동기화도 미입증이다. artifacts/checkpoints/reconnect-20260921T1325/summary.json 및 최신 resume 기준으로 이후 증가분만 판단한다.
-
-Mac 전원기록의13:24:40 Sleep/13:24:42 Wake/13:25:48 DarkWake·WakeTime은 로컬 snapshot75.418초 공백과 겹친다. host 관여 가설을 지지하지만 정확한 suspend기간이나 모든증상의 단일원인을 확정하지 않는다. 제한된 허용필드만 보존한 artifacts/checkpoints/host-pause-20260921T1325/SUMMARY.md를 따른다. artifacts/checkpoints/host-power-guard-20260921T1333/activation.json에서 AC전원, handle11821/PID80946/processIdentity `Mon Sep 21 22:33:11 2026`, `caffeinate -i -s -t30861` 및 해당PID의 PreventSystemSleep·PreventUserIdleSystemSleep 두 assertion을 확인했다. 원래 종료까지의 임시 보호이며 지속 설정을 변경하지 않았다. 수동·강제 절전/종료/프로세스 종료를 방지한다고 보장하지 않는다. 이는 deadline 연장이나 향후 관측 무중단 보장이 아니다.
-
-
-## 1.4 기능상 안정 승격 이후 현재 운영
-
-실제main은1.4.0/runtimefdd0491/imagec19d550f이며 main gate 및 새594944000바이트/be09a5f5 snapshot의 fresh1.4 복원 검증을 통과했다. 하위1.3 복원과 독립17restore/7mainproof를 통과해 기능상 stable1.4로 승격했다. 불변 매니페스트 생성·검증은 아직 별도 후속이며 태그 생성만으로 이를 완료로 간주하지 않는다. 이전 후보 단계와1.3 fallback 이력은 보존한다.
-
-현재 supervisor handle81174/PID84952/`Mon Sep 21 22:46:07 2026`, primary36193/PID85649/`Mon Sep 21 22:49:41 2026`, audit92936/PID85652/`Mon Sep 21 22:49:42 2026`이다. 위7353/40339/30644 등은 과거1.3 운영 이력이다. 최신run/resume 및 실제process identity를 대조하고 새세션과 과거오류카운터를 합쳐 무중단으로 표현하지 않는다.
-
-최종백업 전 용량을 재조회한다. 최근 /data 전체5031428043바이트와 단일snapshot594944000바이트를 구분하며 공유hostFS available78692749312바이트는 PVC예약량이 아니다. snapshot/압축본/로컬전송본/격리복원PVC 중복공간 및 종료까지 성장량을 고려한다. 자동삭제나 임의quota보장을 추가하지 않는다. 최종복원 계획은 선택된 run.deployment.productVersion 및 rig/포트/근거경로 변수를 사용하며 다른셸에는 선택값을 명시적으로 전달한다. 원래21:37:33Z~22:07:33Z 창은 불변이다.
-
-
-1.4 checkpoint 확정: artifacts/releases/checkpoint-1.4.0.json(SHA256 df7865319ac1e97ecbf6b70f206f29b7b7747312d2e8a355f5dea2d765c377be)은 sourcebcc010c/runtimefdd0491에 연결되고 REVIEW022에서962개해시·실제Ready app/broker·백업SHA 및 두로컬stable태그를 독립 확인했다. 과거 생성/검증대기 문장은 당시이력이다. 현재슈퍼바이저81174와1.4관측36193/92936을 유지한다. 첫1시간 보존은14:49:42UTC 이후이며 새세션 관측을 과거무중단증거와 합치지 않는다. 전체목표는 최종동결/영상/PPT/시간/인도완료전 active다.
+- 이전 관측: `artifacts/checkpoints/soak-1.0.0`, `soak-1.1.0`, `soak-1.2.0`, `soak-1.3.0`; 1.2/1.3 첫 1시간은 별도 `*-first-hour`.
+- 자연 연결 사건: `reconnect-20260921T1116`, `backup-recovery`의 11:34 기록, `reconnect-20260921T1159`, `reconnect-20260921T1303`, `reconnect-20260921T1308`, `reconnect-20260921T1325`.
+- 계획 supervisor 교체: `artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json`. 1.3 핸들 7353/40339/30644는 1.4 업그레이드를 위해 모두 정상 종료했다.
+- host 관측 및 임시 보호: `artifacts/checkpoints/host-pause-20260921T1325/SUMMARY.md`, `host-power-guard-20260921T1333/activation.json`. 원인 단정이나 무중단 보장으로 확대하지 않는다.
+- 미디어 준비: `artifacts/checkpoints/final-media-lifecycle/summary.json`. 중단된 녹화는 핸들 종료를 확인하고 private journal에 따라 `recover-demo.cjs`를 사용한다. 실제 등록/시나리오 응답이 불확실하면 메인이 상태를 대조하며 기존 RTU를 일괄 초기화하지 않는다.

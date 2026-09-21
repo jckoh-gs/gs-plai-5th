@@ -24,17 +24,18 @@
     "deployment": "/root/deployment"
   },
   "checks": {
-    "localUnit": "141 current workstation tests PASS after operational tool hardening; candidate exact3fa3 source136local PASS; selected118 exactimage PASS with18 unshipped workstation tests excluded",
-    "localIntegration": "PASS exact3fa3ba0 image",
-    "localAdvanced": "PASS exact3fa3ba0 image",
-    "hardCrashPubackReplay": "PASS",
-    "sixtySecondWindow": "PASS",
-    "browserAuthStale": "PASS",
-    "backupRestore": "PASS exact1.3 snapshot420466688B/SHA b515ef26 fresh1.3 and separate backward1.2 PVC original5plants/run/generator/dataset/scenario/UI/preview/export/MQTT,1.3 scenario/KMA proofs",
-    "remote": "3fa3ba0 actualReady/1.3 UI/auth/SSE/narrow/preview/export, actualMQTT125/error0/60samples/dedup, actualoutboxpodreplacement identicalpersisted+receivedbody/PUBACK PASS",
-    "media": "Preparation verified: Korean editablePPT render and actual1080p H264/AAC browser recording/pointer/click/zoom/voice/full decode; final media pending freeze",
-    "weatherTimeout": "PASS actual12s AbortSignal, prior valid observation retained",
-    "operationalDeadline": "38 selected boundary tests PASS; bounded actual checkpoint1.3 verification688hashes/Readyimages PASS; no app runtime or finalmedia change"
+    "localUnit": "PASS: 240 main workstation tests plus3 independent security tests =243 unique; related44 security-selection tests overlap these totals",
+    "exactImageUnit": "PASS:77 app-only tests in21files from exact fdd0491/c19 image; workstation media/operations/UI tests are not claimed as image tests",
+    "localIntegration": "PASS exact fdd0491 image actual isolated broker integration",
+    "localAdvanced": "PASS exact fdd0491 image actual isolated broker advanced integration",
+    "browserCommandForm": "PASS local43checks plus same-form correction delta; fresh1.4 restore44checks/5actualcommands; main read-only19checks without command submission",
+    "browserRegression": "PASS authentication/stale/SSE/narrow, preview/export, selectedRTU scenario and KMA feedback; actual remote served assets separately verified",
+    "remote": "PASS actualReady1.4 image/UI; actualMQTT125kW/error0/accepted-executing-completed/dedup/60samples; actualoutboxPodreplacement same persisted and received body/PUBACK",
+    "backupRestore": "PASS exact594944000B snapshot SHA be09a5f5e1721970ec7f25197fcf4f3db504f6f6ad4765080ba301a0c7fd760a in fresh1.4 and backward1.3;17restoreproofs and7mainproofs independently reviewed in REVIEW021",
+    "releaseManifest": "PASS checkpoint1.4 sourcebcc010c/runtimefdd0491;962hashes/actualReady app+broker/backupSHA independently verified REVIEW022; immutable manifest retained",
+    "imageSecurity": "Exact c19 SBOM130 components;4 unchanged unfixed vulnerability matches from2 CVEs; npm audit0. See VULNERABILITY-MANAGEMENT.md; not a claim of zero image vulnerabilities",
+    "media": "Preparation verified only; new final video and same-video editablePPT/fullrender still pending original freeze window",
+    "operationalDeadline": "Historical preparation evidence retained:38 selected boundary tests and actual688hash1.3 verification; current1.4 release proof separately recorded above"
   },
   "notes": [
     "Existing sibling implementation must not be copied or reused.",
@@ -221,14 +222,17 @@
     "intervalMinutes": 10,
     "constraints": "Mac and Codex app must remain running; no offline AI work guarantee; original deadline unchanged",
     "deadlineHardening": "artifacts/checkpoints/final-window-boundaries/summary.json",
-    "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json"
+    "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
+    "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T14:01:19.088448+00:00",
+  "updatedAt": "2026-09-21T14:08:59.369531+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
     "scope": "Private ownership journal, interrupted-demo settings recovery, same-video reviewed-facts binder and portable deck packaging; no runtime change",
-    "originalWindowUnchanged": true
+    "originalWindowUnchanged": true,
+    "contentPreparationReview": "docs/operations/MEDIA-1.4-FINAL-CONTENT-RECOMMENDATIONS.md",
+    "contentPreparationScope": "1.4/PRD1.11 unreviewed template only; distinguish filmed MQTT/fault actions from separately tested RESTform/outbox restart. Final video/facts/PPT remain pending."
   },
   "operationalObservations": [
     {
@@ -259,6 +263,17 @@
       "podUidUnchanged": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73",
       "hostPowerEvidence": "artifacts/checkpoints/host-pause-20260921T1325/evidence.json",
       "scope": "Publisher continuity/PUBACK confirmed; subscriber receipt not guaranteed. Local75.418s cadence gap overlaps recorded host sleep/wake; sole cause and exact stopped interval not established."
+    },
+    {
+      "evidence": "artifacts/checkpoints/reconnect-20260921T1401/summary.json",
+      "runtime": "1.4.0",
+      "outageAt": "2026-09-21T14:01:54.445Z",
+      "recoveredAt": "2026-09-21T14:01:55.750Z",
+      "symptom": "health timeout5002ms",
+      "podUidUnchanged": "f45d1e93-03e8-4f0a-a7af-7f4925b44190",
+      "cause": "unknown",
+      "observedPerRtuSampleDiscontinuities": 0,
+      "scope": "Captured received sample deltas equal simulation advance for5RTUs; no universal subscriber delivery guarantee; no remote mutations or outbox query."
     }
   ],
   "previousCandidate": {
@@ -300,5 +315,23 @@
     "name": "grid",
     "mqttImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
     "productVersion": "1.3.0"
-  }
+  },
+  "historicalChecks": [
+    {
+      "scope": "Previous check summary retained during the 1.4 upgrade; version-specific counts are historical, not current1.4 totals.",
+      "checks": {
+        "localUnit": "141 current workstation tests PASS after operational tool hardening; candidate exact3fa3 source136local PASS; selected118 exactimage PASS with18 unshipped workstation tests excluded",
+        "localIntegration": "PASS exact3fa3ba0 image",
+        "localAdvanced": "PASS exact3fa3ba0 image",
+        "hardCrashPubackReplay": "PASS",
+        "sixtySecondWindow": "PASS",
+        "browserAuthStale": "PASS",
+        "backupRestore": "PASS exact1.3 snapshot420466688B/SHA b515ef26 fresh1.3 and separate backward1.2 PVC original5plants/run/generator/dataset/scenario/UI/preview/export/MQTT,1.3 scenario/KMA proofs",
+        "remote": "3fa3ba0 actualReady/1.3 UI/auth/SSE/narrow/preview/export, actualMQTT125/error0/60samples/dedup, actualoutboxpodreplacement identicalpersisted+receivedbody/PUBACK PASS",
+        "media": "Preparation verified: Korean editablePPT render and actual1080p H264/AAC browser recording/pointer/click/zoom/voice/full decode; final media pending freeze",
+        "weatherTimeout": "PASS actual12s AbortSignal, prior valid observation retained",
+        "operationalDeadline": "38 selected boundary tests PASS; bounded actual checkpoint1.3 verification688hashes/Readyimages PASS; no app runtime or finalmedia change"
+      }
+    }
+  ]
 }

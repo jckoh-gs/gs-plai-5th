@@ -412,3 +412,10 @@ REVIEW022 최종 통합 후속: 실제로 시간대가 다른 서버의 createdA
 반복 local_verification_failed 기록은 HTTP 응답/JSON/인증파일/버전/API브로커보고/MQTT TCP의 어느 단계가 실패했는지 알 수 없었다. 실제 과거원인 추정 없이, 새 supervisor에 고정 단계·종류·상태 숫자·시간만 보존하는 진단을 추가했다. 토큰/본문/오류message/URL/헤더는 노출하지 않는다. bool API·기존재시도/forward교체정책은 유지하며 정상계약의 connected=true를 엄격히 확인하고 health실패때불필요한config요청을생략한다.
 
 초기25개중24개 통과/1개 fixture실패를 보존했다. 닫힌 keepalive소켓이 connection_reset을 반환하는 정상가능성을 test가 무조건 refused로 기대했던 문제이며 새 미사용포트에서refused를 별도시험했다. 수정후25/25, 독립보안27/27PASS. null/array/악성오류메타데이터/본문스트림리셋/HTTP401/503/시간초과/인증파일/중복이벤트/원격실패시과거검사시각을 포함한다. exactsource/log는 artifacts/checkpoints/supervisor-diagnostics, 독립검토는 docs/security/SUPERVISOR-DIAGNOSTICS-REVIEW.md. 현재코드준비단계이며 실제감시교체는첫1시간관찰뒤별도증거로검증한다.
+
+
+### 1.4 관측 사건 — 14:01Z 자동 재연결
+
+독립 읽기 확인: supervisor84952/81174는14:01:54.445Z health timeout5002ms 후14:01:55.750Z verified로 복귀했다. 두 관측기 primary85649/36193, audit85652/92936은 유지됐고 제한된ps시작identity를 기록했다. 실제read-only pod조회는 동일UID f45d1e93-03e8-4f0a-a7af-7f4925b44190/Ready app·mqtt/재시작0과1.4 c19digest를 확인했다.
+
+고정14:00:30~14:04:30prefix에서 primaryAPI오류0→1/connectionErrors0→0, auditconnectionErrors0→1이다. 다섯RTU 모두invalid0/sampleDiscontinuities0/sequenceForwardJumps0이며 비교구간수신샘플증가가각simulationSeconds증가와같다(첫RTU142,나머지180). 마지막prefixAPI/MQTT정상·5RTU HEALTHY/pending0이고14:03:49경전RTU재수신을확인했다. 추가latest파일은14:04이후신선도스냅샷으로별도보존한다. 이번은관측된샘플공백이없어원격outbox조회/누락배치추정을하지않았다. 모든구독자무손실/무중단을주장하지않는다. host전원조사는하지않았으며sleep원인추정도없다. 증거는 artifacts/checkpoints/reconnect-20260921T1401/summary.json 및 sha256.json. 소스보존은provenance이며process메모리attestation이아니다. 앱/DB/MQTT변경·재시작·관측중복기동은없다.

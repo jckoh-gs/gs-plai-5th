@@ -1,0 +1,193 @@
+{
+  "capturedAt": "2026-09-21T14:05:31.985593+00:00",
+  "scope": "Read-only local observation prefix plus bounded Ready pod query; no remote outbox query because no per-RTU sample gap observed",
+  "range": [
+    "2026-09-21T14:00:30Z",
+    "2026-09-21T14:04:30Z"
+  ],
+  "outageAt": "2026-09-21T14:01:54.445Z",
+  "reconnectedAt": "2026-09-21T14:01:55.750Z",
+  "probe": {
+    "phase": "health",
+    "kind": "timeout",
+    "durationMs": 5002
+  },
+  "pod": [
+    {
+      "name": "grid-5c4cb58d7b-mrghv",
+      "uid": "f45d1e93-03e8-4f0a-a7af-7f4925b44190",
+      "conditions": [
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-09-21T13:48:47Z",
+          "status": "True",
+          "type": "PodReadyToStartContainers"
+        },
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-09-21T13:48:47Z",
+          "status": "True",
+          "type": "Initialized"
+        },
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-09-21T13:48:54Z",
+          "status": "True",
+          "type": "Ready"
+        },
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-09-21T13:48:54Z",
+          "status": "True",
+          "type": "ContainersReady"
+        },
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-09-21T13:48:46Z",
+          "status": "True",
+          "type": "PodScheduled"
+        }
+      ],
+      "containers": [
+        {
+          "name": "app",
+          "ready": true,
+          "restartCount": 0,
+          "imageID": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4"
+        },
+        {
+          "name": "mqtt",
+          "ready": true,
+          "restartCount": 0,
+          "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+        }
+      ]
+    }
+  ],
+  "counters": {
+    "primaryApiErrors": [
+      0,
+      1
+    ],
+    "primaryConnectionErrors": [
+      0,
+      0
+    ],
+    "auditConnectionErrors": [
+      0,
+      1
+    ]
+  },
+  "rtus": [
+    {
+      "rtuId": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+      "beforeSimulationSeconds": 19585,
+      "afterSimulationSeconds": 19727,
+      "receivedSamplesDelta": 142,
+      "simulationAdvance": 142,
+      "sampleDiscontinuitiesBefore": 0,
+      "sampleDiscontinuitiesAfter": 0,
+      "sequenceForwardJumpsAfter": 0,
+      "lastReceivedAt": "2026-09-21T14:03:49.325Z",
+      "invalidMessages": 0
+    },
+    {
+      "rtuId": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+      "beforeSimulationSeconds": 19547,
+      "afterSimulationSeconds": 19727,
+      "receivedSamplesDelta": 180,
+      "simulationAdvance": 180,
+      "sampleDiscontinuitiesBefore": 0,
+      "sampleDiscontinuitiesAfter": 0,
+      "sequenceForwardJumpsAfter": 0,
+      "lastReceivedAt": "2026-09-21T14:03:49.343Z",
+      "invalidMessages": 0
+    },
+    {
+      "rtuId": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+      "beforeSimulationSeconds": 19547,
+      "afterSimulationSeconds": 19727,
+      "receivedSamplesDelta": 180,
+      "simulationAdvance": 180,
+      "sampleDiscontinuitiesBefore": 0,
+      "sampleDiscontinuitiesAfter": 0,
+      "sequenceForwardJumpsAfter": 0,
+      "lastReceivedAt": "2026-09-21T14:03:49.470Z",
+      "invalidMessages": 0
+    },
+    {
+      "rtuId": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+      "beforeSimulationSeconds": 19173,
+      "afterSimulationSeconds": 19353,
+      "receivedSamplesDelta": 180,
+      "simulationAdvance": 180,
+      "sampleDiscontinuitiesBefore": 0,
+      "sampleDiscontinuitiesAfter": 0,
+      "sequenceForwardJumpsAfter": 0,
+      "lastReceivedAt": "2026-09-21T14:03:49.285Z",
+      "invalidMessages": 0
+    },
+    {
+      "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "beforeSimulationSeconds": 18481,
+      "afterSimulationSeconds": 18661,
+      "receivedSamplesDelta": 180,
+      "simulationAdvance": 180,
+      "sampleDiscontinuitiesBefore": 0,
+      "sampleDiscontinuitiesAfter": 0,
+      "sequenceForwardJumpsAfter": 0,
+      "lastReceivedAt": "2026-09-21T14:03:49.314Z",
+      "invalidMessages": 0
+    }
+  ],
+  "comparisonAt": {
+    "before": "2026-09-21T14:01:53.108Z",
+    "after": "2026-09-21T14:04:23.146Z"
+  },
+  "latestPrefix": {
+    "primary": "2026-09-21T14:04:27.967Z",
+    "audit": "2026-09-21T14:04:23.146Z",
+    "apiReady": true,
+    "mqttConnected": true,
+    "auditConnected": true,
+    "health": [
+      {
+        "id": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+        "health": "HEALTHY",
+        "pending": 0,
+        "generated": 19766,
+        "confirmed": 657
+      },
+      {
+        "id": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+        "health": "HEALTHY",
+        "pending": 0,
+        "generated": 19766,
+        "confirmed": 661
+      },
+      {
+        "id": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+        "health": "HEALTHY",
+        "pending": 0,
+        "generated": 19766,
+        "confirmed": 858
+      },
+      {
+        "id": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+        "health": "HEALTHY",
+        "pending": 0,
+        "generated": 19392,
+        "confirmed": 331
+      },
+      {
+        "id": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+        "health": "HEALTHY",
+        "pending": 0,
+        "generated": 18700,
+        "confirmed": 319
+      }
+    ]
+  },
+  "cause": "Unknown; health timeout is observed symptom. No host power query or sleep-cause inference.",
+  "limits": "No per-RTU sample discontinuity or sequence-forward gap observed in this captured prefix; not universal subscriber delivery or uninterrupted uptime proof. Source snapshots document code provenance, not process-memory attestation."
+}
