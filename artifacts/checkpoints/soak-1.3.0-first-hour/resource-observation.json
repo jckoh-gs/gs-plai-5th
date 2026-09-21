@@ -1,0 +1,24 @@
+{
+  "observedAt": "2026-09-21T13:22:38.157Z",
+  "filesystemAvailableBytes": 81201197056,
+  "databaseBytes": 543920128,
+  "walBytes": 4828672,
+  "dataFileBytes": 3159631245,
+  "scope": "Read-only; available host filesystem bytes are not reserved PVC capacity",
+  "pod": "grid-76f9968b4-dgf2w",
+  "uid": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73",
+  "containers": [
+    {
+      "name": "app",
+      "imageID": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+      "ready": true,
+      "restarts": 0
+    },
+    {
+      "name": "mqtt",
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+      "ready": true,
+      "restarts": 0
+    }
+  ]
+}

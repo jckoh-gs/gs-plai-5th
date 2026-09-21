@@ -1,0 +1,54 @@
+{
+  "capturedAt": "2026-09-21T13:30:40.531107+00:00",
+  "requestedLocalWindow": [
+    "2026-09-21 22:24:20",
+    "2026-09-21 22:26:20"
+  ],
+  "expectedTimezone": "Asia/Seoul UTC+0900",
+  "powerLogQuery": {
+    "exitCode": 0
+  },
+  "events": [
+    {
+      "timestamp": "2026-09-21 22:24:40",
+      "utcOffset": "+0900",
+      "eventKind": "Sleep",
+      "reason": "Maintenance Sleep"
+    },
+    {
+      "timestamp": "2026-09-21 22:24:42",
+      "utcOffset": "+0900",
+      "eventKind": "Wake",
+      "reason": "unclassified"
+    },
+    {
+      "timestamp": "2026-09-21 22:25:48",
+      "utcOffset": "+0900",
+      "eventKind": "DarkWake",
+      "reason": "unclassified"
+    },
+    {
+      "timestamp": "2026-09-21 22:25:48",
+      "utcOffset": "+0900",
+      "eventKind": "WakeTime",
+      "reason": "unclassified"
+    }
+  ],
+  "caffeinateQuery": {
+    "exitCode": 1
+  },
+  "caffeinateIdentity": [],
+  "assertionsQuery": {
+    "exitCode": 0
+  },
+  "currentSystemAssertionSummary": {
+    "BackgroundTask": 0,
+    "UserIsActive": 0,
+    "PreventUserIdleDisplaySleep": 0,
+    "PreventSystemSleep": 0,
+    "ExternalMedia": 0,
+    "PreventUserIdleSystemSleep": 1
+  },
+  "currentCaffeinateAssertions": [],
+  "limits": "Only matching sleep/wake event timestamps and allowlisted reasons retained. Current assertions/identity do not establish historical state. Absence of filtered events cannot exclude host scheduling pause, log omissions or other causes. No process/settings/signals changed."
+}

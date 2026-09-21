@@ -1,0 +1,15 @@
+{
+  "capturedAt": "2026-09-21T13:35:13.591479+00:00",
+  "handle": 11821,
+  "pid": 80946,
+  "processIdentity": "Mon Sep 21 22:33:11 2026",
+  "command": "caffeinate -i -s -t 30861",
+  "powerSource": "AC Power",
+  "matchingAssertions": [
+    "pid 80946(caffeinate): [0x0001ad670001a456] 00:02:02 PreventUserIdleSystemSleep named: \"caffeinate command-line tool\"",
+    "pid 80946(caffeinate): [0x0001ad670007a457] 00:02:02 PreventSystemSleep named: \"caffeinate command-line tool\""
+  ],
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "scope": "Temporary idle/system sleep assertions until original deadline, no persistent settings changed; system assertion applies only on AC. Cannot guarantee against manual/forced sleep, shutdown or process termination. Existing unrelated caffeinate processes preserved.",
+  "priorObservation": "artifacts/checkpoints/host-pause-20260921T1325/evidence.json"
+}

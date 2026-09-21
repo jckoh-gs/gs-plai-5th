@@ -1,0 +1,347 @@
+{
+  "capturedAt": "2026-09-21T13:28:43.915897+00:00",
+  "range": [
+    "2026-09-21T13:23:30Z",
+    "2026-09-21T13:27:30Z"
+  ],
+  "spontaneousBaselineAfter": "2026-09-21T13:24:20Z",
+  "plannedHandoff": "13:23:07\u201313:23:13 and settling prefix through13:24:20 excluded from spontaneous counter deltas",
+  "pod": {
+    "name": "grid-76f9968b4-dgf2w",
+    "uid": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73",
+    "containers": [
+      {
+        "name": "app",
+        "ready": true,
+        "restartCount": 0,
+        "imageID": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d"
+      },
+      {
+        "name": "mqtt",
+        "ready": true,
+        "restartCount": 0,
+        "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+      }
+    ]
+  },
+  "supervisorEvents": [
+    {
+      "schemaVersion": 1,
+      "at": "2026-09-21T13:25:53.396Z",
+      "pid": 80224,
+      "processIdentity": "Mon Sep 21 22:23:12 2026",
+      "state": "disconnected",
+      "reason": "local_verification_failed",
+      "outageAt": "2026-09-21T13:25:53.396Z",
+      "lastOutageAt": null,
+      "reconnectedAt": null,
+      "readOnly": true,
+      "commandsAllowed": true,
+      "context": "charles-k3s",
+      "namespace": "gs-plai-5h",
+      "expectedImage": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+      "expectedVersion": "1.3.0",
+      "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+      "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+      "failures": 0,
+      "forwardOwned": true,
+      "lastLocalVerification": {
+        "checkedAt": "2026-09-21T13:25:53.396Z",
+        "result": "failed",
+        "phase": "health",
+        "kind": "timeout",
+        "durationMs": 5004
+      },
+      "podUID": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73",
+      "retryInMs": 1000
+    },
+    {
+      "schemaVersion": 1,
+      "at": "2026-09-21T13:25:53.405Z",
+      "pid": 80224,
+      "processIdentity": "Mon Sep 21 22:23:12 2026",
+      "state": "connecting",
+      "reason": "forward_started",
+      "outageAt": "2026-09-21T13:25:53.396Z",
+      "lastOutageAt": null,
+      "reconnectedAt": null,
+      "readOnly": true,
+      "commandsAllowed": true,
+      "context": "charles-k3s",
+      "namespace": "gs-plai-5h",
+      "expectedImage": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+      "expectedVersion": "1.3.0",
+      "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+      "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+      "failures": 1,
+      "forwardOwned": true,
+      "lastLocalVerification": {
+        "checkedAt": "2026-09-21T13:25:53.396Z",
+        "result": "failed",
+        "phase": "health",
+        "kind": "timeout",
+        "durationMs": 5004
+      },
+      "podUID": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73",
+      "retryInMs": 1000
+    },
+    {
+      "schemaVersion": 1,
+      "at": "2026-09-21T13:25:54.682Z",
+      "pid": 80224,
+      "processIdentity": "Mon Sep 21 22:23:12 2026",
+      "state": "ready",
+      "reason": "verified",
+      "outageAt": null,
+      "lastOutageAt": "2026-09-21T13:25:53.396Z",
+      "reconnectedAt": "2026-09-21T13:25:54.682Z",
+      "readOnly": true,
+      "commandsAllowed": true,
+      "context": "charles-k3s",
+      "namespace": "gs-plai-5h",
+      "expectedImage": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+      "expectedVersion": "1.3.0",
+      "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+      "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+      "failures": 0,
+      "forwardOwned": true,
+      "lastLocalVerification": {
+        "checkedAt": "2026-09-21T13:25:54.682Z",
+        "result": "passed",
+        "phase": "complete",
+        "kind": "verified",
+        "durationMs": 175
+      },
+      "podUID": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73",
+      "retryInMs": 10000
+    }
+  ],
+  "counterDelta": {
+    "primaryApiErrors": [
+      5,
+      6
+    ],
+    "primaryConnectionErrors": [
+      3,
+      3
+    ],
+    "auditConnectionErrors": [
+      7,
+      8
+    ]
+  },
+  "findings": {
+    "rows": 32,
+    "samples": 1200,
+    "allWindowPubackRecorded": true,
+    "missingObservedBatches": 8,
+    "missingObservedSamplesPersisted": 300,
+    "rootCause": "Unknown. health timeout after5004ms is local probe symptom, not remote root cause.",
+    "timing": "All8 reconstructed missed batches created13:24:55.138\u201355.259 and PUBACK recorded13:24:55.301\u201355.421, before logged13:25:53.396 local timeout/disconnect. Do not label them published during the logged disconnect. Remote/local historical clock synchronization not independently established.",
+    "limits": "Cumulative observation reconstruction, no raw subscriber payload/packet/broker subscriber trace. Publisher PUBACK does not prove subscriber receipt. No universal zero-loss claim.",
+    "localObservationCadence": {
+      "auditGapFrom": "2026-09-21T13:24:36.624Z",
+      "auditGapTo": "2026-09-21T13:25:52.042Z",
+      "gapMs": 75418,
+      "meaning": "Snapshot cadence pause observed locally; cause unknown, not proof of host sleep or server stall."
+    }
+  },
+  "rtus": [
+    {
+      "rtuId": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+      "beforeAt": "2026-09-21T13:25:52.042Z",
+      "afterAt": "2026-09-21T13:26:02.045Z",
+      "beforeSequence": 581,
+      "afterSequence": 585,
+      "observedSampleDelta": 60,
+      "inferredMissingSampleRange": [
+        17347,
+        17406
+      ],
+      "persistedMissingSamples": 60,
+      "missedObservedSequences": [
+        582,
+        583
+      ],
+      "createdAt": [
+        "2026-09-21T13:24:55.138Z",
+        "2026-09-21T13:24:55.145Z"
+      ],
+      "ackedAt": [
+        "2026-09-21T13:24:55.301Z",
+        "2026-09-21T13:24:55.406Z"
+      ],
+      "allPubackRecorded": true,
+      "windowSamples": 240,
+      "windowContinuous": true,
+      "maxServerFrameGap": {
+        "ms": 1004.0,
+        "before": {
+          "simulationSeconds": 17519,
+          "timestamp": "2026-09-21T13:26:48.117Z"
+        },
+        "after": {
+          "simulationSeconds": 17520,
+          "timestamp": "2026-09-21T13:26:49.121Z"
+        },
+        "scope": "Stored sample timestamps in queried window, same publisher clock; not independent event-loop latency measurement"
+      }
+    },
+    {
+      "rtuId": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+      "beforeAt": "2026-09-21T13:25:52.042Z",
+      "afterAt": "2026-09-21T13:26:02.045Z",
+      "beforeSequence": 581,
+      "afterSequence": 585,
+      "observedSampleDelta": 60,
+      "inferredMissingSampleRange": [
+        17347,
+        17406
+      ],
+      "persistedMissingSamples": 60,
+      "missedObservedSequences": [
+        582,
+        583
+      ],
+      "createdAt": [
+        "2026-09-21T13:24:55.162Z",
+        "2026-09-21T13:24:55.174Z"
+      ],
+      "ackedAt": [
+        "2026-09-21T13:24:55.305Z",
+        "2026-09-21T13:24:55.413Z"
+      ],
+      "allPubackRecorded": true,
+      "windowSamples": 240,
+      "windowContinuous": true,
+      "maxServerFrameGap": {
+        "ms": 1392.0,
+        "before": {
+          "simulationSeconds": 17385,
+          "timestamp": "2026-09-21T13:24:34.084Z"
+        },
+        "after": {
+          "simulationSeconds": 17386,
+          "timestamp": "2026-09-21T13:24:35.476Z"
+        },
+        "scope": "Stored sample timestamps in queried window, same publisher clock; not independent event-loop latency measurement"
+      }
+    },
+    {
+      "rtuId": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+      "beforeAt": "2026-09-21T13:25:52.042Z",
+      "afterAt": "2026-09-21T13:26:02.045Z",
+      "beforeSequence": 757,
+      "afterSequence": 761,
+      "observedSampleDelta": 60,
+      "inferredMissingSampleRange": [
+        17347,
+        17406
+      ],
+      "persistedMissingSamples": 60,
+      "missedObservedSequences": [
+        758,
+        759
+      ],
+      "createdAt": [
+        "2026-09-21T13:24:55.192Z",
+        "2026-09-21T13:24:55.207Z"
+      ],
+      "ackedAt": [
+        "2026-09-21T13:24:55.309Z",
+        "2026-09-21T13:24:55.421Z"
+      ],
+      "allPubackRecorded": true,
+      "windowSamples": 240,
+      "windowContinuous": true,
+      "maxServerFrameGap": {
+        "ms": 1386.0,
+        "before": {
+          "simulationSeconds": 17385,
+          "timestamp": "2026-09-21T13:24:34.093Z"
+        },
+        "after": {
+          "simulationSeconds": 17386,
+          "timestamp": "2026-09-21T13:24:35.479Z"
+        },
+        "scope": "Stored sample timestamps in queried window, same publisher clock; not independent event-loop latency measurement"
+      }
+    },
+    {
+      "rtuId": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+      "beforeAt": "2026-09-21T13:25:52.042Z",
+      "afterAt": "2026-09-21T13:26:02.045Z",
+      "beforeSequence": 294,
+      "afterSequence": 296,
+      "observedSampleDelta": 60,
+      "inferredMissingSampleRange": [
+        16973,
+        17032
+      ],
+      "persistedMissingSamples": 60,
+      "missedObservedSequences": [
+        295
+      ],
+      "createdAt": [
+        "2026-09-21T13:24:55.234Z"
+      ],
+      "ackedAt": [
+        "2026-09-21T13:24:55.313Z"
+      ],
+      "allPubackRecorded": true,
+      "windowSamples": 240,
+      "windowContinuous": true,
+      "maxServerFrameGap": {
+        "ms": 1384.0,
+        "before": {
+          "simulationSeconds": 17011,
+          "timestamp": "2026-09-21T13:24:34.099Z"
+        },
+        "after": {
+          "simulationSeconds": 17012,
+          "timestamp": "2026-09-21T13:24:35.483Z"
+        },
+        "scope": "Stored sample timestamps in queried window, same publisher clock; not independent event-loop latency measurement"
+      }
+    },
+    {
+      "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "beforeAt": "2026-09-21T13:25:52.042Z",
+      "afterAt": "2026-09-21T13:26:02.045Z",
+      "beforeSequence": 298,
+      "afterSequence": 300,
+      "observedSampleDelta": 60,
+      "inferredMissingSampleRange": [
+        16281,
+        16340
+      ],
+      "persistedMissingSamples": 60,
+      "missedObservedSequences": [
+        299
+      ],
+      "createdAt": [
+        "2026-09-21T13:24:55.259Z"
+      ],
+      "ackedAt": [
+        "2026-09-21T13:24:55.316Z"
+      ],
+      "allPubackRecorded": true,
+      "windowSamples": 240,
+      "windowContinuous": true,
+      "maxServerFrameGap": {
+        "ms": 1382.0,
+        "before": {
+          "simulationSeconds": 16319,
+          "timestamp": "2026-09-21T13:24:34.104Z"
+        },
+        "after": {
+          "simulationSeconds": 16320,
+          "timestamp": "2026-09-21T13:24:35.486Z"
+        },
+        "scope": "Stored sample timestamps in queried window, same publisher clock; not independent event-loop latency measurement"
+      }
+    }
+  ],
+  "sourceScope": "Remote app exact3fa3ba0 and broker digests in pod metadata; store/transport semantics and clean-session defaults from immutable1303 evidence. Supervisor source copy is currentc7bcf4b, not independent process-memory attestation.",
+  "query": "One bounded read-only SQLite SELECT without ORDER BY; remote output metadata only. No database settings, application, observer or tunnel changes."
+}

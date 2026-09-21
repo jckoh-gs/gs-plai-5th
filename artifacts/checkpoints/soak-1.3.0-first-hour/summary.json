@@ -1,0 +1,82 @@
+{
+  "capturedAt": "2026-09-21T13:22:38.229654+00:00",
+  "sourceHead": "c7bcf4bae3a21bef24f1c8b52d3dbe2b7f8eceec",
+  "runtimeCommit": "3fa3ba0a6984dc752a8968d1788e72a3069b1267",
+  "scope": "Immutable first poll after one hour for each live observer; processes continue. Not uninterrupted uptime or full acceptance proof.",
+  "primary": {
+    "sessionId": "706da638-fd32-4256-b219-8b0b5ab1fde7",
+    "startedAt": "2026-09-21T12:22:04.265Z",
+    "through": "2026-09-21T13:22:07.541Z",
+    "durationSeconds": 3603.2759997844696,
+    "observations": 330,
+    "messages": 505,
+    "invalid": 0,
+    "duplicates": 0,
+    "apiErrors": 4,
+    "connectionErrors": 0,
+    "maxPending": 0,
+    "nonHealthyPolls": 0,
+    "apiUnavailablePolls": 4,
+    "minRssBytes": 100073472,
+    "maxRssBytes": 158760960
+  },
+  "supplementary": {
+    "sessionId": "9a9f5e31-eff9-4836-8d46-351ddb7b0d7b",
+    "startedAt": "2026-09-21T12:22:05.577Z",
+    "through": "2026-09-21T13:22:06.694Z",
+    "durationSeconds": 3601.117000102997,
+    "observations": 341,
+    "received": 505,
+    "invalidMessages": 0,
+    "duplicateMessages": 0,
+    "connectionErrors": 3,
+    "rtus": [
+      {
+        "rtuId": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+        "samples": 3540,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 1,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+        "samples": 3540,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 1,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+        "samples": 3540,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 1,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+        "samples": 3540,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 1,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+        "samples": 3540,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 1,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      }
+    ]
+  },
+  "incidentEvidence": [
+    "artifacts/checkpoints/reconnect-20260921T1303/summary.json",
+    "artifacts/checkpoints/reconnect-20260921T1308/summary.json"
+  ],
+  "interpretation": "Local observer/API interruptions occurred. Earlier9batch/300sample observed gap has corresponding continuous remote outbox/PUBACK proof; this does not establish every subscriber receipt. Assess any subsequent counter increase separately.",
+  "processesContinue": true
+}

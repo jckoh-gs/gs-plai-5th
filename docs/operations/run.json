@@ -4,14 +4,14 @@
   "freezeAt": "2026-09-21T21:37:33.079009+00:00",
   "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
   "timezone": "Asia/Seoul",
-  "phase": "stability",
+  "phase": "development",
   "scope": "greenfield; mandatory k3s deployment",
   "context": "charles-k3s",
   "namespace": "gs-plai-5h",
   "baselineCommit": "a59646b",
   "baselineDatabase": null,
   "documents": {
-    "docs/PRD-VPP-SCADA-RTU.md": "fbbb1363a1afe641878acc18c5e4cc295d91d66b7e7fb1274a37a51da17b59e6",
+    "docs/PRD-VPP-SCADA-RTU.md": "ce93167d1803ff92a8beb311a8d5e1ae3b9bb28466ac3348ed977f125cc93c8a",
     "docs/GOAL-VPP-AUTONOMOUS.md": "f391e5fab594f02cb4953c52055cf4b01f3817343144a9d89df8b64fe8fd11f2"
   },
   "roles": {
@@ -39,7 +39,7 @@
   "notes": [
     "Existing sibling implementation must not be copied or reused.",
     "Old fixed OPS-01 dates are cancelled; this run is authoritative.",
-    "Temporary caffeinate -i runs only until deadline to prevent idle system sleep; no persistent power settings modified."
+    "Temporary caffeinate -i -s bounded by original deadline; current verified identity/evidence in hostPowerGuard. No persistent power settings changed."
   ],
   "automationId": "grid",
   "requestedModel": "Codex Astra",
@@ -117,16 +117,14 @@
     }
   },
   "candidate": {
-    "productVersion": "1.3.0",
-    "prdVersion": "1.10",
-    "idea": "IDEA-007",
-    "sourceCommit": "3fa3ba0a6984dc752a8968d1788e72a3069b1267",
-    "status": "Functional acceptance, outbox actualrestart, exactsnapshot1.3 and backward1.2 verified; final media/time gates pending",
-    "startedAt": "2026-09-21T11:59:36.329441+00:00",
-    "fallbackTag": "stable-runtime-v1.2.0-83d10ce",
-    "preUpgradeBackup": "deploy/verification/pre-1.3.0-backup.json",
-    "appImage": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
-    "backupEvidence": "deploy/verification/stable-backup-3fa3ba0.json"
+    "productVersion": "1.4.0",
+    "prdVersion": "1.11",
+    "idea": "IDEA-008",
+    "ideaRevision": 3,
+    "startedAt": "2026-09-21T13:34:20.352933+00:00",
+    "status": "Adopted; implementation and all candidate release gates pending",
+    "fallbackTag": "stable-v1.3.0",
+    "fallbackManifest": "artifacts/releases/checkpoint-1.3.0.json"
   },
   "previousStableCheckpoints": [
     {
@@ -194,9 +192,10 @@
     "heartbeatId": "grid",
     "intervalMinutes": 10,
     "constraints": "Mac and Codex app must remain running; no offline AI work guarantee; original deadline unchanged",
-    "deadlineHardening": "artifacts/checkpoints/final-window-boundaries/summary.json"
+    "deadlineHardening": "artifacts/checkpoints/final-window-boundaries/summary.json",
+    "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json"
   },
-  "updatedAt": "2026-09-21T13:12:32.289183+00:00",
+  "updatedAt": "2026-09-21T13:35:13.591479+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
@@ -221,6 +220,38 @@
       "observedMissingBatches": 9,
       "persistedSamplesInMissingBatches": 300,
       "scope": "Publisher persistence/PUBACK verified; not proof of every subscriber receipt. Missing batch timestamps precede logged disconnect; historical host/server clock synchronization not independently verified."
+    },
+    {
+      "evidence": "artifacts/checkpoints/reconnect-20260921T1325/summary.json",
+      "outageAt": "2026-09-21T13:25:53.396Z",
+      "recoveredAt": "2026-09-21T13:25:54.682Z",
+      "symptom": "health timeout5004ms",
+      "observedMissingBatches": 8,
+      "persistedSamplesInMissingBatches": 300,
+      "podUidUnchanged": "e3d7f272-dcfb-4ea4-8472-bf42147a5b73",
+      "hostPowerEvidence": "artifacts/checkpoints/host-pause-20260921T1325/evidence.json",
+      "scope": "Publisher continuity/PUBACK confirmed; subscriber receipt not guaranteed. Local75.418s cadence gap overlaps recorded host sleep/wake; sole cause and exact stopped interval not established."
     }
-  ]
+  ],
+  "previousCandidate": {
+    "productVersion": "1.3.0",
+    "prdVersion": "1.10",
+    "idea": "IDEA-007",
+    "sourceCommit": "3fa3ba0a6984dc752a8968d1788e72a3069b1267",
+    "status": "Functional acceptance, outbox actualrestart, exactsnapshot1.3 and backward1.2 verified; final media/time gates pending",
+    "startedAt": "2026-09-21T11:59:36.329441+00:00",
+    "fallbackTag": "stable-runtime-v1.2.0-83d10ce",
+    "preUpgradeBackup": "deploy/verification/pre-1.3.0-backup.json",
+    "appImage": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+    "backupEvidence": "deploy/verification/stable-backup-3fa3ba0.json"
+  },
+  "hostPowerGuard": {
+    "handle": 11821,
+    "pid": 80946,
+    "processIdentity": "Mon Sep 21 22:33:11 2026",
+    "command": "caffeinate -i -s -t 30861",
+    "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+    "scope": "Temporary idle/system sleep assertions until original deadline, no persistent settings changed; system assertion applies only on AC. Cannot guarantee against manual/forced sleep, shutdown or process termination. Existing unrelated caffeinate processes preserved.",
+    "evidence": "artifacts/checkpoints/host-power-guard-20260921T1333/activation.json"
+  }
 }

@@ -1,0 +1,17 @@
+{
+  "READ-ONLY-NEXT-STEPS.md": "8692b5ea59dbb08fe1b3a3dbb147e7494174b8d3e8dfb431b58c249ac79d9d51",
+  "audit-latest.json": "b06b9c7cd5500b3f73f568817b669078f9496a65c164e8b67690e178d2a92081",
+  "audit-observations.jsonl": "263811215cb00327db9383c0265aa3e4ea4445e8db2dfae06d7ce0820658a06f",
+  "persisted-outbox.json": "71530924eac965571ed4b6b83bae8e631aef43609776a85eebe62f7c04ec0522",
+  "pod.json": "e943ce9511211cdc9e36d8423dee779d06fb3425c55e1f72cf96fd8ed5c0aea9",
+  "primary-latest.json": "c481b96248071a89c057a220a3a7bcd32749160ed234966e87d6d1d62d661bf0",
+  "primary-observations.jsonl": "5d612c55639aa6b3c180aac0db94c359097dc969f78180f8f0b52674b3383190",
+  "source/connection-supervisor.mjs": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
+  "source/read-outbox-metadata.mjs": "ba1e46be7fb3c78c3f9297afd9230044ba6f46c4b484ad7c79b41be5dfa6a989",
+  "source/summarize1325.py": "e7a1df15d2f245ab38d4f057c396ccc6e7d7bb8e5b6fb8fa5e2788e822169495",
+  "source/telemetry-audit-monitor.mjs": "6c4bbb0b77c03e8a49d9d17c8f7e743c10765ab05b0d94f6b1a736f6a60c4617",
+  "source/telemetry-audit.mjs": "ba6c2c1c9ac39e4a1666d7ad0b6468271a1eda163f2653df9e6bac842bb48486",
+  "summary.json": "fd5a1ada90f9d0cabd462097ebba2dde2d1c5f612e1fdb54db41fb7dedea3d38",
+  "supervisor-events.jsonl": "584e22872ae7163cf08ff2986a0e3d2ea3274444bf31e520167ca416edfc7d54",
+  "supervisor-status.json": "651427bbf8b048320fbceeba191be1c9605024eba5b1a03e12fdc766697dd77d"
+}
