@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T10:47:09.019258+00:00",
+  "updatedAt": "2026-09-21T11:10:35.105256+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": "stable-v1.2.0",
@@ -48,5 +48,14 @@
     "expectedStopAt": "2026-09-21T21:37:33.079Z",
     "instructions": "docs/operations/TELEMETRY-AUDIT.md",
     "scope": "Additional observation; primary soak unchanged; source captured at observer start; quantity coverage is not acceptance"
-  }
+  },
+  "observationCheckpoints": [
+    {
+      "path": "artifacts/checkpoints/soak-1.2.0-first-hour/summary.json",
+      "primaryThrough": "2026-09-21T11:08:12.445Z",
+      "supplementaryThrough": "2026-09-21T11:08:07.303Z",
+      "processesContinue": true,
+      "scope": "First hour immutable observation prefix only; final observation and media gates remain pending"
+    }
+  ]
 }

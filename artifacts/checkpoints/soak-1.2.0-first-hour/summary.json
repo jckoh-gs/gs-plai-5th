@@ -1,0 +1,80 @@
+{
+  "capturedAt": "2026-09-21T11:09:39.694583+00:00",
+  "sourceHead": "bdf8f1478bb6430e6bd2eef02555c19b7f6120c0",
+  "runtimeCommit": "83d10cebcd7cab2b1f889c970011a463bad09099",
+  "scope": "Immutable prefix of existing live observers through first poll after one hour. Processes continue; no global completion or uptime guarantee.",
+  "primary": {
+    "sessionId": "b1bbfa2d-1371-4af6-85bc-d54d2ec378c3",
+    "startedAt": "2026-09-21T10:08:09.184Z",
+    "through": "2026-09-21T11:08:12.445Z",
+    "durationSeconds": 3603.260999917984,
+    "observations": 353,
+    "messages": 499,
+    "invalid": 0,
+    "duplicates": 0,
+    "apiErrors": 0,
+    "connectionErrors": 0,
+    "maxPending": 0,
+    "nonHealthyPolls": 0,
+    "minRssBytes": 100749312,
+    "maxRssBytes": 158560256
+  },
+  "supplementary": {
+    "sessionId": "54bdac4e-08dd-4b43-b623-9762b0632aa0",
+    "startedAt": "2026-09-21T10:45:56.870Z",
+    "through": "2026-09-21T11:08:07.303Z",
+    "observations": 134,
+    "received": 186,
+    "invalidMessages": 0,
+    "duplicateMessages": 0,
+    "connectionErrors": 0,
+    "rtus": [
+      {
+        "rtuId": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+        "samples": 1320,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0
+      },
+      {
+        "rtuId": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+        "samples": 1320,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0
+      },
+      {
+        "rtuId": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+        "samples": 1320,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0
+      },
+      {
+        "rtuId": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+        "samples": 1320,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0
+      },
+      {
+        "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+        "samples": 1320,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0
+      }
+    ]
+  },
+  "files": {
+    "boundary-observation.json": "d9f9a712734ff4bc6d00c83722cad43a5a414b610a036b3a89394124576df142",
+    "observations.jsonl": "3f38a58908bce9508af9379f2bd0bbd2529f4ccef073dfb08c03ff6268687148",
+    "rtu-boundary-observation.json": "70f6104a09804df0fb9c0d43d9c539c13ad6bf44b03a85cfa143a7c926a11639",
+    "rtu-observations.jsonl": "7f64180b617e0de74288ed2c848ba0db470ffa33f12c565b416af21ea5da516d",
+    "source/soak-diagnostics.mjs": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c",
+    "source/soak-monitor.mjs": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3",
+    "source/telemetry-audit-monitor.mjs": "6c4bbb0b77c03e8a49d9d17c8f7e743c10765ab05b0d94f6b1a736f6a60c4617",
+    "source/telemetry-audit.mjs": "ba6c2c1c9ac39e4a1666d7ad0b6468271a1eda163f2653df9e6bac842bb48486",
+    "resource-observation.json": "3e0abf1f22c4bbb82df1c651161a3ffaec99d17ee84ebff58ab9a786389b4a37"
+  }
+}
