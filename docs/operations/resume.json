@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T17:02:02.711346+00:00",
+  "updatedAt": "2026-09-21T17:04:18.419637+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -9,12 +9,13 @@
     "prdVersion": "1.14",
     "commit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
     "tag": "stable-v1.7.0",
-    "tagState": "not-created",
+    "tagState": "created-and-remote-verified",
     "tagScope": "Full operational/evidence checkpoint; tag pending manifest verification",
     "alias": "stable-runtime-v1.7.0-d98d3c4",
     "appImage": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
     "backupEvidence": "deploy/verification/stable-backup-d98d3c4.json",
-    "recoveryEvidence": "deploy/verification/candidate-d98d3c4/restore-summary.json"
+    "recoveryEvidence": "deploy/verification/candidate-d98d3c4/restore-summary.json",
+    "tagCommit": "e5bd0566ca65648a3f495bc3ffb0fda448c813cf"
   },
   "stableManifest": {
     "path": "artifacts/releases/checkpoint-1.7.0.json",
@@ -23,13 +24,14 @@
     "sha256": "146d33ee23f426cee4826c1e1f1d569bbad2614051c65efa2f99b865bb08e439",
     "manifestSourceCommit": "91a23b8d2e620ca9e12d584cf7169627c7e01437",
     "independentReview": "docs/product/REVIEW-038.md",
-    "verification": "artifacts/checkpoints/release-1.7/verification.json"
+    "verification": "artifacts/checkpoints/release-1.7/verification.json",
+    "tagVerification": "artifacts/checkpoints/release-1.7/tags.json"
   },
   "workingMilestone": {
     "productVersion": "1.7.0",
     "prdVersion": "1.14",
     "idea": "IDEA-011",
-    "state": "1.7 functional/runtime/recovery and immutablemanifest independentlyverified; new tags/push pending"
+    "state": "Stable1.7 checkpoint delivered toremote; continuousobservations and originalfinalmedia window remain"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -41,7 +43,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Create new stable-v1.7.0 at completed operational/evidence commit and runtimealias stable-runtime-v1.7.0-d98d3c4 at exactsource; atomic push/remote peel verify. Preserve immutable manifest and oldtags.",
+    "Keep live1.7 observations/supervisor; first-hourcapture only after actual17:45:54.307Z using recorded preparation script/identity checks. REVIEW039 foundno justifiednewfeature; prioritize finalsecurity/issues consistency, samevideo decklayout preparation and originalfinalwindow.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -366,13 +368,15 @@
     "instruction": "Use FINAL-RESTORE-PLAN bounded direct commands and media watchdog; inspect uncertain remote outcome before retry; immutable1.3 checkpoint unchanged"
   },
   "nextProductProposal": {
-    "state": "Implemented and functionallyaccepted IDEA011revision1/product1.7/PRD1.14; REVIEW037/038 complete",
+    "state": "IDEA011 complete; nextboundedsource review found no justified newfeature",
     "owner": "/root/product",
     "review": "docs/product/REVIEW-034.md",
     "scope": "Existingcommandrows hide subsequentGETfailure despite healthyglobalSSE; browser-only503fixture/APIwrites0. Consider bounded command-list freshness UI withoutserver/DB/control changes.",
     "idea": "IDEA-011",
     "evidence": "artifacts/checkpoints/command-list-readonly-before/result.json",
-    "adoptedAt": "2026-09-21T16:24:46.061882+00:00"
+    "adoptedAt": "2026-09-21T16:24:46.061882+00:00",
+    "nextReview": "docs/product/REVIEW-039.md",
+    "decision": "No new version or scope; observation/finalmedia/security/handoff remain active"
   },
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
@@ -393,7 +397,7 @@
     "localFixtureOnly": true
   },
   "currentObservationIncidents": [],
-  "nextOperationalReview": "Publish verified1.7 checkpoint tags; maintain live1.7 observer epochs, no firsthourclaim before17:45:54.307Z. Originalfreeze21:37:33Z/deadline22:07:33Z unchanged.",
+  "nextOperationalReview": "Maintain current1.7 observer epochs and authoritative ledger. No firsthourclaim before17:45:54.307Z; inspect fresh counters/actualReady/disk beforeoriginalfreeze. Continue finalmedia/deck preparation and finalsecurity/issues review.",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.6",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
@@ -447,7 +451,7 @@
     "productVersion": "1.7.0",
     "prdVersion": "1.14",
     "idea": "IDEA-011",
-    "phase": "1.7 all functional/restore/manifest gates PASS; new stable/runtime tags publication pending",
+    "phase": "Completed1.7 checkpoint: main/pairedrestore/immutablemanifest/tags remoteverified; no active candidatewrites",
     "uiOwner": "/root/ui",
     "browserOwner": "/root/issues",
     "securityOwner": "/root/security",
@@ -637,18 +641,18 @@
     ]
   },
   "firstHourCapturePreparation": {
-    "preparedAt": "2026-09-21T15:07:39.597912+00:00",
-    "script": "artifacts/checkpoints/soak-1.5-first-hour-preparation/capture-first-hour.py",
-    "sha256": "029642f5f8ccd195fbbd4228d00fe710ac3fdfef6959dccfa54e4bc0b3267dec",
-    "notBefore": "2026-09-21T15:56:58.686Z",
-    "expectedOutput": "artifacts/checkpoints/soak-1.5.0-first-hour",
-    "scope": "Preparation only; liveprocessidentity/actualReady gates run atcapture. Prefix refuses less thanonehour before remotequeries orcheckpointcreation; no remotequeries occurred innegativecheck.",
+    "preparedAt": "2026-09-21T17:02:56.101386+00:00",
+    "script": "artifacts/checkpoints/soak-1.7-first-hour-preparation/capture-first-hour.py",
+    "sha256": "4ebe96dd97ad7280e94b0f26c7ee130957d8f74c3807d4072494b1db2a050d13",
+    "notBefore": "2026-09-21T17:45:54.307Z",
+    "expectedOutput": "artifacts/checkpoints/soak-1.7.0-first-hour",
+    "scope": "Preparation only; immutable prefix capture requires fullhour before any remotequery/outputdirectory. Checksactualcurrentversion/observer identities/Readyimage, keepsobserverprocessesrunning. No automatictimer registered. Native heartbeat/main may invoke afteractualboundary.",
     "guardCheck": {
       "result": "PASS",
       "prematureExitCode": 1,
       "message": "First hour not yet observed; do not create checkpoint"
     },
-    "state": "Unused: observed1.5period ended before1hour; do notexecute onclosedepoch"
+    "state": "prepared; not yet executed at1hour"
   },
   "activeMediaRehearsal": {
     "productVersion": "1.7.0",
@@ -760,12 +764,18 @@
     }
   ],
   "previousFirstHourCapturePreparation": {
-    "script": "artifacts/operations/capture-first-hour-1.4.py",
-    "sha256": "9e319aed4969d54f3572cbc05c111e3a40b00b9ccdf17c3acf9a87e81f4c3883",
-    "notBefore": "2026-09-21T14:49:42.893Z",
-    "expectedOutput": "artifacts/checkpoints/soak-1.4.0-first-hour",
-    "scope": "Prepared only; script refuses incompletehour/existingcheckpoint and preserves firstboundaryprefix. Confirm live handles/actualstate before execution.",
-    "state": "Captured andverified; old1.4observers nowendedforplannedupgrade, do notrepeat"
+    "preparedAt": "2026-09-21T15:07:39.597912+00:00",
+    "script": "artifacts/checkpoints/soak-1.5-first-hour-preparation/capture-first-hour.py",
+    "sha256": "029642f5f8ccd195fbbd4228d00fe710ac3fdfef6959dccfa54e4bc0b3267dec",
+    "notBefore": "2026-09-21T15:56:58.686Z",
+    "expectedOutput": "artifacts/checkpoints/soak-1.5.0-first-hour",
+    "scope": "Preparation only; liveprocessidentity/actualReady gates run atcapture. Prefix refuses less thanonehour before remotequeries orcheckpointcreation; no remotequeries occurred innegativecheck.",
+    "guardCheck": {
+      "result": "PASS",
+      "prematureExitCode": 1,
+      "message": "First hour not yet observed; do not create checkpoint"
+    },
+    "state": "Unused: observed1.5period ended before1hour; do notexecute onclosedepoch"
   },
   "plannedConnectionTransition": {
     "reason": "1.7upgrade",
@@ -797,12 +807,14 @@
       "audit4110": 0,
       "supervisor72380": 0
     },
-    "portsFree": [
+    "actualRollout": "deploy/verification/candidate-d98d3c4/rollout/proof.json",
+    "initialRolloutPodUid": "1fcd847c-cab2-4905-9fae-2d684c166aa5",
+    "currentVerifiedPodUid": "79784e51-f961-4e34-86d8-196827a8e26c",
+    "portsFreedAtOldProcessRetirement": [
       3104,
       18884
     ],
-    "actualRollout": "deploy/verification/candidate-d98d3c4/rollout/proof.json",
-    "actualPodUid": "1fcd847c-cab2-4905-9fae-2d684c166aa5"
+    "currentPortOwner": "supervisor77410 owns3104/18884; do not treat historical freedports as currentlyfree"
   },
   "previousStableRuntime": {
     "productVersion": "1.6.0",
@@ -946,5 +958,13 @@
       "independentFunctionalReview": "docs/product/REVIEW-032.md",
       "terminalStatusScope": "Initialcorelocal handles passed; historicalbackupfull failures1/1/0 and firstimagefixture125 retained in explicit subrecords, not allzero"
     }
-  ]
+  ],
+  "additionalMediaPreparation": {
+    "owner": "/root/media",
+    "state": "Dispatched1.7 decklayout/14slide rehearsal; no newrecording orremote writes",
+    "output": "artifacts/media-preparation/deck-candidate17-rehearsal",
+    "compactEvidence": "artifacts/checkpoints/media-candidate17-deck",
+    "scope": "Preparation artifact only; finalsamevideoPPT must stillbe generated in originalwindow; donotbypass finalbinder guards",
+    "handle": "Owner reports when a process starts; checkowner before duplicate work"
+  }
 }

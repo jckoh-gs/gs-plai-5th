@@ -1,13 +1,17 @@
 # 자율 실행 인계
 
-현재 실제 배포는 **제품 1.7.0 / PRD 1.14 / IDEA011 v1**이다. 소스 `d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9`, 이미지 `sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692`를 사용한다. 전체 목표는 미완료이며, 1.7/1cab의 기능·동일 스냅샷 복구 인수를 완료했다. 새 불변 매니페스트 검증을 완료했고 태그 발행이 남아 있으며 이전 검증된 1.6/9bd 체크포인트도 보존한다. 재개 시 현재 시각·최신 사용자 지시·[run.json](run.json)·[resume.json](resume.json)부터 읽는다.
+현재 실제 배포는 **제품 1.7.0 / PRD 1.14 / IDEA011 v1**이다. 소스 `d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9`, 이미지 `sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692`를 사용한다. 전체 목표는 미완료이며, 1.7/1cab의 기능·동일 스냅샷 복구 인수를 완료했다. 새 불변 매니페스트와 태그 원격 전달을 완료했으며 이전 검증된 1.6/9bd 체크포인트도 보존한다. 재개 시 현재 시각·최신 사용자 지시·[run.json](run.json)·[resume.json](resume.json)부터 읽는다.
 
 ## 지금 이어갈 단계
 
 1. 1.7 main UI·API·원래 5 RTU 전체 설정/실행/데이터/시나리오·실제 MQTT 125kW/error0·인증/SSE/preview/export 회귀를 완료했다. [배포 증거](../../deploy/verification/candidate-d98d3c4/rollout/proof.json), [배포 후 확인](../../deploy/verification/candidate-d98d3c4/post-rollout/summary.json), [실제 MQTT](../../deploy/verification/candidate-d98d3c4/main-mqtt.json), [회귀](../../deploy/verification/candidate-d98d3c4/main-regression/summary.json)를 재사용하며 완료한 제어를 반복하지 않는다.
 2. pending-outbox 실제 Pod 교체 검증을 완료했다. root17841과 독립관찰79945는 종료0. [동일 메시지 복구](../../deploy/verification/candidate-d98d3c4/outbox-restart.json)와 [원래5설정·fault·임시포트 종료·supervisor 재연결](../../deploy/verification/candidate-d98d3c4/outbox-post-normal.json)을 확인했다. 전환 중 health 오류5회는 독립 관찰에 보존했다. 재시작을 반복하지 않는다.
 3. 새 정상1.7 백업931876864B/SHA1cab74e110d172307ffd3605543da2db4261c27f009b97871a21bd1bf665827c의 생성·전송·전체SHA·worker종료를 root24866 종료0으로 확인했다. **그 정확한 스냅샷**의 현재1.7/하위1.6 복원 기능 검증·정리를 완료했다. [23보고서+2Pod identity](../../deploy/verification/candidate-d98d3c4/restore-summary.json), [root의 실제 양쪽0/Pod0/4BoundPVC/포트종료·main설정 확인](../../deploy/verification/candidate-d98d3c4/root-recovery-review/summary.json), [독립 REVIEW037](../product/REVIEW-037.md)을 재사용한다. form44/receipt14·실제MQTT·원본 데이터·이벤트는 양버전, 새 목록은1.7에서만 확인했다. 완료한 복원을 반복하지 않는다.
-4. 독립 기능 인수는 완료했다. 근거91a23b8 커밋과 새 불변1.7 매니페스트1731해시·Ready/백업의 독립검증을 완료했다. 새 stable/runtime 태그·원격 전달이 다음 단계다. 운영 배포 인자가 무시될 수 있던 ISSUE025는4b6009d에서 수정했고 [전체312검사·client-only dry-run](../../artifacts/checkpoints/deployment-renderer/summary.json)을 통과했다. 실제 재배포를 실행한 검증은 아니다. 이후에도 원래 일정과 최종 미디어 인수는 남아 있다.
+4. 독립 기능 인수는 완료했다. 근거91a23b8 커밋과 새 불변1.7 매니페스트1731해시·Ready/백업의 독립검증을 완료했다. 새 stable-v1.7.0은 운영·근거e5bd056, stable-runtime-v1.7.0-d98d3c4는 정확 앱d98을 가리키며 원격 refs를 확인했다. [태그 증거](../../artifacts/checkpoints/release-1.7/tags.json). 운영 배포 인자가 무시될 수 있던 ISSUE025는4b6009d에서 수정했고 [전체312검사·client-only dry-run](../../artifacts/checkpoints/deployment-renderer/summary.json)을 통과했다. 실제 재배포를 실행한 검증은 아니다. 이후에도 원래 일정과 최종 미디어 인수는 남아 있다.
+
+## 다음 관찰·준비
+
+[REVIEW039](../product/REVIEW-039.md)는 정당한 추가 기능을 확인하지 못해 새 버전 채택을 보류했다. 현재 관찰과 최종 보안·이슈 정합성·영상/PPT 인도 준비를 계속한다. 첫1시간 캡처는17:45:54.307Z 이후 실제 완성된 두 관찰 구간이 있을 때만 [준비 스크립트](../../artifacts/checkpoints/soak-1.7-first-hour-preparation/capture-first-hour.py)를 실행한다. 조기 실행은 원격조회·체크포인트 생성 전에 거절됨을 확인했다. 현재 짧은 관찰을1시간으로 표현하지 않는다. media 역할은1.7의 바뀐 원고·캡처로14장 준비용 덱 배치를 점검 중이다. 담당 상태/고유출력은 resume.additionalMediaPreparation을 읽고 중복 시작하지 않는다. 최종 영상을 새로 제작할 원래 창은 유지한다.
 
 ## 재접속과 현재 소유 프로세스
 
@@ -21,7 +25,7 @@
 
 ## 검증된 복구 기준과 현재 추가 백업
 
-현재 선택은1.7/runtime d98d3c4와 [1cab 백업](../../deploy/verification/stable-backup-d98d3c4.json)이다. 동일 스냅샷의 현재/하위 복원과 기능 인수는 통과했으며, [checkpoint-1.7.0.json](../../artifacts/releases/checkpoint-1.7.0.json)은 source91a23b8·SHA146d33ee23f426cee4826c1e1f1d569bbad2614051c65efa2f99b865bb08e439이며1731해시·실제Ready·1cab백업을 root와 [REVIEW038](../product/REVIEW-038.md)에서 검증했다. 새 태그는 발행 전이다. run.json.stableCheckpoint의 manifestState/tagState를 실제 파일·Git과 함께 확인한다. 아래1.6는 이전 검증된 불변 체크포인트다.
+현재 선택은1.7/runtime d98d3c4와 [1cab 백업](../../deploy/verification/stable-backup-d98d3c4.json)이다. 동일 스냅샷의 현재/하위 복원과 기능 인수는 통과했으며, [checkpoint-1.7.0.json](../../artifacts/releases/checkpoint-1.7.0.json)은 source91a23b8·SHA146d33ee23f426cee4826c1e1f1d569bbad2614051c65efa2f99b865bb08e439이며1731해시·실제Ready·1cab백업을 root와 [REVIEW038](../product/REVIEW-038.md)에서 검증했다. 새 stable/runtime 태그도 원격 확인을 완료했다. run.json.stableCheckpoint의 manifestState/tagState를 실제 파일·Git과 함께 확인한다. 아래1.6는 이전 검증된 불변 체크포인트다.
 
 1.6 runtime331ab9a / image4af99e7b와 [checkpoint-1.6.0.json](../../artifacts/releases/checkpoint-1.6.0.json)을 보존한다. manifest source는 `b729f4287cf6a5a5527fa37f105e61bd41e135b7`, SHA는 `fd3fedc9dffb6bdc8d6e69982554dabde24bf3054113f02dc8370385bc238ae5`이며1466해시와 실제Ready/백업을 [REVIEW033](../product/REVIEW-033.md)에서 검증했다. 역사 소스는 `--at-commit`으로 대조하고 불변 파일·기존 태그를 덮어쓰지 않는다.
 

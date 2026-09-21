@@ -1958,11 +1958,27 @@
         {
           "path": "deploy/verification/stable-backup-d98d3c4.json",
           "sha256": "86773f01ea8940b01e1e9f71852eb340219c0225f8b7d13826f623d582472bb7"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.7.0.json",
+          "sha256": "146d33ee23f426cee4826c1e1f1d569bbad2614051c65efa2f99b865bb08e439"
+        },
+        {
+          "path": "artifacts/checkpoints/release-1.7/verification.json",
+          "sha256": "fcdaca04fb2e5b7969a093f6418a1ff3d09398e2160220623ca3de0e7ad541b7"
+        },
+        {
+          "path": "artifacts/checkpoints/release-1.7/tags.json",
+          "sha256": "1cf4693097903698066f6684c71e4e2a8283049313f17961af035e99d9cd0d43"
+        },
+        {
+          "path": "docs/product/review-038-manifest.log",
+          "sha256": "fcdaca04fb2e5b7969a093f6418a1ff3d09398e2160220623ca3de0e7ad541b7"
         }
       ],
       "assessment": "Functional recovery revalidated for actual1.7 main includingMQTT/outbox and identical1cab snapshot current1.7/backward1.6; original5canonical/run/dataset/scenario preserved. Finalfreeze/media/time gates remain pending.",
       "releaseRevalidation": "Verify the actually selected final runtime/image and final gates; historical functional evidence is cumulative, not final release certification.",
-      "currentCheckpoint": "1.7/d98 exact1cab same-snapshot current1.7/backward1.6 23reports+2Podidentity; rootlivecleanup+REVIEW037; immutablemanifest/tags pending"
+      "currentCheckpoint": "1.7.0/runtime d98d3c4/checkpoint-1.7.0/1731hashes+actualReady+1cabbackup verified REVIEW037/038; stable-v1.7=e5bd056 andruntimealiasd98 remoteverified; finalfreeze/media/time/rolecloseoutpending"
     },
     {
       "id": "OPS-04",
@@ -4032,11 +4048,27 @@
         {
           "path": "docs/product/review-016-manifest.log",
           "sha256": "533bc21e80a7998760cb1c7df2facf51d0877495ab0c9f7614723248cc9ccc47"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.7.0.json",
+          "sha256": "146d33ee23f426cee4826c1e1f1d569bbad2614051c65efa2f99b865bb08e439"
+        },
+        {
+          "path": "artifacts/checkpoints/release-1.7/verification.json",
+          "sha256": "fcdaca04fb2e5b7969a093f6418a1ff3d09398e2160220623ca3de0e7ad541b7"
+        },
+        {
+          "path": "artifacts/checkpoints/release-1.7/tags.json",
+          "sha256": "1cf4693097903698066f6684c71e4e2a8283049313f17961af035e99d9cd0d43"
+        },
+        {
+          "path": "docs/product/review-038-manifest.log",
+          "sha256": "fcdaca04fb2e5b7969a093f6418a1ff3d09398e2160220623ca3de0e7ad541b7"
         }
       ],
-      "assessment": "Current1.3checkpoint independentlyverified --at-commit --remote:688hashes/source d077120/runtime3fa3ba0/backupSHA/actualReadyapp+broker match. Bothlocalstabletags peel3fa3ba0. Prioractualrestore acceptance retained. This establishes functionalcheckpoint provenance, not finalfreeze/media/time/remoteGitpush.",
+      "assessment": "Immutable1.7 manifest records source91a23b8/runtime d98/PRD1.14/image d1e4/backup1cab and tracked evidence. Root and REVIEW038 verify1731hashes/selectedbackup/actualReady. Stable tag separates full operationalcheckpoint e5bd from exactruntime d98; remote refs verified. Historical evidence remains cumulative, final release/media not certified.",
       "releaseRevalidation": "Final release commit/image full checks remain required.",
-      "currentCheckpoint": "1.7 immutable manifest generation pending; verified1.6/checkpoint-1.6.0.json/REVIEW033 remains historical provenance; finalfreeze/media/time pending"
+      "currentCheckpoint": "1.7.0/runtime d98d3c4/checkpoint-1.7.0/1731hashes+actualReady+1cabbackup verified REVIEW037/038; stable-v1.7=e5bd056 andruntimealiasd98 remoteverified; finalfreeze/media/time/rolecloseoutpending"
     },
     {
       "id": "AT-RELEASE-01",

@@ -1,0 +1,14 @@
+{
+  "preparedAt": "2026-09-21T17:02:56.101386+00:00",
+  "script": "artifacts/checkpoints/soak-1.7-first-hour-preparation/capture-first-hour.py",
+  "sha256": "4ebe96dd97ad7280e94b0f26c7ee130957d8f74c3807d4072494b1db2a050d13",
+  "notBefore": "2026-09-21T17:45:54.307Z",
+  "expectedOutput": "artifacts/checkpoints/soak-1.7.0-first-hour",
+  "scope": "Preparation only; immutable prefix capture requires fullhour before any remotequery/outputdirectory. Checksactualcurrentversion/observer identities/Readyimage, keepsobserverprocessesrunning. No automatictimer registered. Native heartbeat/main may invoke afteractualboundary.",
+  "guardCheck": {
+    "result": "PASS",
+    "prematureExitCode": 1,
+    "message": "First hour not yet observed; do not create checkpoint"
+  },
+  "state": "prepared; not yet executed at1hour"
+}

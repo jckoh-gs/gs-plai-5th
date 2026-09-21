@@ -4,7 +4,7 @@
   "freezeAt": "2026-09-21T21:37:33.079009+00:00",
   "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
   "timezone": "Asia/Seoul",
-  "phase": "functional-checkpoint-publication",
+  "phase": "continuous-observation-and-final-preparation",
   "scope": "greenfield; mandatory k3s deployment",
   "context": "charles-k3s",
   "namespace": "gs-plai-5h",
@@ -31,7 +31,7 @@
     "browserCandidate": "PASS local list8groups+form44/receipt14; main actual list/event66+regressions; fresh1.7 and backward1.6 form44/receipt14/event actual; controlled failures distinguished from real main reads",
     "remote": "PASS actualmain1.7 Ready/API/UI/MQTT125 error0; controlled Podreplacement identical durablebody/PUBACK; original5 settings/run/dataset/scenario normal",
     "backupRestore": "PASS exact931876864B/1cab current1.7/backward1.6 freshPVC:23 reports+2actualPodidentities; both0/noPods/portsclosed/4BoundPVC; root live review andREVIEW037",
-    "releaseManifest": "PASS1731 hashes/actualReady/1cabbackup; independent REVIEW038; new1.7 stable/runtime tags pending publication",
+    "releaseManifest": "PASS1731hashes/actualReady/1cabbackup; independent REVIEW038; stable-v1.7 fullcheckpoint e5bd056 andruntimealiasd98 both remoteverified",
     "imageSecurity": "Exactd1e4 SBOM130/4knownunfixedmatches2CVEs; npm audit0; no newOSS/zeroimagevulnerability claim",
     "media": "1.7 local8scene255.33s/279.911sproduction/normalrecovery/frames/subtitle technicalaudio PASS; REVIEW036; no listeningclaim; finalvideo andsame-videoPPT pending originalwindow",
     "deploymentRenderer": "ISSUE025 fixed4b6009d;6focused/312full(clientdryrun no realapply); exactapp+bothbroker digest authority/privatecleanup"
@@ -127,7 +127,7 @@
     "recoveryEvidence": "deploy/verification/candidate-d98d3c4/restore-summary.json",
     "rootRecoveryReview": "deploy/verification/candidate-d98d3c4/root-recovery-review/summary.json",
     "independentFunctionalReview": "docs/product/REVIEW-037.md",
-    "tagState": "not-created",
+    "tagState": "created-and-remote-verified",
     "scope": "Verified1.7 functional/runtime/recovery checkpoint; newmanifest/tags pending; overallgoal finalmedia/time/delivery pending",
     "previousVerifiedManifest": "artifacts/releases/checkpoint-1.6.0.json",
     "manifestSha256": "146d33ee23f426cee4826c1e1f1d569bbad2614051c65efa2f99b865bb08e439",
@@ -141,7 +141,9 @@
       "scope": "File integrity and optional deployed identity only; acceptance, restore and media verdicts remain independent",
       "manifestSourceCommit": "91a23b8d2e620ca9e12d584cf7169627c7e01437",
       "independentReview": "docs/product/REVIEW-038.md"
-    }
+    },
+    "tagCommit": "e5bd0566ca65648a3f495bc3ffb0fda448c813cf",
+    "tagVerification": "artifacts/checkpoints/release-1.7/tags.json"
   },
   "candidate": {
     "productVersion": "1.7.0",
@@ -149,7 +151,7 @@
     "idea": "IDEA-011",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T16:24:46.061882+00:00",
-    "status": "All functional/restore/immutablemanifest gates PASS; new stable/runtime tags publication pending",
+    "status": "Completed functional/runtime/recovery/immutablemanifest/stabletags checkpoint; original finalmedia/time/delivery gates remain",
     "fallbackTag": "stable-v1.6.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.6.0.json",
     "beforeEvidence": "artifacts/checkpoints/command-list-readonly-before/result.json",
@@ -329,7 +331,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T17:02:02.711346+00:00",
+  "updatedAt": "2026-09-21T17:04:18.419637+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
