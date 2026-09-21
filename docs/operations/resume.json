@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T11:10:35.105256+00:00",
+  "updatedAt": "2026-09-21T11:21:01.556849+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": "stable-v1.2.0",
@@ -57,5 +57,21 @@
       "processesContinue": true,
       "scope": "First hour immutable observation prefix only; final observation and media gates remain pending"
     }
-  ]
+  ],
+  "connectionIncident": {
+    "evidence": "artifacts/checkpoints/reconnect-20260921T1116",
+    "spontaneousEvent": "2026-09-21T11:16:17.529Z",
+    "plannedSupervisorReplacement": "2026-09-21T11:19:16.440724+00:00",
+    "verifiedRecovery": "2026-09-21T11:20:13.463028+00:00",
+    "supervisorHandle": 25872,
+    "supervisorPid": 54951,
+    "supervisorProcessIdentity": "Mon Sep 21 20:19:20 2026",
+    "previousSupervisorHandleTerminal": 98912,
+    "knownCumulativeCounters": {
+      "primaryApiErrors": 1,
+      "primaryConnectionErrors": 3,
+      "supplementaryConnectionErrors": 5
+    },
+    "instructions": "Do not reset counters or report known historical counts as new failures. Compare increases and current readiness/connection/freshness. Verify process identity before acting on a PID."
+  }
 }

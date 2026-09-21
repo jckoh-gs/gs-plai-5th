@@ -1,0 +1,36 @@
+{
+  "verifiedAt": "2026-09-21T11:20:13.463028+00:00",
+  "oldSession": 98912,
+  "newSession": 25872,
+  "newPid": 54951,
+  "newProcessIdentity": "Mon Sep 21 20:19:20 2026",
+  "sourceSha256": "42e5b38fba4d274e804ca87d1a7d4c1410803052ae1cc864d39256e601d4cd40",
+  "podUID": "80c49ef9-4479-4400-95e3-b30de494783a",
+  "observersNotRestarted": true,
+  "remoteMutations": false,
+  "scope": "Planned local supervisor replacement to activate diagnostic fix. Initial startup has no prior-ready outage timestamp. Timestamp regression verified in isolated tests, not by forcing another production outage.",
+  "primaryCounters": {
+    "apiErrors": 1,
+    "connectionErrors": 3,
+    "invalid": 0,
+    "duplicates": 0,
+    "lastConnectedAt": "2026-09-21T11:19:22.849Z",
+    "lastDisconnectedAt": "2026-09-21T11:19:16.737Z"
+  },
+  "rtuCounters": {
+    "connectionErrors": 5,
+    "invalidMessages": 0,
+    "duplicateMessages": 0,
+    "connections": 3,
+    "disconnections": 2,
+    "lastConnectedAt": "2026-09-21T11:19:23.022Z",
+    "lastDisconnectedAt": "2026-09-21T11:19:16.737Z"
+  },
+  "sampleDiscontinuities": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}

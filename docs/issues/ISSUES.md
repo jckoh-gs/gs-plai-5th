@@ -242,3 +242,21 @@ release-binding 기존 부정 fixture를 독립 재실행3/3PASS. commit/run/run
 상태 **수정·독립 회귀 완료**. 메인이 필수 nested 필드/nullable 숫자/엄격UTC ISO/provenance 검사를 보완했다. 독립5부정fixture가 모두거절되고 정상ramp-down/전기값null은 계속 허용된다. 실제 model+Store100기분할/동일timestamp/QoS중복/run경계/sequence간격 포함 총11/11PASS(`review-014-audit-after.log`). 수신량에는invalid도 포함된다는 점과 quantity coverage≠acceptance를 claimBoundary에 명시한 것도 확인했다.
 
 초기 live pilot은 구버전관측기이므로 강화검증 성공으로 소급취급하지 않는다. 원본source는 `artifacts/checkpoints/telemetry-audit/pilot-source`에 별도보존하며 메인이 다음 observer를 새디렉터리로 구분할 예정이다. 본 검토는 실행중pilot/primarysoak/supervisor를 조작하지 않았다.
+
+## ISSUE-017 — 로컬 forward 재생성 시 outage/recovery 시각 갱신 누락
+
+중요도 P2 운영 진단, 상태: 최소수정 적용·격리 회귀 검증. 원격앱 장애나 재시작이 아니라 로컬 관측연결 검증 실패와 재생성이다. 손실의 근본원인은 단정하지 않는다. 메인의 `artifacts/checkpoints/reconnect-20260921T1116/summary.json`·고정observations/supervisor-events/pod-after/resume-after 증거에서는 원격동일UID80c49ef9…/Ready2/2/restart0, supervisor11:16:17.529 forward_started→11:16:19.292ready, observers11:16:19.2재연결 및11:16:33전체RTU수신을 확인했다. 그러나 lastOutageAt/reconnectedAt은10:07값에 머물렀다.
+
+원인: remote검증 성공/localReady=false 경로는 disconnected를 publish하지 않고 connecting으로 이동해 outageAt이 설정되지 않았다. 수정은 이전ready관측이 있을 때 local검증실패를 `disconnected/local_verification_failed`로 먼저 기록하고 기존 생성/재시도 경로를 유지한다. 처음기동은 장애로 만들지 않으며 반복실패는 최초관측outageAt을 유지, ready복귀가 실제관측복구시각을 갱신한다. healthy반복poll은 복구시각을 다시 쓰지 않는다.
+
+회귀는 임시fakekubectl/로컬포트만 사용한다. ownedforward실제종료 뒤재생성과 아직살아있지만검증실패한ownedforward교체 양쪽을 시험한다. 원격pod는fixture에서동일하고 kubernetes_unavailable 없이 정확한outage/recovery시각을 확인한다. 기존singleton/외부포트보존/deadline/image/auth검사도 유지한다. 증거 `review-015-supervisor.log`.
+
+**현재 supervisor98912/PID40434 및 observer5651·67091, 원격배포를 조작하지 않았다.** 파일수정은 이미실행중인구버전프로세스에 소급되지 않는다. 이번현장복구의 원본사실은 메인의별도보존증거로판단하고 새시각필드는 다음실행부터적용된다.
+
+검증 보충: `review-015-supervisor.log`는9개중8개성공이며 기존wrong-image fixture에서 예상한remote_image_mismatch 대신kubernetes_unavailable을 반환한 일시실패를 보존한다. 새회귀2개는 모두성공했다. 코드변경없이 재실행한 `review-015-supervisor-rerun.log`는9/9PASS다. 초기실패는삭제하지 않았다. fakekubectl 실행지연 등이 가능하지만 원인은미확정이며 실제환경장애와 동일시하지 않는다.
+
+### ISSUE-017 후속 — 수정된 로컬 supervisor 활성화
+
+메인은11:19:16Z에 기존PID40434의시작시각·command를 재검증하고 정상종료한 뒤 수정된supervisor25872/PID54951을 시작했다.11:19:22.705Z ready 및ownedforward를 확인했고 양쪽observer는 재시작하지 않았다. 계획된교체의MQTT관측단절은11:19:16.737Z~22.849/23.022Z이며 이전11:16자연발생사건과 분리한다. 새프로세스의최초기동이므로outage/reconnected필드null은 과거장애없음이아니라 새프로세스범위다. 과거event원문을보존했다.
+
+`artifacts/checkpoints/reconnect-20260921T1116/handoff-result.json`에 실제교체·실행sourceSHA·재수신과지속관찰ID를보존했다. main누적APIerror1/connectionErrors3, RTUobserverconnectionErrors5를초기화하지 않았고 수신구조오류/관측샘플불연속0이다. 원격deploy/Pod/제어를변경하지 않았다. 수정된시각기록경로의검증은격리시험이며 이를현장강제장애시험으로과장하지 않는다.

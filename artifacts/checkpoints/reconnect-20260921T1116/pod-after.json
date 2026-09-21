@@ -1,0 +1,19 @@
+{
+  "observedAt": "2026-09-21T11:17:52.561373+00:00",
+  "name": "grid-67c9c588c8-hn6k7",
+  "uid": "80c49ef9-4479-4400-95e3-b30de494783a",
+  "containers": [
+    {
+      "name": "app",
+      "ready": true,
+      "restartCount": 0,
+      "imageID": "127.0.0.1:15050/grid@sha256:cc387c6db005acf798dbbbbd41979f07114474a5fe697118ad8c29afc904eab6"
+    },
+    {
+      "name": "mqtt",
+      "ready": true,
+      "restartCount": 0,
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  ]
+}

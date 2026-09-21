@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "runId": "grid-new-20260921T080733Z",
+  "checkedAt": "2026-09-21T11:16:58.322Z",
+  "nextAction": "resume-first-incomplete-checkpoint",
+  "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "head": "a0ffbc16087af529edb588c2342f261cc941742e",
+  "workingTree": [
+    "?? .idea/",
+    "?? artifacts/releases/current.json",
+    "?? deploy/verification/candidate-1197ab5/",
+    "?? deploy/verification/candidate-8599ab9/operational-baseline.json"
+  ],
+  "remoteMain": "a0ffbc16087af529edb588c2342f261cc941742e",
+  "remoteGitReachable": true,
+  "clusterReachable": true,
+  "api": {
+    "ok": true,
+    "version": "1.2.0",
+    "plantCount": 5
+  },
+  "identity": {
+    "ok": true,
+    "pod": {
+      "name": "grid-67c9c588c8-hn6k7",
+      "uid": "80c49ef9-4479-4400-95e3-b30de494783a",
+      "image": "127.0.0.1:15050/grid@sha256:cc387c6db005acf798dbbbbd41979f07114474a5fe697118ad8c29afc904eab6",
+      "imageID": "127.0.0.1:15050/grid@sha256:cc387c6db005acf798dbbbbd41979f07114474a5fe697118ad8c29afc904eab6"
+    },
+    "broker": {
+      "name": "grid-67c9c588c8-hn6k7",
+      "uid": "80c49ef9-4479-4400-95e3-b30de494783a",
+      "image": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  },
+  "workingMilestone": {
+    "productVersion": "1.2.0",
+    "prdVersion": "1.9",
+    "idea": "IDEA-006",
+    "state": "Verified stable runtime and immutable checkpoint1.2.0; 453hashes/actualremoteimages PASS. No unfinished app feature."
+  },
+  "remainingInOrder": [
+    "Continue observation until freeze; at freeze select verified normal version and create final video then editable PPT, inspect all outputs",
+    "Before deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
+  ],
+  "mutationsPerformed": false
+}

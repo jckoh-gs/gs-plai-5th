@@ -1,0 +1,39 @@
+✔ controlled kubectl outage retries with cap and recovers read-only with exact image/auth (1152.431041ms)
+✖ wrong remote image blocks forwarding and does not replay writes (1478.3215ms)
+✔ occupied unrelated ports are neither killed nor replaced (1040.393208ms)
+✔ existing healthy external forward survives supervisor freeze, deadline and stop (412.498167ms)
+✔ singleton excludes same-process duplicate, replaces verified stale PID identity, refuses incomplete lock (14.878166ms)
+✔ invalid startup configuration fails closed and does not spawn commands (5.237834ms)
+✔ deadline stops only owned forward; expected-image update is revalidated (881.79075ms)
+✔ local-only owned forward loss records a new outage and recovery without remote failure (598.922875ms)
+✔ unhealthy still-running owned forward records outage before replacement (525.425083ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 8
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7161.267958
+
+✖ failing tests:
+
+test at tests/supervisor.test.js:18:1
+✖ wrong remote image blocks forwarding and does not replay writes (1478.3215ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'kubernetes_unavailable'
+  - 'remote_image_mismatch'
+  
+      at TestContext.<anonymous> (file:///Users/charleskoh/research/20260921-RALPTON/tests/supervisor.test.js:18:196)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1313:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'kubernetes_unavailable',
+    expected: 'remote_image_mismatch',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

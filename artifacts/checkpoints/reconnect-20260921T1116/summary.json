@@ -1,0 +1,126 @@
+{
+  "capturedAt": "2026-09-21T11:17:52.561794+00:00",
+  "scope": "Actual observer interruption/recovery, raw observations preserved. Cause of initial local request failure is not established. This does not claim continuous network or service uptime.",
+  "primaryRows": 21,
+  "rtuRows": 22,
+  "supervisorEvents": [
+    {
+      "schemaVersion": 1,
+      "at": "2026-09-21T11:16:17.529Z",
+      "pid": 40434,
+      "processIdentity": "Mon Sep 21 19:00:42 2026",
+      "state": "connecting",
+      "reason": "forward_started",
+      "outageAt": null,
+      "lastOutageAt": "2026-09-21T10:07:36.980Z",
+      "reconnectedAt": "2026-09-21T10:07:52.495Z",
+      "readOnly": true,
+      "commandsAllowed": true,
+      "context": "charles-k3s",
+      "namespace": "gs-plai-5h",
+      "expectedImage": "127.0.0.1:15050/grid@sha256:cc387c6db005acf798dbbbbd41979f07114474a5fe697118ad8c29afc904eab6",
+      "expectedVersion": "1.2.0",
+      "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+      "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+      "failures": 1,
+      "forwardOwned": true,
+      "podUID": "80c49ef9-4479-4400-95e3-b30de494783a",
+      "retryInMs": 1000
+    },
+    {
+      "schemaVersion": 1,
+      "at": "2026-09-21T11:16:19.292Z",
+      "pid": 40434,
+      "processIdentity": "Mon Sep 21 19:00:42 2026",
+      "state": "ready",
+      "reason": "verified",
+      "outageAt": null,
+      "lastOutageAt": "2026-09-21T10:07:36.980Z",
+      "reconnectedAt": "2026-09-21T10:07:52.495Z",
+      "readOnly": true,
+      "commandsAllowed": true,
+      "context": "charles-k3s",
+      "namespace": "gs-plai-5h",
+      "expectedImage": "127.0.0.1:15050/grid@sha256:cc387c6db005acf798dbbbbd41979f07114474a5fe697118ad8c29afc904eab6",
+      "expectedVersion": "1.2.0",
+      "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+      "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+      "failures": 0,
+      "forwardOwned": true,
+      "podUID": "80c49ef9-4479-4400-95e3-b30de494783a",
+      "retryInMs": 10000
+    }
+  ],
+  "primaryFailurePolls": [
+    {
+      "at": "2026-09-21T11:16:17.529Z",
+      "apiErrors": 1,
+      "apiReady": false
+    }
+  ],
+  "primaryLatest": {
+    "checkedAt": "2026-09-21T11:17:46.040Z",
+    "apiReady": true,
+    "messages": 582,
+    "invalid": 0,
+    "duplicates": 0,
+    "apiErrors": 1,
+    "connectionErrors": 0,
+    "lastConnectedAt": "2026-09-21T11:16:19.201Z",
+    "lastDisconnectedAt": "2026-09-21T11:16:17.527Z",
+    "lastMessageAt": "2026-09-21T11:17:36.565Z"
+  },
+  "rtuLatest": {
+    "checkedAt": "2026-09-21T11:17:47.876Z",
+    "connectionErrors": 1,
+    "connected": true,
+    "lastConnectedAt": "2026-09-21T11:16:19.199Z",
+    "lastDisconnectedAt": "2026-09-21T11:16:17.527Z",
+    "rtus": [
+      {
+        "rtuId": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+        "lastReceivedAt": "2026-09-21T11:17:36.362Z",
+        "samples": 1920,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0
+      },
+      {
+        "rtuId": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+        "lastReceivedAt": "2026-09-21T11:17:36.476Z",
+        "samples": 1920,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0
+      },
+      {
+        "rtuId": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+        "lastReceivedAt": "2026-09-21T11:17:36.554Z",
+        "samples": 1920,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0
+      },
+      {
+        "rtuId": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+        "lastReceivedAt": "2026-09-21T11:17:35.040Z",
+        "samples": 1920,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0
+      },
+      {
+        "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+        "lastReceivedAt": "2026-09-21T11:17:35.618Z",
+        "samples": 1920,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0
+      }
+    ]
+  },
+  "knownDiagnosticDefect": "Supervisor recreated its local forward via connecting without marking outageAt; lastOutageAt/reconnectedAt still reference the previous10:07 event. Use this actual11:16 transition log and observer timestamps, not those stale fields.",
+  "files": {
+    "pod-after.json": "dc5c25fb50d943b6755d9f7afed7ad21241b2d99765a11ae9c7e1d64bdb05bcf",
+    "primary-observations.jsonl": "f6cfaf38cbb86c25d95ce45c92d141124eeef457d9481ef6a281ed2fc39b4d1f",
+    "resume-after.json": "4be4800b7bef7129ad2c8305b01d09590bdb5184dc96d4107bfab4c8aed94bd4",
+    "rtu-observations.jsonl": "5e2bfe887319c6add424ac3c23cc83809c5e859cb0a3f9bae10e397678f883c8",
+    "supervisor-events.jsonl": "a56f1475a0112fb92bc8bc5e0d84b2f510497a118eb5898f349470fe779c0181",
+    "supervisor-source-before.mjs": "fdfcd3ffc32662bb10fb6b4203f5d966e100fe636955ee049d701f76f7ff35d7"
+  }
+}

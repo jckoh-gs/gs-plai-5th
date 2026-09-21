@@ -15,6 +15,8 @@
 
 RTU별 추가 전체 SCADA 관찰도 실행 중이다. `TELEMETRY-AUDIT.md`의 강화 세션54bdac4e와 실제 handle을 확인한다. primary soak를 대체하지 않으며 freeze에서 각 관측과 소스를 별도로 보존한다. 동일ID/동일본문 중복과 sequence/샘플 간격은 문서의 맥락 규칙으로 해석한다.
 
+11:16Z에 로컬관측이 일시실패한 뒤 supervisor가 자동복구했다.11:19Z에는 그때발견한시각기록오류를수정한감시프로세스로 계획교체했다. 현재supervisor root handle25872/PID54951(`Mon Sep 21 20:19:20 2026`)이며 이전98912는정상종료됐다. `artifacts/checkpoints/reconnect-20260921T1116`에 두사건과원문증거를분리보존했다. 당시복구후 main누적APIerror1/connectionErrors3, 추가RTUobserverconnectionErrors5는 과거누적값이다. 이후증가분/현재apiReady·MQTT연결·관측신선도·샘플이상을확인하고 기존누적값을새장애로반복보고하지않는다. 카운터를초기화하거나무중단으로표시하지않는다.
+
 ## 동결 준비와 최종30분
 
 1. 현재 runtime 소스가 stable 이미지와 일치하는지 확인한다. 미완성 작업이 있으면 검증된 stable 이미지·필요시 호환 백업을 사용한다. 기존 백업을 덮어쓰지 않는다.

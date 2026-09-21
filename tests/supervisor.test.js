@@ -26,3 +26,19 @@ test('singleton excludes same-process duplicate, replaces verified stale PID ide
 test('invalid startup configuration fails closed and does not spawn commands',async()=>{const f=await fixture();try{writeFileSync(f.s.runFile,'{broken');const r=await f.s.tick();assert.equal(r.reason,'invalid_run_configuration');assert.equal(f.s.closed,true);assert.equal(f.calls().length,0);}finally{await f.close();}});
 
 test('deadline stops only owned forward; expected-image update is revalidated',async()=>{const f=await fixture();try{await ready(f.s);writeFileSync(f.s.runFile,JSON.stringify({...f.run,deployment:{...f.run.deployment,appImage:image.replace(/a{64}$/,'c'.repeat(64))}}));assert.equal((await f.s.tick()).reason,'remote_image_mismatch');assert.equal(f.s.child,null);writeFileSync(f.s.runFile,JSON.stringify(f.run));await ready(f.s);f.clock(f.t+60000);assert.equal((await f.s.tick()).state,'stopped');assert.equal(f.s.child,null);}finally{await f.close();}});
+
+test('local-only owned forward loss records a new outage and recovery without remote failure',async()=>{
+ const f=await fixture();try{
+  const first=await ready(f.s);assert.equal(first.lastOutageAt,null);assert.equal(first.reconnectedAt,null);
+  const child=f.s.child;await new Promise(resolve=>{child.once('exit',resolve);child.kill('SIGTERM');});
+  f.clock(f.t+1000);const connecting=await f.s.tick();assert.equal(connecting.state,'connecting');assert.equal(connecting.reason,'forward_started');assert.equal(connecting.outageAt,new Date(f.t+1000).toISOString());assert.equal(connecting.podUID,'fixture-pod');
+  f.clock(f.t+5000);const recovered=await ready(f.s);assert.equal(recovered.lastOutageAt,new Date(f.t+1000).toISOString());assert.equal(recovered.reconnectedAt,new Date(f.t+5000).toISOString());assert.equal(recovered.outageAt,null);
+  f.clock(f.t+6000);assert.equal((await f.s.tick()).reconnectedAt,recovered.reconnectedAt);
+  const events=readFileSync(join(f.dir,'state/events.jsonl'),'utf8').trim().split('\n').map(JSON.parse);assert(events.some(e=>e.state==='disconnected'&&e.reason==='local_verification_failed'&&e.at===new Date(f.t+1000).toISOString()));assert(!events.some(e=>e.reason==='kubernetes_unavailable'));
+  assert(f.calls().every(c=>c.includes('get')||c.includes('port-forward')));
+ }finally{await f.close();}
+});
+
+test('unhealthy still-running owned forward records outage before replacement',async()=>{
+ const f=await fixture();try{await ready(f.s);const old=f.s.child,verify=f.s.verifyLocal.bind(f.s);f.s.verifyLocal=async()=>false;f.clock(f.t+16000);const reconnecting=await f.s.tick();assert.equal(reconnecting.reason,'forward_started');assert.equal(reconnecting.outageAt,new Date(f.t+16000).toISOString());assert.notEqual(f.s.child,old);assert(old.exitCode!==null||old.signalCode!==null);f.s.verifyLocal=verify;f.clock(f.t+18000);const recovered=await ready(f.s);assert.equal(recovered.lastOutageAt,new Date(f.t+16000).toISOString());assert.equal(recovered.reconnectedAt,new Date(f.t+18000).toISOString());}finally{await f.close();}
+});

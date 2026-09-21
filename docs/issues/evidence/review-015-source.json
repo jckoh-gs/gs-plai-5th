@@ -1,0 +1,12 @@
+{
+  "reviewedAt": "2026-09-21T11:18:27.139184+00:00",
+  "commit": "a0ffbc16087af529edb588c2342f261cc941742e",
+  "workingTree": true,
+  "files": {
+    "scripts/connection-supervisor.mjs": "42e5b38fba4d274e804ca87d1a7d4c1410803052ae1cc864d39256e601d4cd40",
+    "tests/supervisor.test.js": "7a946287538440b401137942512b21c973284292a18117d4ed019c4a34ed6399",
+    "docs/issues/evidence/review-015-supervisor.log": "3a9eb1d90d55d62e18a8350313ee7dc1df96a96242cd05f1100f80368ed933a5",
+    "docs/issues/evidence/review-015-supervisor-rerun.log": "9424316edd09a2c7548f1fb6788e4664360493fcc4f8519c02decf9d655ee613",
+    "artifacts/checkpoints/reconnect-20260921T1116/summary.json": "9cb0d30103733a000c1841b2d2c7bc7e15c289ea233a749b15667833ddd68a29"
+  }
+}

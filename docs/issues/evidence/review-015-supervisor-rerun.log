@@ -1,0 +1,17 @@
+✔ controlled kubectl outage retries with cap and recovers read-only with exact image/auth (717.877208ms)
+✔ wrong remote image blocks forwarding and does not replay writes (373.820584ms)
+✔ occupied unrelated ports are neither killed nor replaced (372.91875ms)
+✔ existing healthy external forward survives supervisor freeze, deadline and stop (401.741625ms)
+✔ singleton excludes same-process duplicate, replaces verified stale PID identity, refuses incomplete lock (14.722667ms)
+✔ invalid startup configuration fails closed and does not spawn commands (5.239708ms)
+✔ deadline stops only owned forward; expected-image update is revalidated (573.653667ms)
+✔ local-only owned forward loss records a new outage and recovery without remote failure (544.8915ms)
+✔ unhealthy still-running owned forward records outage before replacement (596.77ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4652.607625

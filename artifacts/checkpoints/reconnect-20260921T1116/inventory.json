@@ -1,0 +1,22 @@
+{
+  "createdAt": "2026-09-21T11:21:59.185799+00:00",
+  "scope": "Two distinct incidents: actual automatic recovery, followed by planned diagnostic supervisor replacement",
+  "files": {
+    "README.md": "2487c01a15112d7ac9502f1d0da78a9b662272c3ed2b0f257f176b115223631d",
+    "handoff-events.jsonl": "4999f8e52487d5af6ba47f0bdfa36d10d9a85c84ee903285477a2611c05c735a",
+    "handoff-plan.json": "1c6a305bf46f0b2cbbb5afb5e9a3d330892445e231f74fa8a6b123aa07f3244f",
+    "handoff-result.json": "20daeaeb3865fdeccfa8748cac472f01eaf60d75bf44e1dc325d7086412303c0",
+    "pod-after.json": "dc5c25fb50d943b6755d9f7afed7ad21241b2d99765a11ae9c7e1d64bdb05bcf",
+    "primary-after-handoff.json": "f1578df0b13994fbeb156e02b71bd2f094354b48dd9c9e51e3518176f91899c9",
+    "primary-observations.jsonl": "f6cfaf38cbb86c25d95ce45c92d141124eeef457d9481ef6a281ed2fc39b4d1f",
+    "resume-after-handoff.json": "1322d7de309810498e25a267e46c160774affad420f6b4671019cca447d7d213",
+    "resume-after.json": "4be4800b7bef7129ad2c8305b01d09590bdb5184dc96d4107bfab4c8aed94bd4",
+    "rtu-after-handoff.json": "31298cee49a6cb666811cf956bfc004aa77db3cbee194dd769c96372a8f3b480",
+    "rtu-observations.jsonl": "5e2bfe887319c6add424ac3c23cc83809c5e859cb0a3f9bae10e397678f883c8",
+    "summary.json": "9cb0d30103733a000c1841b2d2c7bc7e15c289ea233a749b15667833ddd68a29",
+    "supervisor-events.jsonl": "a56f1475a0112fb92bc8bc5e0d84b2f510497a118eb5898f349470fe779c0181",
+    "supervisor-source-before.mjs": "fdfcd3ffc32662bb10fb6b4203f5d966e100fe636955ee049d701f76f7ff35d7",
+    "supervisor-status-after-handoff.json": "32ebe250337f522c528123efbd912b145ace33f11ec9f92ab4dd2cbec93f51c3",
+    "supervisor-status-before-handoff.json": "d459126410c47da1d01e42274d269238377db67b1f6cb9af58ee4acff809bf2c"
+  }
+}
