@@ -1,0 +1,1420 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-21T09:38:45.552Z",
+  "runId": "grid-new-20260921T080733Z",
+  "runtimeIdentity": {
+    "commit": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
+    "hashes": {
+      "Dockerfile": "40215ecad1bcb0aec7d6a20e56b65b5827073edaf0cc3b86dc0bc988fdaba52d",
+      "package.json": "1a33aff2ad4efb3e8cd0e46c424fff617db0017eef144dfc9a2cf0028264a9ac",
+      "package-lock.json": "e53726d00e834fa0ecde679ecb64677a4ff7df496ddfb00b1a75dd011a131c32",
+      "vite.config.js": "5b763ed5e4665084db571cf0b3c8016b1759096aac4b347bd396b40291770f4d",
+      "docs/protocol.md": "48b04a8690ca86b1024265090550f96507e625e578102b81a64ca54ce3f577c6",
+      "scripts/vpp-client.js": "762cb18072e5db77b48199681a266b520ee08b12986efd8795356e4b877911cd",
+      "scripts/client-message.js": "b50665fcb86de98866bca6447a6459fdf81610e9c2aef77e9db6b61772dc61d3",
+      "server/config.js": "9ed29685b837bb4da146792723bd4edd9cf4874a8a31e3da75f4f8027bcedac6",
+      "server/control.js": "ceabb746658b7bb3af35b767457ea81129da1ddf4f142850dc11a4fff467b9ac",
+      "server/dataset-preview.js": "9732f5fcc73000494fe4138ff1116ed94f03474c713438901eb225368a194443",
+      "server/index.js": "205344dc62174c3a2302731812c307b65da658fcecd34f0c3bcb2c01999aedb0",
+      "server/metrics.js": "590169fdfc7431bb07cf7df957ae969cdf707244b809a1d7c1c8e6d642f9f817",
+      "server/model.js": "875d936b0038ef5a9bd3c678a50dafdd8d33c7c0f8c60eba0316def51e95ba67",
+      "server/store.js": "5b497e48f84e0a918a6d565e5dc9c741c4e68fc69c8141d813e7921e96a73969",
+      "server/transport.js": "90c33b2c5b7eff62ffb6c2c2dc8a6a659b9ab6e770119eadc862f3094431d29a",
+      "server/weather.js": "4d10a10957053d68f22349021b358a1d730622a457b824e26521723f0fea64d9",
+      "web/Scene.jsx": "216b34bc71d2a554e953b4ef3999418e42432505c877c91b42fa97df5a5be50f",
+      "web/index.html": "133010db1198097f8d34a6cc3e33c1fb500b6ca12f8dde027893e927256e3766",
+      "web/src.jsx": "11bcd243cfc013505e547e4cc8614f0a115d41f7dc49177576feb11217858561",
+      "web/style.css": "7c13fc7ce6984db618b4a3dc6b85513cb514c8dc2399c06c0a2763cd5291c17e",
+      "samples/hybrid.csv": "c400918bb97a7fd173e2401f88db04cbb3edcfd9f62bb9c603a62d3527bf12bb",
+      "samples/solar.csv": "ca636abde604fef9efa9ef005baefdddc2faf82bfa41be1b573d2b4d514114b4",
+      "samples/wind.csv": "9003d6a7cec7ab4bc029a8aa02085a3c6e6c8aeb7da5004a012b6037e90d2891"
+    },
+    "meaning": "Runnable app source, independently matched to deployed build commit"
+  },
+  "productVersion": "1.1.0",
+  "contractVersion": 2,
+  "source": {
+    "commit": "2cb15d5e2455ea1e797e52bc4463b55e3c08d59c",
+    "workingTreeStatus": "?? artifacts/releases/current.json\n?? deploy/verification/candidate-1197ab5/",
+    "hashes": {
+      "Dockerfile": "40215ecad1bcb0aec7d6a20e56b65b5827073edaf0cc3b86dc0bc988fdaba52d",
+      "deploy/Dockerfile.alpine-candidate": "43d16732f5ab0de18cdc9cbc0ebf0e7a855fc394654397eb548147e1646205d3",
+      "deploy/Dockerfile.mqtt": "bcdc832570dc4ada44e9a174960eb5b8a7687f39eb78b285804163989d186b84",
+      "deploy/README.md": "d3a397adf87e7c182f30f3408f8d22c11bbf541b0e6dca430e7bc335a1c1bd13",
+      "deploy/acl": "7d5b87f9863f37fcb8e3410607352942335b0d49f778472a820055e8d590be7d",
+      "deploy/app.yaml": "d9ca3bdc1ea65942c381457c479659ef254e173d5dd5ee9730a075712ab43222",
+      "deploy/mosquitto.conf": "8f320124ad4cc057c6a7b328122af4db4fcf288fb46074ed3e60442bde815f0c",
+      "deploy/registry-bootstrap.yaml": "243552ab4e9f31f3061cfa64818794a6ca7aca34f33777976a6fbb09a93e472f",
+      "deploy/registry-prepull.yaml": "537a8503f6f11e10b90e70ba162707d32a06e5ba06ecfe9153566f0e2dc6a8ff",
+      "deploy/registry-source/Dockerfile": "618fc2237355eee0e991588ad9c38a2346ae02c0e7a3afa0909abbf4f5c0caa7",
+      "deploy/registry-source/README.md": "8571c049e5fbf915d7600a80892e4ccf6a323b17cd2eeaa1ef840b9d246acf81",
+      "deploy/registry-source/compatibility-upgrades.txt": "5b8f76712ac79095dbd91cea628e1a40b4620df6ab6eaaa204d321a460d42690",
+      "deploy/registry-source/config.yml": "c684e792b4340e77c8dc3a265e57caed4f251764007ff96c1fdc2e9f87c147ad",
+      "deploy/registry-source/healthcheck.go": "445e059ae5b5ed26d4aab581fab8af48bc03bcb3395e0ff037e40f8b5f54bc92",
+      "deploy/registry-source/lock/go.mod": "11bc4784cb53b05973b33c6d10333c22937fc1049d1d7fbbb4a1e115d7cbc093",
+      "deploy/registry-source/lock/go.sum": "d32f5b59bcc497ee3dc7e4052258f56ceb2364bb8f056ea6351aba5f4a166eea",
+      "deploy/registry-source/security-upgrades.txt": "6278e6d1321cdb95372d719a27ce8d60fe6f95da76bd2a96bed221b1909d6a1d",
+      "deploy/registry.yaml": "eaa1c6601780cf2293132194ef28150ec075d52b3c47fccd60c4737b3a0f06d7",
+      "docs/protocol.md": "48b04a8690ca86b1024265090550f96507e625e578102b81a64ca54ce3f577c6",
+      "package-lock.json": "e53726d00e834fa0ecde679ecb64677a4ff7df496ddfb00b1a75dd011a131c32",
+      "package.json": "1a33aff2ad4efb3e8cd0e46c424fff617db0017eef144dfc9a2cf0028264a9ac",
+      "samples/hybrid.csv": "c400918bb97a7fd173e2401f88db04cbb3edcfd9f62bb9c603a62d3527bf12bb",
+      "samples/solar.csv": "ca636abde604fef9efa9ef005baefdddc2faf82bfa41be1b573d2b4d514114b4",
+      "samples/wind.csv": "9003d6a7cec7ab4bc029a8aa02085a3c6e6c8aeb7da5004a012b6037e90d2891",
+      "scripts/advanced-integration.js": "30c784aef4658efed48c6f409d6c881d0c09ae410162e0121fb0a6997bad6e32",
+      "scripts/api-boundaries.mjs": "57918b838c2ff1b5d7ea879a9432be7d7c26cf53e2a8859e3d0f0c524188bdb5",
+      "scripts/backup.js": "4ade4999fd0e249ca5599201ecd3ff6d6604e1927d465c2d6f743fd3fc977e9e",
+      "scripts/browser-check.cjs": "245f310ed52a829d09f4a85c64295b3ceb2464504fdf995a6d2bff93027d1212",
+      "scripts/browser-flows.cjs": "c96feb10183fd64cc3c8eb7a302583cbaf6d9fd892608b90e3dfbda0fb07d4ad",
+      "scripts/browser-guide-log.cjs": "f58a2b53be7449ac2069c2aa1c76d8e01c1803138886cc224e391e6803f9409d",
+      "scripts/browser-large.cjs": "3c34f6f9c0c107345dc878e575c8f4c84c0908c30d75344bf99a76113418bd7d",
+      "scripts/browser-preview-race.cjs": "2ce1248a8685c5d840dcf75f7ebda35f70e1a30f2f4f66a9cbda1a7c37224d56",
+      "scripts/client-message.js": "b50665fcb86de98866bca6447a6459fdf81610e9c2aef77e9db6b61772dc61d3",
+      "scripts/client-security-integration.js": "0e2dbf52f90f55b05cf4b397aa1be5aaf746389998180462d977e4629b3c29ee",
+      "scripts/crash-integration.js": "3a5ca553db09ff40b960cfd0a4b868c64d2921d419e958451f0eb2c2120c86d9",
+      "scripts/deploy-bootstrap.sh": "db8edd1937eaf31958f71a7408f89a97eb101d8db2b0f753349f025f52082459",
+      "scripts/deploy-image.sh": "63a7619fc8ee2f581cf03663d8ea2b245ad9e66fd603b7cd7456df901cff46da",
+      "scripts/deploy-restore-rig.py": "92fe467b57d4abd296824798d11b2d2362a7904afa9fda78a801d583f18091f7",
+      "scripts/deploy-security-check.mjs": "a6f4fe4548fb39a4d9f7574f0134d6a36bdc16a02f0807abb373414b423d05da",
+      "scripts/generate-samples.js": "072607d2c3cdf1c310e730da6e910ad87cc6381888e04f1fdc9a793fc8a450fe",
+      "scripts/integration.js": "ebc040c24a5ff344e1b590ff56869609dd56e5c7385543ff8329e8d8298fc1f4",
+      "scripts/media/build-deck.mjs": "811ad965146d3145f6682b40ade89daa5ab893593fd9f58682b3e15ffd2cb89d",
+      "scripts/media/deck-template.json": "9687e368bb78003edf4bbcae7345c36c09547fe6a50532b51f3a0e3d9294da26",
+      "scripts/media/final-input-template.json": "e5777db6a7d4586d7440c8cbf1bbeef632667eb3ff9ff41170ff79d47b37e578",
+      "scripts/media/prepare-final-scenes.cjs": "9851167735349d4a87c8622c38268d2d8fb19377229c9d58d6c71b1af1bf597a",
+      "scripts/media/prepare-rehearsal.cjs": "830f3398871b763e44cfaf3ccb68845ef01644511d004ce735c05ea806797f6a",
+      "scripts/media/presentation-pilot.mjs": "0a7747f735ef5594b62b2909f8e2006329e39f6cecd3e0022bbff33c3770a7a5",
+      "scripts/media/record-demo.cjs": "0a507043b58c8687b145924018c1cca45faba040b20df65c2df0394341143256",
+      "scripts/media/scene-plan.cjs": "4a99a43ccbb7657ca80706edc50970889fa47e67eba83ed95e29df981d8b32b1",
+      "scripts/media/scenes-template.json": "11e644b3f2dc1576e358fd7b14f975c77f21a656688e9b50b10cb1ac2e969ea0",
+      "scripts/media/video-pilot.cjs": "d2457e54aa0c98c5e5fd2b8f30073021c50326600c31a6595eafd1879c6d405d",
+      "scripts/oci-push.py": "6f2e9637ac4c4e223ecd75331036f85b3548668e781663533ee23d50a8ad5f36",
+      "scripts/pod-identity.mjs": "2e985af6a16219e34d39c11dd6c78eed6e62cdd161c1b13515e6252176b2a3e8",
+      "scripts/registry-security-integration.py": "a9790debce4d054e06fa950568b7aaa3b67b590601c02d9a9df7c4a9e5d093b4",
+      "scripts/release-manifest.js": "58f642e69b7dd3048f731d27d78e9a5584e64c71579114f9da802e07463b9f72",
+      "scripts/remote-backup.mjs": "cde2357ec7d953629fec5c810ded0eadd7dc875041d99cb10836da7799d09ac0",
+      "scripts/remote-integration.mjs": "8876933098813ee9ed15873b6bc459133f63aaa1d1dc818f9e447d1cb4bdf4c2",
+      "scripts/remote-outbox-restart.mjs": "2ef55e17adb424c25203730af6979aa87149e4de3a674b2db6262ee947b7b3bf",
+      "scripts/remote-preview.mjs": "5c0659bd87b53e791f191c541812615c19d297723a05f8f24c9346891d5c3e0b",
+      "scripts/remote-restore-check.mjs": "bba0d0b51fc2db6a18f4a81432b8877aead870d774a3d0a23a4b83c5fc7bde25",
+      "scripts/report-integration.js": "d9e293f159144c5d79300530333024451389607340dddaf6e78f14bdbe16862a",
+      "scripts/report-timeout-integration.js": "dae2cc144048dced7ed2e78f7b159d480d8f85eb14f17ab758c074b8f2ec89ef",
+      "scripts/restore-integration.js": "e8d6447a6a7b4d262504855ff4925ef69dd7b576a02ad80f9dea072faf357110",
+      "scripts/review-control-integration.js": "963470b166705690b36b87e1e47d184b46ea92002cb944342ff548e84cbac228",
+      "scripts/review-process-restart.js": "e8f10a26eb4790a54d01fe2637c4643065b9195307fd2ef99aac5ee1ed3d6974",
+      "scripts/review-scenario-integration.js": "c16b2a3e810848bd3013aef7aec5d7d3782a74c808382a774e6a6a0b6a132c08",
+      "scripts/security-live-review.py": "837b0f602710dfe96534bc424b36b54e1461addc62e28d49e3e743567bdc0b13",
+      "scripts/security-lwt-integration.js": "c93b61f36462e5e0d54f54ca58e605efee2d9ebf4c0d3ec972282a7eb023d898",
+      "scripts/security-network-probe.py": "eea3b18f4b979303ec4515b8d92b8f6cf9b2056685791c7ae78e592292335048",
+      "scripts/sixty-second-integration.js": "a8de74104aea22baf01954e3695195f67c7ac24439a6a725457550686e757a93",
+      "scripts/soak-monitor.mjs": "ca55fef52f9e603ecb035772fc8657e6d1de3041680c5ef779571943d48d8c06",
+      "scripts/test-harness.js": "6738f8c6e844f59c555fb06acb3137fb4e49ff9182b64ae93050e06b3ab6eac0",
+      "scripts/verify-release.mjs": "ff2680854a6294da8d1eb079ec6ed4612011ac62041d73df4dfa0b5d90be229e",
+      "scripts/vpp-client.js": "762cb18072e5db77b48199681a266b520ee08b12986efd8795356e4b877911cd",
+      "scripts/weather-timeout-integration.mjs": "13dd9961dd3a2e52dd7cc91312287b8b0a9d127e4ddcfc89fc7e24d739729aaf",
+      "server/config.js": "9ed29685b837bb4da146792723bd4edd9cf4874a8a31e3da75f4f8027bcedac6",
+      "server/control.js": "ceabb746658b7bb3af35b767457ea81129da1ddf4f142850dc11a4fff467b9ac",
+      "server/dataset-preview.js": "9732f5fcc73000494fe4138ff1116ed94f03474c713438901eb225368a194443",
+      "server/index.js": "205344dc62174c3a2302731812c307b65da658fcecd34f0c3bcb2c01999aedb0",
+      "server/metrics.js": "590169fdfc7431bb07cf7df957ae969cdf707244b809a1d7c1c8e6d642f9f817",
+      "server/model.js": "875d936b0038ef5a9bd3c678a50dafdd8d33c7c0f8c60eba0316def51e95ba67",
+      "server/store.js": "5b497e48f84e0a918a6d565e5dc9c741c4e68fc69c8141d813e7921e96a73969",
+      "server/transport.js": "90c33b2c5b7eff62ffb6c2c2dc8a6a659b9ab6e770119eadc862f3094431d29a",
+      "server/weather.js": "4d10a10957053d68f22349021b358a1d730622a457b824e26521723f0fea64d9",
+      "tests/client-security.test.js": "a0a3d14bcc4e864e604c0779474ddd8cf45091d4e756ce87ce5c83ca20af9508",
+      "tests/config.test.js": "bd526858b4506ad8d263243e24ad4d7a256119e6a794ff7cd0d588b02a16f184",
+      "tests/control-model-boundary.test.js": "121a4096514ec7e82b8d208c9d61734846137720e257d10fed637fe76d8dbf92",
+      "tests/control.test.js": "c2b455ef6d44d61fb75ad59f03eca78b875b64af494cbd7a9a1c5d896b95e6df",
+      "tests/dataset-preview-security.test.js": "331c0e87bd7d99aff9b72cce72940ae32ca482bbb25ddfe2a44c23f4b450dd9f",
+      "tests/dataset-preview.test.js": "47d2175446c81b873ed7737f8bdf1891e8fb396c5b403eba39328203e9ddb57e",
+      "tests/fixtures/user-wind-55.tsv": "fc158138224b395a1a2da15721323f557985f3b4ca6920a87f81595315bcfec4",
+      "tests/metrics.test.js": "e55bb64b6eaf544b88ceb71cf414e30481dc738d2d2077fc6b95e58878d95b3e",
+      "tests/model.test.js": "ce0b9629d5fa3f7e66ba11695faa54459fcd69c40ea840223a157c8ad2a323fb",
+      "tests/review-control.test.js": "7bd1d3cf301aaf4e9a0cef730a69cc7ef20d99995fe5ef6d772f25042a9e875c",
+      "tests/review-pod-identity.test.js": "2b29e2c422ee91d06060876c93d30a8d0dbc9140963907da8c37c0245d543630",
+      "tests/review-preview.test.js": "d9a728fa7e7e12022fa4198c7eba0ee5dfb26ae6914bb71b84fd1d40469cc65c",
+      "tests/review-regressions.test.js": "1879b71013a304604383387daf73aa60b5ccf18074c780e0f6e22e1ef48c1fb4",
+      "tests/review-retention.test.js": "ea7d9d96ec37f5a0ccc0dda6a53238e5363db743ca67eea47f9f2d6e2dfa0bc0",
+      "tests/security-device-config.test.js": "aa2cb9f2b1682fbc7b6d1ae68a2daddd2cc5f1539adab05eadb0d9548470eb33",
+      "tests/security-runtime.test.js": "8a162dc12195530053b8af2e38c94a0fe0a269a01ac43583d8a1c6abb597c755",
+      "tests/store.test.js": "bf4fac2f6b0d9bd1d6f5abf0fa6f81eab5b289f7dbf45c30b02b480e62ea1dbe",
+      "tests/transport-errors.test.js": "203cbe37a2d73d1b6caa3f93437f4e93661953320d07b669383e7eb64c5e4ad2",
+      "tests/transport.test.js": "c01531d46197f283a7798acd7da62e2a9123ad1a56d5579e6bda6764866bbdde",
+      "tests/user-data.test.js": "8029d71e2fc0c9310522efe4728d457a3a92269d0cb10f7ba4fa24a0bf2c6fe5",
+      "tests/weather.test.js": "9e41d7d02539da6a731a3e0ef80f1caa5d4ff9babbfe9bdd42e3458d0ccbb706",
+      "vite.config.js": "5b763ed5e4665084db571cf0b3c8016b1759096aac4b347bd396b40291770f4d",
+      "web/QA.md": "1e6c688a13fa8a3565e5fedbf8ff89e59a84cb345f23ec49597d5ef485084ab7",
+      "web/Scene.jsx": "216b34bc71d2a554e953b4ef3999418e42432505c877c91b42fa97df5a5be50f",
+      "web/index.html": "133010db1198097f8d34a6cc3e33c1fb500b6ca12f8dde027893e927256e3766",
+      "web/src.jsx": "11bcd243cfc013505e547e4cc8614f0a115d41f7dc49177576feb11217858561",
+      "web/style.css": "7c13fc7ce6984db618b4a3dc6b85513cb514c8dc2399c06c0a2763cd5291c17e"
+    }
+  },
+  "prd": {
+    "path": "docs/PRD-VPP-SCADA-RTU.md",
+    "sha256": "ffacf210f61f55353ce846205bb0c2ecce8a9793f54ced757a787c28a8b122ba"
+  },
+  "deployment": {
+    "observedAt": "2026-09-21T09:38:20.985434+00:00",
+    "status": "functional acceptance and isolated recovery verified; final media/time gates pending",
+    "sourceCommit": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
+    "prdVersion": "1.8",
+    "context": "charles-k3s",
+    "namespace": "gs-plai-5h",
+    "appImage": "127.0.0.1:15050/grid@sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420",
+    "brokerImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+    "registryImage": "127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c",
+    "uiTunnel": "http://127.0.0.1:3104",
+    "mqttTunnel": "mqtt://127.0.0.1:18884",
+    "appPVC": "grid-data",
+    "brokerPVC": "grid-mqtt-data",
+    "recoveryReplicas": 0,
+    "name": "grid",
+    "mqttImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+    "productVersion": "1.1.0"
+  },
+  "backup": {
+    "result": "PASS",
+    "capturedAt": "2026-09-21T09:31:55.443Z",
+    "verifiedAt": "2026-09-21T09:32:05.529Z",
+    "sourceCommit": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
+    "appImage": "127.0.0.1:15050/grid@sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420",
+    "remotePath": "/data/stable-8599ab9-20260921T093154817Z.sqlite",
+    "localPath": "artifacts/private/backups/stable-8599ab9-20260921T093154817Z.sqlite",
+    "bytes": 105144320,
+    "sha256": "29071fdc6a800e7b173aeaa49c45a6f4f83b0dacbaf5e6594f1ea66864c21879",
+    "compressedBytes": 3547160,
+    "verifiedChunks": 14,
+    "integrity": "ok",
+    "plants": 5,
+    "pending": 0,
+    "method": "online node:sqlite backup; gzip chunk+whole SHA256 verification; private0600 copy"
+  },
+  "evidence": [
+    {
+      "path": "artifacts/checkpoints/advanced-first.log",
+      "sha256": "16e00873b3aedd92f275a8d8b2869be22384de07da2d057e25a7a5e3f2b8afba",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/alpine-advanced.log",
+      "sha256": "f831b9d4e7697d3ccfc757da407992d9cfe106c356d0d82d815dd8d86c42e106",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/alpine-crash.log",
+      "sha256": "45c5574428bf7499b60cd99affe59fa1f3287656336fc63d515fdd07a1ab98b7",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/alpine-integration.log",
+      "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/alpine-restore.log",
+      "sha256": "61cc0572c8192be6b01906b302d555afc2e7694a08bd3924ac03afd6d8853eab",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/alpine-unit.log",
+      "sha256": "8afbcbd32791b41cd0a39498bdd1185b1038f2883c6f090f912f28de44a63c0a",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/api-boundaries-round2.log",
+      "sha256": "b075ad986603a94f4f5c317a06988cd3a608e8b28f12b30fc792a754ba3696e5",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/api-boundaries.log",
+      "sha256": "0fc5d731a2919c40bc3996b03335af0daf84c7b1857b68037d0202e9994362f3",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/browser-auth/result.json",
+      "sha256": "a2eeb6513112ca0bab3f4a12561531b05ed2d77bef9914180d712a8f7fc88fb0",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/browser-auth-round2.log",
+      "sha256": "992be332020d6f360098566ea88472acfc725ae154655162bbd50d51c7f06f92",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/browser-auth.log",
+      "sha256": "c23523325d0532afc3eac30c983d8d84e37b7b29491aa19fffe3321c0cba2e6c",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/browser-flows/controls-stages.json",
+      "sha256": "df1f3f67e36d6a270cb5fc23851fb711420c9ef13e254a0ac9f1d904f9b1807d",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/browser-flows/remote-api.json",
+      "sha256": "4a977f7de78321c4adcba4e4a388ca2e180c499aee384cd4d34fff96c300efb6",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/browser-flows/result.json",
+      "sha256": "ea39cf54c2340c0379bd676608e3b2b7499df1cee2ef2928f005dd2d2878a493",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/browser-flows/review004-ui.json",
+      "sha256": "9e2cc2139083ab4e4aeae8bba5f3ec5d633c89d158054e8c5e0b3866b08cb0b8",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/browser-large/result.json",
+      "sha256": "7be4e18a949e612e5bfebb8cf0e130f5c01405090ddf4ac9f0c62517da28ddd5",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/browser-large.log",
+      "sha256": "9f07f00310843c9dfd3bd84996d82c07024164261d30f69e5327f64436c21671",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/browser-stream-boundaries/result.json",
+      "sha256": "79109b71c20dc8acec380a5b9e6c4f4713f9a72d5e2d22e3eab2bd95cbc6c461",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/browser-stream-boundaries.log",
+      "sha256": "3fa21296d07c4b5f6fa403f62192c5392e72c6a512f024904e07013fd46f9cf2",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/build-round1.log",
+      "sha256": "e499f99f8454aef350b2c8e056b50bd4d6b3da81fe67a91144f4972ab41ba292",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/build-round3.log",
+      "sha256": "cea24d018a6ad5fcac633e4261419f56e1fe0b2ab7fda732ce650c7efb4cac91",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/crash-first.log",
+      "sha256": "45c5574428bf7499b60cd99affe59fa1f3287656336fc63d515fdd07a1ab98b7",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/final-af7f223-advanced.log",
+      "sha256": "b8bda2433b04be29fb6fb8701807b62037ab481bfee07da478a823426c8aed3c",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/final-af7f223-integration.log",
+      "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/final-af7f223-unit.log",
+      "sha256": "a2f84c72c89e13607a0d32ad4f166c5a0d75baf18a2aa76ae473e5406a3aa08c",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/integration-first.log",
+      "sha256": "050b1cb910f4ce37603cd109088eb9ea232b780200b36d299cac8843f0b3811f",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/integration-round3.log",
+      "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/npm-audit-initial.json",
+      "sha256": "b23916e775cad347bc3254955b7f62af03d4067958b0e577a26be1b67e475024",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/pre-1.1.0-backup.log",
+      "sha256": "7d30b8b43a8c58bee648facd432d854a344e9f36b3401dbb87c6bf03a53098bb",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/preview-1.1.0-build.log",
+      "sha256": "a100dc55058feee867b371355f965df198b3dba14f1592dd541383de4ba83784",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/preview-1.1.0-integration.log",
+      "sha256": "57db60bb6ebf55903b3e93a01d23ec9171ce7b9b20029a24153477027b292a47",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/preview-1.1.0-unit.log",
+      "sha256": "18c9e7ce8b08210382fbdce966cc77032e4561a6e93a77e20bd6ab1d6ff0eeab",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/preview-browser/race.json",
+      "sha256": "2f31432dfefbbad77cb10c90d477f12879bb8206a15c886f6984e0b6c1cc185f",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/process-metrics-round2.log",
+      "sha256": "369e55861fdf66c6009506ed5e79387345f90bb58158ff4f13e4f968a71f9224",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/report-first.log",
+      "sha256": "0bdf352f86d888540539cb317960c4396efff8ca8419c96327dfee0da6b35811",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/report-round2.log",
+      "sha256": "87b81efba03df43a87093cb3d9818e7d914ed93f573fad69e2f5aa3db5f2be7e",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/report-timeout-first.log",
+      "sha256": "afb6b4d8242880e50ff318e4f40c482ed7eb5b80e15071015e91995f0c62ee0d",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/restore-first.log",
+      "sha256": "f3e8bc67d5a9a2ea94bc0c9584201be00434c3e0e4a424a0c5ed9bf6c7deb772",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/restore-round3.log",
+      "sha256": "771ea22f5fdec61a05fab176519431a674db935f2357bbadd807516efc285659",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/restored-browser/result.json",
+      "sha256": "fa49a395097d93b953a4658c7525f09cda46e89d04338a81c98767a92299efac",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/sixty-second-first.log",
+      "sha256": "0660a7416c459b60a0f417455af500204eb9750a4f41096d0e0abd23e60d3845",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/soak-1.0.0/observations.jsonl",
+      "sha256": "72bec52e3937103d55e320dace68471465a9c903a5e492e5063f9de5ff767ddd",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/soak-1.0.0/session-4bbd4006-2201-45ac-b736-045f885458c0.json",
+      "sha256": "7f6319a891676e3eb83fbc04de4b186cc24bab9e6ff06eff36859fac518ce67d",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/soak-pilot/latest.json",
+      "sha256": "dfe797e93d4b78342923453f635196e6f1cea54b0da7a4f3fa15a9216f638d27",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/soak-pilot/observations.jsonl",
+      "sha256": "92b12dff92094ed9e90e05a0c646d678375fb6a42b6223656aacb2612e0ec8bd",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/soak-pilot/session-35c7b466-ef80-43ef-a6e5-ad48bb00273b.json",
+      "sha256": "f1cc48af97852920035cbf6fbb184ceb4b2bcde56f1d6331a1deaf77cf83a4ad",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/soak-pilot.log",
+      "sha256": "385f67a719a950d73e3fc99fc15ae997aeaa07345027b1f1e318f48ddc0ad178",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/stable-8599ab9-backup.log",
+      "sha256": "7bf81be2dd38dcf5a6c16658bd8f8b420d4fe2915c0bd62e21db17c7c791c29c",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/streaming-backup-8599ab9.log",
+      "sha256": "996901b6ead3c4c123e34a3a4f40e66230d57a59c9eaf66bab98550d61e9e222",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/unit-round1.log",
+      "sha256": "5e4ba0688fba7315d2449906057567c0a4c4fdd938b9e0ec7128f2675928185d",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/unit-round2.log",
+      "sha256": "3718253695b1d325406fb93991f93f02c1d63eba422073374a40d2fb9048cd52",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/unit-round3.log",
+      "sha256": "f76cddf97029f0435dc4b82b0213e7314a44a964c966fba927f623e583046714",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/unit-round4.log",
+      "sha256": "9e011ed2d91b2978d2fde772260bd02ef240dfbbd5f1a87cb00d098fb0fe6fb4",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/unit-round5.log",
+      "sha256": "7c4efe831b278d0445dfbd1f29227fb86438cd868b247372005b3cb5a12568a5",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "artifacts/checkpoints/weather-timeout.log",
+      "sha256": "0d48bebaa5c2b5744d57bba2b553711f154b4f6b6275d71625014dfc805b3a47",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/browser/result.json",
+      "sha256": "a2eeb6513112ca0bab3f4a12561531b05ed2d77bef9914180d712a8f7fc88fb0",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/browser-round2/result.json",
+      "sha256": "5e8e5af794ea6b01a9d3ab2eb867a9fa95b7c3215ab2f53d1edc46888453574c",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/browser-round2.log",
+      "sha256": "9c9f1bad969e6881bd0358f14370cc5becd836ddc958499c724ca3b97599685d",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/browser.log",
+      "sha256": "992be332020d6f360098566ea88472acfc725ae154655162bbd50d51c7f06f92",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/advanced.log",
+      "sha256": "b8bda2433b04be29fb6fb8701807b62037ab481bfee07da478a823426c8aed3c",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/broker.log",
+      "sha256": "3a37034d0ea09eb5dbefb5bd625aeee2ae92bf5018ac41d4677f3324a8fc8543",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/browser/result.json",
+      "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/browser-preview/race.json",
+      "sha256": "2f31432dfefbbad77cb10c90d477f12879bb8206a15c886f6984e0b6c1cc185f",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/build.log",
+      "sha256": "0463c8b0035de23b9e39284744fcafdf7b3ffe8d1b183913b8814245dde5ac5f",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/deployed-k3s.json",
+      "sha256": "e8e1198eab0acb2aef69b9841c883827d074f6eb696446058351e8a4de493bb7",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
+      "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/integration.log",
+      "sha256": "7a9448e2ff49f2a7981cc6db44f05099878ddf201a9a6d554f12abf74bed918c",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/outbox-restart.json",
+      "sha256": "745dce80fb3d44394a5722018c58d83b4a33c23e97b0e92f1a92287764b35218",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/outbox-restart.log",
+      "sha256": "745dce80fb3d44394a5722018c58d83b4a33c23e97b0e92f1a92287764b35218",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/provenance.json",
+      "sha256": "6a472fce5d31942b4efd3f3d5fe8abc9aefab35061b9a227b2f750da66278715",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/push.log",
+      "sha256": "bab021e0c26574d637c020dda6b9b6715072cc289dee83c43d4c78fa65cea02d",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/remote-mqtt.json",
+      "sha256": "8aab8e7db7eddf70d8fe38c10187d13f2122c93edd7d83275ddb606dde41244b",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/remote-mqtt.log",
+      "sha256": "8aab8e7db7eddf70d8fe38c10187d13f2122c93edd7d83275ddb606dde41244b",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/remote-preview.log",
+      "sha256": "d526b1be7446231278e9584f79345b6aa2b72c3582a12ec9057191e97ce0903d",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-1.1-browser/result.json",
+      "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-1.1-browser.log",
+      "sha256": "8624b3c66c0ee836ea10107c924d22db2808c87ddb0d62cd3a1bde820542c006",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-1.1-data.json",
+      "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-1.1-data.log",
+      "sha256": "1332c250b6ebb407bf627542e33a82e5ef7e3b63c4be0b9f1f0c58d384c4fd72",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-1.1-mqtt.json",
+      "sha256": "4a9454f84f0fc96d4f4de78120961972a935ce7114d03c29e23535cb2e8eac7b",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-1.1-mqtt.log",
+      "sha256": "4a9454f84f0fc96d4f4de78120961972a935ce7114d03c29e23535cb2e8eac7b",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-1.1-preview.json",
+      "sha256": "5b2c8b3125e9ecfaaed36b84d249dbbc933f1ad035c8f68833ac7c41d56b2168",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-1.1-preview.log",
+      "sha256": "345ef274895f513be96e28a4462da38dea859212c8d8460569c7f0af89987f8d",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-backward-browser/result.json",
+      "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-backward-browser.log",
+      "sha256": "8624b3c66c0ee836ea10107c924d22db2808c87ddb0d62cd3a1bde820542c006",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-backward-data.json",
+      "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-backward-data.log",
+      "sha256": "1332c250b6ebb407bf627542e33a82e5ef7e3b63c4be0b9f1f0c58d384c4fd72",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-backward-mqtt.json",
+      "sha256": "7f250025d9f3b7173569c657080bf8dc05a6c80a717f7c1e1ad9507c594838ce",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-backward-mqtt.log",
+      "sha256": "7f250025d9f3b7173569c657080bf8dc05a6c80a717f7c1e1ad9507c594838ce",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-backward-pod.json",
+      "sha256": "7772ecff4be63272b1dae574e0cea53a2edc3fbc362a93af5a57d5722ed0f2e5",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-backward-preview-expected.json",
+      "sha256": "3ba8419c664ffc806d79dd891934e537fe760bffcb2bbb5d5c700c59032a4b3b",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-create.log",
+      "sha256": "fe1173de2c3da1dd61ff4749ae269fd1f15f64beba2ccbf99020ff4b58c453d5",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-integrity.log",
+      "sha256": "a3290438313cc370709204a3f9d460acfff403f6e09b8e54924e425a5fbdfad1",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-retained-pvcs.json",
+      "sha256": "c75ff4d1af976638570ffdfc7ded2f16dc2aa74318a8b3a8095101a4818ecd1c",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-rig.json",
+      "sha256": "57d37e0048d5e7420f64e544a602251757a556cc978eb9fff3d7a2f35c402cfe",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-scaled-zero.json",
+      "sha256": "dad30770579b47ee38ce37756ea6ace20e4a9d5c78adfb080eaf8ee0a1042ae1",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/restore-summary.json",
+      "sha256": "f8e1e3173ebac71ee6f1c439f728166cf7051ae459a52f1e58aaf90b397ece74",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/runtime-files.json",
+      "sha256": "c6cf5a28e1e939f6ecb8b8d94973701c89860a78b4a5729631f0310f17d242ef",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/candidate-8599ab9/unit.log",
+      "sha256": "c6e1bb6c56eaf7238b2fa1affbe4f50f8353f723339776b6cc570dcf47f0ead8",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/checkpoint-source-hashes.json",
+      "sha256": "d4948ccb72d600a2b5958798758291ab3b792393c128e511a027a5c19ea48845",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/deployed-candidate.json",
+      "sha256": "214e7fb2b536e6549e105152a50fa9f1ac59542b051cfcefd54b3eac509e2ccf",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/final-af7f223-browser/result.json",
+      "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/final-af7f223-browser.log",
+      "sha256": "8624b3c66c0ee836ea10107c924d22db2808c87ddb0d62cd3a1bde820542c006",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/final-af7f223-mqtt.json",
+      "sha256": "85be3751ae94b5fbf7f132aca15687791eddd6ef80b393449281b10bd4434638",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/final-af7f223-mqtt.log",
+      "sha256": "85be3751ae94b5fbf7f132aca15687791eddd6ef80b393449281b10bd4434638",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/final-af7f223-outbox-restart.json",
+      "sha256": "8c811885f1dfe817d6eaae1fdf9994ab53111d983a9125454e839ea25fdcc6dc",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/final-af7f223-outbox-restart.log",
+      "sha256": "8c811885f1dfe817d6eaae1fdf9994ab53111d983a9125454e839ea25fdcc6dc",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/final-guide-log/result.json",
+      "sha256": "ab91e4e9b0330a70625ac4570c54e125955797a966f6b2fd6a885270ecf55e87",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/final-guide-log.log",
+      "sha256": "1a7bfaba17917840d32e9d484bf5dc0a41e75300ca4c14e348419f9d6675c4a0",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/image-0b23c41.json",
+      "sha256": "383a89acee558fe5a492b4340ac61d00f8f6ac7d3a6d8dcfb2cb2a04872231ca",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/image-79c996f.json",
+      "sha256": "f28aa3e8165046b2995646db9d19689c966f9ed0bbdc4af779d879b9734dc630",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/image-af7f223.json",
+      "sha256": "6b1ade624af4a9102cfb20e4b94b1dcf9cd4b711e8ff4be1f88c88ad7340f34c",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/k3s-af7f223.json",
+      "sha256": "95a04860d40f40169eee33836c22dd794b4e48d9a253aa5f137db6df87d4e1fd",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/k3s-after-registry-upgrade.json",
+      "sha256": "a4bfa3575e401cb987d9faa232df8a3323ba90adc40f9e73f4ad416a4a9b64bf",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/k3s-post-restart.json",
+      "sha256": "04d965e88f262c412c730653c71e9160170373495fe7b4756b8351b91ba2f4e1",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/k3s-pre-restart.json",
+      "sha256": "44eafb6ecae9014dd39628ca44e2173f65631f0353889f36c6ee2c1e5dea4eb7",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/k3s-security-rollout.json",
+      "sha256": "2b63be6fde796cfce328e1fe76b83402331624eee3e8805ed6a96044ee633d5e",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/mqtt-access-79c996f.log",
+      "sha256": "8c3e1615c4e28387effa40898d295ad135bdcc8b74269dab830ae21cd81ffbaa",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/mqtt-access-af7f223.log",
+      "sha256": "147875241bc0210ba161632e54c72f002dcba8c6ea7c862457c032b47a9b40dc",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/mqtt-access.json",
+      "sha256": "d023cc8a2a3099abd7c9e75c802d54d3936a030089fab509ebcb8c8dc8272fba",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/network-policy.txt",
+      "sha256": "e76f2bab26a2c0db28d599a5df596e6096a3b5159c9844597213d8278d2f2b1a",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/patched-main-browser/result.json",
+      "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/patched-main-browser.log",
+      "sha256": "8624b3c66c0ee836ea10107c924d22db2808c87ddb0d62cd3a1bde820542c006",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/patched-main-mqtt.json",
+      "sha256": "336eb674571fa4e43aaac838c38d35a6766dbd3d6c623fc5534d2f0b7ca35cb7",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/patched-main-mqtt.log",
+      "sha256": "336eb674571fa4e43aaac838c38d35a6766dbd3d6c623fc5534d2f0b7ca35cb7",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/post-restart.json",
+      "sha256": "a44bff2342969bcc2258f60348097e67b980f66a2c9f97547925013e5c28cbe7",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/post-security-persistence.json",
+      "sha256": "2d5e080d4f4149cf12e40137c1846e96745b69d2b463e50cb380ed53110f5745",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/pre-1.1.0-backup.json",
+      "sha256": "00b23ffb5d578980394923a82e690bedf21bad8cff2eaf350cb0a12accf841f6",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/pre-restart.json",
+      "sha256": "41cee1c50f9ff5cbd1ff8e441d8ca7a23d2a8d9e734f5bce28d0b80a2a53af0f",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/pre-security-backup.json",
+      "sha256": "7d89640ec34fa8c2ddacaa23bfe16a1ee880289df0ff489d6c63474a04afd0b6",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/preview-1.1.0-api.json",
+      "sha256": "2f3d1187d66fbdc0f441a763178a36367965d16b2533619e66d45df0a524bda9",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/registry-backup-sha256.txt",
+      "sha256": "b8dd355d1284dcf781e74a95a3bdb82187961992370f73493b2df78f58a974b6",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/registry-external-bind.json",
+      "sha256": "d1a0eb35c6b8130fc2a81568c25f38bcf9946a6049c1e3d240fa74fdd10a83a9",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/registry-prepull.txt",
+      "sha256": "ed8c11b7ba7ca7cc6b2de70fd33c073764904d12fd20eb0123b835e402765d5a",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/registry-sec1-backup-sha256.txt",
+      "sha256": "6bb62dab704f8ea3eb2e0b3205c61710194f49ae4c244609a0c058f6eb021d09",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/registry-sec1-migration.json",
+      "sha256": "68fede744ef2d360c22ac87d14afb33d8b821a5fed8202f8128eb7beff845937",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/registry-sockets.txt",
+      "sha256": "4ba129c6de5c51c9a08921b595aa9a3f0dc0ae561438e1795a58148554a3c0b7",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/remote-integration-round2.log",
+      "sha256": "792eb3b72befdbab9d85d8dbfde4edbcee29d52b1e839d32ff3512498a52f167",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/remote-integration.json",
+      "sha256": "792eb3b72befdbab9d85d8dbfde4edbcee29d52b1e839d32ff3512498a52f167",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/remote-integration.log",
+      "sha256": "33846249d8f791bbbeefbb313d474566e7ffae7025fb7d50a51b5d55598d67f2",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/remote-vpp-dispatch.json",
+      "sha256": "a1a130439db7fdb975e6cfe539b9fcf36796b89ffe4480ee8d8b6ca4e25861cb",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/restore-old-browser/result.json",
+      "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/restore-old-browser.log",
+      "sha256": "8624b3c66c0ee836ea10107c924d22db2808c87ddb0d62cd3a1bde820542c006",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/restore-old-mqtt.json",
+      "sha256": "86909f1054219ce562fee2e0cb9e4dd6116b491632700c1efb15424ea9480c7e",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/restore-old-mqtt.log",
+      "sha256": "86909f1054219ce562fee2e0cb9e4dd6116b491632700c1efb15424ea9480c7e",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/restore-original-data.json",
+      "sha256": "fda8706dc251743b18616bbc5849c39c232071d5a40ee11539f4baa3ff6a719e",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/restore-original-data.log",
+      "sha256": "1afd94184cba139614fa02b0cff373666a83a12745762bce9a1e97d5426edd9d",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/restore-patched-browser/result.json",
+      "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/restore-patched-browser.log",
+      "sha256": "8624b3c66c0ee836ea10107c924d22db2808c87ddb0d62cd3a1bde820542c006",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/restore-patched-mqtt.json",
+      "sha256": "21a77c25c6f55b786366361abd6dae45769720f7949c1ff06570f2487d47ed54",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/restore-patched-mqtt.log",
+      "sha256": "21a77c25c6f55b786366361abd6dae45769720f7949c1ff06570f2487d47ed54",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/restore-patched-original-data.json",
+      "sha256": "fda8706dc251743b18616bbc5849c39c232071d5a40ee11539f4baa3ff6a719e",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/restore-patched-original-data.log",
+      "sha256": "1afd94184cba139614fa02b0cff373666a83a12745762bce9a1e97d5426edd9d",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/restore-rig-integrity.txt",
+      "sha256": "a3290438313cc370709204a3f9d460acfff403f6e09b8e54924e425a5fbdfad1",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/restore-rig-manifest.json",
+      "sha256": "2fe4cf16d635b355103e62caa044306852d024f473ea1b795cac8cf8c5c6972d",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/runtime-dependency-move.json",
+      "sha256": "c94d52f1538549599a96174e87282df73bf3bd6468f6b051138b2a2f57acbc61",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/stable-af7f223-restored-browser/result.json",
+      "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/stable-af7f223-restored-browser.log",
+      "sha256": "8624b3c66c0ee836ea10107c924d22db2808c87ddb0d62cd3a1bde820542c006",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/stable-af7f223-restored-mqtt.json",
+      "sha256": "e3a77f11225e46df1afbc233af87a76f8f12bfc03e753ff3ffd633bc99135505",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/stable-af7f223-restored-mqtt.log",
+      "sha256": "e3a77f11225e46df1afbc233af87a76f8f12bfc03e753ff3ffd633bc99135505",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/stable-af7f223-restored-original.json",
+      "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/stable-af7f223-restored-original.log",
+      "sha256": "1332c250b6ebb407bf627542e33a82e5ef7e3b63c4be0b9f1f0c58d384c4fd72",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/stable-backup-8599ab9.json",
+      "sha256": "64f4a3876439c6b091fa46e4541feab70c94205e048711225f001a32f05d463e",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/stable-backup-af7f223-round2.log",
+      "sha256": "e74b2954a826b792df7c191861f09ec83d077304d6f5ad24b8297051a01ebd49",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/stable-backup-af7f223-round3.log",
+      "sha256": "a67f7105281996a239c9e02af2748140403858617ae9731e87917dfbccda9b07",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/stable-backup-af7f223.json",
+      "sha256": "a67f7105281996a239c9e02af2748140403858617ae9731e87917dfbccda9b07",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/stable-backup-af7f223.log",
+      "sha256": "44c1b16c0eee17cf2b62e276b3bc603af3d4302ca267bea89f9c3f401ff5723a",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/stable-restore-af7f223.log",
+      "sha256": "3e71a237d2cb4fa7b00bbc35bbdde63b400fa0882668cec4f4c824eb8efbc822",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/streaming-backup-8599ab9-identity-review.json",
+      "sha256": "49fe323a0deb1cc9055aa6298f209b6ae2778621666ee60677485ebd2c87de1e",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "deploy/verification/streaming-backup-8599ab9.json",
+      "sha256": "ecdbe7ff0bb022478d40d86a141b3d146776693188aeb9d9d7de1f57c0ac4acc",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-001-source.json",
+      "sha256": "5c146cedbdd1416810668b99f9b315bb6ecc0722ca697e9ef2ce7baba683fe6f",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-001.log",
+      "sha256": "139ebedd94492187200ebc70eae23487095614cf98f4f7365cadbcfa9a97b314",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-002-crash.log",
+      "sha256": "45c5574428bf7499b60cd99affe59fa1f3287656336fc63d515fdd07a1ab98b7",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-002-source.json",
+      "sha256": "2d2e64b68bdd1cc7b26885ae1a9a52458f03ad569775c951a679fc125f7318d9",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-002-unit.log",
+      "sha256": "4bf03b5628c1159879a7b4a719f7338f95a493058de1b31c3abf0940e7995e35",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-003-mqtt.log",
+      "sha256": "aae835f7503e0d696d45dbb927187be9d25b97ae28d61dc23c666a990aca8851",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-003-source.json",
+      "sha256": "df350c392de90684e7825592ddc9cc90c406063836c9f0b8ab8c2391bc807ff5",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-003-unit.log",
+      "sha256": "582752488f67b3827f908cba9e45856e81d24f1633075a216c94ab216b4d675c",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-004-process.log",
+      "sha256": "a5673e592c5d5eaf7c5f1202e990c7ca33c3bb8b6b37b3969a9d16b51ad4c9a0",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-004-source.json",
+      "sha256": "01fd45ca511bd441d666ca30760c0ebf6296d3645222411de11fe19980e3d964",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-005-restore.log",
+      "sha256": "c2ec316b18522d0637890deb791acf01b8654e9de457b9b3f76fffa3cf83b774",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-005-source.json",
+      "sha256": "1d127244bab6c57e93c4b3b5fe520e7027bd560437d793d252cf99821ed2e5d4",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-006-scenario.log",
+      "sha256": "d0fe7d320ca2c58729a7ceaaa6a320e47113e8eac06976b628d6c0f0cd35eb83",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-006-source.json",
+      "sha256": "e811955356341d229132df649c729edc8ca685b1a6d964656ded6ee6fc90cea3",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-007-preview.log",
+      "sha256": "90983149cf8d296da482c2754970db869719eff10b1df05ae015de7b5c0d5092",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-007-source.json",
+      "sha256": "d14e79fa3b60b2b36d1903d49d826b4d22f9e0e8474541cb64264fb7812d862c",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-008-identity.log",
+      "sha256": "e006374b5cc59b921b4535de5a895f65b25d86c0261d3a9fa1953cb1a0eefa93",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-008-live-identity.log",
+      "sha256": "75c74faf192d7ab998245de2f72de0cd99a7633f3db1cf1cd6b3566b4a8d51ed",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-008-source.json",
+      "sha256": "dc5fc2ad25216e9452d267233c24f4c3889ee50af221cb5beaf9f8f1987aee86",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/issues/evidence/review-008-transfer.log",
+      "sha256": "683e5bb8ca076bdfc2a6c7e8ef3ca315cedda2ff09bb6247aefefb6b990b27fa",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/app-alpine-7ad14a4-grype.json",
+      "sha256": "e41b5243a6e47e4efc372997b0988f6b355880944ed7c38c771c1fd033354164",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/app-alpine-7ad14a4-grype.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/app-alpine-7ad14a4-managed.json",
+      "sha256": "24ebff8203104add0c553fe76f305d398446ab9dd6e8ba8068a0e3d7b915b24b",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/app-candidate-8599ab9-findings.json",
+      "sha256": "2d5179c85d99662b817a27e2f31e73d73cbaf8406ce5d05248595e21af6dd20d",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/app-candidate-8599ab9-grype.json",
+      "sha256": "e2a9c6f966ecc9217fa1c575ad93372928c56662b67fe2b49ad6283ed51d25b3",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/app-candidate-8599ab9-grype.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/app-final-af7f223-grype.json",
+      "sha256": "8cfda458499ce97ffee4c21af06022ca4c0132bc85813eb9190783d056282d63",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/app-final-af7f223-grype.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/app-final-af7f223-managed.json",
+      "sha256": "c1e8a7bc563bb519984d5f538e01dd3c5df3bda2939adb9e773c60355ee6eaf2",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/app-grype.json",
+      "sha256": "ba414cf43adc6f985cb4bed6ba2ee09d3468129212d8b1843e7c79e77a539a9b",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/app-grype.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/app-patched-79c996f-grype.json",
+      "sha256": "d7bfa9e7cc649734ce682d29a09157dbc1dca17fb3d5180ac7ac9e79f7c6641a",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/app-patched-79c996f-grype.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/broker-architecture.txt",
+      "sha256": "9abd5380af810ebe2679e1540649ba587cd933c7906a963ea7b989e7d8cbec35",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/broker-cjson-microhttpd-files.txt",
+      "sha256": "b13caadf3b19879878552e06f9d9dfc276cf9a43001c941654f908c50ba5c3e6",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/broker-filesystem-isolation.txt",
+      "sha256": "c86fb3992647c8e35aedec4d97b4ee1e58f8f37f45ab92cb100d8f93bdb4a925",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/client-security-integration.json",
+      "sha256": "ba2b71c5693cd96f8e366b1f7e1038ffcf873d471597396faebe612fc8a75c5c",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/container-findings-baseline.json",
+      "sha256": "c088fd0c445954b057dc18ec7cc55e700025570bb8597837a540af2aaf80dfcb",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/container-findings-patched-79c996f.json",
+      "sha256": "d1bc60950501b1c69bb885e0b4fed512a23c283fac61b8843fc8e61b47904511",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/csv-preview-100k-resource.json",
+      "sha256": "c3f5f43f968a42eca3da939b4ae234264ee446646d0a2140d8156bab12a0a579",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/csv-preview-security-tests.txt",
+      "sha256": "5eb7a97491ee115cebc1bd1af2ff80d02a8e378944f074b0421c8f9c765cd36e",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/dependency-scan-1.1.0-candidate.json",
+      "sha256": "11506706f4f38fd08f8b2f575f36365122a2612d88f1555cd0c53581959b79bc",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/dependency-scan-20260921.json",
+      "sha256": "173085b205707d01201411f170e14ee6def82167886a7e9cb66dd0ec5951449b",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/dependency-scan-round3.json",
+      "sha256": "15f5bf2d4e6b20c4ef76e2a6d744388a0c6ea07534e66d248257d002db3a129d",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/dependency-tree-20260921.json",
+      "sha256": "627cc3e0f8a5daf656c12a129169f1f000a960e1f9613e5f50b1ce2bb86b320d",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/grype-db-status.json",
+      "sha256": "8e3b03208105f3a440a38cda2cb516ceeef8939b903466e98179c67578faa225",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/grype-version.txt",
+      "sha256": "260b812dc5bee0dfc26f363ce09f719b6dd2dd1536117e2f9a4359798519baf3",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/live-security-review.json",
+      "sha256": "15a2d85d9dfec2940ac462f132015ab20b59879398373a93101038dbbd8184f4",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/mosquitto-grype.json",
+      "sha256": "6585be7db950f13460954829786034139e0c0097afd4d586f53ee8867865d5d6",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/mosquitto-grype.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/mosquitto-patched-79c996f-grype.json",
+      "sha256": "4ad215c2615a2cd5b29c8e4ba4787cc9719e31f2f57c3ca0019c258e1a86fb01",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/mosquitto-patched-79c996f-grype.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/network-policy-probe.json",
+      "sha256": "a8efa2a439aed8b4587e09d4a8f67f7e01593f6fb80b1ea15913f5d2d87bba27",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/npm-audit-1.1.0-candidate.json",
+      "sha256": "3525936ee9135b7876cfe31d33d0645eab173b84e098b277bf6bfe4b36f1de70",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/npm-audit-20260921.json",
+      "sha256": "b23916e775cad347bc3254955b7f62af03d4067958b0e577a26be1b67e475024",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/npm-audit-round3.json",
+      "sha256": "3525936ee9135b7876cfe31d33d0645eab173b84e098b277bf6bfe4b36f1de70",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/registry-live-health.txt",
+      "sha256": "081afa4abdb862db3f25f168e7a498767e50300f02b49627c39a424750421ec7",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/registry-patched-sec1-build.log",
+      "sha256": "49732e1dcb25fa169dc1e6ad9e24a00201222f5e88d1ad124cd44138a949bfb8",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/registry-patched-sec1-catalog.log",
+      "sha256": "3736dc08ccb3da5443ad425cafd6a4052fb4b0cca11a300909109a2b8b8d0590",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/registry-patched-sec1-grype.json",
+      "sha256": "35547b1cbfd21009b311718c7d96f0bf6094119913beffc61a7c1e256a720a64",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/registry-patched-sec1-grype.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/registry-patched-sec1-provenance.json",
+      "sha256": "e7b1f0b233de14978bc58a2edbcf21977bd3bd75c034e8dd262372e2fcbd2b0f",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/registry-patched-version.txt",
+      "sha256": "ed8c11b7ba7ca7cc6b2de70fd33c073764904d12fd20eb0123b835e402765d5a",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/registry-security-integration.json",
+      "sha256": "9f03e2fd1e870a7c8787f1832386690af07b499f8c92bb9c8ba222bf8132a0a2",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/registry2-grype.json",
+      "sha256": "84f6765cf7bb9fca3740dad1df1cda9cf0557a9f25805d5d14ef5b710ff1b854",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/registry2-grype.log",
+      "sha256": "1e32307d9751952d82617ed32d12cbd97ec42a1dd4b3cba3101f0bd038c52fe1",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/registry2-scout.log",
+      "sha256": "695da046c01df033b0107fac6a160d1757f0874a656447065f9461578b341c79",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/registry3-candidate-grype.json",
+      "sha256": "6a3b28b9e6041c55a07ad4f81ee7b54f363255e4bf30fb9b591d1bcf61213778",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/registry3-candidate-grype.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/registry3-candidate-managed.json",
+      "sha256": "6f70d737dc4833de29f7afba21b758ad43a3a52e331cf2bbb33d8ba7d0c3a78e",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/runtime-security-snapshot.json",
+      "sha256": "cb1c1ab070258446703e08182958448dfbdec3c4ed3461ee2ae317686bfbd5c5",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/security-lwt-integration.json",
+      "sha256": "34ecf1fcb6009a97ce552c10bbbe740abf4abc0da0517c3ed4d4303211b78e2e",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/security-round2-regression.txt",
+      "sha256": "6324b31867773752279b14457ef557b5a7ca168351317311d4b40f73a2052b6c",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/security-round4-tests.txt",
+      "sha256": "b9c1db92aa9ddc04be08706da11b2ff1c45ed22fdc564c0e9c19f1ddb3acfcff",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    },
+    {
+      "path": "docs/security/evidence/transport-regression-20260921.txt",
+      "sha256": "d778de5cefcc5baa397d8a7d38ecc53718c5a40e326b423362e548c4ac880ca4",
+      "meaning": "Recorded evidence; requirement verdicts are tracked in docs/product/acceptance.json"
+    }
+  ],
+  "acceptance": {
+    "path": "docs/product/acceptance.json",
+    "sha256": "549efde44cc7aafe6040c3d20ed2d22de4d0a1d55499eaaeaea4a4f83fbf5473"
+  },
+  "completion": "Not implied by manifest existence; require independent acceptance audit"
+}
