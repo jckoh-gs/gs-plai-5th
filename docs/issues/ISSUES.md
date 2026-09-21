@@ -738,3 +738,12 @@ ISSUE033 영속 후속 독립대조: connection-1.7.1-20260921T2108-persisted-pr
 정확한 최초 gap증가 poll은21:10:28.407Z이며 바로전21:10:18.404Z다. 앞선 독립비교21:10:08→48은 증가를 포함하는 비교창이었고 최초증가시각이 아니다. 기존 raw비교는 보존하고 이 시각을 보완한다. 메인 최초분석5a1372 exit1은 acked ISO문자열을 숫자0과 비교한 분석오류이며 analysis-attempt1.json에 보존됐다. 같은 저장결과 재분석e8d1b3 exit0으로 수정했고 원격 재조회가 없었다.
 
 이 후속으로 해당300위치의 생성·영속보존·broker ACK 범위는 확인됐지만, 관측자의 과거 수신 공백이 사라지거나 모든subscriber/외부VPP 도달·exactly-once·근본원인이 증명된 것은 아니다. RECOVERED_CAUSE_UNKNOWN 및 기존 누적오류/공백 이력을 유지한다. 독립검토는 로컬저장근거만 읽었으며 실행중runtime·DB·관측기·원래시간을 변경하지 않았다. 새결과는 issue033-connection-review.json의 persistenceFollowup에 연결한다.
+
+
+### 실제 동결 관측 종료 — 21:37:33Z
+
+원래 primary72957(dc9ec1)/audit8133(c0e50e)의실제terminal0과아카이브52c340 exit0, soak-1.7.1-final의18payload해시·12개원본/보존바이트를독립대조했다. 양endReason=planned_stop/endedAt21:37:33.082Z, 원래planned21:37:33.079Z이며각2080수신/invalid·duplicate0이다. primary13058.384초/audit13058.071초 관측 종료를 확인했으며 새 관측기를 대신 실행하지 않았다.
+
+기존API10/primary연결오류61/audit64·불연속[2,2,2,1,2]는보존됐다. 의도client.end에따른최종disconnect3→4는마지막해제시각=endedAt로대조했고별도새장애로세지않는다. primary마지막poll21:37:24.482Z의APIready/5HEALTHY/pending0을보존했으며API상세없는final과구분했다. auditlatest/result와종료observations는close후기록이다. 이전144·300수신공백과원인미확정사건은종료성공으로해소되지않는다.
+
+이는관측종료·증거보존진행확인만이며전체goal/역할종료·최종영상/PPT완료판정이아니다. 감독기48590및운영터널은촬영용으로유지된보존상태를확인했다. 독립추가원격조회·재시작없음. 근거 evidence/final-observer-closeout-review.json; 원래22:07:33.079Z마감불변.

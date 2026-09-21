@@ -4,7 +4,7 @@
   "freezeAt": "2026-09-21T21:37:33.079009+00:00",
   "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
   "timezone": "Asia/Seoul",
-  "phase": "stable-k3s-observation-and-final-media-preparation",
+  "phase": "final-freeze-backup-restore-and-new-media",
   "scope": "greenfield; mandatory k3s deployment",
   "context": "charles-k3s",
   "namespace": "gs-plai-5h",
@@ -463,7 +463,10 @@
     "priorEvidence": "artifacts/checkpoints/soak-1.7.0/summary.json",
     "gapReason": "Planned1.7.1upgrade/outbox; originalsettings verified before newepoch",
     "activationEvidence": "artifacts/checkpoints/observer-1.7.1-activation/activation.json",
-    "state": "Active1.7.1"
+    "state": "Completed1.7.1PlannedStop",
+    "endedAt": "2026-09-21T21:37:33.082Z",
+    "exitCode": 0,
+    "finalEvidence": "artifacts/checkpoints/soak-1.7.1-final/summary.json"
   },
   "networkRecovery": {
     "supervisorCommand": "node scripts/connection-supervisor.mjs",
@@ -485,7 +488,7 @@
       "scope": "Current read-only service and actual process identities, saved heartbeat configuration and existing isolated tests. No forced real network outage or AI restart guarantee."
     }
   },
-  "updatedAt": "2026-09-21T21:31:21.052169+00:00",
+  "updatedAt": "2026-09-21T21:40:02.632828+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
@@ -1169,5 +1172,16 @@
     "selectedVersion": "1.7.1",
     "freezeExecuted": false,
     "remainingFinalGates": "docs/product/final-pending-gates.json"
-  }
+  },
+  "featureFreeze": {
+    "scheduledAt": "2026-09-21T21:37:33.079009+00:00",
+    "confirmedAt": "2026-09-21T21:37:40+00:00",
+    "recordedAt": "2026-09-21T21:40:02.632828+00:00",
+    "selectedVersion": "1.7.1",
+    "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+    "mainStateEvidence": "deploy/verification/final-restore-20260921/main-before-state.json",
+    "postFreezeIdentityEvidence": "deploy/verification/final-restore-20260921/preflight.json",
+    "scope": "Feature freeze confirmed at the original boundary; verified current version retained. Post-freeze authenticated main state and exact Pod identity captured before final backup. Final snapshot selection and new media remain in progress."
+  },
+  "finalCloseoutEvidence": "docs/operations/final-closeout.json"
 }

@@ -1,0 +1,20 @@
+{
+  "primary": {
+    "sessionId": 72957,
+    "pid": 57533,
+    "chunk_id": "dc9ec1",
+    "wall_time_seconds": 29.12483575,
+    "exit_code": 0,
+    "original_token_count": 0,
+    "output": ""
+  },
+  "audit": {
+    "sessionId": 8133,
+    "pid": 57534,
+    "chunk_id": "c0e50e",
+    "wall_time_seconds": 0.000011292,
+    "exit_code": 0,
+    "original_token_count": 48,
+    "output": "{\"sessionId\":\"1e38bd3c-002a-49f4-9aa8-9039887b7889\",\"directory\":\"artifacts/soak/telemetry-audit/v1.7.1-20260921T1800\",\"endReason\":\"planned_stop\",\"invalidMessages\":0,\"completionClaim\":false}\n"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-09-21T18:00:47.974489+00:00",
+  "processes": {
+    "primary": {
+      "handle": 72957,
+      "pid": 57533,
+      "processIdentity": "Tue Sep 22 02:59:54 2026"
+    },
+    "audit": {
+      "handle": 8133,
+      "pid": 57534,
+      "processIdentity": "Tue Sep 22 02:59:54 2026"
+    },
+    "supervisor": {
+      "handle": 48590,
+      "pid": 56137,
+      "processIdentity": "Tue Sep 22 02:52:15 2026"
+    }
+  },
+  "version": "1.7.1",
+  "primaryDirectory": "artifacts/soak/v1.7.1",
+  "auditDirectory": "artifacts/soak/telemetry-audit/v1.7.1-20260921T1800",
+  "primarySession": "0ea34e34-e199-4b14-84ab-40ff75fa5d96",
+  "auditSession": "1e38bd3c-002a-49f4-9aa8-9039887b7889",
+  "primaryMessages": 12,
+  "auditReceived": 12,
+  "scope": "New connected read-only epoch after rootoutboxpostnormal; no firsthourclaim. Primary launched exact saved source copy, audit actual startup hashes verified.",
+  "originalFreeze": "2026-09-21T21:37:33.079009+00:00",
+  "normalEvidence": "deploy/verification/candidate-40b9ed8/outbox-post-normal.json",
+  "primaryLaunchSource": [
+    {
+      "file": "scripts/soak-monitor.mjs",
+      "savedAs": "artifacts/checkpoints/observer-1.7.1-activation/source/primary/soak-monitor.mjs",
+      "sha256": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3"
+    },
+    {
+      "file": "scripts/soak-diagnostics.mjs",
+      "savedAs": "artifacts/checkpoints/observer-1.7.1-activation/source/primary/soak-diagnostics.mjs",
+      "sha256": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c"
+    }
+  ]
+}

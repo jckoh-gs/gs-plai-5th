@@ -1,0 +1,67 @@
+{
+  "reviewedAt": "2026-09-21T21:39:36.556829+00:00",
+  "result": "ORIGINAL_OBSERVER_CLOSEOUT_VERIFIED",
+  "archive": "artifacts/checkpoints/soak-1.7.1-final",
+  "payloadHashesVerified": 18,
+  "originalBytesCompared": 12,
+  "summarySha256": "8db1b273a796d0fedabc5ae6f2a1d4e8d189fd12bf6d54c13c0d4f3bf57d5ff0",
+  "inventorySha256": "68ef342b8403ab4fb4969e81239865ddf9aae27b7884e720c7e32ce2ccdb09d5",
+  "originalTerminalReceipts": {
+    "primary": {
+      "sessionId": 72957,
+      "pid": 57533,
+      "chunk_id": "dc9ec1",
+      "wall_time_seconds": 29.12483575,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "audit": {
+      "sessionId": 8133,
+      "pid": 57534,
+      "chunk_id": "c0e50e",
+      "wall_time_seconds": 1.1292e-05,
+      "exit_code": 0,
+      "original_token_count": 48,
+      "output": "{\"sessionId\":\"1e38bd3c-002a-49f4-9aa8-9039887b7889\",\"directory\":\"artifacts/soak/telemetry-audit/v1.7.1-20260921T1800\",\"endReason\":\"planned_stop\",\"invalidMessages\":0,\"completionClaim\":false}\n"
+    }
+  },
+  "archiveExecution": {
+    "state": "ARCHIVE_CAPTURE_COMPLETED",
+    "owner": "root",
+    "tool": "exec_command",
+    "chunkId": "52c340",
+    "sessionId": null,
+    "exitCode": 0,
+    "wallTimeSeconds": 0.045756583,
+    "deadlineWrapperSeconds": 40,
+    "summarySha256": "8db1b273a796d0fedabc5ae6f2a1d4e8d189fd12bf6d54c13c0d4f3bf57d5ff0",
+    "originalObserverTerminalResults": "original-terminal-results.json",
+    "scope": "Original observers exited0 before files were copied. This receipt describes local archive capture, not uninterrupted runtime or whole-goal completion."
+  },
+  "endedAt": "2026-09-21T21:37:33.082Z",
+  "plannedStopAt": "2026-09-21T21:37:33.079Z",
+  "primaryMessages": 2080,
+  "auditReceived": 2080,
+  "lastPrimaryHealthPoll": "2026-09-21T21:37:24.482Z",
+  "historicalCountersPreserved": {
+    "apiErrors": 10,
+    "primaryConnectionErrors": 61,
+    "auditConnectionErrors": 64,
+    "sampleDiscontinuities": [
+      2,
+      2,
+      2,
+      1,
+      2
+    ]
+  },
+  "plannedClose": "lastDisconnectedAt equals endedAt; connected close increments3to4, no new network incident inferred",
+  "sourceScope": "12 archived provenance records byte-matched to original files, including actually launched primary/audit source and activation",
+  "limitations": [
+    "Historical outages and144+300 observed gaps retained; persistedACK proofs separate",
+    "Last API health poll predates closeout; no fresh remote query by reviewer",
+    "Not full goal completion, media acceptance or final role termination"
+  ],
+  "runtimeMutation": false
+}

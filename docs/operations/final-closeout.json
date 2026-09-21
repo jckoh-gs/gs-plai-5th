@@ -1,0 +1,46 @@
+{
+  "state": "FINAL_WINDOW_IN_PROGRESS",
+  "updatedAt": "2026-09-21T21:40:02.632828+00:00",
+  "featureFreeze": {
+    "scheduledAt": "2026-09-21T21:37:33.079009+00:00",
+    "confirmedAt": "2026-09-21T21:37:40+00:00",
+    "recordedAt": "2026-09-21T21:40:02.632828+00:00",
+    "selectedVersion": "1.7.1",
+    "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+    "mainStateEvidence": "deploy/verification/final-restore-20260921/main-before-state.json",
+    "postFreezeIdentityEvidence": "deploy/verification/final-restore-20260921/preflight.json",
+    "scope": "Feature freeze confirmed at the original boundary; verified current version retained. Post-freeze authenticated main state and exact Pod identity captured before final backup. Final snapshot selection and new media remain in progress."
+  },
+  "observers": {
+    "state": "ORIGINAL_HANDLES_EXITED_ZERO",
+    "summary": "artifacts/checkpoints/soak-1.7.1-final/summary.json",
+    "summarySha256": "8db1b273a796d0fedabc5ae6f2a1d4e8d189fd12bf6d54c13c0d4f3bf57d5ff0",
+    "originalTerminalResults": "artifacts/checkpoints/soak-1.7.1-final/original-terminal-results.json",
+    "inventory": "artifacts/checkpoints/soak-1.7.1-final/sha256.json",
+    "payloadCount": 18,
+    "bothEndedAt": "2026-09-21T21:37:33.082Z",
+    "bothEndReason": "planned_stop",
+    "preservedIncidents": [
+      "ISSUE030",
+      "ISSUE032",
+      "ISSUE033"
+    ],
+    "independentReview": {
+      "path": "docs/issues/evidence/final-observer-closeout-review.json",
+      "sha256": "703d8fb809817a1abc011a53beb7c700a396d9391c47d837033e67b1bd748b0b"
+    }
+  },
+  "supervisorRetainedForMedia": {
+    "handle": 48590,
+    "pid": 56137,
+    "ports": [
+      3104,
+      18884
+    ]
+  },
+  "finalBackupAndRestoreState": "IN_PROGRESS_OWNED_BY_DEPLOYMENT",
+  "newVideoState": "NOT_STARTED_AWAITING_VERIFIED_MANIFEST",
+  "newPresentationState": "NOT_STARTED_AWAITING_REVIEWED_NEW_VIDEO",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "goalCompletionClaim": false
+}

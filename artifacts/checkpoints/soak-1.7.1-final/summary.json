@@ -1,0 +1,100 @@
+{
+  "state": "ORIGINAL_OBSERVERS_PLANNED_STOP",
+  "archivedAt": "2026-09-21T21:38:33.628081+00:00",
+  "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "primary": {
+    "toolSession": 72957,
+    "pid": 57533,
+    "sessionId": "0ea34e34-e199-4b14-84ab-40ff75fa5d96",
+    "startedAt": "2026-09-21T17:59:54.698Z",
+    "plannedStopAt": "2026-09-21T21:37:33.079Z",
+    "endedAt": "2026-09-21T21:37:33.082Z",
+    "endReason": "planned_stop",
+    "durationSeconds": 13058.384,
+    "messages": 2080,
+    "apiErrors": 10,
+    "connectionErrors": 61,
+    "invalid": 0,
+    "duplicates": 0,
+    "finalConnectionEvents": 4,
+    "finalDisconnectionEvents": 4,
+    "lastPollAt": "2026-09-21T21:37:24.482Z",
+    "lastPollApiReady": true,
+    "lastPollHealth": [
+      {
+        "id": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+        "health": "HEALTHY",
+        "pending": 0,
+        "generated": 46830,
+        "confirmed": 1559
+      },
+      {
+        "id": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+        "health": "HEALTHY",
+        "pending": 0,
+        "generated": 46830,
+        "confirmed": 1900
+      },
+      {
+        "id": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+        "health": "HEALTHY",
+        "pending": 0,
+        "generated": 46830,
+        "confirmed": 2116
+      },
+      {
+        "id": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+        "health": "HEALTHY",
+        "pending": 0,
+        "generated": 46456,
+        "confirmed": 790
+      },
+      {
+        "id": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+        "health": "HEALTHY",
+        "pending": 0,
+        "generated": 45764,
+        "confirmed": 778
+      }
+    ]
+  },
+  "audit": {
+    "toolSession": 8133,
+    "pid": 57534,
+    "sessionId": "1e38bd3c-002a-49f4-9aa8-9039887b7889",
+    "startedAt": "2026-09-21T17:59:55.011Z",
+    "plannedStopAt": "2026-09-21T21:37:33.079Z",
+    "endedAt": "2026-09-21T21:37:33.082Z",
+    "endReason": "planned_stop",
+    "durationSeconds": 13058.071,
+    "received": 2080,
+    "connectionErrors": 64,
+    "invalid": 0,
+    "duplicates": 0,
+    "finalConnectionEvents": 4,
+    "finalDisconnectionEvents": 4,
+    "lastLivePollAt": "2026-09-21T21:37:28.836Z",
+    "lastLiveDisconnections": 3,
+    "sampleDiscontinuities": [
+      2,
+      2,
+      2,
+      1,
+      2
+    ]
+  },
+  "plannedCloseInterpretation": "Both final disconnection counters increased3\u21924 at planned_stop, connected=false after deliberate MQTT close; not counted as an additional network incident. Original tool exits must be bound separately.",
+  "preservedIncidents": [
+    "ISSUE030",
+    "ISSUE032",
+    "ISSUE033"
+  ],
+  "sourcePayloads": 12,
+  "supervisorRetained": {
+    "pid": 56137,
+    "state": "ready",
+    "forwardOwned": true,
+    "reason": "Keep operating tunnel3104/18884 for final media."
+  },
+  "claimBoundary": "Received observation scope with recorded API/connect failures and sample gaps, not uninterrupted service or universal/external VPP delivery. Historical144 and300 positions were separately verified persisted/ACKed. No replacement observer or counter reset; no goal completion claim."
+}

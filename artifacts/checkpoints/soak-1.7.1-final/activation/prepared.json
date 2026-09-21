@@ -1,0 +1,16 @@
+{
+  "preparedAt": "2026-09-21T17:59:32.216108+00:00",
+  "primarySources": [
+    {
+      "file": "scripts/soak-monitor.mjs",
+      "savedAs": "artifacts/checkpoints/observer-1.7.1-activation/source/primary/soak-monitor.mjs",
+      "sha256": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3"
+    },
+    {
+      "file": "scripts/soak-diagnostics.mjs",
+      "savedAs": "artifacts/checkpoints/observer-1.7.1-activation/source/primary/soak-diagnostics.mjs",
+      "sha256": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c"
+    }
+  ],
+  "state": "Prepared; actual primary will launch saved source copy only after rootpostnormal. No process startedyet."
+}

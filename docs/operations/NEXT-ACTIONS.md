@@ -19,8 +19,8 @@ revision3 보존 커밋9c90808 전달 뒤 [19:24Z 읽기 점검](../../artifacts
 현재 root 소유 상주 프로세스는 다음과 같다. PID와 시작 identity를 함께 확인한 뒤 유지한다.
 
 - supervisor48590 / PID56137 / `Tue Sep 22 02:52:15 2026`: 단일3104/18884 연결 감독기.
-- primary72957 / PID57533 / `Tue Sep 22 02:59:54 2026`: `artifacts/soak/v1.7.1`, session `0ea34e34-e199-4b14-84ab-40ff75fa5d96`.
-- audit8133 / PID57534 / 같은 시작 identity: `artifacts/soak/telemetry-audit/v1.7.1-20260921T1800`, session `1e38bd3c-002a-49f4-9aa8-9039887b7889`.
+- 완료 primary72957 / PID57533 / `Tue Sep 22 02:59:54 2026`: `artifacts/soak/v1.7.1`, session `0ea34e34-e199-4b14-84ab-40ff75fa5d96`.
+- 완료 audit8133 / PID57534 / 같은 시작 identity: `artifacts/soak/telemetry-audit/v1.7.1-20260921T1800`, session `1e38bd3c-002a-49f4-9aa8-9039887b7889`.
 - 임시 전원 보호11821 / PID80946 / `Mon Sep 21 22:33:11 2026`는 원래 종료 시각까지다. 수동 강제 절전·전원 종료 방지를 보장하지 않는다.
 
 이전1.7 primary85394/audit60682/supervisor77410은 종료0·별도 보존했으므로 재시작하지 않는다. 새 프로세스의 활성화·소스·초기 원장 검사는 [활성화 기록](../../artifacts/checkpoints/observer-1.7.1-activation/activation.json)에 있다. heartbeat `grid`는 기존 작업을10분 간격으로 재개 점검하며 중복 생성하지 않는다. Mac/Codex가 종료된 동안 AI 작업 지속을 보장하지 않는다.
@@ -39,7 +39,9 @@ revision3 보존 커밋9c90808 전달 뒤 [19:24Z 읽기 점검](../../artifacts
 
 ## 다음 작업과 원래 마감
 
-[실제 동결 전 검토](prefreeze-review.json)를21:28~21:31Z에 완료했다. 제품 REVIEW058·보안·이슈 역할은 현재1.7.1 선택을 새로 막는 입증 결함을 찾지 못했고 기존 잔여 위험·20개 최종 게이트를 유지했다.21:29 실제 Pod/이미지·registry Ready/35 BoundPVC와 DB1479634944B·node여유58529443840B·local여유564894715904B를 확인했다. 원격 snapshot/전송본/복원본의 계획 여유량은 현재 DB3배이며 실제 여유공간이 이를 넘는다. 이 관측은 전용PVC 예약이나 미래 성장 보장이 아니다. 실제 동결·새백업/복원·최종미디어는 아직 실행하지 않았다. 다음은 원래21:37:33Z 실제 동결이다.
+실제 동결을21:37:40Z에 확인했다. 원래 primary72957·audit8133은 모두21:37:33.082Z planned_stop/exit0으로 종료됐으며 [최종 관측 원문](../../artifacts/checkpoints/soak-1.7.1-final/summary.json)에 각2080메시지·오류와 전체관측/실행소스/원래종료영수증을 보존했다. 두관측기는 재시작하지 않는다. supervisor48590/3104·18884는 최종촬영을 위해 유지한다. [실제 최종창 진행](final-closeout.json)을 우선하며 새백업·동일snapshot복원과최종manifest는 현재진행중이다. 검증된 새영상→같은영상PPT→인도/정리 순서와 원래마감은 그대로다.
+
+[실제 동결 전 검토](prefreeze-review.json)를21:28~21:31Z에 완료했다. 제품 REVIEW058·보안·이슈 역할은 현재1.7.1 선택을 새로 막는 입증 결함을 찾지 못했고 기존 잔여 위험·20개 최종 게이트를 유지했다.21:29 실제 Pod/이미지·registry Ready/35 BoundPVC와 DB1479634944B·node여유58529443840B·local여유564894715904B를 확인했다. 원격 snapshot/전송본/복원본의 계획 여유량은 현재 DB3배이며 실제 여유공간이 이를 넘는다. 이 관측은 전용PVC 예약이나 미래 성장 보장이 아니다. 이 검토 당시 실제 동결·새백업/복원·최종미디어는 실행 전이었다. 이후 실제 동결 진행은 위 final-closeout 기록을 따른다.
 
 최종 백업 선택은 기존 불변1.7.1/5ff 체크포인트 기록을 보존한 채 별도 `finalReleaseSelection`에 기록한다. 실제 복원이 증명된 선택만 `run.backup`과 새 최종 매니페스트에 연결하며 기존 stable 태그의 백업·복원 근거를 덮어쓰지 않는다. [독립 제품 검토057](../product/REVIEW-057.md)은 이 절차와 생성·검증 코드의 일치를 확인했다. 실제 최종 선택과 매니페스트는 아직 없다.
 

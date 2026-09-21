@@ -1,0 +1,74 @@
+[
+  {
+    "original": "artifacts/soak/v1.7.1/latest.json",
+    "savedAs": "primary/latest.json",
+    "sha256": "7dbb013008f3505f16ce2dedd30f008002d30ad5b8a13426338a26b3301c6c68",
+    "bytes": 1777
+  },
+  {
+    "original": "artifacts/soak/v1.7.1/observations.jsonl",
+    "savedAs": "primary/observations.jsonl",
+    "sha256": "5bf4b5518cfb41dc97beb85b9c728b31f2263b477b4e7b0ed2bbaa80f252b2a9",
+    "bytes": 1768480
+  },
+  {
+    "original": "artifacts/soak/v1.7.1/session-0ea34e34-e199-4b14-84ab-40ff75fa5d96.json",
+    "savedAs": "primary/session-0ea34e34-e199-4b14-84ab-40ff75fa5d96.json",
+    "sha256": "6623c3ae41638dbc381ab4b2a88127fd091e1619b039b4dd06917a2a3e33535e",
+    "bytes": 965
+  },
+  {
+    "original": "artifacts/soak/telemetry-audit/v1.7.1-20260921T1800/latest.json",
+    "savedAs": "audit/latest.json",
+    "sha256": "5b0621ed782b0c29d18de8b3272e1b634f30be280c8909a39fd2845fb766dc68",
+    "bytes": 5969
+  },
+  {
+    "original": "artifacts/soak/telemetry-audit/v1.7.1-20260921T1800/observations.jsonl",
+    "savedAs": "audit/observations.jsonl",
+    "sha256": "9f15e4653ccff450c02cd0ebd15c56289ee68928efed7ad3b70671a3b986f243",
+    "bytes": 5947646
+  },
+  {
+    "original": "artifacts/soak/telemetry-audit/v1.7.1-20260921T1800/result.json",
+    "savedAs": "audit/result.json",
+    "sha256": "5b0621ed782b0c29d18de8b3272e1b634f30be280c8909a39fd2845fb766dc68",
+    "bytes": 5969
+  },
+  {
+    "original": "artifacts/checkpoints/observer-1.7.1-activation/source/primary/soak-monitor.mjs",
+    "savedAs": "source/primary/soak-monitor.mjs",
+    "sha256": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3",
+    "bytes": 3421
+  },
+  {
+    "original": "artifacts/checkpoints/observer-1.7.1-activation/source/primary/soak-diagnostics.mjs",
+    "savedAs": "source/primary/soak-diagnostics.mjs",
+    "sha256": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c",
+    "bytes": 1221
+  },
+  {
+    "original": "artifacts/soak/telemetry-audit/v1.7.1-20260921T1800/source/telemetry-audit.mjs",
+    "savedAs": "source/audit/telemetry-audit.mjs",
+    "sha256": "ba6c2c1c9ac39e4a1666d7ad0b6468271a1eda163f2653df9e6bac842bb48486",
+    "bytes": 10180
+  },
+  {
+    "original": "artifacts/soak/telemetry-audit/v1.7.1-20260921T1800/source/telemetry-audit-monitor.mjs",
+    "savedAs": "source/audit/telemetry-audit-monitor.mjs",
+    "sha256": "6c4bbb0b77c03e8a49d9d17c8f7e743c10765ab05b0d94f6b1a736f6a60c4617",
+    "bytes": 4894
+  },
+  {
+    "original": "artifacts/checkpoints/observer-1.7.1-activation/activation.json",
+    "savedAs": "activation/activation.json",
+    "sha256": "561c1294b29f4c67b9acafc8a3eb61b4aeda12e5f35bdfdcf43b0574c2d8ba91",
+    "bytes": 1569
+  },
+  {
+    "original": "artifacts/checkpoints/observer-1.7.1-activation/source/prepared.json",
+    "savedAs": "activation/prepared.json",
+    "sha256": "f57183ff9fe9de6988d65392e32339a678409cb3c8d2c1a9258805f222464f49",
+    "bytes": 684
+  }
+]

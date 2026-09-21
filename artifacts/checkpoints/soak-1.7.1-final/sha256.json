@@ -1,0 +1,92 @@
+[
+  {
+    "file": "activation/activation.json",
+    "sha256": "561c1294b29f4c67b9acafc8a3eb61b4aeda12e5f35bdfdcf43b0574c2d8ba91",
+    "bytes": 1569
+  },
+  {
+    "file": "activation/prepared.json",
+    "sha256": "f57183ff9fe9de6988d65392e32339a678409cb3c8d2c1a9258805f222464f49",
+    "bytes": 684
+  },
+  {
+    "file": "archive-execution.json",
+    "sha256": "54b1afee10d73ab3420d10348d19d82fd21380eb446ab16e8dcd4d402b2881f3",
+    "bytes": 538
+  },
+  {
+    "file": "audit/latest.json",
+    "sha256": "5b0621ed782b0c29d18de8b3272e1b634f30be280c8909a39fd2845fb766dc68",
+    "bytes": 5969
+  },
+  {
+    "file": "audit/observations.jsonl",
+    "sha256": "9f15e4653ccff450c02cd0ebd15c56289ee68928efed7ad3b70671a3b986f243",
+    "bytes": 5947646
+  },
+  {
+    "file": "audit/result.json",
+    "sha256": "5b0621ed782b0c29d18de8b3272e1b634f30be280c8909a39fd2845fb766dc68",
+    "bytes": 5969
+  },
+  {
+    "file": "original-terminal-results.json",
+    "sha256": "19b8c4d27690448e231dbd49d18e2cf9d7423ae5310c6dac0b8ad3cbc06d3589",
+    "bytes": 596
+  },
+  {
+    "file": "primary/latest.json",
+    "sha256": "7dbb013008f3505f16ce2dedd30f008002d30ad5b8a13426338a26b3301c6c68",
+    "bytes": 1777
+  },
+  {
+    "file": "primary/observations.jsonl",
+    "sha256": "5bf4b5518cfb41dc97beb85b9c728b31f2263b477b4e7b0ed2bbaa80f252b2a9",
+    "bytes": 1768480
+  },
+  {
+    "file": "primary/session-0ea34e34-e199-4b14-84ab-40ff75fa5d96.json",
+    "sha256": "6623c3ae41638dbc381ab4b2a88127fd091e1619b039b4dd06917a2a3e33535e",
+    "bytes": 965
+  },
+  {
+    "file": "process-identities-after-stop.txt",
+    "sha256": "6f4066361ad2a885a2a82372c4c594018306105883a2f15dbaa955c17fe7d648",
+    "bytes": 135
+  },
+  {
+    "file": "source/audit/telemetry-audit-monitor.mjs",
+    "sha256": "6c4bbb0b77c03e8a49d9d17c8f7e743c10765ab05b0d94f6b1a736f6a60c4617",
+    "bytes": 4894
+  },
+  {
+    "file": "source/audit/telemetry-audit.mjs",
+    "sha256": "ba6c2c1c9ac39e4a1666d7ad0b6468271a1eda163f2653df9e6bac842bb48486",
+    "bytes": 10180
+  },
+  {
+    "file": "source/primary/soak-diagnostics.mjs",
+    "sha256": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c",
+    "bytes": 1221
+  },
+  {
+    "file": "source/primary/soak-monitor.mjs",
+    "sha256": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3",
+    "bytes": 3421
+  },
+  {
+    "file": "source-provenance.json",
+    "sha256": "b6419c8bbbd9795870b7c0c79a4c6ffeabaaff11a2a246cac79fb4497f3839d3",
+    "bytes": 2929
+  },
+  {
+    "file": "summary.json",
+    "sha256": "8db1b273a796d0fedabc5ae6f2a1d4e8d189fd12bf6d54c13c0d4f3bf57d5ff0",
+    "bytes": 3101
+  },
+  {
+    "file": "supervisor-status-at-closeout.json",
+    "sha256": "5d2e3af0d1f1d8d08690b4ffb75279c5cb90e8188277c729e2679227c9b41a36",
+    "bytes": 924
+  }
+]

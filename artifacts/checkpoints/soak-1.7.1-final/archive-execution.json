@@ -1,0 +1,13 @@
+{
+  "state": "ARCHIVE_CAPTURE_COMPLETED",
+  "owner": "root",
+  "tool": "exec_command",
+  "chunkId": "52c340",
+  "sessionId": null,
+  "exitCode": 0,
+  "wallTimeSeconds": 0.045756583,
+  "deadlineWrapperSeconds": 40,
+  "summarySha256": "8db1b273a796d0fedabc5ae6f2a1d4e8d189fd12bf6d54c13c0d4f3bf57d5ff0",
+  "originalObserverTerminalResults": "original-terminal-results.json",
+  "scope": "Original observers exited0 before files were copied. This receipt describes local archive capture, not uninterrupted runtime or whole-goal completion."
+}
