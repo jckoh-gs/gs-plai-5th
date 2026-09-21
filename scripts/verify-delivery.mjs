@@ -27,6 +27,7 @@ const digest=value=>typeof value==='string'?value.match(/(?:^|@)(sha256:[a-f0-9]
 const expectedDigest=digest(manifest.deployment.appImage);check('Release has a valid immutable image digest',!!expectedDigest);
 const window=stamp=>Number.isFinite(Date.parse(stamp))&&Date.parse(stamp)>=Date.parse(run.freezeAt)&&Date.parse(stamp)<=Date.parse(run.deadlineAt);
 if(video){
+ check('Video source manifest is the selected release',(await file(join(videoDir,'source/release-manifest.json')))?.sha256===manifestHash);
  check('Video is final and reviewed',video.rehearsal===false&&video.fullDecode===true&&video.visualReview==='passed'&&video.claimsReview==='passed');
  check('Video uses same release and image',!!expectedDigest&&video.releaseCommit===manifest.source.commit&&video.manifestSha256===manifestHash&&digest(video.imageDigest)===expectedDigest);
  const mp4=await file(join(videoDir,'GRID-VPP-demo-ko.mp4'));check('Actual MP4 matches reviewed hash',mp4?.sha256===video.videoSha256);
@@ -36,12 +37,14 @@ if(video){
  for(const p of video.frames||[]){check('Frame stays in video package',inside(videoDir,p));if(inside(videoDir,p))await file(p);}
 }
 if(deck){
+ check('Deck source manifest is the selected release',(await file(join(deckDir,'source/release-manifest.json')))?.sha256===manifestHash);
  check('Deck is final, editable, fully rendered and reviewed',deck.rehearsal===false&&deck.renderedEverySlide===true&&deck.editableTextAndArchitecture===true&&deck.visualReview==='passed'&&deck.claimsReview==='passed');
  check('Deck uses same release',deck.releaseCommit===manifest.source.commit&&deck.manifestSha256===manifestHash);
  check('Deck follows video within final window',window(deck.createdAt)&&video&&Date.parse(deck.createdAt)>=Date.parse(video.createdAt));
  check('Deck has 12 to 15 slides',Number.isInteger(deck.slideCount)&&deck.slideCount>=12&&deck.slideCount<=15);
  if(Number.isInteger(deck.slideCount)&&deck.slideCount>=12&&deck.slideCount<=15)for(let i=1;i<=deck.slideCount;i++)await file(join(deckDir,`slide-${String(i).padStart(2,'0')}.png`));
  const receipt=await json(join(deckDir,'validation.json')),ppt=await file(join(deckDir,'GRID-VPP-presentation-ko.pptx'));check('Actual PPTX matches validated package',!!receipt&&ppt?.sha256===receipt.finalSha256);
+ check('PPT package, layout, font and reimport checks passed',receipt?.packageIntegrity?.status==='pass'&&receipt?.presentationLayout?.exitCode===0&&receipt?.presentationLayout?.findingCount===0&&receipt?.fontSelection?.passed===true&&receipt?.firstPartyImport?.passed===true&&receipt?.firstPartyImport?.sha256===ppt?.sha256);
  const copiedVideo=await json(join(deckDir,'source/video-verification.json')),mp4=await file(join(videoDir,'GRID-VPP-demo-ko.mp4'));
  check('Deck was made from this exact reviewed video',!!copiedVideo&&!!mp4&&copiedVideo.rehearsal===false&&copiedVideo.visualReview==='passed'&&copiedVideo.claimsReview==='passed'&&deck.videoSha256===mp4.sha256&&copiedVideo.videoSha256===mp4.sha256&&copiedVideo.manifestSha256===manifestHash&&copiedVideo.releaseCommit===manifest.source.commit);
  const config=await json(join(deckDir,'source/config.original.json'));if(config){const ref=config.videoRelativePath||'../video/GRID-VPP-demo-ko.mp4';check('Portable notes video link targets actual MP4',!isAbsolute(ref)&&!/^[a-z]+:/i.test(ref)&&resolve(deckDir,ref)===join(videoDir,'GRID-VPP-demo-ko.mp4'));}

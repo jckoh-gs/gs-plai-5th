@@ -11,6 +11,13 @@ __pycache__/
 *.pyc
 artifacts/private/
 artifacts/video/*.mp4
+artifacts/video/**/*.mp4
+artifacts/video/**/*.webm
+artifacts/video/**/*.aiff
+artifacts/video/**/*.wav
+artifacts/video/**/*.m4a
+artifacts/delivery/*.zip
+artifacts/delivery/*.tar.gz
 artifacts/video/raw/
 artifacts/checkpoints/*.sqlite*
 
