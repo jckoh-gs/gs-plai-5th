@@ -68,3 +68,6 @@
 메인 승인: PRD1.9/제품1.2.0후보로채택.기준stable1.1.0유지.정확계약은FR-COMMAND-EXPORT-01/UI09/AT-COMMAND-EXPORT-01이며redactionmetadata세부키는메인결정후정합화.구현·검증대기.위의미채택표현은제안당시이력이다.
 
 IDEA006계약확정: root redaction={policy:"known-secrets-credential-urls-controls-length",redactedCommandIds:count,identifiersForReplay:false,unknownPersonalDataMayRemain:true}.각행commandIdRedacted는control제거/절단포함어떤변경에도true. runId유효UUID/null,유효달력ISO만UTC정규화,target합overflow는null. PRD1.9에정합반영.
+
+### IDEA006 구현·배포·복원 완료
+83d10ce/제품1.2.0/PRD1.9: exactimage79app시험(local88중9ops별도),실제export/authUI/MQTT125/podoutbox재시작/169414656bytebackup현재1.2및역방향1.1복원통과. stable-v1.2.0과stable-runtime-v1.2.0-83d10ce확정.기능인수완료이며현재1.2manifest최종해시검증·미디어·시간게이트는별도.

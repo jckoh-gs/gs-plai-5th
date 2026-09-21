@@ -9,3 +9,5 @@ review009실제pausedTCP backpressure에서20snapshot생략중20frame보존,real
 원목표의구체적형식공백:8장은stable-vX.Y.Z태그를명시하지만현재git tag --list stable-v*는없고stable-runtime-v1.1.0-8599ab9가사용된다. 기능복원은정상이나인도추적규칙정합성을위해기존검증runtime동일commit에stable-v1.1.0별칭태그를추가하거나명시적변경기록을남겨야한다.태그덮어쓰기는금지. 이검토는태그/소스/run시간을변경하지않았다.
 
 남은최종게이트는OPS역할/시간기록·최종주입장애정리·현재버전인도목록·영상포인터/확대/음성/자막/전체디코드·후속editablePPT/전체슬라이드검수·마감heartbeat정리다. 준비pilot는최종산출물로인정하지않는다. 선택아이디어추가는권고하지않는다.
+
+태그형식 후속조치: 2026-09-21T10:04Z에 검증된 기존 동일 runtime commit을 가리키는 annotated별칭 `stable-v1.0.0`, `stable-v1.1.0`을 신규 생성하고 원격 push했다. 기존태그를 변경하지 않았다. 1.2는 실제 복원까지 통과한 후 동일규칙을 적용한다.

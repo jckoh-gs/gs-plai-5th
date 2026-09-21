@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "runId": "grid-new-20260921T080733Z",
+  "checkedAt": "2026-09-21T10:05:44.008Z",
+  "nextAction": "resume-first-incomplete-checkpoint",
+  "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "head": "83d10cebcd7cab2b1f889c970011a463bad09099",
+  "workingTree": [
+    "M docs/issues/ISSUES.md",
+    " M docs/operations/resume.json",
+    " M docs/operations/run.json",
+    " M docs/product/acceptance.json",
+    " M docs/security/VULNERABILITY-MANAGEMENT.md",
+    " M scripts/soak-monitor.mjs",
+    "?? .idea/",
+    "?? artifacts/checkpoints/soak-1.1.0/",
+    "?? artifacts/releases/current.json",
+    "?? deploy/verification/candidate-1197ab5/",
+    "?? deploy/verification/candidate-83d10ce/",
+    "?? deploy/verification/candidate-8599ab9/operational-baseline.json",
+    "?? deploy/verification/pre-1.2.0-backup.json",
+    "?? docs/issues/evidence/review-011-diagnostics.log",
+    "?? docs/issues/evidence/review-011-soak-excerpts.json",
+    "?? docs/issues/evidence/review-011-source.json",
+    "?? docs/product/REVIEW-009.md",
+    "?? docs/security/evidence/app-candidate-83d10ce-findings.json",
+    "?? docs/security/evidence/app-candidate-83d10ce-grype.json",
+    "?? docs/security/evidence/app-candidate-83d10ce-grype.log",
+    "?? scripts/soak-diagnostics.mjs",
+    "?? tests/review-soak-diagnostics.test.js"
+  ],
+  "remoteMain": "83d10cebcd7cab2b1f889c970011a463bad09099",
+  "remoteGitReachable": true,
+  "clusterReachable": true,
+  "api": {
+    "ok": true,
+    "version": "1.2.0",
+    "plantCount": 5
+  },
+  "identity": {
+    "ok": true,
+    "pod": {
+      "name": "grid-5b9c5c96d-98wr9",
+      "uid": "c79d0400-edf1-4de8-999a-52585800f972",
+      "image": "127.0.0.1:15050/grid@sha256:cc387c6db005acf798dbbbbd41979f07114474a5fe697118ad8c29afc904eab6",
+      "imageID": "127.0.0.1:15050/grid@sha256:cc387c6db005acf798dbbbbd41979f07114474a5fe697118ad8c29afc904eab6"
+    },
+    "broker": {
+      "name": "grid-5b9c5c96d-98wr9",
+      "uid": "c79d0400-edf1-4de8-999a-52585800f972",
+      "image": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  },
+  "workingMilestone": {
+    "productVersion": "1.2.0",
+    "prdVersion": "1.9",
+    "idea": "IDEA-006",
+    "state": "Source 83d10ce committed and pushed; local 88 tests PASS; exact image build assigned to deployment agent; not deployed"
+  },
+  "remainingInOrder": [
+    "Finish immutable 83d10ce image build, exact-image runtime tests and vulnerability scan; inspect existing candidate proof before restarting",
+    "Before upgrade preserve current normal backup and soak evidence; then deploy candidate and verify actual image, API/UI/MQTT and recovery",
+    "Promote only verified runtime to a new stable tag and immutable manifest; retain prior checkpoints",
+    "Continue observation until freeze; at freeze select verified normal version and create final video then editable PPT, inspect all outputs",
+    "Before deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
+  ],
+  "mutationsPerformed": false
+}

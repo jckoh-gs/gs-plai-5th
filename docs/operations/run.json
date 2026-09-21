@@ -24,14 +24,14 @@
     "deployment": "/root/deployment"
   },
   "checks": {
-    "localUnit": "59 passing against finalaf7f223 container image; mounted security tests included",
-    "localIntegration": "PASS",
-    "localAdvanced": "PASS",
+    "localUnit": "88 passing local source83d10ce; 79 exact app-image tests plus9 workstation operational tests",
+    "localIntegration": "PASS exact83d10ce image",
+    "localAdvanced": "PASS exact83d10ce image",
     "hardCrashPubackReplay": "PASS",
     "sixtySecondWindow": "PASS",
     "browserAuthStale": "PASS",
-    "backupRestore": "PASS local pending exactbody PUBACK+75control+browser and remote previous/patched image recovery",
-    "remote": "finalaf7f223: authenticated browser, realMQTT125/60samples, actualpendingoutbox podrestart+samebody/PUBACK, samebackup isolatedrestore UI+MQTT125+5originalplants PASS",
+    "backupRestore": "PASS exact1.2 immutable snapshot freshPVC original5plants/run/gen/dataset/scenario/UI/export/preview/MQTT; sameDB backward1.1 original/UI/preview/MQTT",
+    "remote": "83d10ce: actualReadyapp/brokerimageID, API1.2/authUI/SSE/narrow/export/preview, actualMQTT125/error0/60samples/dedup, outboxactualpodrestart samebody/PUBACK PASS",
     "media": "Preparation verified: Korean editablePPT render and actual1080p H264/AAC browser recording/pointer/click/zoom/voice/full decode; final media pending freeze",
     "weatherTimeout": "PASS actual12s AbortSignal, prior valid observation retained"
   },
@@ -44,13 +44,13 @@
   "requestedModel": "Codex Astra",
   "modelVerification": "Agents inherited main session model; exact runtime model identifier not exposed by available goal tools.",
   "deployment": {
-    "observedAt": "2026-09-21T09:38:20.985434+00:00",
-    "status": "functional acceptance and isolated recovery verified; final media/time gates pending",
-    "sourceCommit": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
-    "prdVersion": "1.8",
+    "observedAt": "2026-09-21T10:08:10.330041+00:00",
+    "status": "functional acceptance, outbox restart, exact backup restore and 1.1 backward compatibility verified; final media/time gates pending",
+    "sourceCommit": "83d10cebcd7cab2b1f889c970011a463bad09099",
+    "prdVersion": "1.9",
     "context": "charles-k3s",
     "namespace": "gs-plai-5h",
-    "appImage": "127.0.0.1:15050/grid@sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420",
+    "appImage": "127.0.0.1:15050/grid@sha256:cc387c6db005acf798dbbbbd41979f07114474a5fe697118ad8c29afc904eab6",
     "brokerImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
     "registryImage": "127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c",
     "uiTunnel": "http://127.0.0.1:3104",
@@ -60,44 +60,54 @@
     "recoveryReplicas": 0,
     "name": "grid",
     "mqttImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
-    "productVersion": "1.1.0"
+    "productVersion": "1.2.0"
   },
   "backup": {
     "result": "PASS",
-    "capturedAt": "2026-09-21T09:31:55.443Z",
-    "verifiedAt": "2026-09-21T09:32:05.529Z",
-    "sourceCommit": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
-    "appImage": "127.0.0.1:15050/grid@sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420",
-    "remotePath": "/data/stable-8599ab9-20260921T093154817Z.sqlite",
-    "localPath": "artifacts/private/backups/stable-8599ab9-20260921T093154817Z.sqlite",
-    "bytes": 105144320,
-    "sha256": "29071fdc6a800e7b173aeaa49c45a6f4f83b0dacbaf5e6594f1ea66864c21879",
-    "compressedBytes": 3547160,
-    "verifiedChunks": 14,
+    "capturedAt": "2026-09-21T10:05:43.467Z",
+    "verifiedAt": "2026-09-21T10:05:55.911Z",
+    "sourceCommit": "83d10cebcd7cab2b1f889c970011a463bad09099",
+    "appImage": "127.0.0.1:15050/grid@sha256:cc387c6db005acf798dbbbbd41979f07114474a5fe697118ad8c29afc904eab6",
+    "verifiedTransferPod": {
+      "name": "grid-5b9c5c96d-98wr9",
+      "uid": "c79d0400-edf1-4de8-999a-52585800f972",
+      "image": "127.0.0.1:15050/grid@sha256:cc387c6db005acf798dbbbbd41979f07114474a5fe697118ad8c29afc904eab6",
+      "imageID": "127.0.0.1:15050/grid@sha256:cc387c6db005acf798dbbbbd41979f07114474a5fe697118ad8c29afc904eab6"
+    },
+    "podVerificationStage": "transfer",
+    "remotePath": "/data/stable-83d10ce-20260921T100542773Z.sqlite",
+    "localPath": "artifacts/private/backups/stable-83d10ce-20260921T100542773Z.sqlite",
+    "bytes": 169414656,
+    "sha256": "805040d3897b7f71ca1f718e58729dbe49ec512e610c1fc79e053b58d3916c88",
+    "compressedBytes": 5746984,
+    "verifiedChunks": 22,
+    "remoteCompressionPeakRssBytes": 90669056,
+    "localPeakRssBytes": 223576064,
     "integrity": "ok",
     "plants": 5,
     "pending": 0,
-    "method": "online node:sqlite backup; gzip chunk+whole SHA256 verification; private0600 copy"
+    "method": "online node:sqlite backup; streaming gzip and disk-backed chunk+whole SHA256 verification; private0600 copy"
   },
   "stableCheckpoint": {
-    "productVersion": "1.1.0",
-    "prdVersion": "1.8",
-    "runtimeCommit": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
-    "tag": "stable-runtime-v1.1.0-8599ab9",
-    "manifest": "artifacts/releases/checkpoint-1.1.0.json",
-    "backupEvidence": "deploy/verification/stable-backup-8599ab9.json",
-    "recoveryEvidence": "deploy/verification/candidate-8599ab9/restore-summary.json",
-    "scope": "Functional runtime recovery checkpoint; overall goal awaits final media/time gates"
+    "productVersion": "1.2.0",
+    "prdVersion": "1.9",
+    "runtimeCommit": "83d10cebcd7cab2b1f889c970011a463bad09099",
+    "tag": "stable-v1.2.0",
+    "alias": "stable-runtime-v1.2.0-83d10ce",
+    "manifest": "artifacts/releases/checkpoint-1.2.0.json",
+    "backupEvidence": "deploy/verification/stable-backup-83d10ce.json",
+    "recoveryEvidence": "deploy/verification/candidate-83d10ce/restore-summary.json",
+    "scope": "Verified functional runtime and recovery checkpoint; overall goal awaits final media/time gates"
   },
   "candidate": {
-    "productVersion": "1.1.0",
-    "prdVersion": "1.8",
-    "idea": "IDEA-005",
-    "sourceCommit": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
-    "status": "functional acceptance and rollback verified; stable manifest pending",
-    "startedAt": "2026-09-21T09:27:07.825616+00:00",
-    "fallbackTag": "stable-runtime-v1.0.0-af7f223",
-    "preUpgradeBackup": "deploy/verification/pre-1.1.0-backup.json"
+    "productVersion": "1.2.0",
+    "prdVersion": "1.9",
+    "idea": "IDEA-006",
+    "sourceCommit": "83d10cebcd7cab2b1f889c970011a463bad09099",
+    "status": "functional acceptance, outbox restart, exact backup restore and 1.1 backward compatibility verified; final media/time gates pending",
+    "startedAt": "2026-09-21T10:03:46.506640+00:00",
+    "fallbackTag": "stable-runtime-v1.1.0-8599ab9",
+    "preUpgradeBackup": "deploy/verification/pre-1.2.0-backup.json"
   },
   "previousStableCheckpoints": [
     {
@@ -110,15 +120,41 @@
         "deploy/verification/stable-af7f223-restored-original.json"
       ],
       "scope": "Functional runtime recovery checkpoint; overall goal awaits final media/time gates"
+    },
+    {
+      "productVersion": "1.1.0",
+      "prdVersion": "1.8",
+      "runtimeCommit": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
+      "tag": "stable-runtime-v1.1.0-8599ab9",
+      "manifest": "artifacts/releases/checkpoint-1.1.0.json",
+      "backupEvidence": "deploy/verification/stable-backup-8599ab9.json",
+      "recoveryEvidence": "deploy/verification/candidate-8599ab9/restore-summary.json",
+      "scope": "Functional runtime recovery checkpoint; overall goal awaits final media/time gates",
+      "manifestVerification": {
+        "result": "PASS",
+        "checkedHashes": 358,
+        "remoteActualImagesMatched": true,
+        "manifestSourceCommit": "2cb15d5"
+      }
     }
   ],
   "soak": {
-    "directory": "artifacts/soak/v1.1.0",
-    "sessionId": "2627bc33-7fa8-458d-b6df-fcf0b5973868",
-    "startedAt": "2026-09-21T09:34:52.786Z",
+    "directory": "artifacts/soak/v1.2.0",
+    "sessionId": "b1bbfa2d-1371-4af6-85bc-d54d2ec378c3",
+    "startedAt": "2026-09-21T10:08:09.184Z",
     "readOnly": true,
     "expectedStopAt": "2026-09-21T21:37:33.079009+00:00",
-    "priorEvidence": "artifacts/checkpoints/soak-1.0.0",
-    "gapReason": "Planned 1.1 upgrade, recovery and outbox restart verification"
+    "priorEvidence": "artifacts/checkpoints/soak-1.1.0",
+    "gapReason": "planned 1.2 upgrade, recovery and outbox restart verification; prior 1.1 observation interruption separately retained"
+  },
+  "networkRecovery": {
+    "supervisorCommand": "node scripts/connection-supervisor.mjs",
+    "statusFile": "artifacts/operations/status.json",
+    "resumeCommand": "node scripts/resume-status.mjs",
+    "resumeLedger": "docs/operations/resume.json",
+    "tests": "artifacts/checkpoints/network-recovery/tests.log",
+    "heartbeatId": "grid",
+    "intervalMinutes": 10,
+    "constraints": "Mac and Codex app must remain running; no offline AI work guarantee; original deadline unchanged"
   }
 }

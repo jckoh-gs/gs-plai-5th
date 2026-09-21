@@ -1,27 +1,26 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T10:01:05.474407+00:00",
+  "updatedAt": "2026-09-21T10:09:55.807132+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
-  "stableRuntime": "stable-runtime-v1.1.0-8599ab9",
-  "stableManifest": "artifacts/releases/checkpoint-1.1.0.json",
+  "stableRuntime": "stable-v1.2.0",
+  "stableManifest": "artifacts/releases/checkpoint-1.2.0.json",
   "workingMilestone": {
     "productVersion": "1.2.0",
     "prdVersion": "1.9",
     "idea": "IDEA-006",
-    "state": "implemented and locally tested; not deployed"
+    "state": "Runtime83d10ce verified including isolatedrestore/backward1.1; stabletags created; immutable manifest pending"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
     "1.2.0 command state export source, independent security and issue review, browser download/auth/RTU isolation",
     "Final video and editable deck tooling rehearsed; final media must be newly generated in freeze window",
-    "Network recovery: 8 policy/supervisor tests passed; live supervisor owns verified forwarding; native grid heartbeat updated"
+    "Network recovery: 8 policy/supervisor tests passed; live supervisor owns verified forwarding; native grid heartbeat updated",
+    "1.2.0 exact-image79 runtime tests, local88 tests, image security scan, k3s UI/export/preview/MQTT, actual outbox pod replacement, fresh backup restore and backward1.1 all PASS"
   ],
   "remainingInOrder": [
-    "Commit 1.2.0 source, build immutable image, test exact image and scan vulnerabilities",
-    "Before upgrade preserve current normal backup and soak evidence; then deploy candidate and verify actual image, API/UI/MQTT and recovery",
-    "Promote only verified runtime to a new stable tag and immutable manifest; retain prior checkpoints",
+    "Commit1.2 deployment/recovery evidence and generate/verify immutable checkpoint-1.2.0 manifest; stabletags already target83d10ce",
     "Continue observation until freeze; at freeze select verified normal version and create final video then editable PPT, inspect all outputs",
     "Before deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
   ],

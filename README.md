@@ -79,6 +79,8 @@ node scripts/backup.js data/lab.sqlite artifacts/private/backups/checkpoint.sqli
 
 backup API와 integrity_check를 사용합니다. WAL이 열린 상태의 DB 본 파일만 복사하지 않습니다. 복원은 별도 DB 경로에서 검사하거나 앱을 정상 종료한 뒤 호환 백업으로 교체합니다. 소스/이미지 롤백과 DB 복원은 별도 절차입니다. 단일 노드 local-path는 노드 자체 손실에 대한 고가용성을 제공하지 않습니다.
 
+네트워크 중단 후 작업 재개는 [복구 절차](docs/operations/NETWORK-RECOVERY.md)와 [미완료 단계 기록](docs/operations/resume.json)을 사용합니다. `node scripts/resume-status.mjs`는 실제 Git·배포 이미지·API 상태를 읽기 전용으로 확인합니다. 실행 중인 자동 연결 감독기가 있으면 같은 포트로 별도 터널을 중복 시작하지 않습니다. 원격 앱은 로컬 연결과 별도로 동작합니다.
+
 ## 요구·버전·검토 기록
 
 - [PRD](docs/PRD-VPP-SCADA-RTU.md), [목표 운영 명세](docs/GOAL-VPP-AUTONOMOUS.md), [현재 실행 기록](docs/operations/run.json)

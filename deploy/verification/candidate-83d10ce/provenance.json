@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-09-21T10:04:28.313406+00:00",
+  "sourceCommit": "83d10cebcd7cab2b1f889c970011a463bad09099",
+  "context": "isolated git archive",
+  "archive": "artifacts/private/grid-83d10ce.oci.tar",
+  "imageManifest": "sha256:cc387c6db005acf798dbbbbd41979f07114474a5fe697118ad8c29afc904eab6",
+  "image": "127.0.0.1:15050/grid@sha256:cc387c6db005acf798dbbbbd41979f07114474a5fe697118ad8c29afc904eab6",
+  "labels": {
+    "grid.prd.version": "1.9",
+    "grid.runtime.variant": "alpine",
+    "org.opencontainers.image.revision": "83d10cebcd7cab2b1f889c970011a463bad09099",
+    "org.opencontainers.image.version": "1.2.0"
+  },
+  "architecture": "amd64",
+  "os": "linux",
+  "testSource": "Read-only tests/scripts mounted from exact source commit; image server/runtime used",
+  "excludedWorkstationTests": [
+    "supervisor.test.js",
+    "resume-policy.test.js",
+    "review-pod-identity.test.js"
+  ],
+  "deployed": false,
+  "unitTests": {
+    "pass": 79,
+    "fail": 0
+  },
+  "actualBrokerIntegration": "PASS",
+  "advancedIntegration": "PASS",
+  "registryPushed": true
+}

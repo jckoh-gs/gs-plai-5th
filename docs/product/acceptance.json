@@ -1417,9 +1417,33 @@
         {
           "path": "deploy/verification/restore-old-mqtt.json",
           "sha256": "86909f1054219ce562fee2e0cb9e4dd6116b491632700c1efb15424ea9480c7e"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/unit.log",
+          "sha256": "2409ac743e84f44fed6c4b0e8fdb9b71d3f39ab24e070d8ea310396a64d9929f"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/deployed-proof.json",
+          "sha256": "7e69712d8ec0e78994e01d68e2cf1e9d17df728b2464fe727b7d099b96440738"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/mqtt.json",
+          "sha256": "32dbc208d320a6d838811f6e27f285365d9c1bd34d668449181049dcb5208b90"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/command-export-browser/result.json",
+          "sha256": "e98f5803cc62129b3f731fb3dfd404fe51d217189a64ea49e001d2a47ddabf16"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/outbox-restart.json",
+          "sha256": "d1c038809f03cae03f4ecffde007b996bc77f09fa66c6ddb3754b5b716224025"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/restore-summary.json",
+          "sha256": "45d663574a495d73cb92be5f5665a7cc21976195f71f72cdd4d39f3aa7c97e1b"
         }
       ],
-      "assessment": "af7f223 deployed authenticatedMQTT125/60samples99847bytes, remoteUI, actualpodrestart immutableoutbox/PUBACK, priorimage separate restoreUI/MQTT. Functional deployment gates satisfied; stablemanifest remains OPS03/05.",
+      "assessment": "1.2actualproduction83d10ce/digestcc387c..eab6: exactimage79app tests (local88 includes9ops), actualauthUI/export/preview/MQTT125, podoutboxsamebody/PUBACK, immutable169414656backupSHA805040..6c88 fresh1.2+backward1.1restore,9checksPASS,rig0pods. stable-v1.2.0 peeled83d10ce. Newmanifest independent gate remains pending; media/time not complete.",
       "releaseRevalidation": "Functional candidate af7f223 supported; final stable manifest and media/time gates remain separate."
     },
     {
@@ -3727,7 +3751,7 @@
     {
       "id": "OPS-05",
       "description": "릴리스 manifest에 commit/dirty 파일 해시/PRD/image/backup/tests/deploy/restore 기록",
-      "status": "verified_functional",
+      "status": "partial",
       "evidence": [
         {
           "path": "deploy/verification/post-restart.json",
@@ -3778,13 +3802,13 @@
           "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
         }
       ],
-      "assessment": "1.1.0 checkpoint: exact105144320byte backupSHA29071f..1879,currentrestore and backward1.0UI/MQTT/original5plants, actualpodoutboxrestart, stabletag peeled8599ab9, immutable manifest244evidence hashes independently matched. Sameimage build/suites and earlier feature-specific evidence retained. Finalmedia/time excluded.",
+      "assessment": "Prior1.1immutablemanifest remains verified; current1.2runtime+backup+tag functional complete. New1.2manifest creation/hash verification pending before current release provenance closure.",
       "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
       "id": "AT-RELEASE-01",
       "description": "manifest 파싱, 실제 hash/digest 일치, 해당 revision 로그, 별도 복원 UI/MQTT/DB/outbox 검증",
-      "status": "verified_functional",
+      "status": "partial",
       "evidence": [
         {
           "path": "deploy/verification/post-restart.json",
@@ -3835,7 +3859,7 @@
           "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
         }
       ],
-      "assessment": "1.1.0 checkpoint: exact105144320byte backupSHA29071f..1879,currentrestore and backward1.0UI/MQTT/original5plants, actualpodoutboxrestart, stabletag peeled8599ab9, immutable manifest244evidence hashes independently matched. Sameimage build/suites and earlier feature-specific evidence retained. Finalmedia/time excluded.",
+      "assessment": "Prior1.1immutablemanifest remains verified; current1.2runtime+backup+tag functional complete. New1.2manifest creation/hash verification pending before current release provenance closure.",
       "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
@@ -4097,7 +4121,7 @@
     {
       "id": "FR-COMMAND-EXPORT-01",
       "description": "읽기전용최근20개허용목록스냅샷",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/export-1.2.0-unit.log",
@@ -4118,14 +4142,38 @@
         {
           "path": "tests/review-command-export.test.js",
           "sha256": "bff4a958cbc567b165b8014613f1a1cf7e6f854bbc19fd1181b1633566197d9a"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/unit.log",
+          "sha256": "2409ac743e84f44fed6c4b0e8fdb9b71d3f39ab24e070d8ea310396a64d9929f"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/deployed-proof.json",
+          "sha256": "7e69712d8ec0e78994e01d68e2cf1e9d17df728b2464fe727b7d099b96440738"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/mqtt.json",
+          "sha256": "32dbc208d320a6d838811f6e27f285365d9c1bd34d668449181049dcb5208b90"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/command-export-browser/result.json",
+          "sha256": "e98f5803cc62129b3f731fb3dfd404fe51d217189a64ea49e001d2a47ddabf16"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/outbox-restart.json",
+          "sha256": "d1c038809f03cae03f4ecffde007b996bc77f09fa66c6ddb3754b5b716224025"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/restore-summary.json",
+          "sha256": "45d663574a495d73cb92be5f5665a7cc21976195f71f72cdd4d39f3aa7c97e1b"
         }
       ],
-      "assessment": "Local88unit plus independent export/security and actualbrowser4command/empty/authfailure/RTUisolation PASS.83d10ce candidate not deployed; no currentremote orrestore claim."
+      "assessment": "1.2actualproduction83d10ce/digestcc387c..eab6: exactimage79app tests (local88 includes9ops), actualauthUI/export/preview/MQTT125, podoutboxsamebody/PUBACK, immutable169414656backupSHA805040..6c88 fresh1.2+backward1.1restore,9checksPASS,rig0pods. stable-v1.2.0 peeled83d10ce. Newmanifest independent gate remains pending; media/time not complete."
     },
     {
       "id": "UI-09",
       "description": "선택RTU명령상태다운로드",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/export-1.2.0-unit.log",
@@ -4146,21 +4194,70 @@
         {
           "path": "tests/review-command-export.test.js",
           "sha256": "bff4a958cbc567b165b8014613f1a1cf7e6f854bbc19fd1181b1633566197d9a"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/unit.log",
+          "sha256": "2409ac743e84f44fed6c4b0e8fdb9b71d3f39ab24e070d8ea310396a64d9929f"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/deployed-proof.json",
+          "sha256": "7e69712d8ec0e78994e01d68e2cf1e9d17df728b2464fe727b7d099b96440738"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/mqtt.json",
+          "sha256": "32dbc208d320a6d838811f6e27f285365d9c1bd34d668449181049dcb5208b90"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/command-export-browser/result.json",
+          "sha256": "e98f5803cc62129b3f731fb3dfd404fe51d217189a64ea49e001d2a47ddabf16"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/outbox-restart.json",
+          "sha256": "d1c038809f03cae03f4ecffde007b996bc77f09fa66c6ddb3754b5b716224025"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/restore-summary.json",
+          "sha256": "45d663574a495d73cb92be5f5665a7cc21976195f71f72cdd4d39f3aa7c97e1b"
         }
       ],
-      "assessment": "Local88unit plus independent export/security and actualbrowser4command/empty/authfailure/RTUisolation PASS.83d10ce candidate not deployed; no currentremote orrestore claim."
+      "assessment": "1.2actualproduction83d10ce/digestcc387c..eab6: exactimage79app tests (local88 includes9ops), actualauthUI/export/preview/MQTT125, podoutboxsamebody/PUBACK, immutable169414656backupSHA805040..6c88 fresh1.2+backward1.1restore,9checksPASS,rig0pods. stable-v1.2.0 peeled83d10ce. Newmanifest independent gate remains pending; media/time not complete."
     },
     {
       "id": "AT-COMMAND-EXPORT-01",
       "description": "명령상태내보내기전체인수",
-      "status": "partial",
-      "evidence": [],
-      "assessment": "Localexport verified; exact1.2imagebuild/suites/scan/remoteUIexport+MQTT/podrestart/backuprestore/backward1.1/stable outstanding.1.1verifiedfallback remains."
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "deploy/verification/candidate-83d10ce/unit.log",
+          "sha256": "2409ac743e84f44fed6c4b0e8fdb9b71d3f39ab24e070d8ea310396a64d9929f"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/deployed-proof.json",
+          "sha256": "7e69712d8ec0e78994e01d68e2cf1e9d17df728b2464fe727b7d099b96440738"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/mqtt.json",
+          "sha256": "32dbc208d320a6d838811f6e27f285365d9c1bd34d668449181049dcb5208b90"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/command-export-browser/result.json",
+          "sha256": "e98f5803cc62129b3f731fb3dfd404fe51d217189a64ea49e001d2a47ddabf16"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/outbox-restart.json",
+          "sha256": "d1c038809f03cae03f4ecffde007b996bc77f09fa66c6ddb3754b5b716224025"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/restore-summary.json",
+          "sha256": "45d663574a495d73cb92be5f5665a7cc21976195f71f72cdd4d39f3aa7c97e1b"
+        }
+      ],
+      "assessment": "1.2actualproduction83d10ce/digestcc387c..eab6: exactimage79app tests (local88 includes9ops), actualauthUI/export/preview/MQTT125, podoutboxsamebody/PUBACK, immutable169414656backupSHA805040..6c88 fresh1.2+backward1.1restore,9checksPASS,rig0pods. stable-v1.2.0 peeled83d10ce. Newmanifest independent gate remains pending; media/time not complete."
     },
     {
       "id": "AT-COMMAND-EXPORT-01-01",
       "description": "계약정렬인증분리",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/export-1.2.0-unit.log",
@@ -4181,14 +4278,38 @@
         {
           "path": "tests/review-command-export.test.js",
           "sha256": "bff4a958cbc567b165b8014613f1a1cf7e6f854bbc19fd1181b1633566197d9a"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/unit.log",
+          "sha256": "2409ac743e84f44fed6c4b0e8fdb9b71d3f39ab24e070d8ea310396a64d9929f"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/deployed-proof.json",
+          "sha256": "7e69712d8ec0e78994e01d68e2cf1e9d17df728b2464fe727b7d099b96440738"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/mqtt.json",
+          "sha256": "32dbc208d320a6d838811f6e27f285365d9c1bd34d668449181049dcb5208b90"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/command-export-browser/result.json",
+          "sha256": "e98f5803cc62129b3f731fb3dfd404fe51d217189a64ea49e001d2a47ddabf16"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/outbox-restart.json",
+          "sha256": "d1c038809f03cae03f4ecffde007b996bc77f09fa66c6ddb3754b5b716224025"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/restore-summary.json",
+          "sha256": "45d663574a495d73cb92be5f5665a7cc21976195f71f72cdd4d39f3aa7c97e1b"
         }
       ],
-      "assessment": "Local88unit plus independent export/security and actualbrowser4command/empty/authfailure/RTUisolation PASS.83d10ce candidate not deployed; no currentremote orrestore claim."
+      "assessment": "1.2actualproduction83d10ce/digestcc387c..eab6: exactimage79app tests (local88 includes9ops), actualauthUI/export/preview/MQTT125, podoutboxsamebody/PUBACK, immutable169414656backupSHA805040..6c88 fresh1.2+backward1.1restore,9checksPASS,rig0pods. stable-v1.2.0 peeled83d10ce. Newmanifest independent gate remains pending; media/time not complete."
     },
     {
       "id": "AT-COMMAND-EXPORT-01-02",
       "description": "runId/목표/시각null",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/export-1.2.0-unit.log",
@@ -4209,14 +4330,38 @@
         {
           "path": "tests/review-command-export.test.js",
           "sha256": "bff4a958cbc567b165b8014613f1a1cf7e6f854bbc19fd1181b1633566197d9a"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/unit.log",
+          "sha256": "2409ac743e84f44fed6c4b0e8fdb9b71d3f39ab24e070d8ea310396a64d9929f"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/deployed-proof.json",
+          "sha256": "7e69712d8ec0e78994e01d68e2cf1e9d17df728b2464fe727b7d099b96440738"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/mqtt.json",
+          "sha256": "32dbc208d320a6d838811f6e27f285365d9c1bd34d668449181049dcb5208b90"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/command-export-browser/result.json",
+          "sha256": "e98f5803cc62129b3f731fb3dfd404fe51d217189a64ea49e001d2a47ddabf16"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/outbox-restart.json",
+          "sha256": "d1c038809f03cae03f4ecffde007b996bc77f09fa66c6ddb3754b5b716224025"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/restore-summary.json",
+          "sha256": "45d663574a495d73cb92be5f5665a7cc21976195f71f72cdd4d39f3aa7c97e1b"
         }
       ],
-      "assessment": "Local88unit plus independent export/security and actualbrowser4command/empty/authfailure/RTUisolation PASS.83d10ce candidate not deployed; no currentremote orrestore claim."
+      "assessment": "1.2actualproduction83d10ce/digestcc387c..eab6: exactimage79app tests (local88 includes9ops), actualauthUI/export/preview/MQTT125, podoutboxsamebody/PUBACK, immutable169414656backupSHA805040..6c88 fresh1.2+backward1.1restore,9checksPASS,rig0pods. stable-v1.2.0 peeled83d10ce. Newmanifest independent gate remains pending; media/time not complete."
     },
     {
       "id": "AT-COMMAND-EXPORT-01-03",
       "description": "정제/부작용없음",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/export-1.2.0-unit.log",
@@ -4237,16 +4382,65 @@
         {
           "path": "tests/review-command-export.test.js",
           "sha256": "bff4a958cbc567b165b8014613f1a1cf7e6f854bbc19fd1181b1633566197d9a"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/unit.log",
+          "sha256": "2409ac743e84f44fed6c4b0e8fdb9b71d3f39ab24e070d8ea310396a64d9929f"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/deployed-proof.json",
+          "sha256": "7e69712d8ec0e78994e01d68e2cf1e9d17df728b2464fe727b7d099b96440738"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/mqtt.json",
+          "sha256": "32dbc208d320a6d838811f6e27f285365d9c1bd34d668449181049dcb5208b90"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/command-export-browser/result.json",
+          "sha256": "e98f5803cc62129b3f731fb3dfd404fe51d217189a64ea49e001d2a47ddabf16"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/outbox-restart.json",
+          "sha256": "d1c038809f03cae03f4ecffde007b996bc77f09fa66c6ddb3754b5b716224025"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/restore-summary.json",
+          "sha256": "45d663574a495d73cb92be5f5665a7cc21976195f71f72cdd4d39f3aa7c97e1b"
         }
       ],
-      "assessment": "Local88unit plus independent export/security and actualbrowser4command/empty/authfailure/RTUisolation PASS.83d10ce candidate not deployed; no currentremote orrestore claim."
+      "assessment": "1.2actualproduction83d10ce/digestcc387c..eab6: exactimage79app tests (local88 includes9ops), actualauthUI/export/preview/MQTT125, podoutboxsamebody/PUBACK, immutable169414656backupSHA805040..6c88 fresh1.2+backward1.1restore,9checksPASS,rig0pods. stable-v1.2.0 peeled83d10ce. Newmanifest independent gate remains pending; media/time not complete."
     },
     {
       "id": "AT-COMMAND-EXPORT-01-04",
       "description": "브라우저회귀배포복원stable",
-      "status": "partial",
-      "evidence": [],
-      "assessment": "Localexport verified; exact1.2imagebuild/suites/scan/remoteUIexport+MQTT/podrestart/backuprestore/backward1.1/stable outstanding.1.1verifiedfallback remains."
+      "status": "verified_functional",
+      "evidence": [
+        {
+          "path": "deploy/verification/candidate-83d10ce/unit.log",
+          "sha256": "2409ac743e84f44fed6c4b0e8fdb9b71d3f39ab24e070d8ea310396a64d9929f"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/deployed-proof.json",
+          "sha256": "7e69712d8ec0e78994e01d68e2cf1e9d17df728b2464fe727b7d099b96440738"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/mqtt.json",
+          "sha256": "32dbc208d320a6d838811f6e27f285365d9c1bd34d668449181049dcb5208b90"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/command-export-browser/result.json",
+          "sha256": "e98f5803cc62129b3f731fb3dfd404fe51d217189a64ea49e001d2a47ddabf16"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/outbox-restart.json",
+          "sha256": "d1c038809f03cae03f4ecffde007b996bc77f09fa66c6ddb3754b5b716224025"
+        },
+        {
+          "path": "deploy/verification/candidate-83d10ce/restore-summary.json",
+          "sha256": "45d663574a495d73cb92be5f5665a7cc21976195f71f72cdd4d39f3aa7c97e1b"
+        }
+      ],
+      "assessment": "1.2actualproduction83d10ce/digestcc387c..eab6: exactimage79app tests (local88 includes9ops), actualauthUI/export/preview/MQTT125, podoutboxsamebody/PUBACK, immutable169414656backupSHA805040..6c88 fresh1.2+backward1.1restore,9checksPASS,rig0pods. stable-v1.2.0 peeled83d10ce. Newmanifest independent gate remains pending; media/time not complete."
     },
     {
       "id": "OPS-06",
