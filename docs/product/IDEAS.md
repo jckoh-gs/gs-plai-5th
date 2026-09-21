@@ -124,3 +124,6 @@ IDEA010 개정1 채택: 실제1.5 이벤트55개 유효created가 모두 대시�
 
 
 IDEA010 로컬검증완료: REVIEW030에서 실제4개created→KST/접근가능UTC,5개경계fixture·TZ/좁은화면·읽기불변·281전체시험 및 기존회귀를 대조했다. 신규AT01~03 verified_local, UI04/AT04 partial 유지. 운영1.5의ISSUE023은 정확1.6원격/복원승격 전까지 알려진 결함이다. 최종미디어·시간게이트별도.
+
+
+IDEA010 기능·배포·복원 완료: REVIEW032에서 runtime331/image4af, main59·복원79이벤트, 동일851673088B/9bd의현재1.6·하위1.5복원19보고서+2Podidentity와양rig정리를독립확인했다. UI04/AT4개기능검증완료. 하위1.5에는ISSUE023수정이없으며과거기록을고치지않는다. 예정runtimealias는331, stable-v1.6.0은백업보강포함완료운영커밋을가리키므로구분한다. 태그/manifest출처검증은메인후속, 최종미디어·시간·인도는미완료다.

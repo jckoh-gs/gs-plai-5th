@@ -1238,7 +1238,7 @@
     {
       "id": "UI-04",
       "description": "이벤트 로그 / #logs",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/unit-round5.log",
@@ -1283,9 +1283,105 @@
         {
           "path": "docs/product/REVIEW-030.md",
           "sha256": "add6762f9c6bc296a107359c3b213100afe79e7bae037c25f91321cb2bd725be"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-summary.json",
+          "sha256": "16595539703780a9d7242ab275f1770efa9e1aa29f8efdcb74a39df54f747d07"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/root-recovery-review/summary.json",
+          "sha256": "47e560556507cf7c62ebafc9ad2ecd4fe48a041eeb4d856b9cb4d7092ebff717"
+        },
+        {
+          "path": "docs/product/REVIEW-032.md",
+          "sha256": "35da121feda5a2f9ae44ac0ad8f6f130458a803580aa5c4a1752ce162598ae54"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-init.json",
+          "sha256": "0f4cbaad2b593a49dc3e0fbe1a5b0c2a82b7f1c16cc25520f76c153ec3f42a3c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-preview.json",
+          "sha256": "873bc66fa6d920a6eb10a40bd5bbf2c7e37b114101f1849ff68a16fc66d08d0a"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-mqtt.json",
+          "sha256": "22968e2b232e9f9ca9e671c3e47c235674c8e31ed93b0dfd927e25450af78b19"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-export/result.json",
+          "sha256": "cb502bb8f2cd17ed71d38e693c0e0cb39cf042162dded8b8734893ac3d4e6bab"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-served-assets.json",
+          "sha256": "a2a976dc45004cb4bba16d3619ea33299361f189fdb93d0b1fa0b60f21ba9740"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-init.json",
+          "sha256": "0f4cbaad2b593a49dc3e0fbe1a5b0c2a82b7f1c16cc25520f76c153ec3f42a3c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-preview.json",
+          "sha256": "9e6edc38757fe709e9ef428ba98114468530946ff7870cbc45e11678d4ae245c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-mqtt.json",
+          "sha256": "41c3cf580afb9eba5df2b2caad9530d3b3f01a37c02b915929e01295840e8038"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-export/result.json",
+          "sha256": "277ac8d5c7f0d7d6f6a38de57124f633fd9bc0f8094ba6b1739b853466c0634e"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-served-assets.json",
+          "sha256": "63a7ad9774645ca07beb37993ac1ce1e8eccd1949a75cb75effc91c2b78f0cc0"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restored-command-form/result.json",
+          "sha256": "662d1849d2660e1ee7d29bef973817c276b795d16e0f56a30d944feb133fa1c9"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restored-command-receipts/result.json",
+          "sha256": "f2c0163d7beec5e33ec75e267008ee10d0535b41a926aa312ce1f69555fc13aa"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restored-event-time/result.json",
+          "sha256": "eadbe5c8deeb2b09780e1774415a5accacb3a9af784ed769e6196f9409b2be5e"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/backward-command-form/result.json",
+          "sha256": "bb6756d02d672ffdab700f12e92e29eff3fe079a46698e9ac808c42edf91c64c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/backward-command-receipts/result.json",
+          "sha256": "44e9ce8f9dbe22dfce20732d1b1048b9758a660d94c92ce2a72a926af978dcf6"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-pod.json",
+          "sha256": "ce4544b0c548b9d61ff09e1d4cc6efc2f874e7f005e2cb0b254b4bd49cefd7c3"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-pod.json",
+          "sha256": "10d5bf10b3b7902d0e5e7065465cd4bb4f6395efee0e5f68b4df00151be4d9fd"
         }
       ],
-      "assessment": "REVIEW030: actual4stored events KST/accessibleUTC/order/message matched; synthetic5 invalid/missing/leap/midnight and browserTZ/narrow checks, mutation0. Canonicalhelper/calendar validation and unchangedserver80/global/order source inspected. Local281tests+auth/receipt/form regressions PASS; no actual80row newfixture claim. Main1.5 ISSUE023 remains until exact1.6 remote/current-backwardrestore gates; form201guard followup onlysyntaxchecked so nextrestore must exercise. Finalmedia/time separate.",
+      "assessment": "REVIEW032: actual main1.6 59events and freshrestore79 KST/UTC/read-only proof plus localcanonicalboundary evidence. Independently read19PASS reports+2actualPod identities (21checks), same851673088B/9bd fresh1.6/backward1.5, bothform44/receipt14/UI/preview/export/MQTT. Backward1.5 eventtime fix not asserted; scenario scope originalIDpreservation only. Rootactualcleanup both0/noPods/4BoundPVC/portsfree and main5normal verified. Functional gates complete; stabletags/manifest provenance and finalmedia/time/inventory separate.",
       "auditRound": "005"
     },
     {
@@ -7515,7 +7611,7 @@
     {
       "id": "AT-EVENT-TIME-01-01",
       "description": "실제 최소2시각·KST 날짜경계·원본UTC",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/result.json",
@@ -7536,14 +7632,110 @@
         {
           "path": "docs/product/REVIEW-030.md",
           "sha256": "add6762f9c6bc296a107359c3b213100afe79e7bae037c25f91321cb2bd725be"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-summary.json",
+          "sha256": "16595539703780a9d7242ab275f1770efa9e1aa29f8efdcb74a39df54f747d07"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/root-recovery-review/summary.json",
+          "sha256": "47e560556507cf7c62ebafc9ad2ecd4fe48a041eeb4d856b9cb4d7092ebff717"
+        },
+        {
+          "path": "docs/product/REVIEW-032.md",
+          "sha256": "35da121feda5a2f9ae44ac0ad8f6f130458a803580aa5c4a1752ce162598ae54"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-init.json",
+          "sha256": "0f4cbaad2b593a49dc3e0fbe1a5b0c2a82b7f1c16cc25520f76c153ec3f42a3c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-preview.json",
+          "sha256": "873bc66fa6d920a6eb10a40bd5bbf2c7e37b114101f1849ff68a16fc66d08d0a"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-mqtt.json",
+          "sha256": "22968e2b232e9f9ca9e671c3e47c235674c8e31ed93b0dfd927e25450af78b19"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-export/result.json",
+          "sha256": "cb502bb8f2cd17ed71d38e693c0e0cb39cf042162dded8b8734893ac3d4e6bab"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-served-assets.json",
+          "sha256": "a2a976dc45004cb4bba16d3619ea33299361f189fdb93d0b1fa0b60f21ba9740"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-init.json",
+          "sha256": "0f4cbaad2b593a49dc3e0fbe1a5b0c2a82b7f1c16cc25520f76c153ec3f42a3c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-preview.json",
+          "sha256": "9e6edc38757fe709e9ef428ba98114468530946ff7870cbc45e11678d4ae245c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-mqtt.json",
+          "sha256": "41c3cf580afb9eba5df2b2caad9530d3b3f01a37c02b915929e01295840e8038"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-export/result.json",
+          "sha256": "277ac8d5c7f0d7d6f6a38de57124f633fd9bc0f8094ba6b1739b853466c0634e"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-served-assets.json",
+          "sha256": "63a7ad9774645ca07beb37993ac1ce1e8eccd1949a75cb75effc91c2b78f0cc0"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restored-command-form/result.json",
+          "sha256": "662d1849d2660e1ee7d29bef973817c276b795d16e0f56a30d944feb133fa1c9"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restored-command-receipts/result.json",
+          "sha256": "f2c0163d7beec5e33ec75e267008ee10d0535b41a926aa312ce1f69555fc13aa"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restored-event-time/result.json",
+          "sha256": "eadbe5c8deeb2b09780e1774415a5accacb3a9af784ed769e6196f9409b2be5e"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/backward-command-form/result.json",
+          "sha256": "bb6756d02d672ffdab700f12e92e29eff3fe079a46698e9ac808c42edf91c64c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/backward-command-receipts/result.json",
+          "sha256": "44e9ce8f9dbe22dfce20732d1b1048b9758a660d94c92ce2a72a926af978dcf6"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-pod.json",
+          "sha256": "ce4544b0c548b9d61ff09e1d4cc6efc2f874e7f005e2cb0b254b4bd49cefd7c3"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-pod.json",
+          "sha256": "10d5bf10b3b7902d0e5e7065465cd4bb4f6395efee0e5f68b4df00151be4d9fd"
         }
       ],
-      "assessment": "REVIEW030: actual4stored events KST/accessibleUTC/order/message matched; synthetic5 invalid/missing/leap/midnight and browserTZ/narrow checks, mutation0. Canonicalhelper/calendar validation and unchangedserver80/global/order source inspected. Local281tests+auth/receipt/form regressions PASS; no actual80row newfixture claim. Main1.5 ISSUE023 remains until exact1.6 remote/current-backwardrestore gates; form201guard followup onlysyntaxchecked so nextrestore must exercise. Finalmedia/time separate."
+      "assessment": "REVIEW032: actual main1.6 59events and freshrestore79 KST/UTC/read-only proof plus localcanonicalboundary evidence. Independently read19PASS reports+2actualPod identities (21checks), same851673088B/9bd fresh1.6/backward1.5, bothform44/receipt14/UI/preview/export/MQTT. Backward1.5 eventtime fix not asserted; scenario scope originalIDpreservation only. Rootactualcleanup both0/noPods/4BoundPVC/portsfree and main5normal verified. Functional gates complete; stabletags/manifest provenance and finalmedia/time/inventory separate."
     },
     {
       "id": "AT-EVENT-TIME-01-02",
       "description": "canonical 시각 검증·누락/오류 대시·비추정",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/result.json",
@@ -7564,14 +7756,110 @@
         {
           "path": "docs/product/REVIEW-030.md",
           "sha256": "add6762f9c6bc296a107359c3b213100afe79e7bae037c25f91321cb2bd725be"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-summary.json",
+          "sha256": "16595539703780a9d7242ab275f1770efa9e1aa29f8efdcb74a39df54f747d07"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/root-recovery-review/summary.json",
+          "sha256": "47e560556507cf7c62ebafc9ad2ecd4fe48a041eeb4d856b9cb4d7092ebff717"
+        },
+        {
+          "path": "docs/product/REVIEW-032.md",
+          "sha256": "35da121feda5a2f9ae44ac0ad8f6f130458a803580aa5c4a1752ce162598ae54"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-init.json",
+          "sha256": "0f4cbaad2b593a49dc3e0fbe1a5b0c2a82b7f1c16cc25520f76c153ec3f42a3c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-preview.json",
+          "sha256": "873bc66fa6d920a6eb10a40bd5bbf2c7e37b114101f1849ff68a16fc66d08d0a"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-mqtt.json",
+          "sha256": "22968e2b232e9f9ca9e671c3e47c235674c8e31ed93b0dfd927e25450af78b19"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-export/result.json",
+          "sha256": "cb502bb8f2cd17ed71d38e693c0e0cb39cf042162dded8b8734893ac3d4e6bab"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-served-assets.json",
+          "sha256": "a2a976dc45004cb4bba16d3619ea33299361f189fdb93d0b1fa0b60f21ba9740"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-init.json",
+          "sha256": "0f4cbaad2b593a49dc3e0fbe1a5b0c2a82b7f1c16cc25520f76c153ec3f42a3c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-preview.json",
+          "sha256": "9e6edc38757fe709e9ef428ba98114468530946ff7870cbc45e11678d4ae245c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-mqtt.json",
+          "sha256": "41c3cf580afb9eba5df2b2caad9530d3b3f01a37c02b915929e01295840e8038"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-export/result.json",
+          "sha256": "277ac8d5c7f0d7d6f6a38de57124f633fd9bc0f8094ba6b1739b853466c0634e"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-served-assets.json",
+          "sha256": "63a7ad9774645ca07beb37993ac1ce1e8eccd1949a75cb75effc91c2b78f0cc0"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restored-command-form/result.json",
+          "sha256": "662d1849d2660e1ee7d29bef973817c276b795d16e0f56a30d944feb133fa1c9"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restored-command-receipts/result.json",
+          "sha256": "f2c0163d7beec5e33ec75e267008ee10d0535b41a926aa312ce1f69555fc13aa"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restored-event-time/result.json",
+          "sha256": "eadbe5c8deeb2b09780e1774415a5accacb3a9af784ed769e6196f9409b2be5e"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/backward-command-form/result.json",
+          "sha256": "bb6756d02d672ffdab700f12e92e29eff3fe079a46698e9ac808c42edf91c64c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/backward-command-receipts/result.json",
+          "sha256": "44e9ce8f9dbe22dfce20732d1b1048b9758a660d94c92ce2a72a926af978dcf6"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-pod.json",
+          "sha256": "ce4544b0c548b9d61ff09e1d4cc6efc2f874e7f005e2cb0b254b4bd49cefd7c3"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-pod.json",
+          "sha256": "10d5bf10b3b7902d0e5e7065465cd4bb4f6395efee0e5f68b4df00151be4d9fd"
         }
       ],
-      "assessment": "REVIEW030: actual4stored events KST/accessibleUTC/order/message matched; synthetic5 invalid/missing/leap/midnight and browserTZ/narrow checks, mutation0. Canonicalhelper/calendar validation and unchangedserver80/global/order source inspected. Local281tests+auth/receipt/form regressions PASS; no actual80row newfixture claim. Main1.5 ISSUE023 remains until exact1.6 remote/current-backwardrestore gates; form201guard followup onlysyntaxchecked so nextrestore must exercise. Finalmedia/time separate."
+      "assessment": "REVIEW032: actual main1.6 59events and freshrestore79 KST/UTC/read-only proof plus localcanonicalboundary evidence. Independently read19PASS reports+2actualPod identities (21checks), same851673088B/9bd fresh1.6/backward1.5, bothform44/receipt14/UI/preview/export/MQTT. Backward1.5 eventtime fix not asserted; scenario scope originalIDpreservation only. Rootactualcleanup both0/noPods/4BoundPVC/portsfree and main5normal verified. Functional gates complete; stabletags/manifest provenance and finalmedia/time/inventory separate."
     },
     {
       "id": "AT-EVENT-TIME-01-03",
       "description": "순서/80개/전역/메시지·읽기불변·접근성/안전",
-      "status": "verified_local",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/result.json",
@@ -7592,14 +7880,110 @@
         {
           "path": "docs/product/REVIEW-030.md",
           "sha256": "add6762f9c6bc296a107359c3b213100afe79e7bae037c25f91321cb2bd725be"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-summary.json",
+          "sha256": "16595539703780a9d7242ab275f1770efa9e1aa29f8efdcb74a39df54f747d07"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/root-recovery-review/summary.json",
+          "sha256": "47e560556507cf7c62ebafc9ad2ecd4fe48a041eeb4d856b9cb4d7092ebff717"
+        },
+        {
+          "path": "docs/product/REVIEW-032.md",
+          "sha256": "35da121feda5a2f9ae44ac0ad8f6f130458a803580aa5c4a1752ce162598ae54"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-init.json",
+          "sha256": "0f4cbaad2b593a49dc3e0fbe1a5b0c2a82b7f1c16cc25520f76c153ec3f42a3c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-preview.json",
+          "sha256": "873bc66fa6d920a6eb10a40bd5bbf2c7e37b114101f1849ff68a16fc66d08d0a"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-mqtt.json",
+          "sha256": "22968e2b232e9f9ca9e671c3e47c235674c8e31ed93b0dfd927e25450af78b19"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-export/result.json",
+          "sha256": "cb502bb8f2cd17ed71d38e693c0e0cb39cf042162dded8b8734893ac3d4e6bab"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-served-assets.json",
+          "sha256": "a2a976dc45004cb4bba16d3619ea33299361f189fdb93d0b1fa0b60f21ba9740"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-init.json",
+          "sha256": "0f4cbaad2b593a49dc3e0fbe1a5b0c2a82b7f1c16cc25520f76c153ec3f42a3c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-preview.json",
+          "sha256": "9e6edc38757fe709e9ef428ba98114468530946ff7870cbc45e11678d4ae245c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-mqtt.json",
+          "sha256": "41c3cf580afb9eba5df2b2caad9530d3b3f01a37c02b915929e01295840e8038"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-export/result.json",
+          "sha256": "277ac8d5c7f0d7d6f6a38de57124f633fd9bc0f8094ba6b1739b853466c0634e"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-served-assets.json",
+          "sha256": "63a7ad9774645ca07beb37993ac1ce1e8eccd1949a75cb75effc91c2b78f0cc0"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restored-command-form/result.json",
+          "sha256": "662d1849d2660e1ee7d29bef973817c276b795d16e0f56a30d944feb133fa1c9"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restored-command-receipts/result.json",
+          "sha256": "f2c0163d7beec5e33ec75e267008ee10d0535b41a926aa312ce1f69555fc13aa"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restored-event-time/result.json",
+          "sha256": "eadbe5c8deeb2b09780e1774415a5accacb3a9af784ed769e6196f9409b2be5e"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/backward-command-form/result.json",
+          "sha256": "bb6756d02d672ffdab700f12e92e29eff3fe079a46698e9ac808c42edf91c64c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/backward-command-receipts/result.json",
+          "sha256": "44e9ce8f9dbe22dfce20732d1b1048b9758a660d94c92ce2a72a926af978dcf6"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-pod.json",
+          "sha256": "ce4544b0c548b9d61ff09e1d4cc6efc2f874e7f005e2cb0b254b4bd49cefd7c3"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-pod.json",
+          "sha256": "10d5bf10b3b7902d0e5e7065465cd4bb4f6395efee0e5f68b4df00151be4d9fd"
         }
       ],
-      "assessment": "REVIEW030: actual4stored events KST/accessibleUTC/order/message matched; synthetic5 invalid/missing/leap/midnight and browserTZ/narrow checks, mutation0. Canonicalhelper/calendar validation and unchangedserver80/global/order source inspected. Local281tests+auth/receipt/form regressions PASS; no actual80row newfixture claim. Main1.5 ISSUE023 remains until exact1.6 remote/current-backwardrestore gates; form201guard followup onlysyntaxchecked so nextrestore must exercise. Finalmedia/time separate."
+      "assessment": "REVIEW032: actual main1.6 59events and freshrestore79 KST/UTC/read-only proof plus localcanonicalboundary evidence. Independently read19PASS reports+2actualPod identities (21checks), same851673088B/9bd fresh1.6/backward1.5, bothform44/receipt14/UI/preview/export/MQTT. Backward1.5 eventtime fix not asserted; scenario scope originalIDpreservation only. Rootactualcleanup both0/noPods/4BoundPVC/portsfree and main5normal verified. Functional gates complete; stabletags/manifest provenance and finalmedia/time/inventory separate."
     },
     {
       "id": "AT-EVENT-TIME-01-04",
       "description": "브라우저/좁은화면·정확k3s·현재/하위복원",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/candidate-1.6-event-time-round1/result.json",
@@ -7620,9 +8004,105 @@
         {
           "path": "docs/product/REVIEW-030.md",
           "sha256": "add6762f9c6bc296a107359c3b213100afe79e7bae037c25f91321cb2bd725be"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-summary.json",
+          "sha256": "16595539703780a9d7242ab275f1770efa9e1aa29f8efdcb74a39df54f747d07"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/root-recovery-review/summary.json",
+          "sha256": "47e560556507cf7c62ebafc9ad2ecd4fe48a041eeb4d856b9cb4d7092ebff717"
+        },
+        {
+          "path": "docs/product/REVIEW-032.md",
+          "sha256": "35da121feda5a2f9ae44ac0ad8f6f130458a803580aa5c4a1752ce162598ae54"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-init.json",
+          "sha256": "0f4cbaad2b593a49dc3e0fbe1a5b0c2a82b7f1c16cc25520f76c153ec3f42a3c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-preview.json",
+          "sha256": "873bc66fa6d920a6eb10a40bd5bbf2c7e37b114101f1849ff68a16fc66d08d0a"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-mqtt.json",
+          "sha256": "22968e2b232e9f9ca9e671c3e47c235674c8e31ed93b0dfd927e25450af78b19"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-export/result.json",
+          "sha256": "cb502bb8f2cd17ed71d38e693c0e0cb39cf042162dded8b8734893ac3d4e6bab"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-served-assets.json",
+          "sha256": "a2a976dc45004cb4bba16d3619ea33299361f189fdb93d0b1fa0b60f21ba9740"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-init.json",
+          "sha256": "0f4cbaad2b593a49dc3e0fbe1a5b0c2a82b7f1c16cc25520f76c153ec3f42a3c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-data.json",
+          "sha256": "32b66c7e4456e7b9a76891257ea45a45b4d027dc48e5bd1e074ae22225876274"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-preview.json",
+          "sha256": "9e6edc38757fe709e9ef428ba98114468530946ff7870cbc45e11678d4ae245c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-mqtt.json",
+          "sha256": "41c3cf580afb9eba5df2b2caad9530d3b3f01a37c02b915929e01295840e8038"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-browser/result.json",
+          "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-export/result.json",
+          "sha256": "277ac8d5c7f0d7d6f6a38de57124f633fd9bc0f8094ba6b1739b853466c0634e"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-served-assets.json",
+          "sha256": "63a7ad9774645ca07beb37993ac1ce1e8eccd1949a75cb75effc91c2b78f0cc0"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restored-command-form/result.json",
+          "sha256": "662d1849d2660e1ee7d29bef973817c276b795d16e0f56a30d944feb133fa1c9"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restored-command-receipts/result.json",
+          "sha256": "f2c0163d7beec5e33ec75e267008ee10d0535b41a926aa312ce1f69555fc13aa"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restored-event-time/result.json",
+          "sha256": "eadbe5c8deeb2b09780e1774415a5accacb3a9af784ed769e6196f9409b2be5e"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/backward-command-form/result.json",
+          "sha256": "bb6756d02d672ffdab700f12e92e29eff3fe079a46698e9ac808c42edf91c64c"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/backward-command-receipts/result.json",
+          "sha256": "44e9ce8f9dbe22dfce20732d1b1048b9758a660d94c92ce2a72a926af978dcf6"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-1.6-pod.json",
+          "sha256": "ce4544b0c548b9d61ff09e1d4cc6efc2f874e7f005e2cb0b254b4bd49cefd7c3"
+        },
+        {
+          "path": "deploy/verification/candidate-331ab9a/restore-backward-pod.json",
+          "sha256": "10d5bf10b3b7902d0e5e7065465cd4bb4f6395efee0e5f68b4df00151be4d9fd"
         }
       ],
-      "assessment": "REVIEW030: actual4stored events KST/accessibleUTC/order/message matched; synthetic5 invalid/missing/leap/midnight and browserTZ/narrow checks, mutation0. Canonicalhelper/calendar validation and unchangedserver80/global/order source inspected. Local281tests+auth/receipt/form regressions PASS; no actual80row newfixture claim. Main1.5 ISSUE023 remains until exact1.6 remote/current-backwardrestore gates; form201guard followup onlysyntaxchecked so nextrestore must exercise. Finalmedia/time separate."
+      "assessment": "REVIEW032: actual main1.6 59events and freshrestore79 KST/UTC/read-only proof plus localcanonicalboundary evidence. Independently read19PASS reports+2actualPod identities (21checks), same851673088B/9bd fresh1.6/backward1.5, bothform44/receipt14/UI/preview/export/MQTT. Backward1.5 eventtime fix not asserted; scenario scope originalIDpreservation only. Rootactualcleanup both0/noPods/4BoundPVC/portsfree and main5normal verified. Functional gates complete; stabletags/manifest provenance and finalmedia/time/inventory separate."
     }
   ],
   "reviewedSource": {

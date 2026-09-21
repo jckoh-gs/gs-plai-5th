@@ -6,7 +6,7 @@ The image registry binds only node loopback `127.0.0.1:15050`. k3s/containerd us
 
 ## Current run and access
 
-The actual deployment is candidate **1.6.0 / PRD1.13 / runtime331ab9a / image4af99e7b**. Its full recovery acceptance is still pending. The verified recovery fallback is **1.5.0 / runtime6d165d1**, with the719527936-byte ad34 snapshot and immutable checkpoint1.5. ISSUE023 (missing audit timestamps) remains a known limitation of that fallback. Do not combine candidate images with historical backup evidence.
+The actual deployment is **1.6.0 / PRD1.13 / runtime331ab9a / image4af99e7b**. Independent functional acceptance includes the exact851673088-byte9bd snapshot restored on fresh current1.6 and backward1.5 PVCs. The new immutable manifest/tag connection is being finalized. Retain historical **1.5.0 / runtime6d165d1** with its719527936-byte ad34 snapshot and immutable checkpoint1.5; missing event timestamps remain a limitation of that older runtime. Do not combine current images with historical backup evidence.
 
 Use [run.json](../docs/operations/run.json) for the current deployment and selected backup, [resume.json](../docs/operations/resume.json) for owned processes and unfinished operations, and [NEXT-ACTIONS](../docs/operations/NEXT-ACTIONS.md) for the next step. These records supersede historical checkpoint descriptions below. Reconcile actual image/Ready/API and pending operation outcomes before changing anything; a lost local connection is not authorization to repeat rollout, control or restore writes.
 

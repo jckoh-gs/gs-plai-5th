@@ -1,0 +1,8 @@
+{
+  "deployment/grid-restore-331ab9a": "absent",
+  "pvc/grid-restore-331ab9a-data": "absent",
+  "pvc/grid-restore-331ab9a-mqtt-data": "absent",
+  "deployment/grid-restore-back-331ab9a": "absent",
+  "pvc/grid-restore-back-331ab9a-data": "absent",
+  "pvc/grid-restore-back-331ab9a-mqtt-data": "absent"
+}

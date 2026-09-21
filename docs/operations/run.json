@@ -4,7 +4,7 @@
   "freezeAt": "2026-09-21T21:37:33.079009+00:00",
   "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
   "timezone": "Asia/Seoul",
-  "phase": "remote-candidate-verification",
+  "phase": "verified-runtime-observation",
   "scope": "greenfield; mandatory k3s deployment",
   "context": "charles-k3s",
   "namespace": "gs-plai-5h",
@@ -24,15 +24,15 @@
     "deployment": "/root/deployment"
   },
   "checks": {
-    "localUnit": "PASS267unique currentworkstation tests aftermedia operationalchanges; runtime6dlocal263 was separatelyverified",
-    "exactImageUnit": "PASS77app-only tests21files inexact6d/2fd image; UI/media/operations notshipped andnotcountedasimagetests",
+    "localUnit": "PASS290 full operational suite; subsequent outbox adaptation focused5 tests overlap and are not additive; runtime1.6 local281 separately verified",
+    "exactImageUnit": "PASS77 app-only tests/21files exact331/4af image; UI/media/ops excluded",
     "localIntegration": "PASS exactimage isolatedactualbroker integration",
     "localAdvanced": "PASS exactimage isolatedactualbroker advanced",
-    "browserCandidate": "PASS localreceipt14cases/form44 and priorregressions; mainreadonly19checks; exact1.5restore receipt14/form44 andbackward1.4form44 withoriginalsettingscleanup",
-    "remote": "PASS actual1.5 Ready/UI/API/MQTT125/error0 and actualPod replacement with identical durableoutboxbody/PUBACK; original5settings restored",
-    "backupRestore": "PASS same719527936B/ad34 snapshot exactcurrent1.5+backward1.4 19proofs; newPVCs each; scaled0/Pod0/tunnelclosed/4PVCretained; rootlivecleanupreview",
-    "releaseManifest": "PASS immutable1.5 checkpoint1177hashes/actualReady/exactbackupSHA; independentREVIEW028; bothstabletagsruntime6d pushed",
-    "imageSecurity": "Exact2fd SBOM130/4knownunfixedmatches2CVEs unchanged; freshall-dependency npm audit0, nozeroimagevulnerabilityclaim",
+    "browserCandidate": "PASS main actual59event/read regressions; fresh1.6 form44/receipt14/event79; backward1.5 form44/receipt14; actual201 baseline restoration",
+    "remote": "PASS actualmain1.6 Ready/API/UI/MQTT125 error0; actualPodreplacement identical durablebody/PUBACK; original5 settings healthy/pending0",
+    "backupRestore": "PASS same851673088B/9bd exactcurrent1.6/backward1.5 freshPVC;19reports+2Podidentities=21evidence; both0/noPods/portsclosed/4BoundPVCretained; root andREVIEW032",
+    "releaseManifest": "Pending new1.6 immutablemanifest/tag; immutable1.5 fallback retained",
+    "imageSecurity": "Exact4af SBOM130/4knownunfixedmatches2CVEs; npm audit0; no zeroimagevulnerability claim",
     "media": "Correctedlocal8scene249.33s/272.706sproduction/normalrecovery/frames/subtitle technicalaudioPASS; no listeningclaim; finalvideo andsame-videoPPT pending originalwindow"
   },
   "notes": [
@@ -67,59 +67,66 @@
   },
   "backup": {
     "result": "PASS",
-    "capturedAt": "2026-09-21T14:54:52.173Z",
-    "verifiedAt": "2026-09-21T14:55:19.317Z",
-    "sourceCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
-    "appImage": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+    "capturedAt": "2026-09-21T16:03:55.305Z",
+    "verifiedAt": "2026-09-21T16:04:25.991Z",
+    "sourceCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+    "appImage": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
     "verifiedTransferPod": {
-      "name": "grid-79fdb78bf8-6rbjz",
-      "uid": "62d0d7fd-915d-41e4-990b-5714fc7a6901",
-      "image": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
-      "imageID": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f"
+      "name": "grid-5c4f47d7fd-pskhb",
+      "uid": "581d826a-8a9f-4adb-8c3c-8229a2ba151a",
+      "image": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
+      "imageID": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70"
     },
     "podVerificationStage": "transfer",
-    "remotePath": "/data/stable-6d165d1-20260921T145446277Z.sqlite",
-    "localPath": "artifacts/private/backups/stable-6d165d1-20260921T145446277Z.sqlite",
-    "bytes": 719527936,
-    "sha256": "ad34a074276243fb1b83d7fe081aa7631c9d2d51d0697e9d0dca5d7e5f349b24",
-    "compressedBytes": 24369468,
-    "verifiedChunks": 24,
+    "remotePath": "/data/stable-331ab9a-20260921T160352142Z.sqlite",
+    "localPath": "artifacts/private/backups/stable-331ab9a-20260921T160352142Z.sqlite",
+    "bytes": 851673088,
+    "sha256": "9bd8becb4211ee0edd9217db99e05b63d8fa3f5437a8e4cc7be2ace449cb3137",
+    "compressedBytes": 29422512,
+    "verifiedChunks": 29,
     "transferChunkBytes": 1048576,
-    "remoteCompressionPeakRssBytes": 128929792,
-    "localPeakRssBytes": 268992512,
+    "remoteCompressionPeakRssBytes": 131399680,
+    "localPeakRssBytes": 264978432,
     "integrity": "ok",
     "plants": 5,
-    "pending": 0,
-    "method": "online node:sqlite backup; streaming gzip and disk-backed chunk+whole SHA256 verification; private0600 copy",
+    "pending": 10,
+    "snapshot": {
+      "result": "PASS",
+      "workerExitConfirmed": true,
+      "integrity": "ok",
+      "stage": "verified",
+      "steps": 2079,
+      "totalPages": 207928,
+      "remainingPages": 0,
+      "elapsedMs": 2652,
+      "snapshotAt": 1790006633671,
+      "supervisorMaxMs": 80000,
+      "hostCommandMaxMs": 90000
+    },
+    "snapshotCreation": "new-supervised",
+    "method": "fixed WAL read snapshot; supervised node:sqlite backup; streaming gzip and disk-backed chunk+whole SHA256 verification; private0600 copy",
     "timePolicy": {
-      "startedAt": "2026-09-21T14:54:46.277Z",
-      "stopAt": "2026-09-21T14:57:46.277Z",
+      "startedAt": "2026-09-21T16:03:52.142Z",
+      "stopAt": "2026-09-21T16:06:52.142Z",
       "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
       "remoteCancellationGuaranteed": false
     }
   },
   "stableCheckpoint": {
-    "productVersion": "1.5.0",
-    "prdVersion": "1.12",
-    "runtimeCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
-    "tag": "stable-v1.5.0",
-    "alias": "stable-runtime-v1.5.0-6d165d1",
-    "manifest": "artifacts/releases/checkpoint-1.5.0.json",
-    "manifestState": "verified",
-    "backupEvidence": "deploy/verification/stable-backup-6d165d1.json",
-    "recoveryEvidence": "deploy/verification/candidate-6d165d1/restore-summary.json",
-    "independentFunctionalReview": "docs/product/REVIEW-027.md",
-    "scope": "Verified functional runtime/recovery; overallgoal awaits finalmedia/time/delivery gates",
-    "manifestSha256": "6b3940ed7190530c046594186febff54d2e0ee93b0a0856e314c5c3ca3762ff7",
-    "manifestVerification": {
-      "result": "PASS",
-      "manifest": "artifacts/releases/checkpoint-1.5.0.json",
-      "checkedHashes": 1177,
-      "remoteImageMatched": true,
-      "scope": "Rootverify-release --remote; functional19proofs REVIEW027 and futuremedia/time verdicts separate",
-      "manifestSourceCommit": "19e0c3a21e49e081be3cc1625fea403890932723",
-      "independentReview": "docs/product/REVIEW-028.md"
-    }
+    "productVersion": "1.6.0",
+    "prdVersion": "1.13",
+    "runtimeCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+    "tag": "stable-v1.6.0",
+    "tagScope": "Full operational/evidence checkpoint including backup hardening; tag pending manifest verification",
+    "alias": "stable-runtime-v1.6.0-331ab9a",
+    "aliasScope": "Exact runnable app build commit331ab9a",
+    "manifest": "artifacts/releases/checkpoint-1.6.0.json",
+    "manifestState": "pending-generation-after-evidence-commit",
+    "backupEvidence": "deploy/verification/stable-backup-331ab9a.json",
+    "recoveryEvidence": "deploy/verification/candidate-331ab9a/restore-summary.json",
+    "independentFunctionalReview": "docs/product/REVIEW-032.md",
+    "rootRecoveryReview": "deploy/verification/candidate-331ab9a/root-recovery-review/summary.json",
+    "scope": "Functional1.6 accepted; immutablemanifest/tag gates next; overallgoal finalmedia/time/delivery pending"
   },
   "candidate": {
     "productVersion": "1.6.0",
@@ -127,7 +134,7 @@
     "idea": "IDEA-010",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T15:11:02.306411+00:00",
-    "status": "Actualmain1.6 UI/API/MQTT/outbox PASS; freshselectedsnapshot andsamecurrent/backwardrestore next",
+    "status": "Functional acceptance complete REVIEW032; immutablemanifest/tag gates next",
     "fallbackTag": "stable-v1.5.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.5.0.json",
     "beforeEvidence": "artifacts/checkpoints/event-time-before/result.json",
@@ -155,7 +162,7 @@
       "eventBrowser": "PASS actual4storedtimes+synthetic5fixture rows/dateboundary/TZ/narrow andnoAPIwrites",
       "sourceSecurity": "PASS; harnessfixedstderrfindingverified; dependenciesunchanged",
       "integration": "PASS actualbroker integration+advanced",
-      "imageRemoteRestore": "pending",
+      "imageRemoteRestore": "PASS actualimage/main/current1.6/backward1.5 same9bd restoration",
       "authRegression": "PASS auth/SSE/stale/reconnect/narrow",
       "formReceipt": "PASS44form/14receipt cases, ownedbaselinecleanup; later201guard executionpendingrestore",
       "independentAcceptance": "REVIEW030:AT01-03 local,UI04/AT04partialuntilremoteproof",
@@ -180,8 +187,9 @@
       "sha256": "9bd8becb4211ee0edd9217db99e05b63d8fa3f5437a8e4cc7be2ace449cb3137",
       "bytes": 851673088,
       "rootReview": "deploy/verification/candidate-331ab9a/normal-backup/root-backup-review.json",
-      "state": "wholeSHA/integrityverified; samecurrent/backwardrestore inprogress; notyetstable"
-    }
+      "state": "Exactsame current1.6/backward1.5 restore androotcleanup plusindependentREVIEW032 verified"
+    },
+    "independentFunctionalReview": "docs/product/REVIEW-032.md"
   },
   "previousStableCheckpoints": [
     {
@@ -271,6 +279,29 @@
         "manifestSourceCommit": "bcc010c677196c1010b5e5a6c9b9bb1a8362bcdb",
         "independentReview": "docs/product/REVIEW-022.md"
       }
+    },
+    {
+      "productVersion": "1.5.0",
+      "prdVersion": "1.12",
+      "runtimeCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+      "tag": "stable-v1.5.0",
+      "alias": "stable-runtime-v1.5.0-6d165d1",
+      "manifest": "artifacts/releases/checkpoint-1.5.0.json",
+      "manifestState": "verified",
+      "backupEvidence": "deploy/verification/stable-backup-6d165d1.json",
+      "recoveryEvidence": "deploy/verification/candidate-6d165d1/restore-summary.json",
+      "independentFunctionalReview": "docs/product/REVIEW-027.md",
+      "scope": "Verified functional runtime/recovery; overallgoal awaits finalmedia/time/delivery gates",
+      "manifestSha256": "6b3940ed7190530c046594186febff54d2e0ee93b0a0856e314c5c3ca3762ff7",
+      "manifestVerification": {
+        "result": "PASS",
+        "manifest": "artifacts/releases/checkpoint-1.5.0.json",
+        "checkedHashes": 1177,
+        "remoteImageMatched": true,
+        "scope": "Rootverify-release --remote; functional19proofs REVIEW027 and futuremedia/time verdicts separate",
+        "manifestSourceCommit": "19e0c3a21e49e081be3cc1625fea403890932723",
+        "independentReview": "docs/product/REVIEW-028.md"
+      }
     }
   ],
   "soak": {
@@ -296,14 +327,14 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T16:05:34.325635+00:00",
+  "updatedAt": "2026-09-21T16:16:30.102284+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
     "scope": "Private ownership journal, interrupted-demo settings recovery, same-video reviewed-facts binder and portable deck packaging; no runtime change",
     "originalWindowUnchanged": true,
-    "contentPreparationReview": "docs/operations/MEDIA-1.5-COMPATIBILITY.md",
-    "contentPreparationScope": "Unreviewed1.5/PRD1.12 facts template exactevidence5paths confirmedinimmutablemanifest; finalvideo/facts/PPT pending originalwindow"
+    "contentPreparationReview": "docs/operations/MEDIA-1.6-COMPATIBILITY.md",
+    "contentPreparationScope": "Unreviewed1.6/PRD1.13 14slide template, real59/79eventproofs outside8filmedscenes; finalnewvideo/PPT pending originalwindow"
   },
   "operationalObservations": [
     {

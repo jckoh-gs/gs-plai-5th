@@ -457,7 +457,7 @@ IDEA009 browser harness 재사용 준비: isolated-restore 명시모드는 정�
 
 ## ISSUE-023 — 저장된 운영 이벤트 시각이 실제 화면에서 누락
 
-P2 진단 표시, 상태 OPEN/수정미착수. REVIEW029의 소스가설을 실제 인증된 main1.5 UI와GET/state로 독립 재현했다. artifacts/checkpoints/event-time-before/result.json은 서로다른created UTC값55개를 가진55행 모두 화면시각 “—”임을 대조한다. 해당 이벤트에는 timestamp/createdAt/time 필드가없다. 서버 Store.events()가 created를반환하는데 UI가다른세필드만time()에전달하는계약불일치가확정원인이다. 실제served index-CyjJuK5n SHA b6c12889… 확인, rendered HTML/PNG/소스복사/sha256보존. 현재로그화면은글로벌이며RTU선택/필터없음도기록했다.
+P2 진단 표시. 현재 상태: 1.6 현재 런타임의 기능 수정 검증 완료(로컬·실제 main·동일 snapshot 복원), 독립 제품 REVIEW032 진행 중. 최초 등록 상태는 OPEN/수정미착수였다. REVIEW029의 소스가설을 실제 인증된 main1.5 UI와GET/state로 독립 재현했다. artifacts/checkpoints/event-time-before/result.json은 서로다른created UTC값55개를 가진55행 모두 화면시각 “—”임을 대조한다. 해당 이벤트에는 timestamp/createdAt/time 필드가없다. 서버 Store.events()가 created를반환하는데 UI가다른세필드만time()에전달하는계약불일치가확정원인이다. 실제served index-CyjJuK5n SHA b6c12889… 확인, rendered HTML/PNG/소스복사/sha256보존. 현재로그화면은글로벌이며RTU선택/필터없음도기록했다.
 
 읽기만수행하여새이벤트/RTU/제어/시나리오/배포/관측기변경은없다. 토큰은브라우저session에만주입하고출력/HTML/이미지본문비노출을확인했다. 기존소스검토는가설이었고이번은실제표시누락재현이며1.5불변checkpoint를수정하지않았다.
 
@@ -520,3 +520,10 @@ pre-upgrade-backup-summary.json(15:37:24.126Z)은 최종 snapshot 부재/metadat
 ISSUE023 실제 원격1.6 읽기 검증 단계: deploy/verification/candidate-331ab9a/main-event-time/result.json PASS, 세션31506 exit0. main3104에서 기존59개 이벤트의 created를 독립 UTC+9h 계산값과 대조하여 표시 밀리초·KST 헤더·원본 UTC datetime/title/aria·ID 순서·메시지·level 일치를 확인했다. 실제 로드 index-v7p0JZRW.js SHA2bcc3c1bc75a178acf7dac51bd91436b6f5e30bd1c8e3f1a176980900417be06와 승인 바이트가 일치하며 pageErrors0/nonGET0이다. 화면 캡처도 직접 확인했다.
 
 운영 harness에 EVENT_ACTUAL_ONLY=1을 추가했고 main은 이를 요구한다. 이번 synthetic phase는 executed=false로 완전히 건너뛰었으며 기존 로컬 합성 기본값은 유지한다. node--check 통과 후 실제 main 한 번만 실행했다. HTML/PNG/실제행 비교 결과/실행 소스 복사와 sha256.json을 보존했으며 제어·등록·시나리오 등 API 쓰기와 runtime 변경은 없다. 원격 수정 표시를 입증한 단계이며 복원 및 독립 제품 검토가 남아 ISSUE023 전체 종결은 아직 보류한다.
+
+ISSUE023 현재1.6 격리 복원 읽기 검증 단계: 배포담당이 동일851673088바이트/9bd8 snapshot의 freshPVC 원본 데이터 대조를 마친 뒤3105를 인계했다. candidate-331ab9a/restored-event-time/result.json은 actual-only79개 기존 이벤트의 KST 표시/UTC 속성/ID 순서/메시지·level과 승인2bcc 번들을 대조해 PASS, synthetic.executed=false/nonGET0/pageErrors0이다. 원본 파일·HTML·PNG·실행 소스 및 SHA를 보존했다. 앞서 같은 복원본에서 순차 form44/5POST와 receipt14를 통과했고 고유 생성RTU만 정리하여 양 cleanup preExistingUnchanged=true/form actual201BaselinesRestored=true를 확인했다. 실제 main 제어 쓰기는 없다. ISSUE023의 현재 원격·복원 근거는 확보했으나 독립 제품 인수 판정은 아직 별도이며 전체종결을 선행하지 않는다.
+
+
+ISSUE023 현재 기능 수정 검증 완료: 로컬 무효/누락/윤일·날짜경계/호스트 시간대 독립 검증, 실제 main1.6의59개 및 현재1.6 복원본79개 저장 이벤트 대조가 통과했다. candidate-331ab9a/restore-summary.json과 root-recovery-review/summary.json(16:13:59.267395Z)은 동일9bd8becb4211ee0edd9217db99e05b63d8fa3f5437a8e4cc7be2ace449cb3137 snapshot의 현재1.6/이전1.5 freshPVC 복원19보고서+2Pod identity 근거를 확인한다. 양 버전 form44/receipt14도 통과했고 복원 Deployment0/Pod0/4PVC 보존을 확인했다. 이전1.5의 이벤트 시각 대시는 알려진 이전 동작이며 그 버전의 수정 통과로 표현하지 않는다. 독립 제품 REVIEW032는 진행 중이고 최종 media/전체 목표 완료는 별도다.
+
+ISSUE024와의 경계: helper 보완 후 실제 round2 및 후속 정상·pending snapshot 검증 성공은 백업 운영 경계의 후속 증거다. 최초1.5 stall의 근본 원인 미확정과 자원 경합의 잔여 위험은 그대로 남으며 ISSUE023 표시 수정 또는1.6 복원 성공으로 해소됐다고 간주하지 않는다.

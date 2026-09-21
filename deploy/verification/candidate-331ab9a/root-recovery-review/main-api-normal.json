@@ -1,0 +1,38 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:13:42.761Z",
+  "actualVersion": "1.6.0",
+  "originalFiveSettingsMatched": true,
+  "health": [
+    {
+      "id": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+      "health": "HEALTHY",
+      "pending": 0
+    },
+    {
+      "id": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+      "health": "HEALTHY",
+      "pending": 0
+    },
+    {
+      "id": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+      "health": "HEALTHY",
+      "pending": 0
+    },
+    {
+      "id": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+      "health": "HEALTHY",
+      "pending": 0
+    },
+    {
+      "id": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "health": "HEALTHY",
+      "pending": 0
+    }
+  ],
+  "gatewayConnected": true,
+  "isolatedForwardPortsFree": [
+    3105,
+    18885
+  ]
+}

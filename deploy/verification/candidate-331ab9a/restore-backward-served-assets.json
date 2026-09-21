@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "assets": [
+    {
+      "path": "/assets/index-CyjJuK5n.js",
+      "sha256": "b6c1288921d9fa2e67e284cdbf9596f3b81abeae6625f9500acd07970f2e1dda"
+    },
+    {
+      "path": "/assets/index-DEfqZjZ9.css",
+      "sha256": "51137c1c0da56706d8cbe87f873b7ace2b530ccdc07673e1fccf2b8cf93166db"
+    }
+  ],
+  "indexSha256": "f5e5ec7d01ee38625e5676bfa16d8a2b892278d4679fc923d61002eea28e58c9",
+  "comparedWith": "candidate-6d165d1/served-assets.json",
+  "eventTimeLimitation": "1.5 does not include1.6 canonical event time presentation"
+}

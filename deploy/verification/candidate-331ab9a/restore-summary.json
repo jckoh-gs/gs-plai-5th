@@ -1,0 +1,131 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:13:00.342787+00:00",
+  "backupMetadata": "deploy/verification/stable-backup-331ab9a.json",
+  "sameImmutableSnapshot": {
+    "bytes": 851673088,
+    "sha256": "9bd8becb4211ee0edd9217db99e05b63d8fa3f5437a8e4cc7be2ace449cb3137",
+    "remotePath": "/data/stable-331ab9a-20260921T160352142Z.sqlite"
+  },
+  "currentVersion": "1.6.0",
+  "backwardVersion": "1.5.0",
+  "reportProofCount": 19,
+  "actualPodIdentityProofCount": 2,
+  "totalEvidenceChecks": 21,
+  "checks": [
+    {
+      "path": "restore-1.6-init.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-1.6-data.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-1.6-preview.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-1.6-mqtt.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-1.6-browser/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-1.6-export/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-1.6-served-assets.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-backward-init.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-backward-data.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-backward-preview.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-backward-mqtt.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-backward-browser/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-backward-export/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-backward-served-assets.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-command-form/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-command-receipts/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "restored-event-time/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "backward-command-form/result.json",
+      "result": "PASS"
+    },
+    {
+      "path": "backward-command-receipts/result.json",
+      "result": "PASS"
+    }
+  ],
+  "actualPodIdentityChecks": [
+    {
+      "path": "restore-1.6-pod.json",
+      "uid": "262f2cfc-c732-4bf8-a8bb-ce9486b035d4",
+      "result": "PASS"
+    },
+    {
+      "path": "restore-backward-pod.json",
+      "uid": "9b807fa5-ebc9-46c2-90e6-9ceb08d0806f",
+      "result": "PASS"
+    }
+  ],
+  "originalDataVerifiedBeforeFixtureMutations": true,
+  "originalPlants": 5,
+  "originalScenarios": 1,
+  "formChecksPerVersion": 44,
+  "receiptChecksPerVersion": 14,
+  "currentActualEventsChecked": 79,
+  "backwardEventTime": "1.5 lacks canonical event-time UI; not asserted",
+  "scenarioScope": "Existing scenario IDs preserved; no new scenario/KMA functional test in this restoration round",
+  "cleanup": {
+    "bothDeploymentReplicas": 0,
+    "remainingPods": 0,
+    "ownedForwardsTerminal": [
+      73573,
+      79523
+    ],
+    "ports3105And18885Absent": true,
+    "retainedPVCs": [
+      "grid-restore-331ab9a-data",
+      "grid-restore-331ab9a-mqtt-data",
+      "grid-restore-back-331ab9a-data",
+      "grid-restore-back-331ab9a-mqtt-data"
+    ],
+    "backupsAndOldIncompletePartialPreserved": true
+  },
+  "mainMutationsFromRestoreTests": false,
+  "harnessFailures": []
+}

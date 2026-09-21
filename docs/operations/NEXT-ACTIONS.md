@@ -1,16 +1,20 @@
 # 자율 실행 인계
 
-실제 배포는 **제품1.6.0 / PRD1.13 / IDEA010**, 검증 완료된 복구 기준은 아직 **제품1.5.0 / PRD1.12**다. 1.6의 원격 UI·API·MQTT·실제 Pod 교체 outbox 확인은 완료했고, 새 선택 스냅샷·동일 스냅샷 복원·독립 인수가 남아 있다. 전체 목표는 미완료다. 같은 runId와 원래 마감으로 첫 미완료 단계부터 이어간다.
+실제 배포와 독립 기능 인수 기준은 **제품1.6.0 / PRD1.13 / IDEA010**이다. 원격 UI·API·MQTT·실제 Pod 교체 outbox 및 동일9bd 백업의 현재1.6/이전1.5 복원21근거와 메인 실제 정리를 확인했다. REVIEW032에서 기능 인수를 완료했고, 다음은 새 불변manifest와 태그 연결이다. 과거1.5/ad34 체크포인트는 보존한다. 전체 목표는 미완료다. 같은 runId와 원래 마감으로 첫 미완료 단계부터 이어간다.
 
 ## 현재 배포와 보존된 복구 기준
 
 - runtime `331ab9a00ee71a0924042e7952013d47495449d3`, app digest `sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70`.
-- k3s `charles-k3s` / namespace `gs-plai-5h` / deployment `grid`. 15:56:49Z 실제 Ready Pod `grid-84568548d5-2j8gw`, UID `7998ec33-5627-46a7-9458-e503445bde35`, app/broker restarts0/0. 재개 때 실제 상태를 다시 읽는다.
+- k3s `charles-k3s` / namespace `gs-plai-5h` / deployment `grid`. 16:13:59Z 실제 Ready Pod `grid-5c4f47d7fd-pskhb`, UID `581d826a-8a9f-4adb-8c3c-8229a2ba151a`, app/broker restarts0/0. 재개 때 실제 상태를 다시 읽는다.
 - [계획 배포](../../deploy/verification/candidate-331ab9a/rollout/proof.json): generation17→18, 전체 spec 중 app image 한 필드만 변경. [배포 후 읽기 검증](../../deploy/verification/candidate-331ab9a/post-rollout/summary.json): 원래5 RTU의 runID·설정·발전기·데이터·시나리오 유지, 인증 및 실제 JS `2bcc3c1b…` 일치.
 - 기존 정상 복구: `stable-v1.5.0` / `stable-runtime-v1.5.0-6d165d1`, runtime `6d165d1e8f3214a50ee66d2b13947f64d86658f5`, image `2fd3f21c…`. [REVIEW027](../product/REVIEW-027.md)의 동일 ad34 백업 current1.5/backward1.4 복원19근거를 보존한다.
 - [checkpoint-1.5.0.json](../../artifacts/releases/checkpoint-1.5.0.json): source `19e0c3a21e49e081be3cc1625fea403890932723`, SHA `6b3940ed7190530c046594186febff54d2e0ee93b0a0856e314c5c3ca3762ff7`. [REVIEW028](../product/REVIEW-028.md)의1177해시 독립 검증. 현재 파일이 바뀌면 역사 source를 `--at-commit`으로 검사한다. 불변 manifest를 덮어쓰지 않는다.
 - 선택된1.5 백업 [stable-backup-6d165d1.json](../../deploy/verification/stable-backup-6d165d1.json):719527936B, SHA `ad34a074276243fb1b83d7fe081aa7631c9d2d51d0697e9d0dca5d7e5f349b24`, private0600 전체 해시 검증. 해당 복원 rig2개 replicas0/Pods0·터널 닫힘·4PVC 보존 완료.
 - 별도 전환 전 [round2 백업](../../deploy/verification/pre-1.6.0-backup-round2.json):828805120B, SHA `b6e2e3dd458bca22ae4dc2522ce77daf47603214813cf9dbd9136c7f3d0e49be`, 생성·전송·무결성·전체 해시 완료. **이 파일의 복원 증명은 아직 없다.** 과거ad34 복원 증명을 재사용하지 않는다.
+
+현재 선택 백업은 [stable-backup-331ab9a.json](../../deploy/verification/stable-backup-331ab9a.json)의851673088B/`9bd8becb4211ee0edd9217db99e05b63d8fa3f5437a8e4cc7be2ace449cb3137`다. [복원 요약](../../deploy/verification/candidate-331ab9a/restore-summary.json)은19개 실제PASS보고서+2Pod identity를 구분한다. [메인 실제 확인](../../deploy/verification/candidate-331ab9a/root-recovery-review/summary.json): 양쪽0replicas/0Pods,4BoundPVC보존,3105/18885닫힘, 운영5RTU설정동일·HEALTHY·pending0. 완료한 복원과 제어를 재실행하지 않는다.
+
+새 `stable-runtime-v1.6.0-331ab9a`는 정확한 앱 build331을, `stable-v1.6.0`은 백업 개선을 포함한 전체 운영·근거 체크포인트를 가리키도록 만들 예정이다. 기존 태그는 옮기지 않는다.
 
 ## 원래 고정 일정
 
@@ -43,7 +47,7 @@ IDEA010/ISSUE023은 저장된 이벤트created UTC가 화면에서 대시로 보
 
 [로컬 집계](../../artifacts/checkpoints/candidate-1.6-local-summary.json)·[REVIEW030](../product/REVIEW-030.md)의 로컬281검사·실제broker 통합/고급·form44/receipt14·인증/브라우저·독립보안을 완료했다. 이후 운영백업 전체290검사는 별도이며 두 수치를 합치지 않는다. 정확331 이미지4af의77 app검사·MQTT·실제HTTP 파일·SBOM/보안도 완료했다. 이미지에 미해결OS 취약점4matches/2CVEs가 남아 있으며0개라고 주장하지 않는다.
 
-실제main [이벤트 시각](../../deploy/verification/candidate-331ab9a/main-event-time/result.json)은59행 KST/UTC·접근성·순서·메시지·번들 일치, API쓰기0·합성시험 미실행을 증명했다. 원격 회귀 시험 핸들은 resume에 기록한다. 실제MQTT125/error0과 Pod 교체 outbox 증명은 완료했다. [종료 후 정상 확인](../../deploy/verification/candidate-331ab9a/outbox-post-normal.json): root46862 exit0, 원래5설정 동일, 감독기16:03:24Z 재접속, 새UID581d826a. 다음은 새1.6 선택백업 → 정확히 같은 스냅샷 current1.6/backward1.5 독립PVC 복원이다. form44/receipt14 양쪽 및1.6 이벤트 시각 복원을 확인하고 독립 제품 인수 후 stable1.6으로 승격한다. 이전1.5의 이벤트 시각 표시 한계는 그대로 구분한다.
+실제main [이벤트 시각](../../deploy/verification/candidate-331ab9a/main-event-time/result.json)은59행 KST/UTC·접근성·순서·메시지·번들 일치, API쓰기0·합성시험 미실행을 증명했다. 원격 회귀 시험 핸들은 resume에 기록한다. 실제MQTT125/error0과 Pod 교체 outbox 증명은 완료했다. [종료 후 정상 확인](../../deploy/verification/candidate-331ab9a/outbox-post-normal.json): root46862 exit0, 원래5설정 동일, 감독기16:03:24Z 재접속, 새UID581d826a. 새1.6 선택백업과 정확히 같은 스냅샷 current1.6/backward1.5 독립PVC 복원을 완료했다. form44/receipt14 양쪽 및1.6 실제 이벤트79개, 독립 제품 인수까지 완료했다. 이전1.5의 이벤트 시각 표시 한계는 그대로 구분한다.
 
 ## 실제 백업 사건과 개선
 
@@ -58,6 +62,6 @@ operational commit `3c418081bf4b9f07d5bd4ff2de9e4c41873f7a19`의 새 helper는 W
 3. 원래 마지막30분 안에서 **신규 실제 UI 영상 → 설정 복원·영상 검수 → 같은 영상의 facts → 편집 가능한 PPT → 모든 슬라이드 검수 → 인도 검사**를 수행한다. 준비 리허설은 최종 결과가 아니다. 기술적 오디오 검사를 청취·발음 검수와 구분한다.
 4. 최종 정상 상태·원격 전달·산출물 해시/링크를 확인하고 이 실행의 heartbeat와 소유 터널을 종료한다. 원격 앱/PVC를 보존한다. 미디어·시간·인도 게이트 전 전체 완료를 선언하지 않는다.
 
-명령·컷오프는 [FINAL-RESTORE-PLAN.md](FINAL-RESTORE-PLAN.md), 영상은 [MEDIA-PLAN.md](MEDIA-PLAN.md), 인도는 [DELIVERY-PLAN.md](DELIVERY-PLAN.md)를 따른다. 현재 최종facts/restoreplan은 stable1.5 기준이며1.6 승격 후 갱신한다. 실제KMA/AWS/운영VPP 연동 성공은 미검증이다. untracked `artifacts/releases/current.json`은 과거 리허설용이므로 최종 선택에 쓰지 않는다.
+명령·컷오프는 [FINAL-RESTORE-PLAN.md](FINAL-RESTORE-PLAN.md), 영상은 [MEDIA-PLAN.md](MEDIA-PLAN.md), 인도는 [DELIVERY-PLAN.md](DELIVERY-PLAN.md)를 따른다. 최종facts는 검수전1.6 템플릿이며 [미디어 범위](MEDIA-1.6-COMPATIBILITY.md)에 별도59/79이벤트 증거와 영상8장면을 구분한다. 실제KMA/AWS/운영VPP 연동 성공은 미검증이다. untracked `artifacts/releases/current.json`은 과거 리허설용이므로 최종 선택에 쓰지 않는다.
 
 최종 백업 전 원본·압축본·전송본·복원PVC·성장량의 실제 공간을 확인한다. 공유hostFS 여유를 PVC 예약량으로 표현하지 않는다. 검증된 백업을 자동 삭제하지 않는다. 녹화가 중단되면 담당 핸들 종료를 확인한 뒤 private journal에 따라 recover-demo.cjs로 복구한다. 등록/시나리오 응답이 불확실하면 실제 상태를 대조하고 기존RTU를 일괄 초기화하지 않는다.

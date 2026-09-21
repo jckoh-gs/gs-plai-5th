@@ -1,0 +1,24 @@
+{
+  "pvcs": [
+    {
+      "name": "grid-restore-331ab9a-data",
+      "phase": "Bound",
+      "volumeName": "pvc-82fd7b73-7a5b-427f-bfbc-259696f5d8fe"
+    },
+    {
+      "name": "grid-restore-331ab9a-mqtt-data",
+      "phase": "Bound",
+      "volumeName": "pvc-33bf5de2-6af8-4e79-9f16-d8b20a6d1ab6"
+    },
+    {
+      "name": "grid-restore-back-331ab9a-data",
+      "phase": "Bound",
+      "volumeName": "pvc-16266b15-157f-47a6-8b5c-ab8a9f3317af"
+    },
+    {
+      "name": "grid-restore-back-331ab9a-mqtt-data",
+      "phase": "Bound",
+      "volumeName": "pvc-a0b4a34b-98a4-4c81-b2e5-5f9bcfd83f48"
+    }
+  ]
+}

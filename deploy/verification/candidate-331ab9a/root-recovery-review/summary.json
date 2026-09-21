@@ -1,0 +1,28 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:13:59.267395+00:00",
+  "actualReportProofsChecked": 19,
+  "actualPodIdentityProofs": 2,
+  "sameSnapshotSha256": "9bd8becb4211ee0edd9217db99e05b63d8fa3f5437a8e4cc7be2ace449cb3137",
+  "bothFreshInitMatched": true,
+  "bothRestoreDeploymentsReplicas": 0,
+  "restorePods": 0,
+  "retainedBoundPVCs": 4,
+  "mainPodUid": "581d826a-8a9f-4adb-8c3c-8229a2ba151a",
+  "mainContainers": [
+    {
+      "name": "app",
+      "ready": true,
+      "restartCount": 0,
+      "imageID": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70"
+    },
+    {
+      "name": "mqtt",
+      "ready": true,
+      "restartCount": 0,
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  ],
+  "mainNormalEvidence": "deploy/verification/candidate-331ab9a/root-recovery-review/main-api-normal.json",
+  "scope": "Independent root paired cleanup, exactsnapshot evidence and currentmain sanity; selectedbackup localwholehash independently checked earlier; finalmedia/timegate pending"
+}

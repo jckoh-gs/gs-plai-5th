@@ -1,33 +1,31 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T16:05:34.325635+00:00",
+  "updatedAt": "2026-09-21T16:16:30.102284+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
-    "productVersion": "1.5.0",
-    "prdVersion": "1.12",
-    "commit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
-    "tag": "stable-v1.5.0",
-    "alias": "stable-runtime-v1.5.0-6d165d1",
-    "appImage": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
-    "backupEvidence": "deploy/verification/stable-backup-6d165d1.json",
-    "recoveryEvidence": "deploy/verification/candidate-6d165d1/restore-summary.json"
+    "productVersion": "1.6.0",
+    "prdVersion": "1.13",
+    "commit": "331ab9a00ee71a0924042e7952013d47495449d3",
+    "tag": "stable-v1.6.0",
+    "tagState": "pending-after-manifest-verification",
+    "tagScope": "Full operational/evidence checkpoint including backup hardening; tag pending manifest verification",
+    "alias": "stable-runtime-v1.6.0-331ab9a",
+    "appImage": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
+    "backupEvidence": "deploy/verification/stable-backup-331ab9a.json",
+    "recoveryEvidence": "deploy/verification/candidate-331ab9a/restore-summary.json"
   },
   "stableManifest": {
-    "path": "artifacts/releases/checkpoint-1.5.0.json",
-    "state": "verified",
-    "sha256": "6b3940ed7190530c046594186febff54d2e0ee93b0a0856e314c5c3ca3762ff7",
-    "manifestSourceCommit": "19e0c3a21e49e081be3cc1625fea403890932723",
-    "independentReview": "docs/product/REVIEW-028.md",
-    "verification": "artifacts/checkpoints/release-1.5/verification.json",
-    "historicalFallback": "artifacts/releases/checkpoint-1.4.0.json"
+    "path": "artifacts/releases/checkpoint-1.6.0.json",
+    "state": "pending-generation-after-evidence-commit",
+    "historicalFallback": "artifacts/releases/checkpoint-1.5.0.json"
   },
   "workingMilestone": {
     "productVersion": "1.6.0",
     "prdVersion": "1.13",
     "idea": "IDEA-010",
-    "state": "Actualmain1.6 UI/API/MQTT/outbox PASS; freshselectedsnapshot andsamecurrent/backwardrestore next"
+    "state": "Functional acceptance complete REVIEW032; immutablemanifest/tag gates next"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -39,7 +37,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Actualmain1.6 UI/API/MQTT/outbox verified, root supervisor active. Fresh selected1.6snapshot then current1.6/backward1.5 exactsame snapshotrestore andindependent acceptance; stable1.5fallback unchanged until allgates.",
+    "Commit completed1.6 operational/evidence state, generate immutablecheckpoint-1.6.0.json, root+independentverify source/evidence/backup/actualReady. Then runtimealias331 andfulloperational stable-v1.6 tag; preserve1.5history. Completeddeploy/outbox/restore mustnotrepeat.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -147,10 +145,10 @@
     "exactSnapshotFlag": "--expected-sha256",
     "helperTests": "docs/issues/evidence/review-017-restore-after.log",
     "httpBoundaryTests": "docs/issues/evidence/final-restore-http-boundary.json",
-    "status": "Exact594944000B/be09a5f5 snapshot verified in fresh1.4 and backward1.3,17restoreproofs. Any newly selected final freeze snapshot still requires its own exact restore proof.",
+    "status": "Exact851673088B/9bd current1.6/backward1.5 verified21evidence; anynewfinalfreeze snapshot needs its own exactrestoreproof",
     "constraints": "New unique proof PVC; same selected snapshot SHA before app start; preserve old verified snapshots; no retry of uncertain apply with a new name; original deadline unchanged",
-    "verifiedCurrentCheckpoint": "deploy/verification/candidate-fdd0491/restore-summary.json",
-    "previousVerifiedCheckpoint": "deploy/verification/candidate-3fa3ba0/restore-summary.json"
+    "verifiedCurrentCheckpoint": "deploy/verification/candidate-331ab9a/restore-summary.json",
+    "previousVerifiedCheckpoint": "deploy/verification/candidate-fdd0491/restore-summary.json"
   },
   "previousObservations": [
     {
@@ -374,8 +372,8 @@
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
     "scope": "Private ownership journal, interrupted-demo settings recovery, same-video reviewed-facts binder and portable deck packaging; no runtime change",
     "originalWindowUnchanged": true,
-    "contentPreparationReview": "docs/operations/MEDIA-1.4-FINAL-CONTENT-RECOMMENDATIONS.md",
-    "contentPreparationScope": "1.4/PRD1.11 unreviewed template only; distinguish filmed MQTT/fault actions from separately tested RESTform/outbox restart. Final video/facts/PPT remain pending."
+    "contentPreparationReview": "docs/operations/MEDIA-1.6-COMPATIBILITY.md",
+    "contentPreparationScope": "Unreviewed1.6/PRD1.13 14slide template, real59/79eventproofs outside8filmedscenes; finalnewvideo/PPT pending originalwindow"
   },
   "mediaRecovery": {
     "plan": "docs/operations/FINAL-RESTORE-PLAN.md",
@@ -395,7 +393,7 @@
       "issue": "ISSUE024"
     }
   ],
-  "nextOperationalReview": "Complete exactsame9bd current1.6/backward1.5 restore andindependentfunctionalacceptance; preserve active1.6observers",
+  "nextOperationalReview": "New1.6 immutablemanifest/tag verification; then continuedobservation andbounded versioned productideas until originalfreeze",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.6",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
@@ -445,7 +443,7 @@
     "productVersion": "1.6.0",
     "prdVersion": "1.13",
     "idea": "IDEA-010",
-    "phase": "Actualmain1.6 UI/API/MQTT/outbox PASS; freshselectedsnapshot andsamecurrent/backwardrestore next",
+    "phase": "Functional acceptance complete REVIEW032; immutablemanifest/tag gates next",
     "uiOwner": "/root/ui",
     "browserOwner": "/root/issues",
     "fallback": "artifacts/releases/checkpoint-1.5.0.json",
@@ -455,27 +453,7 @@
     "unitEvidence": "artifacts/checkpoints/candidate-1.6-unit-round2.log",
     "eventBrowserEvidence": "artifacts/checkpoints/candidate-1.6-event-time-round1/result.json",
     "securityReview": "docs/security/EVENT-TIME-REVIEW.md",
-    "activeOperations": [
-      {
-        "owner": "/root/deployment",
-        "kind": "isolated-exactsnapshotrestore",
-        "currentDeployment": "grid-restore-331ab9a",
-        "backwardDeployment": "grid-restore-back-331ab9a",
-        "snapshotMetadata": "deploy/verification/stable-backup-331ab9a.json",
-        "expectedSHA256": "9bd8becb4211ee0edd9217db99e05b63d8fa3f5437a8e4cc7be2ace449cb3137",
-        "ownedPorts": [
-          3105,
-          18885
-        ],
-        "state": "authorizedpreflight/currentfirst",
-        "retry": "Inspect ownerhandle and exactdeployment/PVC/Pod beforeanyapplyretry; preserve same snapshot; no mainwrites"
-      },
-      {
-        "owner": "/root/issues",
-        "kind": "isolatedrestore-form-receipt-event",
-        "state": "awaitdeploymentready andoriginaldataproof"
-      }
-    ],
+    "activeOperations": [],
     "completedLocalHandles": {
       "unit": 51459,
       "integrationAdvanced": 14079,
@@ -566,7 +544,18 @@
       "exit": 0,
       "metadata": "deploy/verification/stable-backup-331ab9a.json",
       "rootReview": "deploy/verification/candidate-331ab9a/normal-backup/root-backup-review.json"
-    }
+    },
+    "currentRestoreProof": "Current1.6 allfunctionalproofsPASS; cleanupownerrreported0replicas/0Pods/closedforward; rootfinalpairedcleanupreviewpending",
+    "tagPlan": {
+      "runtimeAlias": "stable-runtime-v1.6.0-331ab9a",
+      "runtimeAliasCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+      "stableTag": "stable-v1.6.0",
+      "stableTagScope": "Full completed operational/evidence source checkpoint including backuphardening; sourcecommit assigned onlyaftergates; noexistingtagsmoved"
+    },
+    "restoreSummary": "deploy/verification/candidate-331ab9a/restore-summary.json",
+    "rootCleanupReview": "deploy/verification/candidate-331ab9a/root-recovery-review/summary.json",
+    "restoreState": "Allownerhandlesended; same9bdcurrent1.6/backward1.5PASS21; both0/noPods/4PVCretained/portsclosed",
+    "independentFunctionalReview": "docs/product/REVIEW-032.md"
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
   "previousCandidateFixture": {
@@ -756,5 +745,24 @@
     "desiredImage": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
     "runtimeCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
     "state": "Completeactual1.6Ready andsingle root supervisor verified; primary/audit await plannedoutboxproof"
+  },
+  "previousStableRuntime": {
+    "productVersion": "1.5.0",
+    "prdVersion": "1.12",
+    "commit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+    "tag": "stable-v1.5.0",
+    "alias": "stable-runtime-v1.5.0-6d165d1",
+    "appImage": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+    "backupEvidence": "deploy/verification/stable-backup-6d165d1.json",
+    "recoveryEvidence": "deploy/verification/candidate-6d165d1/restore-summary.json"
+  },
+  "previousStableManifest": {
+    "path": "artifacts/releases/checkpoint-1.5.0.json",
+    "state": "verified",
+    "sha256": "6b3940ed7190530c046594186febff54d2e0ee93b0a0856e314c5c3ca3762ff7",
+    "manifestSourceCommit": "19e0c3a21e49e081be3cc1625fea403890932723",
+    "independentReview": "docs/product/REVIEW-028.md",
+    "verification": "artifacts/checkpoints/release-1.5/verification.json",
+    "historicalFallback": "artifacts/releases/checkpoint-1.4.0.json"
   }
 }

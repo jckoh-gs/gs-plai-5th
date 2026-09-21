@@ -1,0 +1,7 @@
+{
+  "deploy/verification/candidate-331ab9a/root-recovery-review/summary.json": "47e560556507cf7c62ebafc9ad2ecd4fe48a041eeb4d856b9cb4d7092ebff717",
+  "deploy/verification/candidate-331ab9a/root-recovery-review/deployments.json": "6d3c11d5f20acd476f41b52a05b8d7349ac6ebc4d17d620587f7f442aee9fc97",
+  "deploy/verification/candidate-331ab9a/root-recovery-review/main-api-normal.json": "29597f0143a7f5dc64cc5babe68a37e65a77edc0fa219ae77850acb9a16a38e6",
+  "deploy/verification/candidate-331ab9a/root-recovery-review/pods.json": "a7c24a1143de950afa8a3e3a7f227f36bd3a2e34b654c5b50f1cee3675c9aecf",
+  "deploy/verification/candidate-331ab9a/root-recovery-review/pvcs.json": "e84795630642f7183bad158f8fd3772add7af6b7c4a8b1affc8274ff2c4f657e"
+}
