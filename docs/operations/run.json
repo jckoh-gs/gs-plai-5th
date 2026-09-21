@@ -4,7 +4,7 @@
   "freezeAt": "2026-09-21T21:37:33.079009+00:00",
   "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
   "timezone": "Asia/Seoul",
-  "phase": "candidate-development",
+  "phase": "remote-candidate-verification",
   "scope": "greenfield; mandatory k3s deployment",
   "context": "charles-k3s",
   "namespace": "gs-plai-5h",
@@ -44,13 +44,13 @@
   "requestedModel": "Codex Astra",
   "modelVerification": "Agents inherited main session model; exact runtime model identifier not exposed by available goal tools.",
   "deployment": {
-    "observedAt": "2026-09-21T14:58:02.945Z",
-    "status": "Recovered actual1.5 Ready afterlivenesscontainerrestart; preupgradebackup ISSUE024 unresolved, immutable1.5stablebackup retained",
-    "sourceCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
-    "prdVersion": "1.12",
+    "observedAt": "2026-09-21T15:56:49.832284+00:00",
+    "status": "Actual1.6 Ready; root connection activation and remote functional/restore gates pending",
+    "sourceCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+    "prdVersion": "1.13",
     "context": "charles-k3s",
     "namespace": "gs-plai-5h",
-    "appImage": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+    "appImage": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
     "brokerImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
     "registryImage": "127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c",
     "uiTunnel": "http://127.0.0.1:3104",
@@ -60,9 +60,10 @@
     "recoveryReplicas": 0,
     "name": "grid",
     "mqttImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
-    "productVersion": "1.5.0",
-    "podUid": "62d0d7fd-915d-41e4-990b-5714fc7a6901",
-    "appContainerRestarts": 1
+    "productVersion": "1.6.0",
+    "podUid": "7998ec33-5627-46a7-9458-e503445bde35",
+    "appContainerRestarts": 0,
+    "podName": "grid-84568548d5-2j8gw"
   },
   "backup": {
     "result": "PASS",
@@ -126,7 +127,7 @@
     "idea": "IDEA-010",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T15:11:02.306411+00:00",
-    "status": "Image4af gates and updatedbackupoperational290tests/securityPASS; controllednewpreupgradebackup pending, actualmain1.5recovered",
+    "status": "Actual1.6 Ready; remote functional/outbox/exact snapshot restore gates pending",
     "fallbackTag": "stable-v1.5.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.5.0.json",
     "beforeEvidence": "artifacts/checkpoints/event-time-before/result.json",
@@ -158,7 +159,7 @@
       "authRegression": "PASS auth/SSE/stale/reconnect/narrow",
       "formReceipt": "PASS44form/14receipt cases, ownedbaselinecleanup; later201guard executionpendingrestore",
       "independentAcceptance": "REVIEW030:AT01-03 local,UI04/AT04partialuntilremoteproof",
-      "operationalBackup": "PASS290fullunit round3; local15/exactNode24.21 15 subsets overlap; source securityPASS; actualremote retry pending"
+      "operationalBackup": "PASS290fullunit round3 plus exactNode24.21 selected15; actualround2 snapshot/transfer/integrity/wholeSHA PASS"
     },
     "localAcceptance": "artifacts/checkpoints/candidate-1.6-local-summary.json",
     "independentLocalReview": "docs/product/REVIEW-030.md",
@@ -168,7 +169,10 @@
     "appImage": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
     "imageSecurity": "docs/security/evidence/app-candidate-331ab9a-findings.json",
     "imageReview": "deploy/verification/candidate-331ab9a/pre-deployment-review.json",
-    "backupHardeningEvidence": "artifacts/checkpoints/backup-hardening-1.6/summary.json"
+    "backupHardeningEvidence": "artifacts/checkpoints/backup-hardening-1.6/summary.json",
+    "backupOperationalCommit": "3c418081bf4b9f07d5bd4ff2de9e4c41873f7a19",
+    "preUpgradeBackup": "deploy/verification/pre-1.6.0-backup-round2.json",
+    "rolloutEvidence": "deploy/verification/candidate-331ab9a/rollout/proof.json"
   },
   "previousStableCheckpoints": [
     {
@@ -268,7 +272,10 @@
     "expectedStopAt": "2026-09-21T21:37:33.079009+00:00",
     "priorEvidence": "artifacts/checkpoints/soak-1.4.0/summary.json",
     "gapReason": "Planned1.5upgrade and actualoutboxrestart, thennormalstate verified before newepoch",
-    "activationEvidence": "artifacts/checkpoints/observer-1.5-activation/activation.json"
+    "activationEvidence": "artifacts/checkpoints/observer-1.5-activation/activation.json",
+    "endedAt": "2026-09-21T15:54:29.707Z",
+    "endReason": "planned1.6upgrade",
+    "archive": "artifacts/checkpoints/soak-1.5.0/summary.json"
   },
   "networkRecovery": {
     "supervisorCommand": "node scripts/connection-supervisor.mjs",
@@ -283,7 +290,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T15:50:45.806575+00:00",
+  "updatedAt": "2026-09-21T15:58:48.338373+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",

@@ -489,7 +489,7 @@ HTTP-only 후속 receipt 확인: deploy/verification/candidate-331ab9a/http-fixt
 
 ## ISSUE-024 — 승격 전 원격 백업 host 시간 초과와 동시 원격 health 장애
 
-심각도 P1 운영 가용성, 상태 OPEN/원인 조사 중. 담당은 메인·배포, 독립 검토는 issues이다. 1.6 변경 전 main1.5 runtime6d165d1/image2fd3f21에서 발생했으며 후보1.6 앱 회귀로 분류하지 않는다. 기존 성공 백업의 무결성 실패를 뜻하지 않는다.
+심각도 P1 운영 가용성. 현재 상태: 관찰 사건 복구·백업 제한 보완·실제 재시험 통과, 최초 stall 원인은 미확정(후속 기록 참조). 최초 등록은 OPEN/원인 조사 중이었다. 담당은 메인·배포, 독립 검토는 issues이다. 1.6 변경 전 main1.5 runtime6d165d1/image2fd3f21에서 발생했으며 후보1.6 앱 회귀로 분류하지 않는다. 기존 성공 백업의 무결성 실패를 뜻하지 않는다.
 
 2026-09-21 UTC 시간 순서와 증거:
 - 15:34:17.227: snapshot 생성 시작. private journal artifacts/operations/backups/20260921T153417228Z.json의 원본은 유지한다. 전체 stopAt15:37:17.227/원래 deadline22:07:33.079009+00:00이며 명령별 snapshot90초 제한이다.
@@ -505,3 +505,18 @@ HTTP-only 후속 receipt 확인: deploy/verification/candidate-331ab9a/http-fixt
 ISSUE024 후속 원격 복구 확인: pre-upgrade-backup-incident-after-pods.json은 같은 UID의 app가15:36:29 exit0/Completed로 종료되고15:36:33 다시 시작하여 restartCount1임을 확인한다. broker는0이다. 이는 위 최초 캡처 이후의 상태이며 최초 restartCount0 기록을 대체하지 않는다. pre-upgrade-backup-incident-health.json은15:36:55.602Z 내부 HTTP200/66ms/version1.5.0/MQTT connected=true를 확인한다. 재시작은 kubelet liveness 조치이며 에이전트가 restart/kill/배포하지 않았다는 담당 receipt와 일치한다. 이 내부 복구로 전체 구독자 수신 무손실을 주장하지 않는다.
 
 pre-upgrade-backup-summary.json(15:37:24.126Z)은 최종 snapshot 부재/metadata 미생성/INCOMPLETE/promotionReady=false 및 기존 stable-backup-6d165d1.json 보존을 명시한다. 메인의 artifacts/checkpoints/backup-incident-20260921T1534/initial-summary.json에는 실제 observer/supervisor prefix·latest의 SHA가 연결되어 있다. 부분 snapshot 추가 생성이나 삭제는 없었다. 서비스 복구는 확인했지만 stall의 근본 원인과 다음 백업의 안전 조건은 미확정이므로 이슈 OPEN을 유지한다.
+
+
+### ISSUE024 후속 — 제한 보완 후 실제 백업 재시험 통과
+
+운영 helper3c41808에 대한 메인 보고 검증은 로컬 전체290개, 실제 Node24 환경의115개 및 보안 검토 통과이다. 이는 운영 도구 검증이며 앱 stall의 근본 원인을 확정하는 시험은 아니다. 이번 독립 문서 검토는 deploy/verification/candidate-331ab9a/pre-upgrade-round2/summary.json과 root-backup-review.json을 직접 대조했다.
+
+실제 round2 백업은828805120바이트/SHA256 b6e2e3dd458bca22ae4dc2522ce77daf47603214813cf9dbd9136c7f3d0e49be, snapshot9938ms, integrity ok, remainingPages0, workerExitConfirmed=true로 PASS/terminal0이다. 원격 supervisor80초/host90초 경계가 기록되어 있으며 종료 후 관련 원격 프로세스0이다. 12회 health 표본은 실패0/최대1332ms, 모든 Ready 관측 true, Pod UID 동일, app/broker restartCount1/0으로 추가 재시작이 관측되지 않았다. 한 차례 재시험의12개 표본으로 무중단·무영향 또는 모든 요청의 지연 상한을 보장하지 않는다.
+
+메인 독립 root-backup-review.json은15:53:56.018668Z 로컬 파일 전체 streaming hash·실제 크기·0600 권한과 metadata 일치를 확인한다. 이는 전달 검증 PASS_TRANSFER_REVIEW이며 이 새 백업의 독립 복원 검증은 아직 아니다. 이전 ad34 검증 백업/복원 증거 및 최초439500800바이트 .part를 보존했고 main deployment는 변경하지 않았다. 1.6 원격 배포 완료 근거로 사용하지 않는다.
+
+상태 정리: 관찰된 서비스 장애는 복구됐고 백업 실행 제한을 보완한 실제 재시험은 통과했다. 최초 stall과 online snapshot의 인과관계는 미확정이며 앱 결함의 완전한 원인 해결을 주장하지 않는다. 앞의 OPEN 문장은 최초 조사 시점 이력으로 보존한다. 신규 백업의 복원·승격은 별도 게이트다. 이번 갱신은 issues 문서에만 수행했고 원격 작업·재시험·파일 삭제를 추가하지 않았다.
+
+ISSUE023 실제 원격1.6 읽기 검증 단계: deploy/verification/candidate-331ab9a/main-event-time/result.json PASS, 세션31506 exit0. main3104에서 기존59개 이벤트의 created를 독립 UTC+9h 계산값과 대조하여 표시 밀리초·KST 헤더·원본 UTC datetime/title/aria·ID 순서·메시지·level 일치를 확인했다. 실제 로드 index-v7p0JZRW.js SHA2bcc3c1bc75a178acf7dac51bd91436b6f5e30bd1c8e3f1a176980900417be06와 승인 바이트가 일치하며 pageErrors0/nonGET0이다. 화면 캡처도 직접 확인했다.
+
+운영 harness에 EVENT_ACTUAL_ONLY=1을 추가했고 main은 이를 요구한다. 이번 synthetic phase는 executed=false로 완전히 건너뛰었으며 기존 로컬 합성 기본값은 유지한다. node--check 통과 후 실제 main 한 번만 실행했다. HTML/PNG/실제행 비교 결과/실행 소스 복사와 sha256.json을 보존했으며 제어·등록·시나리오 등 API 쓰기와 runtime 변경은 없다. 원격 수정 표시를 입증한 단계이며 복원 및 독립 제품 검토가 남아 ISSUE023 전체 종결은 아직 보류한다.

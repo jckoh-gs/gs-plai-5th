@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T15:59:37.342106+00:00",
+  "handle": 72380,
+  "pid": 19942,
+  "processIdentity": "Tue Sep 22 00:58:48 2026",
+  "podUid": "7998ec33-5627-46a7-9458-e503445bde35",
+  "old1_5HandlesEnded": [
+    24851,
+    71300,
+    98957
+  ],
+  "scope": "New single supervisor verified actual1.6 deployment/API/auth/MQTT TCP; functional MQTT/control proof remains separate",
+  "supervisorSourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8"
+}

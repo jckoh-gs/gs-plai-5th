@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T15:50:45.806575+00:00",
+  "updatedAt": "2026-09-21T16:01:22.987100+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -27,7 +27,7 @@
     "productVersion": "1.6.0",
     "prdVersion": "1.13",
     "idea": "IDEA-010",
-    "state": "Operationalbackup fix local/full290/exactNode24.21/source-security gates done; onecontrolledremote retry next, main1.5unchanged"
+    "state": "Actual1.6 Ready; remote functional/outbox/exact snapshot restore gates pending"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -39,7 +39,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Commitupdatedoperationalbackup helper/evidence, then onecontrolledpreupgradebackup round2 with currentReady/storage/oldoperation reconciliation and monitoring. Oldfailedpartial retained. Onlyafterverifiednewbackup archiveactual1.5observers andupgrade1.6; no currentoperationsshouldberestarted.",
+    "Actual1.6 Ready4af verified; root activates one supervisor and verifies mainAPI/UI/MQTT, actualoutboxrestart, then selectedsnapshot current1.6/backward1.5 restore. Keep1.5stable fallback until allgates.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -72,7 +72,10 @@
     "scope": "New1.5 session afterplannedrestart; old1.4 archived; notuninterrupteduptime proof",
     "pid": 2888,
     "handle": 98957,
-    "processIdentity": "Mon Sep 21 23:56:58 2026"
+    "processIdentity": "Mon Sep 21 23:56:58 2026",
+    "endedAt": "2026-09-21T15:54:29.712Z",
+    "state": "Ended forplanned1.6upgrade; historicalonly",
+    "archive": "artifacts/checkpoints/soak-1.5.0/summary.json"
   },
   "observationCheckpoints": [
     {
@@ -279,12 +282,32 @@
         }
       },
       "ended": "Planned1.5upgrade afterfirsthour; primary/audit/supervisor allterminal0; do notrestartendedoldobservers"
+    },
+    {
+      "version": "1.5.0",
+      "processes": {
+        "supervisor": {
+          "pid": 2061,
+          "handle": 24851,
+          "processIdentity": "Mon Sep 21 23:52:13 2026"
+        },
+        "primary": {
+          "pid": 2883,
+          "handle": 71300,
+          "processIdentity": "Mon Sep 21 23:56:57 2026"
+        },
+        "audit": {
+          "pid": 2888,
+          "handle": 98957,
+          "processIdentity": "Mon Sep 21 23:56:58 2026"
+        }
+      },
+      "archive": "artifacts/checkpoints/soak-1.5.0/summary.json",
+      "endedAt": "2026-09-21T15:54:29.707Z"
     }
   ],
   "currentObservationHandles": {
-    "supervisor": 24851,
-    "primary": 71300,
-    "audit": 98957
+    "supervisor": 72380
   },
   "currentObservationBaselines": {
     "observedAt": "2026-09-21T15:39:03.277250+00:00",
@@ -321,19 +344,11 @@
   ],
   "currentObservationProcesses": {
     "supervisor": {
-      "pid": 2061,
-      "handle": 24851,
-      "processIdentity": "Mon Sep 21 23:52:13 2026"
-    },
-    "primary": {
-      "pid": 2883,
-      "handle": 71300,
-      "processIdentity": "Mon Sep 21 23:56:57 2026"
-    },
-    "audit": {
-      "pid": 2888,
-      "handle": 98957,
-      "processIdentity": "Mon Sep 21 23:56:58 2026"
+      "handle": 72380,
+      "pid": 19942,
+      "processIdentity": "Tue Sep 22 00:58:48 2026",
+      "state": "verified1.6-active",
+      "evidence": "deploy/verification/candidate-331ab9a/connection-activation/proof.json"
     }
   },
   "operationalDeadlineHardening": {
@@ -374,15 +389,15 @@
       "issue": "ISSUE024"
     }
   ],
-  "nextOperationalReview": "Beforecontrolled1.6upgrade archive actual1.5 observerperiod and Ready/resource facts. Preserve plannedfirsthour preparation but do notexecute its1hour assertion on shorter observations.",
+  "nextOperationalReview": "Main1.6 remote functional/outbox/restore gates; old1.5 observation period is archived and shorterthan1hour.",
   "supervisorDiagnosticUpgrade": {
-    "state": "verified-active1.5",
+    "state": "verified-active1.6",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
     "evidence": "artifacts/checkpoints/supervisor-diagnostics/summary.json",
-    "currentPid": 2061,
-    "currentHandle": 24851,
-    "currentIdentity": "Mon Sep 21 23:52:13 2026",
-    "nextStep": "Keep current1.5supervisor androotprimary71300/audit98957; plannedoutboxrestart complete. No duplicateforward.",
+    "currentPid": 19942,
+    "currentHandle": 72380,
+    "currentIdentity": "Tue Sep 22 00:58:48 2026",
+    "nextStep": "Keep single1.6 supervisor72380. Mainfunctional/outbox/exactsnapshotrestore pending; start newobservers afterplannedoutboxrestart.",
     "historicalActivation": {
       "scope": "Planned1.3 diagnostic activation13:23UTC; this process has since ended for the planned1.4 upgrade.",
       "evidence": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
@@ -393,7 +408,8 @@
         "processIdentity": "Mon Sep 21 22:23:12 2026"
       },
       "activatedHandleNowTerminal": 7353
-    }
+    },
+    "currentActivation": "deploy/verification/candidate-331ab9a/connection-activation/proof.json"
   },
   "hostPowerGuard": {
     "handle": 11821,
@@ -423,17 +439,31 @@
     "productVersion": "1.6.0",
     "prdVersion": "1.13",
     "idea": "IDEA-010",
-    "phase": "Operationalbackup fix local/full290/exactNode24.21/source-security gates done; onecontrolledremote retry next, main1.5unchanged",
+    "phase": "Actual1.6 Ready; remote functional/outbox/exact snapshot restore gates pending",
     "uiOwner": "/root/ui",
     "browserOwner": "/root/issues",
     "fallback": "artifacts/releases/checkpoint-1.5.0.json",
     "beforeEvidence": "artifacts/checkpoints/event-time-before/result.json",
-    "policy": "Keep verified existing3110/95785 fixture and source hashes; donotstartduplicates. Main1.5 observation remainsunchanged. Originalfreeze/deadline unchanged.",
+    "policy": "Localfixture3110 retired. Actualmain1.6 Ready4af. Root owns single supervisor; no duplicate forwards. Stable1.5 fallback retained until exactrestore/independentacceptance.",
     "fixtureHandle": 95785,
     "unitEvidence": "artifacts/checkpoints/candidate-1.6-unit-round2.log",
     "eventBrowserEvidence": "artifacts/checkpoints/candidate-1.6-event-time-round1/result.json",
     "securityReview": "docs/security/EVENT-TIME-REVIEW.md",
-    "activeOperations": [],
+    "activeOperations": [
+      {
+        "owner": "/root",
+        "kind": "actual-main-MQTT125",
+        "handle": 1709,
+        "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+        "baselineTargetKw": 125,
+        "evidence": "deploy/verification/candidate-331ab9a/main-mqtt.json"
+      },
+      {
+        "owner": "/root/security",
+        "kind": "independent-outbox-helper-review",
+        "scope": "localonly no remoteexecution"
+      }
+    ],
     "completedLocalHandles": {
       "unit": 51459,
       "integrationAdvanced": 14079,
@@ -485,6 +515,24 @@
       "16771": 1,
       "6973": 1,
       "35423": 0
+    },
+    "completedRound2Backup": {
+      "owner": "/root/deployment",
+      "handle": 38109,
+      "exit": 0,
+      "metadata": "deploy/verification/pre-1.6.0-backup-round2.json",
+      "rootReview": "deploy/verification/candidate-331ab9a/pre-upgrade-round2/root-backup-review.json"
+    },
+    "completedRollout": {
+      "owner": "/root/deployment",
+      "handle": 59837,
+      "exit": 0,
+      "evidence": "deploy/verification/candidate-331ab9a/rollout/proof.json"
+    },
+    "completedMainReadProofs": {
+      "rollout": "deploy/verification/candidate-331ab9a/post-rollout/summary.json",
+      "eventTime": "deploy/verification/candidate-331ab9a/main-event-time/result.json",
+      "regression": "deploy/verification/candidate-331ab9a/main-regression/summary.json"
     }
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
@@ -573,7 +621,7 @@
       "prematureExitCode": 1,
       "message": "First hour not yet observed; do not create checkpoint"
     },
-    "state": "Prepared but not executed; controlled1.6 upgrade may precede1hour, so archive exact observed1.5 period instead. No user/PRD requirement for eachversion1hour; do not manufacture coverage."
+    "state": "Unused: observed1.5period ended before1hour; do notexecute onclosedepoch"
   },
   "activeMediaRehearsal": {
     "productVersion": "1.5.0",
@@ -654,5 +702,17 @@
     "expectedOutput": "artifacts/checkpoints/soak-1.4.0-first-hour",
     "scope": "Prepared only; script refuses incompletehour/existingcheckpoint and preserves firstboundaryprefix. Confirm live handles/actualstate before execution.",
     "state": "Captured andverified; old1.4observers nowendedforplannedupgrade, do notrepeat"
+  },
+  "plannedConnectionTransition": {
+    "reason": "1.6upgrade",
+    "oldOwnedProcessesEnded": true,
+    "portsFree": [
+      3104,
+      18884
+    ],
+    "expectedOldImage": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+    "desiredImage": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
+    "runtimeCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+    "state": "Completeactual1.6Ready andsingle root supervisor verified; primary/audit await plannedoutboxproof"
   }
 }

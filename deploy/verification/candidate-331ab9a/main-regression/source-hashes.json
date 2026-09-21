@@ -1,0 +1,9 @@
+{
+  "capturedAt": "2026-09-21T15:59:37.342106+00:00",
+  "files": {
+    "scripts/browser-check.cjs": "9844dbf9fe8d30ce08465c70c373798cd510ec4156737f8ce721f052d356c7c8",
+    "scripts/browser-command-export.cjs": "d0496cd8a6f526bdddf61701272b1c9cf9d792d2dfbc489596eda87543a8a278",
+    "scripts/browser-preview-race.cjs": "2ce1248a8685c5d840dcf75f7ebda35f70e1a30f2f4f66a9cbda1a7c37224d56",
+    "scripts/remote-preview.mjs": "fd00c96113a8b805502961a15ed3287ee1dbce1643be59c52d7978ad1a17a0cb"
+  }
+}

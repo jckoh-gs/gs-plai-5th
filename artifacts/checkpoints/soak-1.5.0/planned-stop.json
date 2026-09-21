@@ -19,7 +19,27 @@
       "processIdentity": "Mon Sep 21 23:56:58 2026"
     }
   },
-  "state": "Intent only; wait preupgradebackup before stopping anyprocess",
+  "state": "Allthreeownedprocessesterminal0; owned3104/18884closed, completeactualperiodarchived",
   "scope": "Preserve entireactual1.5 interval and finalplanneddisconnect; do notclaim firsthour, uninterruptedservice, or universal receipt",
-  "priorFirstHourPreparation": "artifacts/checkpoints/soak-1.5-first-hour-preparation/summary.json"
+  "priorFirstHourPreparation": "artifacts/checkpoints/soak-1.5-first-hour-preparation/summary.json",
+  "signalAt": "2026-09-21T15:54:21.932578+00:00",
+  "verifiedProcesses": {
+    "primary": {
+      "pid": 2883,
+      "processIdentity": "Mon Sep 21 23:56:57 2026",
+      "handle": 71300
+    },
+    "audit": {
+      "pid": 2888,
+      "processIdentity": "Mon Sep 21 23:56:58 2026",
+      "handle": 98957
+    }
+  },
+  "preUpgradeBackup": "deploy/verification/pre-1.6.0-backup-round2.json",
+  "observerExitCodes": {
+    "71300": 0,
+    "98957": 0
+  },
+  "supervisorSignalAt": "2026-09-21T15:54:40.359971+00:00",
+  "supervisorExitCode": 0
 }

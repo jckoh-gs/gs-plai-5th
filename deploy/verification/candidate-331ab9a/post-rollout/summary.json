@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "actualVersion": "1.6.0",
+  "actualAppImage": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
+  "podUID": "7998ec33-5627-46a7-9458-e503445bde35",
+  "appBrokerRestarts": [
+    0,
+    0
+  ],
+  "checks": [
+    "identity.json",
+    "continuity.json",
+    "served-assets.json",
+    "auth.json",
+    "health.json"
+  ],
+  "mainMutation": false,
+  "newBackup": false,
+  "deploymentChange": false,
+  "portChange": false,
+  "retainedIncompleteSnapshotUntouched": true
+}

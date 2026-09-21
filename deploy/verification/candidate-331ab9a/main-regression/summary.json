@@ -1,0 +1,41 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:01:22.987100+00:00",
+  "actualVersion": "1.6.0",
+  "runtimeCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+  "handles": {
+    "99696": 0,
+    "82916": 0,
+    "30612": 0,
+    "11138": 0
+  },
+  "checks": [
+    "auth/result.json",
+    "export/result.json",
+    "preview/race.json",
+    "preview-api.json"
+  ],
+  "scope": "Main authenticated browser and read-only export; preview POSTs normalize input without persistent RTU creation. Proxy stream interruption is browser fixture only, not remote outage.",
+  "hashes": {
+    "deploy/verification/candidate-331ab9a/main-regression/source-hashes.json": "825e80a2007547febf3a8e7cb55ebbed8cc28923618636b982353951b9a995e4",
+    "deploy/verification/candidate-331ab9a/main-regression/preview-api.json": "fbc290ee56e417cb992dfae692d859bd769e18e22bfa06a1cf4cca339cec97e5",
+    "deploy/verification/candidate-331ab9a/main-regression/preview-api.log": "812216d178ebb2990e769ec5eb96b0483f7963aa3af70c802ad940c57254d896",
+    "deploy/verification/candidate-331ab9a/main-regression/export.log": "21b961b95a5f737217fdad6f39899c0cd2bf29fdc3906445889e1c294cd6a700",
+    "deploy/verification/candidate-331ab9a/main-regression/preview.log": "45f55d00ff95f8891b7678d70db588d8d9a6797129234b40d98640e9c27ea86d",
+    "deploy/verification/candidate-331ab9a/main-regression/auth.log": "8624b3c66c0ee836ea10107c924d22db2808c87ddb0d62cd3a1bde820542c006",
+    "deploy/verification/candidate-331ab9a/main-regression/auth/narrow-devices.png": "fb1a1e4722e1b0b3b33a6eb2d26462da881c3d1ed61abbed0450f75afab30e12",
+    "deploy/verification/candidate-331ab9a/main-regression/auth/result.json": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868",
+    "deploy/verification/candidate-331ab9a/main-regression/auth/devices.png": "0bf2ede225a5a60660f2ac42de4ab7aacfeba28fb35ed293ecc41f947cdf25b5",
+    "deploy/verification/candidate-331ab9a/main-regression/auth/stale-stream.png": "fdccfca9ba5ce1071887ae69f449263183429b14c07d1c0b0e1a11b31787e4ab",
+    "deploy/verification/candidate-331ab9a/main-regression/auth/authenticated-dashboard.png": "e7a83496ec55a1440774effb3b61854471addbdc436653fef25c76e67bf48c78",
+    "deploy/verification/candidate-331ab9a/main-regression/auth/guide-download.md": "5ae2df13b852466556ef6bad4a5c840aa8f0ef93e12bb12397b7cf4e03295ac1",
+    "deploy/verification/candidate-331ab9a/main-regression/preview/preview-race.png": "4c9f7daeef474d4f81fb9a4fbf828aa2065a4272fd719aa9f9d4bcefa6b3fccd",
+    "deploy/verification/candidate-331ab9a/main-regression/preview/race.json": "2f31432dfefbbad77cb10c90d477f12879bb8206a15c886f6984e0b6c1cc185f",
+    "deploy/verification/candidate-331ab9a/main-regression/preview/preview-narrow.png": "cdc5f655b439e21521c6c402ee5970856721568a14de8442a2a9d8f85d935800",
+    "deploy/verification/candidate-331ab9a/main-regression/export/result.json": "c7b03769561d54335956beae6136a71dbdf8fce25b7bb66055779d7245308031",
+    "deploy/verification/candidate-331ab9a/main-regression/export/command-states-f49684af-b7dd-47b2-b360-8e7d28ef751b.json": "02e055f62eb826ad664268e67d9cfac71ba66acc02bf86558e6b53f2ae9ef725",
+    "deploy/verification/candidate-331ab9a/main-regression/export/export-narrow.png": "91dc5fcc3d7329cad534fed9b0550d2c78085edfb6c82339bb58eca097c1f255",
+    "deploy/verification/candidate-331ab9a/main-regression/export/command-states-c81f4573-1987-4c01-8d7c-b1e7aa5af38f.json": "9ffaffcb1824352d9482539e03893079f46940fc30a39a57cef9647883bccb55",
+    "deploy/verification/candidate-331ab9a/main-regression/export/export-desktop.png": "e0286f6a034cd2992fede6329b73f3a875329477ea80e9fd7346dd165395adee"
+  }
+}

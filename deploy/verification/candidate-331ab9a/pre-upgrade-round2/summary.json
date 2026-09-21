@@ -1,0 +1,34 @@
+{
+  "result": "PASS",
+  "metadata": "deploy/verification/pre-1.6.0-backup-round2.json",
+  "bytes": 828805120,
+  "sha256": "b6e2e3dd458bca22ae4dc2522ce77daf47603214813cf9dbd9136c7f3d0e49be",
+  "snapshot": {
+    "result": "PASS",
+    "workerExitConfirmed": true,
+    "integrity": "ok",
+    "stage": "verified",
+    "steps": 2023,
+    "totalPages": 202345,
+    "remainingPages": 0,
+    "elapsedMs": 9938,
+    "snapshotAt": 1790005930007,
+    "supervisorMaxMs": 80000,
+    "hostCommandMaxMs": 90000
+  },
+  "localMode": "0o600",
+  "healthObservations": 12,
+  "healthFailures": 0,
+  "maxHealthElapsedMs": 1332,
+  "podUIDUnchanged": true,
+  "appBrokerRestarts": [
+    1,
+    0
+  ],
+  "allReadyObservations": true,
+  "ownedRemoteProcessesRemaining": 0,
+  "originalFailedPartialPreserved": true,
+  "originalVerifiedBackupPreserved": "deploy/verification/stable-backup-6d165d1.json",
+  "terminal": 0,
+  "mainDeploymentUnchanged": true
+}

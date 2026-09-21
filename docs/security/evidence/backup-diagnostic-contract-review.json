@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-09-21T15:47:06.604374+00:00",
+  "testSha256": "cf25977a39f7edc2bb65d63a0b795e00fb0d69b41d6a64c74dce8eea402e0a29",
+  "independentFileTests": 4,
+  "passed": 4,
+  "priorFullSuite": "Root round1 290total/289pass/1fail preserved; obsolete stderr expectation failed before subsequent no-file assertions",
+  "change": "Test-only diagnostic expectation aligned to fixed JSON INCOMPLETE, workerExitConfirmed false, starting, empty stderr; no path/raw marker; final/partial absent",
+  "helperChanged": false,
+  "fullSuiteRerunOwner": "root",
+  "timingFollowup": {
+    "checkedAt": "2026-09-21T15:49:05.866989+00:00",
+    "priorFullRound2": "290total/289pass/1fail; marker absent at observed814ms with800ms budget; startup exhaustion possible, not conclusively established",
+    "fixtureBudgetMs": 2500,
+    "outerTimeoutMs": 6000,
+    "elapsedUpperBoundMs": 5000,
+    "preservedAssertions": [
+      "fakekubectl started when not expired",
+      "sensitive output absent",
+      "incomplete discovery journal",
+      "no final verification files",
+      "expired run spawns nothing"
+    ],
+    "testSha256": "797ffa7af4dec2d28bb19a6bb2cd882bf6e01ffdd52cf7ccaae7728b9666ed9d",
+    "independentTestsPassed": 4,
+    "log": "backup-diagnostic-contract-timing-tests.log"
+  }
+}

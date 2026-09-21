@@ -1,0 +1,12 @@
+✔ independent actual backup CLI hung discovery stops within original deadline and keeps sensitive child output private (2518.223792ms)
+✔ independent actual backup CLI expired original deadline launches no kubectl (38.872667ms)
+✔ independent budget expiration blocks a second command launch (23.24ms)
+✔ independent snapshot expired remote deadline creates neither final nor part (21.279583ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2631.213042

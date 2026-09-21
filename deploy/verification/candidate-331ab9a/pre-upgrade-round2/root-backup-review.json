@@ -1,0 +1,9 @@
+{
+  "result": "PASS_TRANSFER_REVIEW",
+  "checkedAt": "2026-09-21T15:53:56.018668+00:00",
+  "metadata": "deploy/verification/pre-1.6.0-backup-round2.json",
+  "bytes": 828805120,
+  "sha256": "b6e2e3dd458bca22ae4dc2522ce77daf47603214813cf9dbd9136c7f3d0e49be",
+  "localMode": "0600",
+  "scope": "Root streamed entire localfile independently and compared metadata/actualsize/mode. This preupgradebackup has not yet been independently restored; stablead34 restoreproof remainsseparate."
+}
