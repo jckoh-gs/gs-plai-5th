@@ -1,0 +1,16 @@
+✔ network recovery resumes from evidence while freeze and deadline remain authoritative (0.40775ms)
+✔ controlled kubectl outage retries with cap and recovers read-only with exact image/auth (764.960125ms)
+✔ wrong remote image blocks forwarding and does not replay writes (419.377959ms)
+✔ occupied unrelated ports are neither killed nor replaced (360.1965ms)
+✔ existing healthy external forward survives supervisor freeze, deadline and stop (397.039917ms)
+✔ singleton excludes same-process duplicate, replaces verified stale PID identity, refuses incomplete lock (15.66375ms)
+✔ invalid startup configuration fails closed and does not spawn commands (4.943916ms)
+✔ deadline stops only owned forward; expected-image update is revalidated (648.006583ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3660.322417

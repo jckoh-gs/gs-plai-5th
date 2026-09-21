@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "runId": "grid-new-20260921T080733Z",
+  "updatedAt": "2026-09-21T10:01:05.474407+00:00",
+  "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
+  "authoritativeRun": "docs/operations/run.json",
+  "stableRuntime": "stable-runtime-v1.1.0-8599ab9",
+  "stableManifest": "artifacts/releases/checkpoint-1.1.0.json",
+  "workingMilestone": {
+    "productVersion": "1.2.0",
+    "prdVersion": "1.9",
+    "idea": "IDEA-006",
+    "state": "implemented and locally tested; not deployed"
+  },
+  "completed": [
+    "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
+    "1.2.0 command state export source, independent security and issue review, browser download/auth/RTU isolation",
+    "Final video and editable deck tooling rehearsed; final media must be newly generated in freeze window",
+    "Network recovery: 8 policy/supervisor tests passed; live supervisor owns verified forwarding; native grid heartbeat updated"
+  ],
+  "remainingInOrder": [
+    "Commit 1.2.0 source, build immutable image, test exact image and scan vulnerabilities",
+    "Before upgrade preserve current normal backup and soak evidence; then deploy candidate and verify actual image, API/UI/MQTT and recovery",
+    "Promote only verified runtime to a new stable tag and immutable manifest; retain prior checkpoints",
+    "Continue observation until freeze; at freeze select verified normal version and create final video then editable PPT, inspect all outputs",
+    "Before deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
+  ],
+  "retryPolicy": {
+    "readOnlyChecks": "May retry with bounded backoff",
+    "build": "Reuse completed content-addressed image only after source labels and digest match",
+    "gitPush": "Compare actual remote branch/tag first, then push existing commits; never force push",
+    "deployment": "Compare live deployment and Ready pod imageID with intended digest before applying; do not blindly repeat a rollout",
+    "controlCommands": "Inspect persisted commandId and outcome; never generate a new ID merely because a response was lost",
+    "backup": "Reuse the immutable remote path and verify chunks, whole SHA and SQLite; .part is not a successful backup",
+    "media": "Inspect existing verification and preserve valid outputs; use a new directory for incomplete reruns"
+  },
+  "entryCommand": "node scripts/resume-status.mjs",
+  "supervisorCommand": "node scripts/connection-supervisor.mjs",
+  "constraints": [
+    "Honor latest user stop/cancel instructions",
+    "Do not change T0, freezeAt or deadlineAt",
+    "Do not trust a PID from an earlier process without identity verification",
+    "Never report disconnected or unverified operations as successful"
+  ]
+}

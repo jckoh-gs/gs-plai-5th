@@ -18,6 +18,7 @@ artifacts/checkpoints/*.sqlite*
 **/node_modules
 # Long-running observation files are copied to immutable evidence at freeze.
 artifacts/soak/
+artifacts/operations/
 # Rehearsal media remains local; scripts, scene data and verification are versioned.
 artifacts/media-preparation/**/*.webm
 artifacts/media-preparation/**/*.mp4
