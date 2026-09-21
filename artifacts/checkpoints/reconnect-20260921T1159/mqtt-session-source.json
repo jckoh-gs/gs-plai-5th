@@ -1,0 +1,169 @@
+{
+  "packageVersion": "5.16.0",
+  "installedSourcePath": "node_modules/mqtt/build/lib/client.js",
+  "installedSourceSha256": "95361b3db351704f33b4ab4a6dfd23bfb323e93c9e26e63dd8c3fc8f5fc0cdbe",
+  "packageJsonSha256": "4bff03d1282f64ac347b6a6db7fb628a8fabd2c9196d0c858e83ee032f8493bd",
+  "excerpts": [
+    {
+      "line": 55,
+      "text": "        const callback = args.shift();"
+    },
+    {
+      "line": 56,
+      "text": "        (0, shared_1.nextTick)(() => {"
+    },
+    {
+      "line": 57,
+      "text": "            callback(...args);"
+    },
+    {
+      "line": 58,
+      "text": "        });"
+    },
+    {
+      "line": 59,
+      "text": "    });"
+    },
+    {
+      "line": 60,
+      "text": "const MAX_RECEIVE_MAXIMUM = 0xffff;"
+    },
+    {
+      "line": 61,
+      "text": "const RECEIVE_MAXIMUM_EXCEEDED = 147;"
+    },
+    {
+      "line": 62,
+      "text": "const defaultConnectOptions = {"
+    },
+    {
+      "line": 63,
+      "text": "    keepalive: 60,"
+    },
+    {
+      "line": 64,
+      "text": "    reschedulePings: true,"
+    },
+    {
+      "line": 65,
+      "text": "    protocolId: 'MQTT',"
+    },
+    {
+      "line": 66,
+      "text": "    protocolVersion: 4,"
+    },
+    {
+      "line": 67,
+      "text": "    reconnectPeriod: 1000,"
+    },
+    {
+      "line": 68,
+      "text": "    connectTimeout: 30 * 1000,"
+    },
+    {
+      "line": 69,
+      "text": "    clean: true,"
+    },
+    {
+      "line": 70,
+      "text": "    resubscribe: true,"
+    },
+    {
+      "line": 71,
+      "text": "    subscribeBatchSize: null,"
+    },
+    {
+      "line": 72,
+      "text": "    writeCache: true,"
+    },
+    {
+      "line": 73,
+      "text": "    timerVariant: 'auto',"
+    },
+    {
+      "line": 74,
+      "text": "};"
+    },
+    {
+      "line": 75,
+      "text": "class MqttClient extends TypedEmitter_1.TypedEventEmitter {"
+    },
+    {
+      "line": 76,
+      "text": "    static VERSION = shared_1.MQTTJS_VERSION;"
+    },
+    {
+      "line": 380,
+      "text": "        this.stream.on('close', () => {"
+    },
+    {
+      "line": 381,
+      "text": "            this.log('(%s)stream :: on close', this.options.clientId);"
+    },
+    {
+      "line": 382,
+      "text": "            this._flushVolatile();"
+    },
+    {
+      "line": 383,
+      "text": "            this.log('stream: emit close to MqttClient');"
+    },
+    {
+      "line": 384,
+      "text": "            this.emit('close');"
+    },
+    {
+      "line": 385,
+      "text": "        });"
+    },
+    {
+      "line": 386,
+      "text": "        this.log('connect: sending packet `connect`');"
+    },
+    {
+      "line": 387,
+      "text": "        const connectPacket = {"
+    },
+    {
+      "line": 388,
+      "text": "            cmd: 'connect',"
+    },
+    {
+      "line": 389,
+      "text": "            protocolId: this.options.protocolId,"
+    },
+    {
+      "line": 390,
+      "text": "            protocolVersion: this.options.protocolVersion,"
+    },
+    {
+      "line": 391,
+      "text": "            clean: this.options.clean,"
+    },
+    {
+      "line": 392,
+      "text": "            clientId: this.options.clientId,"
+    },
+    {
+      "line": 393,
+      "text": "            keepalive: this.options.keepalive,"
+    },
+    {
+      "line": 394,
+      "text": "            username: this.options.username,"
+    },
+    {
+      "line": 395,
+      "text": "            password: this.options.password,"
+    },
+    {
+      "line": 396,
+      "text": "            properties: this.options.properties"
+    },
+    {
+      "line": 397,
+      "text": "                ? { ...this.options.properties }"
+    }
+  ],
+  "observerConfig": "Neither monitor sets clean:false or persistent-session expiry; both subscribe QoS1 on every connect. MQTT.js default clean:true and protocolVersion4 apply; disconnected clean-session subscribers have no requested durable offline queue."
+}

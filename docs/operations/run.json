@@ -4,14 +4,14 @@
   "freezeAt": "2026-09-21T21:37:33.079009+00:00",
   "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
   "timezone": "Asia/Seoul",
-  "phase": "stability",
+  "phase": "candidate-validation",
   "scope": "greenfield; mandatory k3s deployment",
   "context": "charles-k3s",
   "namespace": "gs-plai-5h",
   "baselineCommit": "a59646b",
   "baselineDatabase": null,
   "documents": {
-    "docs/PRD-VPP-SCADA-RTU.md": "0429886cc483847fbc7c78321a5c188e126a3eb99d4f8e58df863eace5f40df5",
+    "docs/PRD-VPP-SCADA-RTU.md": "fb9503c7f93fb21489c980aa2a4f6557bf133add220f9a025a0ba834756c7350",
     "docs/GOAL-VPP-AUTONOMOUS.md": "f391e5fab594f02cb4953c52055cf4b01f3817343144a9d89df8b64fe8fd11f2"
   },
   "roles": {
@@ -108,14 +108,14 @@
     }
   },
   "candidate": {
-    "productVersion": "1.2.0",
-    "prdVersion": "1.9",
-    "idea": "IDEA-006",
-    "sourceCommit": "83d10cebcd7cab2b1f889c970011a463bad09099",
-    "status": "functional acceptance, outbox restart, exact backup restore and 1.1 backward compatibility verified; final media/time gates pending",
-    "startedAt": "2026-09-21T10:03:46.506640+00:00",
-    "fallbackTag": "stable-runtime-v1.1.0-8599ab9",
-    "preUpgradeBackup": "deploy/verification/pre-1.2.0-backup.json"
+    "productVersion": "1.3.0",
+    "prdVersion": "1.10",
+    "idea": "IDEA-007",
+    "sourceCommit": null,
+    "status": "Local136tests, integration, advanced, build, actual browser scenario/KMA proof and independent reviews passed; exact-source image and remote acceptance pending",
+    "startedAt": "2026-09-21T11:59:36.329441+00:00",
+    "fallbackTag": "stable-runtime-v1.2.0-83d10ce",
+    "preUpgradeBackup": null
   },
   "previousStableCheckpoints": [
     {

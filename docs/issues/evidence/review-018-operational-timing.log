@@ -1,0 +1,22 @@
+✔ restore manifest enforces streamed source/destination SHA before app start and retains isolated read-only source (372.944833ms)
+✔ wrong snapshot SHA fails before copy; optional argument keeps legacy command compatibility (430.312792ms)
+✔ matching hashes do not replace SQLite integrity validation (276.694125ms)
+✔ hung apply is killed by remaining deadline without raw output or automatic retry (3013.181791ms)
+✔ expired or missing run fails closed without even a discovery or apply (70.3495ms)
+✔ controlled kubectl outage retries with cap and recovers read-only with exact image/auth (822.023917ms)
+✔ wrong remote image blocks forwarding and does not replay writes (368.841542ms)
+✔ occupied unrelated ports are neither killed nor replaced (492.990583ms)
+✔ existing healthy external forward survives supervisor freeze, deadline and stop (765.148458ms)
+✔ singleton excludes same-process duplicate, replaces verified stale PID identity, refuses incomplete lock (14.565125ms)
+✔ invalid startup configuration fails closed and does not spawn commands (4.937667ms)
+✔ deadline stops only owned forward; expected-image update is revalidated (603.040125ms)
+✔ local-only owned forward loss records a new outage and recovery without remote failure (616.130042ms)
+✔ unhealthy still-running owned forward records outage before replacement (671.745042ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9595.486333

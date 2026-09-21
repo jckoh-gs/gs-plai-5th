@@ -1,0 +1,17 @@
+✔ independent actual backup CLI hung discovery stops within original deadline and keeps sensitive child output private (809.48225ms)
+✔ independent actual backup CLI expired original deadline launches no kubectl (28.792334ms)
+✔ independent budget expiration blocks a second command launch (20.83575ms)
+✔ independent snapshot expired remote deadline creates neither final nor part (21.827709ms)
+✔ restore manifest enforces streamed source/destination SHA before app start and retains isolated read-only source (673.25225ms)
+✔ wrong snapshot SHA fails before copy; optional argument keeps legacy command compatibility (383.59025ms)
+✔ matching hashes do not replace SQLite integrity validation (273.926875ms)
+✔ hung apply is killed by remaining deadline without raw output or automatic retry (918.415709ms)
+✔ expired or missing run fails closed without even a discovery or apply (78.016083ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2361.004708

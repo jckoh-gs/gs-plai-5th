@@ -1,0 +1,127 @@
+{
+  "capturedAt": "2026-09-21T12:03:05.864772+00:00",
+  "rangeStart": "2026-09-21T11:57:00Z",
+  "rangeEndExclusive": "2026-09-21T12:02:00Z",
+  "investigation": "read-only; no observer/remote mutation",
+  "podUID": "80c49ef9-4479-4400-95e3-b30de494783a",
+  "containers": [
+    {
+      "name": "app",
+      "ready": true,
+      "restartCount": 0,
+      "imageID": "127.0.0.1:15050/grid@sha256:cc387c6db005acf798dbbbbd41979f07114474a5fe697118ad8c29afc904eab6"
+    },
+    {
+      "name": "mqtt",
+      "ready": true,
+      "restartCount": 0,
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  ],
+  "findings": {
+    "supervisorFailureReason": "local_verification_failed; underlying network/HTTP cause not captured",
+    "supervisorOutageAt": "2026-09-21T11:59:33.489Z",
+    "supervisorReadyAt": "2026-09-21T11:59:36.037Z",
+    "subscriberDisconnectedAt": "2026-09-21T11:59:33.495Z",
+    "subscriberReconnectedAt": "2026-09-21T11:59:35.168Z",
+    "publisherQos": 1,
+    "observerRequestedQos": 1,
+    "observerPersistentSessionRequested": false,
+    "missingObservedBatches": 8,
+    "persistedSamplesInMissingBatches": 300,
+    "inference": "Local subscribers missed the11:59 batch burst while disconnected; persisted outbox proves generation and publisher acknowledgement for these samples, not delivery to every consumer. Not a QoS0 explanation.",
+    "limits": "Observer raw payloads are not retained; reconstruction uses cumulative per-RTU snapshots and persisted outbox. No packet capture or broker subscription trace; transport failure root cause unknown. No universal zero-loss claim.",
+    "observerCleanSession": true,
+    "observerProtocolVersion": 4,
+    "mqttDefaultsEvidence": "mqtt-session-source.json"
+  },
+  "counterBaseline": {
+    "primaryCapturedAt": "2026-09-21T12:02:00.892Z",
+    "primaryApiErrors": 3,
+    "primaryConnectionErrors": 3,
+    "primaryInvalid": 0,
+    "auditCapturedAt": "2026-09-21T12:02:00.973Z",
+    "auditConnectionErrors": 8,
+    "auditInvalidMessages": 0,
+    "auditDuplicateMessages": 0,
+    "perRTUSequenceForwardJumps": 1,
+    "perRTUSampleDiscontinuities": 1,
+    "earlierReconnectAt": "11:57:53.549Z; auditor6->7 then11:59 auditor7->8"
+  },
+  "rtus": [
+    {
+      "rtuId": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+      "beforeSequence": 411,
+      "afterSequence": 415,
+      "beforeSimulationSeconds": 12239,
+      "afterSimulationSeconds": 12359,
+      "missedObservedSequences": [
+        412,
+        413
+      ],
+      "persistedMissingSamples": 60,
+      "persistedWindowSimulationContinuous": true,
+      "missedRowsPubackRecorded": true,
+      "maxReceiptGapMs": 120267
+    },
+    {
+      "rtuId": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+      "beforeSequence": 410,
+      "afterSequence": 414,
+      "beforeSimulationSeconds": 12239,
+      "afterSimulationSeconds": 12359,
+      "missedObservedSequences": [
+        411,
+        412
+      ],
+      "persistedMissingSamples": 60,
+      "persistedWindowSimulationContinuous": true,
+      "missedRowsPubackRecorded": true,
+      "maxReceiptGapMs": 120623
+    },
+    {
+      "rtuId": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+      "beforeSequence": 546,
+      "afterSequence": 550,
+      "beforeSimulationSeconds": 12239,
+      "afterSimulationSeconds": 12359,
+      "missedObservedSequences": [
+        547,
+        548
+      ],
+      "persistedMissingSamples": 60,
+      "persistedWindowSimulationContinuous": true,
+      "missedRowsPubackRecorded": true,
+      "maxReceiptGapMs": 121220
+    },
+    {
+      "rtuId": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+      "beforeSequence": 207,
+      "afterSequence": 209,
+      "beforeSimulationSeconds": 11865,
+      "afterSimulationSeconds": 11985,
+      "missedObservedSequences": [
+        208
+      ],
+      "persistedMissingSamples": 60,
+      "persistedWindowSimulationContinuous": true,
+      "missedRowsPubackRecorded": true,
+      "maxReceiptGapMs": 121523
+    },
+    {
+      "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "beforeSequence": 207,
+      "afterSequence": 209,
+      "beforeSimulationSeconds": 11173,
+      "afterSimulationSeconds": 11293,
+      "missedObservedSequences": [
+        208
+      ],
+      "persistedMissingSamples": 60,
+      "persistedWindowSimulationContinuous": true,
+      "missedRowsPubackRecorded": true,
+      "maxReceiptGapMs": 122223
+    }
+  ],
+  "sourceScope": "audit source copied from session startup snapshots; deployed store/transport from exact83d10ce git; other source copies are inspected current source, not independent process-byte attestation"
+}

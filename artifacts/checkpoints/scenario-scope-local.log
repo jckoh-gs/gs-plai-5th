@@ -1,0 +1,14 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'f6b6d996-3a5d-4ac8-9f13-1a34689f3ccc'
+- '4b839491-7fb8-4374-a2c2-e2c382ba74c0'
+
+    at /Users/charleskoh/research/20260921-RALPTON/scripts/browser-scenario-scope.cjs:45:228 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'f6b6d996-3a5d-4ac8-9f13-1a34689f3ccc',
+  expected: '4b839491-7fb8-4374-a2c2-e2c382ba74c0',
+  operator: 'strictEqual',
+  diff: 'simple'
+}

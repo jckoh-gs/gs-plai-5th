@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-09-21T12:07:49.196851+00:00",
+  "productVersion": "1.3.0",
+  "prdVersion": "1.10",
+  "result": "LOCAL_ACCEPTANCE_PASS",
+  "remotePending": true,
+  "checks": {
+    "unitTests": 136,
+    "integration": "PASS actual isolated local Mosquitto",
+    "advanced": "PASS actual isolated local Mosquitto",
+    "build": "PASS",
+    "browser": "artifacts/checkpoints/scenario-scope-local-round5/result.json"
+  },
+  "harnessDevelopmentHistory": [
+    "First round used End on native macOS headless select; subsequent isolated native-select reproduction showed arrow popup navigation was ineffective while keyboard typeahead works.",
+    "Second round wait selected an absent aria-label attribute; third round corrected selector but still relied on native popup keys.",
+    "Fourth round passed scenario/keyboard typeahead then incorrectly looked for Lab select on Dashboard; Dashboard actually uses plant cards.",
+    "Fifth round corrected harness selectors and passed all assertions. No app changes were made in response to these harness-only failures."
+  ],
+  "unitHistory": "Two parallel runs134/136 failed operational wallclock fixtures; isolated9 passed. Test-only timing margins and serial suite gave136/136. Original failures retained; production timing unchanged.",
+  "visualReview": "Root inspected desktop scenario scope, narrow layout and actual missing-key error receipt. No new KMA observation success claimed. Empty assertion validated in DOM; its lower text lies below narrow screenshot fold.",
+  "hashes": {
+    "package.json": "938e8920b3dd20adf8db93274175b7c55380dbb3470944fd70b945925d6f9171",
+    "package-lock.json": "577e3b6edf78262e0b41aeb5bcd0114ca342c98ba882556cbb42cbf7cd45f652",
+    "web/src.jsx": "a46b25a1484e6814094521e4e31b442524ce94d97237c52557010da44cbce32d",
+    "scripts/browser-scenario-scope.cjs": "ae8eb37e2ed5bad4f7f71a9bb088f3a69289eb12b20081a16dc4b7fabd8bc4aa",
+    "tests/supervisor.test.js": "8ca40722fe38ddb3862e43916bae249c9b8d9265098d25bbeb8e81e0c6c69b64",
+    "tests/review-restore-rig.test.js": "fccbb972c31cca8207dfb87ca9caaf0bfc96507fd85766eeb2ca9af2d3dfb772",
+    "artifacts/checkpoints/scenario-scope-local-round5/result.json": "3c043087f3c4d966f2a88462003e9ce355d3c44ac58b0faa2cb88aa65ed74257",
+    "artifacts/checkpoints/candidate-1.3-tests-round3.log": "3a4af19e7047670ad0700a031b3e01ad69f1e91c557a5e7e12455a4677e21988",
+    "artifacts/checkpoints/candidate-1.3-integration.log": "12051c20ecb8e06437cc597f4c009062584647b542a293f7ef51f6ddab5f6f34",
+    "artifacts/checkpoints/candidate-1.3-advanced.log": "622d8f6143795f0aecbc0faa096600432f970d42e767faaeac3253d48990a008",
+    "artifacts/checkpoints/candidate-1.3-build.log": "0bd1ab6e6d200a20f6e18229b19da06ffa74bd9004cd3fba590738922c347f0f"
+  }
+}

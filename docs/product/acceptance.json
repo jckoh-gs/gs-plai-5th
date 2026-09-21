@@ -1,5 +1,5 @@
 {
-  "prdVersion": "1.9",
+  "prdVersion": "1.10",
   "runId": "grid-new-20260921T080733Z",
   "scope": "greenfield, mandatory k3s",
   "policy": "pending until new-run direct evidence covers complete requirement; code presence/legacy reports are not pass",
@@ -4537,6 +4537,202 @@
         }
       ],
       "assessment": "No-write/identity retry policy and unchangedcommandID handling documented; main reports existing grid10minheartbeat updated. Finaldeadlineheartbeat cleanup has not occurred and remains pending."
+    },
+    {
+      "id": "FR-SCENE-03",
+      "description": "선택RTU필터/전체API유지",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/scenario-scope-local-round5/result.json",
+          "sha256": "3c043087f3c4d966f2a88462003e9ce355d3c44ac58b0faa2cb88aa65ed74257"
+        },
+        {
+          "path": "scripts/browser-scenario-scope.cjs",
+          "sha256": "ae8eb37e2ed5bad4f7f71a9bb088f3a69289eb12b20081a16dc4b7fabd8bc4aa"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-tests-round3.log",
+          "sha256": "3a4af19e7047670ad0700a031b3e01ad69f1e91c557a5e7e12455a4677e21988"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-integration.log",
+          "sha256": "12051c20ecb8e06437cc597f4c009062584647b542a293f7ef51f6ddab5f6f34"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-advanced.log",
+          "sha256": "622d8f6143795f0aecbc0faa096600432f970d42e767faaeac3253d48990a008"
+        }
+      ],
+      "assessment": "Local1.3browser realREST same-nameA/B/empty/export equality/A-onlynewrun+cancel/B unchanged/late list-save/globalbusy remount/keyboard/narrow/reload PASS;136localtests/integration/advanced. Delayedresponses deliberately controlled. No1.3remote/stable claim."
+    },
+    {
+      "id": "UI-10",
+      "description": "대상표시/빈상태/늦은응답/export",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/scenario-scope-local-round5/result.json",
+          "sha256": "3c043087f3c4d966f2a88462003e9ce355d3c44ac58b0faa2cb88aa65ed74257"
+        },
+        {
+          "path": "scripts/browser-scenario-scope.cjs",
+          "sha256": "ae8eb37e2ed5bad4f7f71a9bb088f3a69289eb12b20081a16dc4b7fabd8bc4aa"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-tests-round3.log",
+          "sha256": "3a4af19e7047670ad0700a031b3e01ad69f1e91c557a5e7e12455a4677e21988"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-integration.log",
+          "sha256": "12051c20ecb8e06437cc597f4c009062584647b542a293f7ef51f6ddab5f6f34"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-advanced.log",
+          "sha256": "622d8f6143795f0aecbc0faa096600432f970d42e767faaeac3253d48990a008"
+        }
+      ],
+      "assessment": "Local1.3browser realREST same-nameA/B/empty/export equality/A-onlynewrun+cancel/B unchanged/late list-save/globalbusy remount/keyboard/narrow/reload PASS;136localtests/integration/advanced. Delayedresponses deliberately controlled. No1.3remote/stable claim."
+    },
+    {
+      "id": "AT-SCENE-SELECT-01",
+      "description": "전체선택시나리오인수",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/scenario-scope-local-round5/result.json",
+          "sha256": "3c043087f3c4d966f2a88462003e9ce355d3c44ac58b0faa2cb88aa65ed74257"
+        },
+        {
+          "path": "scripts/browser-scenario-scope.cjs",
+          "sha256": "ae8eb37e2ed5bad4f7f71a9bb088f3a69289eb12b20081a16dc4b7fabd8bc4aa"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-tests-round3.log",
+          "sha256": "3a4af19e7047670ad0700a031b3e01ad69f1e91c557a5e7e12455a4677e21988"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-integration.log",
+          "sha256": "12051c20ecb8e06437cc597f4c009062584647b542a293f7ef51f6ddab5f6f34"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-advanced.log",
+          "sha256": "622d8f6143795f0aecbc0faa096600432f970d42e767faaeac3253d48990a008"
+        }
+      ],
+      "assessment": "All specified localbrowser cases and136tests/integration/advanced passed. Exactimagebuild/remote1.3UI+MQTT/podrestart/backuprestore/stable remains;1.2fallback unchanged."
+    },
+    {
+      "id": "AT-SCENE-SELECT-01-01",
+      "description": "동일이름A/B필터/빈상태",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/scenario-scope-local-round5/result.json",
+          "sha256": "3c043087f3c4d966f2a88462003e9ce355d3c44ac58b0faa2cb88aa65ed74257"
+        },
+        {
+          "path": "scripts/browser-scenario-scope.cjs",
+          "sha256": "ae8eb37e2ed5bad4f7f71a9bb088f3a69289eb12b20081a16dc4b7fabd8bc4aa"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-tests-round3.log",
+          "sha256": "3a4af19e7047670ad0700a031b3e01ad69f1e91c557a5e7e12455a4677e21988"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-integration.log",
+          "sha256": "12051c20ecb8e06437cc597f4c009062584647b542a293f7ef51f6ddab5f6f34"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-advanced.log",
+          "sha256": "622d8f6143795f0aecbc0faa096600432f970d42e767faaeac3253d48990a008"
+        }
+      ],
+      "assessment": "Local1.3browser realREST same-nameA/B/empty/export equality/A-onlynewrun+cancel/B unchanged/late list-save/globalbusy remount/keyboard/narrow/reload PASS;136localtests/integration/advanced. Delayedresponses deliberately controlled. No1.3remote/stable claim."
+    },
+    {
+      "id": "AT-SCENE-SELECT-01-02",
+      "description": "A복원B불변/API보존",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/scenario-scope-local-round5/result.json",
+          "sha256": "3c043087f3c4d966f2a88462003e9ce355d3c44ac58b0faa2cb88aa65ed74257"
+        },
+        {
+          "path": "scripts/browser-scenario-scope.cjs",
+          "sha256": "ae8eb37e2ed5bad4f7f71a9bb088f3a69289eb12b20081a16dc4b7fabd8bc4aa"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-tests-round3.log",
+          "sha256": "3a4af19e7047670ad0700a031b3e01ad69f1e91c557a5e7e12455a4677e21988"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-integration.log",
+          "sha256": "12051c20ecb8e06437cc597f4c009062584647b542a293f7ef51f6ddab5f6f34"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-advanced.log",
+          "sha256": "622d8f6143795f0aecbc0faa096600432f970d42e767faaeac3253d48990a008"
+        }
+      ],
+      "assessment": "Local1.3browser realREST same-nameA/B/empty/export equality/A-onlynewrun+cancel/B unchanged/late list-save/globalbusy remount/keyboard/narrow/reload PASS;136localtests/integration/advanced. Delayedresponses deliberately controlled. No1.3remote/stable claim."
+    },
+    {
+      "id": "AT-SCENE-SELECT-01-03",
+      "description": "지연응답/빠른선택/실제대상",
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/scenario-scope-local-round5/result.json",
+          "sha256": "3c043087f3c4d966f2a88462003e9ce355d3c44ac58b0faa2cb88aa65ed74257"
+        },
+        {
+          "path": "scripts/browser-scenario-scope.cjs",
+          "sha256": "ae8eb37e2ed5bad4f7f71a9bb088f3a69289eb12b20081a16dc4b7fabd8bc4aa"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-tests-round3.log",
+          "sha256": "3a4af19e7047670ad0700a031b3e01ad69f1e91c557a5e7e12455a4677e21988"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-integration.log",
+          "sha256": "12051c20ecb8e06437cc597f4c009062584647b542a293f7ef51f6ddab5f6f34"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-advanced.log",
+          "sha256": "622d8f6143795f0aecbc0faa096600432f970d42e767faaeac3253d48990a008"
+        }
+      ],
+      "assessment": "Local1.3browser realREST same-nameA/B/empty/export equality/A-onlynewrun+cancel/B unchanged/late list-save/globalbusy remount/keyboard/narrow/reload PASS;136localtests/integration/advanced. Delayedresponses deliberately controlled. No1.3remote/stable claim."
+    },
+    {
+      "id": "AT-SCENE-SELECT-01-04",
+      "description": "브라우저회귀배포복원",
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/scenario-scope-local-round5/result.json",
+          "sha256": "3c043087f3c4d966f2a88462003e9ce355d3c44ac58b0faa2cb88aa65ed74257"
+        },
+        {
+          "path": "scripts/browser-scenario-scope.cjs",
+          "sha256": "ae8eb37e2ed5bad4f7f71a9bb088f3a69289eb12b20081a16dc4b7fabd8bc4aa"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-tests-round3.log",
+          "sha256": "3a4af19e7047670ad0700a031b3e01ad69f1e91c557a5e7e12455a4677e21988"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-integration.log",
+          "sha256": "12051c20ecb8e06437cc597f4c009062584647b542a293f7ef51f6ddab5f6f34"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.3-advanced.log",
+          "sha256": "622d8f6143795f0aecbc0faa096600432f970d42e767faaeac3253d48990a008"
+        }
+      ],
+      "assessment": "All specified localbrowser cases and136tests/integration/advanced passed. Exactimagebuild/remote1.3UI+MQTT/podrestart/backuprestore/stable remains;1.2fallback unchanged."
     }
   ],
   "reviewedSource": {

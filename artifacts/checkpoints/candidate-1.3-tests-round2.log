@@ -1,0 +1,187 @@
+
+> grid-vpp-emulator@1.3.0 test
+> node --test tests/*.test.js
+
+✔ malformed, null, array, oversized, retained and cross-RTU statuses rejected (0.642292ms)
+✔ only allowlisted fields survive; raw credentials and controls are removed from reason (0.171458ms)
+✔ command export authenticates, omits raw fields and scrubs secrets from all configuration layers (47.257958ms)
+✔ export DTO keeps only typed snapshots, records redaction, and makes no de-identification/replay promise (1.095041ms)
+✔ explicit broker URL password is treated as known credential in informational IDs (0.311333ms)
+✔ control normalization cannot expose known secrets or create empty replacement patterns (0.240958ms)
+✔ control characters cannot split a credential URL to bypass export redaction (2.764084ms)
+✔ export target and observed values preserve real accepted, executing and completed command semantics (9.487292ms)
+✔ HTTP export has latest20 only, original run IDs, RTU isolation and no persistent or control side effects (39.948208ms)
+✔ remote management fails closed without strong token (0.741958ms)
+✔ exact bearer token required and topic wildcards forbidden (0.103875ms)
+✔ configuration bounds and credential redaction (0.3555ms)
+✔ zero available power does not complete start while fractional startup remains (5.024375ms)
+✔ already expired and latency-expired requests leave SCADA settings unchanged (7.12225ms)
+✔ canonical global dedup, validation atomicity, priority intersections (9.648167ms)
+✔ expiry before dispatch; sensor freeze cannot complete; restart deadline real time (1.227ms)
+✔ target checks every allocated device and signed actual error, then completion (0.551916ms)
+✔ stop clears pending startup and completed requires a post-dispatch model sample (0.473083ms)
+✔ failed durable dispatch rolls back model, command cache and outbox together (0.746583ms)
+✔ setpoint action validation applies even to known duplicate IDs (0.31025ms)
+✔ outer model transaction rollback also restores nested command cancellation cache (0.357917ms)
+✔ parser diagnostics never echo malformed CSV field contents (2.9715ms)
+✔ prototype names remain unknown columns and never enter normalized DTOs (2.570458ms)
+✔ 100000 rows are accepted; excessive rows abort before parsing trailing malformed input (397.835959ms)
+✔ HTTP preview returns bounded diagnostics and authenticates before malformed input (65.947375ms)
+✔ preflight caps columns before allocation and preserves quoted commas, escapes and newlines (2.234042ms)
+✔ preview agrees with registration units, interpolation and time zones (4.439458ms)
+✔ preview bounds output and preserves TSV electrical fields without emitting unknown CSV columns (4.269209ms)
+✔ hybrid preview follows combined-total precedence and split sum exactly (0.352041ms)
+✔ preview uses existing row validation and rejects invalid request shapes (0.405208ms)
+✔ authenticated preview has no database, controller, RTU or transport side effects (89.609834ms)
+✔ final media binds approved content digest, run, runtime and frozen window (0.632416ms)
+✔ syntactically valid but different image digest is rejected (0.209166ms)
+✔ mismatched release/run/runtime/version and invalid or expired schedule fail closed (0.42675ms)
+✔ health precedence and exact real-time boundaries (3.5135ms)
+✔ CSV/TSV BOM and Korean aliases, unit and missing weather (3.303708ms)
+✔ linear 300/599/600 boundaries and last interval hold, no wrapping interpolation (0.341125ms)
+✔ mean/kWh energy holds original interval without claiming ramp-adjusted energy (0.728042ms)
+✔ direction shortest arc and optional missing data never backwards-filled (0.258666ms)
+✔ strict actual dates, offsets, seconds, leap years (0.686541ms)
+✔ invalid CSV errors identify original row/field; duplicate, reverse, gap, NaN, empty (1.571625ms)
+✔ registration validates whole input and generates correct hybrid IDs and virtual coordinates (1.285375ms)
+✔ CSV total allocation and hybrid separate allocation, voltage/current provenance (0.879541ms)
+✔ weather wind power cubic/rated/cut-out and custom interpolation (0.399125ms)
+✔ solar temperature correction, saturation, efficiency and manual night irradiance (0.677208ms)
+✔ ramp, stopping, fractional startup and actuator freeze (0.286584ms)
+✔ percentage limit and rated reductions, unchanged CSV power on weather-only edit (0.166208ms)
+✔ all PATCH validators are atomic including RNG and source metadata (0.464791ms)
+✔ LCG common noise, independent fault RNG, snapshot deterministic replay and pause (0.466542ms)
+✔ separate irradiance CSV aligns source timestamp and falls back outside range (0.257167ms)
+✔ frame includes complete state and excludes custom curve data; API retains curve (0.219417ms)
+✔ loop count records actual dataset wraps, not seeks, and survives scenario JSON snapshots (0.238917ms)
+✔ preserves exact config, release, all source files including itself, and upload hashes (16.39025ms)
+✔ rejects config-secret before creating output (4.139208ms)
+✔ rejects http-credentials before creating output (4.949875ms)
+✔ rejects mqtt-credentials before creating output (4.257125ms)
+✔ rejects private-upload before creating output (3.6055ms)
+✔ rejects private-symlink before creating output (3.341459ms)
+✔ rejects credential-outside-private before creating output (3.928208ms)
+✔ rejects upload-secret before creating output (3.042584ms)
+✔ stalled child is killed within command budget, without printing sensitive stdout (160.123208ms)
+✔ original deadline and total budget reject subsequent launch instead of resetting on retry (1.011292ms)
+✔ expired remote snapshot never creates a partial or final file (35.538291ms)
+✔ snapshot failure leaves only private partial; existing verified final is preserved (58.195917ms)
+✔ successful online snapshot publishes complete private SQLite then compression preserves bytes (59.858542ms)
+✔ one MiB encoded chunk and final short chunk flush completely with matching byte hashes (55.542166ms)
+✔ network recovery resumes from evidence while freeze and deadline remain authoritative (0.522916ms)
+✔ independent actual backup CLI hung discovery stops within original deadline and keeps sensitive child output private (811.29025ms)
+✔ independent actual backup CLI expired original deadline launches no kubectl (25.499208ms)
+✔ independent budget expiration blocks a second command launch (21.546334ms)
+✔ independent snapshot expired remote deadline creates neither final nor part (22.052542ms)
+✔ independent HTTP command export preserves persisted observations across old run, absent fields, auth and RTU selection without writes (45.883917ms)
+✔ expiresAt accepts explicit ISO zones/fractions and rejects permissive Date.parse calendar normalization (6.021584ms)
+✔ expiresAt-only body change conflicts; equal priority supersedes overlapping but disjoint remains active (0.991625ms)
+✔ physical database reopen restores unfinished deadline; timeout retains setting until explicit stop makes power zero (7.337292ms)
+✔ independent delivery fixture proves only artifact consistency, never completion (111.603583ms)
+✔ independent delivery rejects changed source manifest (76.949125ms)
+✔ independent delivery rejects failed package validation (59.092166ms)
+✔ independent delivery rejects same release different reviewed video (48.663667ms)
+✔ independent delivery rejects empty reproduction list (56.03325ms)
+✔ independent delivery rejects wrong config hash (47.330459ms)
+✔ independent delivery rejects both image digests invalid (49.757291ms)
+✔ backup runtime identity rejects old rollout pod, wrong digest, unavailable or ambiguous ready pods (1.166458ms)
+✔ independent preview: summaries scan beyond display rows; hidden invalid row is rejected by preview and registration (12.93675ms)
+✔ independent preview HTTP: existing model and every persistent table unchanged, no MQTT connection path invoked (40.733375ms)
+✔ independent review: generated sample files accepted by production parser (48.469833ms)
+✔ independent review: delayed KMA HTTP result cannot overwrite newer manual edit or station (45.770917ms)
+✔ restore manifest enforces streamed source/destination SHA before app start and retains isolated read-only source (755.915833ms)
+✔ wrong snapshot SHA fails before copy; optional argument keeps legacy command compatibility (885.390916ms)
+✔ matching hashes do not replace SQLite integrity validation (489.113666ms)
+✖ hung apply is killed by remaining deadline without raw output or automatic retry (915.548459ms)
+✔ expired or missing run fails closed without even a discovery or apply (68.085ms)
+✔ prune deletes old acknowledged frames/outbox while preserving old pending/unbatched data, command IDs and scenarios (6.65ms)
+✔ poll cadence and telemetry gaps remain distinct; legacy alias remains poll gap (0.428083ms)
+✔ connection transition counts survive retry errors without double-counting close before first connect (2.798708ms)
+✔ independent auditor accepts genuine ramp-down output above new available power and nullable electrical observations (6.851791ms)
+✔ independent auditor rejects missing generator control fields (1.251959ms)
+✔ independent auditor rejects empty weather (0.832833ms)
+✔ independent auditor rejects null faults (0.740083ms)
+✔ independent auditor rejects non ISO source timestamp (0.927292ms)
+✔ independent auditor rejects non ISO observation timestamp (0.795291ms)
+✔ per-device identity/auth overrides are separate from common defaults and LWT topics are exact (4.3785ms)
+✔ runtime keeps tick/prune/shutdown alive when audit and storage both fail (38.243375ms)
+✔ shutdown closes HTTP and SQLite even if transport stop rejects (3.133375ms)
+✔ unauthenticated health/config contain no configured credentials; protected state requires token (8.282667ms)
+✔ public config exact allowlist and authenticated downloads never echo the credential (6.924625ms)
+✔ durable atomic model/frame, immutable sequence and byte/run/count batches (72.728666ms)
+✔ retention keeps unacknowledged messages, unbatched frames, command IDs and scenarios (0.991958ms)
+✔ controlled kubectl outage retries with cap and recovers read-only with exact image/auth (1265.057125ms)
+✔ wrong remote image blocks forwarding and does not replay writes (517.991125ms)
+✔ occupied unrelated ports are neither killed nor replaced (734.765375ms)
+✖ existing healthy external forward survives supervisor freeze, deadline and stop (1264.469709ms)
+✔ singleton excludes same-process duplicate, replaces verified stale PID identity, refuses incomplete lock (19.365958ms)
+✔ invalid startup configuration fails closed and does not spawn commands (5.515666ms)
+✔ deadline stops only owned forward; expected-image update is revalidated (902.2165ms)
+✔ local-only owned forward loss records a new outage and recovery without remote failure (597.814125ms)
+✔ unhealthy still-running owned forward records outage before replacement (493.165667ms)
+✔ real model and store split full SCADA into valid size-bounded packets, including equal wall timestamps (87.781459ms)
+✔ same-body QoS1 duplicate is counted; a changed body with same ID is an anomaly (1.240792ms)
+✔ shared sequence jumps, sensor gaps, restored run and baseline changes are contextual observations (1.032125ms)
+✔ independent structural defects are reported without throwing on malformed samples (1.795625ms)
+✔ RTU identity, retained delivery and bounded dedup scope remain explicit (1.576416ms)
+✔ storage failure during pump keeps row retryable and other event errors never escape (25.118375ms)
+✔ delayed storage failure and PUBACK ack failure retain original queue row for retry (67.279208ms)
+✔ per RTU independent inflight; only PUBACK removes immutable row; malformed and retained rejected (37.403208ms)
+✔ connection client IDs remain caller-specific with common auth configuration (0.352208ms)
+✔ delayed pump reads latest model object and REST receipts persist (18.128541ms)
+✔ provided 55-row wind TSV preserves voltage and proportional original-current estimate (4.787625ms)
+✔ hybrid combined total distributes by rated capacity without inferring fuel from power shape (0.699083ms)
+✔ KMA SFCTM2 field fixture uses index11 temperature, 10 degree wind and KST time (1.8ms)
+✔ KMA malformed/stale/future/out-of-range/wrong-station responses fail (0.340792ms)
+✔ live refresh preserves irradiance; request has current observation parameters and no old tm (1.81025ms)
+✔ automatic manual/frozen skips; explicit lookup enters weather mode and releases freeze (0.363167ms)
+✔ failed live observations retain all last-valid values, source and timestamp without auth leaks (0.341916ms)
+✔ missing direction preserves previous direction; SI never interpreted as irradiance (0.357333ms)
+✔ manual edit during in-flight request is protected, including explicit request (0.600167ms)
+ℹ tests 136
+ℹ suites 0
+ℹ pass 134
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7035.345917
+
+✖ failing tests:
+
+test at tests/review-restore-rig.test.js:19:1
+✖ hung apply is killed by remaining deadline without raw output or automatic retry (915.548459ms)
+  Error: ENOENT: no such file or directory, open '/var/folders/wr/lpnrpjl10dldcpcrjmjmgxdc0000gn/T/restore-rig-wD8s9C/manifest.json.calls'
+      at readFileSync (node:fs:441:20)
+      at TestContext.<anonymous> (file:///Users/charleskoh/research/20260921-RALPTON/tests/review-restore-rig.test.js:19:582)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/var/folders/wr/lpnrpjl10dldcpcrjmjmgxdc0000gn/T/restore-rig-wD8s9C/manifest.json.calls'
+  }
+
+test at tests/supervisor.test.js:22:1
+✖ existing healthy external forward survives supervisor freeze, deadline and stop (1264.469709ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'disconnected'
+  - 'ready'
+  
+      at TestContext.<anonymous> (file:///Users/charleskoh/research/20260921-RALPTON/tests/supervisor.test.js:22:700)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1313:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'disconnected',
+    expected: 'ready',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

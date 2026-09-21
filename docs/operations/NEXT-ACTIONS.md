@@ -7,6 +7,10 @@
 - 종료: 2026-09-22 07:07:33 KST. 시간 연장 없음.
 - 진행 중 목표를 완료 처리하지 않는다. 추가 개발자 입력을 전제로 하지 않는다.
 
+## 진행 중 후보1.3
+
+PRD1.10 / IDEA-007 선택RTU 시나리오 범위를 로컬 검증 중이다. 기상 조회 실패의 성공 알림 ISSUE020도 같은 후보에서 바로잡는다. 현재 k3s1.2는 유지하고 독립 검토·실제 브라우저·전체 시험·정확한 소스 이미지·원격 복원 및 이전1.2 호환성이 검증된 뒤에만 새 stable을 채택한다. 재접속 시 resume.json의 첫 미완료 단계부터 진행한다.
+
 ## 관찰
 
 현재 main 포트포워딩은3104/18884이며 kubectl은 항상 charles-k3s/gs-plai-5h를 명시한다. 터널 종료는 배포 종료와 다르다. 실제 배포는 단일 writer, Ready2/2 컨테이너다. read-only soak은 artifacts/soak/v1.2.0에10초마다 상태와 실제MQTT 샘플을 기록한다. 변경 전후 관찰을 이어 붙여 무중단으로 주장하지 않는다. 이전관찰은 artifacts/checkpoints/soak-1.0.0 및 soak-1.1.0에 별도로 보존했다.
@@ -18,6 +22,8 @@ RTU별 추가 전체 SCADA 관찰도 실행 중이다. `TELEMETRY-AUDIT.md`의 �
 11:16Z에 로컬관측이 일시실패한 뒤 supervisor가 자동복구했다.11:19Z에는 그때발견한시각기록오류를수정한감시프로세스로 계획교체했다. 현재supervisor root handle25872/PID54951(`Mon Sep 21 20:19:20 2026`)이며 이전98912는정상종료됐다. `artifacts/checkpoints/reconnect-20260921T1116`에 두사건과원문증거를분리보존했다. 당시복구후 main누적APIerror1/connectionErrors3, 추가RTUobserverconnectionErrors5는 과거누적값이다. 이후증가분/현재apiReady·MQTT연결·관측신선도·샘플이상을확인하고 기존누적값을새장애로반복보고하지않는다. 카운터를초기화하거나무중단으로표시하지않는다.
 
 11:34Z에 추가 로컬 검증 실패가 관측되어 같은 supervisor가11:34:05.722Z 단절/11:34:07.371Z 정상 복귀를 기록했다. 수동 재시작이나 강제 네트워크 차단은 없었다. 원인은 미확정이며 백업과의 인과관계도 입증하지 않았다. `artifacts/checkpoints/backup-recovery/summary.json`에 원문 구간을 보존했다. 최신 기준 누적값은 main APIerrors2/connectionErrors3, 추가 observer connectionErrors6이다. `resume.json`의 knownCumulativeCounters를 기준으로 이후 증가분을 판단한다.
+
+11:57/11:59Z에도 로컬 연결 재수립이 기록됐다. 최신 누적 기준은 main APIerrors3/connectionErrors3, 추가observer connectionErrors8, RTU별 sampleDiscontinuities1이다. 11:59 연결 공백 중 clean-session 관측기가8개배치/300샘플을 수신하지 못했으며 해당 원격 outbox의 연속 샘플과 PUBACK는 확인했다. 모든 수신자의 무손실을 뜻하지 않는다. `artifacts/checkpoints/reconnect-20260921T1159/summary.json`을 보고 기존 공백을 새 장애로 중복 보고하지 않는다.
 
 ## 동결 준비와 최종30분
 

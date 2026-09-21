@@ -43,3 +43,19 @@ Native session became Mac-locked while preparing hybrid split preview; hybrid sc
 The Devices and Lab recent-command panels include `최근 명령 상태 JSON 내보내기` for the selected RTU. The button calls the authenticated download helper, which checks HTTP success before creating a blob/download. Filenames use sanitized RTU ID and UTC digits only. A synchronous ref blocks duplicate clicks while pending; errors appear locally. The panel identifies its selected RTU and describes at most20 recent stored-state snapshots, distinct from external VPP receipt evidence or a full audit log. Command panels are keyed by RTU so switching clears old rows/errors and isolates old async responses. No new dependency or CSV-preview change.
 
 Production build passed. Native Mac remains locked; actual downloaded contents, authenticated failure without file, and RTU-switch isolation are assigned to the parent's browser harness. This note does not claim those behavioral checks from code inspection.
+
+## IDEA-007 selected RTU scenarios (1.3.0 candidate)
+
+Implements PRD FR-SCENE-03 / UI-10 / AT-SCENE-SELECT-01 in the existing scenario panel. Rendering filters each row by selected plantId. Title, loading state, empty state, and scope guidance identify the selected RTU and direct users to the existing RTU selector for another plant. Requests retain the original scenario IDs and server restore/export semantics. No API, storage, dependency, or scenario JSON change.
+
+List request revisions and mounted-lifetime checks ignore late list/save completions after selection change. Success notices capture the actual request-time RTU name and UUID. Existing global operation busy state flows through Lab to disable scenario actions across A→B→A remounts; a synchronous local ref prevents duplicate clicks within one render, including downloads. Local errors/loading are distinct from an empty list. Existing Lab tab reset on RTU selection remains unchanged.
+
+Behavioral acceptance is assigned to the parent's isolated browser fixture: same-name A/B scenarios, empty RTU, delayed list/save/restore responses, selection transitions, duplicate guards, actual exports, target-only restore effects, narrow and keyboard navigation. Source review is not behavioral evidence. Build was initially held at parent request to preserve the 1.2.0 dist for independent KMA error reproduction.
+
+## ISSUE-020 KMA refresh feedback
+
+Root reproduced the existing contradictory HTTP200/weatherError plus green-success notice in `artifacts/checkpoints/weather-feedback-before`. The refresh action now passes an explicit null notice to the existing global action helper: that one path clears/suppresses the green notice while preserving state refresh, busy accounting, and HTTP-error handling. Other action notices retain their behavior.
+
+The weather panel displays a request-time RTU name/UUID receipt. A returned weatherError is shown as an alert with the returned source. Otherwise the receipt is neutral and asks the user to inspect actual source/observation time; HTTP200 is not claimed as a new observation success. A mounted-lifetime guard ignores receipts arriving after RTU/menu changes, and a synchronous ref plus disabled button prevents repeated refresh requests in the same mounted panel. Server contracts and weather mutation behavior are unchanged.
+
+Full Vite build passed after ISSUE-020 and IDEA-007 source edits (main index-Bq6rJvbB.js, package still1.2.0 before root's planned version bump). Existing lazy3D chunk warning remains. Root owns actual missing-key, neutral return, and selection-transition browser acceptance; these are not claimed from source inspection.

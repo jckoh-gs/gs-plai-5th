@@ -1,0 +1,8 @@
+locator.selectOption: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByLabel(/^관찰 RTU/)[22m
+
+    at /Users/charleskoh/research/20260921-RALPTON/scripts/browser-scenario-scope.cjs:48:72 {
+  log: [ '  - waiting for getByLabel(/^관찰 RTU/)' ],
+  name: 'TimeoutError'
+}

@@ -1,0 +1,16 @@
+{
+  "observedAt": "2026-09-21T11:55:35.567Z",
+  "result": "REPRODUCED",
+  "scope": "Actual local browser; existing1.2 bundle, local isolated database, KMA key explicitly absent; no real KMA or cluster request",
+  "httpStatus": 200,
+  "plantId": "c3e5543e-10e7-403b-a8db-490a8cd36c9f",
+  "weatherError": "KMA_AUTH_KEY 미설정: 직전 유효 기상을 유지합니다",
+  "successNotice": "기상청 관측을 조회했습니다.",
+  "successNoticeAndFailureWarningVisibleTogether": true,
+  "loadedAssets": [
+    {
+      "path": "dist/assets/index-BAFq3wDU.js",
+      "sha256": "813aec32ffd5a6d8c9da40952711fbd6a28e4d541cf80d9e8cf5b398ad368c14"
+    }
+  ]
+}

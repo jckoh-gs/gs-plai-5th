@@ -316,3 +316,34 @@ chunkSize가256KiB→1MiB이고result.transferChunkBytes에실제값을기록한
 deployment담당이 remote-restore-check.mjs, remote-preview.mjs, remote-integration.mjs, browser-check.cjs, browser-command-export.cjs의6개fetch호출에15초AbortSignal과redirect:error를추가했다. 독립검토자는해당6호출의소스를확인했다. 앱/runtime변경이아니며전체실행deadline은여전히메인감독범위다.
 
 실행증거 `evidence/final-restore-http-boundary.json`은 **remote-preview 실제child+loopback 두경계만** 증명한다: 무응답15029ms에부모강제kill없이실패,302응답53ms에거절하고redirect목적요청0회. liveClusterAccess=false. `scripts/verify-proof-http-boundaries.mjs`는실행했던heredoc원본에설명주석을추가한보존소스다. 이검토에서재실행하지않았고5스크립트전체end-to-end/live회귀로표현하지않는다. 이전restore5test/sourcehash증거는변경하지않았다.
+
+
+## ISSUE-020 — KMA 업무 실패 응답을 조회 성공으로 표시
+
+중요도 P2 사용자 피드백, 현재 상태: 로컬 수정·회귀 검증 완료(원격 배포 대기). 기존1.2 번들의 실제 로컬 브라우저에서 KMA_AUTH_KEY 미설정 상태로 KMA 조회를 누르면 HTTP200 응답의 plant.weatherError가 실패를 알리는데도 전역 초록색 “기상청 관측을 조회했습니다.”와 실패 경고가 동시에 표시됐다. 재현 원본은 `artifacts/checkpoints/weather-feedback-before/result.json` 및 `contradictory-feedback.png`이며 HTTP200/동시표시 true와 로드된 번들 SHA를 보존한다. 실제 KMA 요청이나 클러스터 장애를 뜻하지 않는다.
+
+확정 원인은 서버가 현재 plant 상태를 반환하는 계약인데 Dashboard가 응답 weatherError를 읽지 않고 공통 act의 고정 성공 문구를 사용한 것이다. API/schema 변경 없이 weatherError는 오류로, 오류 없는 응답도 새 관측 적용을 단정하지 않는 중립적 처리 결과로 표시해야 한다. 서버가 대기 중 수동 설정/시나리오 복원에 의해 늦은 기상을 폐기할 수 있으므로 weatherSource=kma만으로 이번 조회의 새 관측 적용을 단정할 수 없다.
+
+독립 소스 검토에서 UI 수정본은 전역 성공 문구를 null로 억제하고 해당 RTU 이름/ID를 가진 로컬 receipt를 사용한다. keyed Dashboard와 unmount guard가 다른 RTU로 바꾼 후 늦은 응답 표시를 차단하며 inFlight가 중복 클릭을 막는다. 최종 브라우저 회귀 증거 확인 전 종결하지 않는다. 원격 안정 버전/관측기는 변경하지 않았다.
+
+### IDEA007 시나리오 선택 범위 독립 소스 검토
+
+Scenarios는 plantId가 선택 RTU와 같은 행만 표시하고 저장 요청은 선택 ID를 명시한다. 복원/내보내기는 표시된 행의 ID를 사용한다. RTU별 key에 따른 재마운트, mounted/generation 검사로 이전 목록 응답이 새 선택 화면에 반영되지 않으며 inFlight/pending 및 공통 busy로 연속 요청을 제한한다. 늦게 완료한 전역 저장/복원 알림도 대상 이름/RTU ID를 명시하므로 현재 선택 대상의 완료로 오인할 가능성을 줄인다. 이 필터는 UX 범위이며 서버 API 접근권한 경계로 주장하지 않는다. 실제 A/B/빈 목록 및 지연 응답 시험은 메인의 별도 브라우저 증거를 확인해 기록한다.
+
+
+### REVIEW018 — 운영 fixture의 wall-clock 여유와 직렬 실행
+
+후보1.3 전체시험 두 회는 각각134/136이었다. 첫 로그 `artifacts/checkpoints/candidate-1.3-tests.log`의 backup elapsed13.6초/restore child14.2초 실패와 둘째 `candidate-1.3-tests-round2.log`의900ms deadline 내 fakekubectl 최초 호출 전 만료·supervisor250ms 응답 제한 실패를 보존한다. 별도9fixture 재실행은 모두 통과했지만 이전 실패를 삭제하거나 통과로 재분류하지 않는다. 많은 실제 child/HTTP/SQLite fixture의 병렬 실행에서 스케줄링 여유가 부족한 증거이며 임의 환경에서 wall-clock 상한이 항상 보장된다는 의미가 아니다.
+
+테스트만 수정: supervisor fixture timeout250→2000ms, restore 정상 child guard5→15초, hung apply 원래deadline900→3000ms/관찰 상한3→8초. apply에 실제 진입한 후 timeout 종료·원문민감출력 비노출·후속rollout 없음 검증을 유지했다. 생산 timeout/deadline은 변경하지 않았다. 메인이 전체 test 명령의 file concurrency를1로 제한한다. 독립 직렬 재실행14/14PASS(`evidence/review-018-operational-timing.log`, 약9.6초). 이는 해당14fixture 결과이며 전체136시험 통과를 대신하지 않는다.
+
+
+### ISSUE020 / IDEA007 후속 — 최종 브라우저 증거 독립 검토
+
+최종 `scripts/browser-scenario-scope.cjs`의 실제 assertion, round5/result.json, 기상 오류 desktop/빈 RTU narrow 화면을 독립적으로 읽었다. 메인 실행 결과는 PASS이며 pageErrors=[]이고 로드 번들 index-Bq6rJvbB.js SHA256 8d61e59d833af0cea234ed17c6d61300e4b564708cfeb78f51f8a0ab2e6a5a3c에 연결된다. 검토자가 이 브라우저 harness를 별도로 재실행한 것은 아니다.
+
+실제 missing-key HTTP200은 weatherError와 오류 receipt로 표시되고 이전 고정 성공문구가 없다. 화면에서 대상 RTU 이름/ID와 실제 반환 출처를 확인했다. manual/no-error의 중립 receipt와 늦은 A 응답의 B 화면 미표시는 명시적 controlled 응답 fixture이며 실제 외부 KMA 성공 검증이 아니다. 이 범위에서 ISSUE020 수정 검증을 종결하고 원격 배포 상태는 별도 게이트로 남긴다.
+
+IDEA007은 같은 이름의 A/B 목록 구분, JSON 다운로드와 서버 snapshot deep equality, 빈 RTU 안내, A만 새 run/명령취소 및 B run/모델/명령 불변, 지연 list 차단, 저장 A→B→A 시 비활성/단일 POST, reload/keyboard typeahead/narrow overflow 검사를 실제 assertion으로 확인했다. 글로벌 목록 API 계약은 그대로다. 초기 네 번은 headless native key 동작/선택자 fixture 실패로 원본 로그를 보존했으며 최종 통과로 삭제하지 않는다.
+
+전체시험 후속은 메인 candidate-1.3-tests-round3.log의136/136PASS이며 REVIEW018의 독립14개 결과와 구분한다. 코드/최종 harness/원본 result 및 이미지 해시는 review-019-scenario-weather-source.json에 기록했다. 본 검토에서 클러스터/서버/공유 fixture를 변경하지 않았다.

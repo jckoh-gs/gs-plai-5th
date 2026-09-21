@@ -1,0 +1,9 @@
+{
+  "at": "2026-09-21T12:04:30.924374+00:00",
+  "scope": "Independent serial 14 fixtures; test-only timing margins; no live changes",
+  "sha256": {
+    "tests/supervisor.test.js": "8ca40722fe38ddb3862e43916bae249c9b8d9265098d25bbeb8e81e0c6c69b64",
+    "tests/review-restore-rig.test.js": "fccbb972c31cca8207dfb87ca9caaf0bfc96507fd85766eeb2ca9af2d3dfb772",
+    "docs/issues/evidence/review-018-operational-timing.log": "0b074498f473c0f58cf24445638643ac6a014dc9ef051fd976161ab0dcb1d62f"
+  }
+}

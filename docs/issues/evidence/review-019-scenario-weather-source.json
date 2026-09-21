@@ -1,0 +1,11 @@
+{
+  "at": "2026-09-21T12:07:06.862209+00:00",
+  "scope": "Independent source/assertion/result and two screenshot inspection; parent browser execution, not independent rerun; local only",
+  "sha256": {
+    "web/src.jsx": "a46b25a1484e6814094521e4e31b442524ce94d97237c52557010da44cbce32d",
+    "scripts/browser-scenario-scope.cjs": "ae8eb37e2ed5bad4f7f71a9bb088f3a69289eb12b20081a16dc4b7fabd8bc4aa",
+    "artifacts/checkpoints/scenario-scope-local-round5/result.json": "3c043087f3c4d966f2a88462003e9ce355d3c44ac58b0faa2cb88aa65ed74257",
+    "artifacts/checkpoints/scenario-scope-local-round5/weather-error-desktop.png": "7201487a85f6883838349774787e509e09d9a2d310fc6a02a0998e590977afc5",
+    "artifacts/checkpoints/scenario-scope-local-round5/scenario-empty-narrow.png": "f31fa27ec0134cdb1a06a06e0a19325c3c93227d6d755676adf033270135b2f8"
+  }
+}

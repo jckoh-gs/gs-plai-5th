@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T11:47:12.995Z",
+  "updatedAt": "2026-09-21T12:07:49.196851+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": "stable-v1.2.0",
   "stableManifest": "artifacts/releases/checkpoint-1.2.0.json",
   "workingMilestone": {
-    "productVersion": "1.2.0",
-    "prdVersion": "1.9",
-    "idea": "IDEA-006",
-    "state": "Verified stable runtime and immutable checkpoint1.2.0; 453hashes/actualremoteimages PASS. No unfinished app feature."
+    "productVersion": "1.3.0",
+    "prdVersion": "1.10",
+    "idea": "IDEA-007",
+    "state": "Local acceptance passed; immutable source image build, image security scan, k3s acceptance and exact snapshot restore/backward1.2 pending. Stable1.2 remains deployed."
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -20,6 +20,7 @@
     "1.2.0 exact-image79 runtime tests, local88 tests, image security scan, k3s UI/export/preview/MQTT, actual outbox pod replacement, fresh backup restore and backward1.1 all PASS"
   ],
   "remainingInOrder": [
+    "Build exact committed candidate1.3 image, run exact-image tests/integration/advanced/security scan, then perform k3s acceptance/backup restore/backward1.2 and only then promote a new immutable stable checkpoint. Local136tests, integration/advanced, browser A/B/races/restore/export/KMA and independent reviews passed. Preserve stable1.2 fallback and original time limits.",
     "Continue observation until original freeze; select verified normal runtime, create consistent backup, verify that exact selected snapshot in isolated restore rig, commit evidence and create new immutable final manifest following FINAL-RESTORE-PLAN.md",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -69,9 +70,10 @@
     "supervisorProcessIdentity": "Mon Sep 21 20:19:20 2026",
     "previousSupervisorHandleTerminal": 98912,
     "knownCumulativeCounters": {
-      "primaryApiErrors": 2,
+      "primaryApiErrors": 3,
       "primaryConnectionErrors": 3,
-      "supplementaryConnectionErrors": 6
+      "supplementaryConnectionErrors": 8,
+      "supplementarySampleDiscontinuitiesPerRTU": 1
     },
     "instructions": "Do not reset counters or report known historical counts as new failures. Compare increases and current readiness/connection/freshness. Verify process identity before acting on a PID.",
     "subsequentObservations": [
@@ -81,6 +83,15 @@
         "evidence": "artifacts/checkpoints/backup-recovery/summary.json",
         "cause": "unknown",
         "forcedInterruption": false
+      },
+      {
+        "outageObservedAt": "2026-09-21T11:59:33.489Z",
+        "readyObservedAt": "2026-09-21T11:59:36.037Z",
+        "earlierReconnectAt": "2026-09-21T11:57:53.549Z",
+        "evidence": "artifacts/checkpoints/reconnect-20260921T1159/summary.json",
+        "cause": "local verification failed; underlying cause unknown",
+        "forcedInterruption": false,
+        "observationGap": "Clean-session QoS1 observers missed8 telemetry batches /300samples during reconnect; all corresponding remote outbox samples continuous and publisher PUBACK recorded. No every-consumer delivery guarantee."
       }
     ]
   },

@@ -75,3 +75,11 @@ IDEA006계약확정: root redaction={policy:"known-secrets-credential-urls-contr
 
 ### IDEA006 구현·배포·복원 완료
 83d10ce/제품1.2.0/PRD1.9: exactimage79app시험(local88중9ops별도),실제export/authUI/MQTT125/podoutbox재시작/169414656bytebackup현재1.2및역방향1.1복원통과. stable-v1.2.0과stable-runtime-v1.2.0-83d10ce확정.기능인수완료이며현재1.2manifest최종해시검증·미디어·시간게이트는별도.
+
+## IDEA-007 · 선택 RTU별 시나리오 목록
+- 상태: 채택(PRD1.10/제품1.3.0후보), 구현·로컬 검증 완료. scenario-scope-local-round5 실제브라우저/REST 및136시험 통과. 원격배포·복원·stable은대기.
+- 근거/가치: [REVIEW013](REVIEW-013.md)의 선택단지와 실제복원대상 혼동방지.
+- 수락: FR-SCENE03/UI10/AT-SCENE-SELECT01. REST전체계약·원래plantId복원유지, 현재선택필터/늦은응답/대상표시/빈상태/export/A복원시B불변. UI필터는보안경계아님.
+- 기준: stable1.2.0/runtime83d10ce fallback과원래시간·영상/PPT게이트유지.
+
+KMA피드백소스관찰: 키없음/timeout에서HTTP200+weatherError일때일반act가성공뉘앙스notice를보일가능성을메인이확인중이다. 기존UX오류의재현·수정검토이며IDEA007의채택기능이나별도채택된새기능으로간주하지않는다. 브라우저재현전완료/확정결함주장없음.

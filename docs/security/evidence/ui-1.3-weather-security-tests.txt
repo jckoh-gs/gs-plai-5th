@@ -1,0 +1,15 @@
+✔ KMA SFCTM2 field fixture uses index11 temperature, 10 degree wind and KST time (1.469ms)
+✔ KMA malformed/stale/future/out-of-range/wrong-station responses fail (0.30325ms)
+✔ live refresh preserves irradiance; request has current observation parameters and no old tm (1.516917ms)
+✔ automatic manual/frozen skips; explicit lookup enters weather mode and releases freeze (0.288083ms)
+✔ failed live observations retain all last-valid values, source and timestamp without auth leaks (0.2735ms)
+✔ missing direction preserves previous direction; SI never interpreted as irradiance (0.157458ms)
+✔ manual edit during in-flight request is protected, including explicit request (0.296791ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 39.404333
