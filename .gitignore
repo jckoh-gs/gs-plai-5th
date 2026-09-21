@@ -13,3 +13,6 @@ artifacts/private/
 artifacts/video/*.mp4
 artifacts/video/raw/
 artifacts/checkpoints/*.sqlite*
+
+# Also exclude dependency symlinks used by local artifact tooling
+**/node_modules
