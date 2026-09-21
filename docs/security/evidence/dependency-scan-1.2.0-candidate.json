@@ -1,0 +1,29 @@
+{
+  "capturedAt": "2026-09-21T09:44:20.657Z",
+  "appVersion": "1.2.0",
+  "node": "v24.16.0",
+  "lockSha256": "8a2c5124145f98930faf9ad632ec3916b1a6781f0949208743da4cc3fdd8fceb",
+  "scope": "prod+dev",
+  "audit": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "dependencies": {
+      "prod": 111,
+      "dev": 127,
+      "optional": 53,
+      "peer": 2,
+      "peerOptional": 0,
+      "total": 237
+    }
+  },
+  "comparison": {
+    "baseline": "stable-runtime-v1.1.0-8599ab9",
+    "changedNonRootPackageEntries": []
+  }
+}

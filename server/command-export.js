@@ -18,7 +18,7 @@ function secretValues(config){
   }
   if(typeof config.token==='string'&&config.token)values.add(config.token);
   if(typeof config.url==='string')try{const url=new URL(config.url);if(url.password){values.add(url.password);values.add(decodeURIComponent(url.password));}}catch{}
-  return [...values].sort((a,b)=>b.length-a.length);
+  return [...new Set([...values].map(value=>value.replace(/[\u0000-\u001f\u007f-\u009f]/g,'')).filter(Boolean))].sort((a,b)=>b.length-a.length);
 }
 function identifier(value,secrets){
   if(typeof value!=='string')return {value:null,redacted:false};

@@ -45,3 +45,11 @@ test('explicit broker URL password is treated as known credential in information
   const text=JSON.stringify(dto);for(const secret of ['broker-only-password','broker%2Fpassword','broker/password'])assert(!text.includes(secret),secret);
   assert.equal(dto.redaction.redactedCommandIds,3);
 });
+test('control normalization cannot expose known secrets or create empty replacement patterns',async()=>{
+  const {exportCommandStates}=await import('../server/command-export.js');
+  const commands=['secret-line\nvalue','secret-linevalue','password\nfixture','passwordfixture','password%0Afixture','unchanged-id'].map(commandId=>({commandId}));
+  const dto=exportCommandStates({plantId:'fixture',productVersion:'1.2.0',commands,config:{token:'secret-line\nvalue',url:'mqtt://user:password%0Afixture@localhost',env:{EMPTY_AFTER_STRIP_SECRET:'\n\r\u0000'}}});
+  assert.deepEqual(dto.commands.slice(0,5).map(row=>row.commandId),Array(5).fill('[redacted]'));
+  assert.equal(dto.commands[5].commandId,'unchanged-id');assert.equal(dto.commands[5].commandIdRedacted,false);
+  assert.equal(dto.redaction.redactedCommandIds,5);
+});

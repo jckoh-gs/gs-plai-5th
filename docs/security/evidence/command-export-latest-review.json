@@ -1,0 +1,16 @@
+{
+  "capturedAt": "2026-09-21T10:02:53.929Z",
+  "sourceHashes": {
+    "server/command-export.js": "6bba250ec237006e1d8f9b7e4b475870f3366a5a7cc9299c3519f4fc8149863e",
+    "server/index.js": "fdced6abe1dc0917d72a8ddedb110bb904b6a439c49071d947049a3a9fed593d",
+    "package-lock.json": "8a2c5124145f98930faf9ad632ec3916b1a6781f0949208743da4cc3fdd8fceb",
+    "tests/command-export-security.test.js": "6cb6c7f08a13f8992949bac47c4d31638125066071e18e66db851190a3173abe",
+    "tests/command-export.test.js": "10beeffa76da53b2b5390536bf44b2a95f614def3e089fb21718d3f4fe5a44e5"
+  },
+  "suite": {
+    "tests": 7,
+    "passed": 7
+  },
+  "controlURLProbe": true,
+  "normalizedKnownSecretProbe": true
+}
