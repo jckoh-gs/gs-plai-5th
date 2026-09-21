@@ -1,0 +1,5 @@
+import subprocess as s,pathlib,json,os,signal,sys
+name=sys.argv[1];p=pathlib.Path('deploy/verification/final-restore-20260921');k=['kubectl','--context','charles-k3s','-n','gs-plai-5h'];assert json.load(open(p/'mqtt.json'))['result']=='PASS'
+s.run(k+['scale','deployment/'+name,'--replicas=0'],check=True,timeout=30,stdout=(p/'scaled-zero.log').open('w'));s.run(k+['wait','--for=delete','pod','-l','app='+name,'--timeout=90s'],check=True,timeout=95,stdout=(p/'deleted.log').open('w'));x=json.loads(s.check_output(k+['get','pods','-l','app='+name,'-o','json'],timeout=15));assert not x['items'];(p/'final-pods.json').write_text(json.dumps(x,indent=2)+'\n');d=json.loads(s.check_output(k+['get','deployment',name,'-o','json'],timeout=15));assert d['spec']['replicas']==0;(p/'scaled-zero.json').write_text(json.dumps({'replicas':0,'pods':0,'retainedPVCs':[name+'-data',name+'-mqtt-data']},indent=2)+'\n');f=json.load(open(p/'forward.json'));r=s.run(['ps','-p',str(f['pid']),'-o','pid=,lstart=,args='],capture_output=True,text=True)
+if r.returncode==0:
+ assert r.stdout.strip()==f['identity'];os.kill(f['pid'],signal.SIGTERM)

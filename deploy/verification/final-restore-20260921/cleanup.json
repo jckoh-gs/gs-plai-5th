@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T21:50:02.753381+00:00",
+  "replicas": 0,
+  "pods": 0,
+  "portsAbsent": {
+    "3105": true,
+    "18885": true
+  },
+  "forwardNeverStarted": true,
+  "retainedPVCs": [
+    "grid-restore-final-20260921-data",
+    "grid-restore-final-20260921-mqtt-data"
+  ],
+  "mainMutated": false
+}

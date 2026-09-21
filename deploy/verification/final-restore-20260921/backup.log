@@ -1,0 +1,49 @@
+{
+  "result": "PASS",
+  "capturedAt": "2026-09-21T21:38:13.237Z",
+  "verifiedAt": "2026-09-21T21:40:07.906Z",
+  "sourceCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "appImage": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "verifiedTransferPod": {
+    "name": "grid-69d8766f7-zmfq8",
+    "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+    "image": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+    "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876"
+  },
+  "podVerificationStage": "transfer",
+  "remotePath": "/data/stable-40b9ed8-20260921T213806965Z.sqlite",
+  "localPath": "artifacts/private/backups/stable-40b9ed8-20260921T213806965Z.sqlite",
+  "bytes": 1497214976,
+  "sha256": "ee980470a2fda2dba7e609099400f0c315bb4c91e6436c33966e24ff762dee7e",
+  "compressedBytes": 54019535,
+  "verifiedChunks": 52,
+  "transferChunkBytes": 1048576,
+  "remoteCompressionPeakRssBytes": 133435392,
+  "localPeakRssBytes": 313933824,
+  "integrity": "ok",
+  "plants": 5,
+  "pending": 0,
+  "snapshot": {
+    "result": "PASS",
+    "workerExitConfirmed": true,
+    "integrity": "ok",
+    "stage": "verified",
+    "steps": 3655,
+    "totalPages": 365531,
+    "remainingPages": 0,
+    "elapsedMs": 36055,
+    "snapshotAt": 1790026687473,
+    "supervisorMaxMs": 80000,
+    "hostCommandMaxMs": 90000
+  },
+  "snapshotCreation": "new-supervised",
+  "method": "fixed WAL read snapshot; supervised node:sqlite backup; streaming gzip and disk-backed chunk+whole SHA256 verification; private0600 copy",
+  "timePolicy": {
+    "startedAt": "2026-09-21T21:38:06.965Z",
+    "stopAt": "2026-09-21T21:41:06.965Z",
+    "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+    "remoteCancellationGuaranteed": false
+  },
+  "metadataPath": "deploy/verification/final-backup-20260921.json",
+  "operationJournal": "artifacts/operations/backups/20260921T213806965Z.json"
+}

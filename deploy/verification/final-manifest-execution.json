@@ -1,0 +1,14 @@
+{
+  "state": "FINAL_MANIFEST_VERIFICATION_COMPLETED",
+  "tool": "exec_command",
+  "chunkId": "6f2bb8",
+  "sessionId": null,
+  "exitCode": 0,
+  "wallTimeSeconds": 0.65548025,
+  "deadlineWrapperSeconds": 70,
+  "manifest": "artifacts/releases/final-20260921.json",
+  "manifestSha256": "10e4e035587166263dfba9d91e2350b84b43c44d15222d561dba84852e51f024",
+  "report": "deploy/verification/final-manifest-verification.json",
+  "reportSha256": "96bef3ce5604b9b39e971496c5ed8ecee696e730b6c9a3b27fba1964d1650e3d",
+  "scope": "File integrity and actual remote identity; selected backup5ff relies on its exact earlier successful recovery evidence, newee980 restore not accepted."
+}

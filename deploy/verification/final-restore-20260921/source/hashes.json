@@ -1,0 +1,12 @@
+{
+  "commit": "39e64809a3db5dbe1d89306e63012da95cb14758",
+  "files": {
+    "remote-backup-helpers.mjs": "73ace68aee69462f0c6eac06ad0445363bcb2143f1cfcff85a28eaf6c85d30fb",
+    "pod-identity.mjs": "2e985af6a16219e34d39c11dd6c78eed6e62cdd161c1b13515e6252176b2a3e8",
+    "remote-restore-check.mjs": "dab036666df4d2000dc6a0ed1bdc41e86a048fac61ccad1e6d543ae44841f61a",
+    "remote-integration.mjs": "ff594af40f686fb7a7258ee6c862f1faa4bc612b2b1c4682de8d721b91e8d523",
+    "remote-backup.mjs": "2172449bf7161983062d1fe06b00f198060ede37cb5cea1062e701572d961c18",
+    "remote-preview.mjs": "fd00c96113a8b805502961a15ed3287ee1dbce1643be59c52d7978ad1a17a0cb"
+  },
+  "SNAPSHOT_SOURCE_SHA256": "0ebab4bb4993239e0872bdab427db16dadb8e1d877809c5f376665f2f922589b"
+}

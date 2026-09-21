@@ -1,0 +1,31 @@
+{
+  "result": "INCOMPLETE_FINAL_RESTORE_NOT_SELECTED",
+  "checkedAt": "2026-09-21T21:50:24.980961+00:00",
+  "cutoffAt": "2026-09-21T21:44:33.079Z",
+  "actualReconciliationAt": "2026-09-21T21:49:33Z",
+  "backupMetadata": "deploy/verification/final-backup-20260921.json",
+  "backupResult": "PASS",
+  "backupBytes": 1497214976,
+  "backupSha256": "ee980470a2fda2dba7e609099400f0c315bb4c91e6436c33966e24ff762dee7e",
+  "snapshotWorkerExitConfirmed": true,
+  "healthSamples": 34,
+  "healthFailures": 0,
+  "maxHealthMs": 355,
+  "restoreSetupHandle": 75944,
+  "restoreSetupExit": 125,
+  "actualPodUID": "7f3a6b69-b524-41fe-baec-23fadb87ed35",
+  "actualPodReadyTransition": "2026-09-21T21:41:13Z",
+  "actualImage": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "limits": "Local wrapper failure125 and reconciliation after cutoff; raw failure hidden by wrapper. Remote Ready alone does not establish original-data, UI/auth/export/preview or MQTT acceptance. None of those final snapshot checks was executed. Scheduling/time gap cause not established.",
+  "selectedFallback": "Existing proven1.7.1 snapshot5ff34; selection owned by root",
+  "newSnapshotRole": "Supplemental verified backup only; not selected recovery proof",
+  "terminalHandles": {
+    "68920": 0,
+    "75944": 125,
+    "15447": 0
+  },
+  "cleanup": "cleanup.json",
+  "mainUnchanged": "main-after-canonical.json",
+  "ownedLiveHandles": [],
+  "forwardNeverStarted": true
+}
