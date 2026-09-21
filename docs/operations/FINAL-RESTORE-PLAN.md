@@ -1,8 +1,8 @@
 # 최종 30분: 동일 스냅샷 복원과 릴리스 연결
 
-준비 문서이며 최종창 실행 증거가 아니다. 현재 기능상 안정 기준은 **제품1.6.0 / PRD1.13 / runtime331ab9a / image4af99e7b**이다. REVIEW032에서 main UI·MQTT·outbox와 동일851673088바이트 백업의 현재1.6·이전1.5 격리 복원19보고서+2실제Pod identity, 메인 실제 정리를 대조했다. 선택 메타데이터는 `deploy/verification/stable-backup-331ab9a.json`, SHA `9bd8becb4211ee0edd9217db99e05b63d8fa3f5437a8e4cc7be2ace449cb3137`이다. 불변 `checkpoint-1.6.0.json`은 sourceb729f42에서 생성되어1466해시·실제Ready·9bd백업의 메인/REVIEW033 검증을 통과했다. SHA는 `fd3fedc9dffb6bdc8d6e69982554dabde24bf3054113f02dc8370385bc238ae5`다. 태그 연결 결과와 후속상태는 run.json의 stableCheckpoint를 읽는다.
+준비 문서이며 최종창 실행 증거가 아니다. 현재 기능상 안정 기준은 **제품1.6.0 / PRD1.13 / runtime331ab9a / image4af99e7b**이다. REVIEW032에서 main UI·MQTT·outbox와 동일851673088바이트 백업의 현재1.6·이전1.5 격리 복원19보고서+2실제Pod identity, 메인 실제 정리를 대조했다. 선택 메타데이터는 `deploy/verification/stable-backup-331ab9a.json`, SHA `9bd8becb4211ee0edd9217db99e05b63d8fa3f5437a8e4cc7be2ace449cb3137`이다. 불변 `checkpoint-1.6.0.json`은 sourceb729f42에서 생성되어1466해시·실제Ready·9bd백업의 메인/REVIEW033 검증을 통과했다. SHA는 `fd3fedc9dffb6bdc8d6e69982554dabde24bf3054113f02dc8370385bc238ae5`다. 두 태그 원격검증도 완료했다. stable-v1.6.0은 전체 운영·근거180fa68, runtimealias는 정확한 앱 소스331을 가리킨다. 후속상태는 run.json의 stableCheckpoint를 읽는다.
 
-`stable-runtime-v1.6.0-331ab9a`는 정확한 앱 빌드 커밋을, `stable-v1.6.0`은 이후 백업 개선을 포함한 운영·근거 체크포인트를 가리키도록 만든다. 서로의 의미를 혼동하지 않는다. 과거1.5/ad34(719527936바이트) 및1.4/be09 불변 manifest·백업은 그대로 보존하고 현재9bd 복원 증거와 혼합하지 않는다. 1.5의 이벤트 시각 표시 한계도 유지한다. 동결21:37:33Z, 종료22:07:33Z는 변경하지 않는다. 재개 시 resume.json의 현재PID·핸들·실제Git을 확인하며 완료한 배포·제어·복원을 반복하지 않는다.
+`stable-runtime-v1.6.0-331ab9a`는 정확한 앱 빌드 커밋을, `stable-v1.6.0`은 이후 백업 개선을 포함한 운영·근거 체크포인트를 가리킨다. 서로의 의미를 혼동하지 않는다. 과거1.5/ad34(719527936바이트) 및1.4/be09 불변 manifest·백업은 그대로 보존하고 현재9bd 복원 증거와 혼합하지 않는다. 1.5의 이벤트 시각 표시 한계도 유지한다. 동결21:37:33Z, 종료22:07:33Z는 변경하지 않는다. 재개 시 resume.json의 현재PID·핸들·실제Git을 확인하며 완료한 배포·제어·복원을 반복하지 않는다.
 
 ## 선행 준비와 한계
 

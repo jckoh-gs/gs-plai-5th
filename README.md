@@ -71,7 +71,7 @@ node scripts/client-security-integration.js
 
 대상은 `charles-k3s` / `gs-plai-5h`입니다. 구체적인 이미지 빌드·배포·접근 명령은 [deploy/README.md](deploy/README.md)에 있습니다. 앱은 1개 인스턴스와 Recreate 교체를 사용하며 SQLite 및 MQTT 데이터는 PVC에 저장합니다. 기본 context를 변경하지 않습니다.
 
-현재 원격1.6.0(runtime331ab9a/image4af)은 동일851673088B/9bd 백업의 현재1.6·이전1.5 복원과 독립 기능 인수를 완료했다. 새 불변manifest1466해시·실제Ready·백업 검증을 완료했고 태그 전달을 마무리하며, 과거1.5/ad34 체크포인트와 그 시각 표시 한계를 보존한다. 현재 선택은 [실행 원장](docs/operations/run.json)과 [다음 작업](docs/operations/NEXT-ACTIONS.md)을 먼저 확인한다. 이전 릴리스 설명을 현재 배포·백업 선택으로 사용하지 않는다.
+현재 원격1.6.0(runtime331ab9a/image4af)은 동일851673088B/9bd 백업의 현재1.6·이전1.5 복원과 독립 기능 인수를 완료했다. 새 불변manifest1466해시·실제Ready·백업 검증을 완료했고 `stable-v1.6.0`(전체 운영·근거180fa68)과 `stable-runtime-v1.6.0-331ab9a`(앱 빌드 소스)의 원격 태그를 확인했으며, 과거1.5/ad34 체크포인트와 그 시각 표시 한계를 보존한다. 현재 선택은 [실행 원장](docs/operations/run.json)과 [다음 작업](docs/operations/NEXT-ACTIONS.md)을 먼저 확인한다. 이전 릴리스 설명을 현재 배포·백업 선택으로 사용하지 않는다.
 
 독립 로컬 SQLite 백업 CLI:
 

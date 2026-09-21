@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:20:24.582158+00:00",
+  "remote": "origin",
+  "remoteRefs": {
+    "refs/heads/main": "180fa6871d56fa723a5388ee3ea0b128ef623b4b",
+    "refs/tags/stable-runtime-v1.6.0-331ab9a": "cf7f6ab9a2f6dee0fb5f8610c362a9a5b6f7fda1",
+    "refs/tags/stable-runtime-v1.6.0-331ab9a^{}": "331ab9a00ee71a0924042e7952013d47495449d3",
+    "refs/tags/stable-v1.6.0": "8f2cdf0a15eee39ea9027b86c2f353d8412aea26",
+    "refs/tags/stable-v1.6.0^{}": "180fa6871d56fa723a5388ee3ea0b128ef623b4b"
+  },
+  "stableTagScope": "Full operational/evidence checkpoint including immutablemanifest/review and backuphardening",
+  "runtimeAliasScope": "Exact app build source331ab9a",
+  "atomicPushHandle": 64968,
+  "atomicPushExit": 0,
+  "overallGoalComplete": false
+}

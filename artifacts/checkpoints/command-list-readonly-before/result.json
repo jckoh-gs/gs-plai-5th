@@ -1,0 +1,10 @@
+{
+  "scope": "Actual main1.6 read-only UI with browser-only GET503 fixture; no real server outage",
+  "writes": 0,
+  "blocked": 2,
+  "before": "RECENT 20 COMMANDS\n명령 처리 결과\n최근 명령 상태 JSON 내보내기\n\n선택 RTU: 대관령 바람 정원 · 최근 갱신 순 최대 20개 저장 상태 스냅샷입니다. 외부 VPP 수신 증거나 전체 감사 로그가 아닙니다. 상세 원인은 화면에서 확인하세요.\n\n명령 / 출처\t수명주기\t목표 / 실제 (kW)\tSCADA 전달시각\t원인\nset_target MQTT\n89e8ff6f-4e22-4ae5-9330-29dfb53f4164\n\tcompleted\t0 / 0\t2026. 9. 21. 17시 36분 50초\t—",
+  "after": "RECENT 20 COMMANDS\n명령 처리 결과\n최근 명령 상태 JSON 내보내기\n\n선택 RTU: 대관령 바람 정원 · 최근 갱신 순 최대 20개 저장 상태 스냅샷입니다. 외부 VPP 수신 증거나 전체 감사 로그가 아닙니다. 상세 원인은 화면에서 확인하세요.\n\n명령 / 출처\t수명주기\t목표 / 실제 (kW)\tSCADA 전달시각\t원인\nset_target MQTT\n89e8ff6f-4e22-4ae5-9330-29dfb53f4164\n\tcompleted\t0 / 0\t2026. 9. 21. 17시 36분 50초\t—",
+  "unchanged": true,
+  "visiblePollError": false,
+  "globalConnected": "실시간 연결"
+}

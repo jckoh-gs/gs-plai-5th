@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T16:19:12.359668+00:00",
+  "updatedAt": "2026-09-21T16:22:33.310660+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -9,12 +9,13 @@
     "prdVersion": "1.13",
     "commit": "331ab9a00ee71a0924042e7952013d47495449d3",
     "tag": "stable-v1.6.0",
-    "tagState": "pending-after-manifest-verification",
-    "tagScope": "Full operational/evidence checkpoint including backup hardening; tag pending manifest verification",
+    "tagState": "created-and-remote-verified",
+    "tagScope": "Full operational/evidence checkpoint including immutablemanifest/reviews/backuphardening",
     "alias": "stable-runtime-v1.6.0-331ab9a",
     "appImage": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
     "backupEvidence": "deploy/verification/stable-backup-331ab9a.json",
-    "recoveryEvidence": "deploy/verification/candidate-331ab9a/restore-summary.json"
+    "recoveryEvidence": "deploy/verification/candidate-331ab9a/restore-summary.json",
+    "tagCommit": "180fa6871d56fa723a5388ee3ea0b128ef623b4b"
   },
   "stableManifest": {
     "path": "artifacts/releases/checkpoint-1.6.0.json",
@@ -23,13 +24,14 @@
     "sha256": "fd3fedc9dffb6bdc8d6e69982554dabde24bf3054113f02dc8370385bc238ae5",
     "manifestSourceCommit": "b729f4287cf6a5a5527fa37f105e61bd41e135b7",
     "independentReview": "docs/product/REVIEW-033.md",
-    "verification": "artifacts/checkpoints/release-1.6/verification.json"
+    "verification": "artifacts/checkpoints/release-1.6/verification.json",
+    "tagVerification": "artifacts/checkpoints/release-1.6/tags.json"
   },
   "workingMilestone": {
     "productVersion": "1.6.0",
     "prdVersion": "1.13",
     "idea": "IDEA-010",
-    "state": "Functional andimmutable1.6manifest verified; tagcreation/push next"
+    "state": "Verified1.6 checkpoint complete; continue observations and bounded productproposal beforeoriginalfreeze"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -41,7 +43,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Verified1.6 manifest1466hashes/sourceb729/runtime331/backup9bd. Commit immutablemanifest andREVIEW033 thencreate/push stable-v1.6(fullcheckpointcommit) andruntimealias331, afterchecking actualexistinglocal/remote tags. Recordresults; neverrepeat completeddeploy/outbox/restore.",
+    "Maintain verified1.6 andexistingreadonlyobservers. Review ready IDEA011/REVIEW034 command-list pollingfailure visibility proposal; ifadopting firstrecordPRD/productversion and preserve1.6fallback. No newversion adopted yet. Completed1.6deploy/outbox/9bdrestore/manifest1466/tags mustnotrepeat.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -366,10 +368,12 @@
     "instruction": "Use FINAL-RESTORE-PLAN bounded direct commands and media watchdog; inspect uncertain remote outcome before retry; immutable1.3 checkpoint unchanged"
   },
   "nextProductProposal": {
-    "id": "IDEA-010",
-    "revision": 1,
-    "state": "Adoptedcandidate1.6/PRD1.13 afteractual55rowread-onlyproof",
-    "review": "docs/product/REVIEW-029.md"
+    "state": "READONLYproposal ready, notadopted; rootreview next",
+    "owner": "/root/product",
+    "review": "docs/product/REVIEW-034.md",
+    "scope": "Existingcommandrows hide subsequentGETfailure despite healthyglobalSSE; browser-only503fixture/APIwrites0. Consider bounded command-list freshness UI withoutserver/DB/control changes.",
+    "idea": "IDEA-011",
+    "evidence": "artifacts/checkpoints/command-list-readonly-before/result.json"
   },
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
@@ -387,17 +391,8 @@
     "lastLocalRehearsal": "artifacts/checkpoints/media-lifecycle-local-round1/result.json",
     "localFixtureOnly": true
   },
-  "currentObservationIncidents": [
-    {
-      "runtime": "1.5.0",
-      "evidence": "artifacts/checkpoints/backup-incident-20260921T1534/initial-summary.json",
-      "cause": "unknown; temporaloverlap withpreupgradebackup",
-      "status": "Recovered transport/Ready; backupissue open",
-      "recoveryEvidence": "artifacts/checkpoints/backup-incident-20260921T1534/recovery-summary.json",
-      "issue": "ISSUE024"
-    }
-  ],
-  "nextOperationalReview": "New1.6 immutablemanifest/tag verification; then continuedobservation andbounded versioned productideas until originalfreeze",
+  "currentObservationIncidents": [],
+  "nextOperationalReview": "Review bounded IDEA011 proposal thenadopt/version ordecline; observe live1.6 counters/freshness/disk/power. No firsthourclaim before17:03:59Z.",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.6",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
@@ -405,7 +400,7 @@
     "currentPid": 19942,
     "currentHandle": 72380,
     "currentIdentity": "Tue Sep 22 00:58:48 2026",
-    "nextStep": "Keep single1.6 supervisor72380. Mainfunctional/outbox/exactsnapshotrestore pending; start newobservers afterplannedoutboxrestart.",
+    "nextStep": "Maintain verified1.6 supervisor72380/PID19942 andprimary8363/PID21356,audit4110/PID21357 throughoriginalfreeze; noduplicateforward/observers.",
     "historicalActivation": {
       "scope": "Planned1.3 diagnostic activation13:23UTC; this process has since ended for the planned1.4 upgrade.",
       "evidence": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
@@ -447,7 +442,7 @@
     "productVersion": "1.6.0",
     "prdVersion": "1.13",
     "idea": "IDEA-010",
-    "phase": "Functional andimmutable1.6manifest verified; tagcreation/push next",
+    "phase": "Complete functional1.6 checkpoint including immutablemanifest andbothremoteverifiedtags",
     "uiOwner": "/root/ui",
     "browserOwner": "/root/issues",
     "fallback": "artifacts/releases/checkpoint-1.5.0.json",
@@ -470,7 +465,6 @@
       "backupFullRound2": 6973,
       "backupFullRound3": 35423
     },
-    "allCompletedHandleExitCodes": 0,
     "localSummary": "artifacts/checkpoints/candidate-1.6-local-summary.json",
     "independentReview": "docs/product/REVIEW-030.md",
     "form201Clarification": "artifacts/checkpoints/candidate-1.6-command-form-status-clarification.json",
@@ -559,7 +553,8 @@
     "restoreSummary": "deploy/verification/candidate-331ab9a/restore-summary.json",
     "rootCleanupReview": "deploy/verification/candidate-331ab9a/root-recovery-review/summary.json",
     "restoreState": "Allownerhandlesended; same9bdcurrent1.6/backward1.5PASS21; both0/noPods/4PVCretained/portsclosed",
-    "independentFunctionalReview": "docs/product/REVIEW-032.md"
+    "independentFunctionalReview": "docs/product/REVIEW-032.md",
+    "terminalStatusScope": "Initialcorelocal handles passed; historicalbackupfull failures1/1/0 and firstimagefixture125 retained in explicit subrecords, not allzero"
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
   "previousCandidateFixture": {
@@ -728,6 +723,14 @@
       "cause": "unknown",
       "observedPerRtuSampleDiscontinuities": 0,
       "scope": "Captured received sample deltas equal simulation advance for5RTUs; no universal subscriber delivery guarantee; no remote mutations or outbox query."
+    },
+    {
+      "runtime": "1.5.0",
+      "evidence": "artifacts/checkpoints/backup-incident-20260921T1534/initial-summary.json",
+      "cause": "unknown; temporaloverlap withpreupgradebackup",
+      "status": "Recovered transport/Ready; backupissue open",
+      "recoveryEvidence": "artifacts/checkpoints/backup-incident-20260921T1534/recovery-summary.json",
+      "issue": "ISSUE024"
     }
   ],
   "previousFirstHourCapturePreparation": {
@@ -748,7 +751,7 @@
     "expectedOldImage": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
     "desiredImage": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
     "runtimeCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
-    "state": "Completeactual1.6Ready andsingle root supervisor verified; primary/audit await plannedoutboxproof"
+    "state": "Complete: actual1.6upgrade/outboxrestart/automaticreconnect andnewobservers8363/4110 allverified. Keep existing72380supervisor; do notrepeattransition."
   },
   "previousStableRuntime": {
     "productVersion": "1.5.0",
