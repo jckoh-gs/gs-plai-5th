@@ -1,0 +1,43 @@
+{
+  "at": "2026-09-21T20:17:19.947606+00:00",
+  "result": "PREPARATION_REVIEW",
+  "verdict": "Plan matches inspected observer termination and evidence semantics; actual closeout pending",
+  "sha256": {
+    "docs/operations/FINAL-RESTORE-PLAN.md": "4b781ada7ed69413755fd22aa7053827ad4f9bdaa416e8bd501f8cab07a4a216",
+    "docs/operations/run.json": "a662be1f5c7d710af7e6f0145df1406e5484e5b021e468ccd5cf5982400c4637",
+    "docs/operations/resume.json": "f8ddd2eb2a4da387208650da58a7663e45d645572216611b7efb4ba183e15248",
+    "artifacts/checkpoints/observer-1.7.1-activation/source/primary/soak-monitor.mjs": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3",
+    "artifacts/checkpoints/observer-1.7.1-activation/source/primary/soak-diagnostics.mjs": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c",
+    "artifacts/soak/telemetry-audit/v1.7.1-20260921T1800/source/telemetry-audit-monitor.mjs": "6c4bbb0b77c03e8a49d9d17c8f7e743c10765ab05b0d94f6b1a736f6a60c4617",
+    "artifacts/soak/telemetry-audit/v1.7.1-20260921T1800/source/telemetry-audit.mjs": "ba6c2c1c9ac39e4a1666d7ad0b6468271a1eda163f2653df9e6bac842bb48486",
+    "scripts/connection-supervisor.mjs": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8"
+  },
+  "sourceFindings": [
+    "Primary finally awaits endAsync(true), writes session JSON and stdout; final omits last API detail while latest/observations retain last poll",
+    "Audit finally awaits endAsync(true), save writes latest and appends final observation, then exclusive result.json and stdout; completionClaim false",
+    "Both connected close callbacks can increment disconnection counts on intentional client end; compare final event time and endReason with last poll",
+    "planned_stop text alone is not exception-free completion: finally can run on error; original handle terminal0 is essential",
+    "endAsync has no explicit local timeout in these sources; delayed response is not proof of completion, and missing final file must remain unresolved",
+    "Keeping supervisor and owned main forwards preserves final recording connectivity"
+  ],
+  "identityChecks": {
+    "primaryHandle": 72957,
+    "primarySession": "0ea34e34-e199-4b14-84ab-40ff75fa5d96",
+    "auditHandle": 8133,
+    "auditSession": "1e38bd3c-002a-49f4-9aa8-9039887b7889",
+    "supervisorHandle": 48590,
+    "storedPlannedStopAt": "2026-09-21T21:37:33.079Z",
+    "auditStartupSourceHashesMatch": true
+  },
+  "retainedIncident": {
+    "primaryApiErrors": 1,
+    "auditConnectionErrors": 1,
+    "rtusWithSampleDiscontinuity": 4,
+    "historicalUnobservedSamplePositions": 144,
+    "persistedGenerationAndBrokerAckProof": "ISSUE030 followup; not every subscriber/externalVPP delivery"
+  },
+  "scope": "Local source and saved latest/plan/ledger reading only; no observer code execution, process termination, network mutation, acceptance promotion or final archive creation",
+  "actualTerminalEvidenceObtained": false,
+  "finalRoleVerdict": false,
+  "goalCompletionClaim": false
+}

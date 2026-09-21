@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T19:59:24.017919+00:00",
+  "updatedAt": "2026-09-21T20:16:39.649685+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -1653,5 +1653,16 @@
     "reason": "No newly demonstrated product defect or valuable bounded enhancement justified before the remaining final delivery gates. Preserve 1.7.1 observation and verified fallback; revisit only on new evidence.",
     "preFreezeRoleReviewUnchanged": "2026-09-21T21:27:33.079009Z",
     "scope": "Additional idea review only; not final role verdict or acceptance."
+  },
+  "finalObservationCloseoutPreparation": {
+    "state": "PLANNED_NOT_EXECUTED",
+    "plan": "docs/operations/FINAL-RESTORE-PLAN.md",
+    "notBefore": "2026-09-21T21:37:33.079009Z",
+    "plannedArchive": "artifacts/checkpoints/soak-1.7.1-final",
+    "primaryHandle": 72957,
+    "auditHandle": 8133,
+    "primaryFinalFile": "artifacts/soak/v1.7.1/session-0ea34e34-e199-4b14-84ab-40ff75fa5d96.json",
+    "auditFinalFile": "artifacts/soak/telemetry-audit/v1.7.1-20260921T1800/result.json",
+    "requirement": "Confirm original handles terminal and actual exit/endReason/times, preserve full logs and exact launched sources with hashes, retain ISSUE030 counters and distinguish planned client close from new outage. Keep supervisor and main forwards for final video. No acceptance promotion from file existence."
   }
 }

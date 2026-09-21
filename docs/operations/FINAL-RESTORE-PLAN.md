@@ -16,6 +16,21 @@
 
 백업은 새 bounded helper 기준 총180초 예산, 명령별 상한, 종료시각을 적용한다. 복원 helper도 원래 run.json.deadlineAt과 시작+210초 중 빠른 시각을 총예산으로 적용한다. get은 host20초, apply30초, rollout180초와 단계 시작 시 남은 총예산 중 작은 값으로 제한한다. run이 없거나 유효한 종료시각이 없거나 이미 만료되면 kubectl 실행 전에 실패한다. `--run-file`은 격리시험 주입용이며 최종 실행에서는 원래 run.json을 사용한다. 복원/미리보기/MQTT검증/브라우저검증의 직접HTTP fetch는 각 요청15초 AbortSignal과 redirect 거절을 사용한다. 요청별15초는 전체 단계 종료시각을 보장하지 않으며 브라우저/후속검증 도구 전체에는 같은 총예산이 있는 것은 아니다. 부모의 전체 deadline과 단계 컷오프는 메인이 계속 감독한다. 메인이 프로세스 세션을 감독하고 단계별 아래 컷오프를 적용한다. 임의 명령 재시도는 새 실행이 중복되었는지 확인한 뒤 한다. 원격 exec 응답 유실은 원격 작업 취소 증명이 아니다. 특히 apply 타임아웃은 원격 적용 취소를 뜻하지 않는다. 새 이름으로 다시 실행하지 말고 기존 고유 이름의 deployment/PVC/Pod 실제 상태를 유한 host대기로 조회한 뒤 메인이 후속 조치를 결정한다. 도구는 명령 raw stdout/stderr를 오류에 노출하지 않는다.
 
+## 동결 시 장시간 관측 종료 기록
+
+원래 동결 시각에 기존 primary72957/PID57533과 audit8133/PID57534의 **원래 도구 핸들**을 확인한다. 두 관측기는 자체 종료 시각을 이미 가지고 있으므로 새 관측기를 시작하거나 종료 신호를 먼저 보내지 않는다. 응답 지연은 종료 증명이 아니며 같은 핸들과 실제 PID·시작 identity를 다시 확인한다. 감독기48590/PID56137과 운영 터널3104/18884는 이후 최종 촬영에 필요하므로 유지한다.
+
+원래 실행의 실제 exit0과 다음 종료 파일을 함께 확인한 뒤 `artifacts/checkpoints/soak-1.7.1-final/`에 보존한다. 이 경로는 아직 계획이며 지금 만들거나 성공 결과를 미리 기록하지 않는다.
+
+- primary: `artifacts/soak/v1.7.1/session-0ea34e34-e199-4b14-84ab-40ff75fa5d96.json` 및 같은 폴더의 `latest.json`, 전체 `observations.jsonl`. 종료 파일에는 마지막 API health 상세가 없으므로 마지막 poll 파일을 함께 보존한다.
+- audit: `artifacts/soak/telemetry-audit/v1.7.1-20260921T1800/result.json`, `latest.json`, 전체 `observations.jsonl`, 실제 존재하는 경우에만 `anomalies.jsonl`.
+- 실행 소스: primary가 실제 사용한 `artifacts/checkpoints/observer-1.7.1-activation/source/primary/`의 두 소스와 activation provenance, audit 폴더의 보존 `source/` 및 해당 SHA 목록. 현재 작업 트리의 비슷한 파일로 대체하지 않는다.
+- 원래 핸들의 종료 출력·exit code, 파일별 SHA-256, 원래 sessionId/startedAt/plannedStopAt와 실제 endedAt/endReason을 연결한다. `planned_stop` 여부와 실제 시각을 확인하고, signal·비정상 종료·미확정 상태는 그대로 기록한다. 복사 중 내용이 바뀌지 않도록 실제 종료를 먼저 확인하며 기존 보존 폴더를 덮어쓰지 않는다.
+
+`client.endAsync(true)`에 따른 계획 종료도 close 이벤트와 연결 해제 횟수 증가를 남길 수 있다. 마지막 poll과 종료 파일의 실제 시각·종료 사유를 대조하며 이를 새 네트워크 장애로 단정하지 않는다. 기존 API오류1·audit 연결오류1 및 ISSUE030의4 RTU 수신 불연속/144표본 위치 보존 근거는 지우지 않는다. 최종 오류 수가 달라졌다면 계획 종료만으로 설명되는지 개별 확인한다. 관측 자료는 수신 범위의 증거이며 무중단 운영·모든 구독자 수신·외부 VPP 수신을 증명하지 않는다.
+
+같은 시점의 실제 Ready/이미지/API 확인을 별도로 연결한다. 관측 종료와 자료 보존은 최종 백업 작업과 병행할 수 있지만, 원래 프로세스 종료를 확인하기 전 파일 존재만으로 관측 인수나 전체 목표 완료를 선언하지 않는다. 최종 집계는 `docs/operations/final-closeout.json`에 연결하며 acceptance는 실제 검수 후에만 갱신한다.
+
 ## 시간 배분과 병행
 
 - 0~3분: 최종 건강상태/실행 이미지 확인, 새 정상 백업과 전송·해시 검증. 목표는90초 이내, 네트워크/전송 예산180초다. NETWORK-RECOVERY.md에 기록한 동기I/O 중간취소 한계는 유지한다. 영상 원고/덱 배치 준비는 병행 가능하지만 매니페스트 고정 전에 최종 렌더를 시작하지 않는다.
