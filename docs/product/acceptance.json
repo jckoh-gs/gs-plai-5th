@@ -1,5 +1,5 @@
 {
-  "prdVersion": "1.13",
+  "prdVersion": "1.14",
   "runId": "grid-new-20260921T080733Z",
   "scope": "greenfield, mandatory k3s",
   "policy": "pending until new-run direct evidence covers complete requirement; code presence/legacy reports are not pass",
@@ -8103,6 +8103,41 @@
         }
       ],
       "assessment": "REVIEW032: actual main1.6 59events and freshrestore79 KST/UTC/read-only proof plus localcanonicalboundary evidence. Independently read19PASS reports+2actualPod identities (21checks), same851673088B/9bd fresh1.6/backward1.5, bothform44/receipt14/UI/preview/export/MQTT. Backward1.5 eventtime fix not asserted; scenario scope originalIDpreservation only. Rootactualcleanup both0/noPods/4BoundPVC/portsfree and main5normal verified. Functional gates complete; stabletags/manifest provenance and finalmedia/time/inventory separate."
+    },
+    {
+      "id": "UI-13",
+      "description": "명령 목록별 조회 상태·마지막 성공 브라우저 시각",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "IDEA011 adopted PRD1.14/product1.7 candidate; beforeproof establishes prior issue only. Implementation and direct acceptance pending; stable1.6 and finalmedia/time gates unchanged."
+    },
+    {
+      "id": "AT-COMMAND-LIST-01-01",
+      "description": "loading/empty/failure·이전행보존·회복",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "IDEA011 adopted PRD1.14/product1.7 candidate; beforeproof establishes prior issue only. Implementation and direct acceptance pending; stable1.6 and finalmedia/time gates unchanged."
+    },
+    {
+      "id": "AT-COMMAND-LIST-01-02",
+      "description": "유한 단일poll·abort·RTU전환경합",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "IDEA011 adopted PRD1.14/product1.7 candidate; beforeproof establishes prior issue only. Implementation and direct acceptance pending; stable1.6 and finalmedia/time gates unchanged."
+    },
+    {
+      "id": "AT-COMMAND-LIST-01-03",
+      "description": "GET-only·계약/기존기능불변·접근성/좁은화면",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "IDEA011 adopted PRD1.14/product1.7 candidate; beforeproof establishes prior issue only. Implementation and direct acceptance pending; stable1.6 and finalmedia/time gates unchanged."
+    },
+    {
+      "id": "AT-COMMAND-LIST-01-04",
+      "description": "실제브라우저/정확k3s·현재/하위복원",
+      "status": "pending",
+      "evidence": [],
+      "assessment": "IDEA011 adopted PRD1.14/product1.7 candidate; beforeproof establishes prior issue only. Implementation and direct acceptance pending; stable1.6 and finalmedia/time gates unchanged."
     }
   ],
   "reviewedSource": {

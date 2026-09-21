@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T16:22:33.310660+00:00",
+  "updatedAt": "2026-09-21T16:24:46.061882+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -28,10 +28,10 @@
     "tagVerification": "artifacts/checkpoints/release-1.6/tags.json"
   },
   "workingMilestone": {
-    "productVersion": "1.6.0",
-    "prdVersion": "1.13",
-    "idea": "IDEA-010",
-    "state": "Verified1.6 checkpoint complete; continue observations and bounded productproposal beforeoriginalfreeze"
+    "productVersion": "1.7.0",
+    "prdVersion": "1.14",
+    "idea": "IDEA-011",
+    "state": "Local candidate implementation afterversionedPRDadoption"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -43,7 +43,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Maintain verified1.6 andexistingreadonlyobservers. Review ready IDEA011/REVIEW034 command-list pollingfailure visibility proposal; ifadopting firstrecordPRD/productversion and preserve1.6fallback. No newversion adopted yet. Completed1.6deploy/outbox/9bdrestore/manifest1466/tags mustnotrepeat.",
+    "Implement adoptedIDEA011/product1.7/PRD1.14 command-list freshness with localindependentbrowser/security gates. Maintainactual1.6supervisor andobservers. Do notdeploy until exacttestedsource/image/security andnewbackup gates; preserveverified1.6fallback.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -368,12 +368,13 @@
     "instruction": "Use FINAL-RESTORE-PLAN bounded direct commands and media watchdog; inspect uncertain remote outcome before retry; immutable1.3 checkpoint unchanged"
   },
   "nextProductProposal": {
-    "state": "READONLYproposal ready, notadopted; rootreview next",
+    "state": "Adopted IDEA011revision1/product1.7/PRD1.14",
     "owner": "/root/product",
     "review": "docs/product/REVIEW-034.md",
     "scope": "Existingcommandrows hide subsequentGETfailure despite healthyglobalSSE; browser-only503fixture/APIwrites0. Consider bounded command-list freshness UI withoutserver/DB/control changes.",
     "idea": "IDEA-011",
-    "evidence": "artifacts/checkpoints/command-list-readonly-before/result.json"
+    "evidence": "artifacts/checkpoints/command-list-readonly-before/result.json",
+    "adoptedAt": "2026-09-21T16:24:46.061882+00:00"
   },
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
@@ -392,7 +393,7 @@
     "localFixtureOnly": true
   },
   "currentObservationIncidents": [],
-  "nextOperationalReview": "Review bounded IDEA011 proposal thenadopt/version ordecline; observe live1.6 counters/freshness/disk/power. No firsthourclaim before17:03:59Z.",
+  "nextOperationalReview": "Candidate1.7 localimplementation/testing; main1.6observation stayslive. Rootownsprivatefixture setup. No firsthourclaim before17:03:59Z.",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.6",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
@@ -439,122 +440,17 @@
     "retirementEvidence": "artifacts/checkpoints/local-fixture-1.6-retirement/summary.json"
   },
   "candidateOperations": {
-    "productVersion": "1.6.0",
-    "prdVersion": "1.13",
-    "idea": "IDEA-010",
-    "phase": "Complete functional1.6 checkpoint including immutablemanifest andbothremoteverifiedtags",
+    "productVersion": "1.7.0",
+    "prdVersion": "1.14",
+    "idea": "IDEA-011",
+    "phase": "Adopted contract; implementation/harness pending",
     "uiOwner": "/root/ui",
     "browserOwner": "/root/issues",
-    "fallback": "artifacts/releases/checkpoint-1.5.0.json",
-    "beforeEvidence": "artifacts/checkpoints/event-time-before/result.json",
-    "policy": "Localfixture3110 retired. Actualmain1.6 Ready4af. Root owns single supervisor; no duplicate forwards. Stable1.5 fallback retained until exactrestore/independentacceptance.",
-    "fixtureHandle": 95785,
-    "unitEvidence": "artifacts/checkpoints/candidate-1.6-unit-round2.log",
-    "eventBrowserEvidence": "artifacts/checkpoints/candidate-1.6-event-time-round1/result.json",
-    "securityReview": "docs/security/EVENT-TIME-REVIEW.md",
+    "securityOwner": "/root/security",
+    "fallback": "artifacts/releases/checkpoint-1.6.0.json",
+    "beforeEvidence": "artifacts/checkpoints/command-list-readonly-before/result.json",
     "activeOperations": [],
-    "completedLocalHandles": {
-      "unit": 51459,
-      "integrationAdvanced": 14079,
-      "authBrowser": 31240,
-      "formRound1Owner": 33083,
-      "receiptOwner": 69060,
-      "unitRound2": 76826,
-      "formRound2Owner": 63348,
-      "backupFullRound1": 16771,
-      "backupFullRound2": 6973,
-      "backupFullRound3": 35423
-    },
-    "localSummary": "artifacts/checkpoints/candidate-1.6-local-summary.json",
-    "independentReview": "docs/product/REVIEW-030.md",
-    "form201Clarification": "artifacts/checkpoints/candidate-1.6-command-form-status-clarification.json",
-    "sourceCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
-    "completedImageSecurity": "docs/security/evidence/app-candidate-331ab9a-findings.json",
-    "completedImageOperations": {
-      "build": {
-        "handle": 67106,
-        "exit": 0
-      },
-      "verificationFirst": {
-        "handle": 35956,
-        "exit": 125,
-        "scope": "77/integration/advanced done; HTTPfixture missingtoken failure"
-      },
-      "httpRound2": {
-        "handle": 7893,
-        "exit": 0
-      },
-      "registryPush": {
-        "handle": 62295,
-        "exit": 0
-      },
-      "registryForward": {
-        "handle": 51512,
-        "exit": 143,
-        "port15050Closed": true
-      },
-      "rootReview": "deploy/verification/candidate-331ab9a/pre-deployment-review.json"
-    },
-    "backupFailureEvidence": "deploy/verification/candidate-331ab9a/pre-upgrade-backup-summary.json",
-    "backupIncidentRootEvidence": "artifacts/checkpoints/backup-incident-20260921T1534/recovery-summary.json",
-    "operationalChangesScope": "Backuphelpers are notshipped in candidate4af appimage; keep exact331app provenance and separate operationalcommit/testing evidence",
-    "backupHardeningEvidence": "artifacts/checkpoints/backup-hardening-1.6/summary.json",
-    "backupFullExitCodes": {
-      "16771": 1,
-      "6973": 1,
-      "35423": 0
-    },
-    "completedRound2Backup": {
-      "owner": "/root/deployment",
-      "handle": 38109,
-      "exit": 0,
-      "metadata": "deploy/verification/pre-1.6.0-backup-round2.json",
-      "rootReview": "deploy/verification/candidate-331ab9a/pre-upgrade-round2/root-backup-review.json"
-    },
-    "completedRollout": {
-      "owner": "/root/deployment",
-      "handle": 59837,
-      "exit": 0,
-      "evidence": "deploy/verification/candidate-331ab9a/rollout/proof.json"
-    },
-    "completedMainReadProofs": {
-      "rollout": "deploy/verification/candidate-331ab9a/post-rollout/summary.json",
-      "eventTime": "deploy/verification/candidate-331ab9a/main-event-time/result.json",
-      "regression": "deploy/verification/candidate-331ab9a/main-regression/summary.json"
-    },
-    "completedMainMQTT": {
-      "handle": 1709,
-      "exit": 0,
-      "evidence": "deploy/verification/candidate-331ab9a/main-mqtt.json",
-      "actualKw": 125,
-      "errorKw": 0
-    },
-    "completedOutbox": {
-      "owner": "/root",
-      "handle": 46862,
-      "exit": 0,
-      "proof": "deploy/verification/candidate-331ab9a/outbox-restart.json",
-      "postNormal": "deploy/verification/candidate-331ab9a/outbox-post-normal.json"
-    },
-    "completedNormalBackup": {
-      "owner": "/root/deployment",
-      "handle": 68674,
-      "exit": 0,
-      "metadata": "deploy/verification/stable-backup-331ab9a.json",
-      "rootReview": "deploy/verification/candidate-331ab9a/normal-backup/root-backup-review.json"
-    },
-    "currentRestoreProof": "Current1.6 allfunctionalproofsPASS; cleanupownerrreported0replicas/0Pods/closedforward; rootfinalpairedcleanupreviewpending",
-    "tagPlan": {
-      "runtimeAlias": "stable-runtime-v1.6.0-331ab9a",
-      "runtimeAliasCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
-      "stableTag": "stable-v1.6.0",
-      "stableTagScope": "Full completed operational/evidence source checkpoint including backuphardening; sourcecommit assigned onlyaftergates; noexistingtagsmoved"
-    },
-    "restoreSummary": "deploy/verification/candidate-331ab9a/restore-summary.json",
-    "rootCleanupReview": "deploy/verification/candidate-331ab9a/root-recovery-review/summary.json",
-    "restoreState": "Allownerhandlesended; same9bdcurrent1.6/backward1.5PASS21; both0/noPods/4PVCretained/portsclosed",
-    "independentFunctionalReview": "docs/product/REVIEW-032.md",
-    "terminalStatusScope": "Initialcorelocal handles passed; historicalbackupfull failures1/1/0 and firstimagefixture125 retained in explicit subrecords, not allzero"
+    "policy": "Actualmain1.6 andsupervisor72380/primary8363/audit4110 remainunchanged. Oldlocalfixtures areended. Rootcreates single1.7fixture3111 onlyafterbuiltcandidate; no duplicate. Originalfreeze/deadline unchanged."
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
   "previousCandidateFixture": {
@@ -771,5 +667,125 @@
     "independentReview": "docs/product/REVIEW-028.md",
     "verification": "artifacts/checkpoints/release-1.5/verification.json",
     "historicalFallback": "artifacts/releases/checkpoint-1.4.0.json"
-  }
+  },
+  "completedCandidateOperations": [
+    {
+      "productVersion": "1.6.0",
+      "prdVersion": "1.13",
+      "idea": "IDEA-010",
+      "phase": "Complete functional1.6 checkpoint including immutablemanifest andbothremoteverifiedtags",
+      "uiOwner": "/root/ui",
+      "browserOwner": "/root/issues",
+      "fallback": "artifacts/releases/checkpoint-1.5.0.json",
+      "beforeEvidence": "artifacts/checkpoints/event-time-before/result.json",
+      "policy": "Localfixture3110 retired. Actualmain1.6 Ready4af. Root owns single supervisor; no duplicate forwards. Stable1.5 fallback retained until exactrestore/independentacceptance.",
+      "fixtureHandle": 95785,
+      "unitEvidence": "artifacts/checkpoints/candidate-1.6-unit-round2.log",
+      "eventBrowserEvidence": "artifacts/checkpoints/candidate-1.6-event-time-round1/result.json",
+      "securityReview": "docs/security/EVENT-TIME-REVIEW.md",
+      "activeOperations": [],
+      "completedLocalHandles": {
+        "unit": 51459,
+        "integrationAdvanced": 14079,
+        "authBrowser": 31240,
+        "formRound1Owner": 33083,
+        "receiptOwner": 69060,
+        "unitRound2": 76826,
+        "formRound2Owner": 63348,
+        "backupFullRound1": 16771,
+        "backupFullRound2": 6973,
+        "backupFullRound3": 35423
+      },
+      "localSummary": "artifacts/checkpoints/candidate-1.6-local-summary.json",
+      "independentReview": "docs/product/REVIEW-030.md",
+      "form201Clarification": "artifacts/checkpoints/candidate-1.6-command-form-status-clarification.json",
+      "sourceCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+      "completedImageSecurity": "docs/security/evidence/app-candidate-331ab9a-findings.json",
+      "completedImageOperations": {
+        "build": {
+          "handle": 67106,
+          "exit": 0
+        },
+        "verificationFirst": {
+          "handle": 35956,
+          "exit": 125,
+          "scope": "77/integration/advanced done; HTTPfixture missingtoken failure"
+        },
+        "httpRound2": {
+          "handle": 7893,
+          "exit": 0
+        },
+        "registryPush": {
+          "handle": 62295,
+          "exit": 0
+        },
+        "registryForward": {
+          "handle": 51512,
+          "exit": 143,
+          "port15050Closed": true
+        },
+        "rootReview": "deploy/verification/candidate-331ab9a/pre-deployment-review.json"
+      },
+      "backupFailureEvidence": "deploy/verification/candidate-331ab9a/pre-upgrade-backup-summary.json",
+      "backupIncidentRootEvidence": "artifacts/checkpoints/backup-incident-20260921T1534/recovery-summary.json",
+      "operationalChangesScope": "Backuphelpers are notshipped in candidate4af appimage; keep exact331app provenance and separate operationalcommit/testing evidence",
+      "backupHardeningEvidence": "artifacts/checkpoints/backup-hardening-1.6/summary.json",
+      "backupFullExitCodes": {
+        "16771": 1,
+        "6973": 1,
+        "35423": 0
+      },
+      "completedRound2Backup": {
+        "owner": "/root/deployment",
+        "handle": 38109,
+        "exit": 0,
+        "metadata": "deploy/verification/pre-1.6.0-backup-round2.json",
+        "rootReview": "deploy/verification/candidate-331ab9a/pre-upgrade-round2/root-backup-review.json"
+      },
+      "completedRollout": {
+        "owner": "/root/deployment",
+        "handle": 59837,
+        "exit": 0,
+        "evidence": "deploy/verification/candidate-331ab9a/rollout/proof.json"
+      },
+      "completedMainReadProofs": {
+        "rollout": "deploy/verification/candidate-331ab9a/post-rollout/summary.json",
+        "eventTime": "deploy/verification/candidate-331ab9a/main-event-time/result.json",
+        "regression": "deploy/verification/candidate-331ab9a/main-regression/summary.json"
+      },
+      "completedMainMQTT": {
+        "handle": 1709,
+        "exit": 0,
+        "evidence": "deploy/verification/candidate-331ab9a/main-mqtt.json",
+        "actualKw": 125,
+        "errorKw": 0
+      },
+      "completedOutbox": {
+        "owner": "/root",
+        "handle": 46862,
+        "exit": 0,
+        "proof": "deploy/verification/candidate-331ab9a/outbox-restart.json",
+        "postNormal": "deploy/verification/candidate-331ab9a/outbox-post-normal.json"
+      },
+      "completedNormalBackup": {
+        "owner": "/root/deployment",
+        "handle": 68674,
+        "exit": 0,
+        "metadata": "deploy/verification/stable-backup-331ab9a.json",
+        "rootReview": "deploy/verification/candidate-331ab9a/normal-backup/root-backup-review.json"
+      },
+      "currentRestoreProof": "Current1.6 allfunctionalproofsPASS; cleanupownerrreported0replicas/0Pods/closedforward; rootfinalpairedcleanupreviewpending",
+      "tagPlan": {
+        "runtimeAlias": "stable-runtime-v1.6.0-331ab9a",
+        "runtimeAliasCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+        "stableTag": "stable-v1.6.0",
+        "stableTagScope": "Full completed operational/evidence source checkpoint including backuphardening; sourcecommit assigned onlyaftergates; noexistingtagsmoved"
+      },
+      "restoreSummary": "deploy/verification/candidate-331ab9a/restore-summary.json",
+      "rootCleanupReview": "deploy/verification/candidate-331ab9a/root-recovery-review/summary.json",
+      "restoreState": "Allownerhandlesended; same9bdcurrent1.6/backward1.5PASS21; both0/noPods/4PVCretained/portsclosed",
+      "independentFunctionalReview": "docs/product/REVIEW-032.md",
+      "terminalStatusScope": "Initialcorelocal handles passed; historicalbackupfull failures1/1/0 and firstimagefixture125 retained in explicit subrecords, not allzero"
+    }
+  ]
 }
