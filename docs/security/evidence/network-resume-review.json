@@ -1,0 +1,70 @@
+{
+  "reviewedAt": "2026-09-21T13:36:40.200049+00:00",
+  "result": "PASS",
+  "hashChecks": [
+    {
+      "directory": "artifacts/checkpoints/reconnect-20260921T1303",
+      "files": 17,
+      "mismatches": []
+    },
+    {
+      "directory": "artifacts/checkpoints/reconnect-20260921T1325",
+      "files": 15,
+      "mismatches": []
+    },
+    {
+      "directory": "artifacts/checkpoints/soak-1.3.0-first-hour",
+      "files": 12,
+      "mismatches": []
+    },
+    {
+      "directory": "artifacts/checkpoints/supervisor-diagnostics-activation",
+      "files": 10,
+      "mismatches": []
+    },
+    {
+      "directory": "artifacts/checkpoints/host-pause-20260921T1325",
+      "files": 3,
+      "mismatches": []
+    },
+    {
+      "directory": "artifacts/checkpoints/host-power-guard-20260921T1333",
+      "files": 1,
+      "mismatches": []
+    }
+  ],
+  "reviewedSha256": {
+    "artifacts/checkpoints/reconnect-20260921T1303/sha256.json": "82b633e28e2485d1a2ae7bdeb45e27865075c0992c15b1a6aaf42911d615c2cc",
+    "artifacts/checkpoints/reconnect-20260921T1325/sha256.json": "9fd88193ac8e0f126aa7bc3df05c4edfee8588b83c09b1d1168e16ce21281154",
+    "artifacts/checkpoints/soak-1.3.0-first-hour/sha256.json": "63066d4fd90469bd14bbf9c11e063d6673a5c082db9b2f30cfb7b609011119c6",
+    "artifacts/checkpoints/supervisor-diagnostics-activation/sha256.json": "20a1aebe37f3d20761ceaa62aabd903f4bcd12185e442eb4cdc0d436111bcedc",
+    "artifacts/checkpoints/host-pause-20260921T1325/sha256.json": "7da03bdb8fb6df177d29007a1de2bdd9d7fb6da8f2b761a92d0a49d604cd6bea",
+    "artifacts/checkpoints/host-power-guard-20260921T1333/sha256.json": "33fc634cc2c92c1ab735d13e32295928ed71bd8ebf584a451be219916fcb1d78",
+    "docs/operations/run.json": "014966c888c92af050907835e2c2a6f87b0fee76ec9a3af7cbc982055ff03b12",
+    "docs/operations/resume.json": "99448bc18a6cb6e2a27573ae132a7c3d1565140329d3b309efe81be56055dbff",
+    "artifacts/checkpoints/host-power-guard-20260921T1333/activation.json": "535da9162ac26abd9f6cfdee21b2ad8954e018a2d292a35ec2d4e0a606e68f62",
+    "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json": "6d5c36fcf4d564075a1abf58903f40bbe8dfc66934e91d8c25991550dc7cf5e3"
+  },
+  "liveReadOnlyProcessCheck": {
+    "supervisor": {
+      "pid": 80224,
+      "start": "Mon Sep 21 22:23:12 2026",
+      "command": "node scripts/connection-supervisor.mjs"
+    },
+    "powerGuard": {
+      "pid": 80946,
+      "start": "Mon Sep 21 22:33:11 2026",
+      "command": "caffeinate -i -s -t 30861",
+      "observedAssertions": [
+        "PreventUserIdleSystemSleep",
+        "PreventSystemSleep"
+      ]
+    }
+  },
+  "automationReadOnlyCheck": {
+    "id": "grid",
+    "status": "ACTIVE",
+    "intervalMinutes": 10
+  },
+  "scope": "No process/signal/setting/automation/remote mutation; hashes establish snapshot integrity, not all underlying acceptance claims."
+}

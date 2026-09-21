@@ -2,7 +2,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const {chromium}=require(path.join(process.env.PLAYWRIGHT_NODE_MODULES,'playwright'));
 const base=process.env.GRID_URL||'http://127.0.0.1:3106',out=process.env.QA_DIRECTORY||'artifacts/checkpoints/scenario-scope-local';
 // Creates isolated test RTUs; never run against the primary cluster tunnel.
-assert.equal(new URL(base).hostname,'127.0.0.1');const target=process.env.GRID_FIXTURE_TARGET||'local';assert(['local','isolated-restore'].includes(target));assert.equal(new URL(base).port,target==='isolated-restore'?'3105':'3106');
+assert.equal(new URL(base).hostname,'127.0.0.1');const target=process.env.GRID_FIXTURE_TARGET||'local';assert(['local','isolated-restore'].includes(target));assert((target==='isolated-restore'?['3105']:['3106','3107']).includes(new URL(base).port),'Use an isolated local1.3/1.4 or restore fixture port');
 const token=fs.readFileSync(process.env.API_TOKEN_FILE||'artifacts/private/candidate-1.3/api-token','utf8').trim();
 const api=async(url,method='GET',body)=>{const r=await fetch(base+'/api'+url,{method,headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body),signal:AbortSignal.timeout(15000),redirect:'error'});assert(r.ok,`HTTP ${r.status}`);return r.json()};
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));

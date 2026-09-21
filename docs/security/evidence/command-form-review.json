@@ -1,0 +1,32 @@
+{
+  "reviewedAt": "2026-09-21T13:38:11.231857+00:00",
+  "packageEntriesUnchangedVs3fa3ba0": true,
+  "packageVersionsUnchangedVs3fa3ba0": true,
+  "auditMetadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "dependencies": {
+      "prod": 111,
+      "dev": 127,
+      "optional": 53,
+      "peer": 2,
+      "peerOptional": 0,
+      "total": 237
+    }
+  },
+  "sourceSha256": {
+    "web/command-form.js": "ba71bfda52cb154ab15765f5ebc99f8cab8e3ae80aed3d90543e5228e4d3b67e",
+    "web/src.jsx": "d44ecb94ea29950d0940c7ce8fe993420a4226c13088d70d59bfc01a25493227",
+    "tests/command-form.test.js": "9a3c1af7930e8ce2b6d89b5aadcb2b19ae7e1115e1a8c104b98a49c027837e20",
+    "tests/security-command-form.test.js": "eae878323b566e761345bb1eff1320587afead40fee4a89bb0d1e25ad02f764e",
+    "scripts/media/final-deck-binding.cjs": "f969141dc9ebd965bd2bf3ee734d9d94730c4626b53f8753387b4af0767e4dfd",
+    "tests/final-deck-binding.test.js": "598c73327856284ba237b5bf2eb6ea244fb2186d0450bfca2a436796efdb88e5",
+    "package-lock.json": "6f5510e10534f75e9d679d93a547d24cd9ad183f1f343bf23db2de12b46823c8"
+  }
+}
