@@ -1,56 +1,35 @@
 # 자율 실행 인계
 
-현재 실제 배포는 **후보 제품 1.7.1 / PRD 1.15 / IDEA012 v1**이다. 소스 `40b9ed898f32037e7a87259d12d145457575a4a8`, 이미지 `sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876`를 사용한다. 검증된 복원 기준은 아직 stable1.7/1cab이다. 전체 목표는 미완료이며, 1.7/1cab의 기능·동일 스냅샷 복구 인수를 완료했다. 새 불변 매니페스트와 태그 원격 전달을 완료했으며 이전 검증된 1.6/9bd 체크포인트도 보존한다. 재개 시 현재 시각·최신 사용자 지시·[run.json](run.json)·[resume.json](resume.json)부터 읽는다.
+현재 기능상 안정 버전은 **1.7.1 / PRD1.15 / IDEA012 v1**이다. 앱 소스 `40b9ed898f32037e7a87259d12d145457575a4a8`, 이미지 `234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876`, 실제 main PodUID `75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc`를 확인했다. 전체 목표는 최종 시간·영상·PPT·인도가 남아 있다. 재개할 때 최신 사용자 지시, 현재 시각, [run.json](run.json), [resume.json](resume.json), 실제 Git·프로세스·배포부터 대조한다.
 
-## 현재 후속 후보1.7.1 — 먼저 확인
+## 재연결 뒤 우선 확인
 
-실제 교체와 원격 UI/API/가이드/online/MQTT 검증은 모두 종료0이다. supervisor48590/PID56137만 현재 연결을 소유한다. 기존1.7 primary85394/audit60682/supervisor77410은 종료0·보존 완료했으므로 재시작하지 않는다. outbox87050 종료0·root 정상화와 원래5설정·임시포트 종료를 확인했다. 새1.7.1 primary72957/PID57533, audit8133/PID57534를 기동하고 실제 수신 및 모든 현재 원장 연결을 확인했다. 1.7.1 정상 백업9205 종료0이며 1075081216B/SHA5ff34의 전체 해시·SQLite·0600·worker종료를 root도 확인했다. 동일 백업의 현재1.7.1/하위1.7 격리 복원 26보고서+2Pod 식별, root의 실제 정리와 main 원래5설정 보존을 완료했다. REVIEW045와 새 매니페스트 검증·태그 원격 전달이 다음이다. 정확 백업 현재1.7.1/하위1.7 복원 인수 전까지 stable1.7/1cab을 유지한다. 현재 활성 작업은 resume.candidateOperations를 우선하며, 아래 준비 단계 설명은 역사 기록이다.
+`node scripts/resume-status.mjs`는 원격 Git·실제 이미지/Ready·인증 API·현재 관측 원장의 정합성을 읽기 전용으로 검사한다. 응답을 잃은 작업은 기존 journal·고유 리소스·담당의 원래 핸들·종료 영수증을 확인한다. 완료된 제어·배포·복원을 반복하거나 새 commandId를 발행하지 않는다. 보조 담당의 핸들이 메인 도구에서 보이지 않는 것만으로 종료를 추론하지 않는다. [네트워크 복구 절차](NETWORK-RECOVERY.md)를 따른다.
 
-NFR08 독립 검토에서 공급 monitor가 online true/false를 모두 같은 객체로 출력하고, protocol quickstart의 환경 준비·포트가 맞지 않으며 미지원 v1 호환 문장이 남아 있음을 확인했다. [수정 전 근거](NFR08-CONTRACT-FIXTURES-20260922.json), [REVIEW040](../product/REVIEW-040.md)를 근거로 IDEA012v1/PRD1.15/제품1.7.1 패치를 채택했다. CLI strictboolean online 및 가이드·부록·예제 안내만 수정한다. 실제1.7 배포/관측/복구 기준은 유지한다.
+현재 root 소유 상주 프로세스는 다음과 같다. PID와 시작 identity를 함께 확인한 뒤 유지한다.
 
-로컬 전체 317개·실제 broker 통합/고급·report/client-security·공급 monitor의 late online/실제 RTU LWT offline 시험을 통과했다. 별도 새 폴더의 의존성·환경·DB·빌드와 3개 RTU 연결도 통과했다. 기존 소유 브로커를 재사용하고 점유된 3101 대신 3112를 지정한 범위이며, 기존 환경 파일과 무관한 프로세스를 보존했다. [로컬 집계](../../artifacts/checkpoints/candidate-1.7.1-local/summary.json)를 확인한다. REVIEW041의 로컬 인수와 정확 이미지 `234ec56`의 79개 app 시험·실제 broker/client status·보안·registry 전달을 완료했다. 정확 소스는 `40b9ed898f32037e7a87259d12d145457575a4a8`이고 [root 이미지 대조](../../deploy/verification/candidate-40b9ed8/pre-deployment-review.json)를 통과했다. 원격 교체·동일 백업 현재/하위 복원 인수는 남아 있다. 서버·web·DB·제어·wire schema·OSS 변경은 없다. 미디어 도구의 exact1.7.1 호환 검사53개는 전체시험과 합산하지 않는다. 현재facts는stable1.7 미검수 템플릿을 유지한다. **실제1.7 첫1시간을 17:46:19Z에 저장하고 13개 파일 해시를 root와 REVIEW043에서 대조했다. 이제 새 사전 백업 검증·기존 관측 종료/보존 후에만 후보로 교체한다.** 담당·활성작업은 resume.candidateOperations를 읽고 중복 기동하지 않는다.
+- supervisor48590 / PID56137 / `Tue Sep 22 02:52:15 2026`: 단일3104/18884 연결 감독기.
+- primary72957 / PID57533 / `Tue Sep 22 02:59:54 2026`: `artifacts/soak/v1.7.1`, session `0ea34e34-e199-4b14-84ab-40ff75fa5d96`.
+- audit8133 / PID57534 / 같은 시작 identity: `artifacts/soak/telemetry-audit/v1.7.1-20260921T1800`, session `1e38bd3c-002a-49f4-9aa8-9039887b7889`.
+- 임시 전원 보호11821 / PID80946 / `Mon Sep 21 22:33:11 2026`는 원래 종료 시각까지다. 수동 강제 절전·전원 종료 방지를 보장하지 않는다.
 
-## 완료한1.7 안정 단계
+이전1.7 primary85394/audit60682/supervisor77410은 종료0·별도 보존했으므로 재시작하지 않는다. 새 프로세스의 활성화·소스·초기 원장 검사는 [활성화 기록](../../artifacts/checkpoints/observer-1.7.1-activation/activation.json)에 있다. heartbeat `grid`는 기존 작업을10분 간격으로 재개 점검하며 중복 생성하지 않는다. Mac/Codex가 종료된 동안 AI 작업 지속을 보장하지 않는다.
 
-1. 1.7 main UI·API·원래 5 RTU 전체 설정/실행/데이터/시나리오·실제 MQTT 125kW/error0·인증/SSE/preview/export 회귀를 완료했다. [배포 증거](../../deploy/verification/candidate-d98d3c4/rollout/proof.json), [배포 후 확인](../../deploy/verification/candidate-d98d3c4/post-rollout/summary.json), [실제 MQTT](../../deploy/verification/candidate-d98d3c4/main-mqtt.json), [회귀](../../deploy/verification/candidate-d98d3c4/main-regression/summary.json)를 재사용하며 완료한 제어를 반복하지 않는다.
-2. pending-outbox 실제 Pod 교체 검증을 완료했다. root17841과 독립관찰79945는 종료0. [동일 메시지 복구](../../deploy/verification/candidate-d98d3c4/outbox-restart.json)와 [원래5설정·fault·임시포트 종료·supervisor 재연결](../../deploy/verification/candidate-d98d3c4/outbox-post-normal.json)을 확인했다. 전환 중 health 오류5회는 독립 관찰에 보존했다. 재시작을 반복하지 않는다.
-3. 새 정상1.7 백업931876864B/SHA1cab74e110d172307ffd3605543da2db4261c27f009b97871a21bd1bf665827c의 생성·전송·전체SHA·worker종료를 root24866 종료0으로 확인했다. **그 정확한 스냅샷**의 현재1.7/하위1.6 복원 기능 검증·정리를 완료했다. [23보고서+2Pod identity](../../deploy/verification/candidate-d98d3c4/restore-summary.json), [root의 실제 양쪽0/Pod0/4BoundPVC/포트종료·main설정 확인](../../deploy/verification/candidate-d98d3c4/root-recovery-review/summary.json), [독립 REVIEW037](../product/REVIEW-037.md)을 재사용한다. form44/receipt14·실제MQTT·원본 데이터·이벤트는 양버전, 새 목록은1.7에서만 확인했다. 완료한 복원을 반복하지 않는다.
-4. 독립 기능 인수는 완료했다. 근거91a23b8 커밋과 새 불변1.7 매니페스트1731해시·Ready/백업의 독립검증을 완료했다. 새 stable-v1.7.0은 운영·근거e5bd056, stable-runtime-v1.7.0-d98d3c4는 정확 앱d98을 가리키며 원격 refs를 확인했다. [태그 증거](../../artifacts/checkpoints/release-1.7/tags.json). 운영 배포 인자가 무시될 수 있던 ISSUE025는4b6009d에서 수정했고 [전체312검사·client-only dry-run](../../artifacts/checkpoints/deployment-renderer/summary.json)을 통과했다. 실제 재배포를 실행한 검증은 아니다. 이후에도 원래 일정과 최종 미디어 인수는 남아 있다.
+## 완료된 1.7.1 체크포인트
 
-## 다음 관찰·준비
+- 로컬317시험·실제 broker통합/고급·CLI online/LWT·정확 OCI79시험·보안 검사·registry 전달을 완료했다. 서버/web/DB/OSS 변경 없이 공급 monitor의 strict boolean online과 안내 계약을 정정했다. [로컬](../../artifacts/checkpoints/candidate-1.7.1-local/summary.json), [정확 이미지](../../deploy/verification/candidate-40b9ed8/pre-deployment-review.json), REVIEW040/041을 참조한다.
+- 실제 main UI/API/원래5설정·실행·데이터·시나리오·MQTT125kW/error0·online 관측과 outbox 실제 Pod 교체를 완료했다. outbox87050과 독립관찰71381 종료0, 계획 전환 health 실패4회 및 복구를 보존했다. [root 정상 확인](../../deploy/verification/candidate-40b9ed8/outbox-post-normal.json). main online 관측은 retain flag를 노출하지 않으므로 retained 수신 증명으로 확대하지 않는다.
+- 정상 백업9205 종료0: **1075081216B**, SHA `5ff34f3e5dbc52f07b899f0c8013db130e5fd13c3d315e92aa512d474ea1f782`, `deploy/verification/stable-backup-40b9ed8.json`. 전체SHA·SQLite·0600·worker종료를 root도 확인했다. 동일 스냅샷의 현재1.7.1/이전1.7 복원 **26보고서+2Pod 식별**을 통과했다. form44/receipt14·event/list·auth/preview/export·실제MQTT를 양쪽에서 검증했다. form은 실제201, receipt는 독립 성공응답 baseline 비교 범위다.
+- [복원 집계](../../deploy/verification/candidate-40b9ed8/restore-summary.json), [root 실제 정리](../../deploy/verification/candidate-40b9ed8/root-recovery-review/summary.json), REVIEW045. 양쪽 복원배포0/Pod0/4BoundPVC보존·3105/18885종료·main원래5설정을 확인했다. 모든 복원 담당 핸들은 종료됐으며 반복하지 않는다.
+- 새 불변 [checkpoint-1.7.1.json](../../artifacts/releases/checkpoint-1.7.1.json)은 source `b6c3cbc5742b095bedb32b5f4dea598e685412f5`, SHA `0c9e5bec0a0ef506884b70374aae791e2cb2e38321dcdcd841c10a02c6962ebf`다. root와 REVIEW046에서 **2033개 해시·실제Ready·백업**을 대조했다. 후속 문서/템플릿 변경이 있으므로 역사 무결성 검증에는 `--at-commit`을 사용한다. 새 태그의 실제 상태는 run.stableCheckpoint/tagVerification을 읽는다. 기존1.7/1cab·1.6/9bd 등 불변 매니페스트·태그·백업은 보존한다.
 
-[REVIEW039](../product/REVIEW-039.md)의 당시 검토는 새 제안을 보류했으나, 이후 구체적NFR08 before근거로 위1.7.1 정정 패치를 채택했다. 현재 관찰과 최종 보안·이슈 정합성·영상/PPT 인도 준비를 계속한다. [실제 첫1시간](../../artifacts/checkpoints/soak-1.7.0-first-hour/summary.json)은 primary 3600.498초·audit 3601.319초, 각 598수신·오류0을 보존한다. maxPending은3이었고 두 epoch 모두 각 첫 3600초 이상 poll에서 끝나는 prefix다. [REVIEW043](../product/REVIEW-043.md)이 해시/경계/범위를 독립 확인했다. ISSUE028의 잘못된 준비 경로를 실제 저장 전에 수정했고 primary 소스는 사후 현재 바이트와 d98의 일치로 보관했으며 시작 시점 attestation으로 표현하지 않는다. 현재 원본 관측은 사전 백업 검증까지 계속 동작한다. media 역할은1.7의 바뀐 원고·캡처로14장 준비용 덱 배치·편집가능성·노트·패키징 검토를 완료했다. root도25개 compact파일·21개 재생성파일 해시와 대표3장을 확인했다. [준비 검토](../../artifacts/checkpoints/media-candidate17-deck/root-review.json)는 최종 PPT가 아니다. 고유출력과 완료 상태는 resume.additionalMediaPreparation을 읽고 같은 준비작업을 중복 시작하지 않는다. 최종 영상을 새로 제작할 원래 창은 유지한다.
+## 다음 작업과 원래 마감
 
-## 재접속과 현재 소유 프로세스
+1. 새 stable-v1.7.1(운영·근거)와 stable-runtime-v1.7.1-40b9ed8(정확 앱)의 원격 refs를 확인하고 현재 원장에 기록한다. 이미 태그 증거가 있으면 다시 만들지 않는다.
+2. 현재 관측을 유지한다. 첫1시간 capture는 **18:59:55.011Z 이후 실제 양쪽 경계 poll이 존재할 때만** `firstHourCapturePreparation`의 스크립트와 SHA를 확인해 실행한다. [준비 검증](../../artifacts/checkpoints/soak-1.7.1-first-hour-preparation/summary.json)은 실제1시간 증거가 아니다. 이전1.7의 실제1시간과 종료 기록은 그대로 보존한다. 이후 아이디어는 구체적 문제 근거·PRD/아이디어/제품 버전과 검증된 fallback을 갖춰 채택한다.
+3. **21:27:33.079009Z**에 product/security/issues가 선택 버전의 최종 변경·문제·보안 검토를 수행한다. 계획과 링크만으로 역할 종료를 인정하지 않는다. 취약점 잔여와 ISSUE024의 미확정 원인은 유지한다.
+4. **21:37:33.079009Z (한국시간06:37:33)**부터 새 기능을 중단하고 [FINAL-RESTORE-PLAN](FINAL-RESTORE-PLAN.md)에 따라 실제 정상 버전·정확 스냅샷·최종 불변 매니페스트를 확보한다. 새 백업 복원 컷오프21:44:33Z를 넘기면 이미 같은 스냅샷 복원이 검증된 안정 체크포인트 선택 여부를 판단한다. 원래 T0와 종료 시각을 다시 시작하지 않는다.
+5. 그 최종창에 **새 실제 한국어 UI 시연 영상**을 녹화한다. 포인터·클릭·확대/축소·음성·자막,8장면과 실제MQTT125/error0/3상태를 검수한다. 자체201 RTU·private journal을 사용하고 recorder 실제종료 뒤 복구를 검증한다. 이전 리허설은 최종 영상이 아니다. 이어 검수된 동일 영상으로 **새 편집가능14장PPT**를 생성·재수입·전장렌더·검수한다. facts.template은1.7.1의 미검수 준비용이며 reviewed=false/preparationTemplate=true를 임의 승인하지 않는다.
+6. **22:07:33.079009Z (한국시간07:07:33)**까지 인도 파일·소스/샘플/시험·원격Git·정상배포와 완료/미완료를 확인한다. [DELIVERY-PLAN](DELIVERY-PLAN.md)에 따라 독립 검수와 해시를 기록한 뒤 이 실행의 heartbeat를 비활성화한다. 마감이나 목표 완료를 거짓으로 연장하지 않는다.
 
-- `node scripts/resume-status.mjs`로 실제 Git·클러스터·Ready 이미지·인증 API 버전을 대조한다. `artifacts/operations/status.json`의 PID·시작 시각도 확인하고 정상 프로세스를 중복 기동하지 않는다.
-- 단일 1.7 supervisor: root handle77410 / PID33567 / `Tue Sep 22 01:40:37 2026`, 소유3104/18884. 실제1.7 Ready를 확인한 뒤 시작했다. 새 primary85394/PID34756, audit60682/PID34755는16:45:54Z 시작했다(둘 다 `Tue Sep 22 01:45:54 2026`). 실제 경로·카운터는 resume와 observer-1.7-activation을 읽는다.
-- 이전 1.6 supervisor72380/PID19942, primary8363/PID21356, audit4110/PID21357은 모두 종료0. [닫힌 관찰 구간](../../artifacts/checkpoints/soak-1.6.0/summary.json)은 약2125/2120초·각326메시지·API/연결/invalid/duplicate0이다. **1시간 관찰이 아니다.** 전환 구간까지 연속 수신했다고 주장하지 않는다.
-- 로컬1.7 fixture28735/PID28948은 미디어 정상 복구와 기존7·소유RTU 설정을 root가 읽기 대조한 뒤 종료0,3111포트 닫힘을 확인했다. private DB는 보존한다. [정리](../../artifacts/checkpoints/local-fixture-1.7-retirement/summary.json). 리허설58112도 종료0이며 [compact근거](../../artifacts/checkpoints/media-candidate17/README.md)와 [독립REVIEW036](../product/REVIEW-036.md)을 보존했다. 최종 영상으로 재사용하지 않는다.
-- 전원 보호: handle11821 / PID80946 / `Mon Sep 21 22:33:11 2026`, `caffeinate -i -s -t 30861`. 원래 마감까지 한시적으로 동작한다. 지속 설정 변경은 없다.
-- native heartbeat `grid`는10분마다 이 작업의 재개 절차를 호출한다. Mac과 Codex가 실행 중이어야 한다. 변화 없는 알림·재시험을 반복하지 않는다. 담당 핸들이 root에서 Unknown이면 담당 또는 실제PID/시작identity를 확인한다.
-- 불확실한 쓰기는 commandId·이미지·백업 remotePath·복원 rig·시연 journal로 대조한다. 새 ID/등록/apply/복원을 무조건 반복하지 않는다. [NETWORK-RECOVERY.md](NETWORK-RECOVERY.md)를 따른다.
-
-## 검증된 복구 기준과 현재 추가 백업
-
-현재 선택은1.7/runtime d98d3c4와 [1cab 백업](../../deploy/verification/stable-backup-d98d3c4.json)이다. 동일 스냅샷의 현재/하위 복원과 기능 인수는 통과했으며, [checkpoint-1.7.0.json](../../artifacts/releases/checkpoint-1.7.0.json)은 source91a23b8·SHA146d33ee23f426cee4826c1e1f1d569bbad2614051c65efa2f99b865bb08e439이며1731해시·실제Ready·1cab백업을 root와 [REVIEW038](../product/REVIEW-038.md)에서 검증했다. 새 stable/runtime 태그도 원격 확인을 완료했다. run.json.stableCheckpoint의 manifestState/tagState를 실제 파일·Git과 함께 확인한다. 아래1.6는 이전 검증된 불변 체크포인트다.
-
-1.6 runtime331ab9a / image4af99e7b와 [checkpoint-1.6.0.json](../../artifacts/releases/checkpoint-1.6.0.json)을 보존한다. manifest source는 `b729f4287cf6a5a5527fa37f105e61bd41e135b7`, SHA는 `fd3fedc9dffb6bdc8d6e69982554dabde24bf3054113f02dc8370385bc238ae5`이며1466해시와 실제Ready/백업을 [REVIEW033](../product/REVIEW-033.md)에서 검증했다. 역사 소스는 `--at-commit`으로 대조하고 불변 파일·기존 태그를 덮어쓰지 않는다.
-
-`stable-v1.6.0`은 운영·근거180fa6871d56fa723a5388ee3ea0b128ef623b4b, `stable-runtime-v1.6.0-331ab9a`는 정확 앱 소스331ab9a다. [태그 원격 확인](../../artifacts/checkpoints/release-1.6/tags.json). [선택 백업](../../deploy/verification/stable-backup-331ab9a.json)은851673088B/SHA `9bd8becb4211ee0edd9217db99e05b63d8fa3f5437a8e4cc7be2ace449cb3137`이며 동일 스냅샷의 current1.6/backward1.5 복원19보고서+2Pod identity를 검증했다. [복원 요약](../../deploy/verification/candidate-331ab9a/restore-summary.json), [실제 정리](../../deploy/verification/candidate-331ab9a/root-recovery-review/summary.json). 과거1.5/ad34 및 이전 체크포인트도 유지한다.
-
-별도 [1.7 전환 전 백업](../../deploy/verification/pre-1.7.0-backup.json)은1.6 상태912310272B/SHA `7353d0d00dbbbd304d5361716b9913e02e0ead1b095b5bd133b4fb9db387338b`다. 생성·전송·무결성·전체SHA·0600 및 worker 종료를 확인했고16 health표본 실패0/재시작0이다. **이 추가 백업의 복원 증명은 아직 없다.** 기존9bd의 복원 증명을 붙이지 않는다.
-
-과거 백업 실패의439500800B partial과 사건 기록은 보존한다. 원인 인과관계는 미확정이다. 현재 remote-backup과 pending-outbox는 고정WAL snapshot·소유worker시간 제한·종료확인 helper를 사용한다. [백업 사건](../../artifacts/checkpoints/backup-incident-20260921T1534/recovery-summary.json), [수정 검증](../../artifacts/checkpoints/backup-hardening-1.6/summary.json)을 참조한다. 동기I/O·호스트중단·원격취소의 한계를 성공 보장으로 표현하지 않는다.
-
-## 버전·보안·최종 일정
-
-[1.7 로컬 집계](../../artifacts/checkpoints/candidate-1.7-local-summary.json)는 전체302검사·실제broker 통합/고급·새목록8군·form44/receipt14·기존회귀를 포함한다. [REVIEW035](../product/REVIEW-035.md)의 인수는 로컬 범위다. exactimage의77 app검사는 별도이며 수치를 합치지 않는다. [이미지 근거](../../deploy/verification/candidate-d98d3c4/provenance.json)와 [보안 관리](../security/VULNERABILITY-MANAGEMENT.md)를 확인한다. 이미지에는 수정 버전이 확인되지 않은 기존4matches/2CVEs가 남아 있고, 이번 새 OSS/추가 취약점은 없다.
-
-원래 시작은2026-09-21 17:07:33KST(08:07:33Z), 동결은2026-09-22 06:37:33KST(21:37:33Z), 종료는07:07:33KST(22:07:33Z)이다. 재접속·후속 아이디어로 연장하지 않는다.
-
-동결 때 정상 버전을 선택하고 **선택 백업 → 정확 스냅샷 복원 → 근거 커밋 → 새 최종 매니페스트 → 신규 실제 UI 영상·복구·검수 → 같은 영상의 facts → 편집 가능한 PPT·전장 검수 → 인도**를 실행한다. 상세 컷오프는 [FINAL-RESTORE-PLAN.md](FINAL-RESTORE-PLAN.md), [MEDIA-PLAN.md](MEDIA-PLAN.md), [DELIVERY-PLAN.md](DELIVERY-PLAN.md)를 따른다. 새복원 cutoff를 넘기면 이미 검증된 stable 선택을 검토하고 미검증 백업을 승격하지 않는다.
-
-미디어 facts의1.7 갱신과 호환/리허설은 준비 자료이며 reviewed=false/preparationTemplate=true를 유지한다. 원래 최종창에 새 영상이 필요하다. pointer/click/zoom/한국어자막·음성·1080p H264/AAC를 검수하며 기술적 오디오검사를 청취로 표현하지 않는다. 실제KMA/AWS/운영VPP 성공은 미검증이다. untracked `artifacts/releases/current.json`은 과거 리허설용이므로 최종 입력에 쓰지 않는다.
-
-최종 백업 전 snapshot/압축/전송/복원PVC/성장량의 실제 공간을 확인한다. 공유hostFS 여유는 PVC 예약량이 아니다. 검증된 백업은 자동삭제하지 않는다. 녹화 중단 시 담당 종료 후 private journal로 복구하며 기존 RTU를 일괄 초기화하지 않는다. 최종 인도와 정상상태를 확인한 뒤 이 실행의 heartbeat·소유터널을 종료하고 원격 앱/PVC를 보존한다.
+기존 `.idea`, 미디어 리허설, `artifacts/releases/current.json`, 과거 partial과 검증 백업/PVC를 임의 삭제하지 않는다. private SQLite/토큰/Secret 값은 Git·화면·공개 로그에 넣지 않는다. 무관한3101/PID20846,1883브로커를 보존한다. 실제 대기 동작과 미완료 원격 작업을 먼저 확인하고, 필요한 소유 작업만 조정한다.

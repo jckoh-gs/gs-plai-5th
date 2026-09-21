@@ -1,37 +1,35 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T18:13:59.154682+00:00",
+  "updatedAt": "2026-09-21T18:17:34.482430+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
-    "productVersion": "1.7.0",
-    "prdVersion": "1.14",
-    "commit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
-    "tag": "stable-v1.7.0",
-    "tagState": "created-and-remote-verified",
-    "tagScope": "Full verified operational/evidence checkpoint",
-    "alias": "stable-runtime-v1.7.0-d98d3c4",
-    "appImage": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
-    "backupEvidence": "deploy/verification/stable-backup-d98d3c4.json",
-    "recoveryEvidence": "deploy/verification/candidate-d98d3c4/restore-summary.json",
-    "tagCommit": "e5bd0566ca65648a3f495bc3ffb0fda448c813cf"
+    "productVersion": "1.7.1",
+    "prdVersion": "1.15",
+    "commit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+    "tag": "stable-v1.7.1",
+    "tagState": "pending-newannotatedtags",
+    "tagScope": "Full operational/evidence checkpoint includingimmutablemanifest/reviews",
+    "alias": "stable-runtime-v1.7.1-40b9ed8",
+    "appImage": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+    "backupEvidence": "deploy/verification/stable-backup-40b9ed8.json",
+    "recoveryEvidence": "deploy/verification/candidate-40b9ed8/restore-summary.json"
   },
   "stableManifest": {
-    "path": "artifacts/releases/checkpoint-1.7.0.json",
+    "path": "artifacts/releases/checkpoint-1.7.1.json",
     "state": "verified",
-    "historicalFallback": "artifacts/releases/checkpoint-1.6.0.json",
-    "sha256": "146d33ee23f426cee4826c1e1f1d569bbad2614051c65efa2f99b865bb08e439",
-    "manifestSourceCommit": "91a23b8d2e620ca9e12d584cf7169627c7e01437",
-    "independentReview": "docs/product/REVIEW-038.md",
-    "verification": "artifacts/checkpoints/release-1.7/verification.json",
-    "tagVerification": "artifacts/checkpoints/release-1.7/tags.json"
+    "historicalFallback": "artifacts/releases/checkpoint-1.7.0.json",
+    "sha256": "0c9e5bec0a0ef506884b70374aae791e2cb2e38321dcdcd841c10a02c6962ebf",
+    "manifestSourceCommit": "b6c3cbc5742b095bedb32b5f4dea598e685412f5",
+    "independentReview": "docs/product/REVIEW-046.md",
+    "verification": "artifacts/checkpoints/release-1.7.1/verification.json"
   },
   "workingMilestone": {
     "productVersion": "1.7.1",
     "prdVersion": "1.15",
     "idea": "IDEA-012",
-    "state": "Actualmain/outbox PASS; normalbackup/current+backrestore pending; stablefallback1.7/1cab"
+    "state": "Functional+immutablemanifestverified; newtags/docs/media-templatefinalizing; finalgoalpending"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -43,10 +41,11 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Allsame5ffrestorationandrootcleanupPASS. Await REVIEW045; commitcompletedsource/evidence andselected1.7.1backup, generateNEWimmutablemanifest, verifylocal/remote/independent, createNEWstable+runtime tags. Preserveold1.7manifest/tags. Keep72957/8133/48590.",
-    "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
-    "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
-    "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
+    "Finishnew1.7.1tags/remoterefs after final template/docs changes; no moremainmutation needed. Bothrestore rigs ended. Continue72957/8133/48590; no duplicate processes.",
+    "Captureactual1.7.1 firsthour onlyafter18:59:55.011Z andbothboundarypolls usingfirstHourCapturePreparation; verifyallhashes independently. Keeporiginalfreeze/deadline; reviewfurtherideaswithversionedadoption andknownfallback.",
+    "At21:27:33.079009Z conductproduct/security/issues selectedversion finalreviews. Atoriginalfreeze21:37:33.079009Z followFINAL-RESTORE-PLAN actualnormalversion/exactsnapshot/immutablefinalmanifest.",
+    "Inoriginalfinalwindow generateNEWrealKoreanUIvideo withpointer/zoom/voice/subtitles; verifyandrecoverownRTU,thenNEWeditable14-slidePPTusingthesamevideo/fullrenders. Existingrehearsalsnotfinal.",
+    "Beforeoriginal22:07:33.079009Z deadline verifydelivery/artifacts/remoteGit/finalnormalstate andstopthisrunheartbeat. Do notextendT0 orpretendunfinishedworkcomplete."
   ],
   "retryPolicy": {
     "readOnlyChecks": "May retry with bounded backoff",
@@ -451,7 +450,13 @@
     "contentPreparationReview": "docs/operations/MEDIA-1.7-COMPATIBILITY.md",
     "contentPreparationScope": "Unreviewed1.7/PRD1.14 14slide facts template; actual main66/currentrestore80/backward80events outside8scenes; listnormal shown in1.7rehearsal andcontrolledfailures separate; originalwindow finalnewvideo/PPT pending",
     "rehearsalEvidence": "artifacts/checkpoints/media-candidate17/README.md",
-    "rehearsalIndependentReview": "docs/product/REVIEW-036.md"
+    "rehearsalIndependentReview": "docs/product/REVIEW-036.md",
+    "currentFactsTemplate": {
+      "path": "scripts/media/facts.template.json",
+      "version": "1.7.1",
+      "proof": "artifacts/checkpoints/media-candidate171-facts/verification.json",
+      "scope": "Unreviewedpreparation; exact10manifestEvidence checked; no finalbinder/rehearsal/media run."
+    }
   },
   "mediaRecovery": {
     "plan": "docs/operations/FINAL-RESTORE-PLAN.md",
@@ -541,7 +546,7 @@
     "adoptionReview": "docs/product/REVIEW-040.md",
     "implementationOwner": "/root/transport",
     "scope": "StrictbooleanRTUonline in suppliedmonitor; exampleenv/ports/unsupportedlegacy wording. No serverDBUI/wire/OSS changes. Do not rollout before captured actual1.7 firsthour at17:45:54.307Z.",
-    "phase": "Functional1.7.1 independentlyaccepted; AT04awaitsnewimmutablemanifest. All restorationhandles ended; onlymainobservers/supervisor remain.",
+    "phase": "Independentfunctional/immutablemanifest andsecurity/issues/media-templatecloseoutdone; rootcreatingnewstabletags",
     "activeOperations": [],
     "mainWritesAllowed": true,
     "localClientStatusEvidence": "artifacts/checkpoints/candidate-1.7.1-local/client-status-integration.json",
@@ -1012,27 +1017,27 @@
     "currentVerifiedPodUid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc"
   },
   "previousStableRuntime": {
-    "productVersion": "1.6.0",
-    "prdVersion": "1.13",
-    "commit": "331ab9a00ee71a0924042e7952013d47495449d3",
-    "tag": "stable-v1.6.0",
+    "productVersion": "1.7.0",
+    "prdVersion": "1.14",
+    "commit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
+    "tag": "stable-v1.7.0",
     "tagState": "created-and-remote-verified",
-    "tagScope": "Full operational/evidence checkpoint including immutablemanifest/reviews/backuphardening",
-    "alias": "stable-runtime-v1.6.0-331ab9a",
-    "appImage": "127.0.0.1:15050/grid@sha256:4af99e7b6daff553baf60d91b6ba126bba27d686f7a6d2596f8c0d4eb7941f70",
-    "backupEvidence": "deploy/verification/stable-backup-331ab9a.json",
-    "recoveryEvidence": "deploy/verification/candidate-331ab9a/restore-summary.json",
-    "tagCommit": "180fa6871d56fa723a5388ee3ea0b128ef623b4b"
+    "tagScope": "Full verified operational/evidence checkpoint",
+    "alias": "stable-runtime-v1.7.0-d98d3c4",
+    "appImage": "127.0.0.1:15050/grid@sha256:d1e4b1d8c39e924effb3f6ad183b33b220aa980a2d08f5d82cbf92470664c692",
+    "backupEvidence": "deploy/verification/stable-backup-d98d3c4.json",
+    "recoveryEvidence": "deploy/verification/candidate-d98d3c4/restore-summary.json",
+    "tagCommit": "e5bd0566ca65648a3f495bc3ffb0fda448c813cf"
   },
   "previousStableManifest": {
-    "path": "artifacts/releases/checkpoint-1.6.0.json",
+    "path": "artifacts/releases/checkpoint-1.7.0.json",
     "state": "verified",
-    "historicalFallback": "artifacts/releases/checkpoint-1.5.0.json",
-    "sha256": "fd3fedc9dffb6bdc8d6e69982554dabde24bf3054113f02dc8370385bc238ae5",
-    "manifestSourceCommit": "b729f4287cf6a5a5527fa37f105e61bd41e135b7",
-    "independentReview": "docs/product/REVIEW-033.md",
-    "verification": "artifacts/checkpoints/release-1.6/verification.json",
-    "tagVerification": "artifacts/checkpoints/release-1.6/tags.json"
+    "historicalFallback": "artifacts/releases/checkpoint-1.6.0.json",
+    "sha256": "146d33ee23f426cee4826c1e1f1d569bbad2614051c65efa2f99b865bb08e439",
+    "manifestSourceCommit": "91a23b8d2e620ca9e12d584cf7169627c7e01437",
+    "independentReview": "docs/product/REVIEW-038.md",
+    "verification": "artifacts/checkpoints/release-1.7/verification.json",
+    "tagVerification": "artifacts/checkpoints/release-1.7/tags.json"
   },
   "completedCandidateOperations": [
     {
@@ -1266,7 +1271,7 @@
     "readme": "README.md",
     "deployment": "deploy/README.md",
     "security": "docs/security/VULNERABILITY-MANAGEMENT.md",
-    "scope": "Currentselection1.7/PRD1.14/d98/d1e4/1cab aligned; earlier securityscan currentphrases are historical. No newscan orcodechange."
+    "scope": "Currentselection1.7.1/PRD1.15/40b/234/5ff aligned; old1.7/1cab historicalfallback. No newscan orruntimechanges."
   },
   "nextSecurityReview": {
     "owner": "/root/security",

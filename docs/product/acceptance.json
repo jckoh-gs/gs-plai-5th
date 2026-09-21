@@ -8983,7 +8983,7 @@
     {
       "id": "AT-VPP-STATUS-01-04",
       "description": "정확이미지 k3s/동일스냅샷 현재·하위복원",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "artifacts/checkpoints/candidate-1.7.1-local/full-suite.log",
@@ -9056,9 +9056,17 @@
         {
           "path": "deploy/verification/stable-backup-40b9ed8.json",
           "sha256": "f891bd6a6752942e777a3e455504f4e4810f7cc9bd31cb10a4dfe90fbb4cf2ff"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.7.1.json",
+          "sha256": "0c9e5bec0a0ef506884b70374aae791e2cb2e38321dcdcd841c10a02c6962ebf"
+        },
+        {
+          "path": "docs/product/review-046-manifest.log",
+          "sha256": "a93a30d05e7907cec69234adc174f9816c8488442352a36b5e291d385c6516e5"
         }
       ],
-      "assessment": "REVIEW045: exact40b9ed8/234ec56 main·outbox·1075081216B/5ff 동일snapshot fresh1.7.1/하위1.7 26보고서+2Pod 및 양rig정리 기능검증완료. form44 actual201·receipt14 성공응답baseline(201assert주장없음), 원래5단지/1시나리오보존. 새불변manifest 출처검증과 최종미디어/시간게이트는별도대기."
+      "assessment": "REVIEW045 기능·main/outbox·동일5ff snapshot1.7.1/하위1.7복원·정리 완료 후 REVIEW046에서 신규checkpoint-1.7.1 --at-commit --remote2033hash/실제Ready/전체backupSHA PASS. manifest source b6c3cbc의 당시partial은 생성전 이력으로보존. 전체목표/최종미디어/시간완료아님."
     }
   ],
   "reviewedSource": {

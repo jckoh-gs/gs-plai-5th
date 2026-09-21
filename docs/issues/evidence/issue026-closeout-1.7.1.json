@@ -1,0 +1,13 @@
+{
+  "result": "RESOLVED_FUNCTIONAL",
+  "checkedAt": "2026-09-21T18:16:14.544099+00:00",
+  "inputs": {
+    "docs/product/REVIEW-045.md": "fc80382c9df4a4b05eadee676921e7b38c764a9e83359181cdd5222a178722ea",
+    "docs/product/REVIEW-046.md": "d6ec689715adb0bf686c725f99a540300d412ce9d13018dcd7dab8b02b90e599",
+    "docs/product/review-046-manifest.log": "a93a30d05e7907cec69234adc174f9816c8488442352a36b5e291d385c6516e5",
+    "deploy/verification/candidate-40b9ed8/restore-summary.json": "b81b7262cd1441c0bda025fa0d3c1a2b88d5b8ec6e90404e647c7c11d043b92b",
+    "deploy/verification/candidate-40b9ed8/root-recovery-review/summary.json": "d1425e1827929052a4c7fc06a06596d9a71ed4ed5e1c953f24401c141594171b",
+    "artifacts/releases/checkpoint-1.7.1.json": "0c9e5bec0a0ef506884b70374aae791e2cb2e38321dcdcd841c10a02c6962ebf"
+  },
+  "scope": "Read-only existing actual proofs; no new test, remote action, tags, ledger or runtime change; not finalgoal/media completion"
+}

@@ -1,0 +1,85 @@
+{
+  "scope": "Unreviewed preparation facts; no final binder or media execution",
+  "manifest": "artifacts/releases/checkpoint-1.7.1.json",
+  "manifestSha256": "0c9e5bec0a0ef506884b70374aae791e2cb2e38321dcdcd841c10a02c6962ebf",
+  "templateSha256": "004464ebfea30cf2c2b4686a0a8332219b94c21bde1ecf0c8005eb7b5bc89319",
+  "manifestSource": "b6c3cbc5742b095bedb32b5f4dea598e685412f5",
+  "runtime": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "slides": 14,
+  "reviewed": false,
+  "preparationTemplate": true,
+  "finalPlaceholdersPreserved": true,
+  "manifestEvidenceCount": 10,
+  "evidence": [
+    {
+      "path": "deploy/verification/candidate-40b9ed8/restored-current/browser-form/result.json",
+      "sha256": "784c99c94d76659a16cc00181b269883e6ac9a32f49399b5a1014c394f35da49",
+      "matched": true
+    },
+    {
+      "path": "deploy/verification/candidate-40b9ed8/restored-current/browser-receipts/result.json",
+      "sha256": "7afd043bde72c879dc1ccbecf5f266aa6dc7d34cb4b8bbeacf6115df70543a15",
+      "matched": true
+    },
+    {
+      "path": "deploy/verification/candidate-40b9ed8/main-command-list/result.json",
+      "sha256": "917ddfdd422690a9ad1ed24959030a259c8bb55be0221b64456ecd36fdd36f61",
+      "matched": true
+    },
+    {
+      "path": "deploy/verification/candidate-40b9ed8/restored-current/browser-list/result.json",
+      "sha256": "bd0cef6a9c46a5bdd04ce7ac80ab9f495b84b6b9c4402b6347b4653f3f48c7a4",
+      "matched": true
+    },
+    {
+      "path": "deploy/verification/candidate-40b9ed8/outbox-restart.json",
+      "sha256": "c120a075c4bddb55ebf589b782a60379073583224aa755bd5a1abf5e09405c93",
+      "matched": true
+    },
+    {
+      "path": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+      "sha256": "b81b7262cd1441c0bda025fa0d3c1a2b88d5b8ec6e90404e647c7c11d043b92b",
+      "matched": true
+    },
+    {
+      "path": "deploy/verification/stable-backup-40b9ed8.json",
+      "sha256": "f891bd6a6752942e777a3e455504f4e4810f7cc9bd31cb10a4dfe90fbb4cf2ff",
+      "matched": true
+    },
+    {
+      "path": "deploy/verification/candidate-40b9ed8/main-event-time/result.json",
+      "sha256": "6e3f5f637e60f51f3300353f164440c0e1991e0bc0b2f7950512070915179552",
+      "matched": true
+    },
+    {
+      "path": "deploy/verification/candidate-40b9ed8/restored-current/browser-event/result.json",
+      "sha256": "1cc6387557d07e7dea056dc1e25779decb7d8bad70c5d6ab0afed812d3e7d75e",
+      "matched": true
+    },
+    {
+      "path": "deploy/verification/candidate-40b9ed8/restored-backward/browser-event/result.json",
+      "sha256": "ec6a63ae51c0e550b325be8c72472146640252c2dd12aeb274c48040109c8f21",
+      "matched": true
+    }
+  ],
+  "generalPublicSourceCount": 8,
+  "generalSourcePaths": [
+    "docs/PRD-VPP-SCADA-RTU.md",
+    "docs/protocol.md",
+    "docs/security/VULNERABILITY-MANAGEMENT.md",
+    "docs/issues/ISSUES.md",
+    "docs/product/PRD-CHANGELOG.md",
+    "docs/product/IDEAS.md",
+    "artifacts/checkpoints/candidate-1.7-command-list-round1/result.json",
+    "artifacts/checkpoints/candidate-1.7-command-list-round1/supplement-result.json"
+  ],
+  "sourceLimitation": "General sources checked for public-file existence, not asserted to be immutable manifest evidence",
+  "eventCounts": {
+    "main171": 73,
+    "restored171": 80,
+    "backward170": 80
+  },
+  "sameSnapshotSha256": "5ff34f3e5dbc52f07b899f0c8013db130e5fd13c3d315e92aa512d474ea1f782",
+  "newRehearsal": false,
+  "audioListened": false
+}

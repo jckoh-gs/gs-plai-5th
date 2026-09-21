@@ -46,7 +46,7 @@
   "modelVerification": "Agents inherited main session model; exact runtime model identifier not exposed by available goal tools.",
   "deployment": {
     "observedAt": "2026-09-21T18:12:44.964Z",
-    "status": "Actual1.7.1 main andpairedsame5ffrestoration verified; immutablemanifest/promotion pending",
+    "status": "Verified1.7.1 functionalstable: exactsame5ff current/backrestore+immutablemanifest independentPASS",
     "sourceCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
     "prdVersion": "1.15",
     "context": "charles-k3s",
@@ -114,36 +114,32 @@
     }
   },
   "stableCheckpoint": {
-    "productVersion": "1.7.0",
-    "prdVersion": "1.14",
-    "runtimeCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
-    "tag": "stable-v1.7.0",
-    "tagScope": "Full operational/evidence checkpoint including immutablemanifest/reviews",
-    "alias": "stable-runtime-v1.7.0-d98d3c4",
-    "aliasScope": "Exact runnable app build commit d98d3c4",
-    "manifest": "artifacts/releases/checkpoint-1.7.0.json",
+    "productVersion": "1.7.1",
+    "prdVersion": "1.15",
+    "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+    "tag": "stable-v1.7.1",
+    "tagScope": "Full operational/evidence checkpoint includingimmutablemanifest/reviews",
+    "alias": "stable-runtime-v1.7.1-40b9ed8",
+    "aliasScope": "Exact runnable app build40b9ed8",
+    "manifest": "artifacts/releases/checkpoint-1.7.1.json",
     "manifestState": "verified",
-    "backupEvidence": "deploy/verification/stable-backup-d98d3c4.json",
-    "recoveryEvidence": "deploy/verification/candidate-d98d3c4/restore-summary.json",
-    "rootRecoveryReview": "deploy/verification/candidate-d98d3c4/root-recovery-review/summary.json",
-    "independentFunctionalReview": "docs/product/REVIEW-037.md",
-    "tagState": "created-and-remote-verified",
-    "scope": "Verified1.7 functional/runtime/recovery checkpoint; newmanifest/tags pending; overallgoal finalmedia/time/delivery pending",
-    "previousVerifiedManifest": "artifacts/releases/checkpoint-1.6.0.json",
-    "manifestSha256": "146d33ee23f426cee4826c1e1f1d569bbad2614051c65efa2f99b865bb08e439",
-    "manifestSourceCommit": "91a23b8d2e620ca9e12d584cf7169627c7e01437",
-    "independentManifestReview": "docs/product/REVIEW-038.md",
+    "manifestSha256": "0c9e5bec0a0ef506884b70374aae791e2cb2e38321dcdcd841c10a02c6962ebf",
+    "manifestSourceCommit": "b6c3cbc5742b095bedb32b5f4dea598e685412f5",
+    "backupEvidence": "deploy/verification/stable-backup-40b9ed8.json",
+    "recoveryEvidence": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+    "rootRecoveryReview": "deploy/verification/candidate-40b9ed8/root-recovery-review/summary.json",
+    "independentFunctionalReview": "docs/product/REVIEW-045.md",
+    "independentManifestReview": "docs/product/REVIEW-046.md",
     "manifestVerification": {
       "result": "PASS",
-      "manifest": "artifacts/releases/checkpoint-1.7.0.json",
-      "checkedHashes": 1731,
+      "manifest": "artifacts/releases/checkpoint-1.7.1.json",
+      "checkedHashes": 2033,
       "remoteImageMatched": true,
-      "scope": "File integrity and optional deployed identity only; acceptance, restore and media verdicts remain independent",
-      "manifestSourceCommit": "91a23b8d2e620ca9e12d584cf7169627c7e01437",
-      "independentReview": "docs/product/REVIEW-038.md"
+      "scope": "File integrity and optional deployed identity only; acceptance, restore and media verdicts remain independent"
     },
-    "tagCommit": "e5bd0566ca65648a3f495bc3ffb0fda448c813cf",
-    "tagVerification": "artifacts/checkpoints/release-1.7/tags.json"
+    "tagState": "pending-newannotatedtags",
+    "previousVerifiedManifest": "artifacts/releases/checkpoint-1.7.0.json",
+    "scope": "Verified1.7.1 functional/runtime/same5ffrecovery checkpoint. Overallgoal finalmedia/time/delivery remainsincomplete."
   },
   "candidate": {
     "productVersion": "1.7.1",
@@ -161,7 +157,7 @@
     "localSummary": "artifacts/checkpoints/candidate-1.7.1-local/summary.json",
     "independentLocalReview": "docs/product/REVIEW-041.md",
     "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
-    "phase": "Functional1.7.1 independentlyaccepted; AT04awaitsnewimmutablemanifest. All restorationhandles ended; onlymainobservers/supervisor remain.",
+    "phase": "Independentfunctional/immutablemanifest andsecurity/issues/media-templatecloseoutdone; rootcreatingnewstabletags",
     "activeOperations": [],
     "completedImageBuild": {
       "owner": "/root/deployment",
@@ -422,6 +418,38 @@
       "tagState": "created-and-remote-verified",
       "tagCommit": "180fa6871d56fa723a5388ee3ea0b128ef623b4b",
       "tagVerification": "artifacts/checkpoints/release-1.6/tags.json"
+    },
+    {
+      "productVersion": "1.7.0",
+      "prdVersion": "1.14",
+      "runtimeCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
+      "tag": "stable-v1.7.0",
+      "tagScope": "Full operational/evidence checkpoint including immutablemanifest/reviews",
+      "alias": "stable-runtime-v1.7.0-d98d3c4",
+      "aliasScope": "Exact runnable app build commit d98d3c4",
+      "manifest": "artifacts/releases/checkpoint-1.7.0.json",
+      "manifestState": "verified",
+      "backupEvidence": "deploy/verification/stable-backup-d98d3c4.json",
+      "recoveryEvidence": "deploy/verification/candidate-d98d3c4/restore-summary.json",
+      "rootRecoveryReview": "deploy/verification/candidate-d98d3c4/root-recovery-review/summary.json",
+      "independentFunctionalReview": "docs/product/REVIEW-037.md",
+      "tagState": "created-and-remote-verified",
+      "scope": "Verified1.7 functional/runtime/recovery checkpoint; newmanifest/tags pending; overallgoal finalmedia/time/delivery pending",
+      "previousVerifiedManifest": "artifacts/releases/checkpoint-1.6.0.json",
+      "manifestSha256": "146d33ee23f426cee4826c1e1f1d569bbad2614051c65efa2f99b865bb08e439",
+      "manifestSourceCommit": "91a23b8d2e620ca9e12d584cf7169627c7e01437",
+      "independentManifestReview": "docs/product/REVIEW-038.md",
+      "manifestVerification": {
+        "result": "PASS",
+        "manifest": "artifacts/releases/checkpoint-1.7.0.json",
+        "checkedHashes": 1731,
+        "remoteImageMatched": true,
+        "scope": "File integrity and optional deployed identity only; acceptance, restore and media verdicts remain independent",
+        "manifestSourceCommit": "91a23b8d2e620ca9e12d584cf7169627c7e01437",
+        "independentReview": "docs/product/REVIEW-038.md"
+      },
+      "tagCommit": "e5bd0566ca65648a3f495bc3ffb0fda448c813cf",
+      "tagVerification": "artifacts/checkpoints/release-1.7/tags.json"
     }
   ],
   "soak": {
@@ -448,7 +476,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T18:13:59.153966+00:00",
+  "updatedAt": "2026-09-21T18:17:34.481664+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",

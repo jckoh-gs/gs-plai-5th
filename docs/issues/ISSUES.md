@@ -13,7 +13,7 @@
 - ISSUE024: 관찰된 사건 복구·backup 제한 보완·실제 재시험 완료, **최초 stall 원인 미확정/잔여 자원 위험 추적 유지**. 새 성공 snapshot으로 원래 사건의 원인을 확정하거나 기존 .part를 성공으로 해석하지 않는다.
 - ISSUE025: **RESOLVED**. 운영 수정4b6009d, focused6 및 별도 전체312 PASS, client-only dry-run. 실제 재배포/rollback 검증을 새로 수행한 것은 아니다.
 
-- ISSUE026: **FIX_VERIFIED_LOCAL / 원격·복원 인수 대기 — NFR08 연동 client/quickstart 계약 불일치**. 순수 before fixture에서 status online true/false 출력 유실을 확인했고 독립 quickstart 환경 준비 누락 및 지원하지 않는 legacy 문구를 함께 관리한다. IDEA012 v1/제품1.7.1/PRD1.15 채택 및 로컬 수정 검증 완료. 실제 main은1.7이며 원격·복원은 미완료다. 아래 최초 기록과 후속 참조.
+- ISSUE026: **RESOLVED_FUNCTIONAL — NFR08 연동 client/quickstart 계약 불일치**. 순수 before fixture에서 status online true/false 출력 유실을 확인했고 독립 quickstart 환경 준비 누락 및 지원하지 않는 legacy 문구를 함께 관리한다. IDEA012 v1/제품1.7.1/PRD1.15 로컬·정확 이미지·실제 main·동일5ff 양버전 복원 및 REVIEW045/046 출처 인수 완료. 태그 원격 반영과 최종 미디어·시간은 별도다. 아래 최초 기록과 후속 참조.
 
 - ISSUE027: **RESOLVED_METADATA — 관측 원장 현재 프로세스 연결 불일치**. supplementaryObservation의 이전1.6 참조는 메인이 수정했고, 독립 검토에서 supervisorDiagnosticUpgrade의 이전 current/nextStep 참조를 추가 발견했다. 두 필드 모두 메인 수정 후 실제identity/activation 대조 완료. 실제 관측·카운터·첫1시간 guard는 변경하지 않았다.
 
@@ -572,7 +572,7 @@ ISSUE025 후속 검증 완료: 메인의 focused6시험은 기존 순수 rendere
 
 ## ISSUE-026 — NFR08 연동 client 및 quickstart 계약 불일치
 
-현재 상태 FIX_VERIFIED_LOCAL/원격·복원 인수 대기. 최초 상태는 OPEN/미수정이었다. P2 연동 관찰·재현성, legacy 문구는 P3 계약 정확성. 발견·before 근거는 `docs/operations/NFR08-CONTRACT-REVIEW-20260922.md` 및 `NFR08-CONTRACT-FIXTURES-20260922.json`(reviewedHead f9147d1). 본 이슈 검토자는 두 파일을 읽어 대조했으며 연결·MQTT 발행·RTU 생성·추가시험을 수행하지 않았다. 담당 메인/transport, 제품 REVIEW040 최소수정 검토 중이다.
+현재 상태 RESOLVED_FUNCTIONAL/1.7.1 기능·배포·복원·불변 checkpoint 검증 완료. 최초 상태는 OPEN/미수정이었고 로컬 검증 후 원격 인수를 순차 수행했다. P2 연동 관찰·재현성, legacy 문구는 P3 계약 정확성. 발견·before 근거는 `docs/operations/NFR08-CONTRACT-REVIEW-20260922.md` 및 `NFR08-CONTRACT-FIXTURES-20260922.json`(reviewedHead f9147d1). 본 이슈 검토자는 두 파일을 읽어 대조했으며 연결·MQTT 발행·RTU 생성·추가시험을 수행하지 않았다. 담당 메인/transport, 제품 REVIEW040 최소수정 검토 중이다.
 
 - **026-A / status 관측 유실(P2)**: 서버 retained/LWT status의 online true와 false를 순수 parser에 입력했지만 monitorPrintedObject가 동일하며 online 필드가 없다. client-message.js의 축약 반환값을 vpp-client가 그대로 출력하여 공급 client로 online/offline을 구분할 수 없는 실제 before fixture다. 제안은 엄격 boolean online만 보존하고 그 외는 null로 표시하는 최소수정이며 command-status 의미 변경이나 PUBACK를 완료로 간주하는 변경이 아니다.
 - **026-B / standalone quickstart 환경 누락(P2)**: protocol의 npm install→broker→build→start 블록이 .env 준비 없이 실행된다. Compose는 loopback18883을 노출하지만 bare config의 broker 기본값은1883(UI3001)이다. .env.example은 UI3101/broker18883이다. 따라서 해당 블록만 따라 실행하면 기대 broker로 연결되지 않거나 다른1883 broker에 연결될 수 있다. 이 경계는 소스/config 순수 대조로 확인했으며 실제 잘못된 broker 연결을 일으켜 재현하지 않았다. 수정안은 기존 .env를 덮어쓰지 않는 준비 단계와 포트 구분이다.
@@ -623,3 +623,14 @@ P2 관측 증거 완성도, 현재 상태 RESOLVED_PREPARATION/준비 경로·�
 ISSUE028 후속 수정 검토: 새 script SHA919d6b64231fb76462ba1c4e2cfe8b93cd7e448462d54150daa621393208db41의 primary 소스 SHA/디렉터리 및 audit 실제시작 소스 SHA 검사가 모든 kubectl과 out.mkdir 이전임을 독립 소스 읽기로 확인했다. primary2파일은 현재시각17:42:21에 보존한 바이트를 git show 정확d98과 직접 비교했고 audit2파일은 실제observerSources의 시작 보존 SHA와 대조했다. 모두 일치한다. primary provenance는 시작시점 capture/메모리코드 증명이 아님을 명시한다.
 
 메인의 corrected-premature-guard.json은 premature exit1/remote·output 미도달/AST PASS를 기록한다. 독립 검토는 capture를 실행하지 않고 AST·바이트·경로 검증만 수행했으며 그 시각 output디렉터리 부재를 확인했다. `evidence/issue028-after.json`에4소스와새script SHA를 보존한다. 원래 guard·마감·관측프로세스·카운터를 변경하지 않은 좁은 준비 결함 수정으로 종결하며 실제 첫1시간 checkpoint 성공은 후속별도증거다.
+
+
+### ISSUE026 종결 — 1.7.1 기능 및 출처 인수 완료
+
+REVIEW045의 실제 동일5ff 복원26보고서+2Pod identity와 root-recovery-review/summary.json(18:12:44.964Z), REVIEW046 및 실제 verifier 로그를 읽어 대조했다. runtime40b9ed898f32037e7a87259d12d145457575a4a8/image234ec56의 실제 main·공급monitor online 구분/guide 계약, 계획 outbox 교체 후 영속본문·재수신·정상화 및 현재1.7.1/이전1.7 복원을 결합해 ISSUE026의 수정 범위를 기능적으로 종결한다. 실제 main을 의도적으로 끊어 LWT를 시험한 것은 아니며 실제 LWT 경계는 격리 broker/local·exactimage 근거다.
+
+선택 snapshot1075081216바이트/SHA5ff34f3e5dbc52f07b899f0c8013db130e5fd13c3d315e92aa512d474ea1f782의 양 fresh init SHA·기존5단지 canonical/run/generator/dataset/시나리오를 fixture 전 비교했다. 양버전 브라우저8종/form44/receipt14/실제MQTT와 cleanup을 확인했고 root가 양rig0/Pod0/4BoundPVC/3105·18885종료 및 main원래설정 유지까지 대조했다. receipt baseline은 성공등록응답 projection의 독립 비교이며 HTTP201assert를 갖는 form과 구분한다.
+
+새 artifacts/releases/checkpoint-1.7.1.json SHA0c9e5bec0a0ef506884b70374aae791e2cb2e38321dcdcd841c10a02c6962ebf, 운영근거 sourceb6c3cbc5742b095bedb32b5f4dea598e685412f5의 독립 --at-commit --remote 결과는2033해시PASS/Ready이미지일치다. REVIEW046이 실제전체backup SHA도 대조했다. 이는 앞의 기능복원 인수와 별개인 출처 게이트이며 숫자를 시험개수에 합산하지 않는다. 태그 생성·원격 전달은 이 기록 시점 메인의 후속 작업으로 남기고 완료를 추정하지 않는다.
+
+최초3101점유 거절·macOS cp-n 실패와 모든 이전 실패/부분snapshot은 보존한다. ISSUE024 최초원인 미확정·자원 위험, 보안 원장의 OS CVE, 실제 외부 KMA/AWS/VPP·노드HA·오디오청취·원래 최종 미디어/시간 게이트는 이 이슈 종결과 무관하게 남는다. 독립검토 receipt는 evidence/issue026-closeout-1.7.1.json이며 runtime·acceptance·run/resume는 수정하지 않았다.
