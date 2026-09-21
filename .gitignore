@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+certs/
+data/
+*.sqlite*
+.DS_Store
+artifacts/private/
+artifacts/video/*.mp4
+artifacts/video/raw/
+artifacts/checkpoints/*.sqlite*

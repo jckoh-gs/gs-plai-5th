@@ -1,0 +1,23 @@
+{
+  "runId": "grid-new-20260921T080733Z",
+  "startedAt": "2026-09-21T08:07:33.079009+00:00",
+  "freezeAt": "2026-09-21T21:37:33.079009+00:00",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "timezone": "Asia/Seoul",
+  "phase": "implementation",
+  "scope": "greenfield; mandatory k3s deployment",
+  "context": "charles-k3s",
+  "namespace": "gs-plai-5h",
+  "baselineCommit": null,
+  "baselineDatabase": null,
+  "documents": {
+    "docs/PRD-VPP-SCADA-RTU.md": "0429886cc483847fbc7c78321a5c188e126a3eb99d4f8e58df863eace5f40df5",
+    "docs/GOAL-VPP-AUTONOMOUS.md": "f391e5fab594f02cb4953c52055cf4b01f3817343144a9d89df8b64fe8fd11f2"
+  },
+  "roles": {},
+  "checks": {},
+  "notes": [
+    "Existing sibling implementation must not be copied or reused.",
+    "Old fixed OPS-01 dates are cancelled; this run is authoritative."
+  ]
+}
