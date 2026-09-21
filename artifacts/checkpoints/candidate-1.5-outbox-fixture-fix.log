@@ -1,0 +1,14 @@
+✔ expired actual outbox CLI launches no kubectl (44.014791ms)
+✔ actual outbox CLI hung discovery ends at original deadline without sensitive child output (3018.324458ms)
+✔ non-loopback override is rejected before any token-bearing HTTP or kubectl (57.677958ms)
+✔ actual MQTT connection block owns and closes client when connection arrives after budget (55.601833ms)
+✔ actual recovery port configuration preserves defaults and rejects conflicting or invalid ports (2.908ms)
+✔ actual observer callback ignores malformed and unrelated JSON and preserves exact matching body (0.590792ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3219.706875

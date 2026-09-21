@@ -12,6 +12,10 @@
 - 선택 백업: [stable-backup-fdd0491.json](../../deploy/verification/stable-backup-fdd0491.json), 594944000바이트, SHA256 `be09a5f5e1721970ec7f25197fcf4f3db504f6f6ad4765080ba301a0c7fd760a`. [정확한 1.4 및 하위 1.3 복원](../../deploy/verification/candidate-fdd0491/restore-summary.json) 17개 근거와 main 7개 근거를 REVIEW-021에서 확인했다.
 - 배포·명령·outbox 재시작·현재/하위 버전 복원·매니페스트 검증은 완료했다. 재접속 자체를 이유로 반복하지 않는다. 이전 1.0~1.3 체크포인트와 백업도 보존한다.
 
+## 진행 중인 1.5 후보
+
+PRD1.12/IDEA009의 명령 접수 확인 UI는 로컬 전체263검사·build·실제broker 통합/고급·신규receipt14기록·기존form44검사·브라우저4종 PASS다. [로컬 집계](../../artifacts/checkpoints/candidate-1.5-local-summary.json)와 [독립 인수](../product/REVIEW-025.md)를 확인한다. 정확한 소스 커밋 이미지/보안 검토가 다음 단계이며, 원격 배포·동일 백업·현재/하위 복원 전에는 stable1.4를 유지한다. 로컬fixture3109/handle84859는 기존 증거 확인 후 재사용하며 무조건 새로 기동하지 않는다.
+
 ## 고정 일정
 
 [run.json](run.json)의 원래 시각이 기준이다. 시간 연장은 없다.

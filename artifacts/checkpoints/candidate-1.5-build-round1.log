@@ -1,0 +1,19 @@
+
+> grid-vpp-emulator@1.5.0 build
+> vite build
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 2141 modules transformed.
+rendering chunks...
+computing gzip size...
+../dist/index.html                   0.41 kB │ gzip:   0.30 kB
+../dist/assets/index-DEfqZjZ9.css   19.89 kB │ gzip:   5.18 kB
+../dist/assets/index-CyjJuK5n.js   265.84 kB │ gzip:  84.89 kB
+../dist/assets/Scene-O1jrxZbj.js   885.86 kB │ gzip: 238.71 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.72s

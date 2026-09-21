@@ -1,0 +1,12 @@
+{
+  "reviewedAt": "2026-09-21T14:20:22.055932+00:00",
+  "sourceSha256": {
+    "web/command-receipts.js": "576b56a4799aef06ec70ff3b0db124744bd4d4d865cbdc08801a5c6262665122",
+    "web/src.jsx": "e4fa5c0a31fcc534f9ab04d6e73d08054dd0a313d1a6c08565f08943a31c111c",
+    "tests/command-receipts.test.js": "0d952f2068d472e636d7b420b1e318bf78418a0ffba23d5e2c4baad5500d6d3a",
+    "tests/security-command-receipts.test.js": "b553e8bd52742366caf557431f4fb81f5a665800b0f35fd82b6edec7fa1f6650"
+  },
+  "tests": 11,
+  "pass": 11,
+  "scope": "Isolated helper tests and source review only; no candidate browser, image or remote mutation"
+}

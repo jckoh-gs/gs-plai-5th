@@ -1,0 +1,11 @@
+{
+  "cleanup.json": "4662be8af475401001205c3cb72b32021ada2129d9db2c3bac0a8bfe418b1a9b",
+  "history-narrow.png": "2b4acbaa3a6e9e33f7d205d08aab87d56862b9ac959eb5cbe324ee2030b8e4ca",
+  "owned-baselines.json": "08a15b4157472d25a52dba279b109a18ee781405a71f0643cafeeb6a0ab12e34",
+  "real-statuses.png": "94d4067a40029b202c00f3e8f21e7b155d74a65b43e5285b4511cd3ab63f1ad1",
+  "result.json": "da8db41c0bcc2b7cf935091feb808e7880ef09a43b1b15bbfc3073886207ac07",
+  "source/browser-command-receipts.cjs": "08dd15bdb98db6072bdae64e59cc166cdb1f43715797304242337105708a4ace",
+  "source/command-form.js": "ba71bfda52cb154ab15765f5ebc99f8cab8e3ae80aed3d90543e5228e4d3b67e",
+  "source/command-receipts.js": "576b56a4799aef06ec70ff3b0db124744bd4d4d865cbdc08801a5c6262665122",
+  "source/src.jsx": "e4fa5c0a31fcc534f9ab04d6e73d08054dd0a313d1a6c08565f08943a31c111c"
+}

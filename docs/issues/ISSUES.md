@@ -431,3 +431,17 @@ REVIEW022 최종 통합 후속: 실제로 시간대가 다른 서버의 createdA
 ## ISSUE-022 — REST 명령 응답과 전송 확인의 혼동
 
 상태: REPRODUCED / FIX_PENDING (IDEA009, PRD1.12/제품1.5.0 후보). 위 command-receipt-before A/B/C는 각각 HTTP200 명령 거절의 성공알림, 명령 접수와 후속 상태조회 실패의 혼동, 응답 대기 중 다른UUID 반복제출을 보여준다. 수정 전 실제1.4 증거를 보존하며 서버 검증이나 같은ID 멱등성의 실패라고 확대하지 않는다. 실제 수정·독립 인수·원격 배포/복원 후에만 해결로 바꾼다.
+
+
+### IDEA009 후보1.5 독립 실제브라우저 round1
+
+local3109/version1.5와 승인webSHA e4fa5c0a… 확인 후 served /assets/index-CyjJuK5n.js 바이트SHA b6c12889…=dist 및 실제브라우저 로드경로를 검증했다. artifacts/checkpoints/command-receipts-1.5-browser-round1/result.json에14개기록/38실제UI POST와commandId를보존했다.
+
+실제accepted/expired/rejected, accepted후state503의기존접수보존, 저장후POST응답유실의원래ID읽기확인, 서버미도달POST·notfound·GET실패의미확정유지, pending Enter/tab/A→B→A 단일요청과B허용, 모든Dashboard/개별발전기action, 늦은GET이최신receipt를덮어쓰지않음, 실제15초대기(15045ms), 응답ID/상태오염의미확정, 최근20개/이전미확정/좁은레이아웃/새로고침후메모리만초기화를확인했다. 네트워크응답차단·503·오염은브라우저합성fixture이며실제서버장애라고주장하지않는다. 실제15초elapsed검증은POST경계이고모든GETtimeout의별도실시간측정은아니다.
+
+pageErrors=[]; 고유A/B만생성했고끝에fault/on/limit/targetLimit을생성baseline으로정리했다. 기존RTU설정불변=true. pendinghold는해제하고브라우저종료후정리했으며main3104/배포/PRD/source변경없음. 원본beforeproof는불변. 당시실행script/web/helper/form소스복사와sha256,두스크린샷,cleanup을같은폴더에보존했다. 후보browser검증이며MQTT/k3s/백업/최종media전체수락은별도게이트다.
+
+
+### IDEA009 로컬 전체 검증 및 outbox 시험 fixture 수정
+
+전체 단위검사 round1은262개 중261통과/1실패였다. 이전 운영도구의 포트설정이 VM에서 process.env를 참조하지만 해당 fake환경에 process가 없었던 시험 fixture 문제다. 실제 앱 실패로 확대하지 않으며 원본 실패 로그를 보존했다. fakeenv/assert와 실제연결URL 확인을 추가하고 기본/명시/충돌/잘못된 포트 검사를 보강했다. 선택6개 및 전체 round2 263/263 PASS, build/실제로컬broker 통합·고급 PASS, 기존브라우저4종과 신규receipt14기록/기존form44검사 PASS다. 중복선택시험을 더해 세지 않는다. artifacts/checkpoints/candidate-1.5-local-summary.json 및 REVIEW025에 연결하며 ISSUE022는 정확이미지·원격·복원 게이트가 남아 FIX_PENDING을 유지한다.

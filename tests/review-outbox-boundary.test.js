@@ -20,9 +20,19 @@ test('actual MQTT connection block owns and closes client when connection arrive
  assert(connect.includes("client.once('connect'"));
  const client=new EventEmitter();let closed=0,late=false;
  client.end=force=>{assert.equal(force,true);closed++;};
- const context={setTimeout,clearTimeout,Error,Promise,remaining:()=>10,readFileSync:()=>({trim:()=>''}),mqtt:{connect(){setTimeout(()=>{late=true;client.emit('connect')},30);return client}}};
+ const context={setTimeout,clearTimeout,Error,Promise,assert,process:{env:{OUTBOX_RECOVERY_API_PORT:'3108',OUTBOX_RECOVERY_MQTT_PORT:'18888'}},remaining:()=>10,readFileSync:()=>({trim:()=>''}),mqtt:{connect(url){assert.equal(url,'mqtt://127.0.0.1:18888');setTimeout(()=>{late=true;client.emit('connect')},30);return client}}};
  await vm.runInNewContext(`(async()=>{let client;${bounded}try{${connect}}finally{if(client)client.end(true);}})()`,context).then(()=>assert.fail('must expire'),e=>assert.match(e.message,/timed out/));
  assert.equal(closed,1);await new Promise(r=>setTimeout(r,40));assert(late);assert.equal(closed,1);
+});
+
+test('actual recovery port configuration preserves defaults and rejects conflicting or invalid ports',async()=>{
+ const {readFileSync}=await import('node:fs'),vm=await import('node:vm');
+ const source=readFileSync(script,'utf8'),ports=source.slice(source.indexOf('const recoveryApiPort='),source.indexOf('\nlet base='));
+ assert(ports.includes('Recovery ports must be distinct'));
+ const evaluate=env=>vm.runInNewContext(`${ports};[recoveryApiPort,recoveryMqttPort]`,{assert,process:{env}});
+ assert.deepEqual([...evaluate({})],[3107,18887]);
+ assert.deepEqual([...evaluate({OUTBOX_RECOVERY_API_PORT:'3108',OUTBOX_RECOVERY_MQTT_PORT:'18888'})],[3108,18888]);
+ for(const env of [{OUTBOX_RECOVERY_API_PORT:'18887'},{OUTBOX_RECOVERY_API_PORT:'0'},{OUTBOX_RECOVERY_MQTT_PORT:'65536'},{OUTBOX_RECOVERY_API_PORT:'3.5'},{OUTBOX_RECOVERY_MQTT_PORT:'not-a-port'}])assert.throws(()=>evaluate(env),/distinct integers/);
 });
 
 test('actual observer callback ignores malformed and unrelated JSON and preserves exact matching body',async()=>{

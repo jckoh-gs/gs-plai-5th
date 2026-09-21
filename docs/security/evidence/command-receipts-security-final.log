@@ -1,0 +1,19 @@
+✔ observation requires exact original command identity, action, REST and known status (0.522916ms)
+✔ synchronous perRTU POST guard survives callers and releases before following state GET (2.136208ms)
+✔ confirmed POST survives state failure; failed POST stays unconfirmed without retry (0.195375ms)
+✔ explicit recheck is single in-flight, preserves confirmed on missing/error and rejects regression (0.167209ms)
+✔ lost response resolves only by matching stored ID, never another row; last20 preserves uncertainty (0.284417ms)
+✔ late recheck does not resurrect evicted receipt or overwrite anotherRTU (0.976334ms)
+✔ late state refresh cannot replace a newer refresh and cannot erase rechecked status (0.611166ms)
+✔ 15s production request boundary includes stalled response body, HTTP ignores body,401auth preserved (17.298ms)
+✔ command transport explicitly refuses redirect replay and never reads error bodies (0.439917ms)
+✔ receipt reason redacts credential URLs even with embedded controls and known normalized secrets (0.220125ms)
+✔ unknown response and HTTP failure retain original identity without an automatic POST retry (0.823459ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 51.740417

@@ -6372,58 +6372,322 @@
     {
       "id": "FR-COMMAND-RECEIPT-01",
       "description": "REST 명령 접수 결과·응답 유실 및 읽기 확인",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "IDEA009 adopted; implementation and direct acceptance evidence pending. Beforeproof demonstrates prior issue, not completion."
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/result.json",
+          "sha256": "da8db41c0bcc2b7cf935091feb808e7880ef09a43b1b15bbfc3073886207ac07"
+        },
+        {
+          "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/cleanup.json",
+          "sha256": "4662be8af475401001205c3cb72b32021ada2129d9db2c3bac0a8bfe418b1a9b"
+        },
+        {
+          "path": "artifacts/checkpoints/command-form-1.5-browser-round1/result.json",
+          "sha256": "204828d225837cdc5d7bc7d57b1d579506d1d0f7d3fd5cfe4ab19561ae8c504c"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-browser-regression/summary.json",
+          "sha256": "228e7238a9382c2d63e120d150f490c1c646dde401d1dc2511e7914520b5120e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-unit-round2.log",
+          "sha256": "b0776b2836dff061e5842c2a9e61c50cb650f0fb1ee50266d0617c26e4d5c778"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-integration-round1.log",
+          "sha256": "e72df64fcfafee18ae588fc8bacc4a673efa034313581dc715e54a447ef43221"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-advanced-round1.log",
+          "sha256": "8220dde8f10ecafa48cfdea128f8e576ed4de0657ce0c0c40a1aaa01b99c7181"
+        },
+        {
+          "path": "docs/product/REVIEW-025.md",
+          "sha256": "16f75c5bf2997bebbee4c9d109d09b9582f31fb2caa968f18ee6bdeabee26712"
+        }
+      ],
+      "assessment": "REVIEW025: Local1.5 served bundle/source matched;14 receipt cases with38 observed POST attempts (including synthetic undelivered),44 form checks/5POST+actualbroker phases,4 completed browser regressions and263 unique unit tests PASS. Existing RTU settings preserved; memory history20/reload/late-response attribution verified. POST actual15045ms; GET timeout shared helper injected-unit boundary only. Exact candidate k3s/image, immutable backup and current/backward restore/stable evidence remain pending; no remote or whole-goal completion claim."
     },
     {
       "id": "UI-12",
       "description": "RTU별 이 탭의 최근20개 명령 전송 확인",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "IDEA009 adopted; implementation and direct acceptance evidence pending. Beforeproof demonstrates prior issue, not completion."
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/result.json",
+          "sha256": "da8db41c0bcc2b7cf935091feb808e7880ef09a43b1b15bbfc3073886207ac07"
+        },
+        {
+          "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/cleanup.json",
+          "sha256": "4662be8af475401001205c3cb72b32021ada2129d9db2c3bac0a8bfe418b1a9b"
+        },
+        {
+          "path": "artifacts/checkpoints/command-form-1.5-browser-round1/result.json",
+          "sha256": "204828d225837cdc5d7bc7d57b1d579506d1d0f7d3fd5cfe4ab19561ae8c504c"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-browser-regression/summary.json",
+          "sha256": "228e7238a9382c2d63e120d150f490c1c646dde401d1dc2511e7914520b5120e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-unit-round2.log",
+          "sha256": "b0776b2836dff061e5842c2a9e61c50cb650f0fb1ee50266d0617c26e4d5c778"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-integration-round1.log",
+          "sha256": "e72df64fcfafee18ae588fc8bacc4a673efa034313581dc715e54a447ef43221"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-advanced-round1.log",
+          "sha256": "8220dde8f10ecafa48cfdea128f8e576ed4de0657ce0c0c40a1aaa01b99c7181"
+        },
+        {
+          "path": "docs/product/REVIEW-025.md",
+          "sha256": "16f75c5bf2997bebbee4c9d109d09b9582f31fb2caa968f18ee6bdeabee26712"
+        }
+      ],
+      "assessment": "REVIEW025: Local1.5 served bundle/source matched;14 receipt cases with38 observed POST attempts (including synthetic undelivered),44 form checks/5POST+actualbroker phases,4 completed browser regressions and263 unique unit tests PASS. Existing RTU settings preserved; memory history20/reload/late-response attribution verified. POST actual15045ms; GET timeout shared helper injected-unit boundary only. Local acceptance only; remote release/recovery and final media/time gates remain separate."
     },
     {
       "id": "AT-COMMAND-RECEIPT-01-01",
       "description": "실제 접수/거절/만료 상태와 ID 귀속",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "IDEA009 adopted; implementation and direct acceptance evidence pending. Beforeproof demonstrates prior issue, not completion."
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/result.json",
+          "sha256": "da8db41c0bcc2b7cf935091feb808e7880ef09a43b1b15bbfc3073886207ac07"
+        },
+        {
+          "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/cleanup.json",
+          "sha256": "4662be8af475401001205c3cb72b32021ada2129d9db2c3bac0a8bfe418b1a9b"
+        },
+        {
+          "path": "artifacts/checkpoints/command-form-1.5-browser-round1/result.json",
+          "sha256": "204828d225837cdc5d7bc7d57b1d579506d1d0f7d3fd5cfe4ab19561ae8c504c"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-browser-regression/summary.json",
+          "sha256": "228e7238a9382c2d63e120d150f490c1c646dde401d1dc2511e7914520b5120e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-unit-round2.log",
+          "sha256": "b0776b2836dff061e5842c2a9e61c50cb650f0fb1ee50266d0617c26e4d5c778"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-integration-round1.log",
+          "sha256": "e72df64fcfafee18ae588fc8bacc4a673efa034313581dc715e54a447ef43221"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-advanced-round1.log",
+          "sha256": "8220dde8f10ecafa48cfdea128f8e576ed4de0657ce0c0c40a1aaa01b99c7181"
+        },
+        {
+          "path": "docs/product/REVIEW-025.md",
+          "sha256": "16f75c5bf2997bebbee4c9d109d09b9582f31fb2caa968f18ee6bdeabee26712"
+        }
+      ],
+      "assessment": "REVIEW025: Local1.5 served bundle/source matched;14 receipt cases with38 observed POST attempts (including synthetic undelivered),44 form checks/5POST+actualbroker phases,4 completed browser regressions and263 unique unit tests PASS. Existing RTU settings preserved; memory history20/reload/late-response attribution verified. POST actual15045ms; GET timeout shared helper injected-unit boundary only. Local acceptance only; remote release/recovery and final media/time gates remain separate."
     },
     {
       "id": "AT-COMMAND-RECEIPT-01-02",
       "description": "POST 확정과 화면 갱신 실패 분리",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "IDEA009 adopted; implementation and direct acceptance evidence pending. Beforeproof demonstrates prior issue, not completion."
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/result.json",
+          "sha256": "da8db41c0bcc2b7cf935091feb808e7880ef09a43b1b15bbfc3073886207ac07"
+        },
+        {
+          "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/cleanup.json",
+          "sha256": "4662be8af475401001205c3cb72b32021ada2129d9db2c3bac0a8bfe418b1a9b"
+        },
+        {
+          "path": "artifacts/checkpoints/command-form-1.5-browser-round1/result.json",
+          "sha256": "204828d225837cdc5d7bc7d57b1d579506d1d0f7d3fd5cfe4ab19561ae8c504c"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-browser-regression/summary.json",
+          "sha256": "228e7238a9382c2d63e120d150f490c1c646dde401d1dc2511e7914520b5120e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-unit-round2.log",
+          "sha256": "b0776b2836dff061e5842c2a9e61c50cb650f0fb1ee50266d0617c26e4d5c778"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-integration-round1.log",
+          "sha256": "e72df64fcfafee18ae588fc8bacc4a673efa034313581dc715e54a447ef43221"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-advanced-round1.log",
+          "sha256": "8220dde8f10ecafa48cfdea128f8e576ed4de0657ce0c0c40a1aaa01b99c7181"
+        },
+        {
+          "path": "docs/product/REVIEW-025.md",
+          "sha256": "16f75c5bf2997bebbee4c9d109d09b9582f31fb2caa968f18ee6bdeabee26712"
+        }
+      ],
+      "assessment": "REVIEW025: Local1.5 served bundle/source matched;14 receipt cases with38 observed POST attempts (including synthetic undelivered),44 form checks/5POST+actualbroker phases,4 completed browser regressions and263 unique unit tests PASS. Existing RTU settings preserved; memory history20/reload/late-response attribution verified. POST actual15045ms; GET timeout shared helper injected-unit boundary only. Local acceptance only; remote release/recovery and final media/time gates remain separate."
     },
     {
       "id": "AT-COMMAND-RECEIPT-01-03",
       "description": "응답 유실·미도달·읽기 확인·15초 경계",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "IDEA009 adopted; implementation and direct acceptance evidence pending. Beforeproof demonstrates prior issue, not completion."
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/result.json",
+          "sha256": "da8db41c0bcc2b7cf935091feb808e7880ef09a43b1b15bbfc3073886207ac07"
+        },
+        {
+          "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/cleanup.json",
+          "sha256": "4662be8af475401001205c3cb72b32021ada2129d9db2c3bac0a8bfe418b1a9b"
+        },
+        {
+          "path": "artifacts/checkpoints/command-form-1.5-browser-round1/result.json",
+          "sha256": "204828d225837cdc5d7bc7d57b1d579506d1d0f7d3fd5cfe4ab19561ae8c504c"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-browser-regression/summary.json",
+          "sha256": "228e7238a9382c2d63e120d150f490c1c646dde401d1dc2511e7914520b5120e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-unit-round2.log",
+          "sha256": "b0776b2836dff061e5842c2a9e61c50cb650f0fb1ee50266d0617c26e4d5c778"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-integration-round1.log",
+          "sha256": "e72df64fcfafee18ae588fc8bacc4a673efa034313581dc715e54a447ef43221"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-advanced-round1.log",
+          "sha256": "8220dde8f10ecafa48cfdea128f8e576ed4de0657ce0c0c40a1aaa01b99c7181"
+        },
+        {
+          "path": "docs/product/REVIEW-025.md",
+          "sha256": "16f75c5bf2997bebbee4c9d109d09b9582f31fb2caa968f18ee6bdeabee26712"
+        }
+      ],
+      "assessment": "REVIEW025: Local1.5 served bundle/source matched;14 receipt cases with38 observed POST attempts (including synthetic undelivered),44 form checks/5POST+actualbroker phases,4 completed browser regressions and263 unique unit tests PASS. Existing RTU settings preserved; memory history20/reload/late-response attribution verified. POST actual15045ms; GET timeout shared helper injected-unit boundary only. Local acceptance only; remote release/recovery and final media/time gates remain separate."
     },
     {
       "id": "AT-COMMAND-RECEIPT-01-04",
       "description": "중복 제출과 RTU/탭 전환 경합",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "IDEA009 adopted; implementation and direct acceptance evidence pending. Beforeproof demonstrates prior issue, not completion."
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/result.json",
+          "sha256": "da8db41c0bcc2b7cf935091feb808e7880ef09a43b1b15bbfc3073886207ac07"
+        },
+        {
+          "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/cleanup.json",
+          "sha256": "4662be8af475401001205c3cb72b32021ada2129d9db2c3bac0a8bfe418b1a9b"
+        },
+        {
+          "path": "artifacts/checkpoints/command-form-1.5-browser-round1/result.json",
+          "sha256": "204828d225837cdc5d7bc7d57b1d579506d1d0f7d3fd5cfe4ab19561ae8c504c"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-browser-regression/summary.json",
+          "sha256": "228e7238a9382c2d63e120d150f490c1c646dde401d1dc2511e7914520b5120e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-unit-round2.log",
+          "sha256": "b0776b2836dff061e5842c2a9e61c50cb650f0fb1ee50266d0617c26e4d5c778"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-integration-round1.log",
+          "sha256": "e72df64fcfafee18ae588fc8bacc4a673efa034313581dc715e54a447ef43221"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-advanced-round1.log",
+          "sha256": "8220dde8f10ecafa48cfdea128f8e576ed4de0657ce0c0c40a1aaa01b99c7181"
+        },
+        {
+          "path": "docs/product/REVIEW-025.md",
+          "sha256": "16f75c5bf2997bebbee4c9d109d09b9582f31fb2caa968f18ee6bdeabee26712"
+        }
+      ],
+      "assessment": "REVIEW025: Local1.5 served bundle/source matched;14 receipt cases with38 observed POST attempts (including synthetic undelivered),44 form checks/5POST+actualbroker phases,4 completed browser regressions and263 unique unit tests PASS. Existing RTU settings preserved; memory history20/reload/late-response attribution verified. POST actual15045ms; GET timeout shared helper injected-unit boundary only. Local acceptance only; remote release/recovery and final media/time gates remain separate."
     },
     {
       "id": "AT-COMMAND-RECEIPT-01-05",
       "description": "모든 REST 제어·기존 의미·접근성·보존 범위",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "IDEA009 adopted; implementation and direct acceptance evidence pending. Beforeproof demonstrates prior issue, not completion."
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/result.json",
+          "sha256": "da8db41c0bcc2b7cf935091feb808e7880ef09a43b1b15bbfc3073886207ac07"
+        },
+        {
+          "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/cleanup.json",
+          "sha256": "4662be8af475401001205c3cb72b32021ada2129d9db2c3bac0a8bfe418b1a9b"
+        },
+        {
+          "path": "artifacts/checkpoints/command-form-1.5-browser-round1/result.json",
+          "sha256": "204828d225837cdc5d7bc7d57b1d579506d1d0f7d3fd5cfe4ab19561ae8c504c"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-browser-regression/summary.json",
+          "sha256": "228e7238a9382c2d63e120d150f490c1c646dde401d1dc2511e7914520b5120e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-unit-round2.log",
+          "sha256": "b0776b2836dff061e5842c2a9e61c50cb650f0fb1ee50266d0617c26e4d5c778"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-integration-round1.log",
+          "sha256": "e72df64fcfafee18ae588fc8bacc4a673efa034313581dc715e54a447ef43221"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-advanced-round1.log",
+          "sha256": "8220dde8f10ecafa48cfdea128f8e576ed4de0657ce0c0c40a1aaa01b99c7181"
+        },
+        {
+          "path": "docs/product/REVIEW-025.md",
+          "sha256": "16f75c5bf2997bebbee4c9d109d09b9582f31fb2caa968f18ee6bdeabee26712"
+        }
+      ],
+      "assessment": "REVIEW025: Local1.5 served bundle/source matched;14 receipt cases with38 observed POST attempts (including synthetic undelivered),44 form checks/5POST+actualbroker phases,4 completed browser regressions and263 unique unit tests PASS. Existing RTU settings preserved; memory history20/reload/late-response attribution verified. POST actual15045ms; GET timeout shared helper injected-unit boundary only. Local acceptance only; remote release/recovery and final media/time gates remain separate."
     },
     {
       "id": "AT-COMMAND-RECEIPT-01-06",
       "description": "실제 후보 k3s·MQTT·회귀·백업/복원",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "IDEA009 adopted; implementation and direct acceptance evidence pending. Beforeproof demonstrates prior issue, not completion."
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/result.json",
+          "sha256": "da8db41c0bcc2b7cf935091feb808e7880ef09a43b1b15bbfc3073886207ac07"
+        },
+        {
+          "path": "artifacts/checkpoints/command-receipts-1.5-browser-round1/cleanup.json",
+          "sha256": "4662be8af475401001205c3cb72b32021ada2129d9db2c3bac0a8bfe418b1a9b"
+        },
+        {
+          "path": "artifacts/checkpoints/command-form-1.5-browser-round1/result.json",
+          "sha256": "204828d225837cdc5d7bc7d57b1d579506d1d0f7d3fd5cfe4ab19561ae8c504c"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-browser-regression/summary.json",
+          "sha256": "228e7238a9382c2d63e120d150f490c1c646dde401d1dc2511e7914520b5120e"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-unit-round2.log",
+          "sha256": "b0776b2836dff061e5842c2a9e61c50cb650f0fb1ee50266d0617c26e4d5c778"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-integration-round1.log",
+          "sha256": "e72df64fcfafee18ae588fc8bacc4a673efa034313581dc715e54a447ef43221"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.5-advanced-round1.log",
+          "sha256": "8220dde8f10ecafa48cfdea128f8e576ed4de0657ce0c0c40a1aaa01b99c7181"
+        },
+        {
+          "path": "docs/product/REVIEW-025.md",
+          "sha256": "16f75c5bf2997bebbee4c9d109d09b9582f31fb2caa968f18ee6bdeabee26712"
+        }
+      ],
+      "assessment": "REVIEW025: Local1.5 served bundle/source matched;14 receipt cases with38 observed POST attempts (including synthetic undelivered),44 form checks/5POST+actualbroker phases,4 completed browser regressions and263 unique unit tests PASS. Existing RTU settings preserved; memory history20/reload/late-response attribution verified. POST actual15045ms; GET timeout shared helper injected-unit boundary only. Exact candidate k3s/image, immutable backup and current/backward restore/stable evidence remain pending; no remote or whole-goal completion claim."
     }
   ],
   "reviewedSource": {

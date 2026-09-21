@@ -125,10 +125,12 @@
     "idea": "IDEA-009",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T14:14:28.603123+00:00",
-    "status": "Adopted; implementation/local acceptance pending; remote1.4 unchanged",
+    "status": "Local implementation,263 unit tests/build/integration/advanced and independent UI/security/product acceptance PASS; exact image and remote/recovery gates pending; main1.4 unchanged",
     "fallbackTag": "stable-v1.4.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.4.0.json",
-    "beforeEvidence": "artifacts/checkpoints/command-receipt-before/round2/result.json"
+    "beforeEvidence": "artifacts/checkpoints/command-receipt-before/round2/result.json",
+    "localAcceptance": "artifacts/checkpoints/candidate-1.5-local-summary.json",
+    "buildOwner": "/root/deployment"
   },
   "previousStableCheckpoints": [
     {
@@ -220,7 +222,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T14:14:28.603123+00:00",
+  "updatedAt": "2026-09-21T14:28:16.373466+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
