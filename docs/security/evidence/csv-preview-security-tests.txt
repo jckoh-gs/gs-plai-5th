@@ -1,0 +1,35 @@
+✔ parser diagnostics never echo malformed CSV field contents (2.48075ms)
+✔ prototype names remain unknown columns and never enter normalized DTOs (1.861125ms)
+✔ 100000 rows are accepted; excessive rows abort before parsing trailing malformed input (323.504875ms)
+✔ HTTP preview returns bounded diagnostics and authenticates before malformed input (59.957125ms)
+✔ preflight caps columns before allocation and preserves quoted commas, escapes and newlines (2.293792ms)
+✔ preview agrees with registration units, interpolation and time zones (3.59475ms)
+✔ preview bounds output and preserves TSV electrical fields without emitting unknown CSV columns (1.558ms)
+✔ hybrid preview follows combined-total precedence and split sum exactly (0.18525ms)
+✔ preview uses existing row validation and rejects invalid request shapes (0.259084ms)
+✔ authenticated preview has no database, controller, RTU or transport side effects (70.233958ms)
+✔ CSV/TSV BOM and Korean aliases, unit and missing weather (2.89775ms)
+✔ linear 300/599/600 boundaries and last interval hold, no wrapping interpolation (0.244833ms)
+✔ mean/kWh energy holds original interval without claiming ramp-adjusted energy (0.547333ms)
+✔ direction shortest arc and optional missing data never backwards-filled (0.176166ms)
+✔ strict actual dates, offsets, seconds, leap years (0.37025ms)
+✔ invalid CSV errors identify original row/field; duplicate, reverse, gap, NaN, empty (0.941459ms)
+✔ registration validates whole input and generates correct hybrid IDs and virtual coordinates (1.034916ms)
+✔ CSV total allocation and hybrid separate allocation, voltage/current provenance (0.853042ms)
+✔ weather wind power cubic/rated/cut-out and custom interpolation (0.404875ms)
+✔ solar temperature correction, saturation, efficiency and manual night irradiance (0.5105ms)
+✔ ramp, stopping, fractional startup and actuator freeze (0.254417ms)
+✔ percentage limit and rated reductions, unchanged CSV power on weather-only edit (0.152ms)
+✔ all PATCH validators are atomic including RNG and source metadata (0.402833ms)
+✔ LCG common noise, independent fault RNG, snapshot deterministic replay and pause (0.33725ms)
+✔ separate irradiance CSV aligns source timestamp and falls back outside range (0.372833ms)
+✔ frame includes complete state and excludes custom curve data; API retains curve (0.221084ms)
+✔ loop count records actual dataset wraps, not seeks, and survives scenario JSON snapshots (0.383834ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 439.33675

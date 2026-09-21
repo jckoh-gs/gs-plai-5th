@@ -12,7 +12,7 @@ kubectl --context charles-k3s -n gs-plai-5h rollout status deployment/grid-regis
 kubectl --context charles-k3s -n gs-plai-5h port-forward deployment/grid-registry 15050:15050
 # Separate terminal:
 ./scripts/deploy-bootstrap.sh
-docker buildx build --builder desktop-linux --platform linux/amd64 --provenance=false --build-arg SOURCE_COMMIT=COMMITTED_SHA --build-arg PRD_VERSION=1.7 --output type=oci,dest=artifacts/private/grid-image.oci.tar .
+docker buildx build --builder desktop-linux --platform linux/amd64 --provenance=false --build-arg SOURCE_COMMIT=COMMITTED_SHA --build-arg PRD_VERSION=1.8 --build-arg PRODUCT_VERSION=1.1.0 --output type=oci,dest=artifacts/private/grid-image.oci.tar .
 python3 scripts/oci-push.py artifacts/private/grid-image.oci.tar checkpoint-TIMESTAMP
 ./scripts/deploy-image.sh 127.0.0.1:15050/grid@sha256:APP_DIGEST 127.0.0.1:15050/grid-mqtt@sha256:MQTT_DIGEST
 ```

@@ -1,0 +1,21 @@
+
+> grid-vpp-emulator@1.1.0 test:integration
+> node scripts/integration.js
+
+{
+  "result": "PASS",
+  "suite": "integration",
+  "evidence": {
+    "actualBroker": true,
+    "allGenerators": true,
+    "everySampleContainsAllGenerators": true,
+    "scenarioCancelsActiveCommand": true,
+    "acceptedExecutingCompleted": true,
+    "targetKw": 125,
+    "actualKw": 125,
+    "errorKw": 0,
+    "dedup": true,
+    "scenario": true,
+    "restartPersistence": true
+  }
+}

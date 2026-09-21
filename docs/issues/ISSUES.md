@@ -144,3 +144,29 @@ ISSUE-005의 배포/브라우저/복원/미디어 등 다른 게이트는 이 �
 ## ISSUE-010 — 대용량 원격 백업 전송 사본 잘림
 
 상태: 수정 및 실제 전송·복원 검증 완료. 원격 online SQLite backup은 integrity_check=ok였으나 단일 kubectl stdout 바이너리 전송의 로컬 사본이167936bytes 짧아 무결성 검사에서 거부됐다. 원격 정상 원본은 보존했다. 압축 후256KiB 청크별 길이/SHA256, 전체 압축본 SHA256, 압축 해제본 길이/SHA256, 최종 SQLite integrity_check를 모두 확인하도록 보강했다. 실패한 사본은 채택하지 않고 private 영역에 구분 보존한다. 56594432bytes 원본을8청크로 전송했고 원격·로컬 SHA256이 일치했다. 같은 원격 snapshot을 새 전용PVC/최종이미지로 복원하여 실제 UI 및 MQTT125kW 왕복과 원본5단지/시나리오 보존을 확인했다. 증거: stable-backup-af7f223-round3.log와 stable-af7f223-restored-*; round2는 준비 스크립트 문자열 escape 오류 기록이며 원본 DB 결함이 아니다.
+
+## Round 7 — 제품 1.1.0 / PRD 1.8 CSV 미리보기 독립 검토
+
+현행 검토 기준을 제품1.1.0/PRD1.8로 갱신한다. 과거 라운드의 버전·미검증 기록은 당시 상태로 보존한다. `tests/review-preview.test.js` 추가 후 기존 preview/security 시험과 함께 12/12 PASS (`evidence/review-007-preview.log`).
+
+- 3유형×2단위×2의미 12조합을 등록 parser와 비교. 표시하지 않는 네 번째 행의 최대값/끝 시각도 계산에 반영하며 그 행이 잘못되면 미리보기와 등록 모두 행5로 거절한다.
+- 반환 최대3행 및 알려진 정규화 필드만 허용. 알 수 없는 열에 넣은 민감 fixture 값은 반환하지 않는다.
+- 실제 HTTP에서 기존 단지가 있는 DB의 모든 테이블·total_changes·전체 모델을 요청 전후 비교. 인증 성공/실패 및 입력 오류에서 DB/모델 불변, MQTT sync/connect 호출 없음. runtime 타이머는 시작하지 않아 실제 부작용을 배경 수집과 혼동하지 않는다.
+- 100000행 경계, 128열 경계, quoted delimiter/escaped quote/CRLF/multiline, 원문을 포함하지 않는 오류 응답은 보안 담당 수정 후 독립 재실행 PASS.
+
+## ISSUE-011 — CSV parser 오류 응답의 원문 노출 및 할당 경계
+
+중요도 P2, 담당/수정자 보안 세션, 상태 **수정·독립 회귀 완료**(최종1.1.0 배포 연결 대기). csv-parse 오류 문구가 잘못된 원 필드 내용을 포함할 수 있었다. 현재 `server/model.js`는 bounded code와 행 번호만 반환한다. 알 수 없는 prototype 명칭의 열도 own-property allowlist로 처리한다. parse 전 quote-aware128열 제한과 parse 중100000데이터행 제한을 적용한다. malformed sensitive-marker HTTP fixture에서 원문/토큰 미노출, authenticated400/unauthenticated401 확인. 증거 `tests/dataset-preview-security.test.js`, `evidence/review-007-preview.log`.
+
+## 이전 게이트의 후속 증거 갱신
+
+- **005-C 보고서 경계: 기능 검증 완료.** `report-round2.log` 및 현행 `report-integration.js`를 대조해 commandId/event/output을 독립 subscriber messageId와 비교, 저장 실패의 단일 발행, credential fixture 비노출을 확인했다. `report-timeout-first.log`는46.072초 후 result_wait_timeout/관측status=null/발행1로 서버 timed_out과 구분한다.
+- **005-D 무보고서 호환성: 기능 검증 완료.** report-round2의 실제 monitor/dispatch 호환성 assertion 확인. 이것을1.1.0 최종 commit/image 릴리스 게이트 통과로 확대하지 않는다.
+- **005-F 복원: 로컬 pending/outbox/새 제어는 Round5, 실제 프로세스 deadline은 Round4, 복원 브라우저 연결·stale·guide·오류 없음은 restored-browser/result.json이 보완한다.** ISSUE010에 메인이 기록한 별도 원격PVC/125kW 증거도 존재하나 이번 preview 검토에서 원격 실행을 재검증하지 않았다. 최종1.1.0 manifest/image/backup 일치는 별도 게이트.
+- 전체 ISSUE005는 최종 릴리스 및 미디어/마감 게이트가 남아 OPEN이다.
+
+## ISSUE-012 — 지연된 파일 읽기가 이후 CSV 수동 편집을 덮어쓸 위험
+
+중요도 P2, 담당/수정자 메인. 상태 **수정 및 실제 브라우저 fixture 검증 완료**(최종1.1.0 배포 연결 대기). `File.text()` 비동기 완료 이전의 사용자 편집/다른 파일 선택과 경합하므로 fileRevision을 비교하고 오래된 결과를 무시한다. 파일 읽는 동안 등록/preview는 비활성화한다. previewRevision은 CSV/type/unit/semantics 변경시 늦은 성공/실패 응답을 무효화한다.
+
+증거: `scripts/browser-preview-race.cjs`에서 File.text 지연 후 실제 다른 CSV 값으로 textarea를 편집하고 파일 읽기 완료를 풀어 최신 편집 유지, 파일 읽는 동안 두 버튼 disabled, 늦은 preview 성공/실패 폐기,390px 화면 page overflow 없음 확인. `artifacts/checkpoints/preview-browser/race.json` extended7requests PASS와 source를 대조했다. 브라우저는 메인이 실행했으며 독립 리뷰어의 추가 재실행은 아니다. 초기 fixture의 잘못된 버튼 selector 및 동일 값 fill로 change event가 안 난 실패는 제품 결함으로 기록하지 않는다.

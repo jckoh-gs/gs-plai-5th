@@ -30,18 +30,48 @@ export function parseTimestamp(value, label = 'timestamp') {
 }
 const aliases = { datetime: 'timestamp', 시간: 'timestamp', 일시: 'timestamp', 발전량: 'power_kw', 출력: 'power_kw', 풍력출력: 'wind_power_kw', 태양광출력: 'solar_power_kw', 풍속: 'wind_speed_ms', 풍향: 'wind_direction_deg', 일사량: 'irradiance_wm2', 전압: 'voltage', 전류: 'current_a' };
 const ranges = { power_kw: [0, 1e9], wind_power_kw: [0, 1e9], solar_power_kw: [0, 1e9], wind_speed_ms: [0, 100], wind_direction_deg: [0, 360], irradiance_wm2: [0, 2000], voltage: [0, 1e9], current_a: [0, 1e9] };
+// Bound field allocation before csv-parse builds arrays, while respecting quoted CSV.
+function checkCSVFieldLimit(text, delimiter) {
+  let quoted = false, fieldStart = true, fields = 1, line = 1;
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    if (char === '"') {
+      if (quoted && text[i + 1] === '"') { i++; continue; }
+      if (quoted) quoted = false;
+      else if (fieldStart) { quoted = true; fieldStart = false; }
+    } else if (!quoted && char === delimiter) {
+      if (++fields > 128) fail(`csv 행 ${line}: 한 레코드는 128열 이하이어야 합니다`);
+      fieldStart = true;
+    } else if (char === '\r' || char === '\n') {
+      if (char === '\r' && text[i + 1] === '\n') i++;
+      line++;
+      if (!quoted) { fields = 1; fieldStart = true; }
+    } else if (!quoted && !/[ \t\uFEFF]/.test(char)) fieldStart = false;
+  }
+}
 function normalizeCSV(text, { type = 'wind', unit = 'kw', semantics = 'sample', irradiance = false } = {}) {
   if (typeof text !== 'string' || !text.trim()) fail('csv: 비어 있지 않은 UTF-8 CSV/TSV가 필요합니다');
   if (Buffer.byteLength(text, 'utf8') > 20 * 1024 * 1024) fail('csv: 20MB 이하이어야 합니다');
   if (!['wind', 'solar', 'hybrid'].includes(type)) fail('type: wind / solar / hybrid');
   if (!['kw', 'kwh'].includes(unit)) fail('unit: kw / kwh');
   if (!['sample', 'mean'].includes(semantics)) fail('semantics: sample / mean');
-  const firstLine = text.replace(/^\uFEFF/, '').split(/\r?\n/).find((line) => line.trim()) || '';
+  const firstLine = text.replace(/^\uFEFF/, '').match(/^[ \t]*[^\s\r\n][^\r\n]*/m)?.[0] || '';
+  const delimiter = firstLine.includes('\t') ? '\t' : ',';
+  checkCSVFieldLimit(text, delimiter);
+  let recordCount = 0;
+  const tooManyRows = new Error('csv: 헤더 제외 2~100000행이어야 합니다');
   let records;
-  try { records = parse(text, { bom: true, delimiter: firstLine.includes('\t') ? '\t' : ',', trim: true, skip_empty_lines: true, info: true }); }
-  catch (e) { fail(`csv 행 ${e.lines || '?'}: ${e.message}`); }
+  try { records = parse(text, { bom: true, delimiter, trim: true, skip_empty_lines: true, info: true,
+    on_record(record) { if (++recordCount > 100001) throw tooManyRows; return record; },
+  }); }
+  catch (e) {
+    if (e === tooManyRows) throw e;
+    // csv-parse messages can embed raw field contents; expose only bounded diagnostics.
+    const code = /^CSV_[A-Z_]+$/.test(e.code || '') ? e.code : 'CSV_INVALID';
+    fail(`csv 행 ${Number.isSafeInteger(e.lines) ? e.lines : '?'}: ${code}`);
+  }
   if (records.length < 3 || records.length > 100001) fail('csv: 헤더 제외 2~100000행이어야 합니다');
-  const headers = records[0].record.map((name) => aliases[name.trim()] || name.trim());
+  const headers = records[0].record.map((name) => own(aliases, name.trim()) ? aliases[name.trim()] : name.trim());
   if (new Set(headers).size !== headers.length) fail('csv 행 1: 중복 열 이름');
   const required = irradiance ? ['timestamp', 'irradiance_wm2'] : ['timestamp', ...(headers.includes('power_kw') ? ['power_kw'] : type === 'hybrid' ? ['wind_power_kw', 'solar_power_kw'] : ['power_kw'])];
   for (const field of required) if (!headers.includes(field)) fail(`csv 행 1: 필수 ${field} 열이 없습니다`);
@@ -51,7 +81,7 @@ function normalizeCSV(text, { type = 'wind', unit = 'kw', semantics = 'sample', 
     for (let col = 0; col < headers.length; col++) {
       const field = headers[col], value = record[col];
       if (field === 'timestamp') row.timestamp = parseTimestamp(value, `csv 행 ${info.lines} timestamp`);
-      else if (ranges[field] && (!irradiance || field === 'irradiance_wm2')) {
+      else if (own(ranges, field) && (!irradiance || field === 'irradiance_wm2')) {
         if (value === '') { if (required.includes(field)) fail(`csv 행 ${info.lines} ${field}: 필수 값이 비어 있습니다`); continue; }
         // Number accepts hexadecimal and whitespace; CSV quantities deliberately use decimal syntax only.
         if (!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i.test(value)) fail(`csv 행 ${info.lines} ${field}: 유한한 숫자여야 합니다`);

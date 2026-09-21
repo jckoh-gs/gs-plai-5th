@@ -1,0 +1,22 @@
+{
+  "reviewedAt": "2026-09-21T09:25:49.475731+00:00",
+  "commit": "d853f59e67cc6763aed97da20d39eeeb26143ad1",
+  "workingTree": true,
+  "productVersion": "1.1.0",
+  "prdVersion": "1.8",
+  "files": {
+    "server/model.js": "875d936b0038ef5a9bd3c678a50dafdd8d33c7c0f8c60eba0316def51e95ba67",
+    "server/dataset-preview.js": "9732f5fcc73000494fe4138ff1116ed94f03474c713438901eb225368a194443",
+    "server/index.js": "c597e326eaf57559f0547f13824e48bbfb4224610d08ac58a622eaf0706c5402",
+    "web/src.jsx": "11bcd243cfc013505e547e4cc8614f0a115d41f7dc49177576feb11217858561",
+    "scripts/browser-preview-race.cjs": "fcf929b878856cbbc4e21525f441cf04a2d583ff43a7da34d2ea38a069c2ba0c",
+    "tests/review-preview.test.js": "d9a728fa7e7e12022fa4198c7eba0ee5dfb26ae6914bb71b84fd1d40469cc65c",
+    "tests/dataset-preview-security.test.js": "6bf6a43a7f39b71891923e446028a8f16d910f77009e81e9a9f3db6f07abb036",
+    "tests/dataset-preview.test.js": "47d2175446c81b873ed7737f8bdf1891e8fb396c5b403eba39328203e9ddb57e",
+    "docs/PRD-VPP-SCADA-RTU.md": "ffacf210f61f55353ce846205bb0c2ecce8a9793f54ced757a787c28a8b122ba",
+    "docs/issues/evidence/review-007-preview.log": "90983149cf8d296da482c2754970db869719eff10b1df05ae015de7b5c0d5092",
+    "artifacts/checkpoints/preview-browser/race.json": "8eed1ad11d80ca6faf5163d984f701bcd6ff8947e07418660e3d009f984768c8",
+    "artifacts/checkpoints/report-round2.log": "87b81efba03df43a87093cb3d9818e7d914ed93f573fad69e2f5aa3db5f2be7e",
+    "artifacts/checkpoints/report-timeout-first.log": "afb6b4d8242880e50ff318e4f40c482ed7eb5b80e15071015e91995f0c62ee0d"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "capturedAt": "2026-09-21T09:25:05.859Z",
+  "node": "v24.16.0",
+  "case": "100000 valid rows / 2 columns",
+  "inputBytes": 2300018,
+  "rows": 100000,
+  "returnedRows": 3,
+  "elapsedMs": 192.085625,
+  "maxRSSKiB": 269984,
+  "limitation": "Single local process observation, not worst-case bound or container load test"
+}

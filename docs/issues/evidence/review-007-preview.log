@@ -1,0 +1,20 @@
+✔ parser diagnostics never echo malformed CSV field contents (2.158417ms)
+✔ prototype names remain unknown columns and never enter normalized DTOs (2.023291ms)
+✔ 100000 rows are accepted; excessive rows abort before parsing trailing malformed input (327.426834ms)
+✔ HTTP preview returns bounded diagnostics and authenticates before malformed input (60.271958ms)
+✔ preflight caps columns before allocation and preserves quoted commas, escapes and newlines (2.460375ms)
+✔ preview agrees with registration units, interpolation and time zones (4.308917ms)
+✔ preview bounds output and preserves TSV electrical fields without emitting unknown CSV columns (1.648334ms)
+✔ hybrid preview follows combined-total precedence and split sum exactly (0.278084ms)
+✔ preview uses existing row validation and rejects invalid request shapes (0.302167ms)
+✔ authenticated preview has no database, controller, RTU or transport side effects (73.728958ms)
+✔ independent preview: summaries scan beyond display rows; hidden invalid row is rejected by preview and registration (8.973958ms)
+✔ independent preview HTTP: existing model and every persistent table unchanged, no MQTT connection path invoked (33.431083ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 444.875

@@ -237,10 +237,11 @@ RTU_ID=YOUR_RTU_UUID TARGET_KW=500 VPP_REPORT_FILE=/absolute/result.json VPP_CON
 
 ### A-10. 관리 API
 
-HTTP 관리 API는 MQTT 연동에 필수는 아니며 로컬 개발 UI에서 사용합니다. 기본 127.0.0.1 바인딩입니다. API_TOKEN을 설정하면 `/api/health` 외 API에 `Authorization: Bearer ...`가 필요합니다. 내장 UI에는 토큰 로그인 기능이 없으므로 원격 관리 시 인증 프록시 또는 별도 클라이언트를 사용합니다.
+HTTP 관리 API는 MQTT 연동에 필수는 아니며 내장 관리 UI에서 사용합니다. 기본 127.0.0.1 바인딩입니다. API_TOKEN을 설정하면 공개 `/api/health`, `/api/config` 외 API에 `Authorization: Bearer ...`가 필요합니다. 내장 UI의 토큰 로그인은 현재 탭의 sessionStorage에 저장하고 REST·SSE·다운로드 요청 헤더에 적용합니다. 원격 k3s 접속은 인증된 Kubernetes 포트포워딩을 사용합니다.
 
 - GET /api/state, /api/events(SSE), /api/health.
 - POST /api/plants: 기존 CSV 등록 규격.
+- POST /api/datasets/preview: `{csv,type,unit,semantics}`의 등록 전 해석 확인. type은 필수이며 unit 기본값은 `kw`, semantics 기본값은 `sample`입니다. 등록과 같은 파서를 사용하고 RTU·명령·DB를 변경하지 않습니다.
 - POST /api/plants/{id}/commands: 동일 RTU 명령 처리기로 시험.
 - GET /api/plants/{id}/commands: 최근 200개 명령 추적.
 - PATCH /api/plants/{id}/faults: 장애 설정.
@@ -255,10 +256,11 @@ HTTP 관리 API는 MQTT 연동에 필수는 아니며 로컬 개발 UI에서 사
 - POST /api/scenarios/{id}/run, GET /api/scenarios/{id}/export.
 - GET /api/guide: 이 문서 다운로드.
 
+CSV 미리보기 응답은 schemaVersion 1, type/unit/semantics/interpolation, rowCount, intervalSeconds(600), start/end의 UTC·KST, powerSource, minPowerKw/maxPowerKw, 최대 3개의 정규화 rows입니다. 각 행의 timestamp는 UTC이며 timestampKst와 totalPowerKw를 추가합니다. end는 마지막 입력 행의 시각입니다. `power_kw`가 있으면 시뮬레이터와 동일하게 우선하고, 복합 분리 출력만 있으면 풍력+태양광 합계를 사용합니다. kWh는 10분 구간 에너지를 6배하여 kW로 환산하고 구간 유지(hold)합니다. 요청 본문은 20MiB 이하이며 CSV는 헤더 제외 2~100000행, 행당 최대128열입니다. 구문 오류 응답에는 원문 필드 값을 포함하지 않습니다. 미리보기 후 입력을 바꾸면 결과가 무효화되며 실제 등록 시 다시 검증합니다.
+
 ```bash
 npm test
 npm run test:integration
 npm run test:advanced
 ```
-
 

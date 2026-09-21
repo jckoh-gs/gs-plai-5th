@@ -1,5 +1,5 @@
 {
-  "prdVersion": "1.7",
+  "prdVersion": "1.8",
   "runId": "grid-new-20260921T080733Z",
   "scope": "greenfield, mandatory k3s",
   "policy": "pending until new-run direct evidence covers complete requirement; code presence/legacy reports are not pass",
@@ -3646,6 +3646,48 @@
       ],
       "assessment": "Local SQLite backup API/integrity/separateDB restore now includes exact pendingbody+id redelivery/PUBACK persistence/new75kW completed and restored browser visual+stream/download check. Restored fixture authRequired=false: authenticatedSSE:true in historical result is misnamed and proves no authentication. Final stable/tag/image/manifest and remote previous-version rollback still incomplete.",
       "releaseRevalidation": "Final release commit/image full checks remain required."
+    },
+    {
+      "id": "FR-PREVIEW-01",
+      "description": "parseCSV 기반 인증미리보기 정확응답/최대3행/쓰기없음",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "UI-08",
+      "description": "등록폼 미리보기/입력revision 무효화/늦은응답보호",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-PREVIEW-01",
+      "description": "1.1.0미리보기 전체인수",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-PREVIEW-01-01",
+      "description": "정규화/UTC/KST/hybrid/3행",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-PREVIEW-01-02",
+      "description": "검증상한/인증/부작용없음",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-PREVIEW-01-03",
+      "description": "브라우저/경합/등록",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "AT-PREVIEW-01-04",
+      "description": "전체회귀/배포/기존복원/stable",
+      "status": "pending",
+      "evidence": []
     }
   ],
   "reviewedSource": {

@@ -1,6 +1,6 @@
 # GRID — VPP·SCADA·RTU 통합 에뮬레이터 PRD
 
-문서 버전: 1.7 · 기준일: 2026-09-21 · 제품 기준: SCADA Emulation Engine v2 / MQTT 계약 v2
+문서 버전: 1.8 · 기준일: 2026-09-21 · 제품 기준: SCADA Emulation Engine v2 / MQTT 계약 v2
 
 ## 문서의 목적과 사용법
 
@@ -452,6 +452,7 @@ PUBACK 지연은 발행 요청부터 callback 확인까지의 시간이며 제�
 
 기본 /api, JSON. 관리 API는 VPP MQTT 연동의 필수 경로가 아니다. API_TOKEN 사용 시 `/api/health`와 `/api/config` 외에 Authorization: Bearer가 필요하다. 공통 검증 오류는 기준 구현에서 400과 {error:string}; 인증 실패 401. 자원별 정상 응답은 아래를 따른다. 새 구현은 오류 코드 세분화를 별도 버전 변경 없이 클라이언트와 합의한다.
 
+- POST /datasets/preview: FR-PREVIEW-01의 읽기 전용 CSV 검증/정규화 요약.
 - GET /config: 인증 불필요. `{authRequired:boolean,version:string}`만 제공하며 토큰·설정 비밀을 반환하지 않는다.
 - GET /health: 프로세스와 브로커 상태를 확인하는 경량 응답. 브로커 단절이 곧 HTTP 서버 중단은 아니다.
 - GET /state: mqtt, gateway, plants[], events 등 화면 상태. plants에는 dataset 원문 대신 행 수·보간법·단위·시작/끝을 제공. 각 plant에는 공개 모델, connection, rtuMetrics, outbox, controlRuns 포함.
@@ -793,6 +794,25 @@ IDEA-001의 선택적 JSON 결과 파일 요구는 신규 MQTT dispatch 클라�
 3. 브로커 불가 사례가 유한한 시간 내 실패 결과와 exit 1로 끝나며, 미관측 상태/출력/runId를 성공값으로 채우지 않는다.
 4. 쓰기 불가 결과 경로는 명확한 저장 실패와 exit 1을 반환한다. 파일 저장 실패 때문에 명령을 자동 재전송하지 않는다. JSON/오류 출력에 시험용 자격증명이 노출되지 않는다.
 5. 결과 파일 옵션 없이 기존 monitor/dispatch가 동작하고 MQTT schemaVersion 2가 유지된다. 관련 단위 시험, 기본·고급 MQTT 통합 시험, build 및 실행 확인을 통과한 뒤에만 신규 제품 릴리스에 맞는 stable 태그와 증거를 기록한다.
+
+### FR-PREVIEW-01 등록 전 CSV 미리보기 (IDEA-005, 제품1.1.0 후보)
+
+인증 관리 API `POST /api/datasets/preview`는 `{csv:string,type:"wind"|"solar"|"hybrid",unit:"kw"|"kwh",semantics:"sample"|"mean"}`을 받는다. type은 필수이며 unit/semantics 생략 기본은 기존 등록과 같은 kw/sample이다. 기존 parseCSV로 검증·정규화하고 등록과 동일20MiB JSON 제한·인증·400 `{error:string}` 행 오류를 적용한다. 발전단지 등록 검증은 이후 기존 경로에서 다시 수행한다. 등록·미리보기 공통 CSV 안전 한도는 헤더 제외 2~100000행, 행당 최대128열이다. 인용부호 내부 쉼표·탭·줄바꿈은 열·행 구분자로 세지 않으며, 구문 오류는 행 위치와 정제한 원인만 반환하고 원문 필드 값을 노출하지 않는다.
+
+성공200 응답은 `{schemaVersion:1,type,unit,semantics,interpolation,rowCount,intervalSeconds:600,start:{utc,kst},end:{utc,kst},powerSource,minPowerKw,maxPowerKw,rows}`이다. start.utc/end.utc는 정규화된 첫/마지막 CSV행의 UTC ISO이며 마지막 유지구간 종료가 아니다. start.kst/end.kst는 같은 순간의 ISO형 `+09:00` 문자열이다. unit/semantics는 선택된 입력값, interpolation은 실제 linear/hold를 뜻한다(kWh는 sample 선택이어도 hold). minPowerKw/maxPowerKw는 정규화된 전체행 power_kw의 최소/최대이며 power_kw가 제공되면 hybrid분리열과 함께 있어도 power_kw를 우선한다. power_kw가 없고 hybrid분리열 입력이면 wind_power_kw+solar_power_kw 합을 사용한다. powerSource는 이에 따라 power_kw 또는 wind_plus_solar다. rows는 정규화된 앞 최대3행에 totalPowerKw와 timestampKst를 추가한 객체를 제공하며(timestamp는 UTC), 전체CSV·원본본문·비밀설정을 반환하지 않는다. 선택필드 생략/null 의미는 기존 parser대로 유지한다.
+
+이 API는 식별자/plant/command/outbox/scenario 생성, DB 쓰기, 기상조회, MQTT연결·발행을 하지 않는다. 입력 유형을 출력 모양에서 추론하지 않는다. preview결과는 계산모델의 실제출력 예측이나 VPP시험 완료증거가 아니다.
+
+### UI-08 등록 미리보기 (IDEA-005, 제품1.1.0 후보)
+
+등록폼에 명시적인 미리보기 버튼과 위 요약을 표시한다. 입력 단위·선택 의미·실제 보간을 구분하고 kWh→평균kW 변환, UTC/KST 및 hybrid합계 의미를 설명한다. 자동입력마다 요청하지 않으며 처리중 중복호출을 막는다. csv/type/unit/semantics 중 하나라도 바뀌면 이전결과를 즉시 무효화한다. 입력revision과 요청순서를 확인하여 늦은 이전응답이 새로운결과나 오류를 덮어쓰지 않게 한다. 미리보기 실패는 기존행 오류를 표시하고 단지를 생성하지 않는다. 미리보기는 등록 전 보조기능이며 기존 등록절차를 불필요하게 차단하지 않는다.
+
+### AT-PREVIEW-01 미리보기 인수
+
+1.10kWh→60kW/hold,100→200kW linear,55행TSV/KST↔UTC,hybrid분리합계와 total 입력을 실제parser결과와 비교한다. 정상응답 필드와 최대3행 제한을 확인한다.
+2.잘못된행/유형/단위/의미와20MiB상한 오류가 등록과 일치하고, 인증없는 요청은401이다. 처리전후DB의plant/command/outbox/scenario수 및 MQTT/기상부작용이 없음을 확인한다.
+3.실제브라우저에서 미리보기·입력변경 무효화·재요청·오류·등록을 확인한다. 의도적으로 지연한 이전응답이 최신입력 결과를 덮어쓰지 않는 회귀검증을 남긴다.
+4.전체기존단위/통합/고급/빌드와 새기능검증, k3s업데이트 후 미리보기·기존MQTT왕복, 이전정상1.0.0복원 가능성을 확인한 뒤1.1.0후보를stable로 승격한다. 미완료 시1.0.0정상checkpoint를 유지한다.
 
 ### FR-AUTH-01 원격 관리 UI 인증 (IDEA-002, 채택·검증 대기)
 
