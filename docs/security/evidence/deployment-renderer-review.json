@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-09-21T16:53:02.373602+00:00",
+  "sourceSha256": {
+    "scripts/render-deployment.mjs": "e5af236919d9ab2e6e34a88fb183adba1878cdd893a1af1d8f30537d1db3912c",
+    "scripts/deploy-image.sh": "e5dce49c9933d671ba8a9cc9d9da93eddcec4cbaec4fe5032b3b03294c5b3a79",
+    "deploy/app.yaml": "4957e26268687c1e66c57ea0ef74ec8487de652ff71602e09ec0a0833374dd45",
+    "deploy/README.md": "a9df1da48fc41d88f1c5130b574d631e0dea8c034ee66a63df14d4abf4c501ae",
+    "tests/render-deployment.test.js": "89552463b73baa5120ba3f51e39470b22f70fbdeb0e38c4c70e8515d1d48fe77"
+  },
+  "testsPassed": 3,
+  "shellSyntax": "PASS",
+  "scope": "Pure local rendering only; no kubectl apply or cluster mutation"
+}

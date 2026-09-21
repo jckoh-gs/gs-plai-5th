@@ -1,0 +1,11 @@
+✔ pinned and placeholder templates replace exact app plus both broker slots (1.19925ms)
+✔ invalid digests and shell/sed/newline characters fail closed (0.132ms)
+✔ missing duplicate wrong slots and ambiguous images fail closed (0.150666ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 30.391625

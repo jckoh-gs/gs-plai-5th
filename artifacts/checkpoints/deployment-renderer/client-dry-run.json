@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:57:28.607090+00:00",
+  "mode": "kubectl apply --dry-run=client --validate=false; no real apply",
+  "parsedObjects": [
+    "PersistentVolumeClaim",
+    "PersistentVolumeClaim",
+    "Deployment",
+    "Service",
+    "NetworkPolicy"
+  ],
+  "appImage": "127.0.0.1:15050/grid@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "bothBrokerSlotsImage": "127.0.0.1:15050/grid-mqtt@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "renderedSha256": "46316d02178c1bdc30d382a93d4e034f0b2cac55904ed0e5781526290df852e0",
+  "renderedMode": "0o600",
+  "templateSha256": "4957e26268687c1e66c57ea0ef74ec8487de652ff71602e09ec0a0833374dd45"
+}

@@ -1,0 +1,24 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:59:06.016688+00:00",
+  "rootReview": true,
+  "focusedChecks": 6,
+  "fullSuite": {
+    "handle": 86685,
+    "exitCode": 0,
+    "tests": 312,
+    "passed": 312,
+    "failed": 0,
+    "log": "artifacts/checkpoints/deployment-renderer/full-suite.log"
+  },
+  "clientDryRun": "artifacts/checkpoints/deployment-renderer/client-dry-run.json",
+  "realDeploymentWrites": 0,
+  "runtimeImageChanged": false,
+  "hashes": {
+    "scripts/render-deployment.mjs": "e5af236919d9ab2e6e34a88fb183adba1878cdd893a1af1d8f30537d1db3912c",
+    "scripts/deploy-image.sh": "e5dce49c9933d671ba8a9cc9d9da93eddcec4cbaec4fe5032b3b03294c5b3a79",
+    "tests/render-deployment.test.js": "805a82233856874376c416524d7ea2f5219d29f23ac156c3491256ce8d1c052e",
+    "deploy/app.yaml": "4957e26268687c1e66c57ea0ef74ec8487de652ff71602e09ec0a0833374dd45"
+  },
+  "scope": "Root reviewed renderer and shell source, focused wrapper checks; canonical YAML clientdryrun. Focused counts overlap full suite; no real kubectl apply or rollout."
+}

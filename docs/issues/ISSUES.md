@@ -533,3 +533,16 @@ IDEA011 독립 browser 인수 준비: scripts/check-command-list-freshness.cjs�
 IDEA011 실제 로컬 후보1.7 browser round1: artifacts/checkpoints/candidate-1.7-command-list-round1/result.json 8검증군 PASS, handle74819 exit0. 실제154fe2 번들의 기존 expired 명령/REST 출처·ID·순서와 브라우저 성공시각을 대조했다. 로컬 GET503 주입 후 기존행·시각 보존/항상 표시되는 목록 경고/SSE정상과 분리/원오류 비노출, 실제GET복귀 후 경고 해제와 시각 갱신, 최초loading·최초실패·실제empty 구분, 지연A 한요청·전환abort·늦은A의B불혼입을 확인했다. header 대기15482ms/body 대기15502ms 후 유한 timeout, 각1요청, 실제 loopback HTTP body 연결close1/동시최대1, unmount시 abort·후속poll없음도 확인했다. 장애응답은 browser route 및 소유loopback서버 fixture이며 실제원격장애가 아니다. test API쓰기0/setup쓰기0/pageErrors0이며 root의 사전3등록+1expiredPOST는 별도creation.json에 있다.
 
 최초 screenshot이 viewport상단만 보여 목록panel을 포함하지 않은 harness 증거 품질 문제를 발견했다. 원본은 보존하고 shothelper에 panel.scrollIntoView를 추가했다. 전체timeout시험을 반복하지 않고 별도 GET-only capture-panel.cjs/handle73455 exit0로 desktop/narrow 보완이미지를 생성·직접 검토했다. 목록경고·마지막확인·보존행이 보이며390px에서 설명은 줄바꿈되고 표는 기존 가로스크롤이다. 원본 실행 소스 SHA와 보완 캡처/terminal/hash를 같은 폴더에 보존했다. 현재 앱/서버 소스 변경은 없고 원격 배포·복원 인수는 별도 게이트다.
+
+## ISSUE-025 — 고정 이미지 template에서 배포 인자 치환 무효
+
+P1 운영 배포 정확성, 상태 RESOLVED/운영 renderer 수정 검증 완료. 최초 수정 직후 상태는 FIX_IMPLEMENTED/후속 검증 중이었다. 발견자는 메인, 수정은 security, 독립 이슈 기록은 issues이다. 기존 scripts/deploy-image.sh는 GRID_IMAGE 문자열만 sed로 치환했으나 deploy/app.yaml의 app image는 이미 digest로 고정되어 해당 문자열이 없었다. 따라서 새 이미지 인자를 제공해도 template의 이전 이미지가 그대로 적용될 수 있었다. 이는 실제 운영 도구 결함이며 단순 표시 문제나 가상의 입력 위험이 아니다. 실제1.7 main은 메인의 별도 전략 patch로 정확한 이미지에 배포되었으므로 이번 치환 결함이 현재1.7 오배포를 일으켰다고 주장하지 않는다.
+
+수정 소스 확인: scripts/render-deployment.mjs는 정확한 app/broker 저장소와 소문자64자리 sha256 인자를 검증하고 app·mqtt·migrate-mqtt-storage의 정확한3개 image slot을 치환한다. 누락·중복·추가 image 및 지원하지 않는 형식은 적용 전 거절한다. 고정 pin과 placeholder 모두 지원하며 임의 YAML parser가 아닌 현재 canonical template만 지원한다. deploy-image.sh는 고정 template에서 렌더링한 뒤 적용하고 고유 private 임시파일/소유파일 exit cleanup을 사용한다. template은 실제1.7 pin으로 갱신되었다. 앱 코드/API/데이터 변경은 아니다.
+
+docs/security/DEPLOYMENT-RENDERER-REVIEW.md와 연결 evidence/deployment-renderer-review.json 및 deployment-renderer-tests.log에 순수 renderer3시험과 sh -n 통과가 기록되어 있다. 이 이슈 작성자는 소스·검토 문서를 독립 확인했으며 실제 배포를 실행하지 않았다. 메인의 wrapper client-dry-run 및 fullsuite는 진행 중으로, 아직 완료·실제 rollback 검증이라고 기재하지 않는다. 후속 결과를 별도 기록한 뒤 상태를 갱신한다. canonical YAML 형식 변경 시 renderer 재검토가 필요한 잔여 제약을 유지한다.
+
+
+ISSUE025 후속 검증 완료: 메인의 focused6시험은 기존 순수 renderer3개와 wrapper3개로 구성된다. 인자 digest 반영·0600·성공 cleanup, 잘못된 인자의 kubectl 미호출, apply exit9 시 rollout 미실행 및 cleanup을 확인했다. artifacts/checkpoints/deployment-renderer/client-dry-run.json은 실제 kubectl apply --dry-run=client --validate=false가5개 객체를 파싱하고 app A×64/양 broker B×64 digest를 정확히 반영함을 기록한다. 실제 apply/원격 쓰기는0이며 실제 배포나 rollback 완료 시험으로 확대하지 않는다.
+
+같은 디렉터리 full-suite.log는 전체312/312 PASS를 확인하며 메인 handle86685 terminal0이다. focused6은 전체312와 중복될 수 있어 합산하지 않는다. 이전 원인·수정·실제1.7 영향 없음의 범위를 유지하고 ISSUE025를 운영 도구 수정 검증 완료로 종결한다. canonical template 형식 제약과 실제 배포 전 대상 확인 필요성은 남는다. 이 후속 작성은 해당 receipt와 로그의 읽기 대조 및 issues 문서 수정만 수행했다.
