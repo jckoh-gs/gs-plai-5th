@@ -13,6 +13,8 @@
 
 재개 시 clock과 run.json을 확인하고 latest.json 시각·API/연결 오류·invalid·대기열·메모리를 확인한다. 관찰 프로세스가 끝났으면 종료 구간을 기록하고 새 SOAK_DIRECTORY 하위 세션으로 시작한다. 정상이고 의미 있는 변화가 없으면 같은 시험을 반복하거나 알림을 반복하지 않는다. 주기적으로 df와 Pod 재시작/Ready를 확인한다. 외부 KMA/AWS/실운영 VPP 자격정보는 없으며 성공으로 꾸미지 않는다.
 
+RTU별 추가 전체 SCADA 관찰도 실행 중이다. `TELEMETRY-AUDIT.md`의 강화 세션54bdac4e와 실제 handle을 확인한다. primary soak를 대체하지 않으며 freeze에서 각 관측과 소스를 별도로 보존한다. 동일ID/동일본문 중복과 sequence/샘플 간격은 문서의 맥락 규칙으로 해석한다.
+
 ## 동결 준비와 최종30분
 
 1. 현재 runtime 소스가 stable 이미지와 일치하는지 확인한다. 미완성 작업이 있으면 검증된 stable 이미지·필요시 호환 백업을 사용한다. 기존 백업을 덮어쓰지 않는다.

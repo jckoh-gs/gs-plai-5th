@@ -1,0 +1,19 @@
+✔ independent auditor accepts genuine ramp-down output above new available power and nullable electrical observations (4.457625ms)
+✔ independent auditor rejects missing generator control fields (0.708542ms)
+✔ independent auditor rejects empty weather (0.915ms)
+✔ independent auditor rejects null faults (0.620417ms)
+✔ independent auditor rejects non ISO source timestamp (0.719167ms)
+✔ independent auditor rejects non ISO observation timestamp (0.613041ms)
+✔ real model and store split full SCADA into valid size-bounded packets, including equal wall timestamps (64.507708ms)
+✔ same-body QoS1 duplicate is counted; a changed body with same ID is an anomaly (0.95925ms)
+✔ shared sequence jumps, sensor gaps, restored run and baseline changes are contextual observations (0.791292ms)
+✔ independent structural defects are reported without throwing on malformed samples (1.6545ms)
+✔ RTU identity, retained delivery and bounded dedup scope remain explicit (1.604292ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 106.669917

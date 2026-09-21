@@ -1,0 +1,13 @@
+{
+  "reviewedAt": "2026-09-21T10:45:27.209391+00:00",
+  "commit": "19ef395d280993e95fd8115e2336920461570775",
+  "workingTree": true,
+  "files": {
+    "scripts/telemetry-audit.mjs": "ba6c2c1c9ac39e4a1666d7ad0b6468271a1eda163f2653df9e6bac842bb48486",
+    "scripts/telemetry-audit-monitor.mjs": "c910ee684c5b74c4c145f884caa56f02527476360bd0ac05efa6302ede04d4a2",
+    "tests/review-telemetry-audit.test.js": "99396abd0d0b9fa931179583b41a3339de02739982ae165312cd7ca30f898520",
+    "tests/telemetry-audit.test.js": "070604fd070ed5c43c4100ea13f6ede1a906b9e47e51b4e2e64a93d04e52730b",
+    "docs/issues/evidence/review-014-audit-before.log": "858667bf3d9ca858439dddfdad28c1b8551914063fc8710b5ebe397a2db48942",
+    "docs/issues/evidence/review-014-audit-after.log": "694b1a67ee5c225d1cf709f2fb878b7fbff317246b4424e14c77ded364ae3575"
+  }
+}

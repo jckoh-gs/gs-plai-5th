@@ -213,7 +213,7 @@ UI 소스는 클릭 당시 p.id로 URL/파일명을 함께 만든다. 메인 실
 
 ## ISSUE-015 — 최종 인도 inventory의 영상/PPT/재생성 source 연결 부족
 
-중요도 P2 증거 정합성, 상태 OPEN(메인에 전달, 수정 대기). 실제 잘못된 최종 산출물이 생성됐다는 뜻이 아니며 source 검토에서 확인한 verifier 경계다.
+중요도 P2 증거 정합성, 현재 상태 **수정·독립 회귀 완료**(아래 Round13). 다음은 수정 전 발견 기록이다. 실제 잘못된 최종 산출물이 생성됐다는 뜻이 아니며 source 검토에서 확인한 verifier 경계다.
 
 - `verify-delivery.mjs`는 현재 selected MP4/video receipt와 deck/source/video-verification.json의 동일성을 비교하지 않고 deck verification도 제작에 사용한 videoSha256을 기록하지 않는다. 같은 release의 다른 영상/receipt로 바뀌면 PPT 제작 당시 영상과 다르더라도 inventory가 통과할 수 있다. 제작시 hash 검증은 존재하나 사후 인도 연결이 부족하다.
 - reproduction files 배열이 없거나 비어도 루프가0회로 통과한다. 필수 recorder 코드/입력assets를 요구하지 않고 recordingConfigSha256/exactConfigSha256을 현재 config와 비교하지 않는다. 소스 파일 일부 누락을 completeness로 오인할 수 있다.
@@ -230,3 +230,15 @@ release-binding 기존 부정 fixture를 독립 재실행3/3PASS. commit/run/run
 상태: **수정 및 독립 artifact 검증 회귀 완료**. 메인이 deck.videoSha256/copy receipt/실제MP4 연결, 유효digest 필수, nonempty regeneration목록·필수코드/assets·config hash 검사를 추가했다. `tests/review-media-delivery.test.js`는 임시cwd에 독립 가짜 artifact tree를 만들고 실제verify-delivery 프로세스를 실행한다. 실제 영상/PPT/원격을 생성하거나 변경하지 않는다.
 
 5/5PASS(`evidence/review-013-delivery.log`): 일치하는fixture는 ARTIFACT_CHECKS_PASSED이지만 completionClaim=false; 같은release의영상교체는 exactreviewedvideo 검사 실패; 빈reproduction목록은 nonempty검사 실패; 잘못된configSHA는 exactconfig검사 실패; 양쪽잘못된digest는 validdigest검사 실패. 각 부정시험은 단순 nonzero가 아니라 해당하는 구체적 실패항목도 확인했다. 이 결과는 실제미디어 decoding/visual/claims/최종시간 준수를 대신하지 않는다.
+
+## ISSUE-016 — read-only telemetry auditor의 전체 SCADA 검증 누락
+
+중요도 P2 관측도구, 현재 상태 **수정·독립 회귀 완료**(아래 후속). 다음은 수정 전 발견 기록이며 앱/실제 telemetry 결함이 아니다. 독립 fixture가 실제 model+Store envelope를 만든 뒤 summary/scada도 일치하도록 변형하여 검사했다. 발전기 on/status/targetKw/limitPct/ramp/startup 필드 삭제, weather={}, faults=null, sourceTimestamp='1', timestamp/time='1'이 기존 auditor를 통과한다. nested presence/type 및 실제ISO시각 검증 부족이다. 메인에 즉시 전달했다.
+
+`tests/review-telemetry-audit.test.js` 부정5건이 실패를 재현하고 정상 ramp-down(현재available보다큰출력)/nullable electrical은 통과한다. 기존5suite는 통과했다. `evidence/review-014-audit-before.log`는 수정 전 실패증거다. 회귀가 녹색이 되기 전 전체 테스트 통과로 표시하지 않는다. 루트 구현파일·현재soak/배포는 변경하지 않았다. raw payload/명령이름/credential을 로그로 출력하는 경로는 발견하지 않았고 gap/run/duplicate를 맥락관찰로 분리하는 claimBoundary는 적절하다.
+
+### ISSUE-016 후속 — 강화 observer 회귀 확인
+
+상태 **수정·독립 회귀 완료**. 메인이 필수 nested 필드/nullable 숫자/엄격UTC ISO/provenance 검사를 보완했다. 독립5부정fixture가 모두거절되고 정상ramp-down/전기값null은 계속 허용된다. 실제 model+Store100기분할/동일timestamp/QoS중복/run경계/sequence간격 포함 총11/11PASS(`review-014-audit-after.log`). 수신량에는invalid도 포함된다는 점과 quantity coverage≠acceptance를 claimBoundary에 명시한 것도 확인했다.
+
+초기 live pilot은 구버전관측기이므로 강화검증 성공으로 소급취급하지 않는다. 원본source는 `artifacts/checkpoints/telemetry-audit/pilot-source`에 별도보존하며 메인이 다음 observer를 새디렉터리로 구분할 예정이다. 본 검토는 실행중pilot/primarysoak/supervisor를 조작하지 않았다.

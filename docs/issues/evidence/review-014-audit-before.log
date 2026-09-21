@@ -1,0 +1,111 @@
+✔ independent auditor accepts genuine ramp-down output above new available power and nullable electrical observations (4.370417ms)
+✖ independent auditor rejects missing generator control fields (0.853833ms)
+✖ independent auditor rejects empty weather (0.5095ms)
+✖ independent auditor rejects null faults (0.463209ms)
+✖ independent auditor rejects non ISO source timestamp (0.487792ms)
+✖ independent auditor rejects non ISO observation timestamp (0.4305ms)
+✔ real model and store split full SCADA into valid size-bounded packets, including equal wall timestamps (60.328833ms)
+✔ same-body QoS1 duplicate is counted; a changed body with same ID is an anomaly (0.889875ms)
+✔ shared sequence jumps, sensor gaps, restored run and baseline changes are contextual observations (0.733125ms)
+✔ independent structural defects are reported without throwing on malformed samples (1.213708ms)
+✔ RTU identity, retained delivery and bounded dedup scope remain explicit (0.977417ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 6
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 101.413916
+
+✖ failing tests:
+
+test at tests/review-telemetry-audit.test.js:5:439
+✖ independent auditor rejects missing generator control fields (0.853833ms)
+  AssertionError [ERR_ASSERTION]: missing generator control fields
+      at TestContext.<anonymous> (file:///Users/charleskoh/research/20260921-RALPTON/tests/review-telemetry-audit.test.js:5:527)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/review-telemetry-audit.test.js:5:439
+✖ independent auditor rejects empty weather (0.5095ms)
+  AssertionError [ERR_ASSERTION]: empty weather
+      at TestContext.<anonymous> (file:///Users/charleskoh/research/20260921-RALPTON/tests/review-telemetry-audit.test.js:5:527)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/review-telemetry-audit.test.js:5:439
+✖ independent auditor rejects null faults (0.463209ms)
+  AssertionError [ERR_ASSERTION]: null faults
+      at TestContext.<anonymous> (file:///Users/charleskoh/research/20260921-RALPTON/tests/review-telemetry-audit.test.js:5:527)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/review-telemetry-audit.test.js:5:439
+✖ independent auditor rejects non ISO source timestamp (0.487792ms)
+  AssertionError [ERR_ASSERTION]: non ISO source timestamp
+      at TestContext.<anonymous> (file:///Users/charleskoh/research/20260921-RALPTON/tests/review-telemetry-audit.test.js:5:527)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/review-telemetry-audit.test.js:5:439
+✖ independent auditor rejects non ISO observation timestamp (0.4305ms)
+  AssertionError [ERR_ASSERTION]: non ISO observation timestamp
+      at TestContext.<anonymous> (file:///Users/charleskoh/research/20260921-RALPTON/tests/review-telemetry-audit.test.js:5:527)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

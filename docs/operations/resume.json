@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T10:11:18.027416+00:00",
+  "updatedAt": "2026-09-21T10:47:09.019258+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": "stable-v1.2.0",
@@ -39,5 +39,14 @@
     "Do not change T0, freezeAt or deadlineAt",
     "Do not trust a PID from an earlier process without identity verification",
     "Never report disconnected or unverified operations as successful"
-  ]
+  ],
+  "supplementaryObservation": {
+    "kind": "read-only per-RTU full SCADA auditor v1",
+    "sessionId": "54bdac4e-08dd-4b43-b623-9762b0632aa0",
+    "directory": "artifacts/soak/telemetry-audit/2026-09-21T10-45-56-870Z-54bdac4e",
+    "startedAt": "2026-09-21T10:45:56.870Z",
+    "expectedStopAt": "2026-09-21T21:37:33.079Z",
+    "instructions": "docs/operations/TELEMETRY-AUDIT.md",
+    "scope": "Additional observation; primary soak unchanged; source captured at observer start; quantity coverage is not acceptance"
+  }
 }
