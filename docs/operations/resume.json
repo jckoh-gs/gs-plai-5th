@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T19:54:16.907816+00:00",
+  "updatedAt": "2026-09-21T19:59:24.017919+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -487,7 +487,7 @@
       "persistedIndependentReview": "docs/issues/evidence/issue030-persisted-review.json"
     }
   ],
-  "nextOperationalReview": "Maintain current1.7 observer epochs and authoritative ledger. No firsthourclaim before17:45:54.307Z; inspect fresh counters/actualReady/disk beforeoriginalfreeze. Continue finalmedia/deck preparation and finalsecurity/issues review.",
+  "nextOperationalReview": "Maintain the existing 1.7.1 primary72957/audit8133/supervisor48590 sessions and preserve their counters and ISSUE030 history. The actual first-hour capture and REVIEW051 are complete; do not repeat them. At 2026-09-21T21:27:33.079009Z collect product/security/issues selected-version reviews and refresh actual Ready/image/capacity. At the original 21:37:33.079009Z freeze follow FINAL-RESTORE-PLAN and the new video, same-video PPT and delivery gates. Original deadline 22:07:33.079009Z is unchanged.",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.7.1",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
