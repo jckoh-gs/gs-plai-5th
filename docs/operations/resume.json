@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T16:16:30.102284+00:00",
+  "updatedAt": "2026-09-21T16:19:12.359668+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -18,14 +18,18 @@
   },
   "stableManifest": {
     "path": "artifacts/releases/checkpoint-1.6.0.json",
-    "state": "pending-generation-after-evidence-commit",
-    "historicalFallback": "artifacts/releases/checkpoint-1.5.0.json"
+    "state": "verified",
+    "historicalFallback": "artifacts/releases/checkpoint-1.5.0.json",
+    "sha256": "fd3fedc9dffb6bdc8d6e69982554dabde24bf3054113f02dc8370385bc238ae5",
+    "manifestSourceCommit": "b729f4287cf6a5a5527fa37f105e61bd41e135b7",
+    "independentReview": "docs/product/REVIEW-033.md",
+    "verification": "artifacts/checkpoints/release-1.6/verification.json"
   },
   "workingMilestone": {
     "productVersion": "1.6.0",
     "prdVersion": "1.13",
     "idea": "IDEA-010",
-    "state": "Functional acceptance complete REVIEW032; immutablemanifest/tag gates next"
+    "state": "Functional andimmutable1.6manifest verified; tagcreation/push next"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -37,7 +41,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "Commit completed1.6 operational/evidence state, generate immutablecheckpoint-1.6.0.json, root+independentverify source/evidence/backup/actualReady. Then runtimealias331 andfulloperational stable-v1.6 tag; preserve1.5history. Completeddeploy/outbox/restore mustnotrepeat.",
+    "Verified1.6 manifest1466hashes/sourceb729/runtime331/backup9bd. Commit immutablemanifest andREVIEW033 thencreate/push stable-v1.6(fullcheckpointcommit) andruntimealias331, afterchecking actualexistinglocal/remote tags. Recordresults; neverrepeat completeddeploy/outbox/restore.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -443,7 +447,7 @@
     "productVersion": "1.6.0",
     "prdVersion": "1.13",
     "idea": "IDEA-010",
-    "phase": "Functional acceptance complete REVIEW032; immutablemanifest/tag gates next",
+    "phase": "Functional andimmutable1.6manifest verified; tagcreation/push next",
     "uiOwner": "/root/ui",
     "browserOwner": "/root/issues",
     "fallback": "artifacts/releases/checkpoint-1.5.0.json",

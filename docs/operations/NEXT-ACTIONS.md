@@ -1,6 +1,6 @@
 # 자율 실행 인계
 
-실제 배포와 독립 기능 인수 기준은 **제품1.6.0 / PRD1.13 / IDEA010**이다. 원격 UI·API·MQTT·실제 Pod 교체 outbox 및 동일9bd 백업의 현재1.6/이전1.5 복원21근거와 메인 실제 정리를 확인했다. REVIEW032에서 기능 인수를 완료했고, 다음은 새 불변manifest와 태그 연결이다. 과거1.5/ad34 체크포인트는 보존한다. 전체 목표는 미완료다. 같은 runId와 원래 마감으로 첫 미완료 단계부터 이어간다.
+실제 배포와 독립 기능 인수 기준은 **제품1.6.0 / PRD1.13 / IDEA010**이다. 원격 UI·API·MQTT·실제 Pod 교체 outbox 및 동일9bd 백업의 현재1.6/이전1.5 복원21근거와 메인 실제 정리를 확인했다. REVIEW032에서 기능 인수를 완료했고, 새 불변manifest1466해시·실제Ready·백업의 메인 및 REVIEW033 독립 검증을 완료했고, 다음은 태그 생성·push다. 과거1.5/ad34 체크포인트는 보존한다. 전체 목표는 미완료다. 같은 runId와 원래 마감으로 첫 미완료 단계부터 이어간다.
 
 ## 현재 배포와 보존된 복구 기준
 
@@ -13,6 +13,8 @@
 - 별도 전환 전 [round2 백업](../../deploy/verification/pre-1.6.0-backup-round2.json):828805120B, SHA `b6e2e3dd458bca22ae4dc2522ce77daf47603214813cf9dbd9136c7f3d0e49be`, 생성·전송·무결성·전체 해시 완료. **이 파일의 복원 증명은 아직 없다.** 과거ad34 복원 증명을 재사용하지 않는다.
 
 현재 선택 백업은 [stable-backup-331ab9a.json](../../deploy/verification/stable-backup-331ab9a.json)의851673088B/`9bd8becb4211ee0edd9217db99e05b63d8fa3f5437a8e4cc7be2ace449cb3137`다. [복원 요약](../../deploy/verification/candidate-331ab9a/restore-summary.json)은19개 실제PASS보고서+2Pod identity를 구분한다. [메인 실제 확인](../../deploy/verification/candidate-331ab9a/root-recovery-review/summary.json): 양쪽0replicas/0Pods,4BoundPVC보존,3105/18885닫힘, 운영5RTU설정동일·HEALTHY·pending0. 완료한 복원과 제어를 재실행하지 않는다.
+
+새 [checkpoint-1.6.0.json](../../artifacts/releases/checkpoint-1.6.0.json)은 source `b729f4287cf6a5a5527fa37f105e61bd41e135b7`, SHA `fd3fedc9dffb6bdc8d6e69982554dabde24bf3054113f02dc8370385bc238ae5`,1466해시/실제Ready/백업 검증을 완료했다. [REVIEW033](../product/REVIEW-033.md)을 참조하고 이후 소스 변경 시 `--at-commit`으로 역사 출처를 확인한다.
 
 새 `stable-runtime-v1.6.0-331ab9a`는 정확한 앱 build331을, `stable-v1.6.0`은 백업 개선을 포함한 전체 운영·근거 체크포인트를 가리키도록 만들 예정이다. 기존 태그는 옮기지 않는다.
 

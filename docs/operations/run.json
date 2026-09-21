@@ -31,7 +31,7 @@
     "browserCandidate": "PASS main actual59event/read regressions; fresh1.6 form44/receipt14/event79; backward1.5 form44/receipt14; actual201 baseline restoration",
     "remote": "PASS actualmain1.6 Ready/API/UI/MQTT125 error0; actualPodreplacement identical durablebody/PUBACK; original5 settings healthy/pending0",
     "backupRestore": "PASS same851673088B/9bd exactcurrent1.6/backward1.5 freshPVC;19reports+2Podidentities=21evidence; both0/noPods/portsclosed/4BoundPVCretained; root andREVIEW032",
-    "releaseManifest": "Pending new1.6 immutablemanifest/tag; immutable1.5 fallback retained",
+    "releaseManifest": "PASS1466 hashes/actualReady/exact9bdbackup; independentREVIEW033; tags creation/push next",
     "imageSecurity": "Exact4af SBOM130/4knownunfixedmatches2CVEs; npm audit0; no zeroimagevulnerability claim",
     "media": "Correctedlocal8scene249.33s/272.706sproduction/normalrecovery/frames/subtitle technicalaudioPASS; no listeningclaim; finalvideo andsame-videoPPT pending originalwindow"
   },
@@ -117,16 +117,29 @@
     "prdVersion": "1.13",
     "runtimeCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
     "tag": "stable-v1.6.0",
-    "tagScope": "Full operational/evidence checkpoint including backup hardening; tag pending manifest verification",
+    "tagScope": "Full operational/evidence checkpoint including this immutablemanifest; exacttag target recorded aftercreation",
     "alias": "stable-runtime-v1.6.0-331ab9a",
     "aliasScope": "Exact runnable app build commit331ab9a",
     "manifest": "artifacts/releases/checkpoint-1.6.0.json",
-    "manifestState": "pending-generation-after-evidence-commit",
+    "manifestState": "verified",
     "backupEvidence": "deploy/verification/stable-backup-331ab9a.json",
     "recoveryEvidence": "deploy/verification/candidate-331ab9a/restore-summary.json",
     "independentFunctionalReview": "docs/product/REVIEW-032.md",
     "rootRecoveryReview": "deploy/verification/candidate-331ab9a/root-recovery-review/summary.json",
-    "scope": "Functional1.6 accepted; immutablemanifest/tag gates next; overallgoal finalmedia/time/delivery pending"
+    "scope": "Functional1.6 accepted; immutablemanifest/tag gates next; overallgoal finalmedia/time/delivery pending",
+    "manifestSha256": "fd3fedc9dffb6bdc8d6e69982554dabde24bf3054113f02dc8370385bc238ae5",
+    "manifestSourceCommit": "b729f4287cf6a5a5527fa37f105e61bd41e135b7",
+    "independentManifestReview": "docs/product/REVIEW-033.md",
+    "manifestVerification": {
+      "result": "PASS",
+      "manifest": "artifacts/releases/checkpoint-1.6.0.json",
+      "checkedHashes": 1466,
+      "remoteImageMatched": true,
+      "scope": "File integrity and optional deployed identity only; acceptance, restore and media verdicts remain independent",
+      "manifestSourceCommit": "b729f4287cf6a5a5527fa37f105e61bd41e135b7",
+      "independentReview": "docs/product/REVIEW-033.md"
+    },
+    "tagState": "creation-and-push-next"
   },
   "candidate": {
     "productVersion": "1.6.0",
@@ -134,7 +147,7 @@
     "idea": "IDEA-010",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T15:11:02.306411+00:00",
-    "status": "Functional acceptance complete REVIEW032; immutablemanifest/tag gates next",
+    "status": "Functional andimmutable1.6manifest verified; tagcreation/push next",
     "fallbackTag": "stable-v1.5.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.5.0.json",
     "beforeEvidence": "artifacts/checkpoints/event-time-before/result.json",
@@ -327,7 +340,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T16:16:30.102284+00:00",
+  "updatedAt": "2026-09-21T16:19:12.359668+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
