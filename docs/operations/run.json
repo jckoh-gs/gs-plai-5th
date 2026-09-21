@@ -97,7 +97,15 @@
     "manifest": "artifacts/releases/checkpoint-1.2.0.json",
     "backupEvidence": "deploy/verification/stable-backup-83d10ce.json",
     "recoveryEvidence": "deploy/verification/candidate-83d10ce/restore-summary.json",
-    "scope": "Verified functional runtime and recovery checkpoint; overall goal awaits final media/time gates"
+    "scope": "Verified functional runtime and recovery checkpoint; overall goal awaits final media/time gates",
+    "manifestVerification": {
+      "result": "PASS",
+      "manifest": "artifacts/releases/checkpoint-1.2.0.json",
+      "checkedHashes": 453,
+      "remoteImageMatched": true,
+      "scope": "File integrity and optional deployed identity only; acceptance, restore and media verdicts remain independent",
+      "manifestSourceCommit": "e080146"
+    }
   },
   "candidate": {
     "productVersion": "1.2.0",

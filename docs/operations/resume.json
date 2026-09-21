@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T10:09:55.807132+00:00",
+  "updatedAt": "2026-09-21T10:11:18.027416+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": "stable-v1.2.0",
@@ -10,7 +10,7 @@
     "productVersion": "1.2.0",
     "prdVersion": "1.9",
     "idea": "IDEA-006",
-    "state": "Runtime83d10ce verified including isolatedrestore/backward1.1; stabletags created; immutable manifest pending"
+    "state": "Verified stable runtime and immutable checkpoint1.2.0; 453hashes/actualremoteimages PASS. No unfinished app feature."
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -20,7 +20,6 @@
     "1.2.0 exact-image79 runtime tests, local88 tests, image security scan, k3s UI/export/preview/MQTT, actual outbox pod replacement, fresh backup restore and backward1.1 all PASS"
   ],
   "remainingInOrder": [
-    "Commit1.2 deployment/recovery evidence and generate/verify immutable checkpoint-1.2.0 manifest; stabletags already target83d10ce",
     "Continue observation until freeze; at freeze select verified normal version and create final video then editable PPT, inspect all outputs",
     "Before deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
   ],

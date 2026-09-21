@@ -1,0 +1,1 @@
+{"result":"PASS","manifest":"artifacts/releases/checkpoint-1.2.0.json","checkedHashes":453,"remoteImageMatched":true,"scope":"File integrity and optional deployed identity only; acceptance, restore and media verdicts remain independent"}

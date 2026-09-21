@@ -3751,7 +3751,7 @@
     {
       "id": "OPS-05",
       "description": "릴리스 manifest에 commit/dirty 파일 해시/PRD/image/backup/tests/deploy/restore 기록",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "deploy/verification/post-restart.json",
@@ -3800,15 +3800,23 @@
         {
           "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
           "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.2.0.json",
+          "sha256": "90aed8f1eb9d715efcfeb6e9d3ef8542a42bfb3c57d744bff1158016077c59b2"
+        },
+        {
+          "path": "docs/product/review-011-manifest.log",
+          "sha256": "ff7897a00bc72a51888a0d62348170c32685b29aa28ac2fe3d2b4cc228116e59"
         }
       ],
-      "assessment": "Prior1.1immutablemanifest remains verified; current1.2runtime+backup+tag functional complete. New1.2manifest creation/hash verification pending before current release provenance closure.",
+      "assessment": "Independent verify-release --at-commit --remote PASS453hashes: source/evidence at e080146, runtime83d10ce, streamed169414656backupSHA and app/broker actualReadyimage identity. Prior actualrestore acceptance retained separately. Currentcheckpoint provenance complete, not finalmedia/time completion.",
       "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
       "id": "AT-RELEASE-01",
       "description": "manifest 파싱, 실제 hash/digest 일치, 해당 revision 로그, 별도 복원 UI/MQTT/DB/outbox 검증",
-      "status": "partial",
+      "status": "verified_functional",
       "evidence": [
         {
           "path": "deploy/verification/post-restart.json",
@@ -3857,9 +3865,17 @@
         {
           "path": "deploy/verification/candidate-8599ab9/deployed-proof.json",
           "sha256": "c03cb4e3c9a5de2134baaf9e10f8bc1dfcf683fb061485afdb308be3895d071b"
+        },
+        {
+          "path": "artifacts/releases/checkpoint-1.2.0.json",
+          "sha256": "90aed8f1eb9d715efcfeb6e9d3ef8542a42bfb3c57d744bff1158016077c59b2"
+        },
+        {
+          "path": "docs/product/review-011-manifest.log",
+          "sha256": "ff7897a00bc72a51888a0d62348170c32685b29aa28ac2fe3d2b4cc228116e59"
         }
       ],
-      "assessment": "Prior1.1immutablemanifest remains verified; current1.2runtime+backup+tag functional complete. New1.2manifest creation/hash verification pending before current release provenance closure.",
+      "assessment": "Independent verify-release --at-commit --remote PASS453hashes: source/evidence at e080146, runtime83d10ce, streamed169414656backupSHA and app/broker actualReadyimage identity. Prior actualrestore acceptance retained separately. Currentcheckpoint provenance complete, not finalmedia/time completion.",
       "releaseRevalidation": "Final release commit/image full checks remain required."
     },
     {
