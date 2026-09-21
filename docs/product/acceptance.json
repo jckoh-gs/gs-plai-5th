@@ -8107,37 +8107,142 @@
     {
       "id": "UI-13",
       "description": "명령 목록별 조회 상태·마지막 성공 브라우저 시각",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "IDEA011 adopted PRD1.14/product1.7 candidate; beforeproof establishes prior issue only. Implementation and direct acceptance pending; stable1.6 and finalmedia/time gates unchanged."
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-command-list-round1/result.json",
+          "sha256": "455ebe865962c3499e5ab0b356b01456561e9f9131c50df90cf8d3bdc0039203"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-command-list-round1/supplement-result.json",
+          "sha256": "c687dec45b49a6f0290f555e870ea5f3055ee27df74516251d00d0210ec3c7c3"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-command-list-round1/source-hashes.json",
+          "sha256": "24d48d5c40d19e6c41eb8bb1b8e26c8f8433203e186d23089b6b20000b6cf954"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-unit-round1.log",
+          "sha256": "213e52238a6dbf05862ac61c5c3be3e426b69d5d67f14e8c4f8a7b0b92e5ef8f"
+        },
+        {
+          "path": "docs/product/REVIEW-035.md",
+          "sha256": "c91190fa266d39a630f24be9c135d8ec709218670d5b9a288794f6b4988f39e4"
+        }
+      ],
+      "assessment": "REVIEW035 local8groups: actualrows/order/browserchecktime, retainederror/recovery/loading-empty, lateRTU isolation, realbrowser header15482ms/body15502ms timeout/maxActive1/unmountabort, narrowstatus/alert and APIwrites0. Sourcehashes verified;302unique unitPASS. Controlled browser/loopback failures not realremote outage. Remaining broaderregression/exactimage/k3s/current-backwardrestore pending; no fullfunctional promotion."
     },
     {
       "id": "AT-COMMAND-LIST-01-01",
       "description": "loading/empty/failure·이전행보존·회복",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "IDEA011 adopted PRD1.14/product1.7 candidate; beforeproof establishes prior issue only. Implementation and direct acceptance pending; stable1.6 and finalmedia/time gates unchanged."
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-command-list-round1/result.json",
+          "sha256": "455ebe865962c3499e5ab0b356b01456561e9f9131c50df90cf8d3bdc0039203"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-command-list-round1/supplement-result.json",
+          "sha256": "c687dec45b49a6f0290f555e870ea5f3055ee27df74516251d00d0210ec3c7c3"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-command-list-round1/source-hashes.json",
+          "sha256": "24d48d5c40d19e6c41eb8bb1b8e26c8f8433203e186d23089b6b20000b6cf954"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-unit-round1.log",
+          "sha256": "213e52238a6dbf05862ac61c5c3be3e426b69d5d67f14e8c4f8a7b0b92e5ef8f"
+        },
+        {
+          "path": "docs/product/REVIEW-035.md",
+          "sha256": "c91190fa266d39a630f24be9c135d8ec709218670d5b9a288794f6b4988f39e4"
+        }
+      ],
+      "assessment": "REVIEW035 local8groups: actualrows/order/browserchecktime, retainederror/recovery/loading-empty, lateRTU isolation, realbrowser header15482ms/body15502ms timeout/maxActive1/unmountabort, narrowstatus/alert and APIwrites0. Sourcehashes verified;302unique unitPASS. Controlled browser/loopback failures not realremote outage. Remaining broaderregression/exactimage/k3s/current-backwardrestore pending; no fullfunctional promotion."
     },
     {
       "id": "AT-COMMAND-LIST-01-02",
       "description": "유한 단일poll·abort·RTU전환경합",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "IDEA011 adopted PRD1.14/product1.7 candidate; beforeproof establishes prior issue only. Implementation and direct acceptance pending; stable1.6 and finalmedia/time gates unchanged."
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-command-list-round1/result.json",
+          "sha256": "455ebe865962c3499e5ab0b356b01456561e9f9131c50df90cf8d3bdc0039203"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-command-list-round1/supplement-result.json",
+          "sha256": "c687dec45b49a6f0290f555e870ea5f3055ee27df74516251d00d0210ec3c7c3"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-command-list-round1/source-hashes.json",
+          "sha256": "24d48d5c40d19e6c41eb8bb1b8e26c8f8433203e186d23089b6b20000b6cf954"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-unit-round1.log",
+          "sha256": "213e52238a6dbf05862ac61c5c3be3e426b69d5d67f14e8c4f8a7b0b92e5ef8f"
+        },
+        {
+          "path": "docs/product/REVIEW-035.md",
+          "sha256": "c91190fa266d39a630f24be9c135d8ec709218670d5b9a288794f6b4988f39e4"
+        }
+      ],
+      "assessment": "REVIEW035 local8groups: actualrows/order/browserchecktime, retainederror/recovery/loading-empty, lateRTU isolation, realbrowser header15482ms/body15502ms timeout/maxActive1/unmountabort, narrowstatus/alert and APIwrites0. Sourcehashes verified;302unique unitPASS. Controlled browser/loopback failures not realremote outage. Remaining broaderregression/exactimage/k3s/current-backwardrestore pending; no fullfunctional promotion."
     },
     {
       "id": "AT-COMMAND-LIST-01-03",
       "description": "GET-only·계약/기존기능불변·접근성/좁은화면",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "IDEA011 adopted PRD1.14/product1.7 candidate; beforeproof establishes prior issue only. Implementation and direct acceptance pending; stable1.6 and finalmedia/time gates unchanged."
+      "status": "verified_local",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-command-list-round1/result.json",
+          "sha256": "455ebe865962c3499e5ab0b356b01456561e9f9131c50df90cf8d3bdc0039203"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-command-list-round1/supplement-result.json",
+          "sha256": "c687dec45b49a6f0290f555e870ea5f3055ee27df74516251d00d0210ec3c7c3"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-command-list-round1/source-hashes.json",
+          "sha256": "24d48d5c40d19e6c41eb8bb1b8e26c8f8433203e186d23089b6b20000b6cf954"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-unit-round1.log",
+          "sha256": "213e52238a6dbf05862ac61c5c3be3e426b69d5d67f14e8c4f8a7b0b92e5ef8f"
+        },
+        {
+          "path": "docs/product/REVIEW-035.md",
+          "sha256": "c91190fa266d39a630f24be9c135d8ec709218670d5b9a288794f6b4988f39e4"
+        }
+      ],
+      "assessment": "REVIEW035 local8groups: actualrows/order/browserchecktime, retainederror/recovery/loading-empty, lateRTU isolation, realbrowser header15482ms/body15502ms timeout/maxActive1/unmountabort, narrowstatus/alert and APIwrites0. Sourcehashes verified;302unique unitPASS. Controlled browser/loopback failures not realremote outage. Remaining broaderregression/exactimage/k3s/current-backwardrestore pending; no fullfunctional promotion."
     },
     {
       "id": "AT-COMMAND-LIST-01-04",
       "description": "실제브라우저/정확k3s·현재/하위복원",
-      "status": "pending",
-      "evidence": [],
-      "assessment": "IDEA011 adopted PRD1.14/product1.7 candidate; beforeproof establishes prior issue only. Implementation and direct acceptance pending; stable1.6 and finalmedia/time gates unchanged."
+      "status": "partial",
+      "evidence": [
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-command-list-round1/result.json",
+          "sha256": "455ebe865962c3499e5ab0b356b01456561e9f9131c50df90cf8d3bdc0039203"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-command-list-round1/supplement-result.json",
+          "sha256": "c687dec45b49a6f0290f555e870ea5f3055ee27df74516251d00d0210ec3c7c3"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-command-list-round1/source-hashes.json",
+          "sha256": "24d48d5c40d19e6c41eb8bb1b8e26c8f8433203e186d23089b6b20000b6cf954"
+        },
+        {
+          "path": "artifacts/checkpoints/candidate-1.7-unit-round1.log",
+          "sha256": "213e52238a6dbf05862ac61c5c3be3e426b69d5d67f14e8c4f8a7b0b92e5ef8f"
+        },
+        {
+          "path": "docs/product/REVIEW-035.md",
+          "sha256": "c91190fa266d39a630f24be9c135d8ec709218670d5b9a288794f6b4988f39e4"
+        }
+      ],
+      "assessment": "REVIEW035 local8groups: actualrows/order/browserchecktime, retainederror/recovery/loading-empty, lateRTU isolation, realbrowser header15482ms/body15502ms timeout/maxActive1/unmountabort, narrowstatus/alert and APIwrites0. Sourcehashes verified;302unique unitPASS. Controlled browser/loopback failures not realremote outage. Remaining broaderregression/exactimage/k3s/current-backwardrestore pending; no fullfunctional promotion."
     }
   ],
   "reviewedSource": {

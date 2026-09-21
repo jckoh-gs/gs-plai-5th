@@ -149,14 +149,15 @@
     "idea": "IDEA-011",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T16:24:46.061882+00:00",
-    "status": "Adopted contract beforeimplementation; UI command-list polling visibility only",
+    "status": "Localgates PASS; sourcecommit/image/security pending",
     "fallbackTag": "stable-v1.6.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.6.0.json",
     "beforeEvidence": "artifacts/checkpoints/command-list-readonly-before/result.json",
     "adoptionReview": "docs/product/REVIEW-034.md",
     "implementationOwner": "/root/ui",
     "browserOwner": "/root/issues",
-    "scope": "List loading/empty/failure/recovery/lastbrowser-success, single boundedpoll/RTUisolation. No serverDBAPI/control/exportchanges/newdependencies."
+    "scope": "List loading/empty/failure/recovery/lastbrowser-success, single boundedpoll/RTUisolation. No serverDBAPI/control/exportchanges/newdependencies.",
+    "localSummary": "artifacts/checkpoints/candidate-1.7-local-summary.json"
   },
   "previousStableCheckpoints": [
     {
@@ -294,7 +295,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T16:24:46.061882+00:00",
+  "updatedAt": "2026-09-21T16:34:07.028477+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",

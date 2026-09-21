@@ -1,0 +1,53 @@
+{
+  "mode": "candidate",
+  "version": "1.7.0",
+  "actualOnly": false,
+  "asset": {
+    "path": "/assets/index-qlOuxY80.js",
+    "sha256": "154fe2de1f039fe27fbcce6793e15716e843ca3814c2d361392a2207b6918dfc"
+  },
+  "checks": [
+    "Actual existing list order/source/status, browser-success time and accessible status",
+    "Controlled503 retains rows/time, alwaysvisible list alert despite healthy SSE, raw error suppressed",
+    "Actual GET recovery clears alert and advances browser-success time",
+    "Held initial loading, first503, actual empty list are distinct; RTU switch resets error/time/rows",
+    "Delayed A has at most one GET; late A after switch does not contaminate actual-empty B",
+    "Held response headers timeout with abort and one in-flight GET",
+    "Actual browser stalled HTTP body aborts within15s with no overlap; unmount aborts and cancels next poll",
+    "Narrow retained-error view, accessible alert/status; no automatic command writes"
+  ],
+  "apiWrites": 0,
+  "setupWrites": 0,
+  "controlledFaultScope": "Only browser responses / owned loopback HTTP server; never actual remote outage",
+  "pageErrors": [],
+  "actual": {
+    "rtuId": "5a4310c0-d844-412d-bb90-1e8065ef0ffe",
+    "rows": [
+      {
+        "id": "932600bd-775a-4209-9c48-7408b27df0a5",
+        "action": "set_target",
+        "source": "REST",
+        "status": "expired"
+      }
+    ],
+    "checkedAt": "2026-09-21T16:30:05.290Z",
+    "browserWindowStart": "2026-09-21T16:30:05.151Z"
+  },
+  "recovery": {
+    "before": "2026-09-21T16:30:05.290Z",
+    "after": "2026-09-21T16:30:09.298Z",
+    "controlledFailures": 1
+  },
+  "headerTimeout": {
+    "elapsedMs": 15482,
+    "requests": 1
+  },
+  "bodyTimeout": {
+    "elapsedMs": 15502,
+    "requests": 1,
+    "maxActive": 1,
+    "closed": 1
+  },
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:30:47.512Z"
+}

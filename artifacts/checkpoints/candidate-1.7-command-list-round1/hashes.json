@@ -1,0 +1,18 @@
+{
+  "capture-panel.cjs": "f8ca32ee8e8d1d75ea01c9ac344476d6b9442e7d293359df00440f68a3b21b96",
+  "retained-rows-error.png": "c7bcc2d083f7c45ea9ed5d687c53f6184f8210d2e62daee381b2219d7a343392",
+  "narrow-error.png": "26537843197236f410a3f133fbbc3afe62447bb893f0fba1fa29e8d5f60ef19f",
+  "supplement-desktop.png": "1e2006016f49b4c403bbaa0b19e53d99d6a81c13bda2d1729af52c2774f362bd",
+  "supplement-result.json": "c687dec45b49a6f0290f555e870ea5f3055ee27df74516251d00d0210ec3c7c3",
+  "source-hashes.json": "24d48d5c40d19e6c41eb8bb1b8e26c8f8433203e186d23089b6b20000b6cf954",
+  "result.json": "455ebe865962c3499e5ab0b356b01456561e9f9131c50df90cf8d3bdc0039203",
+  "narrow-error.html": "dd41cc2a73a6acdda35350c2f7c037426fed0b88a3a2a6477c5ff759e675fb8c",
+  "supplement-narrow.png": "13920dbb6a44a088701f0cf85d9900a6b15f91d2df9e6fb06f542c910fbd6be9",
+  "actual-list.html": "0ab0663777fc58d8f56967e4664688a793231fc07be453fe634cd7022ecf4625",
+  "terminal.json": "2cf04a53bf024b6efecdecaa0985a26e0b39c4b9bb8114a77f0840bba4cda10b",
+  "actual-list.png": "daf33bc3374b38237b2b3735d5fc58402dc729f3cba9e8d6296cb1f699e3a97b",
+  "retained-rows-error.html": "591497828d50bd254739817b7e9748ca8a4b7dccf1491f7003ccfbb0eae7bbb2",
+  "source/check-command-list-freshness.cjs": "b7e00812dc28419d9389e11db338f491ef64bf9ffd741761ea0f3f9699073102",
+  "source/command-list.js": "18e353fb7119f39724209f662458bab82e5737e827ad1013529cdfff3011f026",
+  "source/src.jsx": "ffbb204d9275fc14ebfdd9ea3ea488494ca2c0c97271f6af69f69993ddbfa592"
+}

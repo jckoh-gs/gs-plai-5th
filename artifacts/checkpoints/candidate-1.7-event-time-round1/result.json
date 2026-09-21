@@ -1,0 +1,147 @@
+{
+  "mode": "candidate",
+  "version": "1.7.0",
+  "checks": [
+    "Actual existing API events match rendered IDs/order/messages/levels/UTC attributes",
+    "Synthetic missing/malformed/leap/KST-midnight and host timezone independence, narrow layout"
+  ],
+  "assets": [
+    {
+      "path": "/assets/index-qlOuxY80.js",
+      "sha256": "154fe2de1f039fe27fbcce6793e15716e843ca3814c2d361392a2207b6918dfc"
+    }
+  ],
+  "mutations": 0,
+  "actualEvents": [
+    {
+      "id": 4,
+      "created": "2026-09-21T16:29:42.378Z"
+    },
+    {
+      "id": 3,
+      "created": "2026-09-21T16:29:42.376Z"
+    },
+    {
+      "id": 2,
+      "created": "2026-09-21T16:29:42.372Z"
+    },
+    {
+      "id": 1,
+      "created": "2026-09-21T16:29:26.691Z"
+    }
+  ],
+  "actualRows": [
+    {
+      "id": "4",
+      "cells": [
+        "2026-09-22 01:29:42.378",
+        "INFO",
+        "RTU 등록: Candidate1.7 hybrid ad03c955-b354-46bd-8572-134d097063bc"
+      ],
+      "datetime": "2026-09-21T16:29:42.378Z",
+      "title": "원본 UTC 2026-09-21T16:29:42.378Z",
+      "aria": "2026-09-22 01:29:42.378 KST (UTC+09:00) · 원본 UTC 2026-09-21T16:29:42.378Z"
+    },
+    {
+      "id": "3",
+      "cells": [
+        "2026-09-22 01:29:42.376",
+        "INFO",
+        "RTU 등록: Candidate1.7 solar 176c0aeb-29c4-4636-8d77-6fd1725c6d82"
+      ],
+      "datetime": "2026-09-21T16:29:42.376Z",
+      "title": "원본 UTC 2026-09-21T16:29:42.376Z",
+      "aria": "2026-09-22 01:29:42.376 KST (UTC+09:00) · 원본 UTC 2026-09-21T16:29:42.376Z"
+    },
+    {
+      "id": "2",
+      "cells": [
+        "2026-09-22 01:29:42.372",
+        "INFO",
+        "RTU 등록: Candidate1.7 wind b7ce1f0f-74c2-4413-bffb-ecfe8b7d99eb"
+      ],
+      "datetime": "2026-09-21T16:29:42.372Z",
+      "title": "원본 UTC 2026-09-21T16:29:42.372Z",
+      "aria": "2026-09-22 01:29:42.372 KST (UTC+09:00) · 원본 UTC 2026-09-21T16:29:42.372Z"
+    },
+    {
+      "id": "1",
+      "cells": [
+        "2026-09-22 01:29:26.691",
+        "INFO",
+        "GRID 1.7.0 시작"
+      ],
+      "datetime": "2026-09-21T16:29:26.691Z",
+      "title": "원본 UTC 2026-09-21T16:29:26.691Z",
+      "aria": "2026-09-22 01:29:26.691 KST (UTC+09:00) · 원본 UTC 2026-09-21T16:29:26.691Z"
+    }
+  ],
+  "synthetic": {
+    "scope": "Browser route fulfillment, never server data",
+    "inputs": [
+      {
+        "id": 9004,
+        "created": "2024-02-29T15:00:00.000Z",
+        "level": "INFO",
+        "message": "leap midnight boundary"
+      },
+      {
+        "id": 9003,
+        "created": "2026-09-21T14:59:59.000Z",
+        "level": "INFO",
+        "message": "before KST midnight"
+      },
+      {
+        "id": 9002,
+        "created": "not-a-time",
+        "level": "INFO",
+        "message": "malformed"
+      },
+      {
+        "id": 9001,
+        "level": "INFO",
+        "message": "missing",
+        "timestamp": "2026-01-01T00:00:00.000Z"
+      },
+      {
+        "id": 9000,
+        "created": "2025-02-29T00:00:00.000Z",
+        "createdAt": "2026-01-01T00:00:00.000Z",
+        "level": "INFO",
+        "message": "invalid calendar no fallback"
+      }
+    ],
+    "rendered": [
+      {
+        "id": "9004",
+        "text": "2024-03-01 00:00:00.000",
+        "datetime": "2024-02-29T15:00:00.000Z"
+      },
+      {
+        "id": "9003",
+        "text": "2026-09-21 23:59:59.000",
+        "datetime": "2026-09-21T14:59:59.000Z"
+      },
+      {
+        "id": "9002",
+        "text": "—",
+        "datetime": null
+      },
+      {
+        "id": "9001",
+        "text": "—",
+        "datetime": null
+      },
+      {
+        "id": "9000",
+        "text": "—",
+        "datetime": null
+      }
+    ]
+  },
+  "actualOnly": false,
+  "scope": "Read-only authenticated events; current credential absence checked, not a general PII sanitization guarantee",
+  "pageErrors": [],
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:31:02.855Z"
+}

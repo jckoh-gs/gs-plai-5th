@@ -1,0 +1,112 @@
+{
+  "startedAt": "2026-09-21T16:29:42.344Z",
+  "scope": "Root-owned isolated1.7 localfixture setup; never main API. Setup writes are separate from read-only acceptance.",
+  "base": "http://127.0.0.1:3111",
+  "version": "1.7.0",
+  "requests": [
+    {
+      "name": "Candidate1.7 wind b7ce1f0f-74c2-4413-bffb-ecfe8b7d99eb",
+      "type": "wind",
+      "csvPath": "samples/wind.csv",
+      "csvSha256": "9003d6a7cec7ab4bc029a8aa02085a3c6e6c8aeb7da5004a012b6037e90d2891",
+      "state": "created",
+      "id": "5a4310c0-d844-412d-bb90-1e8065ef0ffe",
+      "status": 201
+    },
+    {
+      "name": "Candidate1.7 solar 176c0aeb-29c4-4636-8d77-6fd1725c6d82",
+      "type": "solar",
+      "csvPath": "samples/solar.csv",
+      "csvSha256": "ca636abde604fef9efa9ef005baefdddc2faf82bfa41be1b573d2b4d514114b4",
+      "state": "created",
+      "id": "0552914a-f235-4e32-89ba-65451ee24f93",
+      "status": 201
+    },
+    {
+      "name": "Candidate1.7 hybrid ad03c955-b354-46bd-8572-134d097063bc",
+      "type": "hybrid",
+      "csvPath": "samples/hybrid.csv",
+      "csvSha256": "c400918bb97a7fd173e2401f88db04cbb3edcfd9f62bb9c603a62d3527bf12bb",
+      "state": "created",
+      "id": "9bacc632-80eb-4214-b3c2-58a38a913767",
+      "status": 201
+    }
+  ],
+  "command": {
+    "state": "stored",
+    "plantId": "5a4310c0-d844-412d-bb90-1e8065ef0ffe",
+    "request": {
+      "schemaVersion": 2,
+      "commandId": "932600bd-775a-4209-9c48-7408b27df0a5",
+      "action": "set_target",
+      "targetKw": 125,
+      "expiresAt": "2026-09-21T16:29:41.379Z",
+      "timeoutSeconds": 5
+    },
+    "status": "expired",
+    "result": {
+      "commandId": "932600bd-775a-4209-9c48-7408b27df0a5",
+      "plantId": "5a4310c0-d844-412d-bb90-1e8065ef0ffe",
+      "source": "REST",
+      "action": "set_target",
+      "updatedAt": "2026-09-21T16:29:42.380Z",
+      "actualKw": null,
+      "errorKw": null,
+      "reason": null,
+      "request": {
+        "schemaVersion": 2,
+        "commandId": "932600bd-775a-4209-9c48-7408b27df0a5",
+        "action": "set_target",
+        "targetKw": 125,
+        "expiresAt": "2026-09-21T16:29:41.379Z",
+        "timeoutSeconds": 5
+      },
+      "canonical": "{\"action\":\"set_target\",\"commandId\":\"932600bd-775a-4209-9c48-7408b27df0a5\",\"expiresAt\":\"2026-09-21T16:29:41.379Z\",\"schemaVersion\":2,\"targetKw\":125,\"timeoutSeconds\":5}",
+      "runId": "828fb416-b20b-4be8-9d25-d5fcbd660d68",
+      "status": "expired",
+      "acceptedAt": "2026-09-21T16:29:42.380Z",
+      "expiresAt": "2026-09-21T16:29:41.379Z",
+      "timeoutSeconds": 5,
+      "toleranceKw": 1,
+      "priority": 50,
+      "targets": [
+        {
+          "id": "WT-01",
+          "targetKw": 62.5
+        },
+        {
+          "id": "WT-02",
+          "targetKw": 62.5
+        }
+      ]
+    }
+  },
+  "asset": {
+    "path": "/assets/index-qlOuxY80.js",
+    "sha256": "154fe2de1f039fe27fbcce6793e15716e843ca3814c2d361392a2207b6918dfc"
+  },
+  "existingEvents": [
+    {
+      "id": 4,
+      "created": "2026-09-21T16:29:42.378Z"
+    },
+    {
+      "id": 3,
+      "created": "2026-09-21T16:29:42.376Z"
+    },
+    {
+      "id": 2,
+      "created": "2026-09-21T16:29:42.372Z"
+    },
+    {
+      "id": 1,
+      "created": "2026-09-21T16:29:26.691Z"
+    }
+  ],
+  "completedAt": "2026-09-21T16:29:42.382Z",
+  "result": "PASS",
+  "setupWrites": {
+    "registrations": 3,
+    "expiredCommand": 1
+  }
+}

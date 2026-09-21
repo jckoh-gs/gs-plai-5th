@@ -1,0 +1,97 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:33:46.750674+00:00",
+  "productVersion": "1.7.0",
+  "prdVersion": "1.14",
+  "scope": "Local candidate source/build/read-onlybrowserfixture+ownedmutatingregressions. Not image/k3s/recovery acceptance.",
+  "unit": {
+    "tests": 302,
+    "pass": 302,
+    "path": "artifacts/checkpoints/candidate-1.7-unit-round1.log",
+    "terminalHandle": 35893,
+    "exitCode": 0
+  },
+  "actualMqttIntegration": {
+    "handle": 18024,
+    "exitCode": 0,
+    "path": "artifacts/checkpoints/candidate-1.7-integration-round1.log"
+  },
+  "actualMqttAdvanced": {
+    "handle": 53046,
+    "exitCode": 0,
+    "path": "artifacts/checkpoints/candidate-1.7-advanced-round1.log"
+  },
+  "browser": {
+    "auth": {
+      "path": "artifacts/checkpoints/candidate-1.7-auth-round1/result.json",
+      "sha256": "52a61e2d556474f902ab298175bfa19ba9f28f4f2b37a98afafecef728a8f868",
+      "result": "PASS"
+    },
+    "event-time": {
+      "path": "artifacts/checkpoints/candidate-1.7-event-time-round1/result.json",
+      "sha256": "5e6862e23ca99fc97198c2c1840e1ec08789c9289a51e355ef43f2a1c9e9ce8d",
+      "result": "PASS",
+      "checks": 2
+    },
+    "command-form": {
+      "path": "artifacts/checkpoints/candidate-1.7-command-form-round1/result.json",
+      "sha256": "25cbe11104b97b2fa755a9a706112d2da64a40d9e7545a7ff4f631fe49cc5baf",
+      "result": "PASS",
+      "checks": 44,
+      "cleanupSha256": "b1249efc589158745079f6fa95e382b281fa859e3824f8cb687fe9fcb9c7f9dc"
+    },
+    "command-receipts": {
+      "path": "artifacts/checkpoints/candidate-1.7-command-receipts-round1/result.json",
+      "sha256": "fa2030735460a7716f381e7c05ec1737dd72db07ce2d840d8cf37f6ad9339dd8",
+      "result": "PASS",
+      "checks": 14,
+      "rootOwnedSettingsMatchActualRegistrationBaselines": true,
+      "postCount": 38,
+      "cleanupSha256": "8e20042b6f23e99c9b8aeade7de2ddfe8c3211c2ee5b3979b1df58b7a3e3c135"
+    },
+    "preview": {
+      "path": "artifacts/checkpoints/candidate-1.7-preview-round1/race.json",
+      "sha256": "2f31432dfefbbad77cb10c90d477f12879bb8206a15c886f6984e0b6c1cc185f",
+      "result": "PASS"
+    },
+    "export": {
+      "path": "artifacts/checkpoints/candidate-1.7-export-round1/result.json",
+      "sha256": "0c1ae8ddacfa4f81407102ced92ce0cc82cb4c56252e5e0ccfe1ebc0eaa0507e",
+      "result": "PASS",
+      "checks": 2
+    },
+    "command-list": {
+      "path": "artifacts/checkpoints/candidate-1.7-command-list-round1/result.json",
+      "sha256": "455ebe865962c3499e5ab0b356b01456561e9f9131c50df90cf8d3bdc0039203",
+      "result": "PASS",
+      "checks": 8
+    }
+  },
+  "rootVisualReview": {
+    "desktop": "candidate-1.7-command-list-round1/supplement-desktop.png",
+    "narrow": "candidate-1.7-command-list-round1/supplement-narrow.png",
+    "verdict": "List-specificHTTP503,lastbrowserconfirmationandretainedexpiredrowvisible; narrowwarningwraps,tablehorizontaloverflowinsideexistingcontainer"
+  },
+  "sourceHashes": {
+    "web/src.jsx": "ffbb204d9275fc14ebfdd9ea3ea488494ca2c0c97271f6af69f69993ddbfa592",
+    "web/command-list.js": "18e353fb7119f39724209f662458bab82e5737e827ad1013529cdfff3011f026",
+    "web/command-form.js": "ba71bfda52cb154ab15765f5ebc99f8cab8e3ae80aed3d90543e5228e4d3b67e",
+    "web/command-receipts.js": "576b56a4799aef06ec70ff3b0db124744bd4d4d865cbdc08801a5c6262665122",
+    "web/event-time.js": "251c71e39967b05c99ca054c093385a71728200db5f407d8cd6dc667972a7c28"
+  },
+  "asset": {
+    "path": "/assets/index-qlOuxY80.js",
+    "sha256": "154fe2de1f039fe27fbcce6793e15716e843ca3814c2d361392a2207b6918dfc"
+  },
+  "dependencyGraph": "Whole lockfile unchanged from331ab9a afterrootversionnormalization; no newOSS",
+  "independentReview": "docs/product/REVIEW-035.md",
+  "securityReview": "docs/security/COMMAND-LIST-FRESHNESS-REVIEW.md",
+  "aggregationNote": "First root aggregation selected nonexistent preview/result.json; corrected to actual race.json. No test repeated or product failure inferred.",
+  "remaining": [
+    "Exact immutable image/buildprovenance/security",
+    "Main k3s gates",
+    "Same-snapshot current1.7/backward1.6 restore",
+    "Immutablecheckpoint/tag",
+    "Original finalmedia/time/delivery"
+  ]
+}

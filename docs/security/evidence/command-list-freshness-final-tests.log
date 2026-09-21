@@ -1,0 +1,30 @@
+✔ original1.4 browser fixture remains tied to its known local API and bundle (0.361792ms)
+✔ new1.5 browser fixture requires an explicit reviewed bundle before any writes (0.226541ms)
+✔ all fixture modes refuse primary and mismatched endpoints (0.165875ms)
+✔ restore mode uses isolated ports and remote credentials with explicit candidate identity (0.048ms)
+✔ unreviewed product or target modes fail closed (0.063208ms)
+✔ approved1.6 uses a separate localfixture and never falls back to1.5 (0.071292ms)
+✔ approved1.7 form fixture is isolated3111 with an explicit candidate bundle (0.055291ms)
+✔ retains last rows and browser completion time through failure, recovers with fresh success and distinguishes empty (1.372375ms)
+✔ slow request never overlaps, finite timeout aborts and late success cannot replace error (0.235791ms)
+✔ switch/unmount aborts owned work, clears all timers and discards late old RTU results (0.176458ms)
+✔ reader authenticates GET only, caps order at20, rejects malformed bodies and never reads HTTP error bodies (0.374375ms)
+✔ timeout covers stalled JSON body after successful headers (0.167041ms)
+✔ readonly event harness requires explicit matching reviewed target before I/O (0.5955ms)
+✔ event source gate refuses missing version/hash/token/output and unsafe path (0.137792ms)
+✔ receipt browser target rejects primary, external, credentials and mode mismatch before I/O (0.434625ms)
+✔ isolated restore requires exact approved lowercase digest, private token and approved receipt versions (0.182083ms)
+✔ default local mode remains isolated3109 with original private candidate token (0.049209ms)
+✔ approved1.6 receipt target separateslocalport/token and keepsrestore safeguards (0.08475ms)
+✔ approved1.7 receipt fixture is isolated3111 and refuses prior or primary ports (0.082125ms)
+✔ malicious timestamp and fallback contents are never returned or coerced (0.424167ms)
+✔ fixture requires exact explicit read target version hash and private token path (0.189459ms)
+✔ event regression candidate1.7 remains read-only and requires its exact3111 target (0.076167ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 45.85675

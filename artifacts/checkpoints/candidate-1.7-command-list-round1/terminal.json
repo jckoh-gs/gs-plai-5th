@@ -1,0 +1,14 @@
+{
+  "full": {
+    "handle": 74819,
+    "exitCode": 0,
+    "checks": 8
+  },
+  "visualSupplement": {
+    "handle": 73455,
+    "exitCode": 0
+  },
+  "originalScreenshots": "Viewport top; did not include list panel. Original files retained.",
+  "supplementScreenshots": "Scrolled list panel: independently visually reviewed desktop and390px.",
+  "setupWrites": "Root-owned setup3registrations+1expiredPOST before test; not test writes"
+}

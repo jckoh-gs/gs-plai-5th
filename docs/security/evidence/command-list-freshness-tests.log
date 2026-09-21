@@ -1,0 +1,13 @@
+✔ retains last rows and browser completion time through failure, recovers with fresh success and distinguishes empty (1.324ms)
+✔ slow request never overlaps, finite timeout aborts and late success cannot replace error (0.234917ms)
+✔ switch/unmount aborts owned work, clears all timers and discards late old RTU results (0.162709ms)
+✔ reader authenticates GET only, caps order at20, rejects malformed bodies and never reads HTTP error bodies (0.318416ms)
+✔ timeout covers stalled JSON body after successful headers (0.159708ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33.129334

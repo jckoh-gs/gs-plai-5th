@@ -2,8 +2,8 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{randomUUID,createHash}=require('node:crypto');
 function fixtureConfig(env=process.env){
  const mode=env.GRID_FIXTURE_TARGET||'local';if(!['local','isolated-restore'].includes(mode))throw Error('Unknown receipt fixture target');
- const version=env.GRID_CANDIDATE_VERSION||'1.5.0';if(!['1.5.0','1.6.0'].includes(version))throw Error('Unreviewed receipt product version');
- const minor=version.slice(0,-2),allowed=mode==='isolated-restore'?'http://127.0.0.1:3105':version==='1.6.0'?'http://127.0.0.1:3110':'http://127.0.0.1:3109',base=env.GRID_URL||allowed;
+ const version=env.GRID_CANDIDATE_VERSION||'1.5.0';if(!['1.5.0','1.6.0','1.7.0'].includes(version))throw Error('Unreviewed receipt product version');
+ const minor=version.slice(0,-2),allowed=mode==='isolated-restore'?'http://127.0.0.1:3105':version==='1.7.0'?'http://127.0.0.1:3111':version==='1.6.0'?'http://127.0.0.1:3110':'http://127.0.0.1:3109',base=env.GRID_URL||allowed;
  if(base!==allowed)throw Error('Receipt fixture URL mismatch; main3104 and external targets are forbidden');
  const expectedBundleHash=env.EXPECTED_BUNDLE_SHA256;
  if(mode==='isolated-restore'&&!/^[a-f0-9]{64}$/.test(expectedBundleHash||''))throw Error('Restore requires explicit verified bundle SHA256');

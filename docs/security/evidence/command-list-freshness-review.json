@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-09-21T16:28:44.084946+00:00",
+  "status": "Source/focused tests passed; no browser/image/deployment acceptance claimed",
+  "focusedTestsPassed": 5,
+  "packageGraphEntriesUnchangedVs331ab9a": true,
+  "sha256": {
+    "web/command-list.js": "bad33b45207576e38e804d02ebc58f36ded5d5e27b1e6dc43fb62d03fe520c5d",
+    "web/src.jsx": "18cc498bacfc3cbbc46ec4c517e759a670ef28c2481f43612c59fed2d74e80a5",
+    "tests/command-list.test.js": "465f4aa955a42fa80abff8e7eafff0b6747e2f8ef0161dd0c2bbcce1590619ef",
+    "package.json": "b9704186e38d28d45eafccdc9a7c3dcf12ae5ccf57ab45300189834ceb9af46d",
+    "package-lock.json": "da0497622c3937cf3683ccec0827cf4da532fce7b60d99cc4cdc021ebdb10f09"
+  },
+  "resolvedFinding": "Stop now clears owned request-deadline timer as well as poll timer; response body completion rechecks abort",
+  "finalFollowup": {
+    "checkedAt": "2026-09-21T16:30:08.022956+00:00",
+    "sha256": {
+      "web/src.jsx": "ffbb204d9275fc14ebfdd9ea3ea488494ca2c0c97271f6af69f69993ddbfa592",
+      "web/command-list.js": "18e353fb7119f39724209f662458bab82e5737e827ad1013529cdfff3011f026",
+      "scripts/browser-command-form.cjs": "a96fc6faf4f7bab780f390bf10eeabd733b14784f3ab9acb39b664ca04bcf80e",
+      "scripts/browser-command-receipts.cjs": "610682fe86082d4516c759d4dfa946397d4007347b9a8522cc8ce756bf85cf99",
+      "scripts/browser-event-time.cjs": "9f63f93075f1f4df8ec80b58b14f1fab3ff3b7456b85d9ba68c961512da6aaf3"
+    },
+    "scope": "Phase-only live status/static success time; null-safe error catch; explicit1.7 fixture routing",
+    "testLog": "command-list-freshness-final-tests.log"
+  }
+}
