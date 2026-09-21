@@ -1,0 +1,62 @@
+{
+  "rehearsal": true,
+  "scope": "Preparation only; no final acceptance",
+  "terminalExitCode": 0,
+  "videoSeconds": 249.33,
+  "productionSeconds": 272.706,
+  "fullDecode": true,
+  "audioTechnicalVerification": {
+    "meanDb": -19.3,
+    "listened": false,
+    "scope": "Signal, decode, source narration/SRT text and timeline only; no auditory pronunciation assessment",
+    "sample": "review-scene5-audio.wav"
+  },
+  "pageErrors": [],
+  "srt": {
+    "cues": 31,
+    "maxDeviationSeconds": 2.842170943040401e-14,
+    "withinVideo": true
+  },
+  "visualReview": {
+    "encodedRepresentativeFrames": 8,
+    "additionalReceiptCapture": "review-receipt.png",
+    "pointerAndClickHaloVisible": true,
+    "KoreanSubtitlesLegible": true,
+    "metricsRightColumnComplete": true,
+    "CSVZoomRetained": true,
+    "actual3DCameraActions": true,
+    "overall": "rehearsal representative-frame review passed",
+    "scope": "Eight sampled encoded frames plus receipt detail, not every video frame; no final acceptance"
+  },
+  "claimsReview": {
+    "scope": "rehearsal-only",
+    "MQTT": "accepted → executing → completed; actual125kW/error0",
+    "REST": "Visible stored-status query refreshed latest set_limit receipt to completed; earlier stop superseded by start, not completed stop",
+    "scenario": "actual201 registration and observed scenario restore new runId",
+    "external": "KMA/AWS/external production VPP not verified"
+  },
+  "recovery": {
+    "result": "PASS",
+    "path": "source/demo-recovery.json",
+    "settingsMatched": true,
+    "existingUnchanged": true,
+    "existingCount": 12,
+    "exactPriorRandomTrajectoryRestored": false
+  },
+  "finalWindow": {
+    "observedVideoProductionMinutes": 4.545100000000001,
+    "remainingOf30Minutes": 25.4549,
+    "limitation": "Local rehearsal timing only; final remote validation, visual review, 14-slide generation and packaging still require budget."
+  },
+  "sourceSnapshots": {
+    "files": 41,
+    "hashes": "source-hashes.json"
+  },
+  "videoSha256": "5f8a059475caeb9f6c2dd33bab9f888a1934af686a910ad2d3a4ecab843b2d2f",
+  "terminal": {
+    "toolHandle": 77945,
+    "exitCode": 0,
+    "independentRecoveryNeeded": false
+  },
+  "preparationFailure": "First fixture request without CSV rejected400 before creation/recording; corrected, record run exit0"
+}

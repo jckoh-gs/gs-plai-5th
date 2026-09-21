@@ -4,7 +4,7 @@
   "freezeAt": "2026-09-21T21:37:33.079009+00:00",
   "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
   "timezone": "Asia/Seoul",
-  "phase": "stability",
+  "phase": "candidate-verification",
   "scope": "greenfield; mandatory k3s deployment",
   "context": "charles-k3s",
   "namespace": "gs-plai-5h",
@@ -24,18 +24,16 @@
     "deployment": "/root/deployment"
   },
   "checks": {
-    "localUnit": "PASS: 240 main workstation tests plus3 independent security tests =243 unique; related44 security-selection tests overlap these totals",
-    "exactImageUnit": "PASS:77 app-only tests in21files from exact fdd0491/c19 image; workstation media/operations/UI tests are not claimed as image tests",
-    "localIntegration": "PASS exact fdd0491 image actual isolated broker integration",
-    "localAdvanced": "PASS exact fdd0491 image actual isolated broker advanced integration",
-    "browserCommandForm": "PASS local43checks plus same-form correction delta; fresh1.4 restore44checks/5actualcommands; main read-only19checks without command submission",
-    "browserRegression": "PASS authentication/stale/SSE/narrow, preview/export, selectedRTU scenario and KMA feedback; actual remote served assets separately verified",
-    "remote": "PASS actualReady1.4 image/UI; actualMQTT125kW/error0/accepted-executing-completed/dedup/60samples; actualoutboxPodreplacement same persisted and received body/PUBACK",
-    "backupRestore": "PASS exact594944000B snapshot SHA be09a5f5e1721970ec7f25197fcf4f3db504f6f6ad4765080ba301a0c7fd760a in fresh1.4 and backward1.3;17restoreproofs and7mainproofs independently reviewed in REVIEW021",
-    "releaseManifest": "PASS checkpoint1.4 sourcebcc010c/runtimefdd0491;962hashes/actualReady app+broker/backupSHA independently verified REVIEW022; immutable manifest retained",
-    "imageSecurity": "Exact c19 SBOM130 components;4 unchanged unfixed vulnerability matches from2 CVEs; npm audit0. See VULNERABILITY-MANAGEMENT.md; not a claim of zero image vulnerabilities",
-    "media": "Preparation verified only; new final video and same-video editablePPT/fullrender still pending original freeze window",
-    "operationalDeadline": "Historical preparation evidence retained:38 selected boundary tests and actual688hash1.3 verification; current1.4 release proof separately recorded above"
+    "localUnit": "PASS267unique currentworkstation tests aftermedia operationalchanges; runtime6dlocal263 was separatelyverified",
+    "exactImageUnit": "PASS77app-only tests21files inexact6d/2fd image; UI/media/operations notshipped andnotcountedasimagetests",
+    "localIntegration": "PASS exactimage isolatedactualbroker integration",
+    "localAdvanced": "PASS exactimage isolatedactualbroker advanced",
+    "browserCandidate": "PASS localreceipt14cases/form44checks/4priorbrowserregressions; currentmainverification inprogress",
+    "remote": "PASS actual1.5 Ready/UI/API/MQTT125/error0 and actualPod replacement with identical durableoutboxbody/PUBACK; original5settings restored",
+    "backupRestore": "Exact719527936B/ad34 normal1.5backup rootSHA/modeverified; isolatedcurrent1.5/backward1.4 acceptance inprogress; stable1.4 remainsfallback",
+    "releaseManifest": "Candidate1.5manifestpending; checkpoint1.4 immutablefallback",
+    "imageSecurity": "Exact2fd SBOM130/4knownunfixedmatches2CVEs unchanged; freshall-dependency npm audit0, nozeroimagevulnerabilityclaim",
+    "media": "Correctedlocal8scene249.33s/272.706sproduction/normalrecovery/frames/subtitle technicalaudioPASS; no listeningclaim; finalvideo andsame-videoPPT pending originalwindow"
   },
   "notes": [
     "Existing sibling implementation must not be copied or reused.",
@@ -46,13 +44,13 @@
   "requestedModel": "Codex Astra",
   "modelVerification": "Agents inherited main session model; exact runtime model identifier not exposed by available goal tools.",
   "deployment": {
-    "observedAt": "2026-09-21T13:46:07.542Z",
-    "status": "Verified stable1.4 functional runtime and exactsnapshot current/backwardrestore; finalmedia/time/deliverypending",
-    "sourceCommit": "fdd0491a5c08901962f46ac845f8582921150d45",
-    "prdVersion": "1.11",
+    "observedAt": "2026-09-21T14:58:02.945Z",
+    "status": "Candidate1.5 actualReady; mainUI/MQTT/outboxPASS; exactcurrent/backwardrestore inprogress; stablefallback1.4",
+    "sourceCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+    "prdVersion": "1.12",
     "context": "charles-k3s",
     "namespace": "gs-plai-5h",
-    "appImage": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4",
+    "appImage": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
     "brokerImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
     "registryImage": "127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c",
     "uiTunnel": "http://127.0.0.1:3104",
@@ -62,7 +60,8 @@
     "recoveryReplicas": 0,
     "name": "grid",
     "mqttImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
-    "productVersion": "1.4.0"
+    "productVersion": "1.5.0",
+    "podUid": "62d0d7fd-915d-41e4-990b-5714fc7a6901"
   },
   "backup": {
     "result": "PASS",
@@ -125,7 +124,7 @@
     "idea": "IDEA-009",
     "ideaRevision": 1,
     "startedAt": "2026-09-21T14:14:28.603123+00:00",
-    "status": "Exactimage77app/actualbroker integration/advanced/servedassets/securityPASS and immutableimagepushed. Mainstable1.4 unchanged; awaitingfirsthour capture and remote/current-backwardrestore gates.",
+    "status": "Mainacceptance/outboxPASS and exactnormalbackupcaptured; isolatedcurrent/backwardrestore and independentreview pending",
     "fallbackTag": "stable-v1.4.0",
     "fallbackManifest": "artifacts/releases/checkpoint-1.4.0.json",
     "beforeEvidence": "artifacts/checkpoints/command-receipt-before/round2/result.json",
@@ -206,13 +205,14 @@
     }
   ],
   "soak": {
-    "directory": "artifacts/soak/v1.4.0",
-    "sessionId": "5a6055e9-97cb-4752-8f36-ee25d63fd1bd",
-    "startedAt": "2026-09-21T13:49:41.570Z",
+    "directory": "artifacts/soak/v1.5.0",
+    "sessionId": "ec27aaff-35cf-415b-9f37-0ea33933aff0",
+    "startedAt": "2026-09-21T14:56:57.365Z",
     "readOnly": true,
     "expectedStopAt": "2026-09-21T21:37:33.079009+00:00",
-    "priorEvidence": "artifacts/checkpoints/soak-1.3.0",
-    "gapReason": "planned1.4upgrade and outboxrestart proof; previous interruptions retained in1.3 archive"
+    "priorEvidence": "artifacts/checkpoints/soak-1.4.0/summary.json",
+    "gapReason": "Planned1.5upgrade and actualoutboxrestart, thennormalstate verified before newepoch",
+    "activationEvidence": "artifacts/checkpoints/observer-1.5-activation/activation.json"
   },
   "networkRecovery": {
     "supervisorCommand": "node scripts/connection-supervisor.mjs",
@@ -227,7 +227,7 @@
     "supervisorDiagnosticActivation": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
     "handoffConsistencyReview": "docs/product/REVIEW-023.md"
   },
-  "updatedAt": "2026-09-21T14:41:24.461527+00:00",
+  "updatedAt": "2026-09-21T14:58:03.899471+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
@@ -304,13 +304,13 @@
     "evidence": "artifacts/checkpoints/host-power-guard-20260921T1333/activation.json"
   },
   "previousDeployment": {
-    "observedAt": "2026-09-21T12:22:00.548Z",
-    "status": "Functional acceptance, outbox actualrestart, exactsnapshot1.3 and backward1.2 verified; final media/time gates pending",
-    "sourceCommit": "3fa3ba0a6984dc752a8968d1788e72a3069b1267",
-    "prdVersion": "1.10",
+    "observedAt": "2026-09-21T13:46:07.542Z",
+    "status": "Verified stable1.4 functional runtime and exactsnapshot current/backwardrestore; finalmedia/time/deliverypending",
+    "sourceCommit": "fdd0491a5c08901962f46ac845f8582921150d45",
+    "prdVersion": "1.11",
     "context": "charles-k3s",
     "namespace": "gs-plai-5h",
-    "appImage": "127.0.0.1:15050/grid@sha256:5563acc1efa5abbfaa23dd7f450312f8c7409258550a3dbcdb54d3b7d879ba5d",
+    "appImage": "127.0.0.1:15050/grid@sha256:c19d550f0cfabbeb1e5f637f3c38a1daee1c2c44222b68dd088ae1875cd4b4f4",
     "brokerImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
     "registryImage": "127.0.0.1:15050/grid-registry@sha256:404bd3e27cc5923825c1f47236459f5feff627711fafb00c739c9c2c15f9b56c",
     "uiTunnel": "http://127.0.0.1:3104",
@@ -320,7 +320,7 @@
     "recoveryReplicas": 0,
     "name": "grid",
     "mqttImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
-    "productVersion": "1.3.0"
+    "productVersion": "1.4.0"
   },
   "historicalChecks": [
     {
@@ -338,6 +338,35 @@
         "weatherTimeout": "PASS actual12s AbortSignal, prior valid observation retained",
         "operationalDeadline": "38 selected boundary tests PASS; bounded actual checkpoint1.3 verification688hashes/Readyimages PASS; no app runtime or finalmedia change"
       }
+    },
+    {
+      "scope": "Stable1.4 completedchecks retained beforecandidate1.5rollout; not1.5remoteacceptance",
+      "checks": {
+        "localUnit": "PASS: 240 main workstation tests plus3 independent security tests =243 unique; related44 security-selection tests overlap these totals",
+        "exactImageUnit": "PASS:77 app-only tests in21files from exact fdd0491/c19 image; workstation media/operations/UI tests are not claimed as image tests",
+        "localIntegration": "PASS exact fdd0491 image actual isolated broker integration",
+        "localAdvanced": "PASS exact fdd0491 image actual isolated broker advanced integration",
+        "browserCommandForm": "PASS local43checks plus same-form correction delta; fresh1.4 restore44checks/5actualcommands; main read-only19checks without command submission",
+        "browserRegression": "PASS authentication/stale/SSE/narrow, preview/export, selectedRTU scenario and KMA feedback; actual remote served assets separately verified",
+        "remote": "PASS actualReady1.4 image/UI; actualMQTT125kW/error0/accepted-executing-completed/dedup/60samples; actualoutboxPodreplacement same persisted and received body/PUBACK",
+        "backupRestore": "PASS exact594944000B snapshot SHA be09a5f5e1721970ec7f25197fcf4f3db504f6f6ad4765080ba301a0c7fd760a in fresh1.4 and backward1.3;17restoreproofs and7mainproofs independently reviewed in REVIEW021",
+        "releaseManifest": "PASS checkpoint1.4 sourcebcc010c/runtimefdd0491;962hashes/actualReady app+broker/backupSHA independently verified REVIEW022; immutable manifest retained",
+        "imageSecurity": "Exact c19 SBOM130 components;4 unchanged unfixed vulnerability matches from2 CVEs; npm audit0. See VULNERABILITY-MANAGEMENT.md; not a claim of zero image vulnerabilities",
+        "media": "Preparation verified only; new final video and same-video editablePPT/fullrender still pending original freeze window",
+        "operationalDeadline": "Historical preparation evidence retained:38 selected boundary tests and actual688hash1.3 verification; current1.4 release proof separately recorded above"
+      }
     }
-  ]
+  ],
+  "previousSoak": {
+    "directory": "artifacts/soak/v1.4.0",
+    "sessionId": "5a6055e9-97cb-4752-8f36-ee25d63fd1bd",
+    "startedAt": "2026-09-21T13:49:41.570Z",
+    "readOnly": true,
+    "expectedStopAt": "2026-09-21T21:37:33.079009+00:00",
+    "priorEvidence": "artifacts/checkpoints/soak-1.3.0",
+    "gapReason": "planned1.4upgrade and outboxrestart proof; previous interruptions retained in1.3 archive",
+    "endedAt": "2026-09-21T14:50:14.747Z",
+    "endReason": "planned1.5upgrade",
+    "archive": "artifacts/checkpoints/soak-1.4.0/summary.json"
+  }
 }

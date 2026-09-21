@@ -1,0 +1,66 @@
+{
+  "sessionId": "ec27aaff-35cf-415b-9f37-0ea33933aff0",
+  "startedAt": "2026-09-21T14:56:57.365Z",
+  "checkedAt": "2026-09-21T14:57:58.602Z",
+  "plannedStopAt": "2026-09-21T21:37:33.079Z",
+  "polls": 7,
+  "messages": 9,
+  "duplicates": 0,
+  "invalid": 0,
+  "maxPayloadBytes": 119733,
+  "lastMessageAt": "2026-09-21T14:57:16.437Z",
+  "connectionErrors": 0,
+  "apiErrors": 0,
+  "maxGapMs": 10313,
+  "maxGapMeaning": "legacy alias of maxPollGapMs; observer poll start interval",
+  "maxPollGapMs": 10313,
+  "maxTelemetryGapMs": 46,
+  "telemetryGapMeaning": "maximum interval between observed messages across all RTUs; not per-RTU loss proof",
+  "telemetrySilenceMs": 42165,
+  "mqttConnected": true,
+  "connectionEvents": 1,
+  "disconnectionEvents": 0,
+  "lastConnectedAt": "2026-09-21T14:56:57.430Z",
+  "lastDisconnectedAt": null,
+  "dedupWindowLimit": 10000,
+  "apiReady": true,
+  "plants": 5,
+  "rssBytes": 123146240,
+  "health": [
+    {
+      "id": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+      "health": "HEALTHY",
+      "pending": 0,
+      "generated": 22961,
+      "confirmed": 763
+    },
+    {
+      "id": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+      "health": "HEALTHY",
+      "pending": 0,
+      "generated": 22961,
+      "confirmed": 783
+    },
+    {
+      "id": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+      "health": "HEALTHY",
+      "pending": 0,
+      "generated": 22961,
+      "confirmed": 1007
+    },
+    {
+      "id": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+      "health": "HEALTHY",
+      "pending": 0,
+      "generated": 22587,
+      "confirmed": 386
+    },
+    {
+      "id": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "health": "HEALTHY",
+      "pending": 0,
+      "generated": 21895,
+      "confirmed": 374
+    }
+  ]
+}

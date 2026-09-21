@@ -1,0 +1,113 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T14:51:14.407988+00:00",
+  "pod": "grid-65597f755-5h22n",
+  "uid": "47851d37-c9d2-4c95-8b50-ba333e6c97ae",
+  "appImage": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+  "containers": [
+    {
+      "allocatedResources": {
+        "cpu": "100m",
+        "memory": "256Mi"
+      },
+      "containerID": "containerd://d41f2bbd4aace3a06caeeb3cffd124b4e6a22724ff697038ba66d0c7e7903262",
+      "image": "sha256:cf0519837034237683aace865a5f027365fe760a9f2d0543f012db69a3f66779",
+      "imageID": "127.0.0.1:15050/grid@sha256:2fd3f21cd4f49702079a7a0ba7c2d40420a38db1bfd7b9e2744ad8e4cb8d5a0f",
+      "lastState": {},
+      "name": "app",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "2",
+          "memory": "1Gi"
+        },
+        "requests": {
+          "cpu": "100m",
+          "memory": "256Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-21T14:51:06Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 1000,
+          "supplementalGroups": [
+            1000
+          ],
+          "uid": 1000
+        }
+      },
+      "volumeMounts": [
+        {
+          "mountPath": "/data",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "allocatedResources": {
+        "cpu": "50m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://3fbe48393b0d282a3b16654229289b5031355c08e92b8b7d624e75c963eb2c30",
+      "image": "sha256:9576aaa2787f4e9225c35a97f3c610d60bdd6edc481cf8ebc1bf66a006a5f6fe",
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+      "lastState": {},
+      "name": "mqtt",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "1",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "50m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-21T14:51:06Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 1000,
+          "supplementalGroups": [
+            1000
+          ],
+          "uid": 1000
+        }
+      },
+      "volumeMounts": [
+        {
+          "mountPath": "/run/mosquitto",
+          "name": "mqtt-runtime"
+        },
+        {
+          "mountPath": "/mosquitto/config",
+          "name": "mqtt-config"
+        },
+        {
+          "mountPath": "/mosquitto/secrets",
+          "name": "secrets",
+          "readOnly": true,
+          "recursiveReadOnly": "Disabled"
+        },
+        {
+          "mountPath": "/mosquitto/data",
+          "name": "mqtt-data"
+        }
+      ]
+    }
+  ],
+  "onlyAppImageChanged": true,
+  "strategyUnchanged": true
+}

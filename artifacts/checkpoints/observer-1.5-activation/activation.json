@@ -1,0 +1,36 @@
+{
+  "result": "PASS",
+  "capturedAt": "2026-09-21T14:58:03.899471+00:00",
+  "runtimeCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+  "productVersion": "1.5.0",
+  "podUid": "62d0d7fd-915d-41e4-990b-5714fc7a6901",
+  "processes": {
+    "supervisor": {
+      "pid": 2061,
+      "handle": 24851,
+      "processIdentity": "Mon Sep 21 23:52:13 2026"
+    },
+    "primary": {
+      "pid": 2883,
+      "handle": 71300,
+      "processIdentity": "Mon Sep 21 23:56:57 2026"
+    },
+    "audit": {
+      "pid": 2888,
+      "handle": 98957,
+      "processIdentity": "Mon Sep 21 23:56:58 2026"
+    }
+  },
+  "primaryDirectory": "artifacts/soak/v1.5.0",
+  "auditDirectory": "artifacts/soak/telemetry-audit/2026-09-21T14-56-58-686Z-820d9a15",
+  "scope": "New read-only observation epoch after planned upgrade/outbox restart; old1.4 counters/incidents remain separately archived. No uninterrupted or universal delivery claim.",
+  "plannedPriorRestart": "deploy/verification/candidate-6d165d1/outbox-restart.json",
+  "backupIndependentlyVerified": {
+    "metadata": "deploy/verification/stable-backup-6d165d1.json",
+    "bytes": 719527936,
+    "sha256": "ad34a074276243fb1b83d7fe081aa7631c9d2d51d0697e9d0dca5d7e5f349b24",
+    "privateMode": "0600",
+    "notYetRestoreAccepted": true
+  },
+  "originalFreezeAt": "2026-09-21T21:37:33.079009+00:00"
+}

@@ -1,0 +1,142 @@
+{
+  "rehearsal": true,
+  "createdAt": "2026-09-21T14:48:21.463Z",
+  "productionSeconds": 272.706,
+  "releaseCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+  "imageDigest": "POPULATE_AT_FREEZE",
+  "manifestSha256": "1b3d4b54368a87b654c3b08c4c4f7adc3f91eeb853295dcf8c730516f2895061",
+  "videoSha256": "5f8a059475caeb9f6c2dd33bab9f888a1934af686a910ad2d3a4ecab843b2d2f",
+  "fullDecode": true,
+  "demoRecovery": {
+    "result": "PASS",
+    "checkedAt": "2026-09-21T14:48:14.116Z",
+    "ownedId": "dbc74951-5284-4383-b91a-3b908ec7dea9",
+    "currentRunId": "8f0b4b64-504f-4dc9-83e0-3119a810e052",
+    "baselineRunId": "9e89423b-a273-4aef-9a4d-1cba338bdbb8",
+    "baselineHash": "a880908b05564b719ed82a6e1e2225d5e734cf77939853339d0ef6ae5c192ab4",
+    "actualHash": "d3b89172ac9cd78f58bcc0c7c892315b0d58e9de336ba977e540710541ac4df4",
+    "settingsMatched": true,
+    "existing": [
+      {
+        "id": "8e78b634-ab4d-471c-ae41-1859e3a3b3d1",
+        "beforeHash": "55a6d99efd2c21b648c6a19edd7587c3ee1bc9d7e19fed274368c18ef89e0196",
+        "afterHash": "55a6d99efd2c21b648c6a19edd7587c3ee1bc9d7e19fed274368c18ef89e0196",
+        "unchanged": true
+      },
+      {
+        "id": "5c079348-21fc-4280-86d3-d1d8f39cf524",
+        "beforeHash": "4895bd08735de2cdc6e06299cfc99787bd2c908e56247953a37c5d9f59fed9d7",
+        "afterHash": "4895bd08735de2cdc6e06299cfc99787bd2c908e56247953a37c5d9f59fed9d7",
+        "unchanged": true
+      },
+      {
+        "id": "966bee6e-9846-42a8-9bf8-07d9ffcd7f1b",
+        "beforeHash": "0cf8d01325074ace11c091854ef976274ece8927e931ec28e7b29b72b10424c3",
+        "afterHash": "0cf8d01325074ace11c091854ef976274ece8927e931ec28e7b29b72b10424c3",
+        "unchanged": true
+      },
+      {
+        "id": "2a22f0f3-f33a-4e45-abf8-cd16c24740b7",
+        "beforeHash": "24e4f0e0eef42f252a92ed3816b49c2179f121d97303db46e10c150309682d89",
+        "afterHash": "24e4f0e0eef42f252a92ed3816b49c2179f121d97303db46e10c150309682d89",
+        "unchanged": true
+      },
+      {
+        "id": "6be4c28f-f659-47f7-95c0-cabc87576db8",
+        "beforeHash": "d7369da41bc02af3711138d5ac991cf6588dbf0ec78c515d1ca1d9f88040673b",
+        "afterHash": "d7369da41bc02af3711138d5ac991cf6588dbf0ec78c515d1ca1d9f88040673b",
+        "unchanged": true
+      },
+      {
+        "id": "ffc7a8df-14b4-4395-9f35-2f9df78ab255",
+        "beforeHash": "70e7d0d7b6dec9aa4030d22da94b42248dcdc376e1885f4d8222ee097e95fb87",
+        "afterHash": "70e7d0d7b6dec9aa4030d22da94b42248dcdc376e1885f4d8222ee097e95fb87",
+        "unchanged": true
+      },
+      {
+        "id": "a0dccb3d-e5f8-43c5-9fa7-da05c6aac541",
+        "beforeHash": "93fdf707f99094e810af0e9c5bcaf2be2b6d43f07d51ce0ff35a19466566aec2",
+        "afterHash": "93fdf707f99094e810af0e9c5bcaf2be2b6d43f07d51ce0ff35a19466566aec2",
+        "unchanged": true
+      },
+      {
+        "id": "44fde221-5792-497b-88e8-657b3160fc1a",
+        "beforeHash": "18a0d2622f0d86b9125952f91604b8d57ee5bd42d9a73709087bc3dae747829a",
+        "afterHash": "18a0d2622f0d86b9125952f91604b8d57ee5bd42d9a73709087bc3dae747829a",
+        "unchanged": true
+      },
+      {
+        "id": "c5f3ec2a-58aa-41cb-a197-10b9ecf828a0",
+        "beforeHash": "1e19b077ce10de1617679ef0798121223cf4567a11ba4dc1d3b163f42cd338b8",
+        "afterHash": "1e19b077ce10de1617679ef0798121223cf4567a11ba4dc1d3b163f42cd338b8",
+        "unchanged": true
+      },
+      {
+        "id": "aa6762c6-254c-4591-b15b-0310d23a1ee7",
+        "beforeHash": "c45c5641a5e982a6e96bd8ca37a16a996ac3af93c9c986b92083cdd6d515ff70",
+        "afterHash": "c45c5641a5e982a6e96bd8ca37a16a996ac3af93c9c986b92083cdd6d515ff70",
+        "unchanged": true
+      },
+      {
+        "id": "ba9a47a5-bf08-4224-9560-ecfa7abdac65",
+        "beforeHash": "a2e26f4ef61b8a309deaeea1a89c6348a785e576a45f3f381df9ec0322089180",
+        "afterHash": "a2e26f4ef61b8a309deaeea1a89c6348a785e576a45f3f381df9ec0322089180",
+        "unchanged": true
+      },
+      {
+        "id": "519c92d6-2c11-4c01-ae8c-8ca484a20920",
+        "beforeHash": "c9f60db9a737a4f302911ffe15f810b3989b5b3e551cd5eb5022d6512fcac824",
+        "afterHash": "c9f60db9a737a4f302911ffe15f810b3989b5b3e551cd5eb5022d6512fcac824",
+        "unchanged": true
+      }
+    ],
+    "rngReinitializedBySeedPatch": true,
+    "exactPriorRandomTrajectoryRestored": false,
+    "scope": "Owned demo RTU settings cleanup only; not goal or media acceptance",
+    "writes": 3,
+    "registration": {
+      "ownedId": "dbc74951-5284-4383-b91a-3b908ec7dea9",
+      "basis": "actual201",
+      "capturedAt": "2026-09-21T14:44:41.130Z",
+      "initialRunId": "9e89423b-a273-4aef-9a4d-1cba338bdbb8"
+    },
+    "scenarioTransitions": [
+      {
+        "scenarioId": "2ac52b4e-3254-48a5-80e3-23ae634a4b48",
+        "fromRunId": "9e89423b-a273-4aef-9a4d-1cba338bdbb8",
+        "toRunId": "8f0b4b64-504f-4dc9-83e0-3119a810e052",
+        "preparedAt": "2026-09-21T14:47:30.509Z",
+        "capturedAt": "2026-09-21T14:47:30.752Z"
+      }
+    ]
+  },
+  "audioMeanDb": -19.3,
+  "pageErrors": [],
+  "downloads": [
+    {
+      "schemaVersion": 1,
+      "contractVersion": 2,
+      "productVersion": "1.5.0",
+      "plantId": "dbc74951-5284-4383-b91a-3b908ec7dea9",
+      "scope": "recent-command-snapshots",
+      "limit": 20,
+      "count": 5,
+      "file": "source/recent-command-states.json",
+      "sha256": "39719594ac334dae6044b12d85d242c8e600690ea472f09a7dc789fc9563adb9",
+      "at": 141.008
+    }
+  ],
+  "duration": 249.33,
+  "dimensions": "1920x1080",
+  "codecs": "H264/AAC",
+  "frames": [
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/full-candidate15-receipts-20260921/frame-1.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/full-candidate15-receipts-20260921/frame-2.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/full-candidate15-receipts-20260921/frame-3.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/full-candidate15-receipts-20260921/frame-4.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/full-candidate15-receipts-20260921/frame-5.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/full-candidate15-receipts-20260921/frame-6.png"
+  ],
+  "visualReview": "pending",
+  "claimsReview": "pending"
+}

@@ -1,0 +1,13 @@
+{
+  "observedAt": "2026-09-21T14:58:49.773762+00:00",
+  "pid": 92124,
+  "processIdentity": "Mon Sep 21 23:15:40 2026",
+  "handle": 84859,
+  "reason": "Allcandidate1.5 localbrowser/mediarehearsals complete; preserve privateDB and reduce idlehostload",
+  "database": "artifacts/private/candidate-1.5/lab.sqlite",
+  "signal": "SIGTERM",
+  "terminalConfirmed": true,
+  "exitCode": 0,
+  "listener3109Closed": true,
+  "verifiedAt": "2026-09-21T14:59:04.402653+00:00"
+}

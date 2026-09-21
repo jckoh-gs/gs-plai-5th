@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T14:41:24.461527+00:00",
+  "updatedAt": "2026-09-21T14:59:04.402653+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": "stable-v1.4.0",
@@ -10,7 +10,7 @@
     "productVersion": "1.5.0",
     "prdVersion": "1.12",
     "idea": "IDEA-009",
-    "state": "Exact6d165d1/2fd3f21 image and security gates PASS, registrydigest confirmed; next firsthour1.4 capture then controlled upgrade/recovery. No duplicate build/push."
+    "state": "Main1.5 acceptance/outbox and exactbackupPASS; current1.5/backward1.4 isolatedrestore ongoing, stable1.4 fallback unchanged"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -22,7 +22,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS"
   ],
   "remainingInOrder": [
-    "After14:49:42UTC preserve immutable stable1.4 firsthour observer prefix. Exact6d165d1/2fd3f21 candidate already verified/pushed; inspectactualstate then preupgradebackup and controlled main1.5 rollout with unchanged broker. Require mainUI/MQTT/outbox and exactsnapshot fresh1.5/backward1.4 restore beforepromotion; preserve1.4fallback. Originalfreeze/media/deadline unchanged.",
+    "Deploymentowner completes exactcurrent1.5/backward1.4 isolatedrestore andcleanup; product REVIEW027 independentlychecks evidence; root promotesstable1.5 onlyafter allgates thencreatesimmutablecheckpoint. Main1.5 observation continues; stable1.4 fallback preserved.",
     "Continue observers for the actually selected deployed version until originalfreeze; archivepriorversion prefixes and planned replacement intervals without restarting ended older observers. Periodically check disk/hostpower/freshness. Furtherideas require versionedadoption and verifiedfallback. Atfreeze follow FINAL-RESTORE-PLAN for selectednormalruntime/exactsnapshotproof/newimmutablefinalmanifest.",
     "After manifest verification in original final window, record and inspect new final video; then create editable PPT from same video and inspect every slide",
     "Before original deadline verify final normal state, push code/evidence, deliver artifacts and stop this run's heartbeat"
@@ -47,14 +47,15 @@
   ],
   "supplementaryObservation": {
     "kind": "read-only per-RTU full SCADA auditor v1",
-    "sessionId": "9fe9c0ec-3f8d-4f85-9b63-38f57cd8fc07",
-    "directory": "artifacts/soak/telemetry-audit/2026-09-21T13-49-42-893Z-9fe9c0ec",
-    "startedAt": "2026-09-21T13:49:42.893Z",
+    "sessionId": "820d9a15-c7e6-413e-9c52-a5b180b85309",
+    "directory": "artifacts/soak/telemetry-audit/2026-09-21T14-56-58-686Z-820d9a15",
+    "startedAt": "2026-09-21T14:56:58.686Z",
     "expectedStopAt": "2026-09-21T21:37:33.079009+00:00",
     "instructions": "docs/operations/TELEMETRY-AUDIT.md",
-    "scope": "New1.4 session;1.3 archived separately; not uninterrupted uptime proof",
-    "handle": 92936,
-    "pid": 85652
+    "scope": "New1.5 session afterplannedrestart; old1.4 archived; notuninterrupteduptime proof",
+    "pid": 2888,
+    "handle": 98957,
+    "processIdentity": "Mon Sep 21 23:56:58 2026"
   },
   "observationCheckpoints": [
     {
@@ -72,6 +73,13 @@
       "scope": "First-hour prefix with known local interruptions; not uninterrupted clean service proof",
       "processesContinuedAtCapture": true,
       "currentProcessStatus": "Historical sessions now ended for subsequent planned upgrade; read currentObservationProcesses for live ownership."
+    },
+    {
+      "path": "artifacts/checkpoints/soak-1.4.0-first-hour/summary.json",
+      "primaryThrough": "2026-09-21T14:49:44.536Z",
+      "supplementaryThrough": "2026-09-21T14:49:43.871Z",
+      "processesContinuedAtCapture": true,
+      "currentProcessStatus": "Ended at14:50forplanned1.5upgrade; fullarchive separately preserved"
     }
   ],
   "connectionIncident": {
@@ -232,20 +240,42 @@
       ],
       "ended": "planned1.4upgrade; all three previous handles terminal0",
       "archive": "artifacts/checkpoints/soak-1.3.0/summary.json"
+    },
+    {
+      "productVersion": "1.4.0",
+      "archive": "artifacts/checkpoints/soak-1.4.0/summary.json",
+      "processes": {
+        "primary": {
+          "pid": 85649,
+          "handle": 36193,
+          "processIdentity": "Mon Sep 21 22:49:41 2026"
+        },
+        "supplementary": {
+          "pid": 85652,
+          "handle": 92936,
+          "processIdentity": "Mon Sep 21 22:49:42 2026"
+        },
+        "supervisor": {
+          "pid": 84952,
+          "handle": 81174,
+          "processIdentity": "Mon Sep 21 22:46:07 2026"
+        }
+      },
+      "ended": "Planned1.5upgrade afterfirsthour; primary/audit/supervisor allterminal0; do notrestartendedoldobservers"
     }
   ],
   "currentObservationHandles": {
-    "primary": 36193,
-    "supplementary": 92936,
-    "supervisor": 81174
+    "supervisor": 24851,
+    "primary": 71300,
+    "audit": 98957
   },
   "currentObservationBaselines": {
-    "primaryApiErrors": 1,
+    "primaryApiErrors": 0,
     "primaryConnectionErrors": 0,
-    "supplementaryConnectionErrors": 1,
+    "supplementaryConnectionErrors": 0,
     "supplementarySampleDiscontinuitiesPerRTU": 0,
-    "evidence": "artifacts/checkpoints/reconnect-20260921T1401/summary.json",
-    "scope": "Cumulative1.4 counters after14:01 natural reconnect; compare later increments without resetting observer counters. Historical1.3 counts remain separate."
+    "evidence": "artifacts/checkpoints/observer-1.5-activation/activation.json",
+    "scope": "New1.5 epoch; allinitialerrorcounters0. Compare increments withoutreset; old1.4 counters/incidentshistorical only."
   },
   "completedOperations": [
     {
@@ -272,20 +302,20 @@
     }
   ],
   "currentObservationProcesses": {
-    "primary": {
-      "pid": 85649,
-      "handle": 36193,
-      "processIdentity": "Mon Sep 21 22:49:41 2026"
-    },
-    "supplementary": {
-      "pid": 85652,
-      "handle": 92936,
-      "processIdentity": "Mon Sep 21 22:49:42 2026"
-    },
     "supervisor": {
-      "pid": 84952,
-      "handle": 81174,
-      "processIdentity": "Mon Sep 21 22:46:07 2026"
+      "pid": 2061,
+      "handle": 24851,
+      "processIdentity": "Mon Sep 21 23:52:13 2026"
+    },
+    "primary": {
+      "pid": 2883,
+      "handle": 71300,
+      "processIdentity": "Mon Sep 21 23:56:57 2026"
+    },
+    "audit": {
+      "pid": 2888,
+      "handle": 98957,
+      "processIdentity": "Mon Sep 21 23:56:58 2026"
     }
   },
   "operationalDeadlineHardening": {
@@ -297,7 +327,7 @@
   "nextProductProposal": {
     "id": "IDEA-009",
     "revision": 1,
-    "state": "adopted1.5 candidate; not implemented or deployed",
+    "state": "IDEA009 implementedandmain1.5deployed; fullrestore/independentacceptance pending beforestablepromotion",
     "review": "docs/product/REVIEW-024.md"
   },
   "finalMediaPreparation": {
@@ -316,28 +346,16 @@
     "lastLocalRehearsal": "artifacts/checkpoints/media-lifecycle-local-round1/result.json",
     "localFixtureOnly": true
   },
-  "currentObservationIncidents": [
-    {
-      "evidence": "artifacts/checkpoints/reconnect-20260921T1401/summary.json",
-      "runtime": "1.4.0",
-      "outageAt": "2026-09-21T14:01:54.445Z",
-      "recoveredAt": "2026-09-21T14:01:55.750Z",
-      "symptom": "health timeout5002ms",
-      "podUidUnchanged": "f45d1e93-03e8-4f0a-a7af-7f4925b44190",
-      "cause": "unknown",
-      "observedPerRtuSampleDiscontinuities": 0,
-      "scope": "Captured received sample deltas equal simulation advance for5RTUs; no universal subscriber delivery guarantee; no remote mutations or outbox query."
-    }
-  ],
-  "nextOperationalReview": "1.4firsthour prefix after14:49:42UTC. Check livefreshness/counterincrements andstorage/headroom/hostpower without changing deadlines or replaying completedwrites. Finalmedia preparation stillneeds1.4actualfacts atfreeze; no final artifacts yet.",
+  "currentObservationIncidents": [],
+  "nextOperationalReview": "New1.5 observerfirsthour after2026-09-21T15:56:58.686Z; inspectactualfreshness/counterincrements/Ready/storage/hostpower. Currentbackup restore ongoing; finalmedia remains originalfreeze window.",
   "supervisorDiagnosticUpgrade": {
-    "state": "verified-active1.4",
+    "state": "verified-active1.5",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
     "evidence": "artifacts/checkpoints/supervisor-diagnostics/summary.json",
-    "currentPid": 84952,
-    "currentHandle": 81174,
-    "currentIdentity": "Mon Sep 21 22:46:07 2026",
-    "nextStep": "After1.4rollout supervisor restarted once; old7353terminal. Do not repeat.",
+    "currentPid": 2061,
+    "currentHandle": 24851,
+    "currentIdentity": "Mon Sep 21 23:52:13 2026",
+    "nextStep": "Keep current1.5supervisor androotprimary71300/audit98957; plannedoutboxrestart complete. No duplicateforward.",
     "historicalActivation": {
       "scope": "Planned1.3 diagnostic activation13:23UTC; this process has since ended for the planned1.4 upgrade.",
       "evidence": "artifacts/checkpoints/supervisor-diagnostics-activation/handoff.json",
@@ -368,13 +386,15 @@
     "privateDirectory": "artifacts/private/candidate-1.5",
     "mqttPrefix": "candidate15",
     "seedDemo": false,
-    "scope": "Local1.5 isolated API/MQTT and actual served bundle b6c12889 validated; receipts14cases/forms44checks/4browserregressions PASS. Contains only owned test RTUs; no source edits after tested build."
+    "scope": "Local1.5 isolated API/MQTT and actual served bundle b6c12889 validated; receipts14cases/forms44checks/4browserregressions PASS. Contains only owned test RTUs; no source edits after tested build.",
+    "state": "Stoppedgracefully afteralllocalproofs; rootoriginalhandleexit0,3109closed, privateDBretained",
+    "retirementEvidence": "artifacts/checkpoints/local-fixture-1.5-retirement/summary.json"
   },
   "candidateOperations": {
     "adoptionCommit": "b9c10ae",
     "productVersion": "1.5.0",
     "prdVersion": "1.12",
-    "phase": "Verified exactimage uploaded; no owned build or registryforward handles left; main1.4 unchanged",
+    "phase": "Main1.5 acceptance/outbox and exactbackupPASS; current1.5/backward1.4 isolatedrestore ongoing, stable1.4 fallback unchanged",
     "uiOwner": "/root/ui",
     "browserOwner": "/root/issues",
     "securityOwner": "/root/security",
@@ -382,7 +402,7 @@
     "fallback": "artifacts/releases/checkpoint-1.4.0.json",
     "beforeEvidence": "artifacts/checkpoints/command-receipt-before/round2/result.json",
     "fixtureHandle": 84859,
-    "retry": "Inspect existing fixture handle and browser evidence before rerun; only own test RTUs; require exact new served bundle proof before browser writes. Main1.4observer/processes unchanged.",
+    "retry": "Check owning deploymentagent activehandle and actualrestore objects before retrying; main1.5 observers root71300/98957 are read-only andmustnotrestart merelyforreconnect.",
     "localAcceptance": "artifacts/checkpoints/candidate-1.5-local-summary.json",
     "buildOwner": "/root/deployment",
     "sourceCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
@@ -396,13 +416,25 @@
       "handle": 79669,
       "metadata": "deploy/verification/pre-1.5.0-backup.json",
       "log": "deploy/verification/candidate-6d165d1/pre-upgrade-backup.log",
-      "status": "Verified onlinebackup; ownerhandleterminal0; no mainupgrade",
+      "status": "Verifiedadditionalpreupgrade1.4 snapshot; handleterminal0; subsequent1.5upgrade recorded separately",
       "exitCode": 0,
       "sha256": "5d64e6b8730d2ad88d37eeff40af99ccc560e134edbf97398bb0723bb12fc853",
       "bytes": 690266112,
       "verifiedAt": "2026-09-21T14:40:08.288Z",
       "scope": "Additionalpreupgrade1.4 snapshot only; selected stable594944000B/be09 checkpoint unchanged; this new snapshot has not been restoreverified."
-    }
+    },
+    "currentFullOpsSuite": {
+      "owner": "/root",
+      "handle": 66210,
+      "log": "artifacts/checkpoints/candidate-1.5-final-ops-unit.log",
+      "status": "PASS267/267 aftermediachanges",
+      "exitCode": 0
+    },
+    "normalBackup": "deploy/verification/stable-backup-6d165d1.json",
+    "outboxProof": "deploy/verification/candidate-6d165d1/outbox-restart.json",
+    "restoreOwner": "/root/deployment",
+    "restoreState": "Exact1.5 restore allgatesPASS/scaled0/noPods/forwardclosed; backwardfresh1.4 samead34 creation4363 inprogress",
+    "fixtureHandleState": "84859 terminal0; do notreuse aslivefixture"
   },
   "handoffConsistencyReview": "docs/product/REVIEW-023.md",
   "previousCandidateFixture": {
@@ -499,9 +531,35 @@
     "sha256": "9e319aed4969d54f3572cbc05c111e3a40b00b9ccdf17c3acf9a87e81f4c3883",
     "notBefore": "2026-09-21T14:49:42.893Z",
     "expectedOutput": "artifacts/checkpoints/soak-1.4.0-first-hour",
-    "scope": "Prepared only; script refuses incompletehour/existingcheckpoint and preserves firstboundaryprefix. Confirm live handles/actualstate before execution."
+    "scope": "Prepared only; script refuses incompletehour/existingcheckpoint and preserves firstboundaryprefix. Confirm live handles/actualstate before execution.",
+    "state": "Captured andverified; old1.4observers nowendedforplannedupgrade, do notrepeat"
   },
   "activeMediaRehearsal": {
+    "productVersion": "1.5.0",
+    "mode": "preparation only, notfinalmedia",
+    "handle": 77945,
+    "supervisorPid": 99083,
+    "supervisorIdentity": "Mon Sep 21 23:43:48 2026",
+    "workerPid": 99087,
+    "workerIdentity": "Mon Sep 21 23:43:48 2026",
+    "owner": "/root/media",
+    "state": "Corrected8scene rehearsal complete, reviewedframes/subtitles/technicalaudio and normalrecoveryPASS; finalmedia notcreated",
+    "baseUrl": "http://127.0.0.1:3109",
+    "mqttPort": 18883,
+    "mqttPrefix": "candidate15",
+    "config": "artifacts/media-preparation/full-candidate15-receipts-20260921/config.json",
+    "output": "artifacts/media-preparation/full-candidate15-receipts-20260921",
+    "privateJournal": "artifacts/private/media-candidate15-receipts-1790001828556.json",
+    "sourceEvidence": "artifacts/media-preparation/full-candidate15-receipts-20260921/source-hashes.json",
+    "policy": "Ask owning /root/media to poll77945 in its session. Main lookup maynotseethisownerhandle; inspect actualsamePID/startidentity too. Do not restart or independentrecover until confirmedterminal; preserve all priorattempts. Originalwindow unchanged.",
+    "exitCode": 0,
+    "checkpoint": "artifacts/checkpoints/media-candidate15-receipts",
+    "durationSeconds": 249.33,
+    "productionSeconds": 272.706,
+    "limitations": "Audio technical verification only; no pronunciation/listeningclaim."
+  },
+  "fullGoalAudit": "docs/product/REVIEW-026.md",
+  "previousMediaRehearsal": {
     "productVersion": "1.5.0",
     "mode": "preparation only, notfinalmedia",
     "handle": 70803,
@@ -525,5 +583,27 @@
     "durationSeconds": 241.33,
     "productionSeconds": 264.031
   },
-  "fullGoalAudit": "docs/product/REVIEW-026.md"
+  "historicalObservationBaselines": [
+    {
+      "primaryApiErrors": 1,
+      "primaryConnectionErrors": 0,
+      "supplementaryConnectionErrors": 1,
+      "supplementarySampleDiscontinuitiesPerRTU": 0,
+      "evidence": "artifacts/checkpoints/reconnect-20260921T1401/summary.json",
+      "scope": "Cumulative1.4 counters after14:01 natural reconnect; compare later increments without resetting observer counters. Historical1.3 counts remain separate."
+    }
+  ],
+  "historicalObservationIncidents": [
+    {
+      "evidence": "artifacts/checkpoints/reconnect-20260921T1401/summary.json",
+      "runtime": "1.4.0",
+      "outageAt": "2026-09-21T14:01:54.445Z",
+      "recoveredAt": "2026-09-21T14:01:55.750Z",
+      "symptom": "health timeout5002ms",
+      "podUidUnchanged": "f45d1e93-03e8-4f0a-a7af-7f4925b44190",
+      "cause": "unknown",
+      "observedPerRtuSampleDiscontinuities": 0,
+      "scope": "Captured received sample deltas equal simulation advance for5RTUs; no universal subscriber delivery guarantee; no remote mutations or outbox query."
+    }
+  ]
 }

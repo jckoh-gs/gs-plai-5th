@@ -1,0 +1,212 @@
+[
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/page@1657b22b9f6f9428eff6b842bd94bf65.webm",
+    "sha256": "906ea180955f791a1a2ca305875225692d2f049083cab4c570b7f63b08ba9aa4",
+    "bytes": 24771844
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-0-0.aiff",
+    "sha256": "3fc9aa9d7309e03fc43ba3cf3343f00c85b6957df1e629b60b42ab2e25d35e17",
+    "bytes": 142740
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-0-1.aiff",
+    "sha256": "914defa081b5965bbd54914e809d37f32370622658a08a306fcb930c1ac84241",
+    "bytes": 153502
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-0-2.aiff",
+    "sha256": "2d29769f71aa459e69ead0c2b63c0244215df194cf76823ba8798e085920e32e",
+    "bytes": 315052
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-0.aiff",
+    "sha256": "b5e6159c62d60b1a0c0b197d344e451e0b5984dad5686e156e9855a283cb9987",
+    "bytes": 599060
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-1-0.aiff",
+    "sha256": "861542ac24f36ecbf84de0fc541583991482668dd0e64c8188d6e620abb2bba9",
+    "bytes": 311132
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-1-1.aiff",
+    "sha256": "d5b57e852ed14d7c4b84dae1a275807ba4b2838a5a3db475abbb1c918a308e97",
+    "bytes": 124308
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-1-2.aiff",
+    "sha256": "5b928098e9547ad46af6cc670122e3ba26523694c029c6ed3ece38230cad126f",
+    "bytes": 205170
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-1-3.aiff",
+    "sha256": "77c396335e5607526f0184753a6b0f241715216a6923ac2312d79a44f80f499e",
+    "bytes": 120202
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-1.aiff",
+    "sha256": "0a512b4d668d9b4460048d802b07bc3057df808d4aa626b1ca8633cce23345d9",
+    "bytes": 744482
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-2-0.aiff",
+    "sha256": "86ed9a5c30c298e8782132364f014983c67b41691a0ac7aa334e9ec133c0b2de",
+    "bytes": 208644
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-2-1.aiff",
+    "sha256": "371c129ecfb2dd781616d4c95c4f9e3fdf3cec2ae87c2582f588007cea0cfbe8",
+    "bytes": 248696
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-2-2.aiff",
+    "sha256": "80b93a33a0f92adb7efcad22f15b7ad7773ecff591399e598bb0b3f8bcbd8cde",
+    "bytes": 194688
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-2-3.aiff",
+    "sha256": "2b8a4cfabd78e7c6883ccda93cb9954384cabeba11066c5a5487503a8145426a",
+    "bytes": 97670
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-2-4.aiff",
+    "sha256": "658e5fd49a450d22a1590e4850bc851aa466d8e0895b13a473a8d00e137ed9cd",
+    "bytes": 268622
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-2.aiff",
+    "sha256": "55687f8980d9123ba54e4fe0a0dac4f814f95d1b43ea9ae9fc5fc105eee02049",
+    "bytes": 997894
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-3-0.aiff",
+    "sha256": "9affff938d04d51b8fb67e22e7213cc44b391ec8d22f46cec812b95a55166d1d",
+    "bytes": 188528
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-3-1.aiff",
+    "sha256": "af392fb15a7ad7af117abef5fcc3cbda4c2640eeff50fd702ea8f273695ed93b",
+    "bytes": 253774
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-3-2.aiff",
+    "sha256": "9e2f0566df54311602ce64429e5bb136d635996c60ddb263d2944d2e2567b0da",
+    "bytes": 280836
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-3.aiff",
+    "sha256": "3cd750a2ba574e56b1978a811af7ce2ea0b8247907a553f8447fcf522b7e5b23",
+    "bytes": 710904
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-4-0.aiff",
+    "sha256": "fcdb2f8edd5260c04d86514a5f260d22340cb7590c0d0f01d55d579409476754",
+    "bytes": 199242
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-4-1.aiff",
+    "sha256": "39a6b8a48a5a8a49d6f3f601fbe2288e4b7ef7a502f2c9e4ef7959ad7f7ea204",
+    "bytes": 227690
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-4-2.aiff",
+    "sha256": "ea99c1e4b37b8813f78c1a490f68c1b938ccd3a78b7ca925984d773a31453de3",
+    "bytes": 187622
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-4-3.aiff",
+    "sha256": "165c2d007fd37c4b42cc431ca3eea31dabdace9bb0a330a3345e577f96096b98",
+    "bytes": 162704
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-4-4.aiff",
+    "sha256": "3e8c54ef0cbb4d6441286bb57de3de2960a9edafc5ccd999a22959f67f5f897f",
+    "bytes": 180352
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-4-5.aiff",
+    "sha256": "c1ec15e89e0fd709c91b1d3e59e61c1863492936ec40833e974c94bda743bec5",
+    "bytes": 199056
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-4.aiff",
+    "sha256": "afe3a426aa4d99ccd5e6f8546b6f22427e223bbdb35bdd2e2f65a5eadf24fe05",
+    "bytes": 1132144
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-5-0.aiff",
+    "sha256": "e46d33a06bd76d27541958037b81e13b9a3caaba14bf964298a2fe29e84361d8",
+    "bytes": 179972
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-5-1.aiff",
+    "sha256": "ba6c21052ee67d55aba7b2eb1cf28ede4b0ea0e2a106d69d870f11f0fe238752",
+    "bytes": 136062
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-5-2.aiff",
+    "sha256": "802be5d656f2a42c7f9ed59781ae44e95d0a87f73bf1dcf8a6dd3f32ab9e91bb",
+    "bytes": 256402
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-5.aiff",
+    "sha256": "2ea7501960bc7899151af60316927e1fc2f13ce965c424e3dd0b40e83264719c",
+    "bytes": 560202
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-6-0.aiff",
+    "sha256": "c8ab73df4c6742215d8d4e1cc98745ce9d9da1e4f0496eae9b0ff2d45c8a175e",
+    "bytes": 193534
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-6-1.aiff",
+    "sha256": "c9e81a0df90d1c2dc560add33097a7cc3e04a983f6a5177d76ab2470a32c89bd",
+    "bytes": 221560
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-6-2.aiff",
+    "sha256": "2d8fed4947166dc37e2d98aad6e81cad4d6839e6f8c063a32b4aee6e320b036b",
+    "bytes": 204174
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-6-3.aiff",
+    "sha256": "f4182b896ee5267241e1c5dc6211fc8e53500abc448e64d41f529daf6610d685",
+    "bytes": 157808
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-6.aiff",
+    "sha256": "7b5eb0a31ac9198002fd88e64af4c0177fc89be10a133edc56df1fce0362748e",
+    "bytes": 760746
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-7-0.aiff",
+    "sha256": "23323ead8cf20d0602070236688ee2146949a1385ed849294b638bab60efb79e",
+    "bytes": 158096
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-7-1.aiff",
+    "sha256": "03c61522c2fbb06ad3109ec114b23699f3fb4b6ed23691b98c9b22f08302a8e6",
+    "bytes": 178816
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-7-2.aiff",
+    "sha256": "55429cb93b23bf33941c2a14e821a045cee337fe252e73cf4730a7f596156608",
+    "bytes": 359040
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/source/voice-7.aiff",
+    "sha256": "1e384f388d63e52177802169dafa21330755359aa8fc255687c86603c71bcd88",
+    "bytes": 683718
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/GRID-VPP-demo-ko.mp4",
+    "sha256": "5f8a059475caeb9f6c2dd33bab9f888a1934af686a910ad2d3a4ecab843b2d2f",
+    "bytes": 12047772
+  },
+  {
+    "path": "artifacts/media-preparation/full-candidate15-receipts-20260921/review-scene5-audio.wav",
+    "sha256": "747d94b102859e8a0fa3d87ff8dd504079ae3aa25b559d6bb57d453e0a91aa9c",
+    "bytes": 882078
+  }
+]

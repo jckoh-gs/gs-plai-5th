@@ -1,0 +1,10 @@
+{
+  "activation.json": "a55a2e895a34f2e25d40da3b03bed29e2f6fa1d817f904723cc44d3550c6e222",
+  "audit-baseline.json": "572932c97533eede5ca5aa949fc544d603d3a2fc4e0e23bf4e898cd35f3d35c5",
+  "primary-baseline.json": "3ae76b338f918a2f75892fed5e87c4ba030faff90b6d1e92242703fc48f779c1",
+  "source/soak-diagnostics.mjs": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c",
+  "source/soak-monitor.mjs": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3",
+  "source/telemetry-audit-monitor.mjs": "6c4bbb0b77c03e8a49d9d17c8f7e743c10765ab05b0d94f6b1a736f6a60c4617",
+  "source/telemetry-audit.mjs": "ba6c2c1c9ac39e4a1666d7ad0b6468271a1eda163f2653df9e6bac842bb48486",
+  "supervisor.json": "72a84d4cd1b5de570099761c45579503ef1984c998547a360a756953445e0c2f"
+}

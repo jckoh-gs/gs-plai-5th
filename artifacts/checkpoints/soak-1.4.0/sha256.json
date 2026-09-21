@@ -1,0 +1,16 @@
+{
+  "summary.json": "0ed7b54a5da2f3f1e57f2a04f24ac4b37eed9f34730833b60d00f30eee8b316c",
+  "planned-stop.json": "07dea272376b106a8cb9a386ab714944af44c30b3b2fd5b6ffe46745eae89ea2",
+  "supervisor-final.json": "8ed3ff6723f66bb1652e0fe59ee0a0dae7ccfa20f482abeb9e15b1e177920def",
+  "audit/latest.json": "a2768701e74577a6f88a6d2d95f905f0f705dd0c3440ea9afb8f3280fda22706",
+  "audit/observations.jsonl": "61d12dd18352c291e0cad6d5dec40effa096fbaac06f85b5f906153af9264641",
+  "audit/result.json": "a2768701e74577a6f88a6d2d95f905f0f705dd0c3440ea9afb8f3280fda22706",
+  "primary/latest.json": "d972b418c8099c9d1e386de321c66531ced07b791e167452060fc3651fe5d5bc",
+  "primary/observations.jsonl": "4fd652aa7a76f8c1241b452b5fe3845f066d076926ff06d47164a65e93611eda",
+  "primary/source-hashes.json": "d9d5d3eeec1b1914f412005653cd22af9f8370a7a08fbae76c52339c81faabc0",
+  "primary/session-5a6055e9-97cb-4752-8f36-ee25d63fd1bd.json": "bca6163a37d272aa2c77b37aedab20ab670898f22b709fa78eff576405ae4279",
+  "primary/source/soak-diagnostics.mjs": "9d7977d1b87e469c929a422f998a0a571da63d8e033754726fdfdb425fd8106c",
+  "primary/source/soak-monitor.mjs": "53414e8631499075ab2a2d05360db6245139283d225406621135cf4e854dcce3",
+  "audit/source/telemetry-audit-monitor.mjs": "6c4bbb0b77c03e8a49d9d17c8f7e743c10765ab05b0d94f6b1a736f6a60c4617",
+  "audit/source/telemetry-audit.mjs": "ba6c2c1c9ac39e4a1666d7ad0b6468271a1eda163f2653df9e6bac842bb48486"
+}

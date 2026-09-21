@@ -1,0 +1,81 @@
+{
+  "capturedAt": "2026-09-21T14:49:48.987631+00:00",
+  "sourceHead": "8c9bb1bee2e4efdbc3bebc08f1a623240035d53b",
+  "runtimeCommit": "fdd0491a5c08901962f46ac845f8582921150d45",
+  "scope": "Immutable first poll after one hour for each live observer; processes continue. Not uninterrupted uptime or full acceptance proof.",
+  "primary": {
+    "sessionId": "5a6055e9-97cb-4752-8f36-ee25d63fd1bd",
+    "startedAt": "2026-09-21T13:49:41.570Z",
+    "through": "2026-09-21T14:49:44.536Z",
+    "durationSeconds": 3602.9660000801086,
+    "observations": 351,
+    "messages": 538,
+    "invalid": 0,
+    "duplicates": 0,
+    "apiErrors": 1,
+    "connectionErrors": 0,
+    "maxPending": 3,
+    "nonHealthyPolls": 0,
+    "apiUnavailablePolls": 1,
+    "minRssBytes": 99930112,
+    "maxRssBytes": 159518720
+  },
+  "supplementary": {
+    "sessionId": "9fe9c0ec-3f8d-4f85-9b63-38f57cd8fc07",
+    "startedAt": "2026-09-21T13:49:42.893Z",
+    "through": "2026-09-21T14:49:43.871Z",
+    "durationSeconds": 3600.978000164032,
+    "observations": 361,
+    "received": 538,
+    "invalidMessages": 0,
+    "duplicateMessages": 0,
+    "connectionErrors": 1,
+    "rtus": [
+      {
+        "rtuId": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+        "samples": 3596,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+        "samples": 3596,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+        "samples": 3596,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+        "samples": 3596,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      },
+      {
+        "rtuId": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+        "samples": 3596,
+        "invalidMessages": 0,
+        "sampleDiscontinuities": 0,
+        "baselineDriftMessages": 0,
+        "runTransitions": 0
+      }
+    ]
+  },
+  "incidentEvidence": [
+    "artifacts/checkpoints/reconnect-20260921T1401/summary.json"
+  ],
+  "interpretation": "Known14:01 localhealthtimeout/reconnect preserved; baselineprimaryAPIerrors1/connectionerrors0, auditconnectionerrors1, perRTUsamplediscontinuities0. Compare captured counters for new events; this is received-observation evidence, not every subscriber receipt or uninterrupted service proof.",
+  "processesContinue": true
+}

@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "authRequired": true,
+  "streamReceived": true,
+  "authenticatedSSE": true,
+  "initialWaitingState": true,
+  "openStreamWithoutMessagesStale": true,
+  "wrongTokenReentry": true,
+  "independentTabRequiresLogin": true,
+  "noLocalStorageToken": true,
+  "staleAfterFiveSeconds": true,
+  "resumeClearsStale": true,
+  "guideDownload": true,
+  "narrowViewportNoPageOverflow": true,
+  "pageErrors": []
+}

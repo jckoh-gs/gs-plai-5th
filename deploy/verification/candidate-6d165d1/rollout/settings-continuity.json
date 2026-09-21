@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T14:53:00.260Z",
+  "version": "1.5.0",
+  "originalPlants": 5,
+  "runReplayFaultModeDatasetGeneratorSettingsUnchanged": true,
+  "baseline": "pre-upgrade-baseline.json"
+}

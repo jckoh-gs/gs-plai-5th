@@ -1,0 +1,38 @@
+{
+  "startedAt": "2026-09-21T14:50:09.952959+00:00",
+  "reason": "Planned upgrade after verified firsthour prefix; not natural network incident",
+  "firstHourEvidence": "artifacts/checkpoints/soak-1.4.0-first-hour/summary.json",
+  "signals": [
+    {
+      "role": "primary",
+      "pid": 85649,
+      "handle": 36193,
+      "processIdentity": "Mon Sep 21 22:49:41 2026",
+      "signal": "SIGTERM"
+    },
+    {
+      "role": "supplementary",
+      "pid": 85652,
+      "handle": 92936,
+      "processIdentity": "Mon Sep 21 22:49:42 2026",
+      "signal": "SIGTERM"
+    },
+    {
+      "role": "supervisor",
+      "pid": 84952,
+      "handle": 81174,
+      "processIdentity": "Mon Sep 21 22:46:07 2026",
+      "signal": "SIGTERM"
+    }
+  ],
+  "terminalConfirmed": true,
+  "observerExitCodes": {
+    "36193": 0,
+    "92936": 0
+  },
+  "observerTerminalConfirmed": true,
+  "supervisorTerminalConfirmed": true,
+  "supervisorExitCode": 0,
+  "confirmedAt": "2026-09-21T14:51:36.441592+00:00",
+  "ports3104and18884Closed": true
+}
