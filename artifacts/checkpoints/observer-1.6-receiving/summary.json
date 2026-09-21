@@ -1,0 +1,27 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-21T16:07:09.470393+00:00",
+  "actualVersion": "1.6.0",
+  "primaryThrough": "2026-09-21T16:07:02.822Z",
+  "auditThrough": "2026-09-21T16:07:09.362Z",
+  "primaryMessages": 30,
+  "auditReceived": 30,
+  "primaryApiErrors": 0,
+  "primaryConnectionErrors": 0,
+  "auditConnectionErrors": 0,
+  "invalid": 0,
+  "duplicate": 0,
+  "perRtuDiscontinuities": {
+    "c81f4573-1987-4c01-8d7c-b1e7aa5af38f": 0,
+    "ed0ac897-69d6-4e7c-ae0a-9d212f272db6": 0,
+    "adb56898-ae8d-4628-9db1-6d33df5417b5": 0,
+    "90528620-2d53-4a06-8945-aa7a37e0eaee": 0,
+    "f49684af-b7dd-47b2-b360-8e7d28ef751b": 0
+  },
+  "scope": "Early receiving snapshot only; processes continue, not fullhour or uninterrupteduptime proof",
+  "hashes": {
+    "artifacts/checkpoints/observer-1.6-receiving/audit.json": "bb43d6c9e4743868a02536a6ff36469c983d80b92ccf7afe3be0e963ba722ca5",
+    "artifacts/checkpoints/observer-1.6-receiving/supervisor.json": "8ec6d9397e9f25d26ba52daa2ebc31d57da78e64631c73f174a55f8ede67a5eb",
+    "artifacts/checkpoints/observer-1.6-receiving/primary.json": "a786af49efde55398b08afa75605959efcd007e1ece49b4b80f58bf93faa5f25"
+  }
+}

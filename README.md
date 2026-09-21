@@ -71,13 +71,15 @@ node scripts/client-security-integration.js
 
 대상은 `charles-k3s` / `gs-plai-5h`입니다. 구체적인 이미지 빌드·배포·접근 명령은 [deploy/README.md](deploy/README.md)에 있습니다. 앱은 1개 인스턴스와 Recreate 교체를 사용하며 SQLite 및 MQTT 데이터는 PVC에 저장합니다. 기본 context를 변경하지 않습니다.
 
-라이브 SQLite 백업:
+현재 원격은1.6.0 후보(runtime331ab9a/image4af)이며 전체 복원 인수 전이다. 검증된 복구 기준은1.5.0/ad34 백업이고 이벤트 시각 누락 ISSUE023 한계를 포함한다. 현재 선택은 [실행 원장](docs/operations/run.json)과 [다음 작업](docs/operations/NEXT-ACTIONS.md)을 먼저 확인한다. 이전 릴리스 설명을 현재 배포·백업 선택으로 사용하지 않는다.
+
+독립 로컬 SQLite 백업 CLI:
 
 ```sh
 node scripts/backup.js data/lab.sqlite artifacts/private/backups/checkpoint.sqlite
 ```
 
-backup API와 integrity_check를 사용합니다. WAL이 열린 상태의 DB 본 파일만 복사하지 않습니다. 복원은 별도 DB 경로에서 검사하거나 앱을 정상 종료한 뒤 호환 백업으로 교체합니다. 소스/이미지 롤백과 DB 복원은 별도 절차입니다. 단일 노드 local-path는 노드 자체 손실에 대한 고가용성을 제공하지 않습니다.
+이 로컬 CLI는 backup API와 integrity_check를 사용하는 기본 도구이며 원격 운영 helper의 worker/watchdog·재접속 보장을 제공한다고 해석하지 않습니다. 이번 자율 실행의 원격 백업·정확한 격리복원은 [최종 복원 계획](docs/operations/FINAL-RESTORE-PLAN.md)의 `remote-backup.mjs`와 선택 이미지/스냅샷/SHA 기록을 따릅니다. WAL이 열린 상태의 DB 본 파일만 복사하지 않습니다. 복원은 별도 DB 경로에서 검사하거나 앱을 정상 종료한 뒤 호환 백업으로 교체합니다. 소스/이미지 롤백과 DB 복원은 별도 절차입니다. 단일 노드 local-path는 노드 자체 손실에 대한 고가용성을 제공하지 않습니다.
 
 네트워크 중단 후 작업 재개는 [복구 절차](docs/operations/NETWORK-RECOVERY.md)와 [미완료 단계 기록](docs/operations/resume.json)을 사용합니다. `node scripts/resume-status.mjs`는 실제 Git·배포 이미지·API 상태를 읽기 전용으로 확인합니다. 실행 중인 자동 연결 감독기가 있으면 같은 포트로 별도 터널을 중복 시작하지 않습니다. 원격 앱은 로컬 연결과 별도로 동작합니다.
 
