@@ -1,0 +1,8 @@
+{
+  "ids": {
+    "wind": "704ce711-65e8-4303-bc92-b709cf9cceee",
+    "solar": "98dde21e-c2b3-4a3d-b743-de5e8df8942a"
+  },
+  "stamp": 1789982299068,
+  "note": "Dedicated local RTUs only. Other existing plants are preserved."
+}

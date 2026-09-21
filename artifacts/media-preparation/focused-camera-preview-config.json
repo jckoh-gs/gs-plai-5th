@@ -1,0 +1,109 @@
+{
+  "baseUrl": "http://127.0.0.1:3103",
+  "tokenFile": "artifacts/private/browser-auth-token",
+  "releaseManifest": "artifacts/releases/current.json",
+  "approvedReleaseCommit": "POPULATE_AT_FREEZE",
+  "approvedImageDigest": "POPULATE_AT_FREEZE",
+  "outputDir": "artifacts/video",
+  "speechRate": 170,
+  "scenes": [
+    {
+      "title": "CSV 해석 미리보기",
+      "seconds": 20,
+      "narration": "새 버전의 해석 미리보기입니다. 정규화한 출력과 시각, 단위를 확인하며 아직 RTU는 생성하지 않습니다.",
+      "zoom": {
+        "scale": 1.12
+      },
+      "actions": [
+        {
+          "type": "click",
+          "selector": "header button"
+        },
+        {
+          "type": "upload",
+          "label": "발전 CSV / TSV 파일",
+          "file": "artifacts/media-preparation/demo-synthetic.csv"
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "CSV 해석 미리보기"
+        },
+        {
+          "type": "assert",
+          "label": "CSV 해석 미리보기 결과"
+        },
+        {
+          "type": "focus",
+          "label": "CSV 해석 미리보기 결과"
+        },
+        {
+          "type": "wait",
+          "ms": 2000
+        },
+        {
+          "type": "capture",
+          "name": "preview-normalized"
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "취소"
+        }
+      ]
+    },
+    {
+      "title": "실제 3D 시점 조작",
+      "seconds": 18,
+      "narration": "실제 삼차원 화면 안에서 마우스를 드래그하고 휠로 거리를 바꿉니다. 포인터와 클릭 강조를 화면에서 확인합니다.",
+      "zoom": {
+        "scale": 1.1
+      },
+      "actions": [
+        {
+          "type": "click",
+          "role": "link",
+          "name": "통합 대시보드"
+        },
+        {
+          "type": "focus",
+          "selector": ".scene canvas"
+        },
+        {
+          "type": "wait",
+          "ms": 2500
+        },
+        {
+          "type": "capture",
+          "name": "camera-before"
+        },
+        {
+          "type": "drag",
+          "selector": ".scene canvas",
+          "from": [
+            0.4,
+            0.5
+          ],
+          "to": [
+            0.65,
+            0.55
+          ]
+        },
+        {
+          "type": "scroll",
+          "y": -140
+        },
+        {
+          "type": "wait",
+          "ms": 1500
+        },
+        {
+          "type": "capture",
+          "name": "camera-after"
+        }
+      ]
+    }
+  ],
+  "preparationTemplate": true,
+  "rehearsalName": "focused-camera-preview"
+}

@@ -1,0 +1,8 @@
+{
+  "node": "v24.21.0",
+  "product": "1.1.0",
+  "scripts": [
+    "client-message.js",
+    "vpp-client.js"
+  ]
+}

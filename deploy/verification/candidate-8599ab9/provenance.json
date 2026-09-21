@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-09-21T09:30:14.551557+00:00",
+  "sourceCommit": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
+  "context": "isolated git archive",
+  "archive": "artifacts/private/grid-8599ab9.oci.tar",
+  "imageManifest": "sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420",
+  "image": "127.0.0.1:15050/grid@sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420",
+  "labels": {
+    "grid.prd.version": "1.8",
+    "grid.runtime.variant": "alpine",
+    "org.opencontainers.image.revision": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
+    "org.opencontainers.image.version": "1.1.0"
+  },
+  "architecture": "amd64",
+  "os": "linux",
+  "unitTests": {
+    "pass": 71,
+    "fail": 0
+  },
+  "actualBrokerIntegration": "PASS",
+  "advancedIntegration": "PASS",
+  "testSource": "read-only tests/scripts mounted from same exact commit; image server/runtime used",
+  "registryPushed": true,
+  "deployed": false,
+  "supersededCandidate": "1197ab5 not promoted"
+}

@@ -4,7 +4,7 @@
   "freezeAt": "2026-09-21T21:37:33.079009+00:00",
   "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
   "timezone": "Asia/Seoul",
-  "phase": "stability",
+  "phase": "versioned-improvement",
   "scope": "greenfield; mandatory k3s deployment",
   "context": "charles-k3s",
   "namespace": "gs-plai-5h",
@@ -88,5 +88,15 @@
       "deploy/verification/stable-af7f223-restored-original.json"
     ],
     "scope": "Functional runtime recovery checkpoint; overall goal awaits final media/time gates"
+  },
+  "candidate": {
+    "productVersion": "1.1.0",
+    "prdVersion": "1.8",
+    "idea": "IDEA-005",
+    "sourceCommit": "8599ab92af7f884871b7f7f89a0baf3b253d300a",
+    "status": "source and browser verified; immutable image validation pending",
+    "startedAt": "2026-09-21T09:27:07.825616+00:00",
+    "fallbackTag": "stable-runtime-v1.0.0-af7f223",
+    "preUpgradeBackup": "deploy/verification/pre-1.1.0-backup.json"
   }
 }

@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "results": [
+    {
+      "directory": "artifacts/media-preparation/rehearsal",
+      "cueCount": 25,
+      "maxAudioCueDeltaSeconds": 2.842170943040401e-14,
+      "streams": "H264 1920x1080 / AAC / mov_text"
+    },
+    {
+      "directory": "artifacts/media-preparation/focused-camera-preview",
+      "cueCount": 4,
+      "maxAudioCueDeltaSeconds": 7.105427357601002e-15,
+      "streams": "H264 1920x1080 / AAC / mov_text"
+    }
+  ]
+}

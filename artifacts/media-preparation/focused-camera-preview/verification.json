@@ -1,0 +1,27 @@
+{
+  "rehearsal": true,
+  "createdAt": "2026-09-21T09:25:35.507Z",
+  "productionSeconds": 43.828,
+  "releaseCommit": "94f415103ae0ad7950afce2721b38d560ff350db",
+  "imageDigest": "POPULATE_AT_FREEZE",
+  "manifestSha256": "1cdd72a87845d4811cb5617e149f1543befacc01d942ad2549b869a0492ed70e",
+  "videoSha256": "7a37becd36104d4c6848945b47f733c24f4e88e5f25e6dbfc02d6ea839a9e662",
+  "fullDecode": true,
+  "audioMeanDb": -19.6,
+  "pageErrors": [],
+  "duration": 39.07,
+  "dimensions": "1920x1080",
+  "codecs": "H264/AAC",
+  "frames": [
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/focused-camera-preview/frame-1.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/focused-camera-preview/frame-2.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/focused-camera-preview/frame-3.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/focused-camera-preview/frame-4.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/focused-camera-preview/frame-5.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/focused-camera-preview/frame-6.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/focused-camera-preview/frame-7.png"
+  ],
+  "visualReview": "passed_rehearsal_only",
+  "claimsReview": "rehearsal_only",
+  "reviewRecord": "artifacts/media-preparation/REVIEW.md"
+}

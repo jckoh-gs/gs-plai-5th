@@ -1,0 +1,109 @@
+{
+  "releaseManifest": "artifacts/releases/current.json",
+  "videoVerification": "artifacts/video/verification.json",
+  "outputDir": "artifacts/presentation",
+  "slides": [
+    {
+      "title": "GRID",
+      "body": "VPP 연동 시험을 위한 가상 현장",
+      "notes": "",
+      "timecode": "",
+      "sources": [],
+      "cover": true
+    },
+    {
+      "title": "배경과 시험 목표",
+      "body": "실물 설비 없이 발전 데이터와 제어 경로를 반복 시험합니다.",
+      "notes": "",
+      "timecode": "",
+      "sources": []
+    },
+    {
+      "title": "시스템 경계",
+      "body": "예측·입찰 알고리즘, 시장 제출, 제조사 인증은 별도 범위입니다.",
+      "notes": "",
+      "timecode": "",
+      "sources": []
+    },
+    {
+      "title": "양방향 MQTT 아키텍처",
+      "body": "",
+      "notes": "",
+      "timecode": "",
+      "sources": [],
+      "architecture": true
+    },
+    {
+      "title": "CSV에서 일 초 SCADA 데이터까지",
+      "body": "십 분 원본의 시각과 단위를 해석하고 일 초 샘플을 생성합니다.",
+      "notes": "",
+      "timecode": "",
+      "sources": []
+    },
+    {
+      "title": "목표 출력 제어와 피드백",
+      "body": "수락, 실행, 실제 도달을 구분해 기록합니다.",
+      "notes": "",
+      "timecode": "",
+      "sources": []
+    },
+    {
+      "title": "대시보드와 삼차원 현장",
+      "body": "실제 대시보드에서 발전 상태와 현장 제어를 확인합니다.",
+      "notes": "",
+      "timecode": "",
+      "sources": [],
+      "image": "artifacts/media-preparation/rehearsal-large-caption/source/scene-2.png"
+    },
+    {
+      "title": "독립 RTU와 전송 메트릭",
+      "body": "연결·건강·전송·대기 상태를 관측합니다.",
+      "notes": "",
+      "timecode": "",
+      "sources": []
+    },
+    {
+      "title": "장애 주입과 재시작 복구",
+      "body": "최종 검증에서 실제 통과한 장애·복원 사례를 기입합니다.",
+      "notes": "",
+      "timecode": "",
+      "sources": []
+    },
+    {
+      "title": "시나리오와 외부 연동",
+      "body": "재생 조건과 실행 식별자를 구분합니다.",
+      "notes": "",
+      "timecode": "",
+      "sources": []
+    },
+    {
+      "title": "k3s 배포와 운영",
+      "body": "최종 이미지·인증된 접근·영속 백업 경로를 기입합니다.",
+      "notes": "",
+      "timecode": "",
+      "sources": []
+    },
+    {
+      "title": "검증 결과",
+      "body": "로컬, k3s, 외부 VPP/AWS 검증 상태를 구분해 기입합니다.",
+      "notes": "",
+      "timecode": "",
+      "sources": []
+    },
+    {
+      "title": "보안과 미해결 이슈",
+      "body": "해결된 패치와 수용한 잔여 위험을 근거 문서에 맞춰 기입합니다.",
+      "notes": "",
+      "timecode": "",
+      "sources": []
+    },
+    {
+      "title": "버전별 개선과 다음 과제",
+      "body": "채택 아이디어와 검증 범위, 다음 연동 과제를 기입합니다.",
+      "notes": "",
+      "timecode": "",
+      "sources": []
+    }
+  ],
+  "preparationTemplate": true
+}

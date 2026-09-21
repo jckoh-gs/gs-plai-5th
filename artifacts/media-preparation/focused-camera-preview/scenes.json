@@ -1,0 +1,160 @@
+{
+  "rehearsal": true,
+  "lead": 0.9589999999999961,
+  "scenes": [
+    {
+      "title": "CSV 해석 미리보기",
+      "seconds": 20,
+      "narration": "새 버전의 해석 미리보기입니다. 정규화한 출력과 시각, 단위를 확인하며 아직 RTU는 생성하지 않습니다.",
+      "zoom": {
+        "scale": 1.12
+      },
+      "actions": [
+        {
+          "type": "click",
+          "selector": "header button"
+        },
+        {
+          "type": "upload",
+          "label": "발전 CSV / TSV 파일",
+          "file": "artifacts/media-preparation/demo-synthetic.csv"
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "CSV 해석 미리보기"
+        },
+        {
+          "type": "assert",
+          "label": "CSV 해석 미리보기 결과"
+        },
+        {
+          "type": "focus",
+          "label": "CSV 해석 미리보기 결과"
+        },
+        {
+          "type": "wait",
+          "ms": 2000
+        },
+        {
+          "type": "capture",
+          "name": "preview-normalized"
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "취소"
+        }
+      ],
+      "voice": "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/focused-camera-preview/source/voice-0.aiff",
+      "cues": [
+        {
+          "start": 0,
+          "end": 2.08,
+          "text": "새 버전의 해석 미리보기입니다."
+        },
+        {
+          "start": 2.08,
+          "end": 7.5,
+          "text": "정규화한 출력과 시각, 단위를 확인하며 아직 RTU는 생성하지 않습니다."
+        }
+      ],
+      "duration": 20,
+      "start": 0,
+      "end": 20.07
+    },
+    {
+      "title": "실제 3D 시점 조작",
+      "seconds": 18,
+      "narration": "실제 삼차원 화면 안에서 마우스를 드래그하고 휠로 거리를 바꿉니다. 포인터와 클릭 강조를 화면에서 확인합니다.",
+      "zoom": {
+        "scale": 1.1
+      },
+      "actions": [
+        {
+          "type": "click",
+          "role": "link",
+          "name": "통합 대시보드"
+        },
+        {
+          "type": "focus",
+          "selector": ".scene canvas"
+        },
+        {
+          "type": "wait",
+          "ms": 2500
+        },
+        {
+          "type": "capture",
+          "name": "camera-before"
+        },
+        {
+          "type": "drag",
+          "selector": ".scene canvas",
+          "from": [
+            0.4,
+            0.5
+          ],
+          "to": [
+            0.65,
+            0.55
+          ]
+        },
+        {
+          "type": "scroll",
+          "y": -140
+        },
+        {
+          "type": "wait",
+          "ms": 1500
+        },
+        {
+          "type": "capture",
+          "name": "camera-after"
+        }
+      ],
+      "voice": "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/focused-camera-preview/source/voice-1.aiff",
+      "cues": [
+        {
+          "start": 0,
+          "end": 4.76,
+          "text": "실제 삼차원 화면 안에서 마우스를 드래그하고 휠로 거리를 바꿉니다."
+        },
+        {
+          "start": 4.76,
+          "end": 7.859999999999999,
+          "text": "포인터와 클릭 강조를 화면에서 확인합니다."
+        }
+      ],
+      "duration": 18,
+      "start": 20.07,
+      "end": 38.121
+    }
+  ],
+  "interactions": [
+    {
+      "kind": "click",
+      "at": 0.635,
+      "x": 1834.1484375,
+      "y": 38
+    },
+    {
+      "kind": "click",
+      "at": 2.079,
+      "x": 707.9140625,
+      "y": 842.078125
+    },
+    {
+      "kind": "click",
+      "at": 5.562,
+      "x": 1123.5,
+      "y": 1002.65625
+    },
+    {
+      "kind": "click",
+      "at": 20.694,
+      "x": 110.5,
+      "y": 168
+    }
+  ]
+}

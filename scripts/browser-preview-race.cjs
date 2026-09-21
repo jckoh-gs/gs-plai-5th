@@ -1,7 +1,7 @@
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
 const {chromium}=require(path.join(process.env.PLAYWRIGHT_NODE_MODULES,'playwright'));
 (async()=>{
- const target=new URL(process.env.GRID_URL||'http://127.0.0.1:3103'),directory='artifacts/checkpoints/preview-browser';fs.mkdirSync(directory,{recursive:true});
+ const target=new URL(process.env.GRID_URL||'http://127.0.0.1:3103'),directory=process.env.QA_DIRECTORY||'artifacts/checkpoints/preview-browser';fs.mkdirSync(directory,{recursive:true});
  let hold=false,pending=[],requests=0;const sockets=new Set();
  const proxy=http.createServer((req,res)=>{const preview=req.url==='/api/datasets/preview';if(preview)requests++;
   const upstream=http.request({hostname:target.hostname,port:target.port,path:req.url,method:req.method,headers:{...req.headers,host:target.host}},response=>{
@@ -13,7 +13,7 @@ const {chromium}=require(path.join(process.env.PLAYWRIGHT_NODE_MODULES,'playwrig
  await page.addInitScript(()=>{const original=File.prototype.text;window.pendingFileReads=[];File.prototype.text=function(){if(!this.name.startsWith('delayed-'))return original.call(this);return new Promise(resolve=>window.pendingFileReads.push(()=>original.call(this).then(resolve)));};});
  page.on('pageerror',e=>errors.push(e.message));const wait=async fn=>{for(let n=0;n<100;n++){if(fn())return;await new Promise(r=>setTimeout(r,50));}throw Error('Proxy condition timeout');};
  try{
-  await page.goto(`http://127.0.0.1:${proxy.address().port}`);await page.getByLabel('API 토큰',{exact:true}).fill(fs.readFileSync('artifacts/private/browser-auth-token','utf8').trim());await page.getByRole('button',{name:'워크스페이스 연결'}).click();
+  await page.goto(`http://127.0.0.1:${proxy.address().port}`);await page.getByLabel('API 토큰',{exact:true}).fill(fs.readFileSync(process.env.API_TOKEN_FILE||'artifacts/private/browser-auth-token','utf8').trim());await page.getByRole('button',{name:'워크스페이스 연결'}).click();
   await page.getByRole('button',{name:'RTU 추가',exact:true}).first().click();const dialog=page.getByRole('dialog'),textarea=dialog.locator('textarea');
   const csv='timestamp,power_kw\n2026-01-01 00:00:00,100\n2026-01-01 00:10:00,200';await textarea.fill(csv);
   hold=true;await dialog.getByRole('button',{name:'CSV 해석 미리보기',exact:true}).click();await wait(()=>pending.length===1);

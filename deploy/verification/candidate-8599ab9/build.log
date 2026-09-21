@@ -1,0 +1,83 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.37kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:24.21.0-alpine@sha256:ebfe2f90462722a7a4de65e91990e97fe0d401c70e0e762c5b53302f905ec1c1
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 96B done
+#3 DONE 0.0s
+
+#4 [build 1/7] FROM docker.io/library/node:24.21.0-alpine@sha256:ebfe2f90462722a7a4de65e91990e97fe0d401c70e0e762c5b53302f905ec1c1
+#4 resolve docker.io/library/node:24.21.0-alpine@sha256:ebfe2f90462722a7a4de65e91990e97fe0d401c70e0e762c5b53302f905ec1c1 done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 309.19kB done
+#5 DONE 0.0s
+
+#6 [build 4/7] RUN npm ci
+#6 CACHED
+
+#7 [build 6/7] COPY vite.config.js ./
+#7 CACHED
+
+#8 [build 5/7] COPY web ./web
+#8 CACHED
+
+#9 [build 2/7] WORKDIR /app
+#9 CACHED
+
+#10 [build 7/7] RUN npm run build
+#10 CACHED
+
+#11 [build 3/7] COPY package.json package-lock.json ./
+#11 CACHED
+
+#12 [stage-1  4/10] RUN apk upgrade --no-cache     && npm ci --omit=dev --ignore-scripts && npm cache clean --force     && rm -rf /usr/local/lib/node_modules/npm /usr/local/lib/node_modules/corepack /opt/yarn*     && rm -f /usr/local/bin/npm /usr/local/bin/npx /usr/local/bin/corepack /usr/local/bin/yarn /usr/local/bin/yarnpkg     && rm -rf /var/cache/apk/* /root/.npm
+#12 0.514 OK: 10.9 MiB in 18 packages
+#12 2.376 
+#12 2.376 added 110 packages, and audited 111 packages in 1s
+#12 2.376 
+#12 2.376 33 packages are looking for funding
+#12 2.376   run `npm fund` for details
+#12 2.378 
+#12 2.378 found 0 vulnerabilities
+#12 2.381 npm notice
+#12 2.381 npm notice New major version of npm available! 11.19.0 -> 12.0.2
+#12 2.381 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+#12 2.381 npm notice To update run: npm install -g npm@12.0.2
+#12 2.381 npm notice
+#12 2.863 npm warn using --force Recommended protections disabled.
+#12 DONE 3.4s
+
+#13 [stage-1  5/10] COPY --from=build /app/dist ./dist
+#13 DONE 0.0s
+
+#14 [stage-1  6/10] COPY server ./server
+#14 DONE 0.0s
+
+#15 [stage-1  7/10] COPY scripts/vpp-client.js scripts/client-message.js ./scripts/
+#15 DONE 0.0s
+
+#16 [stage-1  8/10] COPY samples ./samples
+#16 DONE 0.0s
+
+#17 [stage-1  9/10] COPY docs/protocol.md ./docs/protocol.md
+#17 DONE 0.0s
+
+#18 [stage-1 10/10] RUN mkdir /data && chown node:node /data
+#18 DONE 0.1s
+
+#19 exporting to oci image format
+#19 exporting layers
+#19 exporting layers 0.3s done
+#19 exporting manifest sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420
+#19 exporting manifest sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420 done
+#19 exporting config sha256:dc6d18640fb46e528da87fb40563394f8907aabe587d3d8b6525af307a487dc9 done
+#19 sending tarball
+#19 sending tarball 0.5s done
+#19 DONE 0.8s

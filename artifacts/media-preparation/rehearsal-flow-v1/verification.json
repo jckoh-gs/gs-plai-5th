@@ -1,0 +1,24 @@
+{
+  "rehearsal": true,
+  "createdAt": "2026-09-21T09:18:03.694Z",
+  "releaseCommit": "94f415103ae0ad7950afce2721b38d560ff350db",
+  "imageDigest": "POPULATE_AT_FREEZE",
+  "manifestSha256": "1cdd72a87845d4811cb5617e149f1543befacc01d942ad2549b869a0492ed70e",
+  "videoSha256": "586643bbfe80da21d4ca4bc14fbd02995be83628b5df971fd612ef1ce966ea40",
+  "fullDecode": true,
+  "duration": 241.44,
+  "dimensions": "1920x1080",
+  "codecs": "H264/AAC",
+  "frames": [
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/rehearsal/frame-1.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/rehearsal/frame-2.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/rehearsal/frame-3.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/rehearsal/frame-4.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/rehearsal/frame-5.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/rehearsal/frame-6.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/rehearsal/frame-7.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/rehearsal/frame-8.png"
+  ],
+  "visualReview": "pending",
+  "claimsReview": "pending"
+}

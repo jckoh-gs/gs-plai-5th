@@ -1,0 +1,9 @@
+# Rehearsal media remain available locally; commit scripts and concise evidence.
+*.webm
+*.mp4
+*.aiff
+/deck-build-*/
+/rehearsal-softsub/
+/rehearsal-large-caption/
+/rehearsal-short-final/
+/deck-rehearsal-text/

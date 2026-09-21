@@ -1,0 +1,42 @@
+{
+  "baseUrl": "http://127.0.0.1:3101",
+  "releaseManifest": "artifacts/releases/current.json",
+  "approvedReleaseCommit": "POPULATE_AT_FREEZE",
+  "approvedImageDigest": "POPULATE_AT_FREEZE",
+  "outputDir": "artifacts/video",
+  "speechRate": 170,
+  "scenes": [
+    {
+      "title": "녹화 도구 리허설",
+      "seconds": 7,
+      "narration": "실제 화면의 포인터와 확대 효과를 확인하는 제작 도구 리허설입니다.",
+      "actions": [
+        {
+          "type": "click",
+          "role": "link",
+          "name": "RTU 디바이스"
+        },
+        {
+          "type": "move",
+          "x": 900,
+          "y": 450
+        }
+      ],
+      "zoom": {
+        "scale": 1.12
+      }
+    },
+    {
+      "title": "마무리",
+      "seconds": 5,
+      "narration": "이 파일은 최종 시연 영상이 아닙니다.",
+      "actions": [
+        {
+          "type": "click",
+          "role": "link",
+          "name": "통합 대시보드"
+        }
+      ]
+    }
+  ]
+}
