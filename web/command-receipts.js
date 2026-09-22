@@ -1,3 +1,4 @@
+import {commandId} from './browser-compat.js';
 export const COMMAND_STATUSES=Object.freeze(['accepted','executing','completed','rejected','expired','failed','timed_out','superseded','cancelled']);
 const terminal=status=>COMMAND_STATUSES.includes(status)&&!['accepted','executing'].includes(status);
 const fault=kind=>Object.assign(new Error(({timeout:'응답 대기 15초가 지났습니다.',network:'응답을 확인하지 못했습니다.',parse:'응답 형식을 확인하지 못했습니다.'})[kind]||kind),{receiptKind:kind});
@@ -11,7 +12,7 @@ export function commandObservation(receipt,value,secrets=[]){
  const normalize=text=>text.replace(/[\u0000-\u001f\u007f]/g,'');let reason=normalize(typeof value.reason==='string'?value.reason:'');reason=reason.replace(/\b[a-z][a-z0-9+.-]*:\/\/[^\s/]*@[^\s]*/gi,'[redacted-url]');for(const secret of secrets){const normalized=typeof secret==='string'?normalize(secret):'';if(normalized)reason=reason.split(normalized).join('[redacted]')}reason=reason.slice(0,300);
  return {status:value.status,reason,updatedAt:typeof value.updatedAt==='string'&&Number.isFinite(Date.parse(value.updatedAt))?value.updatedAt:null};
 }
-export function createCommandReceipts({request,uuid=()=>crypto.randomUUID(),onChange=()=>{},onState=()=>{},secrets=()=>[],now=()=>Date.now()}){
+export function createCommandReceipts({request,uuid=commandId,onChange=()=>{},onState=()=>{},secrets=()=>[],now=()=>Date.now()}){
  const records=new Map(),pending=new Set(),checks=new Map();let stateGeneration=0;
  const list=id=>records.get(id)||[];
  const find=(id,commandId)=>list(id).find(r=>r.commandId===commandId);

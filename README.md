@@ -20,7 +20,7 @@ npm start
 
 [로컬 화면](http://127.0.0.1:3101). 빈 DB에는 풍력·태양광·복합 단지와 **합성 CSV** 데모가 생성됩니다. 기존 DB에서는 중복 생성하지 않습니다. `SEED_DEMO=false`로 빈 상태에서 시작할 수 있습니다. 개발 UI는 `npm run web`; 서버는 별도로 실행합니다.
 
-로컬 브로커는 루프백에만 열며 익명 연결을 허용합니다. 원격 배포에서는 서로 다른 앱/VPP 계정과 ACL, 관리 API Bearer 인증 및 암호화된 Kubernetes 터널을 사용합니다. `.env`, `certs`, `data`, `artifacts/private`는 Git에서 제외됩니다.
+로컬 브로커는 루프백에만 열며 익명 연결을 허용합니다. 원격 배포에서는 서로 다른 앱/VPP 계정과 ACL, 관리 API Bearer 인증을 사용합니다. MQTT 및 로컬 접근은 암호화된 Kubernetes 터널을 사용하며 공개 웹 접근은 아래 HTTP Ingress로 제공합니다. `.env`, `certs`, `data`, `artifacts/private`는 Git에서 제외됩니다.
 
 ## 화면과 동작
 
@@ -68,6 +68,8 @@ node scripts/client-security-integration.js
 선택적 브라우저 검증은 Playwright와 Chrome 설치가 필요합니다. `scripts/browser-check.cjs`에 `GRID_URL`, `API_TOKEN_FILE`, `PLAYWRIGHT_NODE_MODULES`를 지정할 수 있습니다. 토큰을 URL에 넣지 않습니다.
 
 ## k3s 배포와 복구
+
+웹 접속: **[http://grid.koh.it.kr](http://grid.koh.it.kr)**. 사용자 요청에 따라 TLS 인증서와 HTTPS 자동 리다이렉트 없이 HTTP로 연결합니다. 기존 API 토큰 인증은 유지합니다.
 
 대상은 `charles-k3s` / `gs-plai-5h`입니다. 구체적인 이미지 빌드·배포·접근 명령은 [deploy/README.md](deploy/README.md)에 있습니다. 앱은 1개 인스턴스와 Recreate 교체를 사용하며 SQLite 및 MQTT 데이터는 PVC에 저장합니다. 기본 context를 변경하지 않습니다.
 

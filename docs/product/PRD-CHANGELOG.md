@@ -1,5 +1,9 @@
 # PRD 변경 이력
 
+## 1.16 — 사용자 요청 HTTP 도메인 배포 / 제품1.7.2
+
+`grid.koh.it.kr` HTTP Ingress와 좁은 NetworkPolicy 예외를 추가한다. HTTP에서 제공되지 않는 `crypto.randomUUID`·Clipboard API에 의존하던 제어·복사를 보완한다. 새 OSS 의존성, 서버·DB·MQTT 계약 변경은 없다. 원래1.7.1 최종 릴리스 증거는 보존하고 새 검증은 `deploy/verification/ingress-grid-20260922/`에서 관리한다.
+
 ## 1.15 — IDEA012 개정1 채택 / 제품1.7.1 후보
 
 NFR08 검토/REVIEW040에서 확인한 MQTT monitor online 유실·quickstart 환경/포트 불일치·미지원 v1 문구를 정정한다. FR-VPP-STATUS01 및 AT-VPP-STATUS01 네개를 추가하고 PRD 부록A/B와 배포 가이드를 함께 맞춘다. 현재 명령 중복방지·복원·실제시간 만료는 유지한다. 서버/DB/제어/UI/wire schema/OSS 변경 없이 기존 상태 관측 계약을 이행하며 stable1.7과 원래 시간·최종미디어 게이트를 유지한다. 새 후보 인수는 대기다.

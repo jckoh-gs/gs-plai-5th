@@ -1,10 +1,22 @@
-# Private k3s deployment
+# k3s deployment
 
 Target: `charles-k3s`, namespace `gs-plai-5h`, single amd64 node `charleskoh-nucbox-g3`.
 
 The image registry binds only node loopback `127.0.0.1:15050`. k3s/containerd uses loopback HTTP by default; no cluster runtime configuration changes are required. Image uploads use an authenticated Kubernetes API port-forward, never a public registry port. Registry contents persist on a dedicated local-path PVC. The app is pinned by immutable digest and scheduled to that node.
 
 ## Current run and access
+
+Public UI: **http://grid.koh.it.kr/**. The HTTP Ingress uses the existing `nginx` ingress class and routes to `grid:http` (3001). DNS points to the controller's existing external IP, `121.143.126.21`. No TLS certificate or HTTPS redirect is configured for GRID. The shared controller's existing HTTPS listener belongs to other services and is not changed by this manifest.
+
+Apply the independent routing manifest without rebuilding or restarting the app:
+
+```sh
+kubectl --context charles-k3s apply -f deploy/ingress.yaml
+```
+
+`grid-private` remains the default-deny policy. The additive `grid-ingress-nginx` policy allows only controller pods in `ingress-nginx` to reach TCP3001; it does not expose MQTT. Ingress buffering is disabled for real-time SSE, and the request limit matches the app's20MiB JSON limit. API authentication still applies. HTTP does not encrypt API tokens; the local Kubernetes tunnel below remains available for encrypted transport to the cluster.
+
+To remove this public route, delete only this manifest's two objects (`kubectl --context charles-k3s delete -f deploy/ingress.yaml`); the app, data, private access and default-deny policy remain in place. Verification is recorded in [ingress-grid-20260922](verification/ingress-grid-20260922/).
 
 The actual functional stable deployment is **1.7.1 / PRD1.15 / runtime40b9ed8 / image234ec56**. Its exact1075081216-byte5ff snapshot passed current1.7.1/backward1.7 recovery:26 reports and2 actual Pod identities, followed by root live cleanup and preservation of the original5 configurations. Both proof rigs are0/noPods, four PVCs retained and their forwards ended. The immutable checkpoint-1.7.1 manifest passed2,033 hashes, actualReady and backup checks in independent REVIEW046. New stable-v1.7.1 represents the complete operational/evidence checkpoint; stable-runtime-v1.7.1-40b9ed8 represents the exact app build. Read run.json for their actual creation/remote status. Preserve historical1.7/1cab and1.6/9bd checkpoints. The new final video and14-slide editable deck were produced and reviewed within the original final window. Final public artifact delivery after the deadline was separately authorized by the user; see [final handoff](../docs/operations/FINAL-DELIVERY.md).
 
@@ -33,7 +45,7 @@ python3 scripts/oci-push.py artifacts/private/grid-image.oci.tar checkpoint-TIME
 ./scripts/deploy-image.sh 127.0.0.1:15050/grid@sha256:APP_DIGEST 127.0.0.1:15050/grid-mqtt@sha256:MQTT_DIGEST
 ```
 
-UI: `http://127.0.0.1:3104`. API token is stored in the ignored, mode-0600 `artifacts/private/deploy/api-token` file and `grid-secrets` Secret. External VPP client uses MQTT user `vpp-client`, secret from `artifacts/private/deploy/client-password`, broker `mqtt://127.0.0.1:18884`. Emulator uses separate `grid` credentials. Broker ACL limits the external client to telemetry/ack/status reads and command writes. MQTT and HTTP traverse encrypted Kubernetes tunnels, with no public NodePort or ingress. A deny-all ingress NetworkPolicy isolates the pod; app-to-broker traffic stays within the pod. No TLS bypass is used. Tunnel lifetime is separate from remote deployment lifetime.
+Local UI: `http://127.0.0.1:3104`; public HTTP access is configured separately above. API token is stored in the ignored, mode-0600 `artifacts/private/deploy/api-token` file and `grid-secrets` Secret. External VPP client uses MQTT user `vpp-client`, secret from `artifacts/private/deploy/client-password`, broker `mqtt://127.0.0.1:18884`. Emulator uses separate `grid` credentials. Broker ACL limits the external client to telemetry/ack/status reads and command writes. Local MQTT and HTTP access traverse encrypted Kubernetes tunnels, with no public MQTT route or NodePort. The default-deny ingress policy has only the narrow HTTP-controller exception described above; app-to-broker traffic stays within the pod. No TLS bypass is used. Tunnel lifetime is separate from remote deployment lifetime.
 
 App SQLite uses the 5Gi grid-data PVC; MQTT uses a separate 1Gi grid-mqtt-data PVC. A non-root init container performs a one-time, non-destructive copy of the prior shared-volume mosquitto.db into the dedicated volume, then records a migration marker. It never overwrites existing broker state or deletes the original. The running broker cannot mount or access app SQLite. Deployments use Recreate to prevent concurrent SQLite writers. Both containers run as non-root, with a read-only root filesystem, dropped capabilities, no privilege escalation, and no service account credential mount. Local-path storage survives pod replacement but does not replicate across node loss; back up SQLite and MQTT state separately. Kubernetes Secrets require cluster access controls and are not an encrypted-at-rest guarantee.
 
