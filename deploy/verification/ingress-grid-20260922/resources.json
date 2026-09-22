@@ -1,0 +1,133 @@
+{
+  "apiVersion": "v1",
+  "items": [
+    {
+      "apiVersion": "networking.k8s.io/v1",
+      "kind": "Ingress",
+      "metadata": {
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"networking.k8s.io/v1\",\"kind\":\"Ingress\",\"metadata\":{\"annotations\":{\"nginx.ingress.kubernetes.io/force-ssl-redirect\":\"false\",\"nginx.ingress.kubernetes.io/proxy-body-size\":\"20m\",\"nginx.ingress.kubernetes.io/proxy-buffering\":\"off\",\"nginx.ingress.kubernetes.io/proxy-read-timeout\":\"3600\",\"nginx.ingress.kubernetes.io/proxy-send-timeout\":\"3600\",\"nginx.ingress.kubernetes.io/ssl-redirect\":\"false\"},\"name\":\"grid\",\"namespace\":\"gs-plai-5h\"},\"spec\":{\"ingressClassName\":\"nginx\",\"rules\":[{\"host\":\"grid.koh.it.kr\",\"http\":{\"paths\":[{\"backend\":{\"service\":{\"name\":\"grid\",\"port\":{\"name\":\"http\"}}},\"path\":\"/\",\"pathType\":\"Prefix\"}]}}]}}\n",
+          "nginx.ingress.kubernetes.io/force-ssl-redirect": "false",
+          "nginx.ingress.kubernetes.io/proxy-body-size": "20m",
+          "nginx.ingress.kubernetes.io/proxy-buffering": "off",
+          "nginx.ingress.kubernetes.io/proxy-read-timeout": "3600",
+          "nginx.ingress.kubernetes.io/proxy-send-timeout": "3600",
+          "nginx.ingress.kubernetes.io/ssl-redirect": "false"
+        },
+        "creationTimestamp": "2026-09-22T00:51:38Z",
+        "generation": 1,
+        "name": "grid",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10014631",
+        "uid": "c5131a42-90dc-4d26-9b3d-aad0b758457a"
+      },
+      "spec": {
+        "ingressClassName": "nginx",
+        "rules": [
+          {
+            "host": "grid.koh.it.kr",
+            "http": {
+              "paths": [
+                {
+                  "backend": {
+                    "service": {
+                      "name": "grid",
+                      "port": {
+                        "name": "http"
+                      }
+                    }
+                  },
+                  "path": "/",
+                  "pathType": "Prefix"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    {
+      "apiVersion": "networking.k8s.io/v1",
+      "kind": "NetworkPolicy",
+      "metadata": {
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"networking.k8s.io/v1\",\"kind\":\"NetworkPolicy\",\"metadata\":{\"annotations\":{},\"name\":\"grid-private\",\"namespace\":\"gs-plai-5h\"},\"spec\":{\"ingress\":[],\"podSelector\":{\"matchLabels\":{\"app\":\"grid\"}},\"policyTypes\":[\"Ingress\"]}}\n"
+        },
+        "creationTimestamp": "2026-09-21T08:33:33Z",
+        "generation": 9,
+        "name": "grid-private",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10003121",
+        "uid": "b7e1dbfa-2160-407e-8dad-f73f639bf4e0"
+      },
+      "spec": {
+        "podSelector": {
+          "matchLabels": {
+            "app": "grid"
+          }
+        },
+        "policyTypes": [
+          "Ingress"
+        ]
+      }
+    },
+    {
+      "apiVersion": "networking.k8s.io/v1",
+      "kind": "NetworkPolicy",
+      "metadata": {
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"networking.k8s.io/v1\",\"kind\":\"NetworkPolicy\",\"metadata\":{\"annotations\":{},\"name\":\"grid-ingress-nginx\",\"namespace\":\"gs-plai-5h\"},\"spec\":{\"ingress\":[{\"from\":[{\"namespaceSelector\":{\"matchLabels\":{\"kubernetes.io/metadata.name\":\"ingress-nginx\"}},\"podSelector\":{\"matchLabels\":{\"app.kubernetes.io/component\":\"controller\",\"app.kubernetes.io/instance\":\"ingress-nginx\",\"app.kubernetes.io/name\":\"ingress-nginx\"}}}],\"ports\":[{\"port\":3001,\"protocol\":\"TCP\"}]}],\"podSelector\":{\"matchLabels\":{\"app\":\"grid\"}},\"policyTypes\":[\"Ingress\"]}}\n"
+        },
+        "creationTimestamp": "2026-09-22T00:51:38Z",
+        "generation": 1,
+        "name": "grid-ingress-nginx",
+        "namespace": "gs-plai-5h",
+        "resourceVersion": "10014634",
+        "uid": "410ab9c4-02b8-42fa-87a9-8a85cef8f1da"
+      },
+      "spec": {
+        "ingress": [
+          {
+            "from": [
+              {
+                "namespaceSelector": {
+                  "matchLabels": {
+                    "kubernetes.io/metadata.name": "ingress-nginx"
+                  }
+                },
+                "podSelector": {
+                  "matchLabels": {
+                    "app.kubernetes.io/component": "controller",
+                    "app.kubernetes.io/instance": "ingress-nginx",
+                    "app.kubernetes.io/name": "ingress-nginx"
+                  }
+                }
+              }
+            ],
+            "ports": [
+              {
+                "port": 3001,
+                "protocol": "TCP"
+              }
+            ]
+          }
+        ],
+        "podSelector": {
+          "matchLabels": {
+            "app": "grid"
+          }
+        },
+        "policyTypes": [
+          "Ingress"
+        ]
+      }
+    }
+  ],
+  "kind": "List",
+  "metadata": {
+    "resourceVersion": ""
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-22T00:59:06.264349+00:00",
+  "productVersion": "1.7.2",
+  "prdVersion": "1.16",
+  "sourceCommit": "1646f6c8c16f3f595bbe11485ac67ad224ee7da7",
+  "image": "127.0.0.1:15050/grid@sha256:645a098886cb291b1b3b8ee61cb9f1a802931359234fdd58d5073e2b7d06e84c",
+  "url": "http://grid.koh.it.kr/",
+  "checks": {
+    "/": {
+      "status": 200,
+      "url": "http://grid.koh.it.kr/"
+    },
+    "/api/health": {
+      "status": 200,
+      "url": "http://grid.koh.it.kr/api/health",
+      "body": {
+        "status": "ok",
+        "version": "1.7.2",
+        "mqtt": {
+          "connected": true,
+          "clientId": "vpp-scada-lab",
+          "lastError": null,
+          "rssBytes": 145084416,
+          "uptimeSeconds": 43.871150056,
+          "scope": "shared Node process; not per-RTU hardware"
+        }
+      }
+    },
+    "/api/config": {
+      "status": 200,
+      "url": "http://grid.koh.it.kr/api/config",
+      "body": {
+        "authRequired": true,
+        "version": "1.7.2"
+      }
+    },
+    "/api/state": {
+      "status": 401,
+      "url": "http://grid.koh.it.kr/api/state"
+    },
+    "/api/events": {
+      "status": 401,
+      "url": "http://grid.koh.it.kr/api/events"
+    },
+    "assets": [
+      {
+        "path": "/assets/index-Dvczd--q.js",
+        "sha256": "0bcef27932168488641e1f192f82794275b850e09d8bfb82aaa656e394287caa",
+        "matchesTestedBuild": true
+      },
+      {
+        "path": "/assets/index-DEfqZjZ9.css",
+        "sha256": "51137c1c0da56706d8cbe87f873b7ace2b530ccdc07673e1fccf2b8cf93166db",
+        "matchesTestedBuild": true
+      }
+    ]
+  },
+  "pod": {
+    "name": "grid-75bb974b7f-zb6lk",
+    "uid": "2dafdb75-aa1a-4eaa-8ae1-f6a4c75eb515",
+    "containers": [
+      {
+        "name": "app",
+        "ready": true,
+        "restartCount": 0,
+        "imageID": "127.0.0.1:15050/grid@sha256:645a098886cb291b1b3b8ee61cb9f1a802931359234fdd58d5073e2b7d06e84c"
+      },
+      {
+        "name": "mqtt",
+        "ready": true,
+        "restartCount": 0,
+        "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+      }
+    ]
+  },
+  "httpOnlyConfiguration": {
+    "tlsConfigured": false,
+    "httpsRedirect": false,
+    "sharedController443Unchanged": true
+  },
+  "existingRtuConfigurationsPreserved": 6
+}

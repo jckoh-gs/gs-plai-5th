@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-09-22T00:59:03.303Z",
+  "scope": "Actual deployed UI, authenticated read-only API and SSE through ingress; no production control writes",
+  "httpContext": {
+    "secure": false,
+    "randomUUID": "undefined",
+    "clipboard": "undefined"
+  },
+  "product": "v1.7.2 / MQTT v2",
+  "realtime": "실시간 연결",
+  "plantCards": 6,
+  "copyEvents": 1,
+  "temporaryCopyInputs": 0,
+  "pageErrors": [],
+  "blockedMutations": [],
+  "result": "PASS",
+  "tunnelExit": {
+    "code": null,
+    "signal": "SIGTERM"
+  }
+}

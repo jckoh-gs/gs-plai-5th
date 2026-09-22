@@ -1,0 +1,9 @@
+{
+  "startedAt": "2026-09-22T00:57:08.754868+00:00",
+  "imageDigest": "sha256:645a098886cb291b1b3b8ee61cb9f1a802931359234fdd58d5073e2b7d06e84c",
+  "exitCode": 0,
+  "image": "127.0.0.1:15050/grid@sha256:645a098886cb291b1b3b8ee61cb9f1a802931359234fdd58d5073e2b7d06e84c",
+  "result": "PASS",
+  "ownedTunnelExitCode": -15,
+  "finishedAt": "2026-09-22T00:57:22.938638+00:00"
+}

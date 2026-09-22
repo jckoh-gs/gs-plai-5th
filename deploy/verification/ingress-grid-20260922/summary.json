@@ -1,0 +1,40 @@
+{
+  "result": "PASS",
+  "completedAt": "2026-09-22T01:00:13.216417+00:00",
+  "url": "http://grid.koh.it.kr/",
+  "productVersion": "1.7.2",
+  "prdVersion": "1.16",
+  "runtimeSource": "1646f6c8c16f3f595bbe11485ac67ad224ee7da7",
+  "image": "127.0.0.1:15050/grid@sha256:645a098886cb291b1b3b8ee61cb9f1a802931359234fdd58d5073e2b7d06e84c",
+  "tests": {
+    "initial": {
+      "exitCode": 1,
+      "passed": 357,
+      "failed": 1,
+      "reason": "Existing fixture allowed1.7.1 but stale rejection test expected it to be refused",
+      "log": "unit-tests.log"
+    },
+    "final": {
+      "exitCode": 0,
+      "passed": 359,
+      "failed": 0,
+      "log": "unit-tests-final.log"
+    },
+    "browserIsolated": "browser-http-compat.json",
+    "browserDeployed": "browser-deployed.json"
+  },
+  "dependencyVersionsUnchanged": true,
+  "security": {
+    "scanExitCode": 0,
+    "knownCves": 2,
+    "packageMatches": 4,
+    "newMatches": 0,
+    "source": "image-vulnerabilities.json"
+  },
+  "initialIngressVerificationOn171": "verification.json",
+  "finalReleaseVerification": "release-verification.json",
+  "allOwnedVerificationForwardsStopped": true,
+  "preservedRtuConfigurations": 6,
+  "unchangedServerDbMqttContracts": true,
+  "originalReleaseEvidenceUnchanged": true
+}

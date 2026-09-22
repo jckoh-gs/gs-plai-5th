@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-22T00:37:05.402012+00:00",
+  "updatedAt": "2026-09-22T01:00:13.216417+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -1851,5 +1851,19 @@
     "runtimeFiles": 28,
     "requirementItems": 198,
     "softwareAndMediaRemoteCommitMatched": true
+  },
+  "postDeliveryHttpDeployment": {
+    "completedAt": "2026-09-22T01:00:13.216417+00:00",
+    "status": "COMPLETE",
+    "authorization": "User requested k3s Ingress grid.koh.it.kr with HTTP only; includes necessary HTTP browser compatibility fixes",
+    "productVersion": "1.7.2",
+    "prdVersion": "1.16",
+    "sourceCommit": "1646f6c8c16f3f595bbe11485ac67ad224ee7da7",
+    "appImage": "127.0.0.1:15050/grid@sha256:645a098886cb291b1b3b8ee61cb9f1a802931359234fdd58d5073e2b7d06e84c",
+    "url": "http://grid.koh.it.kr/",
+    "evidence": "deploy/verification/ingress-grid-20260922/",
+    "originalAutonomousGoalRemainsComplete": true,
+    "automationResumed": false,
+    "newDatabaseBackupOrRestorePerformed": false
   }
 }

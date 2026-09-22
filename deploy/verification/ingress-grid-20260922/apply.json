@@ -1,0 +1,6 @@
+{
+  "appliedAt": "2026-09-22T00:51:38.774445+00:00",
+  "exitCode": 0,
+  "stdout": "ingress.networking.k8s.io/grid created\nnetworkpolicy.networking.k8s.io/grid-ingress-nginx created\n",
+  "stderr": ""
+}

@@ -1,0 +1,52 @@
+{
+  "checkedAt": "2026-09-22T00:54:46.574Z",
+  "scope": "Isolated browser fixture; no production writes",
+  "browserContext": {
+    "secure": false,
+    "randomUUID": "undefined",
+    "clipboard": "undefined",
+    "getRandomValues": "function"
+  },
+  "command": {
+    "receipt": {
+      "commandId": "6dd951c3-9222-4285-b546-ccf4d959c1a0",
+      "plantId": "fixture",
+      "plantName": "HTTP fixture",
+      "action": "set_target",
+      "generatorId": null,
+      "sentAt": "2026-09-22T00:54:50.519Z",
+      "pending": false,
+      "confirmed": true,
+      "status": "accepted",
+      "reason": "",
+      "checking": false,
+      "updatedAt": null,
+      "problem": null,
+      "refreshWarning": null
+    },
+    "posts": [
+      {
+        "action": "set_target",
+        "targetKw": 10,
+        "commandId": "6dd951c3-9222-4285-b546-ccf4d959c1a0"
+      }
+    ]
+  },
+  "copy": {
+    "result": "copied",
+    "events": [
+      {
+        "text": "HTTP 복사 fixture",
+        "start": 0,
+        "end": 15
+      }
+    ],
+    "temporaryInputs": 0,
+    "focused": "copy"
+  },
+  "copyDenied": {
+    "message": "코드를 선택한 뒤 직접 복사해 주세요.",
+    "temporaryInputs": 0
+  },
+  "result": "PASS"
+}

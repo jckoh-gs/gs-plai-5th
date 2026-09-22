@@ -1,0 +1,10 @@
+{
+  "startedAt": "2026-09-22T00:58:17.066578+00:00",
+  "previousImage": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "image": "127.0.0.1:15050/grid@sha256:645a098886cb291b1b3b8ee61cb9f1a802931359234fdd58d5073e2b7d06e84c",
+  "plantCountBefore": 6,
+  "strategy": "Existing Recreate; app image only; no data/schema changes",
+  "setImageExitCode": 0,
+  "rolloutExitCode": 0,
+  "finishedAt": "2026-09-22T00:58:28.304098+00:00"
+}

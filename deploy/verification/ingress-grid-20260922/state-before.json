@@ -1,0 +1,35 @@
+{
+  "version": "1.7.1",
+  "plants": [
+    {
+      "id": "8201415e-11b5-4223-97f4-5f470ce9db3d",
+      "runId": "ea26448c-1362-4c31-b4e7-ad87b4df24bd",
+      "configurationSha256": "93bb68a0364d07a18d6cf72f7c1849fa3a3f99e6d99e23002f468fe99f7f8067"
+    },
+    {
+      "id": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+      "runId": "efdcb3c8-851b-42ea-8501-61907552b932",
+      "configurationSha256": "c9f57422b9a783546b7f2fd4d1c514375865605d620d1dcf437daacf7db0bc3a"
+    },
+    {
+      "id": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+      "runId": "0c51962b-d6a3-4513-8118-c54f0bbefb3b",
+      "configurationSha256": "144de0f5066b0714931868af1f23dea93d202cae583d70255843a422a75add72"
+    },
+    {
+      "id": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+      "runId": "c83f35c0-23b7-45c5-b567-0dbf1fb3e1a0",
+      "configurationSha256": "65786ec48bb27587d88b67dffc21ede996e9b3fa64c286f7e193fb4fb04aaa0e"
+    },
+    {
+      "id": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+      "runId": "1ad54156-ba54-4fc0-8bbb-ec7595e25a80",
+      "configurationSha256": "d0119575711fbbb9da271bf76468165920c2ef396ac05c370e8128d5a616f566"
+    },
+    {
+      "id": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+      "runId": "26d2830a-4774-4f97-996d-a36dc227a62c",
+      "configurationSha256": "dff3c8b3dd90945b601b8ad9486f6bb780a674ef77da62c8525653f903751488"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "checkedAt": "2026-09-22T00:52:20.223163+00:00",
+  "hostname": "grid.koh.it.kr",
+  "url": "http://grid.koh.it.kr/",
+  "checks": {
+    "publicHttpRoot": {
+      "status": 200,
+      "url": "http://grid.koh.it.kr/",
+      "contentType": "text/html; charset=utf-8",
+      "htmlSha256": "21be8f05236c1faf7fe824ee9ec4c8a0ef27fcee101e8f2bd9455426a741d4d6",
+      "httpsRedirect": false
+    },
+    "publicAssets": [
+      {
+        "path": "/assets/index-qlOuxY80.js",
+        "status": 200,
+        "bytes": 269242,
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "/assets/index-DEfqZjZ9.css",
+        "status": 200,
+        "bytes": 19886,
+        "contentType": "text/css; charset=utf-8"
+      }
+    ],
+    "publicHealth": {
+      "status": 200,
+      "version": "1.7.1",
+      "appStatus": "ok"
+    },
+    "publicConfig": {
+      "status": 200,
+      "authRequired": true
+    },
+    "unauthenticatedState": {
+      "status": 401
+    },
+    "unauthenticatedEvents": {
+      "status": 401
+    },
+    "authenticatedStateViaIngressTunnel": {
+      "status": 200,
+      "version": "1.7.1",
+      "plantCount": 6
+    },
+    "realtimeSseViaIngressTunnel": {
+      "status": 200,
+      "eventCount": 3,
+      "arrivalSeconds": [
+        0.118,
+        0.646,
+        2.051
+      ]
+    },
+    "verificationTunnelStopped": {
+      "exitCode": -15,
+      "ownedPid": 19800
+    },
+    "httpIngress": {
+      "class": "nginx",
+      "tlsConfigured": false,
+      "sslRedirect": false,
+      "backend": "grid:http (3001)"
+    },
+    "networkPolicy": {
+      "defaultDenyPreserved": true,
+      "allowedSource": "ingress-nginx namespace AND controller pod labels",
+      "allowedPorts": [
+        "TCP3001"
+      ],
+      "mqttPortAllowed": false
+    },
+    "unchangedReadyPods": [
+      {
+        "name": "grid-69d8766f7-zmfq8",
+        "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+        "containers": [
+          {
+            "name": "app",
+            "imageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+            "restartCount": 0,
+            "ready": true
+          },
+          {
+            "name": "mqtt",
+            "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+            "restartCount": 0,
+            "ready": true
+          }
+        ]
+      }
+    ],
+    "publicDns": {
+      "resolver": "1.1.1.1",
+      "records": [
+        "121.143.126.21"
+      ]
+    }
+  },
+  "result": "PASS",
+  "finishedAt": "2026-09-22T00:52:23.832061+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "startedAt": "2026-09-22T00:56:10.337487+00:00",
+  "finishedAt": "2026-09-22T00:56:42.386792+00:00",
+  "sourceCommit": "1646f6c8c16f3f595bbe11485ac67ad224ee7da7",
+  "productVersion": "1.7.2",
+  "prdVersion": "1.16",
+  "exitCode": 0,
+  "imageArchive": "artifacts/private/grid-http-1.7.2.oci.tar",
+  "imageDigest": "sha256:645a098886cb291b1b3b8ee61cb9f1a802931359234fdd58d5073e2b7d06e84c",
+  "labels": {
+    "grid.prd.version": "1.16",
+    "grid.runtime.variant": "alpine",
+    "org.opencontainers.image.revision": "1646f6c8c16f3f595bbe11485ac67ad224ee7da7",
+    "org.opencontainers.image.version": "1.7.2"
+  },
+  "logNormalization": {
+    "change": "Trailing whitespace only",
+    "rawSha256": "9b9eeb8c3fc1639537b580f91f750c6c3fd6b59845d4b1c6a63ad975ca2e1d87",
+    "normalizedSha256": "275675572cb1dca54305b62da323cf7f7d437d3cdf121b36af6c9cf083a69d1e"
+  }
+}
