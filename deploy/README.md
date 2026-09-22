@@ -51,6 +51,12 @@ Local UI: `http://127.0.0.1:3104`; public HTTP access is configured separately a
 
 App SQLite uses the 5Gi grid-data PVC; MQTT uses a separate 1Gi grid-mqtt-data PVC. A non-root init container performs a one-time, non-destructive copy of the prior shared-volume mosquitto.db into the dedicated volume, then records a migration marker. It never overwrites existing broker state or deletes the original. The running broker cannot mount or access app SQLite. Deployments use Recreate to prevent concurrent SQLite writers. Both containers run as non-root, with a read-only root filesystem, dropped capabilities, no privilege escalation, and no service account credential mount. Local-path storage survives pod replacement but does not replicate across node loss; back up SQLite and MQTT state separately. Kubernetes Secrets require cluster access controls and are not an encrypted-at-rest guarantee.
 
+## KMA live observations
+
+The app reads `KMA_AUTH_KEY` from the dedicated `grid-kma` Secret, key `auth-key`, in `gs-plai-5h`. Store only the API Hub credential in that key, without leading/trailing whitespace. The credential stays on the server and must not be committed or included in browser configuration. The reference is optional so installations without a KMA credential can still use CSV and manual weather; live lookup then reports the missing configuration.
+
+Updating this Secret requires restarting the app deployment because the credential is injected as an environment variable. The endpoint is the API Hub ASOS hourly observation service (`kma_sfctm2.php`); `stn` selects the RTU's station and omitted `tm` requests the current observation. A successful lookup updates wind and temperature. Irradiance remains sourced from CSV/manual input because accumulated solar radiation is not instantaneous W/m². API verification is recorded in [kma-20260922](verification/kma-20260922/).
+
 ## Snapshot selection and recovery
 
 For this autonomous run, use [FINAL-RESTORE-PLAN](../docs/operations/FINAL-RESTORE-PLAN.md) and [NETWORK-RECOVERY](../docs/operations/NETWORK-RECOVERY.md). The operational `scripts/remote-backup.mjs` records the exact image/source, immutable remote/local path, bytes, SHA, integrity and bounded worker outcome. Inspect its private journal and actual remote process before retrying an interrupted operation. An unfinished partial is not a backup; an existing completed snapshot retransfer does not create new snapshot-generation evidence.

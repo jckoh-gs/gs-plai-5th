@@ -1,0 +1,21 @@
+✔ pinned and placeholder templates replace exact app plus both broker slots (1.061667ms)
+✔ invalid digests and shell/sed/newline characters fail closed (0.14375ms)
+✔ missing duplicate wrong slots and ambiguous images fail closed (0.147041ms)
+✔ deployment wrapper supplies passed digests with private permissions and cleans successful render (893.765833ms)
+✔ invalid deployment image never reaches kubectl and cleans temporary output (33.865166ms)
+✔ failed kubectl apply prevents rollout and removes private render (254.674375ms)
+✔ KMA SFCTM2 field fixture uses index11 temperature, 10 degree wind and KST time (1.408667ms)
+✔ KMA malformed/stale/future/out-of-range/wrong-station responses fail (0.364708ms)
+✔ live refresh preserves irradiance; request has current observation parameters and no old tm (1.640666ms)
+✔ automatic manual/frozen skips; explicit lookup enters weather mode and releases freeze (0.300375ms)
+✔ failed live observations retain all last-valid values, source and timestamp without auth leaks (0.283542ms)
+✔ missing direction preserves previous direction; SI never interpreted as irradiance (0.170708ms)
+✔ manual edit during in-flight request is protected, including explicit request (0.317959ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1215.632458

@@ -1,0 +1,59 @@
+{
+  "result": "PASS",
+  "verifiedAt": "2026-09-22T04:24:54.668980+00:00",
+  "context": "charles-k3s",
+  "namespace": "gs-plai-5h",
+  "productVersion": "1.7.2",
+  "appImage": "127.0.0.1:15050/grid@sha256:645a098886cb291b1b3b8ee61cb9f1a802931359234fdd58d5073e2b7d06e84c",
+  "deploymentGeneration": 25,
+  "secretName": "grid-kma",
+  "secretKey": "auth-key",
+  "credentialValueRecorded": false,
+  "environmentBinding": {
+    "name": "KMA_AUTH_KEY",
+    "valueFrom": {
+      "secretKeyRef": {
+        "key": "auth-key",
+        "name": "grid-kma",
+        "optional": true
+      }
+    }
+  },
+  "pod": {
+    "name": "grid-8d5c47f48-zqns9",
+    "uid": "37746481-bb1e-4db2-846c-83995384f477",
+    "containers": [
+      {
+        "name": "app",
+        "ready": true,
+        "restartCount": 0,
+        "imageID": "127.0.0.1:15050/grid@sha256:645a098886cb291b1b3b8ee61cb9f1a802931359234fdd58d5073e2b7d06e84c"
+      },
+      {
+        "name": "mqtt",
+        "ready": true,
+        "restartCount": 0,
+        "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+      }
+    ]
+  },
+  "verification": {
+    "apiAndUi": "browser-verification.json",
+    "tests": {
+      "passed": 13,
+      "failed": 0,
+      "exitCode": 0,
+      "log": "tests.log"
+    },
+    "existingRtuSettingsAndRunIdsPreserved": 6,
+    "observedStation": 100,
+    "observedAt": "2026-09-22T04:00:00.000Z",
+    "weatherSource": "kma",
+    "weatherError": null,
+    "productionBrowserRefreshes": 1,
+    "productionControlWrites": 0,
+    "ownedBrowserAndTunnelStopped": true
+  },
+  "sourceCodeOrImageChanged": false,
+  "irradianceScope": "650 W/m² remains existing input, not a KMA instantaneous irradiance observation"
+}

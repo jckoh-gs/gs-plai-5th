@@ -45,7 +45,7 @@
   "requestedModel": "Codex Astra",
   "modelVerification": "Agents inherited main session model; exact runtime model identifier not exposed by available goal tools.",
   "deployment": {
-    "observedAt": "2026-09-22T00:59:06.264349+00:00",
+    "observedAt": "2026-09-22T04:24:54.668980+00:00",
     "status": "Verified post-delivery HTTP ingress and browser compatibility release1.7.2; original14-hour evidence remains1.7.1",
     "sourceCommit": "1646f6c8c16f3f595bbe11485ac67ad224ee7da7",
     "prdVersion": "1.16",
@@ -62,11 +62,13 @@
     "name": "grid",
     "mqttImage": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
     "productVersion": "1.7.2",
-    "podUid": "2dafdb75-aa1a-4eaa-8ae1-f6a4c75eb515",
+    "podUid": "37746481-bb1e-4db2-846c-83995384f477",
     "appContainerRestarts": 0,
-    "podName": "grid-75bb974b7f-zb6lk",
+    "podName": "grid-8d5c47f48-zqns9",
     "publicHttpUrl": "http://grid.koh.it.kr/",
-    "verification": "deploy/verification/ingress-grid-20260922/release-verification.json"
+    "verification": "deploy/verification/ingress-grid-20260922/release-verification.json",
+    "kmaSecret": "grid-kma/auth-key",
+    "kmaVerified": true
   },
   "backup": {
     "result": "PASS",
@@ -1330,5 +1332,17 @@
     "originalAutonomousGoalRemainsComplete": true,
     "automationResumed": false,
     "newDatabaseBackupOrRestorePerformed": false
+  },
+  "postDeliveryKmaConnection": {
+    "completedAt": "2026-09-22T04:24:54.668980+00:00",
+    "state": "COMPLETE",
+    "authorization": "User supplied KMA API Hub credential for Secret registration and actual connection verification",
+    "sourceImageUnchanged": true,
+    "secretName": "grid-kma",
+    "secretKey": "auth-key",
+    "actualStationVerified": 100,
+    "evidence": "deploy/verification/kma-20260922/summary.json",
+    "credentialValueRecorded": false,
+    "goalOrAutomationResumed": false
   }
 }

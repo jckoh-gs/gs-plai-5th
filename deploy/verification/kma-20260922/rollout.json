@@ -1,0 +1,12 @@
+{
+  "startedAt": "2026-09-22T04:22:55.004745+00:00",
+  "appImage": "127.0.0.1:15050/grid@sha256:645a098886cb291b1b3b8ee61cb9f1a802931359234fdd58d5073e2b7d06e84c",
+  "serverDryRunExitCode": 0,
+  "secretName": "grid-kma",
+  "secretKey": "auth-key",
+  "keyValueRecorded": false,
+  "rtuCountBefore": 6,
+  "patchExitCode": 0,
+  "rolloutExitCode": 0,
+  "finishedAt": "2026-09-22T04:23:05.051678+00:00"
+}

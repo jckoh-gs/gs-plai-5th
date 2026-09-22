@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-09-22T04:23:46.793Z",
+  "scope": "Actual KMA button on the screenshot RTU through the encrypted Kubernetes ingress tunnel; one weather refresh, no control writes",
+  "httpContext": {
+    "secure": false,
+    "randomUUID": "undefined",
+    "clipboard": "undefined"
+  },
+  "product": "v1.7.2 / MQTT v2",
+  "realtime": "실시간 연결",
+  "plantCards": 6,
+  "observation": {
+    "station": 100,
+    "source": "kma",
+    "observedAt": "2026-09-22T04:00:00.000Z",
+    "weather": {
+      "wind_speed_ms": 2.8,
+      "wind_direction_deg": 90,
+      "irradiance_wm2": 650,
+      "temperature": 19.1
+    },
+    "error": null
+  },
+  "weatherPanelText": "관측소 100 · 출처 kma\n관측 시각 2026. 9. 22. 13시 0분 0초\n현재 2.8 m/s · 650 W/m²",
+  "refreshHttpStatus": 200,
+  "allowedWeatherRefreshes": 1,
+  "pageErrors": [],
+  "blockedMutations": [],
+  "result": "PASS",
+  "tunnelExit": {
+    "code": null,
+    "signal": "SIGTERM"
+  }
+}

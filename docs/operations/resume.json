@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-22T01:00:13.216417+00:00",
+  "updatedAt": "2026-09-22T04:24:54.668980+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -1865,5 +1865,17 @@
     "originalAutonomousGoalRemainsComplete": true,
     "automationResumed": false,
     "newDatabaseBackupOrRestorePerformed": false
+  },
+  "postDeliveryKmaConnection": {
+    "completedAt": "2026-09-22T04:24:54.668980+00:00",
+    "state": "COMPLETE",
+    "authorization": "User supplied KMA API Hub credential for Secret registration and actual connection verification",
+    "sourceImageUnchanged": true,
+    "secretName": "grid-kma",
+    "secretKey": "auth-key",
+    "actualStationVerified": 100,
+    "evidence": "deploy/verification/kma-20260922/summary.json",
+    "credentialValueRecorded": false,
+    "goalOrAutomationResumed": false
   }
 }
