@@ -1,0 +1,33 @@
+{
+  "recordedAt": "2026-09-21T22:09:31.768598+00:00",
+  "state": "TIME_ENDED_FINAL_REMOTE_EVIDENCE_NOT_DELIVERED",
+  "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
+  "localCommit": "c9fe78666e6d96d546c4e55038e85112bb832bbe",
+  "localCommitTime": "2026-09-22T07:07:58+09:00",
+  "remoteMain": "44899b9b40a82d6b08d0ac16efeb01c0d2c9ba34",
+  "remoteRead": {
+    "originalHandle": 76175,
+    "exitCode": 0,
+    "terminalToolChunk": "599c0d"
+  },
+  "push": {
+    "attemptedCommand": "python3 scripts/deadline-command.py --timeout-seconds65 -- git push origin main",
+    "originalToolChunk": "ad85bf",
+    "exitCode": 124,
+    "commandStarted": false,
+    "reason": "original deadline has expired"
+  },
+  "completeWithinDeadline": [
+    "Deployed functional1.7.1 and runtime source Git delivery",
+    "New295.03secondKorean1080pvideo and14slideeditablePPT; rootvisualclaimchecks",
+    "Artifactverification154files0failures",
+    "Product198acceptanceitems145functional53local; scopesretained",
+    "Actualownedcleanup22:03:17 andheartbeatPAUSED"
+  ],
+  "remaining": [
+    "Final additional public evidence/docs/media-source commit c9fe786 is local only; remote main remains44899b9",
+    "Post-deadline handoff records remain local and uncommitted"
+  ],
+  "reconnectionPolicy": "Read this handoff, run/resume and actual Git state. Do not restart the expired14h run, media registration/control or repeat uncertain writes. No new development or push after deadline without a changed user time/scope instruction.",
+  "goalCompletionClaim": false
+}

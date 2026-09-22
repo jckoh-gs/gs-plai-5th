@@ -488,7 +488,7 @@
       "scope": "Current read-only service and actual process identities, saved heartbeat configuration and existing isolated tests. No forced real network outage or AI restart guarantee."
     }
   },
-  "updatedAt": "2026-09-21T22:03:51.647251+00:00",
+  "updatedAt": "2026-09-22T00:27:03.046360+00:00",
   "finalMediaPreparation": {
     "state": "verified preparation; final media pending",
     "evidence": "artifacts/checkpoints/final-media-lifecycle/summary.json",
@@ -1247,5 +1247,22 @@
   "finalArtifactExecution": "artifacts/delivery/final-inventory-execution.json",
   "finalRoleCloseout": "docs/operations/final-role-closeout.json",
   "finalMainNormal": "deploy/verification/final-main-health.json",
-  "automationState": "PAUSED"
+  "automationState": "PAUSED",
+  "state": "AUTHORIZED_POST_DEADLINE_DELIVERY_IN_PROGRESS",
+  "deadlineHandoff": "artifacts/delivery/deadline-handoff.json",
+  "goalCompletionClaim": false,
+  "finalRemoteDelivery": {
+    "attemptedCommand": "python3 scripts/deadline-command.py --timeout-seconds65 -- git push origin main",
+    "originalToolChunk": "ad85bf",
+    "exitCode": 124,
+    "commandStarted": false,
+    "reason": "original deadline has expired",
+    "localCommit": "c9fe78666e6d96d546c4e55038e85112bb832bbe",
+    "remoteMain": "44899b9b40a82d6b08d0ac16efeb01c0d2c9ba34"
+  },
+  "postDeadlineDelivery": {
+    "authorization": "artifacts/delivery/authorized-closeout/authorization.json",
+    "scope": "Finalpublicartifactandhandoffdeliveryonly; originaldeadlinepreserved",
+    "state": "IN_PROGRESS"
+  }
 }

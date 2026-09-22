@@ -1,0 +1,231 @@
+{
+  "recordedAt": "2026-09-22T00:28:14.879333+00:00",
+  "reason": "Include exact reviewed final MP4 and regeneration audio/screen sources previously excluded by generic Git ignore rules; do not include private credentials or backups.",
+  "files": [
+    {
+      "path": "artifacts/video/GRID-VPP-demo-ko.mp4",
+      "bytes": 14520082,
+      "sha256": "44e7290268c280989d70425f676d66f534ce6cc99223b7afc3372367b88b812c"
+    },
+    {
+      "path": "artifacts/video/source/encoded.mp4",
+      "bytes": 14492879,
+      "sha256": "97f988699165f6712d7afc34d99742f6c5bed564e80869e0d5b8b393d5320928"
+    },
+    {
+      "path": "artifacts/video/source/page@ab5badbca07c4c57934a004f8fcabd65.webm",
+      "bytes": 30402260,
+      "sha256": "8b82ef35a5d35164ea4d95e57e9e8c5c3e38483bc2d77a0086ab154afe98b9f6"
+    },
+    {
+      "path": "artifacts/video/source/voice-0-0.aiff",
+      "bytes": 243884,
+      "sha256": "c69f30cff945e99a013069cddaab973fbe26512daca945364fb87bd765fb8d6a"
+    },
+    {
+      "path": "artifacts/video/source/voice-0-1.aiff",
+      "bytes": 141030,
+      "sha256": "83533d8cec5fd5bfa18058aba4ea4dc4e85de26d8db261ebedccc435297bcfe9"
+    },
+    {
+      "path": "artifacts/video/source/voice-0-2.aiff",
+      "bytes": 154994,
+      "sha256": "4640fd17be065470c229dda8e8f28b542f8f5e343e01bf63aa78984ee38efb99"
+    },
+    {
+      "path": "artifacts/video/source/voice-0.aiff",
+      "bytes": 527674,
+      "sha256": "7a22adf54f804d5db98b6f11b76217c9c33d8df9294d61571005b11bb6bbbc53"
+    },
+    {
+      "path": "artifacts/video/source/voice-1-0.aiff",
+      "bytes": 311132,
+      "sha256": "861542ac24f36ecbf84de0fc541583991482668dd0e64c8188d6e620abb2bba9"
+    },
+    {
+      "path": "artifacts/video/source/voice-1-1.aiff",
+      "bytes": 124308,
+      "sha256": "d5b57e852ed14d7c4b84dae1a275807ba4b2838a5a3db475abbb1c918a308e97"
+    },
+    {
+      "path": "artifacts/video/source/voice-1-2.aiff",
+      "bytes": 205170,
+      "sha256": "5b928098e9547ad46af6cc670122e3ba26523694c029c6ed3ece38230cad126f"
+    },
+    {
+      "path": "artifacts/video/source/voice-1-3.aiff",
+      "bytes": 120202,
+      "sha256": "77c396335e5607526f0184753a6b0f241715216a6923ac2312d79a44f80f499e"
+    },
+    {
+      "path": "artifacts/video/source/voice-1.aiff",
+      "bytes": 744482,
+      "sha256": "0a512b4d668d9b4460048d802b07bc3057df808d4aa626b1ca8633cce23345d9"
+    },
+    {
+      "path": "artifacts/video/source/voice-2-0.aiff",
+      "bytes": 208644,
+      "sha256": "86ed9a5c30c298e8782132364f014983c67b41691a0ac7aa334e9ec133c0b2de"
+    },
+    {
+      "path": "artifacts/video/source/voice-2-1.aiff",
+      "bytes": 248696,
+      "sha256": "371c129ecfb2dd781616d4c95c4f9e3fdf3cec2ae87c2582f588007cea0cfbe8"
+    },
+    {
+      "path": "artifacts/video/source/voice-2-2.aiff",
+      "bytes": 202712,
+      "sha256": "bc33d3aa3ba1b28a10a5e6be67707be27c709b8e6d5ae8d85b2a9334286ae82c"
+    },
+    {
+      "path": "artifacts/video/source/voice-2-3.aiff",
+      "bytes": 354666,
+      "sha256": "29f96256a37ccd64c4a8fbf30943fd068f4ff2c151a487bdbe220471847d513a"
+    },
+    {
+      "path": "artifacts/video/source/voice-2-4.aiff",
+      "bytes": 162666,
+      "sha256": "0d35934aa0cc83746c206a36f9a392b4d5ff9fafe44b4f03450ea2686ddb1b85"
+    },
+    {
+      "path": "artifacts/video/source/voice-2-5.aiff",
+      "bytes": 97670,
+      "sha256": "2b8a4cfabd78e7c6883ccda93cb9954384cabeba11066c5a5487503a8145426a"
+    },
+    {
+      "path": "artifacts/video/source/voice-2-6.aiff",
+      "bytes": 303438,
+      "sha256": "0c291cf321dd34dacf64bb8641020b5b9ee91efd1ad56ab9e7df7be8c18cbbd4"
+    },
+    {
+      "path": "artifacts/video/source/voice-2.aiff",
+      "bytes": 1549874,
+      "sha256": "bc936546f234567cf83d5824d946de945733f9bf78b4dbd020d6c0027a78fc01"
+    },
+    {
+      "path": "artifacts/video/source/voice-3-0.aiff",
+      "bytes": 188528,
+      "sha256": "9affff938d04d51b8fb67e22e7213cc44b391ec8d22f46cec812b95a55166d1d"
+    },
+    {
+      "path": "artifacts/video/source/voice-3-1.aiff",
+      "bytes": 253774,
+      "sha256": "af392fb15a7ad7af117abef5fcc3cbda4c2640eeff50fd702ea8f273695ed93b"
+    },
+    {
+      "path": "artifacts/video/source/voice-3-2.aiff",
+      "bytes": 269060,
+      "sha256": "787622ddffbee5630977575bb3cc4141fd30b4fce3c2c2d97455b3e460d8bcbe"
+    },
+    {
+      "path": "artifacts/video/source/voice-3.aiff",
+      "bytes": 699128,
+      "sha256": "5c23aea560ff039ccebd12bf6938bc8e44ed7c3df238f7b659d5da4197162dc9"
+    },
+    {
+      "path": "artifacts/video/source/voice-4-0.aiff",
+      "bytes": 199242,
+      "sha256": "fcdb2f8edd5260c04d86514a5f260d22340cb7590c0d0f01d55d579409476754"
+    },
+    {
+      "path": "artifacts/video/source/voice-4-1.aiff",
+      "bytes": 227690,
+      "sha256": "39a6b8a48a5a8a49d6f3f601fbe2288e4b7ef7a502f2c9e4ef7959ad7f7ea204"
+    },
+    {
+      "path": "artifacts/video/source/voice-4-2.aiff",
+      "bytes": 187622,
+      "sha256": "ea99c1e4b37b8813f78c1a490f68c1b938ccd3a78b7ca925984d773a31453de3"
+    },
+    {
+      "path": "artifacts/video/source/voice-4-3.aiff",
+      "bytes": 162704,
+      "sha256": "1272427e2d8955e52b3464990323849c12b274ce76fb8629d3f49b2d1e316dcd"
+    },
+    {
+      "path": "artifacts/video/source/voice-4-4.aiff",
+      "bytes": 241032,
+      "sha256": "c4b6a889d1d09eec5bf846b8ca7e60c1098ef3295ca511625b77c73187822196"
+    },
+    {
+      "path": "artifacts/video/source/voice-4-5.aiff",
+      "bytes": 195200,
+      "sha256": "0a731667d9f9082ea36afab3f68f12e4e258b50fc434dbf4f47887f0156842d2"
+    },
+    {
+      "path": "artifacts/video/source/voice-4-6.aiff",
+      "bytes": 199056,
+      "sha256": "c1ec15e89e0fd709c91b1d3e59e61c1863492936ec40833e974c94bda743bec5"
+    },
+    {
+      "path": "artifacts/video/source/voice-4.aiff",
+      "bytes": 1383928,
+      "sha256": "491c7068fdda7c7b5ede87f69d9d4db66f987a650cdf1794fbf3a9c1732fa89e"
+    },
+    {
+      "path": "artifacts/video/source/voice-5-0.aiff",
+      "bytes": 179972,
+      "sha256": "e46d33a06bd76d27541958037b81e13b9a3caaba14bf964298a2fe29e84361d8"
+    },
+    {
+      "path": "artifacts/video/source/voice-5-1.aiff",
+      "bytes": 136062,
+      "sha256": "ba6c21052ee67d55aba7b2eb1cf28ede4b0ea0e2a106d69d870f11f0fe238752"
+    },
+    {
+      "path": "artifacts/video/source/voice-5-2.aiff",
+      "bytes": 322962,
+      "sha256": "f9fcd14682f1e5a9e88235e788c28d16f263b277469fde765c1a259d6d8cc2df"
+    },
+    {
+      "path": "artifacts/video/source/voice-5.aiff",
+      "bytes": 626762,
+      "sha256": "2a834d827fca417950a651d05acff40a2067ee180ac0d5df3c305d8a836423f1"
+    },
+    {
+      "path": "artifacts/video/source/voice-6-0.aiff",
+      "bytes": 251390,
+      "sha256": "049f397eb5cbc059249f21706fe51c6de0f158613691fe476447258fabe59d0f"
+    },
+    {
+      "path": "artifacts/video/source/voice-6-1.aiff",
+      "bytes": 243576,
+      "sha256": "91a84db33d25ba89deb8d605182bf8eaf636458ab201e21519da7ae2008853bd"
+    },
+    {
+      "path": "artifacts/video/source/voice-6-2.aiff",
+      "bytes": 204174,
+      "sha256": "2d8fed4947166dc37e2d98aad6e81cad4d6839e6f8c063a32b4aee6e320b036b"
+    },
+    {
+      "path": "artifacts/video/source/voice-6-3.aiff",
+      "bytes": 183408,
+      "sha256": "a8c55dbeb7dd212f33eb02198969ac8f70fb026d33bc8dbac2f3d2c1aec1ccb7"
+    },
+    {
+      "path": "artifacts/video/source/voice-6.aiff",
+      "bytes": 866218,
+      "sha256": "9bacf100a67925ad7f75a2c30bd05e4a3be9aba77a06776506ef5587aae3843d"
+    },
+    {
+      "path": "artifacts/video/source/voice-7-0.aiff",
+      "bytes": 265344,
+      "sha256": "09ccd2301462e8e2dc0810dfdffa52271561a89ee14d36457d8f5de368a28a90"
+    },
+    {
+      "path": "artifacts/video/source/voice-7-1.aiff",
+      "bytes": 247666,
+      "sha256": "4d0ec1cc16d0405427b3de4123263c928e1c7772474c6c00dda8253056af3711"
+    },
+    {
+      "path": "artifacts/video/source/voice-7-2.aiff",
+      "bytes": 229752,
+      "sha256": "778cc06108f243e40b0a37106efa0c53bf617d23cfed825837731a9617a7e7e1"
+    },
+    {
+      "path": "artifacts/video/source/voice-7.aiff",
+      "bytes": 730528,
+      "sha256": "cff7bfae2ec2c6499cb5493d9aaab41b31613b5f4448d5972bb1d1a53fa88898"
+    }
+  ]
+}

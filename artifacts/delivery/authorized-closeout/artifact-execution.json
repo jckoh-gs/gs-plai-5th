@@ -1,0 +1,27 @@
+{
+  "recordedAt": "2026-09-22T00:28:13.731246+00:00",
+  "command": [
+    "node",
+    "scripts/verify-delivery.mjs",
+    "--manifest",
+    "artifacts/releases/final-20260921.json",
+    "--video-dir",
+    "artifacts/video",
+    "--deck-dir",
+    "artifacts/presentation",
+    "--report",
+    "artifacts/delivery/authorized-closeout/artifact-inventory.json"
+  ],
+  "outerTimeoutSeconds": 45,
+  "originalToolChunk": "da434b",
+  "exitCode": 0,
+  "stdout": {
+    "result": "ARTIFACT_CHECKS_PASSED",
+    "files": 154,
+    "failedChecks": 0,
+    "failures": [],
+    "completionClaim": false
+  },
+  "reportSha256": "f0cb160759bf13d2168048f60364c58c459c71d7c0789649ccca48898dc85540",
+  "scope": "User-authorized post-deadline delivery verification; artifact production dates remain original finalwindow."
+}

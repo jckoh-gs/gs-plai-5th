@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-21T22:03:51.647251+00:00",
+  "updatedAt": "2026-09-22T00:27:03.046360+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -31,7 +31,7 @@
     "productVersion": "1.7.1",
     "prdVersion": "1.15",
     "idea": "IDEA-012",
-    "state": "Final deliverables verified and operationalcloseout complete; final evidenceGitdelivery pending"
+    "state": "TIME_ENDED_FINAL_REMOTE_EVIDENCE_NOT_DELIVERED"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -44,8 +44,9 @@
     "1.7.1 exact40b/234 CLIcontractpatch: main/MQTT/online/outbox/normal5ff snapshot current1.7.1+back1.7 26reports+2identities, rootcleanup/REVIEW045, immutable2033hashREVIEW046, bothstabletagsremoteverified; finaltime/media pending"
   ],
   "remainingInOrder": [
-    "Deliver final evidence commit to authorized Git main",
-    "Report actual198-item acceptance and remaining documented limitations"
+    "Push final public media, reproduction sources and handoff records",
+    "Verify remote commit and exact delivered file hashes",
+    "Record completion and close native goal"
   ],
   "retryPolicy": {
     "readOnlyChecks": "May retry with bounded backoff",
@@ -542,7 +543,7 @@
       "scope": "The original sessions and observed Pod/image were retained. Each RTU gained one received-sample discontinuity; a single narrow read-only query found all300 corresponding positions in continuous same-run persisted outbox windows with broker acknowledgments. Repeated connection error events are not separate outages. No universal subscriber replay, external VPP receipt, continuous service availability or root-cause claim. ISSUE030/032 history remains intact."
     }
   ],
-  "nextOperationalReview": "Final video/PPT and inventory complete; actualownedprocesscleanup and heartbeatPAUSED verified. Only final evidence Git push and truthful requirement report remain. Never restart observers, media, supervisor or original14h run automatically.",
+  "nextOperationalReview": "User authorized post-deadline final artifact/evidence delivery only. Verify original completedmedia and currentGitidentity; deliver/publicproof then closegoal. Do not restart expired development/media/observers.",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.7.1",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
@@ -1809,5 +1810,22 @@
   "finalArtifactExecution": "artifacts/delivery/final-inventory-execution.json",
   "finalRoleCloseout": "docs/operations/final-role-closeout.json",
   "finalMainNormal": "deploy/verification/final-main-health.json",
-  "automationState": "PAUSED"
+  "automationState": "PAUSED",
+  "state": "AUTHORIZED_POST_DEADLINE_DELIVERY_IN_PROGRESS",
+  "deadlineHandoff": "artifacts/delivery/deadline-handoff.json",
+  "goalCompletionClaim": false,
+  "finalRemoteDelivery": {
+    "attemptedCommand": "python3 scripts/deadline-command.py --timeout-seconds65 -- git push origin main",
+    "originalToolChunk": "ad85bf",
+    "exitCode": 124,
+    "commandStarted": false,
+    "reason": "original deadline has expired",
+    "localCommit": "c9fe78666e6d96d546c4e55038e85112bb832bbe",
+    "remoteMain": "44899b9b40a82d6b08d0ac16efeb01c0d2c9ba34"
+  },
+  "postDeadlineDelivery": {
+    "authorization": "artifacts/delivery/authorized-closeout/authorization.json",
+    "scope": "Finalpublicartifactandhandoffdeliveryonly; originaldeadlinepreserved",
+    "state": "IN_PROGRESS"
+  }
 }

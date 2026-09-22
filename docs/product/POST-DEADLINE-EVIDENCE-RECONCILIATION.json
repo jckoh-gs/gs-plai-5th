@@ -1,0 +1,599 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-22T00:28:36.818780+00:00",
+  "authorizationScope": "Post-deadline user-authorized final evidence/delivery reconciliation; no development/deployment/tests or original deadline extension.",
+  "result": "RECONCILED_WITH_THREE_UNRECOVERED_HISTORICAL_HASH_REFERENCES",
+  "originalAuditUnmodified": true,
+  "requirementsReclassified": false,
+  "input": {
+    "path": "artifacts/delivery/authorized-closeout/requirement-evidence-check.json",
+    "sha256": "fef5ce4e25bcad3e1a3aefde016e98c0fa1eaefe2e5dd4d27b052f3a76ee6cdd"
+  },
+  "originalFinalAudit": {
+    "path": "docs/product/FINAL-REQUIREMENT-REVIEW.json",
+    "sha256": "9619de52b017bfa37994d02f2d98742c46191a2a6dce9228b5eafdc0c9319373"
+  },
+  "manifest": {
+    "path": "artifacts/releases/final-20260921.json",
+    "sha256": "10e4e035587166263dfba9d91e2350b84b43c44d15222d561dba84852e51f024"
+  },
+  "sourceCommit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
+  "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "changedPaths": 10,
+  "historicalVersions": 14,
+  "gitRecoveredVersions": 11,
+  "unrecoverableRecordedIdentities": [
+    {
+      "path": "deploy/verification/mqtt-access.json",
+      "sha256": "5c946bdc8bb148eec98825a4ceb1b8ab93adab6002f16a96f307f08db50a43c5"
+    },
+    {
+      "path": "scripts/browser-check.cjs",
+      "sha256": "c06bdae255f6934ab2650c40c4a5063b9675607efc9550ebebfe882975b89d97"
+    },
+    {
+      "path": "docs/product/final-role-closeout.json",
+      "sha256": "031079e8c958706b4b942728b326fa6e4649b4e0941060a7dc69a364b17d8a37"
+    }
+  ],
+  "rows": [
+    {
+      "path": "server/model.js",
+      "currentSha256": "875d936b0038ef5a9bd3c678a50dafdd8d33c7c0f8c60eba0316def51e95ba67",
+      "recordedVersions": [
+        {
+          "sha256": "ab20a7f7f7b64f8dc9be152b74f617647860524ef0a06577f160d2a3be522f47",
+          "gitSource": {
+            "commit": "94f415103ae0ad7950afce2721b38d560ff350db",
+            "gitBlob": "99d25433be551861e8d4b0d9cc4d09ecf24ce0e3"
+          },
+          "requirements": [
+            "FR-REG-02",
+            "FR-REG-03",
+            "FR-SIM-02"
+          ]
+        }
+      ],
+      "finalManifestSource": {
+        "commit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
+        "sha256": "875d936b0038ef5a9bd3c678a50dafdd8d33c7c0f8c60eba0316def51e95ba67",
+        "matchesCurrent": true
+      },
+      "currentGitCommit": "1197ab5afd92b7b02cb388bb7ad66d7fc07dead7",
+      "classification": "historical_git_version_reference",
+      "resolution": "Use each recorded version through its explicit commit:path; current checkout is a later version. No historical pass is silently reinterpreted as current.",
+      "selectedRuntimeMatch": {
+        "commit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+        "sha256": "875d936b0038ef5a9bd3c678a50dafdd8d33c7c0f8c60eba0316def51e95ba67",
+        "matchesCurrent": true,
+        "matchesManifestRuntimeHash": true
+      },
+      "currentCorroboration": [
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-regression/summary.json",
+          "sha256": "75b9c733adc9f0b078a32d053815fc33ad8e46bc739dfc89eda2051430e433d2"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/post-rollout/summary.json",
+          "sha256": "71cf8dfebcd0d39a5dd5c6ab6fdc4fcd9a53787146be7997e67221275ab1cc58"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+          "sha256": "b81b7262cd1441c0bda025fa0d3c1a2b88d5b8ec6e90404e647c7c11d043b92b"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-mqtt.json",
+          "sha256": "24f098431a8d23d21e3776828a6cb2bc0c3976516be39c442c78179fb182ed4f"
+        },
+        {
+          "path": "deploy/verification/final-main-normal.json",
+          "sha256": "7755213bf364112b23e9de7b90911219afd8d31f3a1405ab1db97a83a6e517fe"
+        }
+      ]
+    },
+    {
+      "path": "web/QA.md",
+      "currentSha256": "beaeda4ad3cf32772a52047dc18cce3689ffe530f9ddcb28d9cd6bccc15db105",
+      "recordedVersions": [
+        {
+          "sha256": "5cebb5bad9cdf6956ecc86a34626101b7216497e86bd50a8ae1c6c23e5156eee",
+          "gitSource": {
+            "commit": "7ccd935ef5169bc3aa13e9e5dbeddcbedc55080f",
+            "gitBlob": "009e47bcdd676d791ee16671f6104fcbb980138f"
+          },
+          "requirements": [
+            "AT-UI-03",
+            "AT-UI-09",
+            "AT-UI-10",
+            "AT-UI-11",
+            "G-03"
+          ]
+        },
+        {
+          "sha256": "661bbed5905701c95ef87eef4cb821a7a4250900354b414c8434d8b23a951c3c",
+          "gitSource": {
+            "commit": "94f415103ae0ad7950afce2721b38d560ff350db",
+            "gitBlob": "9a6d2e7dde68ebbdf474a9e67837320b8b08da66"
+          },
+          "requirements": [
+            "FR-DATA-04",
+            "FR-CTRL-01",
+            "FR-METRIC-02",
+            "AT-DATA-07",
+            "AT-DATA-08",
+            "AT-UI-02",
+            "AT-UI-04",
+            "AT-UI-05",
+            "AT-UI-06",
+            "AT-UI-07",
+            "G-03"
+          ]
+        },
+        {
+          "sha256": "95dfdce45f1158915fa463f61bf8f7860752c1e1462738b2109235fbdf9d3ceb",
+          "gitSource": {
+            "commit": "af7f2233df239f22bcff2d95440a62673bf12ed9",
+            "gitBlob": "3fbe8c3195d9fef81f0bd206ede8fb50436b82bf"
+          },
+          "requirements": [
+            "FR-METRIC-02",
+            "UI-01",
+            "UI-02",
+            "UI-03",
+            "UI-06",
+            "AT-UI-06"
+          ]
+        }
+      ],
+      "finalManifestSource": {
+        "commit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
+        "sha256": "beaeda4ad3cf32772a52047dc18cce3689ffe530f9ddcb28d9cd6bccc15db105",
+        "matchesCurrent": true
+      },
+      "currentGitCommit": "3fa3ba0a6984dc752a8968d1788e72a3069b1267",
+      "classification": "historical_git_version_reference",
+      "resolution": "Use each recorded version through its explicit commit:path; current checkout is a later version. No historical pass is silently reinterpreted as current.",
+      "currentCorroboration": [
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-regression/summary.json",
+          "sha256": "75b9c733adc9f0b078a32d053815fc33ad8e46bc739dfc89eda2051430e433d2"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/post-rollout/summary.json",
+          "sha256": "71cf8dfebcd0d39a5dd5c6ab6fdc4fcd9a53787146be7997e67221275ab1cc58"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+          "sha256": "b81b7262cd1441c0bda025fa0d3c1a2b88d5b8ec6e90404e647c7c11d043b92b"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-mqtt.json",
+          "sha256": "24f098431a8d23d21e3776828a6cb2bc0c3976516be39c442c78179fb182ed4f"
+        },
+        {
+          "path": "deploy/verification/final-main-normal.json",
+          "sha256": "7755213bf364112b23e9de7b90911219afd8d31f3a1405ab1db97a83a6e517fe"
+        }
+      ]
+    },
+    {
+      "path": "scripts/integration.js",
+      "currentSha256": "ebc040c24a5ff344e1b590ff56869609dd56e5c7385543ff8329e8d8298fc1f4",
+      "recordedVersions": [
+        {
+          "sha256": "e05ffc170c6c85a0298ef8662d7a8a2c039a543fa714a11cd30d0ab5200fc143",
+          "gitSource": {
+            "commit": "94f415103ae0ad7950afce2721b38d560ff350db",
+            "gitBlob": "cff2f14bd87b852c0344d5d5ae58f06cf41197bb"
+          },
+          "requirements": [
+            "FR-CTRL-01",
+            "FR-MQTT-02",
+            "AT-CONTROL-01",
+            "AT-CONTROL-02",
+            "AT-CONTROL-04",
+            "AT-MQTT-01",
+            "G-01",
+            "G-02",
+            "CHECK-test-integration"
+          ]
+        },
+        {
+          "sha256": "ebc040c24a5ff344e1b590ff56869609dd56e5c7385543ff8329e8d8298fc1f4",
+          "gitSource": {
+            "commit": "7ccd935ef5169bc3aa13e9e5dbeddcbedc55080f",
+            "gitBlob": "c5d491479aa8fa1737e8fa08642f961f334d4cba"
+          },
+          "requirements": [
+            "FR-MQTT-02",
+            "AT-MQTT-01",
+            "AT-UI-09",
+            "G-01"
+          ]
+        }
+      ],
+      "finalManifestSource": {
+        "commit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
+        "sha256": "ebc040c24a5ff344e1b590ff56869609dd56e5c7385543ff8329e8d8298fc1f4",
+        "matchesCurrent": true
+      },
+      "currentGitCommit": "7ccd935ef5169bc3aa13e9e5dbeddcbedc55080f",
+      "classification": "historical_git_version_reference",
+      "resolution": "Use each recorded version through its explicit commit:path; current checkout is a later version. No historical pass is silently reinterpreted as current.",
+      "currentCorroboration": [
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-regression/summary.json",
+          "sha256": "75b9c733adc9f0b078a32d053815fc33ad8e46bc739dfc89eda2051430e433d2"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/post-rollout/summary.json",
+          "sha256": "71cf8dfebcd0d39a5dd5c6ab6fdc4fcd9a53787146be7997e67221275ab1cc58"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+          "sha256": "b81b7262cd1441c0bda025fa0d3c1a2b88d5b8ec6e90404e647c7c11d043b92b"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-mqtt.json",
+          "sha256": "24f098431a8d23d21e3776828a6cb2bc0c3976516be39c442c78179fb182ed4f"
+        },
+        {
+          "path": "deploy/verification/final-main-normal.json",
+          "sha256": "7755213bf364112b23e9de7b90911219afd8d31f3a1405ab1db97a83a6e517fe"
+        }
+      ]
+    },
+    {
+      "path": "scripts/remote-integration.mjs",
+      "currentSha256": "ff594af40f686fb7a7258ee6c862f1faa4bc612b2b1c4682de8d721b91e8d523",
+      "recordedVersions": [
+        {
+          "sha256": "5ecf7b9699495f88088d151b67e77f56f51c5d9045601788f9328f70e1f073b2",
+          "gitSource": {
+            "commit": "79c996f7445dc3c252b12757a16f912f72c21808",
+            "gitBlob": "96377f7d8ae1571eca4a8220b0ab92a106d29661"
+          },
+          "requirements": [
+            "FR-CTRL-01",
+            "DEPLOY-01",
+            "OPS-03",
+            "AT-CONTROL-01",
+            "AT-CONTROL-02",
+            "AT-CONTROL-04",
+            "AT-OPS-02",
+            "G-02"
+          ]
+        }
+      ],
+      "finalManifestSource": {
+        "commit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
+        "sha256": "ff594af40f686fb7a7258ee6c862f1faa4bc612b2b1c4682de8d721b91e8d523",
+        "matchesCurrent": true
+      },
+      "currentGitCommit": "5cdcd1f0c7501575c5c6ce47aaeda0037c036da7",
+      "classification": "historical_git_version_reference",
+      "resolution": "Use each recorded version through its explicit commit:path; current checkout is a later version. No historical pass is silently reinterpreted as current.",
+      "currentCorroboration": [
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-regression/summary.json",
+          "sha256": "75b9c733adc9f0b078a32d053815fc33ad8e46bc739dfc89eda2051430e433d2"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/post-rollout/summary.json",
+          "sha256": "71cf8dfebcd0d39a5dd5c6ab6fdc4fcd9a53787146be7997e67221275ab1cc58"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+          "sha256": "b81b7262cd1441c0bda025fa0d3c1a2b88d5b8ec6e90404e647c7c11d043b92b"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-mqtt.json",
+          "sha256": "24f098431a8d23d21e3776828a6cb2bc0c3976516be39c442c78179fb182ed4f"
+        },
+        {
+          "path": "deploy/verification/final-main-normal.json",
+          "sha256": "7755213bf364112b23e9de7b90911219afd8d31f3a1405ab1db97a83a6e517fe"
+        }
+      ]
+    },
+    {
+      "path": "scripts/review-process-restart.js",
+      "currentSha256": "e8f10a26eb4790a54d01fe2637c4643065b9195307fd2ef99aac5ee1ed3d6974",
+      "recordedVersions": [
+        {
+          "sha256": "ffbfc42b59f42f019142f2e7f3a059a023b066b458d9777ae3ba7a9ae87f3db1",
+          "gitSource": {
+            "commit": "7ccd935ef5169bc3aa13e9e5dbeddcbedc55080f",
+            "gitBlob": "3af727413816221bd7b7d172363d6347794ba9c6"
+          },
+          "requirements": [
+            "FR-CTRL-03",
+            "AT-CONTROL-10",
+            "G-05"
+          ]
+        }
+      ],
+      "finalManifestSource": {
+        "commit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
+        "sha256": "e8f10a26eb4790a54d01fe2637c4643065b9195307fd2ef99aac5ee1ed3d6974",
+        "matchesCurrent": true
+      },
+      "currentGitCommit": "7ad14a43adc863bee9941b3292a30ea3e9161105",
+      "classification": "historical_git_version_reference",
+      "resolution": "Use each recorded version through its explicit commit:path; current checkout is a later version. No historical pass is silently reinterpreted as current.",
+      "currentCorroboration": [
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-regression/summary.json",
+          "sha256": "75b9c733adc9f0b078a32d053815fc33ad8e46bc739dfc89eda2051430e433d2"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/post-rollout/summary.json",
+          "sha256": "71cf8dfebcd0d39a5dd5c6ab6fdc4fcd9a53787146be7997e67221275ab1cc58"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+          "sha256": "b81b7262cd1441c0bda025fa0d3c1a2b88d5b8ec6e90404e647c7c11d043b92b"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-mqtt.json",
+          "sha256": "24f098431a8d23d21e3776828a6cb2bc0c3976516be39c442c78179fb182ed4f"
+        },
+        {
+          "path": "deploy/verification/final-main-normal.json",
+          "sha256": "7755213bf364112b23e9de7b90911219afd8d31f3a1405ab1db97a83a6e517fe"
+        }
+      ]
+    },
+    {
+      "path": "deploy/verification/mqtt-access.json",
+      "currentSha256": "d023cc8a2a3099abd7c9e75c802d54d3936a030089fab509ebcb8c8dc8272fba",
+      "recordedVersions": [
+        {
+          "sha256": "5c946bdc8bb148eec98825a4ceb1b8ab93adab6002f16a96f307f08db50a43c5",
+          "gitSource": null,
+          "requirements": [
+            "DEPLOY-01",
+            "OPS-03",
+            "AT-OPS-02",
+            "OPS-05",
+            "AT-RELEASE-01"
+          ]
+        }
+      ],
+      "finalManifestSource": {
+        "commit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
+        "sha256": "d023cc8a2a3099abd7c9e75c802d54d3936a030089fab509ebcb8c8dc8272fba",
+        "matchesCurrent": true
+      },
+      "currentGitCommit": "a5bb3714c7bd2d7f2e58426141dd4233a8d90e31",
+      "classification": "historical_reference_integrity_gap_with_separate_current_evidence",
+      "resolution": "Original5c94 content not recoverable from reachable path history; mutable report was overwritten. Current report at08:59:45 and final manifest source are separate evidence; final1.7.1 actual main MQTT/auth/restore proofs corroborate deployed behavior. Original5c94 byte identity remains unverified.",
+      "currentCorroboration": [
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-regression/summary.json",
+          "sha256": "75b9c733adc9f0b078a32d053815fc33ad8e46bc739dfc89eda2051430e433d2"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/post-rollout/summary.json",
+          "sha256": "71cf8dfebcd0d39a5dd5c6ab6fdc4fcd9a53787146be7997e67221275ab1cc58"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+          "sha256": "b81b7262cd1441c0bda025fa0d3c1a2b88d5b8ec6e90404e647c7c11d043b92b"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-mqtt.json",
+          "sha256": "24f098431a8d23d21e3776828a6cb2bc0c3976516be39c442c78179fb182ed4f"
+        },
+        {
+          "path": "deploy/verification/final-main-normal.json",
+          "sha256": "7755213bf364112b23e9de7b90911219afd8d31f3a1405ab1db97a83a6e517fe"
+        }
+      ]
+    },
+    {
+      "path": "scripts/browser-check.cjs",
+      "currentSha256": "9844dbf9fe8d30ce08465c70c373798cd510ec4156737f8ce721f052d356c7c8",
+      "recordedVersions": [
+        {
+          "sha256": "245f310ed52a829d09f4a85c64295b3ceb2464504fdf995a6d2bff93027d1212",
+          "gitSource": {
+            "commit": "7ccd935ef5169bc3aa13e9e5dbeddcbedc55080f",
+            "gitBlob": "cd83f218e408ca9463ffd5b578964d2c9a297430"
+          },
+          "requirements": [
+            "UI-07",
+            "AT-FRESH-01"
+          ]
+        },
+        {
+          "sha256": "c06bdae255f6934ab2650c40c4a5063b9675607efc9550ebebfe882975b89d97",
+          "gitSource": null,
+          "requirements": [
+            "FR-AUTH-01",
+            "AT-AUTH-01",
+            "UI-07",
+            "AT-FRESH-01"
+          ]
+        }
+      ],
+      "finalManifestSource": {
+        "commit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
+        "sha256": "9844dbf9fe8d30ce08465c70c373798cd510ec4156737f8ce721f052d356c7c8",
+        "matchesCurrent": true
+      },
+      "currentGitCommit": "5cdcd1f0c7501575c5c6ce47aaeda0037c036da7",
+      "classification": "historical_reference_integrity_gap_with_separate_current_evidence",
+      "resolution": "245f historical version recovered exactly; c06f early working-tree source is not recoverable from reachable path history. Do not claim original source hash verified. Current exact source9844 is bound by final manifest/source and main-regression/sourceHashes plus actual auth/SSE result; latter is independent replacement corroboration, not historical reconstruction.",
+      "currentCorroboration": [
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-regression/summary.json",
+          "sha256": "75b9c733adc9f0b078a32d053815fc33ad8e46bc739dfc89eda2051430e433d2"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/post-rollout/summary.json",
+          "sha256": "71cf8dfebcd0d39a5dd5c6ab6fdc4fcd9a53787146be7997e67221275ab1cc58"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+          "sha256": "b81b7262cd1441c0bda025fa0d3c1a2b88d5b8ec6e90404e647c7c11d043b92b"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-mqtt.json",
+          "sha256": "24f098431a8d23d21e3776828a6cb2bc0c3976516be39c442c78179fb182ed4f"
+        },
+        {
+          "path": "deploy/verification/final-main-normal.json",
+          "sha256": "7755213bf364112b23e9de7b90911219afd8d31f3a1405ab1db97a83a6e517fe"
+        }
+      ]
+    },
+    {
+      "path": "docs/product/final-role-closeout.json",
+      "currentSha256": "f28210b0433a0b8241760bfbabbe38010ae31d7e1f4d2e2e443fe9e9eb545cf6",
+      "recordedVersions": [
+        {
+          "sha256": "031079e8c958706b4b942728b326fa6e4649b4e0941060a7dc69a364b17d8a37",
+          "gitSource": null,
+          "requirements": [
+            "OPS-02",
+            "AT-OPS-03"
+          ]
+        }
+      ],
+      "finalManifestSource": {
+        "commit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
+        "sha256": null,
+        "matchesCurrent": false
+      },
+      "currentGitCommit": "c9fe78666e6d96d546c4e55038e85112bb832bbe",
+      "classification": "historical_reference_integrity_gap_with_separate_current_evidence",
+      "resolution": "Audit referenced interim0310 content before product role file finalization22:05:05. This is a reference bookkeeping defect, not a valid historical Git source. Current final role is committed atc9fe786 and linked here by exactSHA, with actual cleanup/resume proofs. Never assert0310 equals final bytes.",
+      "currentCorroboration": [
+        {
+          "path": "docs/product/final-role-closeout.json",
+          "sha256": "f28210b0433a0b8241760bfbabbe38010ae31d7e1f4d2e2e443fe9e9eb545cf6"
+        },
+        {
+          "path": "artifacts/delivery/owned-cleanup/summary.json",
+          "sha256": "f518f3d2c90e19d728ad587ed202899dd2f10230a4caf9fff2dd671c4e48cc70"
+        },
+        {
+          "path": "artifacts/checkpoints/network-resume-final/summary.json",
+          "sha256": "ba17b23be2a8bd1435be2a66f733ad4d941dcbae6e7ebb11a3dd363b767fd3f2"
+        }
+      ]
+    },
+    {
+      "path": "scripts/browser-scenario-scope.cjs",
+      "currentSha256": "3d1304ad908a80c6972f6a69b99069f5a77e7beee7cf14b0dbc4b010db617db5",
+      "recordedVersions": [
+        {
+          "sha256": "ae8eb37e2ed5bad4f7f71a9bb088f3a69289eb12b20081a16dc4b7fabd8bc4aa",
+          "gitSource": {
+            "commit": "3fa3ba0a6984dc752a8968d1788e72a3069b1267",
+            "gitBlob": "4f6e4d2976563e39e023de15f5707126319de644"
+          },
+          "requirements": [
+            "FR-SCENE-03",
+            "UI-10",
+            "AT-SCENE-SELECT-01",
+            "AT-SCENE-SELECT-01-01",
+            "AT-SCENE-SELECT-01-02",
+            "AT-SCENE-SELECT-01-03",
+            "AT-SCENE-SELECT-01-04"
+          ]
+        }
+      ],
+      "finalManifestSource": {
+        "commit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
+        "sha256": "3d1304ad908a80c6972f6a69b99069f5a77e7beee7cf14b0dbc4b010db617db5",
+        "matchesCurrent": true
+      },
+      "currentGitCommit": "6d165d1e8f3214a50ee66d2b13947f64d86658f5",
+      "classification": "historical_git_version_reference",
+      "resolution": "Use each recorded version through its explicit commit:path; current checkout is a later version. No historical pass is silently reinterpreted as current.",
+      "currentCorroboration": [
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-regression/summary.json",
+          "sha256": "75b9c733adc9f0b078a32d053815fc33ad8e46bc739dfc89eda2051430e433d2"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/post-rollout/summary.json",
+          "sha256": "71cf8dfebcd0d39a5dd5c6ab6fdc4fcd9a53787146be7997e67221275ab1cc58"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+          "sha256": "b81b7262cd1441c0bda025fa0d3c1a2b88d5b8ec6e90404e647c7c11d043b92b"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-mqtt.json",
+          "sha256": "24f098431a8d23d21e3776828a6cb2bc0c3976516be39c442c78179fb182ed4f"
+        },
+        {
+          "path": "deploy/verification/final-main-normal.json",
+          "sha256": "7755213bf364112b23e9de7b90911219afd8d31f3a1405ab1db97a83a6e517fe"
+        }
+      ]
+    },
+    {
+      "path": "docs/security/COMMAND-FORM-REVIEW.md",
+      "currentSha256": "8076d05ff279628b5e9f75f7fefb2952ad9ae364d41893619454ad6fe60ce895",
+      "recordedVersions": [
+        {
+          "sha256": "2e4523d4b0c3c0fd1faf9b6981e343fe0335dfb97f2880b0a77c9f32b88cec14",
+          "gitSource": {
+            "commit": "fdd0491a5c08901962f46ac845f8582921150d45",
+            "gitBlob": "82a535f7bb817db31e0d77804d3e11f756a38e3b"
+          },
+          "requirements": [
+            "FR-CONTROL-FORM-01",
+            "UI-11",
+            "AT-CONTROL-FORM-01-01",
+            "AT-CONTROL-FORM-01-02",
+            "AT-CONTROL-FORM-01-03",
+            "AT-CONTROL-FORM-01-04",
+            "AT-CONTROL-FORM-01-05",
+            "AT-CONTROL-FORM-01-06"
+          ]
+        }
+      ],
+      "finalManifestSource": {
+        "commit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
+        "sha256": "8076d05ff279628b5e9f75f7fefb2952ad9ae364d41893619454ad6fe60ce895",
+        "matchesCurrent": true
+      },
+      "currentGitCommit": "331ab9a00ee71a0924042e7952013d47495449d3",
+      "classification": "historical_git_version_reference",
+      "resolution": "Use each recorded version through its explicit commit:path; current checkout is a later version. No historical pass is silently reinterpreted as current.",
+      "currentCorroboration": [
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-regression/summary.json",
+          "sha256": "75b9c733adc9f0b078a32d053815fc33ad8e46bc739dfc89eda2051430e433d2"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/post-rollout/summary.json",
+          "sha256": "71cf8dfebcd0d39a5dd5c6ab6fdc4fcd9a53787146be7997e67221275ab1cc58"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+          "sha256": "b81b7262cd1441c0bda025fa0d3c1a2b88d5b8ec6e90404e647c7c11d043b92b"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/main-mqtt.json",
+          "sha256": "24f098431a8d23d21e3776828a6cb2bc0c3976516be39c442c78179fb182ed4f"
+        },
+        {
+          "path": "deploy/verification/final-main-normal.json",
+          "sha256": "7755213bf364112b23e9de7b90911219afd8d31f3a1405ab1db97a83a6e517fe"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Git search covers reachable --all per-path history, not proof bytes never existed.",
+    "No live remote inspection or tests rerun in this reconciliation; named actual recorded runtime/restore observations retain original times and scope.",
+    "Three missing historical byte identities are disclosed; current proof does not make their hashes pass.",
+    "Original198 verdict and all immutable manifests/tags remain unchanged; this addendum supplies explicit references/corrections."
+  ]
+}

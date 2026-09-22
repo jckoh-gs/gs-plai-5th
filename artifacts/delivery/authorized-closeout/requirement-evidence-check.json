@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-09-22T00:27:03.046360+00:00",
+  "requirements": 198,
+  "distinctEvidenceFiles": 318,
+  "changedOrMissing": [
+    {
+      "path": "server/model.js",
+      "reason": "changed_since_audit"
+    },
+    {
+      "path": "web/QA.md",
+      "reason": "changed_since_audit"
+    },
+    {
+      "path": "scripts/integration.js",
+      "reason": "changed_since_audit"
+    },
+    {
+      "path": "scripts/remote-integration.mjs",
+      "reason": "changed_since_audit"
+    },
+    {
+      "path": "scripts/review-process-restart.js",
+      "reason": "changed_since_audit"
+    },
+    {
+      "path": "deploy/verification/mqtt-access.json",
+      "reason": "changed_since_audit"
+    },
+    {
+      "path": "scripts/browser-check.cjs",
+      "reason": "changed_since_audit"
+    },
+    {
+      "path": "docs/product/final-role-closeout.json",
+      "reason": "changed_since_audit"
+    },
+    {
+      "path": "scripts/browser-scenario-scope.cjs",
+      "reason": "changed_since_audit"
+    },
+    {
+      "path": "docs/security/COMMAND-FORM-REVIEW.md",
+      "reason": "changed_since_audit"
+    }
+  ],
+  "auditCounts": {
+    "total": 198,
+    "verified_functional": 145,
+    "verified_local": 53
+  },
+  "scope": "Rechecks recorded evidence identities. Original requirement-level assessment and execution receipts remain authoritative."
+}

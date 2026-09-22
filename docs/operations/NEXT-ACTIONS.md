@@ -39,7 +39,7 @@ revision3 보존 커밋9c90808 전달 뒤 [19:24Z 읽기 점검](../../artifacts
 
 ## 다음 작업과 원래 마감
 
-최신진행: 최종새영상295.03초와같은영상14장PPT를 실제생성·검수했고 final-inventory154파일/실패0을확인했다. 22:03:17Z에 owned감독기/전원유지와임시포트를정리하고gridheartbeat를PAUSED했다. 운영k3s/PVC와private백업은보존했다. 재개시이14시간작업을새로시작하지않는다. 최종제품판정과공개근거Git전달만확인하고실제완료/제약을인계한다. [최종정리](final-closeout.json)와[재개점검](../../artifacts/checkpoints/network-resume-final/summary.json)을먼저읽는다.
+최신진행: 사용자가 **“네, 마무리 해주세요”** 로 마감후최종자료전달을승인했다. 기존시간/실행이력은보존하고새개발·재배포없이검수된영상/PPT·원본소스·마감기록을원격저장소에전달중이다. [최종인도안내](FINAL-DELIVERY.md)와 [추가승인](../../artifacts/delivery/authorized-closeout/authorization.json)을읽는다. 역사참조SHA차이는별도제품보완문서에기록했고과거누락SHA를PASS로바꾸지않는다.
 
 실제 동결을21:37:40Z에 확인했다. 원래 primary72957·audit8133은 모두21:37:33.082Z planned_stop/exit0으로 종료됐으며 [최종 관측 원문](../../artifacts/checkpoints/soak-1.7.1-final/summary.json)에 각2080메시지·오류와 전체관측/실행소스/원래종료영수증을 보존했다. 두관측기는 재시작하지 않는다. supervisor48590/3104·18884는 최종촬영을 위해 유지한다. [실제 최종창 진행](final-closeout.json)을 우선하며 새백업·동일snapshot복원과최종manifest는 현재진행중이다. 검증된 새영상→같은영상PPT→인도/정리 순서와 원래마감은 그대로다.
 

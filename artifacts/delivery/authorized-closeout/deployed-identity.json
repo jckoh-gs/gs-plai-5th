@@ -1,0 +1,22 @@
+{
+  "recordedAt": "2026-09-22T00:28:13.731902+00:00",
+  "readCommandOriginalHandle": 57731,
+  "terminalToolChunk": "cbd74f",
+  "exitCode": 0,
+  "context": "charles-k3s",
+  "namespace": "gs-plai-5h",
+  "deployment": "grid",
+  "replicas": 1,
+  "readyReplicas": 1,
+  "pod": "grid-69d8766f7-zmfq8",
+  "uid": "75f4bc7a-0c4d-4cff-8ce2-cea68fd43cbc",
+  "appImageID": "127.0.0.1:15050/grid@sha256:234ec56ea49f5c734339746c795403898bdba3490da7fd7929de4c252d3a3876",
+  "brokerImageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c",
+  "bothContainersReady": true,
+  "containerRestarts": [
+    0,
+    0
+  ],
+  "mutationsPerformed": false,
+  "scope": "Freshread-onlydeployment/Podidentity; notnewUI/MQTT replay or renewedlongsoak."
+}
