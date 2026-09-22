@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-09-22T00:28:36.818780+00:00",
+  "checkedAt": "2026-09-22T00:33:41.503232+00:00",
   "authorizationScope": "Post-deadline user-authorized final evidence/delivery reconciliation; no development/deployment/tests or original deadline extension.",
-  "result": "RECONCILED_WITH_THREE_UNRECOVERED_HISTORICAL_HASH_REFERENCES",
+  "result": "RECONCILED_WITH_FOUR_UNRECOVERED_HISTORICAL_HASH_REFERENCES",
   "originalAuditUnmodified": true,
   "requirementsReclassified": false,
   "input": {
@@ -19,9 +19,9 @@
   },
   "sourceCommit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
   "runtimeCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
-  "changedPaths": 10,
-  "historicalVersions": 14,
-  "gitRecoveredVersions": 11,
+  "changedPaths": 11,
+  "historicalVersions": 16,
+  "gitRecoveredVersions": 12,
   "unrecoverableRecordedIdentities": [
     {
       "path": "deploy/verification/mqtt-access.json",
@@ -34,6 +34,10 @@
     {
       "path": "docs/product/final-role-closeout.json",
       "sha256": "031079e8c958706b4b942728b326fa6e4649b4e0941060a7dc69a364b17d8a37"
+    },
+    {
+      "path": "scripts/restore-integration.js",
+      "sha256": "e2fec1dfe0d851e4773bbc2bfb179ea87979e475cfa85608eb298528f2b6f333"
     }
   ],
   "rows": [
@@ -588,12 +592,61 @@
           "sha256": "7755213bf364112b23e9de7b90911219afd8d31f3a1405ab1db97a83a6e517fe"
         }
       ]
+    },
+    {
+      "path": "scripts/restore-integration.js",
+      "currentSha256": "e8d6447a6a7b4d262504855ff4925ef69dd7b576a02ad80f9dea072faf357110",
+      "recordedVersions": [
+        {
+          "sha256": "e2fec1dfe0d851e4773bbc2bfb179ea87979e475cfa85608eb298528f2b6f333",
+          "gitSource": null,
+          "requirements": [
+            "DEPLOY-01",
+            "OPS-03",
+            "AT-OPS-02",
+            "OPS-05",
+            "AT-RELEASE-01"
+          ]
+        },
+        {
+          "sha256": "e8d6447a6a7b4d262504855ff4925ef69dd7b576a02ad80f9dea072faf357110",
+          "gitSource": {
+            "commit": "7ccd935ef5169bc3aa13e9e5dbeddcbedc55080f",
+            "gitBlob": "1ea53d6421b6b57903f14927eba8a91ad713c39d"
+          },
+          "requirements": [
+            "DEPLOY-01",
+            "OPS-03",
+            "AT-OPS-02",
+            "OPS-05",
+            "AT-RELEASE-01"
+          ]
+        }
+      ],
+      "finalManifestSource": {
+        "commit": "21a6bc7c775af5d14472fb3461fe20e700d41689",
+        "sha256": "e8d6447a6a7b4d262504855ff4925ef69dd7b576a02ad80f9dea072faf357110",
+        "matchesCurrent": true
+      },
+      "classification": "historical_reference_integrity_gap_with_separate_current_evidence",
+      "resolution": "Older e2fec1df recorded hash is not recoverable in reachable per-path Git history. Current e8d6447 source matches final manifest source21a6. Actual current1.7.1/backward1.7 same5ff restore-summary contains26 reports plus2Pod identities with canonical original settings and terminal evidence. This independently corroborates restore behavior, not missing historical bytes.",
+      "currentCorroboration": [
+        {
+          "path": "deploy/verification/candidate-40b9ed8/restore-summary.json",
+          "sha256": "b81b7262cd1441c0bda025fa0d3c1a2b88d5b8ec6e90404e647c7c11d043b92b"
+        },
+        {
+          "path": "deploy/verification/candidate-40b9ed8/root-recovery-review/summary.json",
+          "sha256": "d1425e1827929052a4c7fc06a06596d9a71ed4ed5e1c953f24401c141594171b"
+        }
+      ]
     }
   ],
   "limits": [
     "Git search covers reachable --all per-path history, not proof bytes never existed.",
     "No live remote inspection or tests rerun in this reconciliation; named actual recorded runtime/restore observations retain original times and scope.",
-    "Three missing historical byte identities are disclosed; current proof does not make their hashes pass.",
+    "Four missing historical byte identities are disclosed; current proof does not make their hashes pass.",
     "Original198 verdict and all immutable manifests/tags remain unchanged; this addendum supplies explicit references/corrections."
-  ]
+  ],
+  "initialScannerLimitation": "Initial318-path checker collapsed multiple hashes per path and missed older restore-integration hash. This addendum checks distinct(path,sha256) versions."
 }

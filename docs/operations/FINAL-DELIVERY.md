@@ -33,4 +33,8 @@
 
 실제 외부 VPP/AWS 연결은 미검증이다. 미해결 취약점, 관측 중 연결 단절과 원인 미확정 이슈를 해당 관리 문서에 보존했다. 한국어 음성 트랙·자막·전사·화면 일치 검증과 직접 청취에 의한 자연스러운 발음 검증은 구분하며, 직접 청취를 했다고 주장하지 않는다. 단일 노드 SQLite 배포는 노드 상실에 대한 고가용성 구성이 아니다.
 
-과거 감사 참조를 다시 대조하여 11개 역사 버전을 Git 원문으로 확인했다. 원문을 회수하지 못한 세 초기 참조는 [증거 정합성 보완](../product/POST-DEADLINE-EVIDENCE-RECONCILIATION.md)에 명시하고 해당 요구의 최신 실행·역할 증거를 별도로 연결했다. 누락된 과거 바이트가 검증됐다고 표시하지 않는다.
+과거 감사 참조를 다시 대조하여 12개 역사 버전을 Git 원문으로 확인했다. 원문을 회수하지 못한 네 초기 참조는 [증거 정합성 보완](../product/POST-DEADLINE-EVIDENCE-RECONCILIATION.md)에 명시하고 해당 요구의 최신 실행·역할 증거를 별도로 연결했다. 누락된 과거 바이트가 검증됐다고 표시하지 않는다.
+
+## 최종 전달 확인
+
+사용자 추가 승인에 따른 공개 결과물 커밋 `9ee2a822002f195f3491a595397635bb9a647618`의 원격 main 전달을 확인했다. 소프트웨어193파일·런타임28파일과 영상/PPT153파일의 Git 바이트를 대조했다. 원래 동결 릴리스 태그는 이동하지 않았다. [완료 기록](../../artifacts/delivery/authorized-closeout/completed.json), [소프트웨어 전달](../../artifacts/delivery/authorized-closeout/software-remote-verification.json), [미디어 전달](../../artifacts/delivery/authorized-closeout/remote-media-verification.json)을 제공한다. 전체 목표 완료는 잔여 제약을 없앴다는 뜻이 아니며 각 문서의 실제 검증 범위를 따른다.

@@ -1,0 +1,10 @@
+{
+  "recordedAt": "2026-09-22T00:34:44.163990+00:00",
+  "originalHandle": 87773,
+  "exitCode": 1,
+  "terminalToolChunk": "600ac0",
+  "stage": "fresh remote refs (verify-software-delivery.mjs line83)",
+  "error": "git-read-failed-or-deadline",
+  "claim": "No software verification PASS published; other independent mediaremotecheck succeeded.",
+  "nextAction": "One sequential read-only retry; no change to code or originalrun deadline."
+}

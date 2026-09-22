@@ -1,0 +1,9 @@
+{
+  "recordedAt": "2026-09-22T00:35:46.345352+00:00",
+  "originalHandle": 46291,
+  "exitCode": 0,
+  "terminalToolChunk": "b77b77",
+  "result": "REMOTE_COMMIT_AND_MEDIA_BLOBS_MATCH",
+  "files": 153,
+  "reportSha256": "d032c0b25316876a3c1407acafa9c1ebffeb5ba9e5f4ad415de221c5d50d86d7"
+}

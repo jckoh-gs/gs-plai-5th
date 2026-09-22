@@ -1,0 +1,9 @@
+{
+  "recordedAt": "2026-09-22T00:35:46.345352+00:00",
+  "originalHandle": 65113,
+  "exitCode": 0,
+  "terminalToolChunk": "3be735",
+  "result": "SOFTWARE_GIT_DELIVERY_CHECKS_PASSED",
+  "reportSha256": "c57ed2d8ff5104fb5509f6c60ebd38cf0c8812f684e293fa977bf4131c5105bb",
+  "previousAttempt": "software-remote-attempt1.json"
+}

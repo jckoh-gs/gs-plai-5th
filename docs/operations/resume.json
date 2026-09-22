@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "runId": "grid-new-20260921T080733Z",
-  "updatedAt": "2026-09-22T00:27:03.046360+00:00",
+  "updatedAt": "2026-09-22T00:37:05.402012+00:00",
   "purpose": "Resume the existing authorized task after network or session interruption; never start a second run",
   "authoritativeRun": "docs/operations/run.json",
   "stableRuntime": {
@@ -31,7 +31,7 @@
     "productVersion": "1.7.1",
     "prdVersion": "1.15",
     "idea": "IDEA-012",
-    "state": "TIME_ENDED_FINAL_REMOTE_EVIDENCE_NOT_DELIVERED"
+    "state": "COMPLETE_WITH_DISCLOSED_LIMITATIONS"
   },
   "completed": [
     "1.1.0 exact-image tests, k3s UI/MQTT, outbox restart, immutable backup restore and 1.0 backward compatibility",
@@ -43,11 +43,7 @@
     "1.4formrange/datevalidation; local243unique tests acrossmain240+independent3, exactimage77app, actualmainUI/MQTT/outboxrestart,594944000B exactbackup fresh1.4+backward1.3 17restoreproofs;962hash immutablecheckpoint independentPASS",
     "1.7.1 exact40b/234 CLIcontractpatch: main/MQTT/online/outbox/normal5ff snapshot current1.7.1+back1.7 26reports+2identities, rootcleanup/REVIEW045, immutable2033hashREVIEW046, bothstabletagsremoteverified; finaltime/media pending"
   ],
-  "remainingInOrder": [
-    "Push final public media, reproduction sources and handoff records",
-    "Verify remote commit and exact delivered file hashes",
-    "Record completion and close native goal"
-  ],
+  "remainingInOrder": [],
   "retryPolicy": {
     "readOnlyChecks": "May retry with bounded backoff",
     "build": "Reuse completed content-addressed image only after source labels and digest match",
@@ -543,7 +539,7 @@
       "scope": "The original sessions and observed Pod/image were retained. Each RTU gained one received-sample discontinuity; a single narrow read-only query found all300 corresponding positions in continuous same-run persisted outbox windows with broker acknowledgments. Repeated connection error events are not separate outages. No universal subscriber replay, external VPP receipt, continuous service availability or root-cause claim. ISSUE030/032 history remains intact."
     }
   ],
-  "nextOperationalReview": "User authorized post-deadline final artifact/evidence delivery only. Verify original completedmedia and currentGitidentity; deliver/publicproof then closegoal. Do not restart expired development/media/observers.",
+  "nextOperationalReview": "Final delivery completed and remotely verified under explicit user authorization after original deadline. No outstanding work; do not restart expired development, media, observers or heartbeat. Read FINAL-DELIVERY.md for use/access.",
   "supervisorDiagnosticUpgrade": {
     "state": "verified-active1.7.1",
     "sourceSha256": "07266601ae421fbb2ceaf3a2370b5f891fb94005f4ae24cdf3920e6ac3845ab8",
@@ -588,7 +584,8 @@
     "command": "caffeinate -i -s -t 30861",
     "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
     "scope": "Temporary idle/system sleep assertions until original deadline, no persistent settings changed; system assertion applies only on AC. Cannot guarantee against manual/forced sleep, shutdown or process termination. Existing unrelated caffeinate processes preserved.",
-    "evidence": "artifacts/checkpoints/host-power-guard-20260921T1333/activation.json"
+    "evidence": "artifacts/checkpoints/host-power-guard-20260921T1333/activation.json",
+    "state": "ENDED_INTENTIONAL_CLEANUP"
   },
   "candidateFixture": {
     "version": "1.7.0",
@@ -1811,21 +1808,48 @@
   "finalRoleCloseout": "docs/operations/final-role-closeout.json",
   "finalMainNormal": "deploy/verification/final-main-health.json",
   "automationState": "PAUSED",
-  "state": "AUTHORIZED_POST_DEADLINE_DELIVERY_IN_PROGRESS",
+  "state": "DELIVERED_AND_VERIFIED",
   "deadlineHandoff": "artifacts/delivery/deadline-handoff.json",
-  "goalCompletionClaim": false,
+  "goalCompletionClaim": true,
   "finalRemoteDelivery": {
-    "attemptedCommand": "python3 scripts/deadline-command.py --timeout-seconds65 -- git push origin main",
-    "originalToolChunk": "ad85bf",
-    "exitCode": 124,
-    "commandStarted": false,
-    "reason": "original deadline has expired",
-    "localCommit": "c9fe78666e6d96d546c4e55038e85112bb832bbe",
-    "remoteMain": "44899b9b40a82d6b08d0ac16efeb01c0d2c9ba34"
+    "payloadCommit": "9ee2a822002f195f3491a595397635bb9a647618",
+    "pushExitCode": 0,
+    "originalPushHandle": 61707,
+    "proof": "artifacts/delivery/authorized-closeout/remote-media-verification.json",
+    "authorizedAfterDeadline": true
   },
   "postDeadlineDelivery": {
+    "completedAt": "2026-09-22T00:35:46.345352+00:00",
+    "state": "DELIVERED_AND_VERIFIED",
     "authorization": "artifacts/delivery/authorized-closeout/authorization.json",
-    "scope": "Finalpublicartifactandhandoffdeliveryonly; originaldeadlinepreserved",
-    "state": "IN_PROGRESS"
+    "payloadCommit": "9ee2a822002f195f3491a595397635bb9a647618",
+    "softwareVerification": "artifacts/delivery/authorized-closeout/software-remote-verification.json",
+    "softwareExecution": "artifacts/delivery/authorized-closeout/software-execution.json",
+    "mediaVerification": "artifacts/delivery/authorized-closeout/remote-media-verification.json",
+    "mediaExecution": "artifacts/delivery/authorized-closeout/remote-media-execution.json",
+    "artifactVerification": "artifacts/delivery/authorized-closeout/artifact-inventory.json",
+    "requirementsAudit": "artifacts/delivery/authorized-closeout/completion-audit.json",
+    "historicalReferenceCorrection": "docs/product/POST-DEADLINE-EVIDENCE-RECONCILIATION.json",
+    "requirementsTotal": 198,
+    "verifiedFunctional": 145,
+    "verifiedLocal": 53,
+    "remainingRequiredWork": [],
+    "originalDeadlineUnchanged": true,
+    "originalDeadlineMetForFinalGitDelivery": false,
+    "lateDeliverySeparatelyAuthorized": true,
+    "newDevelopmentOrRedeployment": false,
+    "automationStatus": "PAUSED",
+    "runtimeRemains": "1.7.1/40b9ed8/234ec56",
+    "historicalReferenceBytesUnavailable": 4,
+    "goalCompletionClaim": true,
+    "scope": "Payload remote delivery and all acceptance evidence complete under explicit post-deadline delivery authorization; disclosed security/external/single-node/audio/historical limitations retained."
+  },
+  "finalChecks": {
+    "artifactFiles": 154,
+    "mediaGitFiles": 153,
+    "sourceFiles": 193,
+    "runtimeFiles": 28,
+    "requirementItems": 198,
+    "softwareAndMediaRemoteCommitMatched": true
   }
 }

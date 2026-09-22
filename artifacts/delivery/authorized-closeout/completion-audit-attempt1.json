@@ -1,0 +1,37 @@
+{
+  "exitCode": 1,
+  "toolChunk": "32ef06",
+  "reason": "Per(path,hash) check exposed older restore-integration.js identity lost by initial per-path deduplication; historical source not recovered, final pairedrestore is separately referenced.",
+  "unresolved": [
+    {
+      "id": "DEPLOY-01",
+      "path": "scripts/restore-integration.js",
+      "expected": "e2fec1dfe0d851e4773bbc2bfb179ea87979e475cfa85608eb298528f2b6f333",
+      "current": "e8d6447a6a7b4d262504855ff4925ef69dd7b576a02ad80f9dea072faf357110"
+    },
+    {
+      "id": "OPS-03",
+      "path": "scripts/restore-integration.js",
+      "expected": "e2fec1dfe0d851e4773bbc2bfb179ea87979e475cfa85608eb298528f2b6f333",
+      "current": "e8d6447a6a7b4d262504855ff4925ef69dd7b576a02ad80f9dea072faf357110"
+    },
+    {
+      "id": "AT-OPS-02",
+      "path": "scripts/restore-integration.js",
+      "expected": "e2fec1dfe0d851e4773bbc2bfb179ea87979e475cfa85608eb298528f2b6f333",
+      "current": "e8d6447a6a7b4d262504855ff4925ef69dd7b576a02ad80f9dea072faf357110"
+    },
+    {
+      "id": "OPS-05",
+      "path": "scripts/restore-integration.js",
+      "expected": "e2fec1dfe0d851e4773bbc2bfb179ea87979e475cfa85608eb298528f2b6f333",
+      "current": "e8d6447a6a7b4d262504855ff4925ef69dd7b576a02ad80f9dea072faf357110"
+    },
+    {
+      "id": "AT-RELEASE-01",
+      "path": "scripts/restore-integration.js",
+      "expected": "e2fec1dfe0d851e4773bbc2bfb179ea87979e475cfa85608eb298528f2b6f333",
+      "current": "e8d6447a6a7b4d262504855ff4925ef69dd7b576a02ad80f9dea072faf357110"
+    }
+  ]
+}

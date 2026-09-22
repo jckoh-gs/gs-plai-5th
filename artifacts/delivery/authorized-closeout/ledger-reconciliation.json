@@ -1,0 +1,9 @@
+{
+  "recordedAt": "2026-09-22T00:37:05.402012+00:00",
+  "previousWriteToolChunk": "adf436",
+  "previousExitCode": 1,
+  "cause": "Metadata writer assumed optionalhostPowerGuard on final-closeout record; firsttwoledgers written before KeyError.",
+  "resolution": "Reconciled allthreeledgers atomically perfile withoptionalfieldguard; completed stateconsistent",
+  "result": "PASS",
+  "runtimeChanges": false
+}

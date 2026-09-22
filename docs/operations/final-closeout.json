@@ -1,6 +1,6 @@
 {
-  "state": "AUTHORIZED_POST_DEADLINE_DELIVERY_IN_PROGRESS",
-  "updatedAt": "2026-09-22T00:27:03.046360+00:00",
+  "state": "DELIVERED_AND_VERIFIED",
+  "updatedAt": "2026-09-22T00:37:05.402012+00:00",
   "featureFreeze": {
     "scheduledAt": "2026-09-21T21:37:33.079009+00:00",
     "confirmedAt": "2026-09-21T21:37:40+00:00",
@@ -42,7 +42,7 @@
   "newVideoState": "VERIFIED",
   "newPresentationState": "VERIFIED",
   "deadlineAt": "2026-09-21T22:07:33.079009+00:00",
-  "goalCompletionClaim": false,
+  "goalCompletionClaim": true,
   "finalReleaseSelection": {
     "selectedAt": "2026-09-21T21:50:06.637344+00:00",
     "productVersion": "1.7.1",
@@ -121,17 +121,44 @@
   "automationState": "PAUSED",
   "deadlineHandoff": "artifacts/delivery/deadline-handoff.json",
   "finalRemoteDelivery": {
-    "attemptedCommand": "python3 scripts/deadline-command.py --timeout-seconds65 -- git push origin main",
-    "originalToolChunk": "ad85bf",
-    "exitCode": 124,
-    "commandStarted": false,
-    "reason": "original deadline has expired",
-    "localCommit": "c9fe78666e6d96d546c4e55038e85112bb832bbe",
-    "remoteMain": "44899b9b40a82d6b08d0ac16efeb01c0d2c9ba34"
+    "payloadCommit": "9ee2a822002f195f3491a595397635bb9a647618",
+    "pushExitCode": 0,
+    "originalPushHandle": 61707,
+    "proof": "artifacts/delivery/authorized-closeout/remote-media-verification.json",
+    "authorizedAfterDeadline": true
   },
   "postDeadlineDelivery": {
+    "completedAt": "2026-09-22T00:35:46.345352+00:00",
+    "state": "DELIVERED_AND_VERIFIED",
     "authorization": "artifacts/delivery/authorized-closeout/authorization.json",
-    "scope": "Finalpublicartifactandhandoffdeliveryonly; originaldeadlinepreserved",
-    "state": "IN_PROGRESS"
+    "payloadCommit": "9ee2a822002f195f3491a595397635bb9a647618",
+    "softwareVerification": "artifacts/delivery/authorized-closeout/software-remote-verification.json",
+    "softwareExecution": "artifacts/delivery/authorized-closeout/software-execution.json",
+    "mediaVerification": "artifacts/delivery/authorized-closeout/remote-media-verification.json",
+    "mediaExecution": "artifacts/delivery/authorized-closeout/remote-media-execution.json",
+    "artifactVerification": "artifacts/delivery/authorized-closeout/artifact-inventory.json",
+    "requirementsAudit": "artifacts/delivery/authorized-closeout/completion-audit.json",
+    "historicalReferenceCorrection": "docs/product/POST-DEADLINE-EVIDENCE-RECONCILIATION.json",
+    "requirementsTotal": 198,
+    "verifiedFunctional": 145,
+    "verifiedLocal": 53,
+    "remainingRequiredWork": [],
+    "originalDeadlineUnchanged": true,
+    "originalDeadlineMetForFinalGitDelivery": false,
+    "lateDeliverySeparatelyAuthorized": true,
+    "newDevelopmentOrRedeployment": false,
+    "automationStatus": "PAUSED",
+    "runtimeRemains": "1.7.1/40b9ed8/234ec56",
+    "historicalReferenceBytesUnavailable": 4,
+    "goalCompletionClaim": true,
+    "scope": "Payload remote delivery and all acceptance evidence complete under explicit post-deadline delivery authorization; disclosed security/external/single-node/audio/historical limitations retained."
+  },
+  "finalChecks": {
+    "artifactFiles": 154,
+    "mediaGitFiles": 153,
+    "sourceFiles": 193,
+    "runtimeFiles": 28,
+    "requirementItems": 198,
+    "softwareAndMediaRemoteCommitMatched": true
   }
 }

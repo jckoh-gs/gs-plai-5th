@@ -1,0 +1,7 @@
+{
+  "toolChunk": "7e48be",
+  "exitCode": 1,
+  "action": "Search reachable path history for old restore-integration.js e2fec1 hash",
+  "result": "Historical source not found; reported as fourth unavailable reference, never PASS",
+  "resolution": "docs/product/POST-DEADLINE-EVIDENCE-RECONCILIATION.json"
+}
