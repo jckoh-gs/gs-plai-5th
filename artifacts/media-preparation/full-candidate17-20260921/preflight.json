@@ -1,0 +1,16 @@
+{
+  "rehearsal": true,
+  "version": "1.7.0",
+  "servedJS": "/assets/index-qlOuxY80.js",
+  "servedSha256": "154fe2de1f039fe27fbcce6793e15716e843ca3814c2d361392a2207b6918dfc",
+  "existingPlantIds": [
+    "5a4310c0-d844-412d-bb90-1e8065ef0ffe",
+    "0552914a-f235-4e32-89ba-65451ee24f93",
+    "9bacc632-80eb-4214-b3c2-58a38a913767",
+    "4272c326-f2d1-4d9d-bcc5-e745dff49929",
+    "82407936-43ea-446e-bb54-5d64c8a633e1",
+    "e8f6050d-a419-4b57-a89b-e26977dec97b",
+    "0ae2694d-1fce-4858-aee0-0633d50321c6"
+  ],
+  "checkedAt": "2026-09-21T16:37:50.218Z"
+}

@@ -1,0 +1,7 @@
+{
+  "releaseManifest": "inputs/candidate-manifest.json",
+  "videoDir": "artifacts/media-preparation/full-candidate17-20260921",
+  "factsFile": "inputs/facts.unreviewed.json",
+  "outputConfig": "config.rehearsal.json",
+  "presentationDir": "artifacts/media-preparation/output"
+}

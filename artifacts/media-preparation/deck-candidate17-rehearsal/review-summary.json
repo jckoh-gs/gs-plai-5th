@@ -1,0 +1,103 @@
+{
+  "scope": "Preparation rehearsal only; final binder not invoked",
+  "slides": [
+    {
+      "slide": 1,
+      "nativeTextShapes": 4,
+      "editableTextAndNotes": true,
+      "nativeArchitecture": false
+    },
+    {
+      "slide": 2,
+      "nativeTextShapes": 3,
+      "editableTextAndNotes": true,
+      "nativeArchitecture": false
+    },
+    {
+      "slide": 3,
+      "nativeTextShapes": 3,
+      "editableTextAndNotes": true,
+      "nativeArchitecture": false
+    },
+    {
+      "slide": 4,
+      "nativeTextShapes": 19,
+      "editableTextAndNotes": true,
+      "nativeArchitecture": true
+    },
+    {
+      "slide": 5,
+      "nativeTextShapes": 3,
+      "editableTextAndNotes": true,
+      "nativeArchitecture": false
+    },
+    {
+      "slide": 6,
+      "nativeTextShapes": 3,
+      "editableTextAndNotes": true,
+      "nativeArchitecture": false
+    },
+    {
+      "slide": 7,
+      "nativeTextShapes": 3,
+      "editableTextAndNotes": true,
+      "nativeArchitecture": false
+    },
+    {
+      "slide": 8,
+      "nativeTextShapes": 3,
+      "editableTextAndNotes": true,
+      "nativeArchitecture": false
+    },
+    {
+      "slide": 9,
+      "nativeTextShapes": 3,
+      "editableTextAndNotes": true,
+      "nativeArchitecture": false
+    },
+    {
+      "slide": 10,
+      "nativeTextShapes": 3,
+      "editableTextAndNotes": true,
+      "nativeArchitecture": false
+    },
+    {
+      "slide": 11,
+      "nativeTextShapes": 3,
+      "editableTextAndNotes": true,
+      "nativeArchitecture": false
+    },
+    {
+      "slide": 12,
+      "nativeTextShapes": 3,
+      "editableTextAndNotes": true,
+      "nativeArchitecture": false
+    },
+    {
+      "slide": 13,
+      "nativeTextShapes": 3,
+      "editableTextAndNotes": true,
+      "nativeArchitecture": false
+    },
+    {
+      "slide": 14,
+      "nativeTextShapes": 3,
+      "editableTextAndNotes": true,
+      "nativeArchitecture": false
+    }
+  ],
+  "slidesCount": 14,
+  "notesCount": 14,
+  "packageFiles": 21,
+  "allPackageHashesMatched": true,
+  "factsPreservedExactly": true,
+  "factsRemainUnreviewed": true,
+  "videoRelativePathResolves": true,
+  "all14SlidesVisuallyReviewed": true,
+  "visualFindings": "No title/body overflow or overlap in rendered14slides. Small raster UI details supported by larger explanatory text and original video; all slide text/notes and architecture native editable.",
+  "audioListened": false,
+  "nativePowerPointAppOpened": false,
+  "pptSha256": "e4d3c5e898031481ba706700db5e4c3891176d325794b620136147f59cafc9b2",
+  "revisedOutput": "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/deck-candidate17-rehearsal/artifacts/media-preparation/output-reviewed",
+  "firstDraftIssue": "Excess parent directory in video reference fixed in separate output; first draft preserved."
+}

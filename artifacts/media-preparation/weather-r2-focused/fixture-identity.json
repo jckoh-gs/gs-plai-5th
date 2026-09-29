@@ -1,0 +1,19 @@
+{
+  "productVersion": "1.7.1",
+  "bundlePath": "/assets/index-qlOuxY80.js",
+  "bundleSha256": "154fe2de1f039fe27fbcce6793e15716e843ca3814c2d361392a2207b6918dfc",
+  "serverSources": {
+    "server/control.js": "ceabb746658b7bb3af35b767457ea81129da1ddf4f142850dc11a4fff467b9ac",
+    "server/weather.js": "4d10a10957053d68f22349021b358a1d730622a457b824e26521723f0fea64d9",
+    "server/metrics.js": "590169fdfc7431bb07cf7df957ae969cdf707244b809a1d7c1c8e6d642f9f817",
+    "server/store.js": "5b497e48f84e0a918a6d565e5dc9c741c4e68fc69c8141d813e7921e96a73969",
+    "server/transport.js": "90c33b2c5b7eff62ffb6c2c2dc8a6a659b9ab6e770119eadc862f3094431d29a",
+    "server/index.js": "fdced6abe1dc0917d72a8ddedb110bb904b6a439c49071d947049a3a9fed593d",
+    "server/config.js": "9ed29685b837bb4da146792723bd4edd9cf4874a8a31e3da75f4f8027bcedac6",
+    "server/command-export.js": "6bba250ec237006e1d8f9b7e4b475870f3366a5a7cc9299c3519f4fc8149863e",
+    "server/dataset-preview.js": "9732f5fcc73000494fe4138ff1116ed94f03474c713438901eb225368a194443",
+    "server/model.js": "875d936b0038ef5a9bd3c678a50dafdd8d33c7c0f8c60eba0316def51e95ba67"
+  },
+  "listener": "COMMAND   PID       USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nnode    86092 charleskoh   16u  IPv4 0x5ff0a2bfa127b3df      0t0  TCP 127.0.0.1:3113 (LISTEN)\n",
+  "processIdentity": "86092 86089 Tue Sep 22 04:03:26 2026     node server/index.js\n"
+}

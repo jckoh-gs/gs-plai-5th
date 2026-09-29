@@ -1,0 +1,290 @@
+{
+  "rehearsal": true,
+  "recordingStartedAt": "2026-09-21T13:03:19.236Z",
+  "lead": 1.9800000000000004,
+  "scenes": [
+    {
+      "title": "로컬 신규 RTU 실제 등록",
+      "narration": "로컬 시험입니다. 새 복합 단말을 등록하고 실제 응답을 기록합니다.",
+      "seconds": 8,
+      "actions": [
+        {
+          "type": "click",
+          "selector": "header button"
+        },
+        {
+          "type": "fill",
+          "label": "단지명",
+          "value": "Lifecycle local retry 539b6773-879e-4e00-857a-2a911be44c8a"
+        },
+        {
+          "type": "select",
+          "label": "발전 유형",
+          "value": "hybrid"
+        },
+        {
+          "type": "fill",
+          "label": "발전기 수 (기)",
+          "value": 2
+        },
+        {
+          "type": "fill",
+          "label": "1기 정격 (kW)",
+          "value": 500
+        },
+        {
+          "type": "fill",
+          "label": "램프 (kW/s)",
+          "value": 25
+        },
+        {
+          "type": "upload",
+          "label": "발전 CSV / TSV 파일",
+          "file": "artifacts/checkpoints/media-lifecycle-local-round1/synthetic.csv"
+        },
+        {
+          "type": "wait",
+          "ms": 2000
+        },
+        {
+          "type": "capture",
+          "name": "csv-registration"
+        },
+        {
+          "type": "register",
+          "role": "button",
+          "name": "RTU 등록 · 수집 시작"
+        },
+        {
+          "type": "wait",
+          "ms": 2500
+        }
+      ],
+      "voice": "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/media-lifecycle-local-round1-retry1/source/voice-0.aiff",
+      "cues": [
+        {
+          "start": 0,
+          "end": 1.17,
+          "text": "로컬 시험입니다."
+        },
+        {
+          "start": 1.17,
+          "end": 4.59,
+          "text": "새 복합 단말을 등록하고 실제 응답을 기록합니다."
+        }
+      ],
+      "duration": 8,
+      "start": 0,
+      "end": 10.089
+    },
+    {
+      "title": "소유 단말 제어와 장애",
+      "narration": "등록한 단말만 제어합니다. 출력 상한과 시험 장애를 변경합니다.",
+      "seconds": 8,
+      "actions": [
+        {
+          "type": "range",
+          "selector": "#limit",
+          "value": 50
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "출력 상한 적용",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 1000
+        },
+        {
+          "type": "click",
+          "role": "link",
+          "name": "시험 시나리오"
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "재생·장애 시험"
+        },
+        {
+          "type": "fill",
+          "label": "지연 (ms)",
+          "value": 100
+        },
+        {
+          "type": "click",
+          "label": "센서 수집 중지"
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "장애 적용",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 1000
+        }
+      ],
+      "voice": "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/media-lifecycle-local-round1-retry1/source/voice-1.aiff",
+      "cues": [
+        {
+          "start": 0,
+          "end": 1.76,
+          "text": "등록한 단말만 제어합니다."
+        },
+        {
+          "start": 1.76,
+          "end": 4.35,
+          "text": "출력 상한과 시험 장애를 변경합니다."
+        }
+      ],
+      "duration": 8,
+      "start": 10.089,
+      "end": 18.138
+    },
+    {
+      "title": "시나리오 복원과 설정 복구",
+      "narration": "시험 조건을 저장하고 복원합니다. 촬영 뒤 원래 설정과 기존 단말의 불변을 확인합니다.",
+      "seconds": 10,
+      "actions": [
+        {
+          "type": "select",
+          "label": "재생 배속",
+          "value": "2"
+        },
+        {
+          "type": "fill",
+          "label": "난수 시드",
+          "value": 777
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "재생 설정 적용",
+          "requiresOwned": true
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "저장 시나리오"
+        },
+        {
+          "type": "fill",
+          "label": "시나리오 이름",
+          "value": "Lifecycle scenario retry 539b6773-879e-4e00-857a-2a911be44c8a"
+        },
+        {
+          "type": "click",
+          "role": "button",
+          "name": "현재 상태 저장",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 1000
+        },
+        {
+          "type": "restoreScenario",
+          "selector": ".scenario:has(h3:text-is(\"Lifecycle scenario retry 539b6773-879e-4e00-857a-2a911be44c8a\")) button:first-child",
+          "scenarioName": "Lifecycle scenario retry 539b6773-879e-4e00-857a-2a911be44c8a",
+          "requiresOwned": true
+        },
+        {
+          "type": "wait",
+          "ms": 1000
+        },
+        {
+          "type": "capture",
+          "name": "restored-local-scenario"
+        }
+      ],
+      "voice": "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/media-lifecycle-local-round1-retry1/source/voice-2.aiff",
+      "cues": [
+        {
+          "start": 0,
+          "end": 2.45,
+          "text": "시험 조건을 저장하고 복원합니다."
+        },
+        {
+          "start": 2.45,
+          "end": 6,
+          "text": "촬영 뒤 원래 설정과 기존 단말의 불변을 확인합니다."
+        }
+      ],
+      "duration": 10,
+      "start": 18.138,
+      "end": 28.18
+    }
+  ],
+  "interactions": [
+    {
+      "kind": "click",
+      "at": 0.869,
+      "x": 1834.1484375,
+      "y": 38
+    },
+    {
+      "kind": "click",
+      "at": 7.495,
+      "x": 1218.5078125,
+      "y": 963.078125
+    },
+    {
+      "kind": "click",
+      "at": 11.676,
+      "x": 1574.1171875,
+      "y": 602.78125
+    },
+    {
+      "kind": "click",
+      "at": 13.527,
+      "x": 110.5,
+      "y": 278
+    },
+    {
+      "kind": "click",
+      "at": 14.392,
+      "x": 319.6015625,
+      "y": 377.1875
+    },
+    {
+      "kind": "click",
+      "at": 15.855,
+      "x": 1115.5,
+      "y": 550.1875
+    },
+    {
+      "kind": "click",
+      "at": 16.711,
+      "x": 1288.25,
+      "y": 760.1875
+    },
+    {
+      "kind": "click",
+      "at": 20.227,
+      "x": 476.25,
+      "y": 783.78125
+    },
+    {
+      "kind": "click",
+      "at": 21.077,
+      "x": 664.71875,
+      "y": 442.78125
+    },
+    {
+      "kind": "click",
+      "at": 22.543,
+      "x": 1804.3984375,
+      "y": 560.6875
+    },
+    {
+      "kind": "click",
+      "at": 24.394,
+      "x": 1722.3359375,
+      "y": 775.78125
+    }
+  ],
+  "downloads": []
+}

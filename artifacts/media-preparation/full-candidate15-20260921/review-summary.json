@@ -1,0 +1,49 @@
+{
+  "rehearsal": true,
+  "scope": "Preparation only; no final acceptance",
+  "terminalExitCode": 0,
+  "videoSeconds": 241.33,
+  "productionSeconds": 264.031,
+  "fullDecode": true,
+  "audioTechnicalVerification": {
+    "meanDb": -19.4,
+    "listened": false,
+    "scope": "Signal, decode, source narration/SRT text and timeline only; no auditory pronunciation assessment"
+  },
+  "pageErrors": [],
+  "srt": {
+    "cues": 29,
+    "maxDeviationSeconds": 2.842170943040401e-14,
+    "withinVideo": true
+  },
+  "visualReview": {
+    "encodedRepresentativeFrames": 8,
+    "sourceScenes": 8,
+    "pointerAndClickHaloVisible": true,
+    "KoreanSubtitlesLegible": true,
+    "findings": [
+      "Scene4 centerzoom1.12 clips right metric values; corrected next rehearsal."
+    ],
+    "overall": "correction-required"
+  },
+  "claimsReview": {
+    "scope": "rehearsal-only",
+    "MQTT": "accepted → executing → completed; actual125kW/error0",
+    "REST": "accepted receipt is last observation; persisted result later completed; stop superseded by start, not demonstrated completed stop",
+    "scenario": "actual201 registration and observed scenario restore new runId",
+    "external": "KMA/AWS/external production VPP not verified"
+  },
+  "recovery": {
+    "result": "PASS",
+    "path": "source/demo-recovery.json",
+    "settingsMatched": true,
+    "existingUnchanged": true,
+    "existingCount": 9,
+    "exactPriorRandomTrajectoryRestored": false
+  },
+  "finalWindow": {
+    "observedVideoProductionMinutes": 4.400516666666666,
+    "remainingOf30Minutes": 25.599483333333335,
+    "limitation": "Local rehearsal timing only; final remote validation, visual review, 14-slide generation and packaging still require budget."
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-09-21T09:41:11.697846+00:00",
+  "scope": "read-only post-recovery operational snapshot",
+  "pod": "grid-8444c8bd49-bgqmb",
+  "uid": "dac7c939-d0ed-4584-b478-455743ff0a87",
+  "containers": [
+    {
+      "name": "app",
+      "ready": true,
+      "restartCount": 0,
+      "imageID": "127.0.0.1:15050/grid@sha256:07f968cc6e5a11d31c9a1f2d55b287c19cac7f11574925b58004745dae396420"
+    },
+    {
+      "name": "mqtt",
+      "ready": true,
+      "restartCount": 0,
+      "imageID": "127.0.0.1:15050/grid-mqtt@sha256:a75b570829c431d0423c4faee4696c3b3758784c6e817a9abe7d7cc5382b179c"
+    }
+  ],
+  "disk": "Filesystem                Size      Used Available Use% Mounted on\n/dev/nvme0n1p2          232.6G    141.7G     79.1G  64% /data\n",
+  "soak": {
+    "sessionId": "2627bc33-7fa8-458d-b6df-fcf0b5973868",
+    "startedAt": "2026-09-21T09:34:52.786Z",
+    "checkedAt": "2026-09-21T09:41:09.418Z",
+    "plannedStopAt": "2026-09-21T21:37:33.079Z",
+    "polls": 37,
+    "messages": 54,
+    "duplicates": 0,
+    "invalid": 0,
+    "maxPayloadBytes": 119476,
+    "lastMessageAt": "2026-09-21T09:40:24.235Z",
+    "connectionErrors": 0,
+    "apiErrors": 0,
+    "maxGapMs": 11876,
+    "dedupWindowLimit": 10000,
+    "apiReady": true,
+    "plants": 5,
+    "rssBytes": 130179072,
+    "health": [
+      {
+        "id": "c81f4573-1987-4c01-8d7c-b1e7aa5af38f",
+        "health": "HEALTHY",
+        "pending": 0,
+        "generated": 4009,
+        "confirmed": 132
+      },
+      {
+        "id": "ed0ac897-69d6-4e7c-ae0a-9d212f272db6",
+        "health": "HEALTHY",
+        "pending": 0,
+        "generated": 4009,
+        "confirmed": 134
+      },
+      {
+        "id": "adb56898-ae8d-4628-9db1-6d33df5417b5",
+        "health": "HEALTHY",
+        "pending": 0,
+        "generated": 4009,
+        "confirmed": 187
+      },
+      {
+        "id": "90528620-2d53-4a06-8945-aa7a37e0eaee",
+        "health": "HEALTHY",
+        "pending": 0,
+        "generated": 3635,
+        "confirmed": 64
+      },
+      {
+        "id": "f49684af-b7dd-47b2-b360-8e7d28ef751b",
+        "health": "HEALTHY",
+        "pending": 0,
+        "generated": 2943,
+        "confirmed": 52
+      }
+    ]
+  }
+}

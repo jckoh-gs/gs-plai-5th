@@ -1,0 +1,7 @@
+{
+  "releaseManifest": "artifacts/releases/current.json",
+  "videoDir": "artifacts/media-preparation/rehearsal",
+  "factsFile": "artifacts/checkpoints/deck-binding-packaging/facts.rehearsal.json",
+  "outputConfig": "artifacts/checkpoints/deck-binding-packaging/config.rehearsal.json",
+  "presentationDir": "artifacts/media-preparation/deck-binding-packaging-rehearsal"
+}

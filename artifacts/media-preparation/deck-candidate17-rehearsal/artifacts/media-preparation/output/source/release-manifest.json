@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "preparationOnly": true,
+  "productVersion": "1.7.0",
+  "contractVersion": 2,
+  "source": {
+    "commit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9"
+  },
+  "deployment": {
+    "status": "local candidate rehearsal only",
+    "baseUrl": "http://127.0.0.1:3111"
+  },
+  "capturedAt": "2026-09-21T16:37:50.219Z"
+}

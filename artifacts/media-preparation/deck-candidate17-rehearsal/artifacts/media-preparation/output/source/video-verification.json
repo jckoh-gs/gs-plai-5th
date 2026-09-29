@@ -1,0 +1,112 @@
+{
+  "rehearsal": true,
+  "createdAt": "2026-09-21T16:42:30.332Z",
+  "productionSeconds": 279.911,
+  "releaseCommit": "d98d3c48d22c54e7fd092ee9e46ca9ab49e4bbf9",
+  "imageDigest": "POPULATE_AT_FREEZE",
+  "manifestSha256": "a80dde446cb2559a9d6959460ce258c0154678fdb16dba17f4e2570676fd34fd",
+  "videoSha256": "ccb890aa150f918d43cd8610147d5bd6a139c4b1664d1b71c82ef1adfc3acace",
+  "fullDecode": true,
+  "demoRecovery": {
+    "result": "PASS",
+    "checkedAt": "2026-09-21T16:42:22.438Z",
+    "ownedId": "ddc8edb7-57cb-47e2-b658-95feb59eaf93",
+    "currentRunId": "c9d2a5a9-acab-4c6a-a477-260744c34dc1",
+    "baselineRunId": "859bec15-aca7-4ae3-8b11-967f035ccd47",
+    "baselineHash": "2bf6f9a8bad534947c7c56186625c3d73d2ede68e77fb229ab93e84d23ab7246",
+    "actualHash": "3afa9dfa4a2d4eb60f00faaab079c10c7cbe1039b75d76618ee2475d197c3f36",
+    "settingsMatched": true,
+    "existing": [
+      {
+        "id": "5a4310c0-d844-412d-bb90-1e8065ef0ffe",
+        "beforeHash": "cf3e59a7f0ab2967ac0337830e55cebf58313ae632a03c6e4c241bb95d5581c2",
+        "afterHash": "cf3e59a7f0ab2967ac0337830e55cebf58313ae632a03c6e4c241bb95d5581c2",
+        "unchanged": true
+      },
+      {
+        "id": "0552914a-f235-4e32-89ba-65451ee24f93",
+        "beforeHash": "ac2145df8f6ae59a9060648bb42fb81fa35b58c5ded3d9aebf95f16508973594",
+        "afterHash": "ac2145df8f6ae59a9060648bb42fb81fa35b58c5ded3d9aebf95f16508973594",
+        "unchanged": true
+      },
+      {
+        "id": "9bacc632-80eb-4214-b3c2-58a38a913767",
+        "beforeHash": "c9b459d8eb27ad48473fb20c104ad3ac36397acedf951bf5557a061feeb5a08c",
+        "afterHash": "c9b459d8eb27ad48473fb20c104ad3ac36397acedf951bf5557a061feeb5a08c",
+        "unchanged": true
+      },
+      {
+        "id": "4272c326-f2d1-4d9d-bcc5-e745dff49929",
+        "beforeHash": "3fecd29ee6092c33ce20c7133e6396319ccf23a68238caa4d7cd60d4004a5fbe",
+        "afterHash": "3fecd29ee6092c33ce20c7133e6396319ccf23a68238caa4d7cd60d4004a5fbe",
+        "unchanged": true
+      },
+      {
+        "id": "82407936-43ea-446e-bb54-5d64c8a633e1",
+        "beforeHash": "49b3013dbc0380aceaeaef7a26295cf0e003429bd251e3b2c1f2bc53e35c2cd1",
+        "afterHash": "49b3013dbc0380aceaeaef7a26295cf0e003429bd251e3b2c1f2bc53e35c2cd1",
+        "unchanged": true
+      },
+      {
+        "id": "e8f6050d-a419-4b57-a89b-e26977dec97b",
+        "beforeHash": "1836bdf708f6c6923d4e173b62dd2d53f085fd5f11c4eabff46f431e4a264d86",
+        "afterHash": "1836bdf708f6c6923d4e173b62dd2d53f085fd5f11c4eabff46f431e4a264d86",
+        "unchanged": true
+      },
+      {
+        "id": "0ae2694d-1fce-4858-aee0-0633d50321c6",
+        "beforeHash": "739d21c24a51e17421621eb163b09b518927e0f6e1d3fe1a2b827f1cf4906b7a",
+        "afterHash": "739d21c24a51e17421621eb163b09b518927e0f6e1d3fe1a2b827f1cf4906b7a",
+        "unchanged": true
+      }
+    ],
+    "rngReinitializedBySeedPatch": true,
+    "exactPriorRandomTrajectoryRestored": false,
+    "scope": "Owned demo RTU settings cleanup only; not goal or media acceptance",
+    "writes": 3,
+    "registration": {
+      "ownedId": "ddc8edb7-57cb-47e2-b658-95feb59eaf93",
+      "basis": "actual201",
+      "capturedAt": "2026-09-21T16:38:43.462Z",
+      "initialRunId": "859bec15-aca7-4ae3-8b11-967f035ccd47"
+    },
+    "scenarioTransitions": [
+      {
+        "scenarioId": "50d10b97-72a5-4da1-a924-61f3f7d2e54f",
+        "fromRunId": "859bec15-aca7-4ae3-8b11-967f035ccd47",
+        "toRunId": "c9d2a5a9-acab-4c6a-a477-260744c34dc1",
+        "preparedAt": "2026-09-21T16:41:38.842Z",
+        "capturedAt": "2026-09-21T16:41:39.087Z"
+      }
+    ]
+  },
+  "audioMeanDb": -19.2,
+  "pageErrors": [],
+  "downloads": [
+    {
+      "schemaVersion": 1,
+      "contractVersion": 2,
+      "productVersion": "1.7.0",
+      "plantId": "ddc8edb7-57cb-47e2-b658-95feb59eaf93",
+      "scope": "recent-command-snapshots",
+      "limit": 20,
+      "count": 5,
+      "file": "source/recent-command-states.json",
+      "sha256": "f072ceed4338e8fcccbafe237c9c331562c90249e28c863d092d9478faea91c1",
+      "at": 140.75
+    }
+  ],
+  "duration": 255.33,
+  "dimensions": "1920x1080",
+  "codecs": "H264/AAC",
+  "frames": [
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/full-candidate17-20260921/frame-1.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/full-candidate17-20260921/frame-2.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/full-candidate17-20260921/frame-3.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/full-candidate17-20260921/frame-4.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/full-candidate17-20260921/frame-5.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/full-candidate17-20260921/frame-6.png"
+  ],
+  "visualReview": "pending",
+  "claimsReview": "pending"
+}

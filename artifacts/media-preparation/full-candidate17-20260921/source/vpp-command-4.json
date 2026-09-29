@@ -1,0 +1,45 @@
+{
+  "reportSchemaVersion": 1,
+  "clientVersion": "1.7.0",
+  "serverVersion": null,
+  "contractVersion": 2,
+  "rtuId": "ddc8edb7-57cb-47e2-b658-95feb59eaf93",
+  "commandId": "cb0a2978-4083-473d-b7c5-813604db9e36",
+  "runId": "859bec15-aca7-4ae3-8b11-967f035ccd47",
+  "startedAt": "2026-09-21T16:40:14.771Z",
+  "endedAt": "2026-09-21T16:40:25.251Z",
+  "requestedTargetKw": 125,
+  "events": [
+    {
+      "receivedAt": "2026-09-21T16:40:16.401Z",
+      "status": "accepted",
+      "messageId": "34ac18bb-0f59-41fe-8e1e-ffc4ae3cafd5",
+      "actualKw": null,
+      "errorKw": null,
+      "reason": null
+    },
+    {
+      "receivedAt": "2026-09-21T16:40:18.220Z",
+      "status": "executing",
+      "messageId": "d1cbcefa-3872-44d5-b729-ba989504a647",
+      "actualKw": null,
+      "errorKw": null,
+      "reason": null
+    },
+    {
+      "receivedAt": "2026-09-21T16:40:25.251Z",
+      "status": "completed",
+      "messageId": "df04abc0-7d02-4c0c-a306-cd088620472c",
+      "actualKw": 125,
+      "errorKw": 0,
+      "reason": null
+    }
+  ],
+  "lastStatus": "completed",
+  "actualKw": 125,
+  "errorKw": 0,
+  "exitReason": "command_completed",
+  "exitCode": 0,
+  "eventsTruncated": false,
+  "droppedEventCount": 0
+}

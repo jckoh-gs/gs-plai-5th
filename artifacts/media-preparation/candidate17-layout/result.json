@@ -1,0 +1,40 @@
+{
+  "preparationOnly": true,
+  "version": "1.7.0",
+  "bundleSha256": "154fe2de1f039fe27fbcce6793e15716e843ca3814c2d361392a2207b6918dfc",
+  "existingPlantCount": 7,
+  "writes": [],
+  "bounds": {
+    "panel": {
+      "x": 269,
+      "y": 411.0625,
+      "width": 1604,
+      "height": 549,
+      "top": 411.0625,
+      "right": 1873,
+      "bottom": 960.0625,
+      "left": 269
+    },
+    "table": {
+      "x": 292,
+      "y": 627.0625,
+      "width": 1558,
+      "height": 310,
+      "top": 627.0625,
+      "right": 1850,
+      "bottom": 937.0625,
+      "left": 292
+    },
+    "status": {
+      "x": 292,
+      "y": 525.0625,
+      "width": 1558,
+      "height": 87,
+      "top": 525.0625,
+      "right": 1850,
+      "bottom": 612.0625,
+      "left": 292
+    }
+  },
+  "scope": "Read-only existing fixture; no actual receipt created or network failure injected; no recording"
+}

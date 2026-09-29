@@ -1,0 +1,72 @@
+{
+  "rehearsal": true,
+  "createdAt": "2026-09-21T19:12:41.854Z",
+  "productionSeconds": 142.685,
+  "releaseCommit": "40b9ed898f32037e7a87259d12d145457575a4a8",
+  "imageDigest": "POPULATE_AT_FREEZE",
+  "manifestSha256": "95556d4bf35e8e464dd10e2f6960a57d75d777f48d97cdb724263bf21baa344e",
+  "videoSha256": "969a05c0baae308e94bc6675e3eef3c899b42e7de85d3d9833ccdcd4f6c8d075",
+  "fullDecode": true,
+  "demoRecovery": {
+    "result": "PASS",
+    "checkedAt": "2026-09-21T19:12:37.427Z",
+    "ownedId": "c2bccd06-b17a-46f7-9ef0-196f0707801f",
+    "currentRunId": "2f22ae5b-be45-4a08-b5ca-9ae2e88b7147",
+    "baselineRunId": "2f22ae5b-be45-4a08-b5ca-9ae2e88b7147",
+    "baselineHash": "b05bb4b22c1c5c6c298ea8aaa1287d820b791f2a10dddf6704a14e515255ed4e",
+    "actualHash": "b05bb4b22c1c5c6c298ea8aaa1287d820b791f2a10dddf6704a14e515255ed4e",
+    "settingsMatched": true,
+    "weatherConfigurationMatched": true,
+    "weatherConfigurationScope": "Captured own-RTU input values and mode; historical weather provenance is not rewritten",
+    "weatherSourceAtRegistration": "default",
+    "weatherSourceAfterRecovery": "manual",
+    "weatherSourceLabelUnchanged": false,
+    "existing": [
+      {
+        "id": "d04b7bdd-94cd-471c-b78b-3c3628e86eb1",
+        "beforeHash": "296fe93b124f9c45dfe59d09604f92647f452834742be18cf143db175312d2b7",
+        "afterHash": "296fe93b124f9c45dfe59d09604f92647f452834742be18cf143db175312d2b7",
+        "unchanged": true
+      },
+      {
+        "id": "5023f712-5284-4282-86c1-46648dd3a35f",
+        "beforeHash": "d759cc0a88b8c2c663d8799f78844237bca6c46d007d2a212dce2d25eba0cc69",
+        "afterHash": "d759cc0a88b8c2c663d8799f78844237bca6c46d007d2a212dce2d25eba0cc69",
+        "unchanged": true
+      },
+      {
+        "id": "ddabdf8f-da6f-4aeb-bcdc-7407d2f1c6f8",
+        "beforeHash": "de35193342b9eb8ad4a64c964b744845c9ecf5e14866d1a0780f560f70ca2973",
+        "afterHash": "de35193342b9eb8ad4a64c964b744845c9ecf5e14866d1a0780f560f70ca2973",
+        "unchanged": true
+      }
+    ],
+    "rngReinitializedBySeedPatch": false,
+    "exactPriorRandomTrajectoryRestored": false,
+    "scope": "Owned demo RTU settings cleanup only; not goal or media acceptance",
+    "writes": 0,
+    "registration": {
+      "ownedId": "c2bccd06-b17a-46f7-9ef0-196f0707801f",
+      "basis": "actual201",
+      "capturedAt": "2026-09-21T19:11:02.627Z",
+      "initialRunId": "2f22ae5b-be45-4a08-b5ca-9ae2e88b7147"
+    },
+    "scenarioTransitions": []
+  },
+  "audioMeanDb": -18.5,
+  "pageErrors": [],
+  "downloads": [],
+  "duration": 131.13,
+  "dimensions": "1920x1080",
+  "codecs": "H264/AAC",
+  "frames": [
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/weather-r2-round2/frame-1.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/weather-r2-round2/frame-2.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/weather-r2-round2/frame-3.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/weather-r2-round2/frame-4.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/weather-r2-round2/frame-5.png",
+    "/Users/charleskoh/research/20260921-RALPTON/artifacts/media-preparation/weather-r2-round2/frame-6.png"
+  ],
+  "visualReview": "pending",
+  "claimsReview": "pending"
+}

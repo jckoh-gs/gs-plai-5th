@@ -1,0 +1,19 @@
+{
+  "rehearsal": true,
+  "version": "1.5.0",
+  "servedJS": "/assets/index-CyjJuK5n.js",
+  "servedSha256": "b6c1288921d9fa2e67e284cdbf9596f3b81abeae6625f9500acd07970f2e1dda",
+  "existingPlantIds": [
+    "8e78b634-ab4d-471c-ae41-1859e3a3b3d1",
+    "5c079348-21fc-4280-86d3-d1d8f39cf524",
+    "966bee6e-9846-42a8-9bf8-07d9ffcd7f1b",
+    "2a22f0f3-f33a-4e45-abf8-cd16c24740b7",
+    "6be4c28f-f659-47f7-95c0-cabc87576db8",
+    "ffc7a8df-14b4-4395-9f35-2f9df78ab255",
+    "a0dccb3d-e5f8-43c5-9fa7-da05c6aac541",
+    "44fde221-5792-497b-88e8-657b3160fc1a",
+    "c5f3ec2a-58aa-41cb-a197-10b9ecf828a0",
+    "aa6762c6-254c-4591-b15b-0310d23a1ee7"
+  ],
+  "checkedAt": "2026-09-21T14:43:48.555Z"
+}

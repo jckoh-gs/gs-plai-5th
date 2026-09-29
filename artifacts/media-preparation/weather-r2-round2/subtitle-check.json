@@ -1,0 +1,7 @@
+{
+  "sentences": 14,
+  "sourceTextMatched": true,
+  "maxTimestampDeviationSeconds": 2.842170943040401e-14,
+  "directListening": false,
+  "scope": "source/cue/SRT only; fullaudio technicaldecode/ASR separately"
+}
